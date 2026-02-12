@@ -3,8 +3,8 @@ import Footer from './components/Footer'
 import './globals.css'
 
 export const metadata = {
-  title: 'Herbert AI - AI Receptionist Services',
-  description: 'Never miss a customer. AI-powered call answering and appointment booking.',
+  title: 'Herbert AI - Digital Solutions for Trades Businesses',
+  description: 'Professional websites, AI voice receptionists, and chatbots for Australian trades businesses. Never miss a customer again.',
 }
 
 export default function RootLayout({ children }) {
