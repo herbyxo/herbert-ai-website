@@ -92,6 +92,7 @@ export default function Header() {
           <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/pricing">Pricing</Link>
           <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/about">About</Link>
           <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/faq">FAQ</Link>
+          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/demo">Demo</Link>
           <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/contact">Contact</Link>
         </nav>
 
@@ -121,6 +122,7 @@ export default function Header() {
           <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/demo" onClick={() => setMobileMenuOpen(false)}>Demo</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </nav>
       )}
