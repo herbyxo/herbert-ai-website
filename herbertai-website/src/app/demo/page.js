@@ -22,32 +22,32 @@ export default function Demo() {
           <div className="grid md:grid-cols-2 gap-6">
             
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">✅ Answer Calls 24/7</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Answer Calls 24/7</h3>
               <p className="text-gray-600">Never miss a customer, even after hours or during busy periods.</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">✅ Book Appointments</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Book Appointments</h3>
               <p className="text-gray-600">Check your calendar availability and schedule appointments automatically.</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">✅ Answer FAQs</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Answer FAQs</h3>
               <p className="text-gray-600">Trained on your business information to answer common questions.</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">✅ Capture Information</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Capture Information</h3>
               <p className="text-gray-600">Records names, phone numbers, and messages in your system.</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">✅ Transfer Calls</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Transfer Calls</h3>
               <p className="text-gray-600">Seamlessly transfer to you or your team when needed.</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">✅ Custom To Your Business</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Custom To Your Business</h3>
               <p className="text-gray-600">Tailored with your pricing, services, and specific information.</p>
             </div>
 
@@ -206,7 +206,7 @@ export default function Demo() {
           <div className="grid md:grid-cols-3 gap-6">
             
             <div className="text-center">
-              <div className="text-4xl mb-3">📝</div>
+              <div className="flex justify-center mb-3"><svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">Captures Details</h3>
               <p className="text-gray-600 text-sm">
                 Name, phone number, and preferences are recorded automatically
@@ -214,7 +214,7 @@ export default function Demo() {
             </div>
 
             <div className="text-center">
-              <div className="text-4xl mb-3">📅</div>
+              <div className="flex justify-center mb-3"><svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">Checks Calendar</h3>
               <p className="text-gray-600 text-sm">
                 Integrates with Google Calendar to check real-time availability
@@ -222,7 +222,7 @@ export default function Demo() {
             </div>
 
             <div className="text-center">
-              <div className="text-4xl mb-3">✉️</div>
+              <div className="flex justify-center mb-3"><svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">Sends Confirmation</h3>
               <p className="text-gray-600 text-sm">
                 Automatic SMS confirmation sent to the customer

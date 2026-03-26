@@ -127,7 +127,7 @@ export default function About() {
             
             <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <div className="text-3xl mb-3">🌐</div>
+                <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" /></svg></div>
                 <h3 className="font-semibold text-gray-900 mb-2">Build Trust</h3>
                 <p className="text-gray-700 text-sm">
                   Professional websites that showcase your work and make customers confident in choosing you
@@ -135,7 +135,7 @@ export default function About() {
               </div>
 
               <div>
-                <div className="text-3xl mb-3">🤖</div>
+                <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 3a4 4 0 014 4v4a4 4 0 01-8 0V7a4 4 0 014-4z" /></svg></div>
                 <h3 className="font-semibold text-gray-900 mb-2">Capture Leads</h3>
                 <p className="text-gray-700 text-sm">
                   AI systems that answer calls and website inquiries 24/7, so you never miss an opportunity
@@ -143,7 +143,7 @@ export default function About() {
               </div>
 
               <div>
-                <div className="text-3xl mb-3">⚡</div>
+                <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
                 <h3 className="font-semibold text-gray-900 mb-2">Save Time</h3>
                 <p className="text-gray-700 text-sm">
                   Automated booking, FAQs, and lead capture that free up 10+ hours per week
@@ -203,37 +203,37 @@ export default function About() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="text-3xl mb-3">🔧</div>
+              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">Plumbers</h3>
               <p className="text-gray-700 text-sm">Emergency calls, appointment booking, service areas</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="text-3xl mb-3">⚡</div>
+              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">Electricians</h3>
               <p className="text-gray-700 text-sm">Quote requests, urgent repairs, solar installations</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="text-3xl mb-3">🏗️</div>
+              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">Builders</h3>
               <p className="text-gray-700 text-sm">Project inquiries, portfolio showcase, consultation booking</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="text-3xl mb-3">❄️</div>
+              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">HVAC</h3>
               <p className="text-gray-700 text-sm">Installation quotes, maintenance bookings, emergency service</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="text-3xl mb-3">🌳</div>
+              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 21l-4.35-4.35M15 11a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">Landscapers</h3>
               <p className="text-gray-700 text-sm">Project quotes, seasonal services, before/after showcases</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="text-3xl mb-3">🏠</div>
+              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9,22 9,12 15,12 15,22" /></svg></div>
               <h3 className="font-semibold text-gray-900 mb-2">And More</h3>
               <p className="text-gray-700 text-sm">Any trades business that wants to grow</p>
             </div>

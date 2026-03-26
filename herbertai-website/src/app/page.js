@@ -1,5 +1,41 @@
 import Link from 'next/link'
 
+const IconPhone = () => (
+  <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  </svg>
+)
+
+const IconGlobe = () => (
+  <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+  </svg>
+)
+
+const IconClock = () => (
+  <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+)
+
+const IconMic = () => (
+  <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 3a4 4 0 014 4v4a4 4 0 01-8 0V7a4 4 0 014-4z" />
+  </svg>
+)
+
+const IconChat = () => (
+  <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+  </svg>
+)
+
+const IconCheck = () => (
+  <svg className="w-4 h-4 text-white shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+  </svg>
+)
+
 export default function Home() {
   return (
     <div>
@@ -39,21 +75,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             
             <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <div className="text-3xl mb-3">📞</div>
+              <div className="mb-3"><IconPhone /></div>
               <h3 className="font-semibold text-gray-900 mb-2">Missing Calls = Lost Money</h3>
               <p className="text-gray-600">Every missed call is a potential customer going to your competitor instead.</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <div className="text-3xl mb-3">🌐</div>
+              <div className="mb-3"><IconGlobe /></div>
               <h3 className="font-semibold text-gray-900 mb-2">No Website or Outdated Site</h3>
               <p className="text-gray-600">Customers judge your business by your online presence. A bad site costs you jobs.</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <div className="text-3xl mb-3">⏰</div>
+              <div className="mb-3"><IconClock /></div>
               <h3 className="font-semibold text-gray-900 mb-2">After-Hours Inquiries</h3>
-              <p className="text-gray-600">Potential customers calling at 7pm get voicemail. They won't leave a message.</p>
+              <p className="text-gray-600">Potential customers calling at 7pm get voicemail. They won&apos;t leave a message.</p>
             </div>
 
           </div>
@@ -72,39 +108,36 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             
-            {/* Service 1 */}
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition">
-              <div className="text-4xl mb-4">🌐</div>
+              <div className="mb-4"><IconGlobe /></div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Professional Website</h3>
               <p className="text-gray-600 mb-4">
                 Fast, mobile-optimized site that converts visitors into customers.
               </p>
               <Link href="/services#website" className="text-black font-medium hover:underline">
-                Learn more →
+                Learn more
               </Link>
             </div>
 
-            {/* Service 2 */}
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition">
-              <div className="text-4xl mb-4">🤖</div>
+              <div className="mb-4"><IconMic /></div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">AI Voice Receptionist</h3>
               <p className="text-gray-600 mb-4">
                 Answers calls 24/7, books appointments, never misses a customer.
               </p>
               <Link href="/services#voice" className="text-black font-medium hover:underline">
-                Learn more →
+                Learn more
               </Link>
             </div>
 
-            {/* Service 3 */}
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition">
-              <div className="text-4xl mb-4">💬</div>
+              <div className="mb-4"><IconChat /></div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">AI Chatbot Widget</h3>
               <p className="text-gray-600 mb-4">
                 Website chat that captures leads and answers questions instantly.
               </p>
               <Link href="/services#chatbot" className="text-black font-medium hover:underline">
-                Learn more →
+                Learn more
               </Link>
             </div>
 
@@ -124,40 +157,38 @@ export default function Home() {
                 Complete digital solution. No setup fees.
               </p>
               <p className="text-lg text-gray-400">
-                Website + AI Voice + AI Chatbot - all included
+                Website + AI Voice + AI Chatbot — all included
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-10">
               
-              {/* What's Included */}
               <div className="bg-white/10 rounded-2xl p-6">
-                <h3 className="text-xl font-semibold mb-4">What's Included:</h3>
+                <h3 className="text-xl font-semibold mb-4">What&apos;s Included:</h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-white mr-3">✓</span>
+                  <li className="flex items-start gap-3">
+                    <IconCheck />
                     <span className="text-gray-200">Professional website build + hosting</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-white mr-3">✓</span>
+                  <li className="flex items-start gap-3">
+                    <IconCheck />
                     <span className="text-gray-200">24/7 AI voice receptionist</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-white mr-3">✓</span>
+                  <li className="flex items-start gap-3">
+                    <IconCheck />
                     <span className="text-gray-200">AI chatbot on your website</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-white mr-3">✓</span>
+                  <li className="flex items-start gap-3">
+                    <IconCheck />
                     <span className="text-gray-200">Google Calendar integration</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-white mr-3">✓</span>
+                  <li className="flex items-start gap-3">
+                    <IconCheck />
                     <span className="text-gray-200">Ongoing updates & support</span>
                   </li>
                 </ul>
               </div>
 
-              {/* Value */}
               <div className="bg-white/10 rounded-2xl p-6">
                 <h3 className="text-xl font-semibold mb-4">The Value:</h3>
                 <ul className="space-y-2 mb-4">
@@ -237,7 +268,7 @@ export default function Home() {
             Ready to Stop Losing Customers?
           </h2>
           <p className="text-xl mb-10 text-gray-600">
-            Book a free 15-minute call. We'll show you exactly how to capture more leads and grow your business.
+            Book a free 15-minute call. We&apos;ll show you exactly how to capture more leads and grow your business.
           </p>
           <Link 
             href="/contact"

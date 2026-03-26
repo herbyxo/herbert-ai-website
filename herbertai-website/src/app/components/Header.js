@@ -36,27 +36,21 @@ export default function Header() {
             <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
                 <Link href="/services#website" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">🌐</span>
-                    <div>
+                  <div className="flex items-center gap-3">                    <div>
                       <div className="font-medium text-gray-900">Website</div>
                       <div className="text-xs text-gray-500">Professional site + hosting</div>
                     </div>
                   </div>
                 </Link>
                 <Link href="/services#voice" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">🤖</span>
-                    <div>
+                  <div className="flex items-center gap-3">                    <div>
                       <div className="font-medium text-gray-900">AI Voice Receptionist</div>
                       <div className="text-xs text-gray-500">24/7 call answering</div>
                     </div>
                   </div>
                 </Link>
                 <Link href="/services#chatbot" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">💬</span>
-                    <div>
+                  <div className="flex items-center gap-3">                    <div>
                       <div className="font-medium text-gray-900">AI Chatbot Widget</div>
                       <div className="text-xs text-gray-500">Website chat widget</div>
                     </div>
@@ -81,27 +75,21 @@ export default function Header() {
             <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
                 <Link href="/portfolio/websites" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">🌐</span>
-                    <div>
+                  <div className="flex items-center gap-3">                    <div>
                       <div className="font-medium text-gray-900">Websites</div>
                       <div className="text-xs text-gray-500">Demo sites we've built</div>
                     </div>
                   </div>
                 </Link>
                 <Link href="/portfolio/chatbots" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">💬</span>
-                    <div>
+                  <div className="flex items-center gap-3">                    <div>
                       <div className="font-medium text-gray-900">Chatbots</div>
                       <div className="text-xs text-gray-500">AI chat widget demos</div>
                     </div>
                   </div>
                 </Link>
                 <Link href="/portfolio/voice" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">🤖</span>
-                    <div>
+                  <div className="flex items-center gap-3">                    <div>
                       <div className="font-medium text-gray-900">Voice Receptionists</div>
                       <div className="text-xs text-gray-500">AI receptionist demos</div>
                     </div>
