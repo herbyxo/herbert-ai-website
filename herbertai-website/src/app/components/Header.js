@@ -23,9 +23,8 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8">
-          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/">Home</Link>
-          
+        <nav className="hidden md:flex gap-8 items-center">
+
           {/* Services Dropdown */}
           <div className="relative group">
             <Link className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1" href="/services">
@@ -34,14 +33,9 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </Link>
-            
-            {/* Dropdown Menu */}
             <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
-                <Link 
-                  href="/services#website" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition"
-                >
+                <Link href="/services#website" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
                   <div className="flex items-center gap-3">
                     <span className="text-xl">🌐</span>
                     <div>
@@ -50,11 +44,7 @@ export default function Header() {
                     </div>
                   </div>
                 </Link>
-                
-                <Link 
-                  href="/services#voice" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition"
-                >
+                <Link href="/services#voice" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
                   <div className="flex items-center gap-3">
                     <span className="text-xl">🤖</span>
                     <div>
@@ -63,11 +53,7 @@ export default function Header() {
                     </div>
                   </div>
                 </Link>
-                
-                <Link 
-                  href="/services#chatbot" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition"
-                >
+                <Link href="/services#chatbot" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
                   <div className="flex items-center gap-3">
                     <span className="text-xl">💬</span>
                     <div>
@@ -76,24 +62,77 @@ export default function Header() {
                     </div>
                   </div>
                 </Link>
-
                 <div className="border-t border-gray-200 my-2"></div>
-
-                <Link 
-                  href="/services" 
-                  className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 font-medium"
-                >
+                <Link href="/services" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 font-medium">
                   View All Services →
                 </Link>
               </div>
             </div>
           </div>
 
+          {/* Portfolio Dropdown */}
+          <div className="relative group">
+            <button className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1">
+              Portfolio
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
+                <Link href="/portfolio/websites" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xl">🌐</span>
+                    <div>
+                      <div className="font-medium text-gray-900">Websites</div>
+                      <div className="text-xs text-gray-500">Demo sites we've built</div>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/portfolio/chatbots" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xl">💬</span>
+                    <div>
+                      <div className="font-medium text-gray-900">Chatbots</div>
+                      <div className="text-xs text-gray-500">AI chat widget demos</div>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/portfolio/voice" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xl">🤖</span>
+                    <div>
+                      <div className="font-medium text-gray-900">Voice Receptionists</div>
+                      <div className="text-xs text-gray-500">AI receptionist demos</div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
           <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/pricing">Pricing</Link>
-          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/portfolio">Portfolio</Link>
-          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/about">About</Link>
-          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/faq">FAQ</Link>
-          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/demo">Demo</Link>
+
+          {/* About Dropdown */}
+          <div className="relative group">
+            <button className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1">
+              About
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
+                <Link href="/about" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition font-medium">
+                  About Us
+                </Link>
+                <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition font-medium">
+                  FAQ
+                </Link>
+              </div>
+            </div>
+          </div>
+
           <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/contact">Contact</Link>
         </nav>
 
@@ -115,16 +154,18 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <nav className="md:hidden border-t border-gray-200 py-4 px-4 space-y-2">
-          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#website" onClick={() => setMobileMenuOpen(false)}>→ Website</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#voice" onClick={() => setMobileMenuOpen(false)}>→ AI Voice</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#chatbot" onClick={() => setMobileMenuOpen(false)}>→ AI Chatbot</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/portfolio/websites" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/websites" onClick={() => setMobileMenuOpen(false)}>→ Websites</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/chatbots" onClick={() => setMobileMenuOpen(false)}>→ Chatbots</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/voice" onClick={() => setMobileMenuOpen(false)}>→ Voice Receptionists</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/portfolio" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/demo" onClick={() => setMobileMenuOpen(false)}>Demo</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/about" onClick={() => setMobileMenuOpen(false)}>→ About Us</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/faq" onClick={() => setMobileMenuOpen(false)}>→ FAQ</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </nav>
       )}
