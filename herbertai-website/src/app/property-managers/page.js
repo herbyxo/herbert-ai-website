@@ -227,6 +227,69 @@ export default function PropertyManagers() {
         </div>
       </section>
 
+      {/* Integrations */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+            Connects with the tools you already use
+          </p>
+          <p className="text-center text-gray-600 mb-10 max-w-xl mx-auto">
+            When a repair is approved, jobs flow directly into your tradespeople&apos;s existing systems — no double entry, no friction.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+
+            <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
+              <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm">AroFlo</div>
+                <div className="text-xs text-gray-500">Job management</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
+              <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm">Google Calendar</div>
+                <div className="text-xs text-gray-500">Scheduling</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
+              <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm">SMS</div>
+                <div className="text-xs text-gray-500">Tenant notifications</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
+              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm">Zapier</div>
+                <div className="text-xs text-gray-500">Custom workflows</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -275,8 +338,7 @@ export default function PropertyManagers() {
               </Link>
             </div>
 
-            <div className="bg-black text-white rounded-2xl p-6 border-2 border-black relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">MOST POPULAR</div>
+            <div className="bg-black text-white rounded-2xl p-6 border-2 border-black">
               <h3 className="text-xl font-semibold mb-1">Pro</h3>
               <p className="text-gray-400 text-sm mb-4">Up to 150 properties</p>
               <div className="mb-6">

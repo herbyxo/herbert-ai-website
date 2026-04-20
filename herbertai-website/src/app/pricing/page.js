@@ -93,8 +93,7 @@ export default function Pricing() {
             <a href="/contact" className="block w-full text-center px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Get Started</a>
           </div>
 
-          <div className="bg-black text-white rounded-2xl p-6 border-2 border-black relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">BEST VALUE</div>
+          <div className="bg-black text-white rounded-2xl p-6 border-2 border-black">
             <div className="mb-3"><IconBolt /></div>
             <h3 className="text-xl font-semibold mb-2">Complete Package</h3>
             <p className="text-gray-300 text-sm mb-4">All 3 services included</p>
