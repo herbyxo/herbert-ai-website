@@ -145,8 +145,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Package CTA */}
+      {/* Who We Serve */}
       <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-4 text-gray-900">
+            Who We Help
+          </h2>
+          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            Two industries. One mission — replace manual, time-wasting workflows with AI that just handles it.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Trades Businesses</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Stop Missing Calls & Losing Jobs</h3>
+              <p className="text-gray-600 mb-6">
+                AI voice receptionist, chatbot, and a professional website that captures every lead — day or night. Built for plumbers, electricians, builders, and more.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600 mb-8">
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  24/7 AI call answering
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  Automatic appointment booking
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  Professional website + chatbot
+                </li>
+              </ul>
+              <Link href="/services" className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition text-sm">
+                Explore Trades Solutions
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Property Managers</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Automate Maintenance Requests End-to-End</h3>
+              <p className="text-gray-600 mb-6">
+                Tenants call in, AI captures the issue, you approve, a tradesperson gets booked — all automatically. Manage your entire maintenance workflow without the phone tag.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600 mb-8">
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  AI tenant intake agent
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  One-click approve or deny
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  Automated tradesperson booking
+                </li>
+              </ul>
+              <Link href="/property-managers" className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition text-sm">
+                Explore Property Manager AI
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Package CTA */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="bg-black text-white rounded-3xl p-12">
             <div className="text-center mb-10">

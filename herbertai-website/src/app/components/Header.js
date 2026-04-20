@@ -25,36 +25,38 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 items-center">
 
-          {/* Services Dropdown */}
+          {/* Solutions Dropdown */}
           <div className="relative group">
-            <Link className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1" href="/services">
-              Services
+            <button className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1">
+              Solutions
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </Link>
-            <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            </button>
+            <div className="absolute left-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
-                <Link href="/services#website" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">                    <div>
-                      <div className="font-medium text-gray-900">Website</div>
-                      <div className="text-xs text-gray-500">Professional site + hosting</div>
-                    </div>
-                  </div>
+                <div className="px-4 py-2">
+                  <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">For Trades Businesses</div>
+                </div>
+                <Link href="/services#website" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
+                  <div className="font-medium text-gray-900 text-sm">Website</div>
+                  <div className="text-xs text-gray-500">Professional site + hosting</div>
                 </Link>
-                <Link href="/services#voice" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">                    <div>
-                      <div className="font-medium text-gray-900">AI Voice Receptionist</div>
-                      <div className="text-xs text-gray-500">24/7 call answering</div>
-                    </div>
-                  </div>
+                <Link href="/services#voice" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
+                  <div className="font-medium text-gray-900 text-sm">AI Voice Receptionist</div>
+                  <div className="text-xs text-gray-500">24/7 call answering</div>
                 </Link>
-                <Link href="/services#chatbot" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">                    <div>
-                      <div className="font-medium text-gray-900">AI Chatbot Widget</div>
-                      <div className="text-xs text-gray-500">Website chat widget</div>
-                    </div>
-                  </div>
+                <Link href="/services#chatbot" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
+                  <div className="font-medium text-gray-900 text-sm">AI Chatbot Widget</div>
+                  <div className="text-xs text-gray-500">Website chat widget</div>
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <div className="px-4 py-2">
+                  <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">For Property Managers</div>
+                </div>
+                <Link href="/property-managers" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
+                  <div className="font-medium text-gray-900 text-sm">Property Manager AI</div>
+                  <div className="text-xs text-gray-500">Automated maintenance requests</div>
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 font-medium">
@@ -142,10 +144,13 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <nav className="md:hidden border-t border-gray-200 py-4 px-4 space-y-2">
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/services" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider pl-4 pt-1">For Trades</p>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#website" onClick={() => setMobileMenuOpen(false)}>→ Website</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#voice" onClick={() => setMobileMenuOpen(false)}>→ AI Voice</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#chatbot" onClick={() => setMobileMenuOpen(false)}>→ AI Chatbot</Link>
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider pl-4 pt-1">For Property Managers</p>
+          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/property-managers" onClick={() => setMobileMenuOpen(false)}>→ Property Manager AI</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/portfolio/websites" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/websites" onClick={() => setMobileMenuOpen(false)}>→ Websites</Link>
           <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/chatbots" onClick={() => setMobileMenuOpen(false)}>→ Chatbots</Link>
