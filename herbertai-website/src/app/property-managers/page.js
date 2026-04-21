@@ -234,7 +234,7 @@ export default function PropertyManagers() {
             Connects with the tools you already use
           </p>
           <p className="text-center text-gray-600 mb-10 max-w-xl mx-auto">
-            When a repair is approved, jobs flow directly into your tradespeople&apos;s existing systems — no double entry, no friction.
+            Your workflow doesn&apos;t change. Approvals, booking confirmations, and maintenance history sync with the tools you already use to manage your portfolio.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
 
