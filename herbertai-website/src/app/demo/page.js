@@ -54,147 +54,55 @@ export default function Demo() {
           </div>
         </div>
 
-        {/* Sample Conversation */}
+        {/* Real Call Recording */}
         <div className="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
-          <h2 className="text-3xl font-semibold mb-8 text-gray-900 text-center">
-            Sample Conversation
-          </h2>
-          <p className="text-center text-gray-600 mb-10">
-            Here's how Herbert AI handles a typical appointment booking call:
-          </p>
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-1.5 mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span className="text-sm font-medium text-gray-600">Real call recording</span>
+            </div>
+            <h2 className="text-3xl font-semibold mb-4 text-gray-900">
+              Hear It For Yourself
+            </h2>
+            <p className="text-gray-600 mb-10">
+              This is an unedited call handled by Herbert AI for a commercial refrigeration client in Adelaide. The customer reported a suspected refrigerant leak — the AI qualified the job, collected all details, and closed the call.
+            </p>
 
-          <div className="space-y-4 max-w-3xl mx-auto">
-            
-            {/* AI Message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 max-w-md border border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Herbert AI</p>
-                <p className="text-gray-700">
-                  Good afternoon! Thank you for calling. How can I help you today?
-                </p>
+            <div className="bg-white rounded-2xl p-6 border border-gray-200 mb-8">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3a4 4 0 014 4v4a4 4 0 01-8 0V7a4 4 0 014-4zm0 14a7 7 0 007-7h-2a5 5 0 01-10 0H5a7 7 0 007 7zm-1 2h2v2h-2v-2z"/>
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-gray-900 text-sm">Herbert AI — Voice Receptionist</p>
+                  <p className="text-gray-500 text-xs">Commercial refrigeration client · Adelaide, SA</p>
+                </div>
               </div>
+              <audio
+                controls
+                className="w-full"
+                preload="metadata"
+              >
+                <source src="/steve-demo.wav" type="audio/wav" />
+              </audio>
             </div>
 
-            {/* Customer Message */}
-            <div className="flex justify-end">
-              <div className="bg-black text-white rounded-2xl rounded-tr-sm p-4 max-w-md">
-                <p className="text-sm font-semibold mb-1">Customer</p>
-                <p>
-                  Hi, I'd like to book an appointment for next week.
-                </p>
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="bg-white rounded-xl p-4 border border-gray-200">
+                <p className="text-2xl font-semibold text-gray-900">~60s</p>
+                <p className="text-xs text-gray-500 mt-1">Call handled end-to-end</p>
+              </div>
+              <div className="bg-white rounded-xl p-4 border border-gray-200">
+                <p className="text-2xl font-semibold text-gray-900">0</p>
+                <p className="text-xs text-gray-500 mt-1">Humans involved</p>
+              </div>
+              <div className="bg-white rounded-xl p-4 border border-gray-200">
+                <p className="text-2xl font-semibold text-gray-900">100%</p>
+                <p className="text-xs text-gray-500 mt-1">Details captured</p>
               </div>
             </div>
-
-            {/* AI Message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 max-w-md border border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Herbert AI</p>
-                <p className="text-gray-700">
-                  Of course! I'd be happy to help you book an appointment. Can I please get your name?
-                </p>
-              </div>
-            </div>
-
-            {/* Customer Message */}
-            <div className="flex justify-end">
-              <div className="bg-black text-white rounded-2xl rounded-tr-sm p-4 max-w-md">
-                <p className="text-sm font-semibold mb-1">Customer</p>
-                <p>
-                  Sure, it's Sarah Mitchell.
-                </p>
-              </div>
-            </div>
-
-            {/* AI Message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 max-w-md border border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Herbert AI</p>
-                <p className="text-gray-700">
-                  Thank you, Sarah. And what's the best contact number for you?
-                </p>
-              </div>
-            </div>
-
-            {/* Customer Message */}
-            <div className="flex justify-end">
-              <div className="bg-black text-white rounded-2xl rounded-tr-sm p-4 max-w-md">
-                <p className="text-sm font-semibold mb-1">Customer</p>
-                <p>
-                  0412 345 678
-                </p>
-              </div>
-            </div>
-
-            {/* AI Message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 max-w-md border border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Herbert AI</p>
-                <p className="text-gray-700">
-                  Perfect. Let me check availability for next week. What day works best for you?
-                </p>
-              </div>
-            </div>
-
-            {/* Customer Message */}
-            <div className="flex justify-end">
-              <div className="bg-black text-white rounded-2xl rounded-tr-sm p-4 max-w-md">
-                <p className="text-sm font-semibold mb-1">Customer</p>
-                <p>
-                  Tuesday afternoon if possible?
-                </p>
-              </div>
-            </div>
-
-            {/* AI Message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 max-w-md border border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Herbert AI</p>
-                <p className="text-gray-700">
-                  Great! I have availability at 2:00 PM and 3:30 PM on Tuesday. Which time suits you better?
-                </p>
-              </div>
-            </div>
-
-            {/* Customer Message */}
-            <div className="flex justify-end">
-              <div className="bg-black text-white rounded-2xl rounded-tr-sm p-4 max-w-md">
-                <p className="text-sm font-semibold mb-1">Customer</p>
-                <p>
-                  2:00 PM works perfectly.
-                </p>
-              </div>
-            </div>
-
-            {/* AI Message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 max-w-md border border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Herbert AI</p>
-                <p className="text-gray-700">
-                  Excellent! I've booked you in for Tuesday at 2:00 PM. You'll receive a confirmation text at 0412 345 678. Is there anything else I can help you with today?
-                </p>
-              </div>
-            </div>
-
-            {/* Customer Message */}
-            <div className="flex justify-end">
-              <div className="bg-black text-white rounded-2xl rounded-tr-sm p-4 max-w-md">
-                <p className="text-sm font-semibold mb-1">Customer</p>
-                <p>
-                  No, that's all. Thank you!
-                </p>
-              </div>
-            </div>
-
-            {/* AI Message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 max-w-md border border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Herbert AI</p>
-                <p className="text-gray-700">
-                  You're welcome, Sarah! We look forward to seeing you on Tuesday at 2:00 PM. Have a great day!
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
 
