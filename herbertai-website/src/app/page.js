@@ -125,9 +125,15 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Answers calls 24/7, books appointments, never misses a customer.
               </p>
-              <Link href="/services#voice" className="text-black font-medium hover:underline">
-                Learn more
-              </Link>
+              <div className="flex items-center gap-4">
+                <Link href="/services#voice" className="text-black font-medium hover:underline">
+                  Learn more
+                </Link>
+                <Link href="/demo" className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  Hear a real call
+                </Link>
+              </div>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition">
