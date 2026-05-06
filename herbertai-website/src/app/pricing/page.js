@@ -65,10 +65,14 @@ export default function Pricing() {
             <div className="mb-3"><IconMic /></div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Voice</h3>
             <p className="text-gray-600 text-sm mb-4">24/7 call answering</p>
-            <div className="mb-4">
+            <div className="mb-3">
               <p className="text-gray-700 mb-1"><span className="text-2xl font-semibold text-gray-900">$297</span><span className="text-sm">/month</span></p>
             </div>
-            <ul className="space-y-2 text-sm text-gray-600 mb-6 mt-8">
+            <div className="inline-flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-4">
+              <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+              <span className="text-xs font-medium text-green-700">2-week free trial</span>
+            </div>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6 mt-2">
               <li className="flex items-center gap-2"><Check /> 24/7 answering</li>
               <li className="flex items-center gap-2"><Check /> Appointment booking</li>
               <li className="flex items-center gap-2"><Check /> FAQ handling</li>
