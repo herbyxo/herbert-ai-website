@@ -30,12 +30,16 @@ src/
     globals.css       — Tailwind import
     about/page.js
     contact/page.js
-    demo/page.js
     faq/page.js
     pricing/page.js
     services/page.js
+    portfolio/
+      voice/page.js     — Master Freeze demo card + audio player
+      websites/page.js  — 3 demo website projects with lightbox
+      chatbots/page.js  — coming soon placeholder
 public/
   logo.png            — 32x32 Herbert AI logo
+  steve-demo.wav      — Master Freeze unedited call recording
 ```
 
 ---
@@ -77,6 +81,6 @@ public/
 ---
 
 ## Current Pages
-`/` `/services` `/pricing` `/about` `/faq` `/demo` `/contact`
+`/` `/services` `/pricing` `/about` `/faq` `/contact` `/portfolio/voice` `/portfolio/websites` `/portfolio/chatbots`
 
 Services page has anchor links: `#website` `#voice` `#chatbot`

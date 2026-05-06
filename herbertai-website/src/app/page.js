@@ -129,7 +129,7 @@ export default function Home() {
                 <Link href="/services#voice" className="text-black font-medium hover:underline">
                   Learn more
                 </Link>
-                <Link href="/demo" className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition">
+                <Link href="/portfolio/voice" className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                   Hear a real call
                 </Link>
@@ -392,8 +392,8 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="text-5xl font-semibold text-gray-900 mb-2">30%+</div>
-              <p className="text-gray-600">Average increase in booked jobs</p>
+              <div className="text-5xl font-semibold text-gray-900 mb-2">3–5</div>
+              <p className="text-gray-600">Calls missed per week by tradies on the tools</p>
             </div>
 
             <div>
