@@ -2,9 +2,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  if (pathname?.startsWith('/preview')) return null
 
   return (
     <header className="bg-white border-b border-gray-200 py-4">
