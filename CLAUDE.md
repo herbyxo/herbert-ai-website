@@ -1,3 +1,5 @@
+@C:\Files\Claude\memory\project_herbert-ai.md
+
 # Herbert AI — Claude Code Context
 
 ## What this is

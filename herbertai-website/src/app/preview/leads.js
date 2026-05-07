@@ -26,6 +26,7 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Adelaide's go-to electrician for fast, reliable electrical work.",
     hero: "Fast, Reliable Electrical Work Across Adelaide",
+    realReview: { name: 'Recent Google review', text: "Simon's follow-up was very efficient. Top quality work and great communication." },
   },
   {
     slug: 'adelaide-electric',
@@ -81,6 +82,7 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Prompt, professional, and no-fuss electrical work across Adelaide.",
     hero: "Prompt. Professional. No Fuss.",
+    realReview: { name: 'Recent Google review', text: "Prompt, no-fuss and incredibly knowledgeable. Highly recommend." },
   },
   {
     slug: 'just-trades',
@@ -92,6 +94,7 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Respect, reliability, and no shortcuts. That's Just Trades.",
     hero: "Respect. Reliability. No Shortcuts.",
+    realReview: { name: 'Recent Google review', text: "Respect, reliability, taking pride. No shortcuts, no surprises." },
   },
   {
     slug: 'luma-electrical',
@@ -103,6 +106,7 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Reliable, professional, and fair-priced electrical work across Adelaide.",
     hero: "Reliable, Professional, Fair-Priced",
+    realReview: { name: 'Recent Google review', text: "Reliable, professional and friendly, offering a fair price. Will use again." },
   },
   {
     slug: 'sole-elec',

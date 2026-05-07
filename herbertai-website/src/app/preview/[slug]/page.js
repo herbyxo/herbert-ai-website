@@ -184,15 +184,18 @@ export default async function PreviewPage({ params }) {
             <div className="flex">{[1,2,3,4,5].map(n => <IconStar key={n} filled />)}</div>
             <span className="text-sm text-gray-500 font-medium">5.0 on Google</span>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {REVIEWS.map((r, i) => (
-              <div key={i} className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-                <div className="flex mb-3">{[1,2,3,4,5].map(n => <IconStar key={n} filled={n <= r.rating} />)}</div>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">&ldquo;{r.text}&rdquo;</p>
-                <p className="text-xs font-semibold text-gray-900">{r.name}</p>
-              </div>
-            ))}
-          </div>
+          {lead.realReview ? (
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 max-w-2xl">
+              <div className="flex mb-3">{[1,2,3,4,5].map(n => <IconStar key={n} filled />)}</div>
+              <p className="text-gray-700 text-lg mb-4 leading-relaxed italic">&ldquo;{lead.realReview.text}&rdquo;</p>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">— {lead.realReview.name}</p>
+            </div>
+          ) : (
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 max-w-2xl text-center">
+              <p className="text-gray-400 text-sm italic">Your real Google reviews would appear here.</p>
+              <p className="text-gray-400 text-xs mt-2">We pull them in automatically when your site goes live.</p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -217,22 +220,19 @@ export default async function PreviewPage({ params }) {
               <li className="flex items-center gap-2"><span className="text-green-400">✓</span> Escalates emergencies to your mobile</li>
             </ul>
           </div>
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-6 w-full md:w-72 shrink-0">
-            <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-4">This month</p>
-            <div className="space-y-4">
-              <div>
-                <p className="text-3xl font-semibold">24</p>
-                <p className="text-xs text-gray-400 mt-0.5">Calls answered automatically</p>
-              </div>
-              <div>
-                <p className="text-3xl font-semibold">11</p>
-                <p className="text-xs text-gray-400 mt-0.5">Bookings created while on the tools</p>
-              </div>
-              <div>
-                <p className="text-3xl font-semibold text-green-400">$4,400</p>
-                <p className="text-xs text-gray-400 mt-0.5">Estimated revenue captured</p>
-              </div>
+          <div className="bg-white/5 border border-white/20 rounded-2xl p-6 w-full md:w-96 shrink-0">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <p className="text-xs text-gray-300 font-semibold uppercase tracking-wider">Real call recording</p>
             </div>
+            <p className="text-sm font-semibold text-white mb-1">Hear it for yourself</p>
+            <p className="text-xs text-gray-400 mb-4 leading-relaxed">
+              An actual call our AI handled — refrigerant leak job, qualified and booked end-to-end with zero human input.
+            </p>
+            <audio controls className="w-full" preload="metadata" style={{filter: 'invert(0.85)'}}>
+              <source src="/steve-demo.wav" type="audio/wav" />
+            </audio>
+            <p className="text-xs text-gray-500 mt-3 italic">Imagine this answering for {lead.biz}.</p>
           </div>
         </div>
       </section>
