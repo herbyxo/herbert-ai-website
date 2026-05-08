@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
@@ -10,129 +9,46 @@ export default function Header() {
   if (pathname?.startsWith('/preview')) return null
 
   return (
-    <header className="bg-white border-b border-gray-200 py-4">
-      <div className="container mx-auto flex justify-between items-center px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Image 
-            src="/logo.png" 
-            alt="Herbert AI" 
-            width={32} 
-            height={32}
-            className="rounded"
-          />
-          <span className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition">
-            Herbert AI
-          </span>
+    <header className="bg-cream">
+      <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <span className="w-2.5 h-2.5 rounded-full bg-green shadow-[0_0_10px_var(--green-glow)]" />
+          <span className="text-[18px] font-semibold tracking-[-0.02em] text-ink">herbertai</span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden md:flex items-center gap-9 text-[14px] text-ink-soft">
+          <DropdownLink label="Solutions">
+            <DropItem href="/services#website" title="Website" sub="Professional site + hosting" />
+            <DropItem href="/services#voice" title="AI Voice Receptionist" sub="24/7 call answering" />
+            <DropItem href="/services#chatbot" title="AI Chatbot Widget" sub="Website chat widget" />
+            <DropDivider />
+            <DropItem href="/property-managers" title="Property Manager AI" sub="Maintenance request automation" />
+          </DropdownLink>
 
-          {/* Solutions Dropdown */}
-          <div className="relative group">
-            <button className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1">
-              Solutions
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className="absolute left-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
-                <div className="px-4 py-2">
-                  <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">For Trades Businesses</div>
-                </div>
-                <Link href="/services#website" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="font-medium text-gray-900 text-sm">Website</div>
-                  <div className="text-xs text-gray-500">Professional site + hosting</div>
-                </Link>
-                <Link href="/services#voice" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="font-medium text-gray-900 text-sm">AI Voice Receptionist</div>
-                  <div className="text-xs text-gray-500">24/7 call answering</div>
-                </Link>
-                <Link href="/services#chatbot" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="font-medium text-gray-900 text-sm">AI Chatbot Widget</div>
-                  <div className="text-xs text-gray-500">Website chat widget</div>
-                </Link>
-                <div className="border-t border-gray-200 my-2"></div>
-                <div className="px-4 py-2">
-                  <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">For Property Managers</div>
-                </div>
-                <Link href="/property-managers" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="font-medium text-gray-900 text-sm">Property Manager AI</div>
-                  <div className="text-xs text-gray-500">Automated maintenance requests</div>
-                </Link>
-                <div className="border-t border-gray-200 my-2"></div>
-                <Link href="/services" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 font-medium">
-                  View All Services →
-                </Link>
-              </div>
-            </div>
-          </div>
+          <DropdownLink label="Portfolio">
+            <DropItem href="/portfolio/websites" title="Websites" sub="Demo sites we've built" />
+            <DropItem href="/portfolio/voice" title="Voice Receptionists" sub="Real call recordings" />
+            <DropItem href="/portfolio/chatbots" title="Chatbots" sub="AI chat widget demos" />
+          </DropdownLink>
 
-          {/* Portfolio Dropdown */}
-          <div className="relative group">
-            <button className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1">
-              Portfolio
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
-                <Link href="/portfolio/websites" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">                    <div>
-                      <div className="font-medium text-gray-900">Websites</div>
-                      <div className="text-xs text-gray-500">Demo sites we've built</div>
-                    </div>
-                  </div>
-                </Link>
-                <Link href="/portfolio/chatbots" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">                    <div>
-                      <div className="font-medium text-gray-900">Chatbots</div>
-                      <div className="text-xs text-gray-500">AI chat widget demos</div>
-                    </div>
-                  </div>
-                </Link>
-                <Link href="/portfolio/voice" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition">
-                  <div className="flex items-center gap-3">                    <div>
-                      <div className="font-medium text-gray-900">Voice Receptionists</div>
-                      <div className="text-xs text-gray-500">AI receptionist demos</div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/pricing">Pricing</Link>
-
-          {/* About Dropdown */}
-          <div className="relative group">
-            <button className="text-gray-600 hover:text-gray-900 transition font-medium flex items-center gap-1">
-              About
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
-                <Link href="/about" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition font-medium">
-                  About Us
-                </Link>
-                <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition font-medium">
-                  FAQ
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <Link className="text-gray-600 hover:text-gray-900 transition font-medium" href="/contact">Contact</Link>
+          <Link href="/pricing" className="hover:opacity-60 transition-opacity">Pricing</Link>
+          <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
+          <Link href="/contact" className="hover:opacity-60 transition-opacity">Contact</Link>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-gray-900"
+        <div className="hidden md:block">
+          <Link
+            href="/contact"
+            className="bg-ink text-cream px-4 py-2 rounded-full text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
+          >
+            Get started <span aria-hidden>→</span>
+          </Link>
+        </div>
+
+        <button
+          className="md:hidden text-ink"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileMenuOpen ? (
@@ -144,27 +60,62 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden border-t border-gray-200 py-4 px-4 space-y-2">
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/services" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider pl-4 pt-1">For Trades</p>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#website" onClick={() => setMobileMenuOpen(false)}>→ Website</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#voice" onClick={() => setMobileMenuOpen(false)}>→ AI Voice</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/services#chatbot" onClick={() => setMobileMenuOpen(false)}>→ AI Chatbot</Link>
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider pl-4 pt-1">For Property Managers</p>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/property-managers" onClick={() => setMobileMenuOpen(false)}>→ Property Manager AI</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/portfolio/websites" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/websites" onClick={() => setMobileMenuOpen(false)}>→ Websites</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/chatbots" onClick={() => setMobileMenuOpen(false)}>→ Chatbots</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/portfolio/voice" onClick={() => setMobileMenuOpen(false)}>→ Voice Receptionists</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 font-medium" href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/about" onClick={() => setMobileMenuOpen(false)}>→ About Us</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2 pl-4" href="/faq" onClick={() => setMobileMenuOpen(false)}>→ FAQ</Link>
-          <Link className="block text-gray-600 hover:text-gray-900 py-2" href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+        <nav className="md:hidden border-t border-line py-5 px-6 space-y-1 text-[15px]">
+          {[
+            ['/services', 'Solutions'],
+            ['/portfolio/websites', 'Portfolio'],
+            ['/pricing', 'Pricing'],
+            ['/about', 'About'],
+            ['/faq', 'FAQ'],
+            ['/contact', 'Contact'],
+          ].map(([href, label]) => (
+            <Link key={href} href={href} className="block py-2 text-ink-soft hover:text-ink" onClick={() => setMobileMenuOpen(false)}>
+              {label}
+            </Link>
+          ))}
+          <div className="pt-3">
+            <Link
+              href="/contact"
+              className="bg-ink text-cream px-4 py-2.5 rounded-full text-[13px] font-medium inline-flex items-center gap-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Get started <span aria-hidden>→</span>
+            </Link>
+          </div>
         </nav>
       )}
     </header>
   )
+}
+
+function DropdownLink({ label, children }) {
+  return (
+    <div className="relative group">
+      <button className="hover:opacity-60 transition-opacity flex items-center gap-1">
+        {label}
+        <svg className="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div className="absolute left-0 top-full mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div className="bg-cream border border-line rounded-2xl shadow-[0_8px_32px_rgba(10,10,10,0.06)] py-2">
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function DropItem({ href, title, sub }) {
+  return (
+    <Link href={href} className="block px-4 py-2.5 hover:bg-cream-alt transition-colors">
+      <div className="font-medium text-ink text-[14px]">{title}</div>
+      <div className="text-[12px] text-muted mt-0.5">{sub}</div>
+    </Link>
+  )
+}
+
+function DropDivider() {
+  return <div className="my-2 border-t border-line" />
 }

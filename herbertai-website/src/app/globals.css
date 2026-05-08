@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
+@theme {
+  /* tradie-tech preset */
+  --color-cream: #F5F0E5;
+  --color-cream-alt: #EFE9DC;
+  --color-ink: #0A0A0A;
+  --color-ink-soft: #1A1A1A;
+  --color-muted: #6B6660;
+  --color-line: #E2DBCB;
+  --color-green: #00FF88;
+  --color-green-deep: #00D924;
+
+  --font-sans: var(--font-geist), -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --green-glow: rgba(0, 255, 136, 0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { -webkit-font-smoothing: antialiased; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #F5F0E5;
+  color: #0A0A0A;
+  font-family: var(--font-geist), -apple-system, sans-serif;
+}
+
+/* italic serif emphasis inside headlines */
+.serif-em {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* hero pulse dot */
+@keyframes hi-pulse { 0%, 100% { opacity: 1 } 50% { opacity: .35 } }
+.hi-pulse { animation: hi-pulse 1.6s infinite; }
+
+/* hero green glow blob */
+.hero-blob {
+  background: radial-gradient(circle, var(--green-glow), transparent 60%);
 }

@@ -10,23 +10,39 @@ export default function Footer() {
   if (pathname?.startsWith('/preview')) return null
 
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-8 text-center px-4">
-      <p className="text-gray-600">© {new Date().getFullYear()} Herbert AI. All rights reserved.</p>
-      {(managerUrl || ownerUrl) && (
-        <p className="text-sm text-gray-500 mt-3">
-          {managerUrl && (
-            <Link href={managerUrl} className="hover:text-gray-800 underline-offset-2 hover:underline">
-              Manager portal
+    <footer className="bg-cream border-t border-line">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-12">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div>
+            <Link href="/" className="flex items-center gap-2.5 mb-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-green shadow-[0_0_10px_var(--green-glow)]" />
+              <span className="text-[18px] font-semibold tracking-[-0.02em] text-ink">herbertai</span>
             </Link>
-          )}
-          {managerUrl && ownerUrl && <span className="text-gray-400"> · </span>}
-          {ownerUrl && (
-            <Link href={ownerUrl} className="hover:text-gray-800 underline-offset-2 hover:underline">
-              Owner console
-            </Link>
-          )}
-        </p>
-      )}
+            <p className="text-muted text-[14px] max-w-md">
+              AI receptionists and websites for Adelaide tradies. Built so you never miss a job while you&apos;re on the tools.
+            </p>
+          </div>
+
+          <nav className="flex flex-wrap gap-x-7 gap-y-3 text-[14px] text-ink-soft">
+            <Link href="/services" className="hover:opacity-60 transition">Services</Link>
+            <Link href="/pricing" className="hover:opacity-60 transition">Pricing</Link>
+            <Link href="/portfolio/voice" className="hover:opacity-60 transition">Portfolio</Link>
+            <Link href="/about" className="hover:opacity-60 transition">About</Link>
+            <Link href="/contact" className="hover:opacity-60 transition">Contact</Link>
+            {managerUrl && (
+              <Link href={managerUrl} className="hover:opacity-60 transition">Manager portal</Link>
+            )}
+            {ownerUrl && (
+              <Link href={ownerUrl} className="hover:opacity-60 transition">Owner console</Link>
+            )}
+          </nav>
+        </div>
+
+        <div className="mt-12 pt-6 border-t border-line flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[12px] text-muted font-mono uppercase tracking-[0.12em]">
+          <span>© {new Date().getFullYear()} Herbert AI</span>
+          <span>Adelaide · South Australia</span>
+        </div>
+      </div>
     </footer>
   )
 }

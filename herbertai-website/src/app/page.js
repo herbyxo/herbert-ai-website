@@ -1,428 +1,320 @@
 import Link from 'next/link'
 
-const IconPhone = () => (
-  <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-  </svg>
-)
-
-const IconGlobe = () => (
-  <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
-  </svg>
-)
-
-const IconClock = () => (
-  <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-)
-
-const IconMic = () => (
-  <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 3a4 4 0 014 4v4a4 4 0 01-8 0V7a4 4 0 014-4z" />
-  </svg>
-)
-
-const IconChat = () => (
-  <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-  </svg>
-)
-
-const IconCheck = () => (
-  <svg className="w-4 h-4 text-white shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-  </svg>
-)
-
 export default function Home() {
   return (
-    <div>
-      
-      {/* Hero Section */}
-      <section className="bg-white py-20 md:py-32">
-        <div className="container mx-auto text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-semibold mb-6 text-gray-900 tracking-tight">
-            Stop Losing Customers.<br />Start Growing Your Business.
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-600 font-light">
-            We build digital systems that help trades businesses capture more leads, book more jobs, and never miss a customer.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link 
-              href="/contact"
-              className="inline-block px-8 py-3 bg-black text-white rounded-full font-medium text-lg hover:bg-gray-800 transition"
-            >
-              Get Started
-            </Link>
-            <Link 
-              href="/services"
-              className="inline-block px-8 py-3 border-2 border-black text-black rounded-full font-medium text-lg hover:bg-gray-50 transition"
-            >
-              View Services
-            </Link>
-          </div>
-        </div>
-      </section>
+    <>
+      <Hero />
+      <HowItWorks />
+      <Services />
+      <Audio />
+      <Pricing />
+      <FinalCTA />
+    </>
+  )
+}
 
-      {/* Problem Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-4xl font-semibold text-center mb-12 text-gray-900">
-            Sound Familiar?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <div className="mb-3"><IconPhone /></div>
-              <h3 className="font-semibold text-gray-900 mb-2">Missing Calls = Lost Money</h3>
-              <p className="text-gray-600">Every missed call is a potential customer going to your competitor instead.</p>
-            </div>
+/* ─── Hero ──────────────────────────────────────────────────────────── */
 
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <div className="mb-3"><IconGlobe /></div>
-              <h3 className="font-semibold text-gray-900 mb-2">No Website or Outdated Site</h3>
-              <p className="text-gray-600">Customers judge your business by your online presence. A bad site costs you jobs.</p>
-            </div>
+function Hero() {
+  return (
+    <section className="px-6 lg:px-12 py-6 max-w-[1280px] mx-auto">
+      <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 lg:p-22 relative overflow-hidden">
+        <div className="hero-blob absolute top-[-120px] right-[-120px] w-[480px] h-[480px] pointer-events-none" />
 
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <div className="mb-3"><IconClock /></div>
-              <h3 className="font-semibold text-gray-900 mb-2">After-Hours Inquiries</h3>
-              <p className="text-gray-600">Potential customers calling at 7pm get voicemail. They won&apos;t leave a message.</p>
-            </div>
+        <Eyebrow color="white" pulse>AI receptionist · live in Adelaide</Eyebrow>
 
-          </div>
-        </div>
-      </section>
+        <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-semibold tracking-[-0.04em] leading-[0.95] mb-7 max-w-[14ch]">
+          Never miss<br />
+          <span className="serif-em text-green text-[1.05em]">a single</span> job<br />
+          while you&apos;re<br />
+          on the tools.
+        </h1>
 
-      {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-4 text-gray-900">
-            How We Help
-          </h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            We build and manage the digital systems that capture more customers and save you time.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition">
-              <div className="mb-4"><IconGlobe /></div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Professional Website</h3>
-              <p className="text-gray-600 mb-4">
-                Fast, mobile-optimized site that converts visitors into customers.
-              </p>
-              <Link href="/services#website" className="text-black font-medium hover:underline">
-                Learn more
-              </Link>
-            </div>
+        <p className="text-white/70 text-[17px] md:text-[19px] leading-[1.55] max-w-[56ch] mb-11 font-light">
+          Solo tradies miss 3 to 5 calls a week on the job. Herbert answers every one,
+          24/7, qualifies it, books it in, and SMSs you the details.
+          You finish what you started — the AI handles the phone.
+        </p>
 
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition">
-              <div className="mb-4"><IconMic /></div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">AI Voice Receptionist</h3>
-              <p className="text-gray-600 mb-4">
-                Answers calls 24/7, books appointments, never misses a customer.
-              </p>
-              <div className="flex items-center gap-4">
-                <Link href="/services#voice" className="text-black font-medium hover:underline">
-                  Learn more
-                </Link>
-                <Link href="/portfolio/voice" className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                  Hear a real call
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition">
-              <div className="mb-4"><IconChat /></div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">AI Chatbot Widget</h3>
-              <p className="text-gray-600 mb-4">
-                Website chat that captures leads and answers questions instantly.
-              </p>
-              <Link href="/services#chatbot" className="text-black font-medium hover:underline">
-                Learn more
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations */}
-      <section className="py-16 bg-gray-50 border-t border-gray-100">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-10">
-            Connects with the tools you already use
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-
-            <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
-              <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg className="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm">AroFlo</div>
-                <div className="text-xs text-gray-500">Job management</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
-              <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm">Google Calendar</div>
-                <div className="text-xs text-gray-500">Scheduling</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
-              <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm">Xero</div>
-                <div className="text-xs text-gray-500">Accounting</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
-              <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm">SMS</div>
-                <div className="text-xs text-gray-500">Notifications</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-5 py-3 hover:shadow-sm transition">
-              <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm">Zapier</div>
-                <div className="text-xs text-gray-500">Custom workflows</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Serve */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-4 text-gray-900">
-            Who We Help
-          </h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Two industries. One mission — replace manual, time-wasting workflows with AI that just handles it.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-6">
-
-            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
-              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Trades Businesses</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Stop Missing Calls & Losing Jobs</h3>
-              <p className="text-gray-600 mb-6">
-                AI voice receptionist, chatbot, and a professional website that captures every lead — day or night. Built for plumbers, electricians, builders, and more.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600 mb-8">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                  24/7 AI call answering
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                  Automatic appointment booking
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                  Professional website + chatbot
-                </li>
-              </ul>
-              <Link href="/services" className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition text-sm">
-                Explore Trades Solutions
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
-              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Property Managers</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Automate Maintenance Requests End-to-End</h3>
-              <p className="text-gray-600 mb-6">
-                Tenants call in, AI captures the issue, you approve, a tradesperson gets booked — all automatically. Manage your entire maintenance workflow without the phone tag.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600 mb-8">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                  AI tenant intake agent
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                  One-click approve or deny
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                  Automated tradesperson booking
-                </li>
-              </ul>
-              <Link href="/property-managers" className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition text-sm">
-                Explore Property Manager AI
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Package CTA */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="bg-black text-white rounded-3xl p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-                Get Everything for $697/month
-              </h2>
-              <p className="text-xl text-gray-300 mb-2">
-                Complete digital solution. No setup fees.
-              </p>
-              <p className="text-lg text-gray-400">
-                Website + AI Voice + AI Chatbot — all included
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-10">
-              
-              <div className="bg-white/10 rounded-2xl p-6">
-                <h3 className="text-xl font-semibold mb-4">What&apos;s Included:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <IconCheck />
-                    <span className="text-gray-200">Professional website build + hosting</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconCheck />
-                    <span className="text-gray-200">24/7 AI voice receptionist</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconCheck />
-                    <span className="text-gray-200">AI chatbot on your website</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconCheck />
-                    <span className="text-gray-200">Google Calendar integration</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconCheck />
-                    <span className="text-gray-200">Ongoing updates & support</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 rounded-2xl p-6">
-                <h3 className="text-xl font-semibold mb-4">The Value:</h3>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex justify-between text-gray-300">
-                    <span>Website (build + hosting)</span>
-                    <span>$497</span>
-                  </li>
-                  <li className="flex justify-between text-gray-300">
-                    <span>AI Voice Receptionist</span>
-                    <span>$297</span>
-                  </li>
-                  <li className="flex justify-between text-gray-300">
-                    <span>AI Chatbot Widget</span>
-                    <span>$197</span>
-                  </li>
-                  <li className="flex justify-between text-white font-semibold text-lg border-t border-white/20 pt-2 mt-2">
-                    <span>Total Value</span>
-                    <span>$991/mo</span>
-                  </li>
-                </ul>
-                <p className="text-green-400 font-semibold text-lg">
-                  You Save: $294/month
-                </p>
-              </div>
-
-            </div>
-
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Link 
-                href="/pricing"
-                className="inline-block px-8 py-3 bg-white text-black rounded-full font-medium text-lg hover:bg-gray-100 transition"
-              >
-                View Pricing
-              </Link>
-              <Link 
-                href="/contact"
-                className="inline-block px-8 py-3 border-2 border-white text-white rounded-full font-medium text-lg hover:bg-white hover:text-black transition"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h2 className="text-4xl font-semibold mb-12 text-gray-900">
-            Built for Trades Businesses
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            
-            <div>
-              <div className="text-5xl font-semibold text-gray-900 mb-2">24/7</div>
-              <p className="text-gray-600">Never miss a call, even after hours</p>
-            </div>
-
-            <div>
-              <div className="text-5xl font-semibold text-gray-900 mb-2">3–5</div>
-              <p className="text-gray-600">Calls missed per week by tradies on the tools</p>
-            </div>
-
-            <div>
-              <div className="text-5xl font-semibold text-gray-900 mb-2">2 weeks</div>
-              <p className="text-gray-600">From signup to fully live</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto text-center px-4 max-w-3xl">
-          <h2 className="text-4xl font-semibold mb-6 text-gray-900">
-            Ready to Stop Losing Customers?
-          </h2>
-          <p className="text-xl mb-10 text-gray-600">
-            Book a free 15-minute call. We&apos;ll show you exactly how to capture more leads and grow your business.
-          </p>
-          <Link 
-            href="/contact"
-            className="inline-block px-10 py-4 bg-black text-white rounded-full font-medium text-lg hover:bg-gray-800 transition"
+        <div className="flex flex-wrap gap-3 items-center mb-16">
+          <Link
+            href="/portfolio/voice"
+            className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px"
           >
-            Get Started Today
+            Hear a real call <span aria-hidden>→</span>
+          </Link>
+          <Link
+            href="/services"
+            className="text-white px-5 py-3 rounded-full font-medium text-[15px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
+          >
+            How it works
           </Link>
         </div>
-      </section>
 
+        <div className="grid grid-cols-3 gap-6 md:gap-12 pt-12 border-t border-white/10">
+          <Stat value={<>24<span className="text-green">/</span>7</>} label="Always answering" />
+          <Stat value={<>$<span className="text-green">5k</span>+</>} label="Avg monthly recovery" />
+          <Stat value={<>14 <span className="text-green">days</span></>} label="Free trial · No lock-in" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Stat({ value, label }) {
+  return (
+    <div>
+      <div className="font-medium text-[28px] md:text-[40px] tracking-[-0.03em] leading-none mb-2">{value}</div>
+      <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-white/50">{label}</div>
+    </div>
+  )
+}
+
+/* ─── How it works ──────────────────────────────────────────────────── */
+
+function HowItWorks() {
+  const steps = [
+    {
+      n: '01',
+      title: 'Calls forward to Herbert',
+      body: "When you're busy or after hours, your number routes straight to your AI receptionist — answered in under 2 rings, every time.",
+    },
+    {
+      n: '02',
+      title: 'Job qualified, booked, confirmed',
+      body: 'Herbert collects job type, address, urgency, and contact details. Books it into your calendar and SMSs the customer a confirmation.',
+    },
+    {
+      n: '03',
+      title: 'You see it in your dashboard',
+      body: 'Every call, every booking, with revenue captured. Genuine emergencies escalate to your mobile straight away.',
+    },
+  ]
+
+  return (
+    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+      <div>
+        <Eyebrow>How it works</Eyebrow>
+        <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
+          Built for sparkies who&apos;d rather be <span className="serif-em text-green-deep">on the tools</span> than glued to their phone.
+        </h2>
+      </div>
+      <div className="grid gap-8 pt-1">
+        {steps.map((s) => (
+          <div key={s.n} className="flex gap-5">
+            <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{s.n}</span>
+            <div>
+              <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{s.title}</h3>
+              <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{s.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+/* ─── Services ─────────────────────────────────────────────────────── */
+
+function Services() {
+  const items = [
+    {
+      tag: 'Voice',
+      title: 'AI Voice Receptionist',
+      body: '24/7 call answering. Qualifies the job, books it in, SMS confirmations. Never miss a lead again.',
+      href: '/services#voice',
+    },
+    {
+      tag: 'Web',
+      title: 'Professional Website',
+      body: 'Fast, modern site that turns visitors into bookings. SEO-ready, mobile-first, hosted on Vercel.',
+      href: '/services#website',
+    },
+    {
+      tag: 'Chat',
+      title: 'AI Chatbot Widget',
+      body: 'Website chat that captures leads, answers questions, and books jobs while you sleep.',
+      href: '/services#chatbot',
+    },
+  ]
+
+  return (
+    <section className="bg-cream-alt border-y border-line">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="max-w-[36ch]">
+            <Eyebrow>What we build</Eyebrow>
+            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
+              Three products. <span className="serif-em text-green-deep">One outcome.</span>
+            </h2>
+          </div>
+          <p className="text-[16px] text-muted max-w-[42ch] leading-[1.6]">
+            Pick one to start, or run all three together. Every product feeds into the same goal — capture every lead, automatically.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-5">
+          {items.map((item) => (
+            <Link
+              key={item.tag}
+              href={item.href}
+              className="group bg-cream rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors"
+            >
+              <div className="flex items-center gap-2 mb-7">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{item.tag}</span>
+              </div>
+              <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{item.title}</h3>
+              <p className="text-[15px] text-muted leading-[1.6] mb-8">{item.body}</p>
+              <span className="inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-2.5 transition-all">
+                Learn more <span aria-hidden>→</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Audio demo ───────────────────────────────────────────────────── */
+
+function Audio() {
+  return (
+    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+      <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center relative overflow-hidden">
+        <div className="hero-blob absolute bottom-[-160px] left-[-160px] w-[420px] h-[420px] pointer-events-none" />
+
+        <div className="relative">
+          <Eyebrow color="white" pulse>Real call · Master Freeze</Eyebrow>
+          <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] mb-5">
+            Hear what your AI receptionist <span className="serif-em text-green">actually</span> sounds like.
+          </h2>
+          <p className="text-white/70 text-[16px] leading-[1.6] mb-8 max-w-[48ch]">
+            Unedited recording of a real refrigerant-leak callout. Herbert qualified the job,
+            collected the details, and closed the call — zero human involvement.
+          </p>
+          <Link
+            href="/portfolio/voice"
+            className="bg-green text-ink px-5 py-3 rounded-full font-semibold text-[14px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+          >
+            See more demos <span aria-hidden>→</span>
+          </Link>
+        </div>
+
+        <div className="bg-white/5 border border-white/15 rounded-2xl p-6 relative">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-green hi-pulse" />
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/60">Live recording</span>
+          </div>
+          <p className="text-[14px] font-medium mb-1">Master Freeze · Sydney, NSW</p>
+          <p className="text-[12px] text-white/50 mb-5">Refrigerant leak enquiry · Inbound call</p>
+          <audio controls preload="metadata" className="w-full" style={{ filter: 'invert(0.85)' }}>
+            <source src="/steve-demo.wav" type="audio/wav" />
+          </audio>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Pricing teaser ───────────────────────────────────────────────── */
+
+function Pricing() {
+  return (
+    <section className="bg-cream-alt border-y border-line">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+        <div className="max-w-[42ch] mb-16">
+          <Eyebrow>Pricing</Eyebrow>
+          <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
+            Honest pricing. <span className="serif-em text-green-deep">No lock-in.</span>
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-5">
+          <PriceCard tag="Voice" name="AI Voice Receptionist" price="$297" suffix="/month" highlight />
+          <PriceCard tag="Web" name="Professional Website" price="$300" suffix=" setup" body="$197 / month hosting + maintenance" />
+          <PriceCard tag="Chat" name="AI Chatbot Widget" price="$197" suffix="/month" />
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+          <span>· 14-day free trial</span>
+          <span>· Cancel anytime</span>
+          <span>· No setup pressure</span>
+          <Link href="/pricing" className="text-ink hover:text-green-deep transition ml-auto">
+            Full pricing →
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function PriceCard({ tag, name, price, suffix, body, highlight }) {
+  return (
+    <div className={`rounded-3xl p-8 border ${highlight ? 'bg-cream border-ink/40' : 'bg-cream border-line'}`}>
+      <div className="flex items-center gap-2 mb-7">
+        <span className={`w-1.5 h-1.5 rounded-full ${highlight ? 'bg-green-deep' : 'bg-muted'}`} />
+        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{tag}</span>
+        {highlight && (
+          <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.16em] text-green-deep">Most popular</span>
+        )}
+      </div>
+      <h3 className="text-[20px] font-medium tracking-[-0.01em] mb-2 text-ink">{name}</h3>
+      <div className="flex items-baseline gap-1 mb-2">
+        <span className="text-[44px] font-medium tracking-[-0.03em] text-ink">{price}</span>
+        <span className="text-[14px] text-muted">{suffix}</span>
+      </div>
+      {body && <p className="text-[13px] text-muted">{body}</p>}
+    </div>
+  )
+}
+
+/* ─── Final CTA ─────────────────────────────────────────────────────── */
+
+function FinalCTA() {
+  return (
+    <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto">
+      <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
+        <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
+
+        <div className="relative">
+          <Eyebrow color="white" center>Ready when you are</Eyebrow>
+          <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch] mx-auto">
+            Stop losing jobs <span className="serif-em text-green">while you&apos;re on the tools.</span>
+          </h2>
+          <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[52ch] mx-auto">
+            Two-week free trial. If Herbert doesn&apos;t catch a job that would&apos;ve been missed, you walk.
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link
+              href="/contact"
+              className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+            >
+              Get started <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href="/portfolio/voice"
+              className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
+            >
+              Hear a demo
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Reusable bits ─────────────────────────────────────────────────── */
+
+function Eyebrow({ children, color = 'ink', pulse, center }) {
+  const isWhite = color === 'white'
+  return (
+    <div className={`flex items-center gap-3 mb-9 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
+      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
+      {pulse && <span className="w-1.5 h-1.5 rounded-full bg-green hi-pulse" />}
+      {children}
     </div>
   )
 }
