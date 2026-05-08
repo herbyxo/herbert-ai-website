@@ -1,4 +1,4 @@
-import { getLead, leads } from '../leads'
+import { getLead, leads, PALETTES } from '../leads'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
@@ -24,12 +24,32 @@ export default async function PreviewPage({ params }) {
 
   const tel = lead.phone.replace(/\s/g, '')
   const tradeLabel = lead.trade === 'Electrician' ? 'Electrician' : 'Plumber'
-  const heroSerifWord = lead.trade === 'Electrician' ? 'electrical' : 'plumbing'
+  const heroSubject = lead.trade === 'Electrician' ? 'electrical' : 'plumbing'
+
+  const p = PALETTES[lead.palette] ?? PALETTES['cream-amber']
+  const isDark = p.mode === 'dark'
+
+  // CSS variables set on the page root — used throughout via bg-[var(--p-bg)] etc.
+  const styleVars = {
+    '--p-bg': p.bg,
+    '--p-bg-alt': p.bgAlt,
+    '--p-ink': p.ink,
+    '--p-ink-soft': p.inkSoft,
+    '--p-muted': p.muted,
+    '--p-line': p.line,
+    '--p-card': p.card,
+    '--p-accent': p.accent,
+    '--p-accent-deep': p.accentDeep,
+    '--p-accent-glow': p.accentGlow,
+  }
 
   return (
-    <div className="bg-cream text-ink font-sans min-h-screen">
+    <div
+      style={styleVars}
+      className="min-h-screen font-sans bg-[var(--p-bg)] text-[var(--p-ink)]"
+    >
 
-      {/* ── Disclosure banner ──────────────────────────────────────── */}
+      {/* ── Disclosure banner (Herbert AI brand) ──────────────────── */}
       <div className="bg-ink text-white">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px]">
           <p className="text-white/70 text-center sm:text-left">
@@ -41,18 +61,22 @@ export default async function PreviewPage({ params }) {
         </div>
       </div>
 
-      {/* ── Mockup nav ─────────────────────────────────────────────── */}
-      <header className="border-b border-line bg-cream sticky top-0 z-10">
+      {/* ── Mockup nav (lead's brand) ─────────────────────────────── */}
+      <header
+        className="border-b sticky top-0 z-10"
+        style={{ borderColor: 'var(--p-line)', background: 'var(--p-bg)' }}
+      >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
           <div>
-            <span className="text-[18px] font-semibold tracking-[-0.02em] text-ink">{lead.biz}</span>
-            <span className="ml-3 font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
+            <span className="text-[18px] font-semibold tracking-[-0.02em]">{lead.biz}</span>
+            <span className="ml-3 font-mono text-[10px] uppercase tracking-[0.16em]" style={{ color: 'var(--p-muted)' }}>
               Licensed {tradeLabel} · {lead.suburb}, SA
             </span>
           </div>
           <a
             href={`tel:${tel}`}
-            className="bg-ink text-cream px-4 py-2 rounded-full text-[13px] font-medium inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
+            className="px-4 py-2 rounded-full text-[13px] font-medium inline-flex items-center gap-2 transition-colors"
+            style={{ background: 'var(--p-ink)', color: 'var(--p-bg)' }}
           >
             <PhoneIcon /> {lead.phone}
           </a>
@@ -61,60 +85,31 @@ export default async function PreviewPage({ params }) {
 
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <section className="px-6 lg:px-12 py-6 max-w-[1280px] mx-auto">
-        <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 lg:p-22 relative overflow-hidden">
-          <div className="hero-blob absolute top-[-120px] right-[-120px] w-[480px] h-[480px] pointer-events-none" />
-
-          <Eyebrow color="white" pulse>{lead.suburb} · Available now</Eyebrow>
-
-          <h1 className="text-[44px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.04em] leading-[0.98] mb-7 max-w-[14ch]">
-            {lead.hero.includes(' ') ? heroWithSerifEmphasis(lead.hero) : lead.hero}
-          </h1>
-
-          <p className="text-white/70 text-[17px] md:text-[19px] leading-[1.55] max-w-[56ch] mb-10 font-light">
-            {lead.tagline}
-          </p>
-
-          <div className="flex flex-wrap gap-3 items-center mb-14">
-            <a
-              href={`tel:${tel}`}
-              className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px"
-            >
-              <PhoneIcon /> Call {lead.phone}
-            </a>
-            <a
-              href="#contact"
-              className="text-white px-5 py-3 rounded-full font-medium text-[15px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
-            >
-              Get a free quote
-            </a>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.14em] text-white/55">
-            <span className="flex items-center gap-2"><span className="text-green">✓</span> Licensed &amp; Insured</span>
-            <span className="flex items-center gap-2"><span className="text-green">✓</span> No call-out fee</span>
-            <span className="flex items-center gap-2"><span className="text-green">✓</span> Adelaide local</span>
-          </div>
-        </div>
+        {isDark ? <HeroDark lead={lead} tel={tel} /> : <HeroLight lead={lead} tel={tel} />}
       </section>
 
       {/* ── Services ──────────────────────────────────────────────── */}
-      <section className="bg-cream-alt border-y border-line">
+      <section style={{ background: 'var(--p-bg-alt)', borderTop: `1px solid var(--p-line)`, borderBottom: `1px solid var(--p-line)` }}>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
           <div className="mb-16">
-            <Eyebrow>What we do</Eyebrow>
-            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink max-w-[16ch]">
-              Quality {heroSerifWord} work, <span className="serif-em text-green-deep">done right.</span>
+            <Eyebrow palette={p}>What we do</Eyebrow>
+            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] max-w-[16ch]" style={{ color: 'var(--p-ink)' }}>
+              Quality {heroSubject} work, <span className="serif-em" style={{ color: 'var(--p-accent-deep)' }}>done right.</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             {lead.services.map((s, i) => (
-              <div key={i} className="bg-cream rounded-3xl p-8 border border-line">
+              <div
+                key={i}
+                className="rounded-3xl p-8 border"
+                style={{ background: 'var(--p-card)', borderColor: 'var(--p-line)' }}
+              >
                 <div className="flex items-center gap-2 mb-5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--p-accent-deep)' }} />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em]" style={{ color: 'var(--p-muted)' }}>{String(i + 1).padStart(2, '0')}</span>
                 </div>
-                <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-2 text-ink">{s.title}</h3>
-                <p className="text-[15px] text-muted leading-[1.6]">{s.desc}</p>
+                <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-2" style={{ color: 'var(--p-ink)' }}>{s.title}</h3>
+                <p className="text-[15px] leading-[1.6]" style={{ color: 'var(--p-muted)' }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -124,60 +119,70 @@ export default async function PreviewPage({ params }) {
       {/* ── Why choose us ─────────────────────────────────────────── */}
       <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
         <div>
-          <Eyebrow>Why choose us</Eyebrow>
-          <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
-            Built on <span className="serif-em text-green-deep">trust,</span> not promises.
+          <Eyebrow palette={p}>Why choose us</Eyebrow>
+          <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch]" style={{ color: 'var(--p-ink)' }}>
+            Built on <span className="serif-em" style={{ color: 'var(--p-accent-deep)' }}>trust,</span> not promises.
           </h2>
         </div>
         <div className="grid gap-8 pt-1">
-          <FeaturePoint n="01" title="Fast response">
+          <FeaturePoint palette={p} n="01" title="Fast response">
             We pick up, show up, and get the job done. No chasing, no waiting around.
           </FeaturePoint>
-          <FeaturePoint n="02" title="Licensed &amp; insured">
+          <FeaturePoint palette={p} n="02" title="Licensed &amp; insured">
             Fully licensed {tradeLabel.toLowerCase()} with public liability insurance on every job.
           </FeaturePoint>
-          <FeaturePoint n="03" title={`${lead.suburb} local`}>
+          <FeaturePoint palette={p} n="03" title={`${lead.suburb} local`}>
             Based locally. We know the area, and we&apos;re never far away.
           </FeaturePoint>
         </div>
       </section>
 
       {/* ── Reviews ───────────────────────────────────────────────── */}
-      <section className="bg-cream-alt border-y border-line">
+      <section style={{ background: 'var(--p-bg-alt)', borderTop: `1px solid var(--p-line)`, borderBottom: `1px solid var(--p-line)` }}>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <Eyebrow>Reviews</Eyebrow>
-          <h2 className="text-[36px] md:text-[44px] font-medium leading-[1.05] tracking-[-0.03em] text-ink mb-3 max-w-[18ch]">
-            What customers <span className="serif-em text-green-deep">say.</span>
+          <Eyebrow palette={p}>Reviews</Eyebrow>
+          <h2 className="text-[36px] md:text-[44px] font-medium leading-[1.05] tracking-[-0.03em] mb-3 max-w-[18ch]" style={{ color: 'var(--p-ink)' }}>
+            What customers <span className="serif-em" style={{ color: 'var(--p-accent-deep)' }}>say.</span>
           </h2>
           <div className="flex items-center gap-2 mb-12">
-            <Stars />
-            <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted ml-2">5.0 on Google</span>
+            <Stars color={p.accentDeep} />
+            <span className="font-mono text-[11px] uppercase tracking-[0.16em] ml-2" style={{ color: 'var(--p-muted)' }}>5.0 on Google</span>
           </div>
           {lead.realReview ? (
-            <blockquote className="bg-cream rounded-3xl p-10 md:p-14 border border-line max-w-[56ch]">
-              <p className="text-[20px] md:text-[24px] text-ink leading-[1.4] tracking-[-0.01em] mb-6">
-                <span className="serif-em text-green-deep">&ldquo;</span>{lead.realReview.text}<span className="serif-em text-green-deep">&rdquo;</span>
+            <blockquote
+              className="rounded-3xl p-10 md:p-14 border max-w-[56ch]"
+              style={{ background: 'var(--p-card)', borderColor: 'var(--p-line)' }}
+            >
+              <p className="text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.01em] mb-6" style={{ color: 'var(--p-ink)' }}>
+                <span className="serif-em" style={{ color: 'var(--p-accent-deep)' }}>&ldquo;</span>{lead.realReview.text}<span className="serif-em" style={{ color: 'var(--p-accent-deep)' }}>&rdquo;</span>
               </p>
-              <footer className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+              <footer className="font-mono text-[11px] uppercase tracking-[0.16em]" style={{ color: 'var(--p-muted)' }}>
                 — {lead.realReview.name}
               </footer>
             </blockquote>
           ) : (
-            <div className="bg-cream rounded-3xl p-10 md:p-14 border border-line max-w-[56ch]">
-              <p className="text-[15px] text-muted italic mb-2">Your real Google reviews would appear here.</p>
-              <p className="text-[13px] text-muted">We pull them in automatically when your site goes live.</p>
+            <div
+              className="rounded-3xl p-10 md:p-14 border max-w-[56ch]"
+              style={{ background: 'var(--p-card)', borderColor: 'var(--p-line)' }}
+            >
+              <p className="text-[15px] italic mb-2" style={{ color: 'var(--p-muted)' }}>Your real Google reviews would appear here.</p>
+              <p className="text-[13px]" style={{ color: 'var(--p-muted)' }}>We pull them in automatically when your site goes live.</p>
             </div>
           )}
         </div>
       </section>
 
-      {/* ── Never miss a call (Herbert AI pitch) ──────────────────── */}
+      {/* ── Never miss a call (Herbert AI BRAND — neon green) ───── */}
       <section className="px-6 lg:px-12 py-24 md:py-32 max-w-[1280px] mx-auto">
         <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center relative overflow-hidden">
           <div className="hero-blob absolute bottom-[-160px] left-[-160px] w-[420px] h-[420px] pointer-events-none" />
 
           <div className="relative">
-            <Eyebrow color="white" pulse>AI Voice Receptionist · included</Eyebrow>
+            <div className="flex items-center gap-3 mb-9 font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">
+              <span className="w-8 h-px bg-green" />
+              <span className="w-1.5 h-1.5 rounded-full bg-green hi-pulse" />
+              AI Voice Receptionist · included
+            </div>
             <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] mb-5 max-w-[18ch]">
               Never miss <span className="serif-em text-green">another</span> job while you&apos;re on the tools.
             </h2>
@@ -210,22 +215,26 @@ export default async function PreviewPage({ params }) {
       </section>
 
       {/* ── Contact ───────────────────────────────────────────────── */}
-      <section id="contact" className="bg-cream-alt border-t border-line">
+      <section
+        id="contact"
+        style={{ background: 'var(--p-bg-alt)', borderTop: `1px solid var(--p-line)` }}
+      >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 text-center">
-          <Eyebrow center>Get in touch</Eyebrow>
-          <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] text-ink mb-5 max-w-[20ch] mx-auto">
-            Ready when <span className="serif-em text-green-deep">you are.</span>
+          <Eyebrow palette={p} center>Get in touch</Eyebrow>
+          <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-5 max-w-[20ch] mx-auto" style={{ color: 'var(--p-ink)' }}>
+            Ready when <span className="serif-em" style={{ color: 'var(--p-accent-deep)' }}>you are.</span>
           </h2>
-          <p className="text-[16px] text-muted leading-[1.6] mb-10 max-w-[44ch] mx-auto">
+          <p className="text-[16px] leading-[1.6] mb-10 max-w-[44ch] mx-auto" style={{ color: 'var(--p-muted)' }}>
             Call or message — we&apos;ll get back to you fast.
           </p>
           <a
             href={`tel:${tel}`}
-            className="bg-ink text-cream px-8 py-4 rounded-full font-semibold text-[18px] inline-flex items-center gap-3 hover:bg-ink-soft transition-colors"
+            className="px-8 py-4 rounded-full font-semibold text-[18px] inline-flex items-center gap-3 transition-colors"
+            style={{ background: 'var(--p-ink)', color: 'var(--p-bg)' }}
           >
             <PhoneIcon /> {lead.phone}
           </a>
-          <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted mt-6">
+          <p className="font-mono text-[11px] uppercase tracking-[0.16em] mt-6" style={{ color: 'var(--p-muted)' }}>
             {lead.suburb} · South Australia
           </p>
         </div>
@@ -252,50 +261,135 @@ export default async function PreviewPage({ params }) {
   )
 }
 
+/* ─── Hero variants ───────────────────────────────────────────────── */
+
+function HeroLight({ lead, tel }) {
+  // light palette: contained dark hero card on light page
+  return (
+    <div
+      className="rounded-[32px] p-8 md:p-16 lg:p-22 relative overflow-hidden text-white"
+      style={{ background: 'var(--p-ink)' }}
+    >
+      <div
+        className="absolute top-[-120px] right-[-120px] w-[480px] h-[480px] pointer-events-none"
+        style={{ background: `radial-gradient(circle, var(--p-accent-glow), transparent 60%)` }}
+      />
+      <HeroBody lead={lead} tel={tel} onDark accentColor="var(--p-accent)" mutedColor="rgba(255,255,255,0.7)" />
+    </div>
+  )
+}
+
+function HeroDark({ lead, tel }) {
+  // dark palette: hero text directly on the dark page bg, no contained card
+  return (
+    <div className="px-2 md:px-8 py-20 md:py-32 relative">
+      <div
+        className="absolute top-[-160px] right-[-160px] w-[600px] h-[600px] pointer-events-none"
+        style={{ background: `radial-gradient(circle, var(--p-accent-glow), transparent 60%)` }}
+      />
+      <HeroBody lead={lead} tel={tel} accentColor="var(--p-accent)" mutedColor="var(--p-muted)" />
+    </div>
+  )
+}
+
+function HeroBody({ lead, tel, onDark, accentColor, mutedColor }) {
+  const heroNode = withSerifEmphasis(lead.hero, accentColor)
+
+  return (
+    <div className="relative">
+      {/* eyebrow */}
+      <div className="flex items-center gap-3 mb-9 font-mono text-[11px] uppercase tracking-[0.18em]" style={{ color: onDark ? 'rgba(255,255,255,0.55)' : 'var(--p-muted)' }}>
+        <span className="w-8 h-px" style={{ background: accentColor }} />
+        <span className="w-1.5 h-1.5 rounded-full hi-pulse" style={{ background: accentColor }} />
+        {lead.suburb} · Available now
+      </div>
+
+      <h1 className="text-[44px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.04em] leading-[0.98] mb-7 max-w-[14ch]">
+        {heroNode}
+      </h1>
+
+      <p className="text-[17px] md:text-[19px] leading-[1.55] max-w-[56ch] mb-10 font-light" style={{ color: mutedColor }}>
+        {lead.tagline}
+      </p>
+
+      <div className="flex flex-wrap gap-3 items-center mb-14">
+        <a
+          href={`tel:${tel}`}
+          className="px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-px"
+          style={{
+            background: accentColor,
+            color: 'var(--p-ink)',
+            boxShadow: `0 0 0 0 var(--p-accent-glow)`,
+          }}
+        >
+          <PhoneIcon /> Call {lead.phone}
+        </a>
+        <a
+          href="#contact"
+          className="px-5 py-3 rounded-full font-medium text-[15px] inline-flex items-center gap-2 border transition-colors"
+          style={{
+            borderColor: onDark ? 'rgba(255,255,255,0.2)' : 'var(--p-line)',
+            color: onDark ? '#fff' : 'var(--p-ink)',
+          }}
+        >
+          Get a free quote
+        </a>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.14em]" style={{ color: onDark ? 'rgba(255,255,255,0.55)' : 'var(--p-muted)' }}>
+        <span className="flex items-center gap-2"><span style={{ color: accentColor }}>✓</span> Licensed &amp; Insured</span>
+        <span className="flex items-center gap-2"><span style={{ color: accentColor }}>✓</span> No call-out fee</span>
+        <span className="flex items-center gap-2"><span style={{ color: accentColor }}>✓</span> Adelaide local</span>
+      </div>
+    </div>
+  )
+}
+
 /* ─── Helpers ─────────────────────────────────────────────────────── */
 
-function heroWithSerifEmphasis(text) {
-  // pick the second word of the headline as the italic emphasis
+function withSerifEmphasis(text, accentColor) {
+  // pick the second word for italic serif emphasis
   const words = text.split(' ')
   if (words.length < 2) return text
   const idx = 1
   return (
     <>
       {words.slice(0, idx).join(' ')}{' '}
-      <span className="serif-em text-green text-[1.05em]">{words[idx]}</span>{' '}
+      <span className="serif-em text-[1.05em]" style={{ color: accentColor }}>{words[idx]}</span>{' '}
       {words.slice(idx + 1).join(' ')}
     </>
   )
 }
 
-function Eyebrow({ children, color = 'ink', pulse, center }) {
-  const isWhite = color === 'white'
+function Eyebrow({ children, palette: p, center }) {
   return (
-    <div className={`flex items-center gap-3 mb-9 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
-      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
-      {pulse && <span className="w-1.5 h-1.5 rounded-full bg-green hi-pulse" />}
+    <div
+      className={`flex items-center gap-3 mb-9 font-mono text-[11px] uppercase tracking-[0.18em] ${center ? 'justify-center' : ''}`}
+      style={{ color: 'var(--p-muted)' }}
+    >
+      <span className="w-8 h-px" style={{ background: 'var(--p-ink)' }} />
       {children}
     </div>
   )
 }
 
-function FeaturePoint({ n, title, children }) {
+function FeaturePoint({ palette: p, n, title, children }) {
   return (
     <div className="flex gap-5">
-      <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{n}</span>
+      <span className="font-mono text-[12px] pt-1 shrink-0" style={{ color: 'var(--p-muted)' }}>{n}</span>
       <div>
-        <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{title}</h3>
-        <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{children}</p>
+        <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5" style={{ color: 'var(--p-ink)' }}>{title}</h3>
+        <p className="text-[15px] leading-[1.6] max-w-[52ch]" style={{ color: 'var(--p-muted)' }}>{children}</p>
       </div>
     </div>
   )
 }
 
-function Stars() {
+function Stars({ color }) {
   return (
     <div className="flex gap-0.5">
-      {[1,2,3,4,5].map(n => (
-        <svg key={n} className="w-4 h-4 fill-green-deep" viewBox="0 0 24 24">
+      {[1, 2, 3, 4, 5].map((n) => (
+        <svg key={n} className="w-4 h-4" viewBox="0 0 24 24" fill={color}>
           <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
         </svg>
       ))}

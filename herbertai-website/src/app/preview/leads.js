@@ -1,6 +1,90 @@
 // Preview leads — one entry per HIGH priority prospect
 // slug → URL: herbert-aisolutions.com/preview/[slug]
 
+// Palette tokens. Each lead picks one via lead.palette.
+// `mode` = 'light' (cream/off-white page bg, dark contained hero card)
+//        or 'dark' (full dark page, hero text on bg directly)
+export const PALETTES = {
+  'navy-gold': {
+    mode: 'dark',
+    bg: '#0A1B2D',
+    bgAlt: '#0F2436',
+    ink: '#F5F0E5',
+    inkSoft: '#E8E0CB',
+    muted: 'rgba(245,240,229,0.6)',
+    line: 'rgba(201,162,74,0.18)',
+    card: 'rgba(245,240,229,0.04)',
+    accent: '#D4B775',
+    accentDeep: '#C9A24A',
+    accentGlow: 'rgba(212,183,117,0.18)',
+  },
+  'cream-coral': {
+    mode: 'light',
+    bg: '#F5F0E5',
+    bgAlt: '#EFE8D8',
+    ink: '#0F0F0E',
+    inkSoft: '#1F1F1E',
+    muted: '#6B6660',
+    line: '#E2DBCB',
+    card: '#FFFFFF',
+    accent: '#FF6B4A',
+    accentDeep: '#E84F2E',
+    accentGlow: 'rgba(255,107,74,0.18)',
+  },
+  'light-electric': {
+    mode: 'light',
+    bg: '#FAFAFA',
+    bgAlt: '#F2F2F2',
+    ink: '#0A0A0A',
+    inkSoft: '#1A1A1A',
+    muted: '#71717A',
+    line: '#E4E4E7',
+    card: '#FFFFFF',
+    accent: '#3B82F6',
+    accentDeep: '#2563EB',
+    accentGlow: 'rgba(59,130,246,0.18)',
+  },
+  'cream-amber': {
+    mode: 'light',
+    bg: '#FAF6EC',
+    bgAlt: '#F4EEDD',
+    ink: '#1A1410',
+    inkSoft: '#2A211B',
+    muted: '#7A6A55',
+    line: '#E5DCC4',
+    card: '#FFFFFF',
+    accent: '#E89456',
+    accentDeep: '#D17638',
+    accentGlow: 'rgba(232,148,86,0.20)',
+  },
+  'dark-mint': {
+    mode: 'dark',
+    bg: '#0F1F18',
+    bgAlt: '#142922',
+    ink: '#F0F5F2',
+    inkSoft: '#D9E5DD',
+    muted: 'rgba(240,245,242,0.6)',
+    line: 'rgba(45,212,160,0.18)',
+    card: 'rgba(240,245,242,0.04)',
+    accent: '#3DDC97',
+    accentDeep: '#2DD4A0',
+    accentGlow: 'rgba(45,212,160,0.20)',
+  },
+  'slate-red': {
+    mode: 'light',
+    bg: '#F4F4F5',
+    bgAlt: '#E9E9EB',
+    ink: '#18181B',
+    inkSoft: '#27272A',
+    muted: '#71717A',
+    line: '#E4E4E7',
+    card: '#FFFFFF',
+    accent: '#EF4444',
+    accentDeep: '#DC2626',
+    accentGlow: 'rgba(239,68,68,0.18)',
+  },
+}
+
 const ELEC_SERVICES = [
   { title: 'Switchboard Upgrades', desc: 'Full panel upgrades and replacements for homes and businesses.' },
   { title: 'Safety Switch Installation', desc: 'Protect your family with compliant RCD safety switches.' },
@@ -24,9 +108,11 @@ export const leads = [
     suburb: 'Adelaide',
     phone: '0432 278 322',
     services: ELEC_SERVICES,
-    tagline: "Adelaide's go-to electrician for fast, reliable electrical work.",
+    tagline: "Simon and the team — Adelaide's go-to electrician for fast, reliable work.",
     hero: "Fast, Reliable Electrical Work Across Adelaide",
     realReview: { name: 'Recent Google review', text: "Simon's follow-up was very efficient. Top quality work and great communication." },
+    palette: 'cream-amber',
+    vibe: 'Friendly local owner-operator. Simon is named in reviews — personal, responsive. Warm cream + amber suits the trustworthy local feel.',
   },
   {
     slug: 'adelaide-electric',
@@ -38,6 +124,8 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Adelaide's trusted local electrician — licensed, insured, and always on time.",
     hero: "Adelaide's Trusted Local Electrician",
+    palette: 'light-electric',
+    vibe: 'Clean professional name, no personality hooks in the data — leans into modern minimal. Off-white + electric blue reads modern, trustworthy.',
   },
   {
     slug: 'amped-up-electrical',
@@ -49,6 +137,8 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Prospect's fast-response electrician. 30-min response. No surprises.",
     hero: "30-Minute Response. Every Time.",
+    palette: 'cream-coral',
+    vibe: 'Marcus advertises 30-min response on his Google ad — bold, energetic, response-focused positioning. Cream + coral matches the punchy confident operator.',
   },
   {
     slug: 'distinct-electrical',
@@ -60,6 +150,8 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Quality electrical work across Adelaide — residential and commercial.",
     hero: "Quality Electrical Work, Done Right",
+    palette: 'navy-gold',
+    vibe: '"Distinct" name implies premium positioning. Has a website (rare among HIGH leads) so presents as more established. Navy + gold reads editorial/premium.',
   },
   {
     slug: 'electrician-services-adelaide',
@@ -71,6 +163,8 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Adelaide's reliable electrical service — available when you need us.",
     hero: "Reliable Electrical Services Across Adelaide",
+    palette: 'slate-red',
+    vibe: 'Generic descriptive business name, no character hooks. Slate + utility red reads honest/no-frills — fits a get-the-job-done operator.',
   },
   {
     slug: 'he-electrical',
@@ -83,6 +177,8 @@ export const leads = [
     tagline: "Prompt, professional, and no-fuss electrical work across Adelaide.",
     hero: "Prompt. Professional. No Fuss.",
     realReview: { name: 'Recent Google review', text: "Prompt, no-fuss and incredibly knowledgeable. Highly recommend." },
+    palette: 'navy-gold',
+    vibe: 'Initials-based name, 24hr open, "prompt + knowledgeable" review — reads as skilled traditional tradesman. Navy + gold matches refined craftsperson positioning.',
   },
   {
     slug: 'just-trades',
@@ -95,6 +191,8 @@ export const leads = [
     tagline: "Respect, reliability, and no shortcuts. That's Just Trades.",
     hero: "Respect. Reliability. No Shortcuts.",
     realReview: { name: 'Recent Google review', text: "Respect, reliability, taking pride. No shortcuts, no surprises." },
+    palette: 'slate-red',
+    vibe: 'Tagline is values-driven and uncompromising — no-shortcuts honest tradesman ethos. Slate + utility red matches the bold, hard-working operator.',
   },
   {
     slug: 'luma-electrical',
@@ -107,6 +205,8 @@ export const leads = [
     tagline: "Reliable, professional, and fair-priced electrical work across Adelaide.",
     hero: "Reliable, Professional, Fair-Priced",
     realReview: { name: 'Recent Google review', text: "Reliable, professional and friendly, offering a fair price. Will use again." },
+    palette: 'cream-amber',
+    vibe: '"Luma" means light. Reviews emphasise friendly + fair-priced + reliable — warm balanced operator. Cream + amber matches the welcoming, light-and-warmth name.',
   },
   {
     slug: 'sole-elec',
@@ -118,6 +218,8 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Adelaide's friendly local electrician — quality work, honest pricing.",
     hero: "Your Local Adelaide Electrician",
+    palette: 'cream-coral',
+    vibe: 'Lenny + Erin named in reviews — small personal team. "SOLE" hints at solo/owner-operator ethos. Cream + coral matches the personal, confident small-team feel.',
   },
   {
     slug: 'safe-ohms-electrical',
@@ -132,6 +234,8 @@ export const leads = [
     ],
     tagline: "Adelaide's reliable solar and electrical specialist.",
     hero: "Reliable Solar & Electrical Solutions",
+    palette: 'dark-mint',
+    vibe: 'Solar specialist — eco/renewable focus. Sponsored ad emphasises "Reliable Solar & Electrical". Deep forest + mint green directly signals eco-tech specialist.',
   },
   {
     slug: 'tcb-electrical',
@@ -143,6 +247,8 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Adelaide electricians you can count on — residential and commercial.",
     hero: "Adelaide Electricians You Can Count On",
+    palette: 'light-electric',
+    vibe: 'Initials-based name with no character hooks. Has a website (more established). Off-white + electric blue reads modern, professional, trustworthy.',
   },
   {
     slug: 'mcl-electrical',
@@ -154,6 +260,8 @@ export const leads = [
     services: ELEC_SERVICES,
     tagline: "Professional electrical installations across the Adelaide metro area.",
     hero: "Professional Electrical Installations",
+    palette: 'navy-gold',
+    vibe: 'Initials-based name + Pty Ltd registered = more established/corporate. Has a working website. Navy + gold matches the refined professional installer.',
   },
   {
     slug: 'designa-plumbing',
@@ -165,6 +273,8 @@ export const leads = [
     services: PLUMB_SERVICES,
     tagline: "Adelaide's plumber for quality residential and commercial work.",
     hero: "Quality Plumbing Across Adelaide",
+    palette: 'dark-mint',
+    vibe: '"Designa" hints at design-conscious branding — premium plumber positioning. Has a domain. Deep forest + mint reads distinctive and considered.',
   },
   {
     slug: 'sa-plumbing-solutions',
@@ -176,6 +286,8 @@ export const leads = [
     services: PLUMB_SERVICES,
     tagline: "Fast, reliable plumbing solutions across South Australia.",
     hero: "Fast, Reliable Plumbing Solutions",
+    palette: 'light-electric',
+    vibe: '"SA Plumbing Solutions" sounds corporate-clean, broad SA-wide reach. Off-white + electric blue suits the professional/corporate plumbing operator.',
   },
   {
     slug: 'ultimate-plumbing',
@@ -187,6 +299,8 @@ export const leads = [
     services: PLUMB_SERVICES,
     tagline: "Adelaide's trusted plumber — emergency and scheduled work done right.",
     hero: "Adelaide's Trusted Plumber",
+    palette: 'cream-coral',
+    vibe: '"Ultimate" is a bold confident claim — operator who positions themselves as best-in-class. Cream + coral matches the bold confident voice.',
   },
   {
     slug: 'bj-plumbing',
@@ -198,6 +312,8 @@ export const leads = [
     services: PLUMB_SERVICES,
     tagline: "Reliable plumbing services across Adelaide — call anytime.",
     hero: "Reliable Plumbing, Call Anytime",
+    palette: 'slate-red',
+    vibe: 'Initials-based name on Bigpond email — old-school utility plumber. Slate + utility red matches the no-frills, gets-the-job-done operator.',
   },
   {
     slug: 'wills-plumbing',
@@ -209,6 +325,8 @@ export const leads = [
     services: PLUMB_SERVICES,
     tagline: "Malvern and Adelaide's local plumber — fast, friendly, and fair.",
     hero: "Your Local Adelaide Plumber",
+    palette: 'cream-amber',
+    vibe: 'Named after the owner ("Will\'s"), Malvern-suburb-specific = warm local family plumber. Cream + amber matches the personal, neighbourhood-friendly feel.',
   },
 ]
 
