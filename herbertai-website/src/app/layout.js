@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google'
+import { Geist, Geist_Mono, Instrument_Serif, Inter_Tight } from 'next/font/google'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './globals.css'
@@ -22,6 +22,12 @@ const instrumentSerif = Instrument_Serif({
   variable: '--font-instrument-serif',
   display: 'swap',
 })
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-inter-tight',
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Herbert AI — AI receptionists for Adelaide tradies',
@@ -30,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} ${interTight.variable}`}>
       <body className="min-h-screen flex flex-col bg-cream text-ink font-sans">
         <Header />
         <main className="flex-grow">{children}</main>
