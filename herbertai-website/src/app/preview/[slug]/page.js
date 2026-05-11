@@ -60,7 +60,7 @@ export default async function PreviewPage({ params }) {
       <div className="bg-ink text-white">
         <div className="max-w-[1320px] mx-auto px-6 lg:px-12 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px]">
           <p className="text-white/70 text-center sm:text-left">
-            <span className="text-green mr-1">●</span> Hey — I&apos;m <span className="text-white font-semibold">Will from Herbert AI</span>. I built this free mockup for {lead.biz}. No obligation.
+            <span className="text-green mr-1">●</span> Hey — I&apos;m <span className="text-white font-semibold">Will from Herbert AI</span>. Spent ~20 min sketching this concept for {lead.biz} — we&apos;d refine it together if you like the direction.
           </p>
           <Link href="/contact" className="shrink-0 bg-green text-ink font-semibold text-[12px] px-4 py-1.5 rounded-full hover:shadow-[0_0_24px_var(--green-glow)] transition-shadow">
             Claim this site →
