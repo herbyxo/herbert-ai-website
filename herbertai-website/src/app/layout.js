@@ -30,8 +30,8 @@ const interTight = Inter_Tight({
 })
 
 export const metadata = {
-  title: 'Herbert AI — AI receptionists for Adelaide tradies',
-  description: 'Never miss a job while you\'re on the tools. Herbert answers every call 24/7, qualifies the job, books it in, and SMSs you the details.',
+  title: 'Herbert AI — automation studio for small business',
+  description: 'Custom AI receptionists, websites, dashboards, and workflow automation. Built bespoke for small businesses by Will Herbert in Adelaide.',
 }
 
 export default function RootLayout({ children }) {

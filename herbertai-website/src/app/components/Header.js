@@ -17,10 +17,11 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-9 text-[14px] text-ink-soft">
-          <DropdownLink label="Solutions">
-            <DropItem href="/services#website" title="Website" sub="Professional site + hosting" />
-            <DropItem href="/services#voice" title="AI Voice Receptionist" sub="24/7 call answering" />
-            <DropItem href="/services#chatbot" title="AI Chatbot Widget" sub="Website chat widget" />
+          <DropdownLink label="Services">
+            <DropItem href="/services#voice" title="AI Voice Agents" sub="24/7 receptionists, custom prompts" />
+            <DropItem href="/services#website" title="Websites + Dashboards" sub="Custom builds, bookings, SMS" />
+            <DropItem href="/services" title="Workflow Automation" sub="n8n + your existing stack" />
+            <DropItem href="/services#chatbot" title="AI Chatbot Widget" sub="Lead capture on your site" />
             <DropDivider />
             <DropItem href="/property-managers" title="Property Manager AI" sub="Maintenance request automation" />
           </DropdownLink>
@@ -63,7 +64,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <nav className="md:hidden border-t border-line py-5 px-6 space-y-1 text-[15px]">
           {[
-            ['/services', 'Solutions'],
+            ['/services', 'Services'],
             ['/portfolio/websites', 'Portfolio'],
             ['/pricing', 'Pricing'],
             ['/about', 'About'],

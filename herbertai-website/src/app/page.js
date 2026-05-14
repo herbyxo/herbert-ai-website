@@ -21,40 +21,39 @@ function Hero() {
       <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 lg:p-22 relative overflow-hidden">
         <div className="hero-blob absolute top-[-120px] right-[-120px] w-[480px] h-[480px] pointer-events-none" />
 
-        <Eyebrow color="white" pulse>AI receptionist · live in Adelaide</Eyebrow>
+        <Eyebrow color="white" pulse>Adelaide · automation studio</Eyebrow>
 
         <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-semibold tracking-[-0.04em] leading-[0.95] mb-7 max-w-[14ch]">
-          Never miss<br />
-          <span className="serif-em text-green text-[1.05em]">a single</span> job<br />
-          while you&apos;re<br />
-          on the tools.
+          Stop running<br />
+          on <span className="serif-em text-green text-[1.05em]">missed calls</span><br />
+          and spreadsheets.
         </h1>
 
         <p className="text-white/70 text-[17px] md:text-[19px] leading-[1.55] max-w-[56ch] mb-11 font-light">
-          Solo tradies miss 3 to 5 calls a week on the job. Herbert answers every one,
-          24/7, qualifies it, books it in, and SMSs you the details.
-          You finish what you started — the AI handles the phone.
+          Herbert AI builds the receptionists, websites, dashboards, and workflow automation
+          that let small businesses run themselves. Custom-built, not from a template.
+          Shipped in weeks — not quarters.
         </p>
 
         <div className="flex flex-wrap gap-3 items-center mb-16">
           <Link
-            href="/portfolio/voice"
+            href="/portfolio/websites"
             className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px"
           >
-            Hear a real call <span aria-hidden>→</span>
+            See recent work <span aria-hidden>→</span>
           </Link>
           <Link
-            href="/services"
+            href="/contact"
             className="text-white px-5 py-3 rounded-full font-medium text-[15px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
           >
-            How it works
+            Talk to Will
           </Link>
         </div>
 
         <div className="grid grid-cols-3 gap-6 md:gap-12 pt-12 border-t border-white/10">
-          <Stat value={<>24<span className="text-green">/</span>7</>} label="Always answering" />
-          <Stat value={<>$<span className="text-green">5k</span>+</>} label="Avg monthly recovery" />
-          <Stat value={<>14 <span className="text-green">days</span></>} label="Free trial · No lock-in" />
+          <Stat value={<>Solo<span className="text-green">.</span></>} label="Built by Will, in Adelaide" />
+          <Stat value={<>2 <span className="text-green">wks</span></>} label="Brief to working version" />
+          <Stat value={<>0<span className="text-green"> lock-in</span></>} label="Cancel anytime · No retainer" />
         </div>
       </div>
     </section>
@@ -76,27 +75,27 @@ function HowItWorks() {
   const steps = [
     {
       n: '01',
-      title: 'Calls forward to Herbert',
-      body: "When you're busy or after hours, your number routes straight to your AI receptionist — answered in under 2 rings, every time.",
+      title: 'We talk',
+      body: '30-minute call. You explain the bottleneck — missed calls, manual bookings, follow-ups that fall through. We scope a fix that fits your scale.',
     },
     {
       n: '02',
-      title: 'Job qualified, booked, confirmed',
-      body: 'Herbert collects job type, address, urgency, and contact details. Books it into your calendar and SMSs the customer a confirmation.',
+      title: 'We build',
+      body: 'One to three weeks. Voice agent, custom dashboard, booking flow, or workflow glue — whatever the bottleneck calls for. You see progress as we ship.',
     },
     {
       n: '03',
-      title: 'You see it in your dashboard',
-      body: 'Every call, every booking, with revenue captured. Genuine emergencies escalate to your mobile straight away.',
+      title: 'We hand it over',
+      body: 'Live system, plus a direct line for tweaks. No lock-in, no agency retainer, no 90-day onboarding.',
     },
   ]
 
   return (
     <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
       <div>
-        <Eyebrow>How it works</Eyebrow>
+        <Eyebrow>How we work</Eyebrow>
         <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
-          Built for sparkies who&apos;d rather be <span className="serif-em text-green-deep">on the tools</span> than glued to their phone.
+          Built for businesses that&apos;d rather <span className="serif-em text-green-deep">run</span> than tinker with their tools.
         </h2>
       </div>
       <div className="grid gap-8 pt-1">
@@ -120,21 +119,21 @@ function Services() {
   const items = [
     {
       tag: 'Voice',
-      title: 'AI Voice Receptionist',
-      body: '24/7 call answering. Qualifies the job, books it in, SMS confirmations. Never miss a lead again.',
+      title: 'AI Voice Agents',
+      body: '24/7 receptionists that qualify jobs, book them in, and SMS confirmations. Custom system prompt per business.',
       href: '/services#voice',
     },
     {
       tag: 'Web',
-      title: 'Professional Website',
-      body: 'Fast, modern site that turns visitors into bookings. SEO-ready, mobile-first, hosted on Vercel.',
+      title: 'Websites + Dashboards',
+      body: 'Modern Next.js sites with custom dashboards behind them. Bookings, SMS, customer database — whatever the business needs.',
       href: '/services#website',
     },
     {
-      tag: 'Chat',
-      title: 'AI Chatbot Widget',
-      body: 'Website chat that captures leads, answers questions, and books jobs while you sleep.',
-      href: '/services#chatbot',
+      tag: 'Workflows',
+      title: 'Workflow Automation',
+      body: 'n8n + your existing stack, stitched together. AroFlo, Google Calendar, Gmail, CRMs — so your tools actually talk to each other.',
+      href: '/services',
     },
   ]
 
@@ -145,11 +144,11 @@ function Services() {
           <div className="max-w-[36ch]">
             <Eyebrow>What we build</Eyebrow>
             <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Three products. <span className="serif-em text-green-deep">One outcome.</span>
+              Three capabilities. <span className="serif-em text-green-deep">Stitched to fit.</span>
             </h2>
           </div>
           <p className="text-[16px] text-muted max-w-[42ch] leading-[1.6]">
-            Pick one to start, or run all three together. Every product feeds into the same goal — capture every lead, automatically.
+            Take one for a single bottleneck, or run all three together as a system. Every build is custom — no templates, no off-the-shelf widgets.
           </p>
         </div>
 
@@ -188,10 +187,10 @@ function Audio() {
         <div className="relative">
           <Eyebrow color="white" pulse>Real call · Master Freeze</Eyebrow>
           <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] mb-5">
-            Hear what your AI receptionist <span className="serif-em text-green">actually</span> sounds like.
+            Hear one of our voice agents, <span className="serif-em text-green">unedited.</span>
           </h2>
           <p className="text-white/70 text-[16px] leading-[1.6] mb-8 max-w-[48ch]">
-            Unedited recording of a real refrigerant-leak callout. Herbert qualified the job,
+            Real refrigerant-leak callout to Master Freeze. The agent qualified the job,
             collected the details, and closed the call — zero human involvement.
           </p>
           <Link
@@ -281,23 +280,23 @@ function FinalCTA() {
         <div className="relative">
           <Eyebrow color="white" center>Ready when you are</Eyebrow>
           <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch] mx-auto">
-            Stop losing jobs <span className="serif-em text-green">while you&apos;re on the tools.</span>
+            Stop running the admin yourself. <span className="serif-em text-green">We&apos;ll build it for you.</span>
           </h2>
           <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[52ch] mx-auto">
-            Two-week free trial. If Herbert doesn&apos;t catch a job that would&apos;ve been missed, you walk.
+            30-minute call, no pitch. We&apos;ll scope what you actually need, then quote it.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
               href="/contact"
               className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
             >
-              Get started <span aria-hidden>→</span>
+              Get in touch <span aria-hidden>→</span>
             </Link>
             <Link
-              href="/portfolio/voice"
+              href="/portfolio/websites"
               className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
             >
-              Hear a demo
+              See recent work
             </Link>
           </div>
         </div>
