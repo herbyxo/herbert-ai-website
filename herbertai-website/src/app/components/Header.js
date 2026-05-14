@@ -26,10 +26,10 @@ export default function Header() {
             <DropItem href="/property-managers" title="Property Manager AI" sub="Maintenance request automation" />
           </DropdownLink>
 
-          <DropdownLink label="Portfolio">
-            <DropItem href="/portfolio/websites" title="Websites" sub="Demo sites we've built" />
-            <DropItem href="/portfolio/voice" title="Voice Receptionists" sub="Real call recordings" />
-            <DropItem href="/portfolio/chatbots" title="Chatbots" sub="AI chat widget demos" />
+          <DropdownLink label="Work">
+            <DropItem href="/portfolio/websites#blendz" title="Blendz By Ben" sub="Live: website + dashboard + bookings + SMS" />
+            <DropItem href="/portfolio/websites#demos" title="Recent Sites" sub="Designs we've built for local businesses" />
+            <DropItem href="/portfolio/voice" title="Voice Demos" sub="Real receptionist call recordings" />
           </DropdownLink>
 
           <Link href="/pricing" className="hover:opacity-60 transition-opacity">Pricing</Link>
@@ -65,7 +65,7 @@ export default function Header() {
         <nav className="md:hidden border-t border-line py-5 px-6 space-y-1 text-[15px]">
           {[
             ['/services', 'Services'],
-            ['/portfolio/websites', 'Portfolio'],
+            ['/portfolio/websites', 'Work'],
             ['/pricing', 'Pricing'],
             ['/about', 'About'],
             ['/faq', 'FAQ'],
