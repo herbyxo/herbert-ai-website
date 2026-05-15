@@ -1,151 +1,226 @@
-const IconGlobe = () => (
-  <svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
-  </svg>
-)
-const IconMic = () => (
-  <svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 3a4 4 0 014 4v4a4 4 0 01-8 0V7a4 4 0 014-4z" />
-  </svg>
-)
-const IconChat = () => (
-  <svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-  </svg>
-)
-const IconBolt = () => (
-  <svg className="w-7 h-7 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-  </svg>
-)
-const Check = ({ dark }) => (
-  <svg className={`w-4 h-4 shrink-0 ${dark ? 'text-gray-400' : 'text-gray-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-  </svg>
-)
+import Link from 'next/link'
+
+const plans = [
+  {
+    tag: 'Voice',
+    name: 'AI Voice Agent',
+    price: '$297',
+    suffix: '/ month',
+    note: '2-week free trial',
+    bullets: ['24/7 answering', 'Custom prompt', 'Booking + SMS', 'Emergency escalation'],
+  },
+  {
+    tag: 'Web',
+    name: 'Website + Hosting',
+    price: '$300',
+    suffix: 'setup',
+    secondary: '$197 / month',
+    secondaryNote: 'hosting + maintenance',
+    bullets: ['Custom design', 'Mobile-first build', 'Vercel hosting', 'Ongoing updates'],
+  },
+  {
+    tag: 'Chat',
+    name: 'AI Chatbot Widget',
+    price: '$197',
+    suffix: '/ month',
+    bullets: ['Trained on your business', 'Lead capture', 'Booking through chat', 'Mobile + desktop'],
+  },
+  {
+    tag: 'Bundle',
+    name: 'All three, together',
+    price: '$697',
+    suffix: '/ month',
+    strike: '$991',
+    note: 'Save $294 / month · No setup fees',
+    bullets: ['Voice agent included', 'Website + hosting included', 'Chatbot widget included', 'Priority support'],
+    highlight: true,
+  },
+]
+
+const faqs = [
+  {
+    q: 'Are there any contracts?',
+    a: 'No. Everything is month-to-month — cancel anytime, no notice period for productised plans.',
+  },
+  {
+    q: 'What if I need something custom?',
+    a: 'Custom builds are quoted on scope. Tell us the bottleneck and we’ll come back with a fixed quote and timeline.',
+  },
+  {
+    q: 'How long does setup take?',
+    a: 'Website: 1–2 weeks. Voice agent or chatbot: 3–5 days after we’ve scoped your prompts and FAQs. Bundle: 2–3 weeks total.',
+  },
+  {
+    q: 'Can I start with one and add more later?',
+    a: 'Yes. Most clients start with one productised plan and add the others when they see the value. You can also upgrade to the bundle anytime.',
+  },
+]
 
 export default function Pricing() {
   return (
-    <div className="bg-white py-20">
-      <div className="container mx-auto px-4 max-w-6xl">
-        
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-semibold mb-6 text-gray-900">Simple, Transparent Pricing</h1>
-          <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
-            Choose individual services or save with our complete package.
+    <>
+      {/* Hero */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+          <Eyebrow>Pricing</Eyebrow>
+          <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
+            Honest pricing. <span className="serif-em text-green-deep">No lock-in.</span>
+          </h1>
+          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
+            Productised plans for the common patterns (voice, web + hosting, chat).
+            Anything outside those gets quoted on scope — no retainers, no agency overhead.
           </p>
         </div>
+      </section>
 
-        <div className="bg-gray-50 rounded-2xl p-6 mb-12 text-center border border-gray-200">
-          <p className="text-gray-700">
-            <span className="font-semibold">Save $294/month</span> by choosing the Complete Package instead of individual services
-          </p>
-        </div>
+      {/* Plans */}
+      <section className="bg-cream-alt border-y border-line">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {plans.map((p) => (
+              <div
+                key={p.tag}
+                className={`rounded-3xl p-7 border flex flex-col ${
+                  p.highlight ? 'bg-ink text-white border-ink' : 'bg-cream border-line'
+                }`}
+              >
+                <div className="flex items-center gap-2 mb-7">
+                  <span className={`w-1.5 h-1.5 rounded-full ${p.highlight ? 'bg-green' : 'bg-green-deep'}`} />
+                  <span className={`font-mono text-[11px] uppercase tracking-[0.18em] ${p.highlight ? 'text-white/55' : 'text-muted'}`}>
+                    {p.tag}
+                  </span>
+                  {p.highlight && (
+                    <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.16em] text-green">Most popular</span>
+                  )}
+                </div>
+                <h3 className={`text-[20px] font-medium tracking-[-0.01em] mb-3 ${p.highlight ? 'text-white' : 'text-ink'}`}>
+                  {p.name}
+                </h3>
+                <div className="mb-1">
+                  {p.strike && (
+                    <p className={`text-[13px] line-through ${p.highlight ? 'text-white/40' : 'text-muted'}`}>
+                      {p.strike} / month
+                    </p>
+                  )}
+                  <div className="flex items-baseline gap-1.5">
+                    <span className={`text-[40px] font-medium tracking-[-0.03em] ${p.highlight ? 'text-white' : 'text-ink'}`}>
+                      {p.price}
+                    </span>
+                    <span className={`text-[14px] ${p.highlight ? 'text-white/60' : 'text-muted'}`}>{p.suffix}</span>
+                  </div>
+                  {p.secondary && (
+                    <p className={`text-[13px] mt-1 ${p.highlight ? 'text-white/60' : 'text-muted'}`}>
+                      + <span className="font-medium">{p.secondary}</span> {p.secondaryNote}
+                    </p>
+                  )}
+                  {p.note && (
+                    <p className={`font-mono text-[10px] uppercase tracking-[0.12em] mt-3 ${p.highlight ? 'text-green' : 'text-green-deep'}`}>
+                      {p.note}
+                    </p>
+                  )}
+                </div>
 
-        <div className="grid lg:grid-cols-4 gap-6 mb-16">
-          
-          <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-            <div className="mb-3"><IconGlobe /></div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Website</h3>
-            <p className="text-gray-600 text-sm mb-4">Professional site + hosting</p>
-            <div className="mb-4">
-              <p className="text-gray-700 mb-1"><span className="text-2xl font-semibold text-gray-900">$300</span><span className="text-sm"> setup</span></p>
-              <p className="text-gray-700"><span className="text-2xl font-semibold text-gray-900">$197</span><span className="text-sm">/month</span></p>
-            </div>
-            <ul className="space-y-2 text-sm text-gray-600 mb-6">
-              <li className="flex items-center gap-2"><Check /> Custom design</li>
-              <li className="flex items-center gap-2"><Check /> Mobile-optimized</li>
-              <li className="flex items-center gap-2"><Check /> Hosting included</li>
-              <li className="flex items-center gap-2"><Check /> Ongoing maintenance</li>
-            </ul>
-            <a href="/contact" className="block w-full text-center px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Get Started</a>
-          </div>
+                <ul className="space-y-2.5 my-7">
+                  {p.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2.5">
+                      <span className={`w-1 h-1 rounded-full mt-2 shrink-0 ${p.highlight ? 'bg-green' : 'bg-green-deep'}`} />
+                      <span className={`text-[14px] leading-[1.5] ${p.highlight ? 'text-white/80' : 'text-ink-soft'}`}>
+                        {b}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
 
-          <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-            <div className="mb-3"><IconMic /></div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Voice</h3>
-            <p className="text-gray-600 text-sm mb-4">24/7 call answering</p>
-            <div className="mb-3">
-              <p className="text-gray-700 mb-1"><span className="text-2xl font-semibold text-gray-900">$297</span><span className="text-sm">/month</span></p>
-            </div>
-            <div className="inline-flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-4">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-              <span className="text-xs font-medium text-green-700">2-week free trial</span>
-            </div>
-            <ul className="space-y-2 text-sm text-gray-600 mb-6 mt-2">
-              <li className="flex items-center gap-2"><Check /> 24/7 answering</li>
-              <li className="flex items-center gap-2"><Check /> Appointment booking</li>
-              <li className="flex items-center gap-2"><Check /> FAQ handling</li>
-              <li className="flex items-center gap-2"><Check /> Call transfer</li>
-            </ul>
-            <a href="/contact" className="block w-full text-center px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Get Started</a>
-          </div>
-
-          <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-            <div className="mb-3"><IconChat /></div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Chatbot</h3>
-            <p className="text-gray-600 text-sm mb-4">Website chat widget</p>
-            <div className="mb-4">
-              <p className="text-gray-700 mb-1"><span className="text-2xl font-semibold text-gray-900">$197</span><span className="text-sm">/month</span></p>
-            </div>
-            <ul className="space-y-2 text-sm text-gray-600 mb-6 mt-8">
-              <li className="flex items-center gap-2"><Check /> Instant responses</li>
-              <li className="flex items-center gap-2"><Check /> Lead capture</li>
-              <li className="flex items-center gap-2"><Check /> Booking through chat</li>
-              <li className="flex items-center gap-2"><Check /> Custom training</li>
-            </ul>
-            <a href="/contact" className="block w-full text-center px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Get Started</a>
-          </div>
-
-          <div className="bg-black text-white rounded-2xl p-6 border-2 border-black">
-            <div className="mb-3"><IconBolt /></div>
-            <h3 className="text-xl font-semibold mb-2">Complete Package</h3>
-            <p className="text-gray-300 text-sm mb-4">All 3 services included</p>
-            <div className="mb-4">
-              <p className="text-gray-300 line-through text-sm">$991/month</p>
-              <p className="mb-1"><span className="text-3xl font-semibold">$697</span><span className="text-sm">/month</span></p>
-              <p className="text-green-400 text-sm font-semibold">Save $294/month</p>
-            </div>
-            <ul className="space-y-2 text-sm text-gray-300 mb-6">
-              <li className="flex items-center gap-2"><Check dark /> Everything included</li>
-              <li className="flex items-center gap-2"><Check dark /> No setup fees</li>
-              <li className="flex items-center gap-2"><Check dark /> Priority support</li>
-              <li className="flex items-center gap-2"><Check dark /> Monthly updates</li>
-            </ul>
-            <a href="/contact" className="block w-full text-center px-4 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Get Started</a>
-          </div>
-
-        </div>
-
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-8 text-gray-900 text-center">Pricing FAQs</h2>
-          <div className="space-y-4">
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">Are there any contracts?</h3>
-              <p className="text-gray-700">No. All services are month-to-month. Cancel anytime with 30 days notice.</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">What&apos;s included in the website hosting?</h3>
-              <p className="text-gray-700">Fast hosting, security updates, uptime monitoring, and content updates (up to 2 hours/month).</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">How long does setup take?</h3>
-              <p className="text-gray-700">Website: 1–2 weeks. AI Voice & Chatbot: 3–5 days after website is live. Complete package: 2–3 weeks total.</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-2">Can I upgrade later?</h3>
-              <p className="text-gray-700">Yes! Start with one service and add more anytime. Or upgrade to the package for instant savings.</p>
-            </div>
+                <Link
+                  href="/contact"
+                  className={`mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-[14px] font-semibold transition-colors ${
+                    p.highlight
+                      ? 'bg-green text-ink hover:shadow-[0_0_28px_var(--green-glow)]'
+                      : 'bg-ink text-cream hover:bg-ink-soft'
+                  }`}
+                >
+                  Get started <span aria-hidden>→</span>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="text-center mt-16">
-          <h2 className="text-3xl font-semibold mb-4 text-gray-900">Ready to Get Started?</h2>
-          <p className="text-gray-600 mb-8">Book a free call and we&apos;ll build a custom plan for your business.</p>
-          <a href="/contact" className="inline-block px-10 py-4 bg-black text-white rounded-full font-medium text-lg hover:bg-gray-800 transition">Schedule Free Call</a>
+      {/* Custom builds */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+          <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 relative overflow-hidden">
+            <div className="hero-blob absolute top-[-160px] right-[-160px] w-[460px] h-[460px] pointer-events-none" />
+
+            <div className="relative grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-end">
+              <div>
+                <Eyebrow color="white">Custom builds</Eyebrow>
+                <h2 className="text-[36px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[18ch]">
+                  Need something <span className="serif-em text-green">not on the menu?</span>
+                </h2>
+                <p className="text-white/70 text-[17px] leading-[1.6] max-w-[52ch]">
+                  Custom AI agents, dashboards, n8n workflows, bespoke booking systems — all quoted on scope.
+                  Fixed quote, fixed timeline. No retainer, no agency overhead.
+                </p>
+              </div>
+
+              <Link
+                href="/contact"
+                className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300 self-start md:self-end"
+              >
+                Scope a custom build <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </div>
         </div>
+      </section>
 
-      </div>
+      {/* FAQs */}
+      <section className="bg-cream-alt border-y border-line">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+          <div className="max-w-[44ch] mb-12">
+            <Eyebrow>Pricing FAQs</Eyebrow>
+            <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] text-ink">
+              Common questions. <span className="serif-em text-green-deep">Straight answers.</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {faqs.map((f) => (
+              <div key={f.q} className="bg-cream border border-line rounded-3xl p-7">
+                <h3 className="text-[17px] font-medium text-ink mb-2.5 tracking-[-0.01em]">{f.q}</h3>
+                <p className="text-[15px] text-muted leading-[1.6]">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28 text-center">
+          <Eyebrow center>Ready when you are</Eyebrow>
+          <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] text-ink mb-6 max-w-[20ch] mx-auto">
+            30-minute call, <span className="serif-em text-green-deep">no pitch.</span>
+          </h2>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] hover:bg-ink-soft transition-colors"
+          >
+            Talk to Will <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </section>
+    </>
+  )
+}
+
+function Eyebrow({ children, color = 'ink', center }) {
+  const isWhite = color === 'white'
+  return (
+    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
+      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
+      {children}
     </div>
   )
 }

@@ -1,278 +1,253 @@
+import Link from 'next/link'
+
+const capabilities = [
+  {
+    tag: 'Phones ringing out',
+    title: 'AI voice agents',
+    body: 'Built when the call volume is too much, or after-hours leads keep slipping. Receptionist with a custom prompt, booking flow, SMS confirmations.',
+  },
+  {
+    tag: 'No real system',
+    title: 'Websites + dashboards',
+    body: 'Built when the site is Squarespace, bookings are DMs, and the customer list lives in someone’s head. Next.js site plus a dashboard wired to the actual data.',
+  },
+  {
+    tag: 'Tools don’t talk',
+    title: 'Workflow automation',
+    body: 'Built when there’s a CRM, a calendar, a job-management tool, and a Gmail — and none of them know about each other. n8n stitched through the stack.',
+  },
+  {
+    tag: 'Site is dead weight',
+    title: 'AI chatbot widget',
+    body: 'Built when most visitors leave without doing anything. Widget trained on your business — captures leads, answers, books in chat.',
+  },
+]
+
+const steps = [
+  {
+    n: '01',
+    title: 'We talk',
+    body: '30-minute call. You walk me through the bottleneck. I scope what would actually fix it — and what isn’t worth building.',
+  },
+  {
+    n: '02',
+    title: 'We scope',
+    body: 'I write up the plan and the price. Fixed quote on custom builds, productised plan on the off-the-shelf patterns. No surprises later.',
+  },
+  {
+    n: '03',
+    title: 'I build, you keep',
+    body: 'One to three weeks, usually. You see progress as I ship. When it’s live, it’s your system — direct line to me for tweaks, no retainer lock.',
+  },
+]
+
+const recent = [
+  {
+    tag: 'Hospitality · Adelaide',
+    name: 'Blendz By Ben',
+    body: 'Full-stack rebuild — Next.js site, owner dashboard, booking flow, SMS + email automation. Replaced Squarespace + Insta-DM bookings.',
+    href: 'https://blendzbyben.com',
+    external: true,
+  },
+  {
+    tag: 'Trades · Sydney',
+    name: 'Master Freeze',
+    body: 'AI voice receptionist for a commercial refrigeration company. Qualifies callouts, books jobs, escalates emergencies.',
+    href: '/portfolio/voice',
+    external: false,
+  },
+  {
+    tag: 'Property · productised',
+    name: 'Property manager AI',
+    body: 'Productised voice + portal system for residential property managers. Handles tenant maintenance reports end-to-end.',
+    href: '/property-managers',
+    external: false,
+  },
+]
+
 export default function About() {
   return (
-    <div className="bg-white py-20">
-      <div className="container mx-auto px-4 max-w-4xl">
-        
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-semibold mb-6 text-gray-900">
-            About Herbert AI
+    <>
+      {/* Hero */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+          <Eyebrow>About</Eyebrow>
+          <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
+            Hi, I&apos;m <span className="serif-em text-green-deep">Will Herbert.</span> I build automation for small business.
           </h1>
-          <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
-            We help Australian trades businesses capture more customers and run smoother operations through smart digital systems.
-          </p>
-        </div>
-
-        {/* Why We Created This */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900">
-            Why We Created Herbert AI
-          </h2>
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 space-y-4">
-            <p className="text-gray-700 leading-relaxed">
-              We saw a clear problem: trades businesses are amazing at their craft, but most struggle 
-              with the digital side of business. They're losing customers to missed calls, outdated 
-              websites, and manual processes that eat up valuable time.
+          <div className="max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.6]">
+            <p>
+              Herbert AI is a solo automation studio in Adelaide. I build custom systems
+              — voice receptionists, websites with real dashboards behind them, booking flows,
+              workflow glue — for small businesses that need a thing built and don&apos;t want to hire an agency to do it.
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              Meanwhile, larger companies with big marketing budgets are capturing customers that 
-              smaller trades businesses should be getting. It's not because they do better work - 
-              it's because they have better systems.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Herbert AI exists to level the playing field. We give small to medium trades businesses 
-              the same professional digital presence and automated systems that big companies have - 
-              at a price they can actually afford.
+            <p>
+              Started with AI receptionists for tradies, which is where the voice-agent proof comes from.
+              The same patterns transferred quickly into hospitality, property management, and anywhere else
+              there&apos;s a repetitive process eating someone&apos;s week.
             </p>
           </div>
         </div>
+      </section>
 
-        {/* Our Mission */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900">
-            Our Mission
-          </h2>
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              We believe every trades business deserves professional digital systems, regardless of 
-              size or budget. Our mission is to help you:
-            </p>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="text-black mr-3 font-semibold">•</span>
-                <span>Never miss a customer call, even outside business hours</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-3 font-semibold">•</span>
-                <span>Present a professional image online that builds trust</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-3 font-semibold">•</span>
-                <span>Capture leads automatically while you focus on the work</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-3 font-semibold">•</span>
-                <span>Compete with larger companies without a massive budget</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-3 font-semibold">•</span>
-                <span>Save hours every week on admin and customer communication</span>
-              </li>
-            </ul>
+      {/* What I build */}
+      <section className="bg-cream-alt border-y border-line">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+          <div className="max-w-[40ch] mb-16">
+            <Eyebrow>What I actually build</Eyebrow>
+            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
+              Four kinds of problem, <span className="serif-em text-green-deep">one builder.</span>
+            </h2>
           </div>
-        </div>
 
-        {/* The Problems We Solve */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900">
-            The Problems We Solve
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-3">Missed Calls = Lost Revenue</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                Studies show that 80% of callers won't leave a voicemail. Every missed call is 
-                likely a lost customer - potentially thousands in lost revenue every month.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-3">No Online Presence</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                80% of customers check your website before calling. Without a professional site, 
-                you're losing trust and credibility before you even speak to potential customers.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-3">After-Hours Inquiries</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                Customers want to book when it's convenient for them - not just during your business 
-                hours. Without 24/7 availability, you're losing customers to competitors who are available.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-3">Manual Admin Time</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                Answering the same questions, booking appointments, following up with quotes - 
-                these tasks eat 10+ hours per week that you could spend doing actual paid work.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Our Solution */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900">
-            Our Solution
-          </h2>
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Herbert AI provides complete digital solutions specifically designed for trades businesses. 
-              We combine professional website design with cutting-edge AI technology to create systems that:
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" /></svg></div>
-                <h3 className="font-semibold text-gray-900 mb-2">Build Trust</h3>
-                <p className="text-gray-700 text-sm">
-                  Professional websites that showcase your work and make customers confident in choosing you
-                </p>
+          <div className="grid md:grid-cols-2 gap-5">
+            {capabilities.map((c) => (
+              <div key={c.title} className="bg-cream rounded-3xl p-8 md:p-10 border border-line">
+                <div className="flex items-center gap-2 mb-7">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{c.tag}</span>
+                </div>
+                <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{c.title}</h3>
+                <p className="text-[15px] text-muted leading-[1.6]">{c.body}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* How it goes */}
+      <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+        <div>
+          <Eyebrow>How working with me actually goes</Eyebrow>
+          <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
+            Three steps. <span className="serif-em text-green-deep">No agency overhead.</span>
+          </h2>
+        </div>
+        <div className="grid gap-8 pt-1">
+          {steps.map((s) => (
+            <div key={s.n} className="flex gap-5">
+              <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{s.n}</span>
               <div>
-                <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 3a4 4 0 014 4v4a4 4 0 01-8 0V7a4 4 0 014-4z" /></svg></div>
-                <h3 className="font-semibold text-gray-900 mb-2">Capture Leads</h3>
-                <p className="text-gray-700 text-sm">
-                  AI systems that answer calls and website inquiries 24/7, so you never miss an opportunity
-                </p>
-              </div>
-
-              <div>
-                <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
-                <h3 className="font-semibold text-gray-900 mb-2">Save Time</h3>
-                <p className="text-gray-700 text-sm">
-                  Automated booking, FAQs, and lead capture that free up 10+ hours per week
-                </p>
+                <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{s.title}</h3>
+                <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{s.body}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
+      </section>
 
-        {/* What Makes Us Different */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900">
-            What Makes Us Different
-          </h2>
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 space-y-4">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Built Specifically for Trades</h3>
-              <p className="text-gray-700">
-                We don't do generic marketing. Every system we build is designed specifically for 
-                how trades businesses operate - emergency calls, appointment booking, quote requests, 
-                service area coverage.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Done-For-You Service</h3>
-              <p className="text-gray-700">
-                You don't need any technical knowledge. We handle everything - design, setup, training, 
-                ongoing updates. You just tell us about your business and we make it work.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Affordable & Flexible</h3>
-              <p className="text-gray-700">
-                No massive upfront costs or long-term contracts. Choose individual services or our 
-                complete package. Cancel anytime. We make professional digital systems accessible 
-                to businesses of any size.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Real Results</h3>
-              <p className="text-gray-700">
-                Our clients see an average 30% increase in booked jobs and save 10+ hours per week 
-                on admin work. This isn't just nice-to-have tech - it's systems that directly 
-                impact your bottom line.
-              </p>
-            </div>
+      {/* Why solo */}
+      <section className="bg-cream-alt border-y border-line">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+          <div>
+            <Eyebrow>Why solo, why bespoke</Eyebrow>
+            <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[16ch] text-ink">
+              No agency. <span className="serif-em text-green-deep">No template.</span>
+            </h2>
           </div>
-        </div>
-
-        {/* Who We Help */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900 text-center">
-            Who We Help
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div>
-              <h3 className="font-semibold text-gray-900 mb-2">Plumbers</h3>
-              <p className="text-gray-700 text-sm">Emergency calls, appointment booking, service areas</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
-              <h3 className="font-semibold text-gray-900 mb-2">Electricians</h3>
-              <p className="text-gray-700 text-sm">Quote requests, urgent repairs, solar installations</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-              <h3 className="font-semibold text-gray-900 mb-2">Builders</h3>
-              <p className="text-gray-700 text-sm">Project inquiries, portfolio showcase, consultation booking</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364" /></svg></div>
-              <h3 className="font-semibold text-gray-900 mb-2">HVAC</h3>
-              <p className="text-gray-700 text-sm">Installation quotes, maintenance bookings, emergency service</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 21l-4.35-4.35M15 11a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></div>
-              <h3 className="font-semibold text-gray-900 mb-2">Landscapers</h3>
-              <p className="text-gray-700 text-sm">Project quotes, seasonal services, before/after showcases</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-              <div className="mb-3"><svg className="w-7 h-7 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9,22 9,12 15,12 15,22" /></svg></div>
-              <h3 className="font-semibold text-gray-900 mb-2">And More</h3>
-              <p className="text-gray-700 text-sm">Any trades business that wants to grow</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Founder Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900 text-center">
-            Built By Someone Who Gets It
-          </h2>
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 text-center">
-            <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
-              Herbert AI was created by an Adelaide-based software engineer who understands both 
-              technology and business. We've seen firsthand how missed calls and poor online presence 
-              cost trades businesses thousands in lost revenue. Our mission is simple: give you the 
-              digital systems that big companies have, at a price small businesses can afford.
+          <div className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7]">
+            <p>
+              You talk to the person building it. Not a sales rep, not an account manager,
+              not a junior who escalates to a senior. Me. That&apos;s the whole pitch.
+            </p>
+            <p>
+              No template either — your business doesn&apos;t look like the last one, and the system
+              shouldn&apos;t pretend it does. Custom prompts, custom dashboards, custom workflows. Quoted once, shipped, done.
+            </p>
+            <p>
+              No retainer, no lock-in, no quarterly business review. If it&apos;s working, leave it running.
+              If you need a tweak, message me.
             </p>
           </div>
         </div>
+      </section>
 
-        {/* CTA */}
-        <div className="text-center bg-black text-white rounded-3xl p-12">
-          <h2 className="text-3xl font-semibold mb-4">
-            Ready to Transform Your Business?
+      {/* Recent work */}
+      <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+        <div className="max-w-[40ch] mb-12">
+          <Eyebrow>Recent work</Eyebrow>
+          <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
+            A few things <span className="serif-em text-green-deep">running live.</span>
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the growing number of Adelaide trades businesses using smart digital systems 
-            to capture more customers and save time.
-          </p>
-          <a 
-            href="/contact"
-            className="inline-block px-8 py-3 bg-white text-black rounded-full font-medium text-lg hover:bg-gray-100 transition"
-          >
-            Get Started Today
-          </a>
         </div>
 
-      </div>
+        <div className="grid md:grid-cols-3 gap-5">
+          {recent.map((r) => {
+            const inner = (
+              <>
+                <div className="flex items-center gap-2 mb-7">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{r.tag}</span>
+                </div>
+                <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-3 text-ink">{r.name}</h3>
+                <p className="text-[14px] text-muted leading-[1.6] mb-7">{r.body}</p>
+                <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
+                  {r.external ? 'Visit site' : 'See more'} <span aria-hidden>→</span>
+                </span>
+              </>
+            )
+            return r.external ? (
+              <a
+                key={r.name}
+                href={r.href}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block"
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link
+                key={r.name}
+                href={r.href}
+                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block"
+              >
+                {inner}
+              </Link>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto">
+        <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
+          <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
+          <div className="relative">
+            <Eyebrow color="white" center>Ready when you are</Eyebrow>
+            <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[18ch] mx-auto">
+              Got an idea? <span className="serif-em text-green">Get in touch.</span>
+            </h2>
+            <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[52ch] mx-auto">
+              30-minute call, no pitch. Tell me the bottleneck — I&apos;ll tell you whether it&apos;s worth building.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link
+                href="/contact"
+                className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+              >
+                Talk to Will <span aria-hidden>→</span>
+              </Link>
+              <Link
+                href="/portfolio/websites"
+                className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
+              >
+                See recent work
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+function Eyebrow({ children, color = 'ink', center }) {
+  const isWhite = color === 'white'
+  return (
+    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
+      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
+      {children}
     </div>
   )
 }

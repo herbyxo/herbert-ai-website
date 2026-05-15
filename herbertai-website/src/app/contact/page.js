@@ -1,136 +1,126 @@
+import Link from 'next/link'
+
 export default function Contact() {
   return (
-    <div className="bg-white py-20">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-5xl font-semibold mb-6 text-gray-900 text-center">
-          Get In Touch
-        </h1>
-        <p className="text-xl text-gray-600 text-center mb-12 font-light">
-          Ready to stop missing customers? Let's talk about how Herbert AI can help your business.
-        </p>
+    <>
+      {/* Hero */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+          <Eyebrow>Contact</Eyebrow>
+          <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
+            Tell me <span className="serif-em text-green-deep">what&apos;s slow,</span> what&apos;s broken, or what doesn&apos;t exist yet.
+          </h1>
+          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
+            30-minute scoping call, no pitch. If it&apos;s worth building, I&apos;ll come back with a fixed quote and timeline.
+          </p>
+        </div>
+      </section>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          
-          {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-900">Send a Message</h2>
-            <form 
-              action="https://api.web3forms.com/submit" 
-              method="POST"
-              className="space-y-4"
-            >
-              
+      {/* Form + info */}
+      <section className="bg-cream-alt border-y border-line">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28 grid md:grid-cols-[1.3fr_1fr] gap-10 lg:gap-16">
+          {/* Form */}
+          <div className="bg-cream border border-line rounded-3xl p-8 md:p-10">
+            <h2 className="text-[24px] font-medium tracking-[-0.01em] text-ink mb-2">Send a message</h2>
+            <p className="text-[14px] text-muted mb-6">Usually replies within a day.</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-5">
               <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
 
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                  placeholder="Your name"
-                />
-              </div>
+              <Field id="name" label="Name" type="text" placeholder="Your name" required />
+              <Field id="email" label="Email" type="email" placeholder="you@business.com" required />
+              <Field id="phone" label="Phone (optional)" type="tel" placeholder="0400 000 000" />
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone (optional)
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                  placeholder="0400 000 000"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
+                <label htmlFor="message" className="block font-mono text-[10px] uppercase tracking-[0.18em] text-muted mb-2">
+                  What are you trying to fix?
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
-                  rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                  placeholder="Tell us about your business needs..."
-                ></textarea>
+                  rows={5}
+                  className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted/60 focus:outline-none focus:border-ink/40 transition-colors"
+                  placeholder="Missed calls, manual bookings, two tools that don't talk, no website at all..."
+                />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition"
+                className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
               >
-                Send Message
+                Send message <span aria-hidden>→</span>
               </button>
             </form>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 mb-6">
-              <h2 className="text-2xl font-semibold mb-6 text-gray-900">Contact Info</h2>
-              <div className="space-y-4">
-                
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-1">Email</h3>
-                  <a href="mailto:herbert_aisolutions@outlook.com" className="text-gray-600 hover:text-gray-900 transition">
-                    herbert_aisolutions@outlook.com
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-1">Phone</h3>
-                  <a href="tel:+61448111840" className="text-gray-600 hover:text-gray-900 transition">
-                    0448 111 840
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-1">Instagram</h3>
-                  <a 
-                    href="https://instagram.com/herbert_aisolutions" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-900 transition"
-                  >
-                    @herbert_aisolutions
-                  </a>
-                </div>
-
-              </div>
-            </div>
-
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-sm font-semibold text-gray-900 mb-2">Business Hours</h3>
-              <p className="text-gray-600">Monday - Friday</p>
-              <p className="text-gray-600">9am - 5pm ACST</p>
-              <p className="text-sm text-gray-500 mt-3">We'll respond within 24 hours</p>
-            </div>
+          {/* Info */}
+          <div className="space-y-5">
+            <InfoCard label="Email">
+              <a href="mailto:herbert_aisolutions@outlook.com" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors break-all">
+                herbert_aisolutions@outlook.com
+              </a>
+            </InfoCard>
+            <InfoCard label="Phone">
+              <a href="tel:+61448111840" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors">
+                0448 111 840
+              </a>
+            </InfoCard>
+            <InfoCard label="Instagram">
+              <a href="https://instagram.com/herbert_aisolutions" target="_blank" rel="noreferrer" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors">
+                @herbert_aisolutions
+              </a>
+            </InfoCard>
+            <InfoCard label="Book a call">
+              <Link href="https://calendly.com/herbert_aisolutions/30min" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-green text-ink px-5 py-2.5 rounded-full text-[14px] font-semibold hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300">
+                30-min scoping call <span aria-hidden>→</span>
+              </Link>
+            </InfoCard>
+            <InfoCard label="Based">
+              <p className="text-[15px] text-ink-soft leading-[1.5]">
+                Adelaide, South Australia.<br />
+                <span className="text-muted">Working with clients Australia-wide.</span>
+              </p>
+            </InfoCard>
           </div>
-
         </div>
-      </div>
+      </section>
+    </>
+  )
+}
+
+function Field({ id, label, type, placeholder, required }) {
+  return (
+    <div>
+      <label htmlFor={id} className="block font-mono text-[10px] uppercase tracking-[0.18em] text-muted mb-2">
+        {label}
+      </label>
+      <input
+        id={id}
+        name={id}
+        type={type}
+        required={required}
+        placeholder={placeholder}
+        className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted/60 focus:outline-none focus:border-ink/40 transition-colors"
+      />
+    </div>
+  )
+}
+
+function InfoCard({ label, children }) {
+  return (
+    <div className="bg-cream border border-line rounded-3xl p-6">
+      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted mb-2">{label}</div>
+      {children}
+    </div>
+  )
+}
+
+function Eyebrow({ children }) {
+  return (
+    <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+      <span className="w-8 h-px bg-ink" />
+      {children}
     </div>
   )
 }

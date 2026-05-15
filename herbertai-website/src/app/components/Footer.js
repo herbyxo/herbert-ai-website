@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="text-[18px] font-semibold tracking-[-0.02em] text-ink">herbertai</span>
             </Link>
             <p className="text-muted text-[14px] max-w-md">
-              AI receptionists and websites for Adelaide tradies. Built so you never miss a job while you&apos;re on the tools.
+              Automation studio for small business. Custom AI agents, dashboards, booking systems, and workflow automation — built bespoke by Will Herbert in Adelaide.
             </p>
           </div>
 
