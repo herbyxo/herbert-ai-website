@@ -400,6 +400,23 @@ export const leads = [
     vibe: 'Named after owner ("Will\'s"), suburb-specific. Premium teal + brass for warm local trade.',
     suburbs: ADELAIDE_SUBURBS,
   },
+  {
+    slug: 'wired-up-electrical',
+    biz: 'Wired Up Electrical Co',
+    owner: 'Hugh',
+    trade: 'Electrician',
+    suburb: 'Adelaide',
+    phone: '0449 091 886',
+    services: ELEC_SERVICES,
+    tagline: "Adelaide's 24-hour electrician — Hugh's there when the power goes out.",
+    hero: "Adelaide's 24-hour electrician.",
+    eyebrow: 'Adelaide · 24-hr emergency',
+    yearsLabel: '24/7 callouts · Adelaide',
+    realReview: { name: 'Recent Google review', text: "Hugh came out quickly, late at night when we had no power. Couldn't recommend more." },
+    palette: 'sparky-classic',
+    vibe: 'Hugh named in reviews, emergency/after-hours is his niche. Bold navy + yellow for 24hr confidence.',
+    suburbs: ADELAIDE_SUBURBS,
+  },
 ]
 
 export function getLead(slug) {
