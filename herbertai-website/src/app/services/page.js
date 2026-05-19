@@ -1,81 +1,105 @@
-import Link from 'next/link'
+'use client'
 
-const services = [
+import Link from 'next/link'
+import { useState, useEffect, useCallback } from 'react'
+
+/* ─── Service catalogue ─────────────────────────────────────────────── */
+
+const buckets = [
   {
-    id: 'voice',
-    tag: 'Voice · 24/7',
-    name: 'AI Voice Agents',
-    headline: 'Phones that',
-    em: 'never miss a call.',
-    body:
-      'A 24/7 receptionist with a custom system prompt for your business. Qualifies the job, books it in, sends SMS confirmations, and escalates the urgent ones. Demo’d in real trade callouts — Master Freeze in Sydney, Guy’s Electrical in Adelaide.',
-    bullets: [
-      'Custom system prompt per business',
-      'Google Calendar booking flow',
-      'SMS confirmations + reminders',
-      'Escalation to a human number when needed',
-      'Trained on your services, pricing, FAQs',
+    id: 'grow',
+    icon: '🌱',
+    label: 'Grow',
+    headline: 'Get more customers through the door.',
+    body: 'Paid traffic, organic, lifecycle marketing — the systems that bring new business in. Set up once, run on their own, measured monthly.',
+    accent: '#00FF88',
+    services: [
+      { tag: 'Ads', title: 'Paid ads · Google + Meta', body: 'Campaign setup, creative, daily monitoring. Scoped to your budget and target market.' },
+      { tag: 'SEO', title: 'Organic search', body: 'Technical SEO, local SEO, content. Get found by the people already searching for what you do.' },
+      { tag: 'Landing', title: 'Landing pages', body: 'Single-purpose conversion pages. Built for a specific campaign, lead magnet, or offer.' },
+      { tag: 'Email · SMS', title: 'Email + SMS marketing', body: 'List management, broadcast campaigns, automated sequences. Resend + Twilio under the hood.' },
+      { tag: 'Reviews', title: 'Review collection', body: 'Automated post-job SMS asking for a Google review. Boost your local search ranking.' },
+      { tag: 'Funnels', title: 'Lead magnets + funnels', body: 'Free-PDF → email capture → nurture sequence → call booked. Whole funnel built and wired.' },
     ],
-    price: '$297/month',
-    priceNote: 'Productised',
   },
   {
-    id: 'website',
-    tag: 'Web · Custom build',
-    name: 'Websites + Dashboards',
-    headline: 'Modern sites with',
-    em: 'real systems behind them.',
-    body:
-      'Fast Next.js websites with a private dashboard wired in — bookings, customer DB, SMS automation, revenue tracking. Built end-to-end at blendzbyben.com — Adelaide barbershop running the full stack we shipped.',
-    bullets: [
-      'Custom Next.js site, no template',
-      'Owner dashboard on Supabase',
-      'Booking flow + payments where needed',
-      'Email + SMS comms via Resend / Twilio',
-      'You own the live system',
+    id: 'automate',
+    icon: '⚡',
+    label: 'Automate',
+    headline: 'Handle the admin without you in the loop.',
+    body: 'Voice, chat, workflows — anything where a computer can do the boring repetitive work. You see the outcomes, not the process.',
+    accent: '#7A8BFF',
+    demo: 'voice',
+    services: [
+      { tag: 'Voice', title: 'AI voice agents', body: 'A 24/7 receptionist. Custom prompt per business. Qualifies, books, SMSs confirmations.', hasDemo: true },
+      { tag: 'Chat', title: 'AI chatbot widget', body: 'Site widget trained on your business. Captures leads, answers questions, books through chat.' },
+      { tag: 'Workflows', title: 'n8n workflow automation', body: 'Tool-to-tool stitching. AroFlo, CRM, Calendar, Gmail, SMS — all talking to each other.' },
+      { tag: 'Agents', title: 'Custom AI agents', body: 'RAG over your docs, internal assistants, doc generators. Beyond receptionists.' },
+      { tag: 'CRM', title: 'CRM setup + automation', body: 'HubSpot or Pipedrive setup, pipeline, follow-up rules, lead routing. Wired to the rest of your stack.' },
+      { tag: 'Booking', title: 'Booking + calendar', body: 'Custom booking flows, deposit handling, calendar sync, SMS reminders, no-show recovery.' },
+      { tag: 'Alerts', title: 'Internal alerts + ops', body: 'Slack or SMS triggers on key events. Big lead came in? Contract signed? You know instantly.' },
     ],
-    price: '$300 setup + $197/month',
-    priceNote: 'Productised baseline · full custom quoted',
   },
   {
-    id: 'workflows',
-    tag: 'Workflows · Quoted',
-    name: 'Workflow Automation',
-    headline: 'Your existing tools,',
-    em: 'finally talking to each other.',
-    body:
-      'n8n stitched through your stack — AroFlo, Google Calendar, Gmail, Resend, Twilio, your CRM. Quote follow-ups, no-show recovery, lead routing, internal alerts. Scoped to your bottleneck, quoted on the build.',
-    bullets: [
-      'n8n + your existing accounts',
-      'AroFlo / Calendar / Gmail / CRM',
-      'Quote chase + booking confirmations',
-      'Internal Slack / SMS alerts',
-      'Hosted and maintained',
+    id: 'build',
+    icon: '🔨',
+    label: 'Build',
+    headline: 'Custom software for your business.',
+    body: 'Websites, dashboards, internal tools — bespoke Next.js + Supabase builds. Yours to keep, no platform lock-in.',
+    accent: '#E8B96A',
+    demo: 'web',
+    services: [
+      { tag: 'Web', title: 'Marketing websites', body: 'Custom Next.js sites, no template. Mobile-first, fast, hosted on Vercel.', hasDemo: true },
+      { tag: 'Dashboard', title: 'Custom dashboards', body: 'Admin panels, customer DBs, owner consoles. Magic-link auth on Supabase.' },
+      { tag: 'Portals', title: 'Customer portals', body: 'Login + see your bookings, files, account, history. Magic-link or phone-based auth.' },
+      { tag: 'Booking', title: 'Custom booking systems', body: 'Fully bespoke — not Calendly with a logo. Service selection, deposits, calendar sync.' },
+      { tag: 'Commerce', title: 'E-commerce setups', body: 'Shopify customisation, Stripe checkouts, custom storefronts where Shopify isn’t the right fit.' },
+      { tag: 'PWA', title: 'Progressive web apps', body: 'Install-to-home-screen, push notifications, offline-capable. Faster than mobile apps to ship.' },
     ],
-    price: 'Quote-based',
-    priceNote: 'Scoped per build',
-  },
-  {
-    id: 'chatbot',
-    tag: 'Chat · 24/7',
-    name: 'AI Chatbot Widget',
-    headline: 'A chat widget that',
-    em: 'actually knows your business.',
-    body:
-      'Lives on your site, trained on your services, pricing, hours, FAQs. Captures leads, answers questions, books appointments — all without you watching it. Same backbone as the voice agent, in a chat window.',
-    bullets: [
-      'Trained on your business content',
-      'Lead capture · name, email, phone',
-      'Booking through chat',
-      'Mobile + desktop',
-      'Editable knowledge base',
-    ],
-    price: '$197/month',
-    priceNote: 'Productised',
   },
 ]
 
+const claremontShots = [
+  { src: '/portfolio/claremont/claremont-1.png', label: 'Hero' },
+  { src: '/portfolio/claremont/claremont-2.png', label: 'Services' },
+  { src: '/portfolio/claremont/claremont-3.png', label: 'About' },
+  { src: '/portfolio/claremont/claremont-4.png', label: 'Listings' },
+  { src: '/portfolio/claremont/claremont-5.jpg', label: 'Contact' },
+  { src: '/portfolio/claremont/claremont-6.png', label: 'Detail · 06' },
+  { src: '/portfolio/claremont/claremont-7.png', label: 'Detail · 07' },
+  { src: '/portfolio/claremont/claremont-8.png', label: 'Detail · 08' },
+]
+
+/* ─── Page ──────────────────────────────────────────────────────────── */
+
 export default function Services() {
+  const [lightbox, setLightbox] = useState(null)
+  const closeLightbox = useCallback(() => setLightbox(null), [])
+  const prevImage = useCallback(() => {
+    setLightbox((lb) => lb && { index: (lb.index - 1 + claremontShots.length) % claremontShots.length })
+  }, [])
+  const nextImage = useCallback(() => {
+    setLightbox((lb) => lb && { index: (lb.index + 1) % claremontShots.length })
+  }, [])
+
+  useEffect(() => {
+    if (!lightbox) return
+    const handler = (e) => {
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowLeft') prevImage()
+      if (e.key === 'ArrowRight') nextImage()
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [lightbox, closeLightbox, prevImage, nextImage])
+
+  useEffect(() => {
+    document.body.style.overflow = lightbox ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [lightbox])
+
+  const current = lightbox ? claremontShots[lightbox.index] : null
+
   return (
     <>
       {/* Hero */}
@@ -85,35 +109,51 @@ export default function Services() {
           <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
             What we <span className="serif-em text-green-deep">build for</span> small business.
           </h1>
-          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            Bespoke systems for businesses that need automation — voice agents, dashboards, booking flows, workflow glue.
-            Quoted on scope when it&apos;s a custom build. Productised plans below for the patterns we ship most often.
+          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[60ch]">
+            Three buckets — grow, automate, build. Most clients run a mix.
+            Productised plans for the common patterns; custom builds quoted on scope.
           </p>
-          <div className="flex flex-wrap gap-3 mt-9">
-            <Link
-              href="/contact"
-              className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
-            >
-              Scope your build <span aria-hidden>→</span>
-            </Link>
-            <Link
-              href="/pricing"
-              className="text-ink px-6 py-3.5 rounded-full font-medium text-[15px] inline-flex items-center gap-2 border border-ink/20 hover:border-ink/50 transition-colors"
-            >
-              See pricing
-            </Link>
-          </div>
+          <p className="text-[15px] text-muted leading-[1.6] mt-4 max-w-[60ch]">
+            Got a specific industry?{' '}
+            <Link href="/industries" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
+              See example systems we build for your trade
+            </Link>.
+          </p>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="bg-cream-alt border-y border-line">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 space-y-24 md:space-y-32">
-          {services.map((s, i) => (
-            <ServiceBlock key={s.id} service={s} reverse={i % 2 === 1} />
-          ))}
-        </div>
-      </section>
+      {/* Buckets */}
+      {buckets.map((bucket, i) => (
+        <section
+          key={bucket.id}
+          id={bucket.id}
+          className={`${i % 2 === 0 ? 'bg-cream-alt border-y border-line' : 'bg-cream'} scroll-mt-20`}
+        >
+          <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+            <div className="max-w-[44ch] mb-14">
+              <Eyebrow>{bucket.icon} {bucket.label}</Eyebrow>
+              <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink mb-5">
+                {bucket.headline.split(' ').slice(0, -2).join(' ')}{' '}
+                <span className="serif-em text-green-deep">
+                  {bucket.headline.split(' ').slice(-2).join(' ')}
+                </span>
+              </h2>
+              <p className="text-[16px] md:text-[17px] text-muted leading-[1.6]">{bucket.body}</p>
+            </div>
+
+            {/* Service cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {bucket.services.map((s) => (
+                <ServiceCard key={s.title} service={s} accent={bucket.accent} />
+              ))}
+            </div>
+
+            {/* Inline demo */}
+            {bucket.demo === 'voice' && <VoiceDemo />}
+            {bucket.demo === 'web' && <WebDemo shots={claremontShots} onOpen={(index) => setLightbox({ index })} />}
+          </div>
+        </section>
+      ))}
 
       {/* Bundle CTA */}
       <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
@@ -121,16 +161,12 @@ export default function Services() {
           <div className="hero-blob absolute top-[-200px] right-[-100px] w-[500px] h-[500px] pointer-events-none" />
           <div className="relative grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-end">
             <div>
-              <Eyebrow color="white">Run all three together</Eyebrow>
+              <Eyebrow color="white">Productised bundle</Eyebrow>
               <h2 className="text-[36px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch]">
-                Voice + web + chat — <span className="serif-em text-green">save $294/month.</span>
+                Voice + web + chat — <span className="serif-em text-green">$697/month.</span>
               </h2>
               <p className="text-white/70 text-[17px] leading-[1.6] max-w-[52ch] mb-3">
-                Bundle the three productised systems and they run as one stack. $697/month, everything in,
-                no setup fees. The fastest way to get the full receptionist + site + widget pattern live.
-              </p>
-              <p className="text-white/50 text-[14px] font-mono uppercase tracking-[0.12em]">
-                · vs $991/mo bought separately
+                The three productised systems bundled and running as one stack. Save $294/month versus buying separately, no setup fees.
               </p>
             </div>
             <div className="flex flex-col gap-3">
@@ -161,71 +197,131 @@ export default function Services() {
                 Got something <span className="serif-em text-green-deep">more specific?</span>
               </h2>
               <p className="text-muted text-[17px] leading-[1.6] max-w-[52ch]">
-                Bespoke systems are quoted on scope. Tell us the bottleneck — we&apos;ll sketch an approach,
-                ballpark cost and timeline, and you decide if it&apos;s worth doing. No retainers, no agency overhead.
+                Custom systems are scoped to your bottleneck and quoted on the build. Tell us what&apos;s slow,
+                what&apos;s broken, or what doesn&apos;t exist yet — we&apos;ll come back with an approach and a price.
               </p>
             </div>
-            <div className="flex flex-col gap-3">
-              <Link
-                href="/contact"
-                className="bg-ink text-white px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:bg-ink-soft transition-colors"
-              >
-                Scope a custom build <span aria-hidden>→</span>
-              </Link>
-              <Link
-                href="/portfolio/websites"
-                className="text-ink px-6 py-3.5 rounded-full font-medium text-[15px] inline-flex items-center justify-between gap-2 border border-ink/20 hover:border-ink/50 transition-colors"
-              >
-                See recent work <span aria-hidden>→</span>
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="bg-ink text-white px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:bg-ink-soft transition-colors self-start md:self-end"
+            >
+              Scope a custom build <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightbox && current && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm" onClick={closeLightbox}>
+          <div className="relative max-w-6xl w-full mx-4 flex flex-col" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between mb-3 px-1">
+              <div>
+                <span className="text-white font-medium text-sm">Claremont Property</span>
+                <span className="text-white/50 text-sm ml-2">— {current.label}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-white/40 text-[11px]">{lightbox.index + 1} / {claremontShots.length}</span>
+                <button onClick={closeLightbox} className="text-white/50 hover:text-white text-2xl leading-none font-light" aria-label="Close">×</button>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden bg-ink shadow-2xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={current.src} alt={`Claremont — ${current.label}`} className="w-full h-auto max-h-[80vh] object-contain" />
+              <button onClick={prevImage} className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl" aria-label="Previous">‹</button>
+              <button onClick={nextImage} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl" aria-label="Next">›</button>
+            </div>
+            <div className="flex gap-2 mt-3 justify-center flex-wrap">
+              {claremontShots.map((shot, idx) => (
+                <button key={idx} onClick={() => setLightbox({ index: idx })} className={`w-16 h-10 rounded overflow-hidden border-2 transition-all ${idx === lightbox.index ? 'border-white' : 'border-transparent opacity-50 hover:opacity-80'}`} aria-label={shot.label}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={shot.src} alt={shot.label} className="w-full h-full object-cover object-top" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }
 
-function ServiceBlock({ service, reverse }) {
-  const { id, tag, name, headline, em, body, bullets, price, priceNote } = service
-  return (
-    <div id={id} className="scroll-mt-20 grid md:grid-cols-2 gap-10 md:gap-16 items-start">
-      <div className={reverse ? 'md:order-2' : ''}>
-        <Eyebrow>{tag}</Eyebrow>
-        <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] mb-5 text-ink">
-          {headline} <span className="serif-em text-green-deep">{em}</span>
-        </h2>
-        <p className="text-muted text-[16px] md:text-[17px] leading-[1.6] max-w-[52ch] mb-7">{body}</p>
-        <ul className="space-y-3 mb-8">
-          {bullets.map((b) => (
-            <li key={b} className="flex items-center gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-deep shrink-0" />
-              <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">{b}</span>
-            </li>
-          ))}
-        </ul>
-        <Link
-          href="/contact"
-          className="bg-ink text-white px-6 py-3 rounded-full font-semibold text-[14px] inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
-        >
-          Start scoping <span aria-hidden>→</span>
-        </Link>
-      </div>
+/* ─── Components ────────────────────────────────────────────────────── */
 
-      <div className={`bg-cream rounded-3xl p-8 md:p-10 border border-line ${reverse ? 'md:order-1' : ''}`}>
-        <div className="flex items-center gap-2 mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{name}</span>
+function ServiceCard({ service, accent }) {
+  return (
+    <div className="rounded-3xl p-7 text-white relative overflow-hidden border border-white/5 min-h-[220px] flex flex-col bg-gradient-to-br from-[#0A0A0A] to-[#171717]">
+      <div className="flex items-center gap-2 mb-5">
+        <span className="w-1.5 h-1.5 rounded-full" style={{ background: accent, boxShadow: `0 0 10px ${accent}40` }} />
+        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">{service.tag}</span>
+      </div>
+      <h3 className="text-[20px] font-medium tracking-[-0.01em] text-white mb-3 leading-[1.25]">{service.title}</h3>
+      <p className="text-[14px] text-white/65 leading-[1.6]">{service.body}</p>
+    </div>
+  )
+}
+
+function VoiceDemo() {
+  return (
+    <div className="mt-14 grid md:grid-cols-[1fr_1.4fr] gap-8 md:gap-12 items-center bg-cream border border-line rounded-[28px] p-8 md:p-10">
+      <div>
+        <Eyebrow>Example · live</Eyebrow>
+        <h3 className="text-[24px] md:text-[28px] font-medium tracking-[-0.01em] text-ink mb-3">
+          A <span className="serif-em text-green-deep">real call</span> handled by the voice agent.
+        </h3>
+        <p className="text-[14px] text-muted leading-[1.6]">
+          Master Freeze · commercial refrigeration · Sydney.
+          Customer reported a refrigerant leak. Agent qualified the job, collected access details, closed the call. Zero human involvement.
+        </p>
+      </div>
+      <div className="bg-ink rounded-2xl p-6 relative overflow-hidden">
+        <div className="hero-blob absolute bottom-[-120px] right-[-120px] w-[300px] h-[300px] pointer-events-none" />
+        <div className="relative">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-green hi-pulse" />
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/55">Inbound call · unedited</span>
+          </div>
+          <audio controls preload="metadata" className="w-full" style={{ filter: 'invert(0.85)' }}>
+            <source src="/steve-demo.wav" type="audio/wav" />
+          </audio>
         </div>
-        <div className="text-[44px] md:text-[56px] font-medium tracking-[-0.03em] leading-none mb-3 text-ink">
-          {price}
-        </div>
-        <p className="text-[13px] font-mono uppercase tracking-[0.12em] text-muted mb-8">{priceNote}</p>
-        <div className="pt-6 border-t border-line">
-          <p className="text-[13px] text-muted leading-[1.6]">
-            Productised plans run month-to-month. Custom builds are quoted once and shipped — no retainer.
-          </p>
-        </div>
+      </div>
+    </div>
+  )
+}
+
+function WebDemo({ shots, onOpen }) {
+  return (
+    <div className="mt-14">
+      <div className="max-w-[44ch] mb-8">
+        <Eyebrow>Example · design</Eyebrow>
+        <h3 className="text-[24px] md:text-[28px] font-medium tracking-[-0.01em] text-ink mb-3">
+          Editorial real estate <span className="serif-em text-green-deep">mockup.</span>
+        </h3>
+        <p className="text-[14px] text-muted leading-[1.6]">
+          Concept design for a premium Adelaide real estate brand. Click any thumbnail to view.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {shots.map((shot, idx) => (
+          <button
+            key={idx}
+            onClick={() => onOpen(idx)}
+            className={`group relative rounded-2xl overflow-hidden border border-line bg-cream-alt hover:border-ink/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-cream ${idx === 0 ? 'col-span-2' : ''}`}
+            aria-label={`View ${shot.label}`}
+          >
+            <div className="relative w-full aspect-video bg-cream-alt">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={shot.src} alt={`Claremont — ${shot.label}`} className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-200 flex items-center justify-center">
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-cream text-ink text-[12px] font-medium px-3 py-1.5 rounded-full">View</span>
+              </div>
+            </div>
+            <div className="px-3 py-2 text-left">
+              <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted">{shot.label}</span>
+            </div>
+          </button>
+        ))}
       </div>
     </div>
   )

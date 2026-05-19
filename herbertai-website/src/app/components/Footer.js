@@ -26,7 +26,7 @@ export default function Footer() {
           <nav className="flex flex-wrap gap-x-7 gap-y-3 text-[14px] text-ink-soft">
             <Link href="/services" className="hover:opacity-60 transition">Services</Link>
             <Link href="/pricing" className="hover:opacity-60 transition">Pricing</Link>
-            <Link href="/portfolio/voice" className="hover:opacity-60 transition">Portfolio</Link>
+            <Link href="/industries" className="hover:opacity-60 transition">Industries</Link>
             <Link href="/about" className="hover:opacity-60 transition">About</Link>
             <Link href="/contact" className="hover:opacity-60 transition">Contact</Link>
             {managerUrl && (

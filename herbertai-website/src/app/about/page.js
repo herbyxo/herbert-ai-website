@@ -53,7 +53,7 @@ const recent = [
     tag: 'Trades · Sydney',
     name: 'Master Freeze',
     body: 'AI voice receptionist for a commercial refrigeration company. Qualifies callouts, books jobs, escalates emergencies.',
-    href: '/portfolio/voice',
+    href: '/services#automate',
     external: false,
   },
   {
@@ -229,10 +229,10 @@ export default function About() {
                 Talk to Will <span aria-hidden>→</span>
               </Link>
               <Link
-                href="/portfolio/websites"
+                href="/services"
                 className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
               >
-                See recent work
+                See services
               </Link>
             </div>
           </div>

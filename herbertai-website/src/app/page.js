@@ -37,10 +37,10 @@ function Hero() {
 
         <div className="flex flex-wrap gap-3 items-center mb-16">
           <Link
-            href="/portfolio/websites"
+            href="/services"
             className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px"
           >
-            See recent work <span aria-hidden>→</span>
+            See what we build <span aria-hidden>→</span>
           </Link>
           <Link
             href="/contact"
@@ -194,10 +194,10 @@ function Audio() {
             collected the details, and closed the call — zero human involvement.
           </p>
           <Link
-            href="/portfolio/voice"
+            href="/services#automate"
             className="bg-green text-ink px-5 py-3 rounded-full font-semibold text-[14px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
           >
-            See more demos <span aria-hidden>→</span>
+            See voice + automation <span aria-hidden>→</span>
           </Link>
         </div>
 
@@ -293,10 +293,10 @@ function FinalCTA() {
               Get in touch <span aria-hidden>→</span>
             </Link>
             <Link
-              href="/portfolio/websites"
+              href="/industries"
               className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
             >
-              See recent work
+              Industry examples
             </Link>
           </div>
         </div>
