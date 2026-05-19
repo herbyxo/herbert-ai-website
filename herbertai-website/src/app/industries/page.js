@@ -3,49 +3,56 @@ import Link from 'next/link'
 const industries = [
   {
     tag: 'Trades',
-    name: 'Electricians · plumbers · HVAC',
+    title: 'Receptionist + booking pipeline',
+    forWhom: 'For electricians, plumbers, HVAC',
     status: 'Live',
-    body: 'AI voice receptionist that qualifies callouts and books them in. Booking pipeline through AroFlo. Quote follow-up automation, no-show recovery.',
+    body: 'AI voice agent qualifies callouts, books into your job-management system (AroFlo, SimPRO), automates quote follow-ups and no-show recovery.',
     proof: 'Master Freeze · Guy’s Electrical',
     accent: '#00FF88',
   },
   {
     tag: 'Hospitality',
-    name: 'Cafés · restaurants · barbershops',
+    title: 'Bookings + customer ops',
+    forWhom: 'For cafés, restaurants, barbershops',
     status: 'Live',
-    body: 'Custom booking system with deposit handling. Customer DB, SMS reminders, no-show recovery, owner dashboard for daily ops.',
+    body: 'Custom booking system with deposits, customer database, automated SMS reminders, no-show recovery, owner dashboard for daily ops.',
     proof: 'Blendz By Ben',
     accent: '#C44569',
   },
   {
     tag: 'Property',
-    name: 'Property managers',
+    title: 'Tenant maintenance system',
+    forWhom: 'For residential property managers',
     status: 'Productised',
-    body: 'AI tenant intake on your number. Maintenance requests captured, logged, and approved in one click. Tradie booking automated.',
-    proof: 'See /property-managers',
+    body: 'AI tenant intake on your number. Maintenance requests captured, logged, approved in one click. Tradie booking automated end-to-end.',
+    proof: 'Productised at /property-managers',
+    href: '/property-managers',
     accent: '#7A8BFF',
   },
   {
     tag: 'Accounting',
-    name: 'Accountants · bookkeepers',
+    title: 'Client onboarding portal',
+    forWhom: 'For accountants and bookkeepers',
     status: 'Available',
-    body: 'Client onboarding portal — intake forms, document collection, e-sign engagement letters. Quarterly reminder + checklist systems.',
+    body: 'Intake forms, document collection, e-sign engagement letters. Quarterly reminder workflows, checklist automation, client status tracking.',
     proof: '',
     accent: '#E8B96A',
   },
   {
     tag: 'Health',
-    name: 'Physio · chiro · OT · dental',
+    title: 'Exercise prescription system',
+    forWhom: 'For physios, chiros, OTs, dentists',
     status: 'Available',
-    body: 'Exercise prescription system: pick from library, auto-generate branded PDF with instructions, email to patient. Recall reminder sequences for dormant patients.',
+    body: 'Therapist picks exercises from a library, system auto-generates a branded PDF with reps + instructions, emails it to the patient by name.',
     proof: '',
     accent: '#5EEAD4',
   },
   {
     tag: 'Creative',
-    name: 'Photographers · videographers',
+    title: 'Booking + gallery delivery',
+    forWhom: 'For photographers and videographers',
     status: 'Available',
-    body: 'Booking + deposit flow. Client gallery delivery with download tracking. Contract automation with e-sign. Replaces 3 separate tools.',
+    body: 'Booking + deposit flow, contract automation with e-sign, client gallery delivery with download tracking. Replaces three separate tools.',
     proof: '',
     accent: '#F5B638',
   },
@@ -84,35 +91,44 @@ export default function Industries() {
       <section className="bg-cream-alt border-y border-line">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {industries.map((ind) => (
-              <div
-                key={ind.tag}
-                className="rounded-3xl p-7 md:p-8 text-white relative overflow-hidden border border-white/5 min-h-[280px] flex flex-col bg-gradient-to-br from-[#0A0A0A] to-[#171717]"
-              >
-                <div className="flex items-center justify-between gap-2 mb-5">
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full" style={{ background: ind.accent, boxShadow: `0 0 10px ${ind.accent}40` }} />
-                    <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">{ind.tag}</span>
+            {industries.map((ind) => {
+              const Wrapper = ind.href ? Link : 'div'
+              const wrapperProps = ind.href
+                ? { href: ind.href, className: 'block group' }
+                : {}
+              return (
+                <Wrapper
+                  key={ind.tag}
+                  {...wrapperProps}
+                >
+                  <div className={`rounded-3xl p-7 md:p-8 text-white relative overflow-hidden border border-white/5 min-h-[300px] flex flex-col bg-gradient-to-br from-[#0A0A0A] to-[#171717] ${ind.href ? 'group-hover:border-white/15 transition-colors' : ''}`}>
+                    <div className="flex items-center justify-between gap-2 mb-6">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ background: ind.accent, boxShadow: `0 0 10px ${ind.accent}40` }} />
+                        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">{ind.tag}</span>
+                      </div>
+                      <span className={`font-mono text-[9px] uppercase tracking-[0.14em] px-2.5 py-1 rounded-full border ${
+                        ind.status === 'Live' ? 'bg-green/15 text-green border-green/30' :
+                        ind.status === 'Productised' ? 'bg-green/10 text-green border-green/20' :
+                        'bg-white/5 text-white/55 border-white/15'
+                      }`}>
+                        {ind.status}
+                      </span>
+                    </div>
+                    <h3 className="text-[22px] md:text-[24px] font-medium tracking-[-0.01em] text-white mb-2 leading-[1.2]">
+                      {ind.title}
+                    </h3>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45 mb-5">{ind.forWhom}</p>
+                    <p className="text-[14px] text-white/65 leading-[1.6] mb-5">{ind.body}</p>
+                    {ind.proof && (
+                      <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-white/40 mt-auto">
+                        · {ind.proof}
+                      </p>
+                    )}
                   </div>
-                  <span className={`font-mono text-[9px] uppercase tracking-[0.14em] px-2 py-1 rounded-full border ${
-                    ind.status === 'Live' ? 'bg-green/20 text-green border-green/30' :
-                    ind.status === 'Productised' ? 'bg-green-deep/15 text-green border-green/20' :
-                    'bg-white/5 text-white/55 border-white/15'
-                  }`}>
-                    {ind.status}
-                  </span>
-                </div>
-                <h3 className="text-[20px] md:text-[22px] font-medium tracking-[-0.01em] text-white mb-3 leading-[1.25]">
-                  {ind.name}
-                </h3>
-                <p className="text-[14px] text-white/65 leading-[1.6] mb-5">{ind.body}</p>
-                {ind.proof && (
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-white/40 mt-auto">
-                    · {ind.proof}
-                  </p>
-                )}
-              </div>
-            ))}
+                </Wrapper>
+              )
+            })}
           </div>
         </div>
       </section>
