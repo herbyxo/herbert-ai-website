@@ -2,24 +2,19 @@ import Link from 'next/link'
 
 const capabilities = [
   {
-    tag: 'Phones ringing out',
-    title: 'AI voice agents',
-    body: 'Built when the call volume is too much, or after-hours leads keep slipping. Receptionist with a custom prompt, booking flow, SMS confirmations.',
+    tag: 'Not enough customers',
+    title: 'Grow',
+    body: 'Paid ads, SEO, landing pages, email + SMS, lead funnels — the systems that bring new business through the door.',
+  },
+  {
+    tag: 'Drowning in admin',
+    title: 'Automate',
+    body: 'Voice agents, chatbots, workflow automation, CRM setup — anything repetitive that a computer can handle without you in the loop.',
   },
   {
     tag: 'No real system',
-    title: 'Websites + dashboards',
-    body: 'Built when the site is Squarespace, bookings are DMs, and the customer list lives in someone’s head. Next.js site plus a dashboard wired to the actual data.',
-  },
-  {
-    tag: 'Tools don’t talk',
-    title: 'Workflow automation',
-    body: 'Built when there’s a CRM, a calendar, a job-management tool, and a Gmail — and none of them know about each other. n8n stitched through the stack.',
-  },
-  {
-    tag: 'Site is dead weight',
-    title: 'AI chatbot widget',
-    body: 'Built when most visitors leave without doing anything. Widget trained on your business — captures leads, answers, books in chat.',
+    title: 'Build',
+    body: 'Websites, dashboards, customer portals, booking systems — custom software, built bespoke and yours to keep.',
   },
 ]
 
@@ -77,9 +72,9 @@ export default function About() {
           </h1>
           <div className="max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.6]">
             <p>
-              Herbert AI is a solo automation studio in Adelaide. I build custom systems
-              — voice receptionists, websites with real dashboards behind them, booking flows,
-              workflow glue — for small businesses that need a thing built and don&apos;t want to hire an agency to do it.
+              Herbert AI is a solo studio in Adelaide. I help small businesses grow and run themselves —
+              ad campaigns, websites, dashboards, voice agents, workflow automation, whatever the business
+              actually needs — for owners who want a thing built and don&apos;t want to hire an agency to do it.
             </p>
             <p>
               Started with AI receptionists for tradies, which is where the voice-agent proof comes from.
@@ -96,11 +91,11 @@ export default function About() {
           <div className="max-w-[40ch] mb-16">
             <Eyebrow>What I actually build</Eyebrow>
             <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Four kinds of problem, <span className="serif-em text-green-deep">one builder.</span>
+              Three kinds of work, <span className="serif-em text-green-deep">one builder.</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-3 gap-5">
             {capabilities.map((c) => (
               <div key={c.title} className="bg-cream rounded-3xl p-8 md:p-10 border border-line">
                 <div className="flex items-center gap-2 mb-7">

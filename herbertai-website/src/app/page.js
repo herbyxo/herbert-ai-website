@@ -30,8 +30,8 @@ function Hero() {
         </h1>
 
         <p className="text-white/70 text-[17px] md:text-[19px] leading-[1.55] max-w-[56ch] mb-11 font-light">
-          Herbert AI builds the receptionists, websites, dashboards, and workflow automation
-          that let small businesses run themselves. Custom-built, not from a template.
+          Herbert AI builds the ads, websites, dashboards, voice agents, and workflow automation
+          that help small businesses grow and run themselves. Custom-built, not from a template.
           Shipped in weeks — not quarters.
         </p>
 

@@ -3,7 +3,7 @@ import Link from 'next/link'
 const faqs = [
   {
     q: 'What does Herbert AI do?',
-    a: 'Custom automation for small business. AI voice agents, websites + dashboards, n8n workflow automation, chatbot widgets — all bespoke, built solo by Will Herbert in Adelaide.',
+    a: 'Custom systems for small business across three areas — Grow (ads, SEO, landing pages, email + SMS), Automate (voice agents, chatbots, workflow automation, CRM), and Build (websites, dashboards, portals, booking systems). All bespoke, built solo by Will Herbert in Adelaide.',
   },
   {
     q: 'How long does a project take?',

@@ -76,6 +76,17 @@ export default function Pricing() {
       {/* Plans */}
       <section className="bg-cream-alt border-y border-line">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+          <div className="max-w-[48ch] mb-12">
+            <Eyebrow>Productised plans</Eyebrow>
+            <h2 className="text-[32px] md:text-[44px] font-medium leading-[1.05] tracking-[-0.03em] text-ink mb-3">
+              Fixed prices on <span className="serif-em text-green-deep">the common patterns.</span>
+            </h2>
+            <p className="text-[15px] text-muted leading-[1.6]">
+              Three repeatable builds priced up-front. Everything else on the{' '}
+              <Link href="/services" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">services page</Link>
+              {' '}— ads, SEO, dashboards, custom workflows — is quoted on scope.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {plans.map((p) => (
               <div
