@@ -72,7 +72,7 @@ export default function About() {
           </h1>
           <div className="max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.6]">
             <p>
-              Herbert AI is a solo studio in Adelaide. I help small businesses grow and run themselves —
+              Herbert AI is a solo automation &amp; growth studio in Adelaide. I help small businesses grow and run themselves —
               ad campaigns, websites, dashboards, voice agents, workflow automation, whatever the business
               actually needs — for owners who want a thing built and don&apos;t want to hire an agency to do it.
             </p>

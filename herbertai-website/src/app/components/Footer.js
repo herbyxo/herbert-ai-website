@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="text-[18px] font-semibold tracking-[-0.02em] text-ink">herbertai</span>
             </Link>
             <p className="text-muted text-[14px] max-w-md">
-              Automation studio for small business. Custom AI agents, dashboards, booking systems, and workflow automation — built bespoke by Will Herbert in Adelaide.
+              Automation &amp; growth studio for SMBs. Custom ads, websites, dashboards, voice agents, and workflow automation — built bespoke by Will Herbert in Adelaide.
             </p>
           </div>
 

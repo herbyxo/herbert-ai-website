@@ -30,8 +30,8 @@ const interTight = Inter_Tight({
 })
 
 export const metadata = {
-  title: 'Herbert AI — automation studio for small business',
-  description: 'Custom AI receptionists, websites, dashboards, and workflow automation. Built bespoke for small businesses by Will Herbert in Adelaide.',
+  title: 'Herbert AI — automation & growth studio for SMBs',
+  description: 'Automation & growth studio for SMBs. Custom ads, websites, dashboards, voice agents, and workflow automation — built bespoke by Will Herbert in Adelaide.',
 }
 
 export default function RootLayout({ children }) {

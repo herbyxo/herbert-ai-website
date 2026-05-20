@@ -21,7 +21,7 @@ function Hero() {
       <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 lg:p-22 relative overflow-hidden">
         <div className="hero-blob absolute top-[-120px] right-[-120px] w-[480px] h-[480px] pointer-events-none" />
 
-        <Eyebrow color="white" pulse>Adelaide · automation studio</Eyebrow>
+        <Eyebrow color="white" pulse>Adelaide · automation &amp; growth studio</Eyebrow>
 
         <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-semibold tracking-[-0.04em] leading-[0.95] mb-7 max-w-[14ch]">
           Stop running<br />
