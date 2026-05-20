@@ -21,9 +21,6 @@ export default function Header() {
             <DropItem href="/services#grow" title="Grow" sub="Ads, SEO, email, landing pages" />
             <DropItem href="/services#automate" title="Automate" sub="Voice agents, chatbots, workflows, CRM" />
             <DropItem href="/services#build" title="Build" sub="Websites, dashboards, custom systems" />
-            <DropDivider />
-            <DropItem href="/industries" title="Industry systems" sub="Custom builds for your trade" />
-            <DropItem href="/property-managers" title="Property Manager AI" sub="Productised vertical SaaS" />
           </DropdownLink>
 
           <Link href="/industries" className="hover:opacity-60 transition-opacity">Industries</Link>

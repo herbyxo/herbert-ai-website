@@ -8,7 +8,6 @@ const industries = [
     status: 'Live',
     body: 'AI voice agent qualifies callouts, books into your job-management system (AroFlo, SimPRO), automates quote follow-ups and no-show recovery.',
     proof: 'Master Freeze · Guy’s Electrical',
-    accent: '#00FF88',
   },
   {
     tag: 'Hospitality',
@@ -17,7 +16,6 @@ const industries = [
     status: 'Live',
     body: 'Custom booking system with deposits, customer database, automated SMS reminders, no-show recovery, owner dashboard for daily ops.',
     proof: 'Blendz By Ben',
-    accent: '#C44569',
   },
   {
     tag: 'Property',
@@ -25,9 +23,8 @@ const industries = [
     forWhom: 'For residential property managers',
     status: 'Productised',
     body: 'AI tenant intake on your number. Maintenance requests captured, logged, approved in one click. Tradie booking automated end-to-end.',
-    proof: 'Productised at /property-managers',
+    proof: 'See full Property Manager AI page →',
     href: '/property-managers',
-    accent: '#7A8BFF',
   },
   {
     tag: 'Accounting',
@@ -35,8 +32,7 @@ const industries = [
     forWhom: 'For accountants and bookkeepers',
     status: 'Available',
     body: 'Intake forms, document collection, e-sign engagement letters. Quarterly reminder workflows, checklist automation, client status tracking.',
-    proof: '',
-    accent: '#E8B96A',
+    proof: 'Yours could be the first build',
   },
   {
     tag: 'Health',
@@ -44,8 +40,7 @@ const industries = [
     forWhom: 'For physios, chiros, OTs, dentists',
     status: 'Available',
     body: 'Therapist picks exercises from a library, system auto-generates a branded PDF with reps + instructions, emails it to the patient by name.',
-    proof: '',
-    accent: '#5EEAD4',
+    proof: 'Yours could be the first build',
   },
   {
     tag: 'Creative',
@@ -53,8 +48,7 @@ const industries = [
     forWhom: 'For photographers and videographers',
     status: 'Available',
     body: 'Booking + deposit flow, contract automation with e-sign, client gallery delivery with download tracking. Replaces three separate tools.',
-    proof: '',
-    accent: '#F5B638',
+    proof: 'Yours could be the first build',
   },
 ]
 
@@ -101,15 +95,15 @@ export default function Industries() {
                   key={ind.tag}
                   {...wrapperProps}
                 >
-                  <div className={`rounded-3xl p-7 md:p-8 text-white relative overflow-hidden border border-white/5 min-h-[300px] flex flex-col bg-gradient-to-br from-[#0A0A0A] to-[#171717] ${ind.href ? 'group-hover:border-white/15 transition-colors' : ''}`}>
+                  <div className={`rounded-3xl p-7 md:p-8 text-white relative overflow-hidden border border-white/5 min-h-[320px] flex flex-col bg-gradient-to-br from-[#0A0A0A] to-[#171717] ${ind.href ? 'group-hover:border-green/30 transition-colors' : ''}`}>
                     <div className="flex items-center justify-between gap-2 mb-6">
                       <div className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full" style={{ background: ind.accent, boxShadow: `0 0 10px ${ind.accent}40` }} />
+                        <span className="w-1.5 h-1.5 rounded-full bg-green" style={{ boxShadow: '0 0 10px rgba(0, 255, 136, 0.4)' }} />
                         <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">{ind.tag}</span>
                       </div>
                       <span className={`font-mono text-[9px] uppercase tracking-[0.14em] px-2.5 py-1 rounded-full border ${
                         ind.status === 'Live' ? 'bg-green/15 text-green border-green/30' :
-                        ind.status === 'Productised' ? 'bg-green/10 text-green border-green/20' :
+                        ind.status === 'Productised' ? 'bg-green/10 text-green border-green/25' :
                         'bg-white/5 text-white/55 border-white/15'
                       }`}>
                         {ind.status}
@@ -120,11 +114,9 @@ export default function Industries() {
                     </h3>
                     <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45 mb-5">{ind.forWhom}</p>
                     <p className="text-[14px] text-white/65 leading-[1.6] mb-5">{ind.body}</p>
-                    {ind.proof && (
-                      <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-white/40 mt-auto">
-                        · {ind.proof}
-                      </p>
-                    )}
+                    <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-white/35 mt-auto pt-4 border-t border-white/5">
+                      · {ind.proof}
+                    </p>
                   </div>
                 </Wrapper>
               )
