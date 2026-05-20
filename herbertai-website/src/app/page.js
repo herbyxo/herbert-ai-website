@@ -118,22 +118,22 @@ function HowItWorks() {
 function Services() {
   const items = [
     {
-      tag: 'Voice',
-      title: 'AI Voice Agents',
-      body: '24/7 receptionists that qualify jobs, book them in, and SMS confirmations. Custom system prompt per business.',
-      href: '/services#voice',
+      tag: 'Grow',
+      title: 'Bring new business in.',
+      body: 'Paid ads, SEO, landing pages, email + SMS, lead funnels. The systems that get more customers through the door.',
+      href: '/services#grow',
     },
     {
-      tag: 'Web',
-      title: 'Websites + Dashboards',
-      body: 'Modern Next.js sites with custom dashboards behind them. Bookings, SMS, customer database — whatever the business needs.',
-      href: '/services#website',
+      tag: 'Automate',
+      title: 'Run without you in the loop.',
+      body: 'AI voice agents, chatbots, n8n workflows, CRM automation. Anything where a computer can do the boring repetitive work.',
+      href: '/services#automate',
     },
     {
-      tag: 'Workflows',
-      title: 'Workflow Automation',
-      body: 'n8n + your existing stack, stitched together. AroFlo, Google Calendar, Gmail, CRMs — so your tools actually talk to each other.',
-      href: '/services',
+      tag: 'Build',
+      title: 'Custom software, yours to keep.',
+      body: 'Websites, dashboards, customer portals, booking systems. Bespoke Next.js + Supabase builds — no platform lock-in.',
+      href: '/services#build',
     },
   ]
 
@@ -144,11 +144,11 @@ function Services() {
           <div className="max-w-[36ch]">
             <Eyebrow>What we build</Eyebrow>
             <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Three capabilities. <span className="serif-em text-green-deep">Stitched to fit.</span>
+              Three buckets. <span className="serif-em text-green-deep">One studio.</span>
             </h2>
           </div>
           <p className="text-[16px] text-muted max-w-[42ch] leading-[1.6]">
-            Take one for a single bottleneck, or run all three together as a system. Every build is custom — no templates, no off-the-shelf widgets.
+            Pick the one that matches your bottleneck — or run a mix. Productised plans for common patterns; custom builds quoted on scope.
           </p>
         </div>
 
@@ -166,7 +166,7 @@ function Services() {
               <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{item.title}</h3>
               <p className="text-[15px] text-muted leading-[1.6] mb-8">{item.body}</p>
               <span className="inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-2.5 transition-all">
-                Learn more <span aria-hidden>→</span>
+                See {item.tag.toLowerCase()} services <span aria-hidden>→</span>
               </span>
             </Link>
           ))}
@@ -230,10 +230,11 @@ function Pricing() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          <PriceCard tag="Voice" name="AI Voice Receptionist" price="$297" suffix="/month" highlight />
-          <PriceCard tag="Web" name="Professional Website" price="$300" suffix=" setup" body="$197 / month hosting + maintenance" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <PriceCard tag="Voice" name="AI Voice Agent" price="$297" suffix="/month" />
+          <PriceCard tag="Web" name="Website + Hosting" price="$300" suffix=" setup" body="$197 / month hosting + maintenance" />
           <PriceCard tag="Chat" name="AI Chatbot Widget" price="$197" suffix="/month" />
+          <PriceCard tag="Bundle" name="All three, together" price="$697" suffix="/month" body="Save $294 / month vs separate" dark />
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
@@ -249,22 +250,22 @@ function Pricing() {
   )
 }
 
-function PriceCard({ tag, name, price, suffix, body, highlight }) {
+function PriceCard({ tag, name, price, suffix, body, dark }) {
   return (
-    <div className={`rounded-3xl p-8 border ${highlight ? 'bg-cream border-ink/40' : 'bg-cream border-line'}`}>
+    <div className={`rounded-3xl p-7 border ${dark ? 'bg-ink text-white border-ink' : 'bg-cream border-line'}`}>
       <div className="flex items-center gap-2 mb-7">
-        <span className={`w-1.5 h-1.5 rounded-full ${highlight ? 'bg-green-deep' : 'bg-muted'}`} />
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{tag}</span>
-        {highlight && (
-          <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.16em] text-green-deep">Most popular</span>
+        <span className={`w-1.5 h-1.5 rounded-full ${dark ? 'bg-green' : 'bg-green-deep'}`} />
+        <span className={`font-mono text-[11px] uppercase tracking-[0.18em] ${dark ? 'text-white/55' : 'text-muted'}`}>{tag}</span>
+        {dark && (
+          <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.16em] text-green">Most popular</span>
         )}
       </div>
-      <h3 className="text-[20px] font-medium tracking-[-0.01em] mb-2 text-ink">{name}</h3>
+      <h3 className={`text-[20px] font-medium tracking-[-0.01em] mb-2 ${dark ? 'text-white' : 'text-ink'}`}>{name}</h3>
       <div className="flex items-baseline gap-1 mb-2">
-        <span className="text-[44px] font-medium tracking-[-0.03em] text-ink">{price}</span>
-        <span className="text-[14px] text-muted">{suffix}</span>
+        <span className={`text-[40px] font-medium tracking-[-0.03em] ${dark ? 'text-white' : 'text-ink'}`}>{price}</span>
+        <span className={`text-[14px] ${dark ? 'text-white/60' : 'text-muted'}`}>{suffix}</span>
       </div>
-      {body && <p className="text-[13px] text-muted">{body}</p>}
+      {body && <p className={`text-[13px] ${dark ? 'text-green' : 'text-muted'}`}>{body}</p>}
     </div>
   )
 }

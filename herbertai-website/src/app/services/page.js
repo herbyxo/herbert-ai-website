@@ -8,7 +8,6 @@ import { useState, useEffect, useCallback } from 'react'
 const buckets = [
   {
     id: 'grow',
-    icon: '🌱',
     label: 'Grow',
     headline: 'Get more customers through the door.',
     body: 'Paid traffic, organic, lifecycle marketing — the systems that bring new business in. Set up once, run on their own, measured monthly.',
@@ -24,7 +23,6 @@ const buckets = [
   },
   {
     id: 'automate',
-    icon: '⚡',
     label: 'Automate',
     headline: 'Handle the admin without you in the loop.',
     body: 'Voice, chat, workflows — anything where a computer can do the boring repetitive work. You see the outcomes, not the process.',
@@ -42,7 +40,6 @@ const buckets = [
   },
   {
     id: 'build',
-    icon: '🔨',
     label: 'Build',
     headline: 'Custom software for your business.',
     body: 'Websites, dashboards, internal tools — bespoke Next.js + Supabase builds. Yours to keep, no platform lock-in.',
@@ -131,7 +128,7 @@ export default function Services() {
         >
           <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
             <div className="max-w-[44ch] mb-14">
-              <Eyebrow>{bucket.icon} {bucket.label}</Eyebrow>
+              <Eyebrow>{bucket.label}</Eyebrow>
               <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink mb-5">
                 {bucket.headline.split(' ').slice(0, -2).join(' ')}{' '}
                 <span className="serif-em text-green-deep">
