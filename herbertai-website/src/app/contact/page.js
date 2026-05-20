@@ -66,11 +66,6 @@ export default function Contact() {
                 0448 111 840
               </a>
             </InfoCard>
-            <InfoCard label="Instagram">
-              <a href="https://instagram.com/herbert_aisolutions" target="_blank" rel="noreferrer" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors">
-                @herbert_aisolutions
-              </a>
-            </InfoCard>
             <InfoCard label="Book a call">
               <Link href="https://calendly.com/herbert_aisolutions/30min" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-green text-ink px-5 py-2.5 rounded-full text-[14px] font-semibold hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300">
                 30-min scoping call <span aria-hidden>→</span>
