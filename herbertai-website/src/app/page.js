@@ -315,6 +315,7 @@ function Eyebrow({ children, color = 'ink', pulse, center }) {
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {pulse && <span className="w-1.5 h-1.5 rounded-full bg-green hi-pulse" />}
       {children}
+      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }

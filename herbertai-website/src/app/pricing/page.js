@@ -232,6 +232,7 @@ function Eyebrow({ children, color = 'ink', center }) {
     <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
+      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }
