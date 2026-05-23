@@ -293,10 +293,10 @@ function WebDemo({ shots, onOpen }) {
       <div className="max-w-[44ch] mb-8">
         <Eyebrow>Example · design</Eyebrow>
         <h3 className="text-[24px] md:text-[28px] font-medium tracking-[-0.01em] text-ink mb-3">
-          Editorial real estate <span className="serif-em text-green-deep">mockup.</span>
+          Editorial real estate <span className="serif-em text-green-deep">concept.</span>
         </h3>
         <p className="text-[14px] text-muted leading-[1.6]">
-          Concept design for a premium Adelaide real estate brand. Click any thumbnail to view.
+          Concept design for a premium London real estate brand. Click any thumbnail to view.
         </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
