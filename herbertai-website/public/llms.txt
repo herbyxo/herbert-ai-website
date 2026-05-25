@@ -1,0 +1,36 @@
+# Herbert AI
+
+> Automation & growth studio for SMBs. Solo, Adelaide-based, run by Will Herbert. Builds bespoke systems for small business: AI voice agents, chatbots, workflow automation, custom websites, dashboards, customer portals, and growth services (ads, SEO, email marketing).
+
+Herbert AI is a solo studio. Clients are small businesses across trades, hospitality, property management, accounting, allied health, and creative industries. Most work is custom-quoted; a few common patterns are productised with fixed monthly pricing.
+
+## Pages
+
+- [Home](https://herbert-aisolutions.com/): What Herbert AI is and what it does.
+- [Services](https://herbert-aisolutions.com/services): Three buckets — Grow (ads, SEO, email, landing pages, lead funnels), Automate (voice agents, chatbots, workflow automation, custom AI agents, CRM, booking automation), Build (websites, dashboards, customer portals, booking systems, e-commerce).
+- [Industries](https://herbert-aisolutions.com/industries): Industries Herbert AI works with — trades, hospitality, property, accounting, health, creative.
+- [Pricing](https://herbert-aisolutions.com/pricing): Productised plan pricing plus the custom-build quote model.
+- [About](https://herbert-aisolutions.com/about): About Will Herbert and how working with the studio actually goes.
+- [FAQ](https://herbert-aisolutions.com/faq): Common questions about timelines, pricing, customisation, contracts, and getting started.
+- [Contact](https://herbert-aisolutions.com/contact): How to get in touch — email, phone, Calendly.
+- [Property Manager AI](https://herbert-aisolutions.com/property-managers): Productised AI maintenance-intake system for residential property managers.
+
+## Productised pricing
+
+- AI Voice Agent: $297 AUD / month (2-week free trial)
+- Website + Hosting: $300 AUD setup + $197 AUD / month
+- AI Chatbot Widget: $197 AUD / month
+- Bundle (all three): $697 AUD / month (saves $294/month)
+- Custom builds: quoted on scope. No lock-in, no agency retainer.
+
+## Clients
+
+- Blendz By Ben — Adelaide barbershop. Full-stack build: custom site + owner dashboard + booking flow with deposits + customer self-manage portal + automated email/SMS. Live at blendzbyben.com.
+- Master Freeze — Sydney commercial refrigeration. AI voice receptionist (first real voice client).
+- Guy's Electrical — Adelaide electrical. AI voice receptionist.
+
+## Owner
+
+Will Herbert — solo founder, Adelaide, South Australia.
+Email: herbert_aisolutions@outlook.com
+Phone: +61 448 111 840

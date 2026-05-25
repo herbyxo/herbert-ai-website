@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Property Manager AI — automated maintenance intake',
+  description:
+    'AI tenant intake on your number. Maintenance requests captured, logged, and approved in one click. Tradie booking automated end-to-end. Portfolio-based pricing from $99/month.',
+  alternates: { canonical: '/property-managers' },
+  openGraph: {
+    title: 'Property Manager AI · Herbert AI',
+    description:
+      'Tenants call, AI logs the request, you approve in one click, tradie gets booked. From $99/month.',
+    url: '/property-managers',
+  },
+}
+
 const problems = [
   {
     tag: 'Interruptions',

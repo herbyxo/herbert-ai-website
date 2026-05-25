@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Pricing',
+  description:
+    'Productised plans — AI Voice Agent $297/mo, Website + Hosting $300 setup + $197/mo, AI Chatbot $197/mo, Bundle $697/mo (saves $294/mo). Custom builds quoted on scope. No lock-in.',
+  alternates: { canonical: '/pricing' },
+  openGraph: {
+    title: 'Pricing · Herbert AI',
+    description:
+      'Productised monthly plans plus custom-quoted builds. No lock-in, no agency retainer.',
+    url: '/pricing',
+  },
+}
+
 const plans = [
   {
     tag: 'Voice',

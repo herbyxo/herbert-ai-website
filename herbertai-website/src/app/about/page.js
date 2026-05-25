@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'About Will Herbert',
+  description:
+    'Will Herbert runs Herbert AI — a solo automation & growth studio in Adelaide, building bespoke systems for small business. Direct line to the builder, no agency overhead.',
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Will Herbert · Herbert AI',
+    description:
+      'Solo automation & growth studio in Adelaide. Direct line to the builder.',
+    url: '/about',
+  },
+}
+
 const capabilities = [
   {
     tag: 'Not enough customers',

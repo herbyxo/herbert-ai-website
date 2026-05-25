@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Industries we work with',
+  description:
+    'Industry-specific systems Herbert AI builds for trades, hospitality, property management, accounting, allied health, and creative businesses across Australia.',
+  alternates: { canonical: '/industries' },
+  openGraph: {
+    title: 'Industries · Herbert AI',
+    description:
+      'Industry-specific systems for trades, hospitality, property, accounting, health, and creative SMBs.',
+    url: '/industries',
+  },
+}
+
 const industries = [
   {
     tag: 'Trades',

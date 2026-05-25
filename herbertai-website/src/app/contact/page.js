@@ -1,5 +1,17 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Contact',
+  description:
+    'Get in touch with Will at Herbert AI. 30-minute scoping call, no pitch. Email, phone, or book a Calendly call — usually replies within a day.',
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact · Herbert AI',
+    description: '30-minute scoping call, no pitch. Get in touch with Will directly.',
+    url: '/contact',
+  },
+}
+
 export default function Contact() {
   return (
     <>

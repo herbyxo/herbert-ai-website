@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'FAQ',
+  description:
+    'Common questions about Herbert AI — what we build, project timelines, AI voice agent realism, custom vs productised pricing, customisation, contracts, ownership, and getting started.',
+  alternates: { canonical: '/faq' },
+  openGraph: {
+    title: 'FAQ · Herbert AI',
+    description:
+      'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI actually goes.',
+    url: '/faq',
+  },
+}
+
 const faqs = [
   {
     q: 'What does Herbert AI do?',
