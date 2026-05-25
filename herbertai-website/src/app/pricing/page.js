@@ -171,7 +171,7 @@ export default function Pricing() {
                   Need something <span className="serif-em text-green">not on the menu?</span>
                 </h2>
                 <p className="text-white/70 text-[17px] leading-[1.6] max-w-[52ch]">
-                  Custom AI agents, dashboards, n8n workflows, bespoke booking systems — all quoted on scope.
+                  Custom AI agents, dashboards, workflow automation, bespoke booking systems — all quoted on scope.
                   Fixed quote, fixed timeline. No retainer, no agency overhead.
                 </p>
               </div>

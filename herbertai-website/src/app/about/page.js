@@ -40,7 +40,7 @@ const recent = [
   {
     tag: 'Hospitality · Adelaide',
     name: 'Blendz By Ben',
-    body: 'Full-stack rebuild — Next.js site, owner dashboard, booking flow, SMS + email automation. Replaced Squarespace + Insta-DM bookings.',
+    body: 'Full-stack rebuild — custom site, owner dashboard, booking flow, SMS + email automation. Replaced Squarespace + Insta-DM bookings.',
     href: 'https://blendzbyben.com',
     external: true,
   },

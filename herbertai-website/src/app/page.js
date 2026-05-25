@@ -132,7 +132,7 @@ function Services() {
     {
       tag: 'Build',
       title: 'Custom software, yours to keep.',
-      body: 'Websites, dashboards, customer portals, booking systems. Bespoke Next.js + Supabase builds — no platform lock-in.',
+      body: 'Websites, dashboards, customer portals, booking systems. Bespoke custom builds — no platform lock-in.',
       href: '/services#build',
     },
   ]
