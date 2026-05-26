@@ -91,7 +91,7 @@ function HowItWorks() {
   ]
 
   return (
-    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 reveal">
       <div>
         <Eyebrow>How we work</Eyebrow>
         <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
@@ -140,7 +140,7 @@ function Services() {
   return (
     <section className="bg-cream-alt border-y border-line">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 reveal">
           <div className="max-w-[36ch]">
             <Eyebrow>What we build</Eyebrow>
             <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
@@ -152,21 +152,29 @@ function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {items.map((item) => (
+        {/* Editorial directory rows instead of card grid */}
+        <div className="border-t border-line">
+          {items.map((item, i) => (
             <Link
               key={item.tag}
               href={item.href}
-              className="group bg-cream rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors"
+              className="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[120px_1fr_auto] items-baseline gap-6 md:gap-10 py-8 md:py-12 border-b border-line hover:bg-cream/60 transition-colors reveal"
             >
-              <div className="flex items-center gap-2 mb-7">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+              <div className="flex items-center gap-2 md:pt-2">
+                <span className="font-mono text-[11px] text-muted">0{i + 1}</span>
+                <span className="w-1 h-1 rounded-full bg-green-deep" />
                 <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{item.tag}</span>
               </div>
-              <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{item.title}</h3>
-              <p className="text-[15px] text-muted leading-[1.6] mb-8">{item.body}</p>
-              <span className="inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-2.5 transition-all">
-                See {item.tag.toLowerCase()} services <span aria-hidden>→</span>
+              <div className="max-w-[60ch]">
+                <h3 className="text-[28px] md:text-[40px] font-medium tracking-[-0.025em] leading-[1.1] mb-3 text-ink">
+                  {item.title.split(/(\.)$/)[0]}
+                  <span className="serif-em text-green-deep">.</span>
+                </h3>
+                <p className="text-[15px] md:text-[16px] text-muted leading-[1.6]">{item.body}</p>
+              </div>
+              <span className="self-center inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-3 transition-all whitespace-nowrap">
+                <span className="hidden md:inline">See {item.tag.toLowerCase()}</span>
+                <span aria-hidden>→</span>
               </span>
             </Link>
           ))}
@@ -180,7 +188,7 @@ function Services() {
 
 function Audio() {
   return (
-    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 reveal">
       <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center relative overflow-hidden">
         <div className="hero-blob absolute bottom-[-160px] left-[-160px] w-[420px] h-[420px] pointer-events-none" />
 
@@ -223,14 +231,14 @@ function Pricing() {
   return (
     <section className="bg-cream-alt border-y border-line">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="max-w-[42ch] mb-16">
+        <div className="max-w-[42ch] mb-16 reveal">
           <Eyebrow>Pricing</Eyebrow>
           <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
             Honest pricing. <span className="serif-em text-green-deep">No lock-in.</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 reveal">
           <PriceCard tag="Voice" name="AI Voice Agent" price="$297" suffix="/month" />
           <PriceCard tag="Web" name="Website + Hosting" price="$300" suffix=" setup" body="$197 / month hosting + maintenance" />
           <PriceCard tag="Chat" name="AI Chatbot Widget" price="$197" suffix="/month" />
@@ -252,7 +260,7 @@ function Pricing() {
 
 function PriceCard({ tag, name, price, suffix, body, dark }) {
   return (
-    <div className={`rounded-3xl p-7 border ${dark ? 'bg-ink text-white border-ink' : 'bg-cream border-line'}`}>
+    <div className={`rounded-3xl p-7 border lift ${dark ? 'bg-ink text-white border-ink' : 'bg-cream border-line'}`}>
       <div className="flex items-center gap-2 mb-7">
         <span className={`w-1.5 h-1.5 rounded-full ${dark ? 'bg-green' : 'bg-green-deep'}`} />
         <span className={`font-mono text-[11px] uppercase tracking-[0.18em] ${dark ? 'text-white/55' : 'text-muted'}`}>{tag}</span>
@@ -274,7 +282,7 @@ function PriceCard({ tag, name, price, suffix, body, dark }) {
 
 function FinalCTA() {
   return (
-    <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto">
+    <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto reveal">
       <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
         <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
 

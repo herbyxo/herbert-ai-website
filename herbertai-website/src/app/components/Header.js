@@ -24,6 +24,7 @@ export default function Header() {
           </DropdownLink>
 
           <Link href="/industries" className="hover:opacity-60 transition-opacity">Industries</Link>
+          <Link href="/case-studies" className="hover:opacity-60 transition-opacity">Case Studies</Link>
           <Link href="/pricing" className="hover:opacity-60 transition-opacity">Pricing</Link>
           <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
           <Link href="/contact" className="hover:opacity-60 transition-opacity">Contact</Link>
@@ -58,6 +59,7 @@ export default function Header() {
           {[
             ['/services', 'Services'],
             ['/industries', 'Industries'],
+            ['/case-studies', 'Case Studies'],
             ['/pricing', 'Pricing'],
             ['/about', 'About'],
             ['/faq', 'FAQ'],

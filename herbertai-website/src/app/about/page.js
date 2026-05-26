@@ -53,7 +53,7 @@ const recent = [
   {
     tag: 'Hospitality · Adelaide',
     name: 'Blendz By Ben',
-    body: 'Full-stack rebuild — custom site, owner dashboard, booking flow, SMS + email automation. Replaced Squarespace + Insta-DM bookings.',
+    body: 'Full-stack rebuild — custom site, owner dashboard, booking flow, SMS + email automation. Replaced a generic Setmore booking page on someone else’s domain.',
     href: 'https://blendzbyben.com',
     external: true,
   },
@@ -200,7 +200,7 @@ export default function About() {
                 href={r.href}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block"
+                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block lift"
               >
                 {inner}
               </a>
@@ -208,7 +208,7 @@ export default function About() {
               <Link
                 key={r.name}
                 href={r.href}
-                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block"
+                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block lift"
               >
                 {inner}
               </Link>

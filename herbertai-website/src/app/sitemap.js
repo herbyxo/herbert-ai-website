@@ -11,6 +11,8 @@ export default function sitemap() {
     { path: '/contact', priority: 0.8 },
     { path: '/faq', priority: 0.7 },
     { path: '/property-managers', priority: 0.8 },
+    { path: '/case-studies', priority: 0.85 },
+    { path: '/case-studies/blendz', priority: 0.8 },
   ]
   return routes.map((r) => ({
     url: `${BASE}${r.path}`,
