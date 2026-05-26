@@ -144,8 +144,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} ${interTight.variable}`}>
       <body className="min-h-screen flex flex-col bg-cream text-ink font-sans">
+        <a href="#main" className="skip-link">Skip to content</a>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main id="main" className="flex-grow">{children}</main>
         <Footer />
         <script
           type="application/ld+json"

@@ -86,7 +86,7 @@ export default function BlendzCaseStudy() {
             A booking widget on <span className="serif-em text-green-deep">somebody else&apos;s site.</span>
           </h2>
 
-          <div className="text-[18px] md:text-[19px] text-ink-soft leading-[1.75] space-y-6">
+          <div className="text-[18px] md:text-[19px] text-ink-soft leading-[1.75] space-y-6 max-w-[68ch]">
             <p className="drop-cap">
               Blendz didn&apos;t really have a website. The only public-facing page was a
               <a href="https://blendzbyben.setmore.com" target="_blank" rel="noreferrer" className="text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-green-deep transition"> Setmore booking page</a> —
@@ -223,7 +223,7 @@ export default function BlendzCaseStudy() {
             One source of truth. <span className="serif-em text-green-deep">No more DMs.</span>
           </h2>
 
-          <div className="text-[18px] md:text-[19px] text-ink-soft leading-[1.75] space-y-6">
+          <div className="text-[18px] md:text-[19px] text-ink-soft leading-[1.75] space-y-6 max-w-[68ch]">
             <p>
               Every booking now flows through the site. Ben sees his day on one dashboard
               in the morning. Customers get SMS confirmation and a reminder the day before.
