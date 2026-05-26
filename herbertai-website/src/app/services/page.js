@@ -152,18 +152,19 @@ export default function Services() {
         </section>
       ))}
 
-      {/* Bundle CTA */}
+      {/* Pricing teaser */}
       <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
         <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 relative overflow-hidden">
           <div className="hero-blob absolute top-[-200px] right-[-100px] w-[500px] h-[500px] pointer-events-none" />
           <div className="relative grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-end">
             <div>
-              <Eyebrow color="white">Productised bundle</Eyebrow>
+              <Eyebrow color="white">Pricing</Eyebrow>
               <h2 className="text-[36px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch]">
-                Voice + web + chat — <span className="serif-em text-green">$697/month.</span>
+                Priced on scope. <span className="serif-em text-green">Not on a menu.</span>
               </h2>
               <p className="text-white/70 text-[17px] leading-[1.6] max-w-[52ch] mb-3">
-                The three productised systems bundled and running as one stack. Save $294/month versus buying separately, no setup fees.
+                Every project quoted on scope — fixed price, fixed timeline. Three pricing
+                models depending on the work: fixed quote, hourly, or monthly retainer.
               </p>
             </div>
             <div className="flex flex-col gap-3">
@@ -171,13 +172,13 @@ export default function Services() {
                 href="/pricing"
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
-                See bundle pricing <span aria-hidden>→</span>
+                How we price <span aria-hidden>→</span>
               </Link>
               <Link
                 href="/contact"
                 className="text-white px-6 py-3.5 rounded-full font-medium text-[15px] inline-flex items-center justify-between gap-2 border border-white/20 hover:border-white/50 transition-colors"
               >
-                Talk to Will <span aria-hidden>→</span>
+                Get a quote <span aria-hidden>→</span>
               </Link>
             </div>
           </div>

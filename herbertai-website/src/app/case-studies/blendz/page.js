@@ -14,10 +14,10 @@ export const metadata = {
 }
 
 const gallery = [
-  { src: '/portfolio/home_-_haircut.png', alt: 'Blendz homepage with hero and service preview' },
-  { src: '/portfolio/services_-_haircut.png', alt: 'Services page listing haircut and beard services' },
-  { src: '/portfolio/book_-_haircut.png', alt: 'Booking flow with calendar and time slot selection' },
-  { src: '/portfolio/about_-_haircut.png', alt: 'About page with shop story and barber bios' },
+  { src: '/portfolio/blendz/home.png', alt: 'Blendz homepage hero — Sharp cuts. Every time.' },
+  { src: '/portfolio/blendz/book.png', alt: 'Booking flow — Step 1: Pick a service, with calendar and progress bar' },
+  { src: '/portfolio/blendz/gallery.png', alt: 'Recent cuts gallery page' },
+  { src: '/portfolio/blendz/about.png', alt: 'About page — Meet Ben' },
 ]
 
 export default function BlendzCaseStudy() {
