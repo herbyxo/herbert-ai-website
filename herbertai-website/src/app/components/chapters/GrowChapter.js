@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import RevealOnScroll from '../motion/RevealOnScroll'
 
-const CARD = 'bg-white rounded-3xl border border-line shadow-[0_8px_32px_rgba(10,10,10,0.04)]'
+const CARD = 'bg-white rounded-3xl border border-ink'
 
 export default function GrowChapter() {
   const ref = useRef(null)
@@ -58,37 +58,37 @@ export default function GrowChapter() {
           </div>
 
           {/* ─── Right: stacked mockups with parallax + rotation ─── */}
-          <div className="lg:col-span-7 space-y-14 lg:space-y-16">
-            <motion.div style={{ y: y1 }} className="md:w-[80%]">
+          <div className="lg:col-span-7 space-y-14 lg:space-y-20">
+            <motion.div style={{ y: y1 }} className="md:w-[76%] md:-ml-4">
               <RevealOnScroll>
-                <div className="rotate-[1.5deg]">
+                <div className="rotate-[2.5deg]">
                   <MockupLabel>Paid ad campaign</MockupLabel>
                   <MockAdCreative />
                 </div>
               </RevealOnScroll>
             </motion.div>
 
-            <motion.div style={{ y: y2 }} className="md:w-[88%] md:ml-auto">
+            <motion.div style={{ y: y2 }} className="md:w-[92%] md:ml-auto">
               <RevealOnScroll delay={0.1}>
-                <div className="rotate-[-1deg]">
+                <div className="rotate-[-2deg]">
                   <MockupLabel>SEO ranking</MockupLabel>
                   <MockSEOResult />
                 </div>
               </RevealOnScroll>
             </motion.div>
 
-            <motion.div style={{ y: y3 }} className="md:w-[70%] md:ml-auto md:mr-12">
+            <motion.div style={{ y: y3 }} className="md:w-[64%] md:ml-auto md:mr-16">
               <RevealOnScroll delay={0.2}>
-                <div className="rotate-[-0.5deg]">
+                <div className="rotate-[1.5deg]">
                   <MockupLabel>Automated SMS funnel</MockupLabel>
                   <MockSMSConversation />
                 </div>
               </RevealOnScroll>
             </motion.div>
 
-            <motion.div style={{ y: y4 }} className="md:w-[88%]">
+            <motion.div style={{ y: y4 }} className="md:w-[88%] md:-ml-6">
               <RevealOnScroll delay={0.3}>
-                <div className="rotate-[-1.5deg]">
+                <div className="rotate-[-2.5deg]">
                   <MockupLabel>Conversion analytics</MockupLabel>
                   <MockAnalyticsDashboard />
                 </div>
