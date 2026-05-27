@@ -135,28 +135,28 @@ function MockSEOResult() {
         <svg className="w-4 h-4 text-muted shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
           <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
         </svg>
-        <div className="text-[14px] text-ink-soft flex-1">electrician adelaide</div>
+        <div className="text-[14px] text-ink-soft flex-1">barber adelaide cbd</div>
         <div className="text-[10px] text-muted font-mono uppercase tracking-[0.12em]">Search</div>
       </div>
       {/* Results meta */}
       <div className="px-4 pt-3 text-[11px] text-muted">
-        About 487,000 results &middot; 0.41 seconds
+        About 312,000 results &middot; 0.38 seconds
       </div>
       {/* #1 organic result */}
       <div className="p-4 pt-2">
         <div className="flex items-center gap-1.5 text-[12px] text-muted mb-1">
-          <span className="w-4 h-4 rounded-full bg-cream-alt flex items-center justify-center text-[8px] font-bold text-ink shrink-0">A</span>
-          <span className="truncate">adelaideelectric.com.au</span>
+          <span className="w-4 h-4 rounded-full bg-cream-alt flex items-center justify-center text-[8px] font-bold text-ink shrink-0">F</span>
+          <span className="truncate">forgebarber.com.au</span>
         </div>
         <div className="text-[16px] md:text-[17px] font-medium text-ink leading-[1.25] mb-1.5 hover:underline cursor-default">
-          Adelaide Electric &mdash; 5★ Same-day sparkies | Free quotes
+          Forge Barber &mdash; Sharp cuts in the CBD | Walk-ins welcome
         </div>
         <div className="flex items-center gap-2 mb-2">
           <div className="flex text-amber-500 text-[12px] leading-none">★★★★★</div>
-          <span className="text-[11px] text-muted">Rating: 4.9 &middot; 200 reviews</span>
+          <span className="text-[11px] text-muted">Rating: 4.9 &middot; 280 reviews</span>
         </div>
         <p className="text-[13px] text-ink-soft leading-[1.45]">
-          Trusted electricians serving Adelaide. Same-day service, no callout fee, 5★ rated by 200+ local homes&hellip;
+          Adelaide&rsquo;s busiest CBD barbershop. Skin fades, beard work, kids cuts. 5★ rated by 280+ regulars&hellip;
         </p>
       </div>
       {/* Ranking-change badge */}
@@ -174,11 +174,11 @@ function MockAdCreative() {
     <div className={`${CARD} max-w-md overflow-hidden`}>
       <div className="flex items-center gap-3 p-4">
         <div className="w-10 h-10 rounded-full bg-ink flex items-center justify-center shrink-0">
-          <span className="text-green text-[14px] font-bold">A</span>
+          <span className="text-green text-[14px] font-bold">F</span>
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-1">
-            <div className="text-[14px] font-semibold text-ink truncate">Adelaide Electric</div>
+            <div className="text-[14px] font-semibold text-ink truncate">Forge Barber</div>
             <svg className="w-3.5 h-3.5 text-green-deep shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
@@ -188,7 +188,7 @@ function MockAdCreative() {
       </div>
       <div className="px-4 pb-3">
         <p className="text-[13px] text-ink-soft leading-[1.45]">
-          Looking for a sparky? Get a free quote in 60 seconds &mdash; same-day service, no callout fee.
+          Looking for a fresh cut? Book your chair in 60 seconds &mdash; walk-ins welcome.
         </p>
       </div>
       {/* Image area — placeholder for client photo */}
@@ -204,16 +204,16 @@ function MockAdCreative() {
         {/* Rating overlay badge — top right (demonstrates ad-overlay capability) */}
         <div className="absolute top-3 right-3 bg-white border border-line px-2.5 py-1 rounded font-mono text-[10px] uppercase tracking-[0.14em] font-bold flex items-center gap-1 shadow-[0_2px_8px_rgba(10,10,10,0.04)]">
           <span className="text-amber-500 text-[11px] leading-none">★</span>
-          <span className="text-ink">4.9 &middot; 200 reviews</span>
+          <span className="text-ink">4.9 &middot; 280 reviews</span>
         </div>
       </div>
       <div className="flex items-center justify-between p-4 gap-3 bg-cream-alt">
         <div className="min-w-0">
-          <div className="text-[10px] text-muted font-mono uppercase tracking-[0.12em]">adelaideelectric.com.au</div>
-          <div className="text-[13px] font-medium text-ink mt-1 truncate">Free quotes, same-day service</div>
+          <div className="text-[10px] text-muted font-mono uppercase tracking-[0.12em]">forgebarber.com.au</div>
+          <div className="text-[13px] font-medium text-ink mt-1 truncate">Walk-ins welcome &middot; CBD</div>
         </div>
         <button className="bg-ink text-cream px-3 py-1.5 rounded-md text-[12px] font-medium shrink-0">
-          Book now
+          Book chair
         </button>
       </div>
     </div>
@@ -225,15 +225,15 @@ function MockSMSConversation() {
   return (
     <div className={`${CARD} p-6 max-w-sm`}>
       <div className="text-[10px] text-muted font-mono uppercase tracking-[0.16em] mb-5 text-center">
-        Today &middot; After job completion
+        Today &middot; 1 hour after the chair
       </div>
       <div className="space-y-2.5">
         {/* Automated review request from business */}
         <div className="flex">
           <div className="bg-cream-alt rounded-2xl rounded-tl-md px-4 py-3 max-w-[88%]">
             <p className="text-[14px] text-ink leading-[1.45] mb-3">
-              Hi Sarah, hope everything was sorted today. If you&rsquo;ve got 30 seconds,
-              mind leaving us a quick review? Means a lot.
+              Sam, hope you&rsquo;re happy with the cut. If you&rsquo;ve got 30 seconds,
+              would you mind dropping us a review? Massive help.
             </p>
             <div className="bg-white border border-line rounded-lg px-3 py-2 flex items-center gap-2 text-[12px] text-ink font-medium">
               <span className="text-amber-500 leading-none">★</span>
@@ -246,7 +246,7 @@ function MockSMSConversation() {
         <div className="flex justify-end">
           <div className="bg-green text-ink rounded-2xl rounded-tr-md px-4 py-2.5 max-w-[85%]">
             <p className="text-[14px] leading-[1.4]">
-              Just did &mdash; easy 5 stars.
+              Just did &mdash; easy 5 stars. Best fade I&rsquo;ve had.
             </p>
           </div>
         </div>
@@ -254,7 +254,7 @@ function MockSMSConversation() {
         <div className="flex">
           <div className="bg-cream-alt rounded-2xl rounded-tl-md px-4 py-2.5 max-w-[85%]">
             <p className="text-[14px] text-ink leading-[1.4]">
-              Cheers Sarah, much appreciated.
+              Legend Sam, see you in 4 weeks.
             </p>
           </div>
         </div>
@@ -266,9 +266,9 @@ function MockSMSConversation() {
 /* ─── Mock #4: Live analytics dashboard ─────────────────────────── */
 function MockAnalyticsDashboard() {
   const stats = [
-    { value: '3,247', label: 'Visitors', change: '+18%' },
-    { value: '127', label: 'Leads', change: '+34%' },
-    { value: '42', label: 'Bookings', change: '+28%' },
+    { value: '2,180', label: 'Visitors', change: '+22%' },
+    { value: '186', label: 'Bookings', change: '+31%' },
+    { value: '4.9', label: 'Avg rating', change: '+0.2' },
   ]
   return (
     <div className={`${CARD} max-w-md overflow-hidden`}>
@@ -276,7 +276,7 @@ function MockAnalyticsDashboard() {
       <div className="flex items-center justify-between p-4 border-b border-line">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-green hi-pulse" />
-          <div className="text-[12px] font-semibold text-ink">your-business · analytics</div>
+          <div className="text-[12px] font-semibold text-ink">forge-barber · analytics</div>
         </div>
         <div className="text-[10px] text-muted font-mono uppercase tracking-[0.12em]">Last 30 days</div>
       </div>
