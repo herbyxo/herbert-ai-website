@@ -13,8 +13,28 @@ export default function Header() {
     <header className="bg-cream">
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
         <Link href="/" data-magnetic className="flex items-center gap-2.5 group">
-          <span className="w-2.5 h-2.5 rounded-full bg-green shadow-[0_0_10px_var(--green-glow)]" />
-          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">herbertai</span>
+          <svg
+            aria-hidden
+            viewBox="0 0 32 32"
+            className="w-6 h-6 shrink-0"
+            style={{ filter: 'drop-shadow(0 0 6px var(--green-glow))' }}
+          >
+            <rect width="32" height="32" rx="7" fill="#0A0A0A" />
+            <text
+              x="50%"
+              y="24"
+              fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+              fontWeight="700"
+              fontSize="22"
+              letterSpacing="-1"
+              fill="#F5F0E5"
+              textAnchor="middle"
+            >
+              h
+            </text>
+            <circle cx="24.5" cy="8.5" r="2.4" fill="#00FF88" />
+          </svg>
+          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">herbert ai</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink">
@@ -136,8 +156,28 @@ function MobileOverlay({ onClose }) {
     >
       <div className="flex items-center justify-between px-6 py-5">
         <Link href="/" onClick={onClose} className="flex items-center gap-2.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-green shadow-[0_0_10px_var(--green-glow)]" />
-          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">herbertai</span>
+          <svg
+            aria-hidden
+            viewBox="0 0 32 32"
+            className="w-6 h-6 shrink-0"
+            style={{ filter: 'drop-shadow(0 0 6px var(--green-glow))' }}
+          >
+            <rect width="32" height="32" rx="7" fill="#0A0A0A" />
+            <text
+              x="50%"
+              y="24"
+              fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+              fontWeight="700"
+              fontSize="22"
+              letterSpacing="-1"
+              fill="#F5F0E5"
+              textAnchor="middle"
+            >
+              h
+            </text>
+            <circle cx="24.5" cy="8.5" r="2.4" fill="#00FF88" />
+          </svg>
+          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">herbert ai</span>
         </Link>
         <button onClick={onClose} className="text-ink" aria-label="Close menu">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
