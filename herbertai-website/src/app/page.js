@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Hero from './components/Hero'
 
 export default function Home() {
   return (
@@ -10,62 +11,6 @@ export default function Home() {
       <Pricing />
       <FinalCTA />
     </>
-  )
-}
-
-/* ─── Hero ──────────────────────────────────────────────────────────── */
-
-function Hero() {
-  return (
-    <section className="px-6 lg:px-12 py-6 max-w-[1280px] mx-auto">
-      <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 lg:p-22 relative overflow-hidden">
-        <div className="hero-blob absolute top-[-120px] right-[-120px] w-[480px] h-[480px] pointer-events-none" />
-
-        <Eyebrow color="white" pulse>Adelaide · automation &amp; growth studio</Eyebrow>
-
-        <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-semibold tracking-[-0.04em] leading-[0.95] mb-7 max-w-[14ch]">
-          Stop running<br />
-          on <span className="serif-em text-green text-[1.05em]">missed calls</span><br />
-          and spreadsheets.
-        </h1>
-
-        <p className="text-white/70 text-[17px] md:text-[19px] leading-[1.55] max-w-[56ch] mb-11 font-light">
-          Herbert AI builds the ads, websites, dashboards, voice agents, and workflow automation
-          that help small businesses grow and run themselves. Custom-built, not from a template.
-          Shipped in weeks — not quarters.
-        </p>
-
-        <div className="flex flex-wrap gap-3 items-center mb-16">
-          <Link
-            href="/services"
-            className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px"
-          >
-            See what we build <span aria-hidden>→</span>
-          </Link>
-          <Link
-            href="/contact"
-            className="text-white px-5 py-3 rounded-full font-medium text-[15px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
-          >
-            Talk to Will
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-3 gap-6 md:gap-12 pt-12 border-t border-white/10">
-          <Stat value={<>Solo<span className="text-green">.</span></>} label="Built by Will, in Adelaide" />
-          <Stat value={<>2 <span className="text-green">wks</span></>} label="Brief to working version" />
-          <Stat value={<>0<span className="text-green"> lock-in</span></>} label="Cancel anytime · No retainer" />
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Stat({ value, label }) {
-  return (
-    <div>
-      <div className="font-medium text-[28px] md:text-[40px] tracking-[-0.03em] leading-none mb-2">{value}</div>
-      <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-white/50">{label}</div>
-    </div>
   )
 }
 
