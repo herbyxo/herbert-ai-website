@@ -179,35 +179,55 @@ function PriceCard({ tag, name, price, suffix, body, dark }) {
   )
 }
 
-/* ─── Final CTA ─────────────────────────────────────────────────────── */
+/* ─── Final CTA — editorial closing statement ───────────────────────── */
 
 function FinalCTA() {
   return (
-    <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto">
-      <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
-        <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
+    <section className="bg-ink text-cream relative overflow-hidden">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-48">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+          {/* Left: closing statement */}
+          <div className="lg:col-span-7">
+            <div className="flex items-center gap-3 mb-9 font-mono text-[11px] uppercase tracking-[0.18em] text-cream/45">
+              <span className="w-8 h-px bg-green" />
+              <span>The closing pitch</span>
+            </div>
 
-        <div className="relative">
-          <Eyebrow color="white" center>Ready when you are</Eyebrow>
-          <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch] mx-auto">
-            Stop running the admin yourself. <span className="serif-em text-green">We&apos;ll build it for you.</span>
-          </h2>
-          <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[52ch] mx-auto">
-            30-minute call, no pitch. We&apos;ll scope what you actually need, then quote it.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
+            <h2
+              className="font-display text-cream"
+              style={{
+                fontSize: 'var(--text-display-md)',
+                lineHeight: 0.95,
+                letterSpacing: '-0.04em',
+                fontWeight: 800,
+              }}
+            >
+              Tell me what&rsquo;s slow.
+              <br />
+              <span className="text-green">I&rsquo;ll show you</span> what I&rsquo;d build.
+            </h2>
+
+            <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">
+              30-minute call. No deck, no pitch. You walk me through the bottleneck;
+              I tell you whether it&rsquo;s worth building, what it would cost, and how long it would take.
+            </p>
+          </div>
+
+          {/* Right: single CTA + founder note */}
+          <div className="lg:col-span-5 flex flex-col gap-6 lg:items-end">
             <Link
               href="/contact"
+              data-magnetic
               className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
             >
-              Get in touch <span aria-hidden>→</span>
+              Book a 30-min call <span aria-hidden>→</span>
             </Link>
-            <Link
-              href="/industries"
-              className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
-            >
-              Industry examples
-            </Link>
+
+            <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
+              Will Herbert &middot; Adelaide
+              <br />
+              hello@herbert-aisolutions.com
+            </div>
           </div>
         </div>
       </div>
