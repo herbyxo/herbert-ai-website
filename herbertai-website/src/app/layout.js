@@ -1,6 +1,8 @@
-import { Geist, Geist_Mono, Instrument_Serif, Inter_Tight } from 'next/font/google'
+import { Geist, Geist_Mono, Instrument_Serif, Bricolage_Grotesque } from 'next/font/google'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import LenisProvider from './components/motion/LenisProvider'
+import MagneticCursor from './components/motion/MagneticCursor'
 import './globals.css'
 
 const geist = Geist({
@@ -22,10 +24,10 @@ const instrumentSerif = Instrument_Serif({
   variable: '--font-instrument-serif',
   display: 'swap',
 })
-const interTight = Inter_Tight({
+const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-inter-tight',
+  weight: ['700', '800'],
+  variable: '--font-bricolage',
   display: 'swap',
 })
 
@@ -128,26 +130,19 @@ const jsonLd = {
   ],
   priceRange: '$$',
   sameAs: ['https://github.com/herbyxo'],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Herbert AI productised plans',
-    itemListElement: [
-      { '@type': 'Offer', name: 'AI Voice Agent', priceCurrency: 'AUD', price: '297' },
-      { '@type': 'Offer', name: 'Website + Hosting', priceCurrency: 'AUD', price: '197' },
-      { '@type': 'Offer', name: 'AI Chatbot Widget', priceCurrency: 'AUD', price: '197' },
-      { '@type': 'Offer', name: 'Three Services Bundle', priceCurrency: 'AUD', price: '697' },
-    ],
-  },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} ${interTight.variable}`}>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} ${bricolage.variable}`}>
       <body className="min-h-screen flex flex-col bg-cream text-ink font-sans">
         <a href="#main" className="skip-link">Skip to content</a>
-        <Header />
-        <main id="main" className="flex-grow">{children}</main>
-        <Footer />
+        <LenisProvider>
+          <MagneticCursor />
+          <Header />
+          <main id="main" className="flex-grow">{children}</main>
+          <Footer />
+        </LenisProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

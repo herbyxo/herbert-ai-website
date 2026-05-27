@@ -1,274 +1,91 @@
 import Link from 'next/link'
+import Hero from './components/Hero'
+import GrowChapter from './components/chapters/GrowChapter'
+import AutomateChapter from './components/chapters/AutomateChapter'
+import BuildChapter from './components/chapters/BuildChapter'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <HowItWorks />
-      <Services />
-      <Audio />
+      <GrowChapter />
+      <AutomateChapter />
+      <BuildChapter />
       <Pricing />
       <FinalCTA />
     </>
   )
 }
 
-/* ─── Hero ──────────────────────────────────────────────────────────── */
-
-function Hero() {
-  return (
-    <section className="px-6 lg:px-12 py-6 max-w-[1280px] mx-auto">
-      <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 lg:p-22 relative overflow-hidden">
-        <div className="hero-blob absolute top-[-120px] right-[-120px] w-[480px] h-[480px] pointer-events-none" />
-
-        <Eyebrow color="white" pulse>Adelaide · automation &amp; growth studio</Eyebrow>
-
-        <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-semibold tracking-[-0.04em] leading-[0.95] mb-7 max-w-[14ch]">
-          Stop running<br />
-          on <span className="serif-em text-green text-[1.05em]">missed calls</span><br />
-          and spreadsheets.
-        </h1>
-
-        <p className="text-white/70 text-[17px] md:text-[19px] leading-[1.55] max-w-[56ch] mb-11 font-light">
-          Herbert AI builds the ads, websites, dashboards, voice agents, and workflow automation
-          that help small businesses grow and run themselves. Custom-built, not from a template.
-          Shipped in weeks — not quarters.
-        </p>
-
-        <div className="flex flex-wrap gap-3 items-center mb-16">
-          <Link
-            href="/services"
-            className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px"
-          >
-            See what we build <span aria-hidden>→</span>
-          </Link>
-          <Link
-            href="/contact"
-            className="text-white px-5 py-3 rounded-full font-medium text-[15px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
-          >
-            Talk to Will
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-3 gap-6 md:gap-12 pt-12 border-t border-white/10">
-          <Stat value={<>Solo<span className="text-green">.</span></>} label="Built by Will, in Adelaide" />
-          <Stat value={<>2 <span className="text-green">wks</span></>} label="Brief to working version" />
-          <Stat value={<>0<span className="text-green"> lock-in</span></>} label="Cancel anytime · No retainer" />
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Stat({ value, label }) {
-  return (
-    <div>
-      <div className="font-medium text-[28px] md:text-[40px] tracking-[-0.03em] leading-none mb-2">{value}</div>
-      <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-white/50">{label}</div>
-    </div>
-  )
-}
-
 /* ─── How it works ──────────────────────────────────────────────────── */
 
-function HowItWorks() {
-  const steps = [
-    {
-      n: '01',
-      title: 'We talk',
-      body: '30-minute call. You explain the bottleneck — missed calls, manual bookings, follow-ups that fall through. We scope a fix that fits your scale.',
-    },
-    {
-      n: '02',
-      title: 'We build',
-      body: 'One to three weeks. Voice agent, custom dashboard, booking flow, or workflow glue — whatever the bottleneck calls for. You see progress as we ship.',
-    },
-    {
-      n: '03',
-      title: 'We hand it over',
-      body: 'Live system, plus a direct line for tweaks. No lock-in, no agency retainer, no 90-day onboarding.',
-    },
-  ]
-
-  return (
-    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 reveal">
-      <div>
-        <Eyebrow>How we work</Eyebrow>
-        <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
-          Built for businesses that&apos;d rather <span className="serif-em text-green-deep">run</span> than tinker with their tools.
-        </h2>
-      </div>
-      <div className="grid gap-8 pt-1">
-        {steps.map((s) => (
-          <div key={s.n} className="flex gap-5">
-            <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{s.n}</span>
-            <div>
-              <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{s.title}</h3>
-              <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{s.body}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  )
-}
-
-/* ─── Services ─────────────────────────────────────────────────────── */
-
-function Services() {
-  const items = [
-    {
-      tag: 'Grow',
-      title: 'Bring new business in.',
-      body: 'Paid ads, SEO, landing pages, email + SMS, lead funnels. The systems that get more customers through the door.',
-      href: '/services#grow',
-    },
-    {
-      tag: 'Automate',
-      title: 'Run without you in the loop.',
-      body: 'AI voice agents, chatbots, n8n workflows, CRM automation. Anything where a computer can do the boring repetitive work.',
-      href: '/services#automate',
-    },
-    {
-      tag: 'Build',
-      title: 'Custom software, yours to keep.',
-      body: 'Websites, dashboards, customer portals, booking systems. Bespoke custom builds — no platform lock-in.',
-      href: '/services#build',
-    },
-  ]
-
-  return (
-    <section className="bg-cream-alt border-y border-line">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 reveal">
-          <div className="max-w-[36ch]">
-            <Eyebrow>What we build</Eyebrow>
-            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Three buckets. <span className="serif-em text-green-deep">One studio.</span>
-            </h2>
-          </div>
-          <p className="text-[16px] text-muted max-w-[42ch] leading-[1.6]">
-            Pick the one that matches your bottleneck — or run a mix. Productised plans for common patterns; custom builds quoted on scope.
-          </p>
-        </div>
-
-        {/* Editorial directory rows instead of card grid */}
-        <div className="border-t border-line">
-          {items.map((item, i) => (
-            <Link
-              key={item.tag}
-              href={item.href}
-              className="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[120px_1fr_auto] items-baseline gap-6 md:gap-10 py-8 md:py-12 border-b border-line hover:bg-cream/60 transition-colors reveal"
-            >
-              <div className="flex items-center gap-2 md:pt-2">
-                <span className="font-mono text-[11px] text-muted">0{i + 1}</span>
-                <span className="w-1 h-1 rounded-full bg-green-deep" />
-                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{item.tag}</span>
-              </div>
-              <div className="max-w-[60ch]">
-                <h3 className="text-[28px] md:text-[40px] font-medium tracking-[-0.025em] leading-[1.1] mb-3 text-ink">
-                  {item.title.split(/(\.)$/)[0]}
-                  <span className="serif-em text-green-deep">.</span>
-                </h3>
-                <p className="text-[15px] md:text-[16px] text-muted leading-[1.6]">{item.body}</p>
-              </div>
-              <span className="self-center inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-3 transition-all whitespace-nowrap">
-                <span className="hidden md:inline">See {item.tag.toLowerCase()}</span>
-                <span aria-hidden>→</span>
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ─── Audio demo ───────────────────────────────────────────────────── */
-
-function Audio() {
-  return (
-    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 reveal">
-      <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center relative overflow-hidden">
-        <div className="hero-blob absolute bottom-[-160px] left-[-160px] w-[420px] h-[420px] pointer-events-none" />
-
-        <div className="relative">
-          <Eyebrow color="white" pulse>Real call · Master Freeze</Eyebrow>
-          <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] mb-5">
-            Hear one of our voice agents, <span className="serif-em text-green">unedited.</span>
-          </h2>
-          <p className="text-white/70 text-[16px] leading-[1.6] mb-8 max-w-[48ch]">
-            Real refrigerant-leak callout to Master Freeze. The agent qualified the job,
-            collected the details, and closed the call — zero human involvement.
-          </p>
-          <Link
-            href="/services#automate"
-            className="bg-green text-ink px-5 py-3 rounded-full font-semibold text-[14px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
-          >
-            See voice + automation <span aria-hidden>→</span>
-          </Link>
-        </div>
-
-        <div className="bg-white/5 border border-white/15 rounded-2xl p-6 relative">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-green hi-pulse" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/60">Live recording</span>
-          </div>
-          <p className="text-[14px] font-medium mb-1">Master Freeze · Sydney, NSW</p>
-          <p className="text-[12px] text-white/50 mb-5">Refrigerant leak enquiry · Inbound call</p>
-          <audio controls preload="metadata" className="w-full" style={{ filter: 'invert(0.85)' }}>
-            <source src="/steve-demo.wav" type="audio/wav" />
-          </audio>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ─── Pricing teaser ───────────────────────────────────────────────── */
+/* ─── Pricing — confident process statement, no numbers, no menu ───── */
 
 function Pricing() {
-  const models = [
-    { tag: 'Fixed quote', desc: 'For defined builds — websites, voice agents, dashboards, custom systems.' },
-    { tag: 'Hourly', desc: 'For small fixes, content edits, tune-ups on a live system.' },
-    { tag: 'Monthly retainer', desc: 'For ongoing systems — hosting, monitoring, prompt updates.' },
+  const promises = [
+    { tag: 'No hourly creep', body: "Fixed quote up front. If it comes in under, the price still stays the same — I just say so." },
+    { tag: 'No lock-in',      body: "Month-to-month on retainers. Cancel anytime. Builds pay on delivery, not on signing." },
+    { tag: 'No agency overhead', body: "Direct line to me — the person building it. No sales rep, no account manager, no junior team." },
   ]
 
   return (
-    <section className="bg-cream-alt border-y border-line">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 mb-12 reveal">
-          <div>
-            <Eyebrow>Pricing</Eyebrow>
-            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Priced on scope. <span className="serif-em text-green-deep">Not on a menu.</span>
+    <section className="bg-cream-alt">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 mb-16 md:mb-20">
+          <div className="lg:col-span-7">
+            <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+              <span className="w-8 h-px bg-ink" />
+              <span>Pricing</span>
+            </div>
+            <h2
+              className="font-display text-ink"
+              style={{
+                fontSize: 'var(--text-display-md)',
+                lineHeight: 0.95,
+                letterSpacing: '-0.04em',
+                fontWeight: 800,
+              }}
+            >
+              Every project starts with a free 30-minute call.
             </h2>
           </div>
-          <p className="text-[16px] md:text-[17px] text-muted leading-[1.65] max-w-[58ch] pt-2">
-            Every business needs something different — so every quote starts with a 30-minute scoping call.
-            You get one fixed number and a real timeline. Three pricing models, depending on the work.
+          <p className="lg:col-span-5 text-[17px] md:text-[19px] text-ink-soft leading-[1.55] max-w-[44ch] pt-2 self-end">
+            You walk me through the bottleneck. I walk you through what I&rsquo;d build,
+            what it would cost, and how long it would take. You leave with a fixed quote
+            &mdash; or a clear no.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 reveal">
-          {models.map((m, i) => (
-            <div key={m.tag} className="bg-cream rounded-3xl p-8 border border-line lift">
-              <div className="flex items-center gap-2 mb-7">
-                <span className="font-mono text-[11px] text-muted">0{i + 1}</span>
+        {/* Three promises — editorial directory rows, no $ amounts */}
+        <div className="border-t border-line">
+          {promises.map((p, i) => (
+            <div
+              key={p.tag}
+              className="grid grid-cols-1 md:grid-cols-[200px_1fr] items-baseline gap-4 md:gap-10 py-7 md:py-9 border-b border-line"
+            >
+              <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+                <span>0{i + 1}</span>
                 <span className="w-1 h-1 rounded-full bg-green-deep" />
-                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{m.tag}</span>
+                <span>{p.tag}</span>
               </div>
-              <p className="text-[15px] text-ink-soft leading-[1.6]">{m.desc}</p>
+              <p className="text-[16px] md:text-[18px] text-ink leading-[1.55] max-w-[64ch]">
+                {p.body}
+              </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-          <span>· Fixed quotes</span>
-          <span>· No lock-in</span>
-          <span>· No agency overhead</span>
-          <Link href="/pricing" className="text-ink hover:text-green-deep transition ml-auto">
-            How we price →
+        {/* CTAs */}
+        <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Link
+            href="/contact"
+            data-magnetic
+            className="bg-ink text-cream px-6 py-3.5 rounded-full text-[15px] font-semibold inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
+          >
+            Book a free 30-min call <span aria-hidden>&rarr;</span>
+          </Link>
+          <Link href="/pricing" data-magnetic className="text-[14px] font-medium text-ink hover:text-green-deep transition">
+            How we price &rarr;
           </Link>
         </div>
       </div>
@@ -276,35 +93,50 @@ function Pricing() {
   )
 }
 
-/* ─── Final CTA ─────────────────────────────────────────────────────── */
+/* ─── Final CTA — editorial closing statement ───────────────────────── */
 
 function FinalCTA() {
   return (
-    <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto reveal">
-      <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
-        <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
+    <section className="bg-ink text-cream relative overflow-hidden">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-40 md:py-52">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+          {/* Left: closing statement */}
+          <div className="lg:col-span-7">
+            <h2
+              className="font-display text-cream"
+              style={{
+                fontSize: 'var(--text-display-md)',
+                lineHeight: 0.95,
+                letterSpacing: '-0.04em',
+                fontWeight: 800,
+              }}
+            >
+              Tell me what&rsquo;s slow.
+              <br />
+              I&rsquo;ll show you what I&rsquo;d build.
+            </h2>
 
-        <div className="relative">
-          <Eyebrow color="white" center>Ready when you are</Eyebrow>
-          <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch] mx-auto">
-            Stop running the admin yourself. <span className="serif-em text-green">We&apos;ll build it for you.</span>
-          </h2>
-          <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[52ch] mx-auto">
-            30-minute call, no pitch. We&apos;ll scope what you actually need, then quote it.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
+            <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">
+              30-minute call. No deck, no pitch. You walk me through the bottleneck;
+              I tell you whether it&rsquo;s worth building, what it would cost, and how long it would take.
+            </p>
+          </div>
+
+          {/* Right: single CTA + founder note */}
+          <div className="lg:col-span-5 flex flex-col gap-6 lg:items-end">
             <Link
               href="/contact"
+              data-magnetic
               className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
             >
-              Get in touch <span aria-hidden>→</span>
+              Book a 30-min call <span aria-hidden>→</span>
             </Link>
-            <Link
-              href="/industries"
-              className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
-            >
-              Industry examples
-            </Link>
+
+            <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
+              Will Herbert &middot; Adelaide
+              <br />
+              hello@herbert-aisolutions.com
+            </div>
           </div>
         </div>
       </div>

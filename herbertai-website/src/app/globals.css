@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* tradie-tech preset */
+  /* ─── palette ─────────────────────────────────────────────────── */
   --color-cream: #F5F0E5;
   --color-cream-alt: #EFE9DC;
   --color-ink: #0A0A0A;
@@ -11,9 +11,29 @@
   --color-green: #00FF88;
   --color-green-deep: #00D924;
 
+  /* ─── type families ───────────────────────────────────────────── */
   --font-sans: var(--font-geist), -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
   --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-display: var(--font-bricolage), Bricolage Grotesque, -apple-system, sans-serif;
+
+  /* ─── display type scale (clamp-driven, for art-direction hero/sections) */
+  --text-display-xl: clamp(96px, 14vw, 280px);
+  --text-display-xl--line-height: 0.88;
+  --text-display-xl--letter-spacing: -0.05em;
+
+  --text-display-lg: clamp(64px, 8vw, 160px);
+  --text-display-lg--line-height: 0.92;
+  --text-display-lg--letter-spacing: -0.04em;
+
+  --text-display-md: clamp(40px, 5vw, 96px);
+  --text-display-md--line-height: 0.96;
+  --text-display-md--letter-spacing: -0.035em;
+
+  /* ─── radius scale ────────────────────────────────────────────── */
+  --radius-none: 0px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
 }
 
 :root {
@@ -28,7 +48,13 @@ body {
   font-family: var(--font-geist), -apple-system, sans-serif;
 }
 
-/* italic serif emphasis inside headlines */
+/* ─── display-face utility (use on hero + section openers) ─────── */
+.font-display {
+  font-family: var(--font-bricolage), -apple-system, sans-serif;
+  font-weight: 800;
+}
+
+/* italic serif emphasis inside headlines — USE SPARINGLY, once per page max */
 .serif-em {
   font-family: var(--font-instrument-serif), Georgia, serif;
   font-style: italic;
@@ -40,15 +66,29 @@ body {
 @keyframes hi-pulse { 0%, 100% { opacity: 1 } 50% { opacity: .35 } }
 .hi-pulse { animation: hi-pulse 1.6s infinite; }
 
-/* hero green glow blob */
+/* chat typing indicator dots — staggered via inline animation-delay */
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-3px); opacity: 1; }
+}
+.typing-dot { animation: typing-bounce 1.2s infinite ease-in-out; display: inline-block; }
+
+/* hero green glow blob (legacy — phased out by art-direction motion pieces) */
 .hero-blob {
   background: radial-gradient(circle, var(--green-glow), transparent 60%);
 }
 
+/* ─── magnetic cursor hides the system cursor on hover-capable devices ── */
+@media (hover: hover) and (pointer: fine) {
+  body.magnetic-cursor-active,
+  body.magnetic-cursor-active * {
+    cursor: none !important;
+  }
+}
+
 /* ─────────────────────────────────────────────────────────────
-   Scroll-triggered reveals
-   Progressive enhancement: Chrome/Edge get fade+rise on scroll;
-   Safari/Firefox just see the content (no harm).
+   Scroll-triggered reveals (CSS view-timeline progressive enhancement)
+   Chrome/Edge get fade+rise on scroll; Safari/Firefox just see the content.
    ───────────────────────────────────────────────────────────── */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
@@ -120,4 +160,16 @@ body {
   line-height: 0.85;
   margin: 0.05em 0.12em 0 -0.02em;
   color: var(--color-green-deep);
+}
+
+/* ─── prefers-reduced-motion: kill all motion-driven decoration ────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hi-pulse { animation: none !important; opacity: 1 !important; }
+  .typing-dot { animation: none !important; opacity: 0.6 !important; transform: none !important; }
 }

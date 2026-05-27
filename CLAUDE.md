@@ -3,11 +3,42 @@
 # Herbert AI — Claude Code Context
 
 ## What this is
-Herbert AI is Will Herbert's sole-trader AI services business targeting Adelaide trades and SMBs. Core product: AI voice receptionist that answers calls 24/7, qualifies jobs, books into AroFlo, and sends SMS confirmations.
+Herbert AI has repositioned as an **automation & growth studio for SMBs** (target audience: 5–30 staff, ops/marketing leads who already get automation). Core products: AI voice receptionist, custom dashboards, web/automation work, ads/SEO.
 
-**Repo:** github.com/herbyxo/Business-Webpage  
-**Live site:** herbert-aisolutions.com  
+**Repo:** github.com/herbyxo/herbert-ai-website
+**Live site:** herbert-aisolutions.com
 **Deploy:** Vercel — auto-deploys `main`, preview URL for every branch
+
+---
+
+## 🚧 Active redesign — read these BEFORE making any design changes
+
+A full art-directed homepage rebuild is in progress on branch **`preview/art-direction-homepage`**. The site has moved off the warm-trade register (white/gray-50/black CTA) and onto an art-directed studio register (cream + ink + neon green, Bricolage Grotesque display + Geist, magnetic cursor, scroll storytelling).
+
+**Source of truth — read in this order before touching anything visual:**
+1. `herbertai-website/docs/design/CHARTER.md` — locked register, palette, type system, signature interactions, anti-references
+2. `herbertai-website/docs/design/PLAN.md` — phase-by-phase work order, asset list, locked hero copy, what's in/out of scope
+
+**Where the build is up to (8 phases total):**
+- ✅ Phase 0 — Foundation (Framer Motion + Lenis + Bricolage, motion primitives, type/radius/spacing tokens)
+- ✅ Phase 1 — Header rebuild (magnetic links, fullscreen mobile overlay)
+- ✅ Phase 2 — Hero (3-line stacked manifesto with green flood, no stat row, founder note + question-prompt 2nd CTA)
+- ✅ Phase 3 — GROW chapter (4 mockups: paid ad / SEO ranking / SMS funnel / analytics, with ghosted 01-04 indices)
+- ⏭ Phase 4 — AUTOMATE chapter (voice agent transcript, n8n flow, chatbot conversation)
+- ⏭ Phase 5 — BUILD chapter (dashboard, booking flow, admin panel)
+- ⏭ Phase 6 — Footer + final CTA rebuild
+- ⏭ Phase 7 — Polish + ship checklist + merge to main
+
+**Locked hero copy** (don't rewrite without explicit ask):
+```
+Less admin.
+More money.        ← green flood / accent
+Built to run itself.
+```
+Sub-line: *"Adelaide-based automation & growth studio. Custom-built, shipped in weeks."*
+Founder note: *"Hi — I'm Will. Tell me where the friction is, I'll show you what I'd build."*
+
+**The "Legacy conventions" section below describes the OLD warm-trade register and is being phased out.** Do not follow it for new work. CHARTER.md supersedes everything below.
 
 ---
 
@@ -46,7 +77,7 @@ public/
 
 ---
 
-## Conventions — follow these exactly
+## Legacy conventions (being phased out — see CHARTER.md instead)
 
 **Color palette:**
 - Background: `bg-white` or `bg-gray-50`
