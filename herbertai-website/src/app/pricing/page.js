@@ -78,10 +78,94 @@ export default function Pricing() {
           <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
             Priced on scope. <span className="serif-em text-green-deep">Not on a menu.</span>
           </h1>
-          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            Every business needs something different — so every quote starts with a 30-minute scoping
-            call. You get one fixed number and a real timeline. No hourly creep, no lock-in, no agency overhead.
+          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch] mb-9">
+            Every business needs something different &mdash; so every quote starts with a free 30-minute scoping
+            call. You walk away with a fixed quote and timeline, or a clear no. No hourly creep, no lock-in, no agency overhead.
           </p>
+          <Link
+            href="/contact"
+            data-magnetic
+            className="bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
+          >
+            Book a free 30-min call <span aria-hidden>&rarr;</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Typical range — horizontal scale */}
+      <section className="bg-cream border-y border-line">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+          <div className="max-w-[44ch] mb-14">
+            <Eyebrow>What it usually costs</Eyebrow>
+            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
+              Most projects fall between <span className="serif-em text-green-deep">$1k and $15k.</span>
+            </h2>
+          </div>
+
+          {/* Scale */}
+          <div className="relative">
+            {/* The connecting line (desktop only) */}
+            <div className="hidden md:block absolute top-[10px] left-0 right-0 h-px bg-ink/15" aria-hidden />
+
+            <div className="grid md:grid-cols-3 gap-10 md:gap-0 relative">
+              {[
+                {
+                  range: '$1k  →  $3k',
+                  title: 'Small fix · tune-up',
+                  body: 'A few hours of work. Site edits, a single page added, prompt tuning on a live voice agent, a one-off workflow.',
+                },
+                {
+                  range: '$3k  →  $10k',
+                  title: 'Productised pattern',
+                  body: 'A new website. A voice agent build with custom prompt. A chatbot widget. A defined automation workflow.',
+                  highlight: true,
+                },
+                {
+                  range: '$10k  →  $25k+',
+                  title: 'Full custom build',
+                  body: 'Operator console with bookings, customers, reports. Bespoke booking system. Multi-system integration.',
+                },
+              ].map((t, i) => (
+                <div
+                  key={t.title}
+                  className={`relative ${i === 0 ? 'md:pr-8' : i === 1 ? 'md:px-8 md:border-x md:border-line/0' : 'md:pl-8'}`}
+                >
+                  {/* Marker dot — sits on the line */}
+                  <div
+                    aria-hidden
+                    className={`hidden md:block absolute top-[6px] left-0 w-[10px] h-[10px] rounded-full ${
+                      t.highlight ? 'bg-green-deep ring-4 ring-green/15' : 'bg-ink'
+                    } z-10`}
+                  />
+
+                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted mb-8 md:pl-5">
+                    {t.range}
+                  </div>
+                  <div className="md:pl-5">
+                    <h3 className="text-[20px] font-medium tracking-[-0.01em] text-ink mb-2">
+                      {t.title}
+                      {t.highlight && (
+                        <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.16em] text-green-deep align-middle">
+                          most common
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-[14px] text-muted leading-[1.6] max-w-[34ch]">
+                      {t.body}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Retainer note */}
+          <div className="mt-14 pt-6 border-t border-line flex flex-wrap items-baseline gap-x-6 gap-y-2">
+            <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">Retainers</div>
+            <div className="text-[15px] text-ink-soft">
+              From <span className="font-semibold text-ink">$150/mo</span> for ongoing systems &mdash; hosting, monitoring, prompt updates, content changes. Cancel anytime.
+            </div>
+          </div>
         </div>
       </section>
 
@@ -186,20 +270,26 @@ export default function Pricing() {
         <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
           <div className="relative">
-            <Eyebrow color="white" center>Ready to get a quote?</Eyebrow>
-            <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch] mx-auto">
-              30-minute call, <span className="serif-em text-green">no pitch.</span>
+            <Eyebrow color="white" center>Free scoping call</Eyebrow>
+            <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[22ch] mx-auto">
+              30 minutes. <span className="serif-em text-green">No deck, no pitch.</span>
             </h2>
-            <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[52ch] mx-auto">
-              Tell me what&apos;s slow, what&apos;s broken, or what doesn&apos;t exist yet.
-              You&apos;ll have a fixed quote and timeline within a day.
+            <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[54ch] mx-auto">
+              You walk me through the bottleneck. I walk you through what I&apos;d build, what it would cost,
+              and how long it would take. You leave with a fixed quote &mdash; or a clear no.
             </p>
-            <Link
-              href="/contact"
-              className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
-            >
-              Book a free demo <span aria-hidden>→</span>
-            </Link>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 justify-center">
+              <Link
+                href="/contact"
+                data-magnetic
+                className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+              >
+                Book a free 30-min call <span aria-hidden>&rarr;</span>
+              </Link>
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/45">
+                Fixed quote within 24 hours
+              </span>
+            </div>
           </div>
         </div>
       </section>
