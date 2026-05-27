@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'About Will Herbert',
+  description:
+    'Will Herbert runs Herbert AI — a solo automation & growth studio in Adelaide, building bespoke systems for small business. Direct line to the builder, no agency overhead.',
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Will Herbert · Herbert AI',
+    description:
+      'Solo automation & growth studio in Adelaide. Direct line to the builder.',
+    url: '/about',
+  },
+}
+
 const capabilities = [
   {
     tag: 'Not enough customers',
@@ -40,7 +53,7 @@ const recent = [
   {
     tag: 'Hospitality · Adelaide',
     name: 'Blendz By Ben',
-    body: 'Full-stack rebuild — Next.js site, owner dashboard, booking flow, SMS + email automation. Replaced Squarespace + Insta-DM bookings.',
+    body: 'Full-stack rebuild — custom site, owner dashboard, booking flow, SMS + email automation. Replaced a generic Setmore booking page on someone else’s domain.',
     href: 'https://blendzbyben.com',
     external: true,
   },
@@ -187,7 +200,7 @@ export default function About() {
                 href={r.href}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block"
+                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block lift"
               >
                 {inner}
               </a>
@@ -195,7 +208,7 @@ export default function About() {
               <Link
                 key={r.name}
                 href={r.href}
-                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block"
+                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block lift"
               >
                 {inner}
               </Link>
@@ -243,6 +256,7 @@ function Eyebrow({ children, color = 'ink', center }) {
     <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
+      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }

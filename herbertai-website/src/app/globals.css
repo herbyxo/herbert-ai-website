@@ -86,6 +86,82 @@ body {
   }
 }
 
+/* ─────────────────────────────────────────────────────────────
+   Scroll-triggered reveals (CSS view-timeline progressive enhancement)
+   Chrome/Edge get fade+rise on scroll; Safari/Firefox just see the content.
+   ───────────────────────────────────────────────────────────── */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
+    .reveal-slow {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 35%;
+    }
+  }
+}
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card hover-lift — restrained, ~Linear cadence */
+.lift {
+  transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              border-color 320ms ease,
+              box-shadow 320ms ease;
+}
+.lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px -16px rgba(10, 10, 10, 0.18);
+}
+
+/* Accessible focus rings — site-wide */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+/* On dark surfaces, switch to green ring for visibility */
+.bg-ink :focus-visible,
+.bg-ink-soft :focus-visible {
+  outline-color: var(--color-green);
+}
+/* Skip-link — hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1000;
+  transition: top 200ms ease;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+  outline-color: var(--color-green);
+}
+
+/* Drop cap for editorial body copy */
+.drop-cap::first-letter {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  float: left;
+  font-size: 4.4em;
+  line-height: 0.85;
+  margin: 0.05em 0.12em 0 -0.02em;
+  color: var(--color-green-deep);
+}
+
 /* ─── prefers-reduced-motion: kill all motion-driven decoration ────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

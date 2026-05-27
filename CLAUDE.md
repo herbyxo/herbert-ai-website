@@ -1,4 +1,4 @@
-@C:\Files\Claude\memory\project_herbert-ai.md
+@C:\Files\Claude\claude-skills\herbertai\SKILL.md
 
 # Herbert AI — Claude Code Context
 

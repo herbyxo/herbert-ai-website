@@ -31,8 +31,8 @@ const buckets = [
     services: [
       { tag: 'Voice', title: 'AI voice agents', body: 'A 24/7 receptionist. Custom prompt per business. Qualifies, books, SMSs confirmations.', hasDemo: true },
       { tag: 'Chat', title: 'AI chatbot widget', body: 'Site widget trained on your business. Captures leads, answers questions, books through chat.' },
-      { tag: 'Workflows', title: 'n8n workflow automation', body: 'Tool-to-tool stitching. AroFlo, CRM, Calendar, Gmail, SMS — all talking to each other.' },
-      { tag: 'Agents', title: 'Custom AI agents', body: 'RAG over your docs, internal assistants, doc generators. Beyond receptionists.' },
+      { tag: 'Workflows', title: 'Workflow automation', body: 'Tool-to-tool stitching. AroFlo, CRM, Calendar, Gmail, SMS — all talking to each other. Built in n8n.' },
+      { tag: 'Agents', title: 'Custom AI agents', body: 'AI agents trained on your business — answer staff questions from your docs, draft proposals, run internal tasks. Beyond receptionists.' },
       { tag: 'CRM', title: 'CRM setup + automation', body: 'HubSpot or Pipedrive setup, pipeline, follow-up rules, lead routing. Wired to the rest of your stack.' },
       { tag: 'Booking', title: 'Booking + calendar', body: 'Custom booking flows, deposit handling, calendar sync, SMS reminders, no-show recovery.' },
       { tag: 'Alerts', title: 'Internal alerts + ops', body: 'Slack or SMS triggers on key events. Big lead came in? Contract signed? You know instantly.' },
@@ -42,16 +42,16 @@ const buckets = [
     id: 'build',
     label: 'Build',
     headline: 'Custom software for your business.',
-    body: 'Websites, dashboards, internal tools — bespoke Next.js + Supabase builds. Yours to keep, no platform lock-in.',
+    body: 'Websites, dashboards, internal tools — bespoke custom builds. Yours to keep, no platform lock-in.',
     accent: '#E8B96A',
     demo: 'web',
     services: [
-      { tag: 'Web', title: 'Marketing websites', body: 'Custom Next.js sites, no template. Mobile-first, fast, hosted on Vercel.', hasDemo: true },
-      { tag: 'Dashboard', title: 'Custom dashboards', body: 'Admin panels, customer DBs, owner consoles. Magic-link auth on Supabase.' },
-      { tag: 'Portals', title: 'Customer portals', body: 'Login + see your bookings, files, account, history. Magic-link or phone-based auth.' },
+      { tag: 'Web', title: 'Marketing websites', body: 'Custom-coded sites, no template. Mobile-first, fast, modern hosting.', hasDemo: true },
+      { tag: 'Dashboard', title: 'Custom dashboards', body: 'Admin panels, customer database, owner consoles. Secure email-link login — no passwords to remember.' },
+      { tag: 'Portals', title: 'Customer portals', body: 'Customers log in to see their bookings, files, and history. Email-link or phone-number sign-in — no passwords.' },
       { tag: 'Booking', title: 'Custom booking systems', body: 'Fully bespoke — not Calendly with a logo. Service selection, deposits, calendar sync.' },
       { tag: 'Commerce', title: 'E-commerce setups', body: 'Shopify customisation, Stripe checkouts, custom storefronts where Shopify isn’t the right fit.' },
-      { tag: 'PWA', title: 'Progressive web apps', body: 'Install-to-home-screen, push notifications, offline-capable. Faster than mobile apps to ship.' },
+      { tag: 'App-style', title: 'Phone-installable web apps', body: 'Sit on the home screen like an app, send push notifications, work offline. Faster and cheaper to ship than a real mobile app.' },
     ],
   },
 ]
@@ -152,18 +152,19 @@ export default function Services() {
         </section>
       ))}
 
-      {/* Bundle CTA */}
+      {/* Pricing teaser */}
       <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
         <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 relative overflow-hidden">
           <div className="hero-blob absolute top-[-200px] right-[-100px] w-[500px] h-[500px] pointer-events-none" />
           <div className="relative grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-end">
             <div>
-              <Eyebrow color="white">Productised bundle</Eyebrow>
+              <Eyebrow color="white">Pricing</Eyebrow>
               <h2 className="text-[36px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[20ch]">
-                Voice + web + chat — <span className="serif-em text-green">$697/month.</span>
+                Priced on scope. <span className="serif-em text-green">Not on a menu.</span>
               </h2>
               <p className="text-white/70 text-[17px] leading-[1.6] max-w-[52ch] mb-3">
-                The three productised systems bundled and running as one stack. Save $294/month versus buying separately, no setup fees.
+                Every project quoted on scope — fixed price, fixed timeline. Three pricing
+                models depending on the work: fixed quote, hourly, or monthly retainer.
               </p>
             </div>
             <div className="flex flex-col gap-3">
@@ -171,13 +172,13 @@ export default function Services() {
                 href="/pricing"
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
-                See bundle pricing <span aria-hidden>→</span>
+                How we price <span aria-hidden>→</span>
               </Link>
               <Link
                 href="/contact"
                 className="text-white px-6 py-3.5 rounded-full font-medium text-[15px] inline-flex items-center justify-between gap-2 border border-white/20 hover:border-white/50 transition-colors"
               >
-                Talk to Will <span aria-hidden>→</span>
+                Get a quote <span aria-hidden>→</span>
               </Link>
             </div>
           </div>
@@ -293,10 +294,10 @@ function WebDemo({ shots, onOpen }) {
       <div className="max-w-[44ch] mb-8">
         <Eyebrow>Example · design</Eyebrow>
         <h3 className="text-[24px] md:text-[28px] font-medium tracking-[-0.01em] text-ink mb-3">
-          Editorial real estate <span className="serif-em text-green-deep">mockup.</span>
+          Editorial real estate <span className="serif-em text-green-deep">concept.</span>
         </h3>
         <p className="text-[14px] text-muted leading-[1.6]">
-          Concept design for a premium Adelaide real estate brand. Click any thumbnail to view.
+          Concept design for a premium London real estate brand. Click any thumbnail to view.
         </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -330,6 +331,7 @@ function Eyebrow({ children, color = 'ink', center }) {
     <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
+      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }

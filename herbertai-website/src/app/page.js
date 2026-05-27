@@ -41,7 +41,7 @@ function HowItWorks() {
   ]
 
   return (
-    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 reveal">
       <div>
         <Eyebrow>How we work</Eyebrow>
         <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
@@ -82,7 +82,7 @@ function Services() {
     {
       tag: 'Build',
       title: 'Custom software, yours to keep.',
-      body: 'Websites, dashboards, customer portals, booking systems. Bespoke Next.js + Supabase builds — no platform lock-in.',
+      body: 'Websites, dashboards, customer portals, booking systems. Bespoke custom builds — no platform lock-in.',
       href: '/services#build',
     },
   ]
@@ -90,7 +90,7 @@ function Services() {
   return (
     <section className="bg-cream-alt border-y border-line">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 reveal">
           <div className="max-w-[36ch]">
             <Eyebrow>What we build</Eyebrow>
             <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
@@ -102,21 +102,29 @@ function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {items.map((item) => (
+        {/* Editorial directory rows instead of card grid */}
+        <div className="border-t border-line">
+          {items.map((item, i) => (
             <Link
               key={item.tag}
               href={item.href}
-              className="group bg-cream rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors"
+              className="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[120px_1fr_auto] items-baseline gap-6 md:gap-10 py-8 md:py-12 border-b border-line hover:bg-cream/60 transition-colors reveal"
             >
-              <div className="flex items-center gap-2 mb-7">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+              <div className="flex items-center gap-2 md:pt-2">
+                <span className="font-mono text-[11px] text-muted">0{i + 1}</span>
+                <span className="w-1 h-1 rounded-full bg-green-deep" />
                 <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{item.tag}</span>
               </div>
-              <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{item.title}</h3>
-              <p className="text-[15px] text-muted leading-[1.6] mb-8">{item.body}</p>
-              <span className="inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-2.5 transition-all">
-                See {item.tag.toLowerCase()} services <span aria-hidden>→</span>
+              <div className="max-w-[60ch]">
+                <h3 className="text-[28px] md:text-[40px] font-medium tracking-[-0.025em] leading-[1.1] mb-3 text-ink">
+                  {item.title.split(/(\.)$/)[0]}
+                  <span className="serif-em text-green-deep">.</span>
+                </h3>
+                <p className="text-[15px] md:text-[16px] text-muted leading-[1.6]">{item.body}</p>
+              </div>
+              <span className="self-center inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-3 transition-all whitespace-nowrap">
+                <span className="hidden md:inline">See {item.tag.toLowerCase()}</span>
+                <span aria-hidden>→</span>
               </span>
             </Link>
           ))}
@@ -129,53 +137,51 @@ function Services() {
 /* ─── Pricing teaser ───────────────────────────────────────────────── */
 
 function Pricing() {
+  const models = [
+    { tag: 'Fixed quote', desc: 'For defined builds — websites, voice agents, dashboards, custom systems.' },
+    { tag: 'Hourly', desc: 'For small fixes, content edits, tune-ups on a live system.' },
+    { tag: 'Monthly retainer', desc: 'For ongoing systems — hosting, monitoring, prompt updates.' },
+  ]
+
   return (
     <section className="bg-cream-alt border-y border-line">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="max-w-[42ch] mb-16">
-          <Eyebrow>Pricing</Eyebrow>
-          <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-            Honest pricing. <span className="serif-em text-green-deep">No lock-in.</span>
-          </h2>
+        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 mb-12 reveal">
+          <div>
+            <Eyebrow>Pricing</Eyebrow>
+            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
+              Priced on scope. <span className="serif-em text-green-deep">Not on a menu.</span>
+            </h2>
+          </div>
+          <p className="text-[16px] md:text-[17px] text-muted leading-[1.65] max-w-[58ch] pt-2">
+            Every business needs something different — so every quote starts with a 30-minute scoping call.
+            You get one fixed number and a real timeline. Three pricing models, depending on the work.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <PriceCard tag="Voice" name="AI Voice Agent" price="$297" suffix="/month" />
-          <PriceCard tag="Web" name="Website + Hosting" price="$300" suffix=" setup" body="$197 / month hosting + maintenance" />
-          <PriceCard tag="Chat" name="AI Chatbot Widget" price="$197" suffix="/month" />
-          <PriceCard tag="Bundle" name="All three, together" price="$697" suffix="/month" body="Save $294 / month vs separate" dark />
+        <div className="grid md:grid-cols-3 gap-5 reveal">
+          {models.map((m, i) => (
+            <div key={m.tag} className="bg-cream rounded-3xl p-8 border border-line lift">
+              <div className="flex items-center gap-2 mb-7">
+                <span className="font-mono text-[11px] text-muted">0{i + 1}</span>
+                <span className="w-1 h-1 rounded-full bg-green-deep" />
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{m.tag}</span>
+              </div>
+              <p className="text-[15px] text-ink-soft leading-[1.6]">{m.desc}</p>
+            </div>
+          ))}
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-          <span>· 14-day free trial</span>
-          <span>· Cancel anytime</span>
-          <span>· No setup pressure</span>
+          <span>· Fixed quotes</span>
+          <span>· No lock-in</span>
+          <span>· No agency overhead</span>
           <Link href="/pricing" className="text-ink hover:text-green-deep transition ml-auto">
-            Full pricing →
+            How we price →
           </Link>
         </div>
       </div>
     </section>
-  )
-}
-
-function PriceCard({ tag, name, price, suffix, body, dark }) {
-  return (
-    <div className={`rounded-3xl p-7 border ${dark ? 'bg-ink text-white border-ink' : 'bg-cream border-line'}`}>
-      <div className="flex items-center gap-2 mb-7">
-        <span className={`w-1.5 h-1.5 rounded-full ${dark ? 'bg-green' : 'bg-green-deep'}`} />
-        <span className={`font-mono text-[11px] uppercase tracking-[0.18em] ${dark ? 'text-white/55' : 'text-muted'}`}>{tag}</span>
-        {dark && (
-          <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.16em] text-green">Most popular</span>
-        )}
-      </div>
-      <h3 className={`text-[20px] font-medium tracking-[-0.01em] mb-2 ${dark ? 'text-white' : 'text-ink'}`}>{name}</h3>
-      <div className="flex items-baseline gap-1 mb-2">
-        <span className={`text-[40px] font-medium tracking-[-0.03em] ${dark ? 'text-white' : 'text-ink'}`}>{price}</span>
-        <span className={`text-[14px] ${dark ? 'text-white/60' : 'text-muted'}`}>{suffix}</span>
-      </div>
-      {body && <p className={`text-[13px] ${dark ? 'text-green' : 'text-muted'}`}>{body}</p>}
-    </div>
   )
 }
 
@@ -244,6 +250,7 @@ function Eyebrow({ children, color = 'ink', pulse, center }) {
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {pulse && <span className="w-1.5 h-1.5 rounded-full bg-green hi-pulse" />}
       {children}
+      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }

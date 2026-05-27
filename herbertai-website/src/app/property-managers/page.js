@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Property Manager AI — automated maintenance intake',
+  description:
+    'AI tenant intake on your number. Maintenance requests captured, logged, and approved in one click. Tradie booking automated end-to-end. Portfolio-based pricing from $99/month.',
+  alternates: { canonical: '/property-managers' },
+  openGraph: {
+    title: 'Property Manager AI · Herbert AI',
+    description:
+      'Tenants call, AI logs the request, you approve in one click, tradie gets booked. From $99/month.',
+    url: '/property-managers',
+  },
+}
+
 const problems = [
   {
     tag: 'Interruptions',
@@ -338,6 +351,7 @@ function Eyebrow({ children, color = 'ink', center }) {
     <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
+      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }

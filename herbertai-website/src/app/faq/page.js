@@ -1,5 +1,18 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'FAQ',
+  description:
+    'Common questions about Herbert AI — what we build, project timelines, AI voice agent realism, custom vs productised pricing, customisation, contracts, ownership, and getting started.',
+  alternates: { canonical: '/faq' },
+  openGraph: {
+    title: 'FAQ · Herbert AI',
+    description:
+      'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI actually goes.',
+    url: '/faq',
+  },
+}
+
 const faqs = [
   {
     q: 'What does Herbert AI do?',
@@ -115,6 +128,7 @@ function Eyebrow({ children, color = 'ink', center }) {
     <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
+      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }

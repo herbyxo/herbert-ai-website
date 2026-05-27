@@ -1,5 +1,17 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Contact',
+  description:
+    'Get in touch with Will at Herbert AI. 30-minute scoping call, no pitch. Email, phone, or book a Calendly call — usually replies within a day.',
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact · Herbert AI',
+    description: '30-minute scoping call, no pitch. Get in touch with Will directly.',
+    url: '/contact',
+  },
+}
+
 export default function Contact() {
   return (
     <>
@@ -40,7 +52,7 @@ export default function Contact() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted/60 focus:outline-none focus:border-ink/40 transition-colors"
+                  className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted focus:border-ink transition-colors"
                   placeholder="Missed calls, manual bookings, two tools that don't talk, no website at all..."
                 />
               </div>
@@ -57,7 +69,7 @@ export default function Contact() {
           {/* Info */}
           <div className="space-y-5">
             <InfoCard label="Email">
-              <a href="mailto:herbert_aisolutions@outlook.com" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors break-all">
+              <a href="mailto:herbert_aisolutions@outlook.com" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors break-words">
                 herbert_aisolutions@outlook.com
               </a>
             </InfoCard>
@@ -96,7 +108,7 @@ function Field({ id, label, type, placeholder, required }) {
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted/60 focus:outline-none focus:border-ink/40 transition-colors"
+        className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted focus:border-ink transition-colors"
       />
     </div>
   )
