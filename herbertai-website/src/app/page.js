@@ -30,7 +30,7 @@ function Pricing() {
 
   return (
     <section className="bg-cream-alt border-y border-line">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
@@ -38,7 +38,7 @@ function Pricing() {
               <span>Pricing</span>
             </div>
             <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Most projects between <span className="serif-em text-green-deep">$1k and $15k.</span>
+              Most projects between <span className="serif-em">$1k and $15k.</span>
             </h2>
           </div>
           <p className="text-[16px] md:text-[17px] text-muted leading-[1.65] max-w-[58ch] pt-2">
@@ -103,7 +103,7 @@ function Pricing() {
 function FinalCTA() {
   return (
     <section className="bg-ink text-cream relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-48">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-40 md:py-52">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
           {/* Left: closing statement */}
           <div className="lg:col-span-7">
@@ -123,7 +123,7 @@ function FinalCTA() {
             >
               Tell me what&rsquo;s slow.
               <br />
-              <span className="text-green">I&rsquo;ll show you</span> what I&rsquo;d build.
+              I&rsquo;ll show you what I&rsquo;d build.
             </h2>
 
             <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">

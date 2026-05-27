@@ -98,7 +98,7 @@ export default function Pricing() {
           <div className="max-w-[44ch] mb-14">
             <Eyebrow>What it usually costs</Eyebrow>
             <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Most projects fall between <span className="serif-em text-green-deep">$1k and $15k.</span>
+              Most projects fall between <span className="serif-em">$1k and $15k.</span>
             </h2>
           </div>
 
