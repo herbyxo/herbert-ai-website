@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import Hero from './components/Hero'
 import GrowChapter from './components/chapters/GrowChapter'
+import AutomateChapter from './components/chapters/AutomateChapter'
 
 export default function Home() {
   return (
     <>
       <Hero />
       <GrowChapter />
+      <AutomateChapter />
       <HowItWorks />
       <Services />
-      <Audio />
       <Pricing />
       <FinalCTA />
     </>
@@ -117,47 +118,6 @@ function Services() {
               </span>
             </Link>
           ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ─── Audio demo ───────────────────────────────────────────────────── */
-
-function Audio() {
-  return (
-    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-      <div className="bg-ink text-white rounded-[32px] p-8 md:p-16 grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center relative overflow-hidden">
-        <div className="hero-blob absolute bottom-[-160px] left-[-160px] w-[420px] h-[420px] pointer-events-none" />
-
-        <div className="relative">
-          <Eyebrow color="white" pulse>Real call · Master Freeze</Eyebrow>
-          <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] mb-5">
-            Hear one of our voice agents, <span className="serif-em text-green">unedited.</span>
-          </h2>
-          <p className="text-white/70 text-[16px] leading-[1.6] mb-8 max-w-[48ch]">
-            Real refrigerant-leak callout to Master Freeze. The agent qualified the job,
-            collected the details, and closed the call — zero human involvement.
-          </p>
-          <Link
-            href="/services#automate"
-            className="bg-green text-ink px-5 py-3 rounded-full font-semibold text-[14px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
-          >
-            See voice + automation <span aria-hidden>→</span>
-          </Link>
-        </div>
-
-        <div className="bg-white/5 border border-white/15 rounded-2xl p-6 relative">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-green hi-pulse" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/60">Live recording</span>
-          </div>
-          <p className="text-[14px] font-medium mb-1">Master Freeze · Sydney, NSW</p>
-          <p className="text-[12px] text-white/50 mb-5">Refrigerant leak enquiry · Inbound call</p>
-          <audio controls preload="metadata" className="w-full" style={{ filter: 'invert(0.85)' }}>
-            <source src="/steve-demo.wav" type="audio/wav" />
-          </audio>
         </div>
       </div>
     </section>
