@@ -1,11 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
 const EASE = [0.22, 1, 0.36, 1]
 
 export default function Hero() {
+  const reduced = useReducedMotion()
+  // Under reduce-motion, skip the initial state entirely so SSR opacity:0 doesn't
+  // become a stuck-invisible hero. `initial={false}` tells FM to start from animate.
+  const init = (y = 32) => (reduced ? false : { opacity: 0, y })
   return (
     <section className="bg-cream">
       <div className="max-w-[1280px] mx-auto min-h-screen flex flex-col px-6 lg:px-12 pt-16 md:pt-20 pb-12">
@@ -20,7 +24,7 @@ export default function Hero() {
           }}
         >
           <motion.span
-            initial={{ opacity: 0, y: 32 }}
+            initial={init(32)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.05, ease: EASE }}
             className="block"
@@ -29,15 +33,15 @@ export default function Hero() {
           </motion.span>
 
           <motion.span
-            initial={{ opacity: 0, y: 32 }}
+            initial={init(32)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.15, ease: EASE }}
             className="block relative w-fit"
           >
-            {/* Green flood — wipes left→right after text settles */}
+            {/* Green flood — wipes left→right after text settles (instant under reduce-motion) */}
             <motion.span
               aria-hidden
-              initial={{ scaleX: 0 }}
+              initial={reduced ? false : { scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.65, delay: 0.55, ease: [0.65, 0, 0.35, 1] }}
               className="absolute inset-0 bg-green origin-left -mx-2 md:-mx-3 -my-1 rounded-[2px]"
@@ -46,7 +50,7 @@ export default function Hero() {
           </motion.span>
 
           <motion.span
-            initial={{ opacity: 0, y: 32 }}
+            initial={init(32)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.25, ease: EASE }}
             className="block"
@@ -56,7 +60,7 @@ export default function Hero() {
         </h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={init(16)}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.85, ease: EASE }}
           className="mt-10 md:mt-12 text-[18px] md:text-[20px] text-muted leading-[1.5] max-w-[54ch]"
@@ -65,7 +69,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={init(16)}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 1.0, ease: EASE }}
           className="mt-10 md:mt-12 text-[15px] md:text-[16px] text-ink-soft leading-[1.55] max-w-[52ch]"
@@ -74,7 +78,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={init(16)}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 1.15, ease: EASE }}
           className="mt-6 md:mt-7 flex flex-wrap gap-3"
