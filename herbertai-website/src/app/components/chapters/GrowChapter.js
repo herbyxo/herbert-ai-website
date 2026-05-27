@@ -50,25 +50,17 @@ export default function GrowChapter() {
 
             <RevealOnScroll delay={0.3}>
               <p className="mt-6 text-[15px] md:text-[16px] text-muted leading-[1.6] max-w-[42ch]">
-                Custom ad campaigns. SEO that ranks. Landing pages that convert. Email and SMS funnels
-                that bring customers back. The systems that get more business through your door.
+                Paid ad campaigns. SEO that ranks you on page one. Automated SMS &mdash; reminders,
+                review requests, follow-ups. Conversion analytics so you know what&rsquo;s working &mdash;
+                and what isn&rsquo;t.
               </p>
             </RevealOnScroll>
           </div>
 
           {/* ─── Right: stacked mockups with parallax + rotation ─── */}
           <div className="lg:col-span-7 space-y-14 lg:space-y-16">
-            <motion.div style={{ y: y1 }} className="md:w-[88%] md:ml-auto">
+            <motion.div style={{ y: y1 }} className="md:w-[80%]">
               <RevealOnScroll>
-                <div className="rotate-[-1deg]">
-                  <MockupLabel>Customer review</MockupLabel>
-                  <MockGoogleReview />
-                </div>
-              </RevealOnScroll>
-            </motion.div>
-
-            <motion.div style={{ y: y2 }} className="md:w-[80%]">
-              <RevealOnScroll delay={0.1}>
                 <div className="rotate-[1.5deg]">
                   <MockupLabel>Paid ad campaign</MockupLabel>
                   <MockAdCreative />
@@ -76,10 +68,19 @@ export default function GrowChapter() {
               </RevealOnScroll>
             </motion.div>
 
+            <motion.div style={{ y: y2 }} className="md:w-[88%] md:ml-auto">
+              <RevealOnScroll delay={0.1}>
+                <div className="rotate-[-1deg]">
+                  <MockupLabel>SEO ranking</MockupLabel>
+                  <MockSEOResult />
+                </div>
+              </RevealOnScroll>
+            </motion.div>
+
             <motion.div style={{ y: y3 }} className="md:w-[70%] md:ml-auto md:mr-12">
               <RevealOnScroll delay={0.2}>
                 <div className="rotate-[-0.5deg]">
-                  <MockupLabel>Lead capture & SMS</MockupLabel>
+                  <MockupLabel>Automated SMS funnel</MockupLabel>
                   <MockSMSConversation />
                 </div>
               </RevealOnScroll>
@@ -110,26 +111,44 @@ function MockupLabel({ children }) {
   )
 }
 
-/* ─── Mock #1: Customer review ─────────────────────────────────── */
-function MockGoogleReview() {
+/* ─── Mock: SEO ranking (Google search result) ────────────────── */
+function MockSEOResult() {
   return (
-    <div className={`${CARD} p-6 max-w-md`}>
-      <div className="flex items-start gap-3 mb-4">
-        <div className="w-11 h-11 rounded-full bg-cream-alt flex items-center justify-center font-semibold text-ink text-[15px] shrink-0">
-          S
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="text-[14px] font-semibold text-ink">Sarah K.</div>
-          <div className="flex items-center gap-2 mt-1">
-            <div className="flex text-amber-500 text-[14px] leading-none">★★★★★</div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">2 weeks ago</span>
-          </div>
-        </div>
+    <div className={`${CARD} max-w-md overflow-hidden`}>
+      {/* Search bar */}
+      <div className="flex items-center gap-3 p-4 border-b border-line">
+        <svg className="w-4 h-4 text-muted shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+        </svg>
+        <div className="text-[14px] text-ink-soft flex-1">electrician adelaide</div>
+        <div className="text-[10px] text-muted font-mono uppercase tracking-[0.12em]">Search</div>
       </div>
-      <p className="text-[14px] text-ink-soft leading-[1.55]">
-        &ldquo;Loved the work they did. Calls answered around the clock, bookings up dramatically.
-        Honestly the best decision we made this year.&rdquo;
-      </p>
+      {/* Results meta */}
+      <div className="px-4 pt-3 text-[11px] text-muted">
+        About 487,000 results &middot; 0.41 seconds
+      </div>
+      {/* #1 organic result */}
+      <div className="p-4 pt-2">
+        <div className="flex items-center gap-1.5 text-[12px] text-muted mb-1">
+          <span className="w-4 h-4 rounded-full bg-cream-alt flex items-center justify-center text-[8px] font-bold text-ink shrink-0">A</span>
+          <span className="truncate">adelaideelectric.com.au</span>
+        </div>
+        <div className="text-[16px] md:text-[17px] font-medium text-ink leading-[1.25] mb-1.5 hover:underline cursor-default">
+          Adelaide Electric &mdash; 5★ Same-day sparkies | Free quotes
+        </div>
+        <div className="flex items-center gap-2 mb-2">
+          <div className="flex text-amber-500 text-[12px] leading-none">★★★★★</div>
+          <span className="text-[11px] text-muted">Rating: 4.9 &middot; 200 reviews</span>
+        </div>
+        <p className="text-[13px] text-ink-soft leading-[1.45]">
+          Trusted electricians serving Adelaide. Same-day service, no callout fee, 5★ rated by 200+ local homes&hellip;
+        </p>
+      </div>
+      {/* Ranking-change badge */}
+      <div className="bg-cream-alt px-4 py-2.5 flex items-center gap-2 border-t border-line">
+        <span className="text-green-deep text-[14px] leading-none" aria-hidden>↑</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-soft">Now #1 &mdash; up from page 2</span>
+      </div>
     </div>
   )
 }
@@ -181,46 +200,46 @@ function MockAdCreative() {
   )
 }
 
-/* ─── Mock #3: SMS conversation ────────────────────────────────── */
+/* ─── Mock: Automated SMS funnel (post-job review request) ────── */
 function MockSMSConversation() {
   return (
     <div className={`${CARD} p-6 max-w-sm`}>
       <div className="text-[10px] text-muted font-mono uppercase tracking-[0.16em] mb-5 text-center">
-        Today · 9:47am
+        Today &middot; After job completion
       </div>
       <div className="space-y-2.5">
+        {/* Automated review request from business */}
         <div className="flex">
-          <div className="bg-cream-alt rounded-2xl rounded-tl-md px-4 py-2.5 max-w-[85%]">
-            <p className="text-[14px] text-ink leading-[1.4]">
-              Hi, need a sparky for tomorrow morning if possible?
+          <div className="bg-cream-alt rounded-2xl rounded-tl-md px-4 py-3 max-w-[88%]">
+            <p className="text-[14px] text-ink leading-[1.45] mb-3">
+              Hi Sarah, hope everything was sorted today. If you&rsquo;ve got 30 seconds,
+              mind leaving us a quick review? Means a lot.
             </p>
+            <div className="bg-white border border-line rounded-lg px-3 py-2 flex items-center gap-2 text-[12px] text-ink font-medium">
+              <span className="text-amber-500 leading-none">★</span>
+              <span className="flex-1">Leave a review</span>
+              <span aria-hidden className="text-muted">↗</span>
+            </div>
           </div>
         </div>
+        {/* Customer reply */}
         <div className="flex justify-end">
           <div className="bg-green text-ink rounded-2xl rounded-tr-md px-4 py-2.5 max-w-[85%]">
             <p className="text-[14px] leading-[1.4]">
-              Booked you in for 9am Tue. Confirmation just sent through.
+              Just did &mdash; easy 5 stars.
             </p>
           </div>
         </div>
+        {/* Business reply */}
         <div className="flex">
-          <div className="bg-cream-alt rounded-2xl rounded-tl-md px-4 py-3 inline-flex items-center gap-1">
-            <Dot delay="0s" />
-            <Dot delay="0.2s" />
-            <Dot delay="0.4s" />
+          <div className="bg-cream-alt rounded-2xl rounded-tl-md px-4 py-2.5 max-w-[85%]">
+            <p className="text-[14px] text-ink leading-[1.4]">
+              Cheers Sarah, much appreciated.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  )
-}
-
-function Dot({ delay }) {
-  return (
-    <span
-      className="w-1.5 h-1.5 rounded-full bg-muted opacity-60"
-      style={{ animation: 'hi-pulse 1.4s infinite', animationDelay: delay }}
-    />
   )
 }
 
