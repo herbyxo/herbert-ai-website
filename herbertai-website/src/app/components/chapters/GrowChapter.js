@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import RevealOnScroll from '../motion/RevealOnScroll'
 
-const CARD = 'bg-white rounded-3xl border border-ink'
+const CARD = 'bg-white rounded-3xl border border-ink/25'
 
 export default function GrowChapter() {
   const ref = useRef(null)
