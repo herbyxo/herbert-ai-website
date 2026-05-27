@@ -42,8 +42,9 @@ export default function MagneticCursor() {
 
   const mouseX = useMotionValue(-100)
   const mouseY = useMotionValue(-100)
-  const cursorX = useSpring(mouseX, { damping: 28, stiffness: 320, mass: 0.4 })
-  const cursorY = useSpring(mouseY, { damping: 28, stiffness: 320, mass: 0.4 })
+  // tight, near-1:1 tracking — premium-feeling without jitter
+  const cursorX = useSpring(mouseX, { damping: 45, stiffness: 900, mass: 0.12 })
+  const cursorY = useSpring(mouseY, { damping: 45, stiffness: 900, mass: 0.12 })
 
   useEffect(() => {
     if (!enabled) return
