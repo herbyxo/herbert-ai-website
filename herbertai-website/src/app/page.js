@@ -11,8 +11,6 @@ export default function Home() {
       <GrowChapter />
       <AutomateChapter />
       <BuildChapter />
-      <HowItWorks />
-      <Services />
       <Pricing />
       <FinalCTA />
     </>
@@ -20,119 +18,6 @@ export default function Home() {
 }
 
 /* ─── How it works ──────────────────────────────────────────────────── */
-
-function HowItWorks() {
-  const steps = [
-    {
-      n: '01',
-      title: 'We talk',
-      body: '30-minute call. You explain the bottleneck — missed calls, manual bookings, follow-ups that fall through. We scope a fix that fits your scale.',
-    },
-    {
-      n: '02',
-      title: 'We build',
-      body: 'One to three weeks. Voice agent, custom dashboard, booking flow, or workflow glue — whatever the bottleneck calls for. You see progress as we ship.',
-    },
-    {
-      n: '03',
-      title: 'We hand it over',
-      body: 'Live system, plus a direct line for tweaks. No lock-in, no agency retainer, no 90-day onboarding.',
-    },
-  ]
-
-  return (
-    <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 reveal">
-      <div>
-        <Eyebrow>How we work</Eyebrow>
-        <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
-          Built for businesses that&apos;d rather <span className="serif-em text-green-deep">run</span> than tinker with their tools.
-        </h2>
-      </div>
-      <div className="grid gap-8 pt-1">
-        {steps.map((s) => (
-          <div key={s.n} className="flex gap-5">
-            <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{s.n}</span>
-            <div>
-              <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{s.title}</h3>
-              <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{s.body}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  )
-}
-
-/* ─── Services ─────────────────────────────────────────────────────── */
-
-function Services() {
-  const items = [
-    {
-      tag: 'Grow',
-      title: 'Bring new business in.',
-      body: 'Paid ads, SEO, landing pages, email + SMS, lead funnels. The systems that get more customers through the door.',
-      href: '/services#grow',
-    },
-    {
-      tag: 'Automate',
-      title: 'Run without you in the loop.',
-      body: 'AI voice agents, chatbots, n8n workflows, CRM automation. Anything where a computer can do the boring repetitive work.',
-      href: '/services#automate',
-    },
-    {
-      tag: 'Build',
-      title: 'Custom software, yours to keep.',
-      body: 'Websites, dashboards, customer portals, booking systems. Bespoke custom builds — no platform lock-in.',
-      href: '/services#build',
-    },
-  ]
-
-  return (
-    <section className="bg-cream-alt border-y border-line">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 reveal">
-          <div className="max-w-[36ch]">
-            <Eyebrow>What we build</Eyebrow>
-            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Three buckets. <span className="serif-em text-green-deep">One studio.</span>
-            </h2>
-          </div>
-          <p className="text-[16px] text-muted max-w-[42ch] leading-[1.6]">
-            Pick the one that matches your bottleneck — or run a mix. Productised plans for common patterns; custom builds quoted on scope.
-          </p>
-        </div>
-
-        {/* Editorial directory rows instead of card grid */}
-        <div className="border-t border-line">
-          {items.map((item, i) => (
-            <Link
-              key={item.tag}
-              href={item.href}
-              className="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[120px_1fr_auto] items-baseline gap-6 md:gap-10 py-8 md:py-12 border-b border-line hover:bg-cream/60 transition-colors reveal"
-            >
-              <div className="flex items-center gap-2 md:pt-2">
-                <span className="font-mono text-[11px] text-muted">0{i + 1}</span>
-                <span className="w-1 h-1 rounded-full bg-green-deep" />
-                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{item.tag}</span>
-              </div>
-              <div className="max-w-[60ch]">
-                <h3 className="text-[28px] md:text-[40px] font-medium tracking-[-0.025em] leading-[1.1] mb-3 text-ink">
-                  {item.title.split(/(\.)$/)[0]}
-                  <span className="serif-em text-green-deep">.</span>
-                </h3>
-                <p className="text-[15px] md:text-[16px] text-muted leading-[1.6]">{item.body}</p>
-              </div>
-              <span className="self-center inline-flex items-center gap-1.5 text-[14px] font-medium text-ink group-hover:gap-3 transition-all whitespace-nowrap">
-                <span className="hidden md:inline">See {item.tag.toLowerCase()}</span>
-                <span aria-hidden>→</span>
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 /* ─── Pricing teaser — typical-range scale ──────────────────────────── */
 
