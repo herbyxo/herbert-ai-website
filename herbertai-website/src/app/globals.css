@@ -18,7 +18,7 @@
   --font-display: var(--font-bricolage), Bricolage Grotesque, -apple-system, sans-serif;
 
   /* ─── display type scale (clamp-driven, for art-direction hero/sections) */
-  --text-display-xl: clamp(96px, 14vw, 280px);
+  --text-display-xl: clamp(60px, 14vw, 280px);
   --text-display-xl--line-height: 0.88;
   --text-display-xl--letter-spacing: -0.05em;
 
