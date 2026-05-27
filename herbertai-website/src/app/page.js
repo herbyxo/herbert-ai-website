@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Hero from './components/Hero'
 import GrowChapter from './components/chapters/GrowChapter'
 import AutomateChapter from './components/chapters/AutomateChapter'
+import BuildChapter from './components/chapters/BuildChapter'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <GrowChapter />
       <AutomateChapter />
+      <BuildChapter />
       <HowItWorks />
       <Services />
       <Pricing />
