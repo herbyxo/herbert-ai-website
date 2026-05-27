@@ -176,43 +176,20 @@ function MockAdCreative() {
           Looking for a sparky? Get a free quote in 60 seconds &mdash; same-day service, no callout fee.
         </p>
       </div>
-      {/* Image area — atmospheric "photo" placeholder with overlay text + rating badge */}
-      <div className="relative h-[180px] overflow-hidden bg-ink">
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            background: `
-              radial-gradient(circle at 75% 25%, rgba(0,255,136,0.22), transparent 55%),
-              radial-gradient(circle at 20% 80%, rgba(0,255,136,0.08), transparent 50%),
-              linear-gradient(140deg, #1a1a1a 0%, #0a0a0a 100%)
-            `,
-          }}
-        />
-        {/* subtle grain for atmosphere */}
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-          }}
-        />
-        {/* Rating badge top-right */}
-        <div className="absolute top-3 right-3 bg-green text-ink px-2.5 py-1 rounded font-mono text-[10px] uppercase tracking-[0.14em] font-bold flex items-center gap-1">
-          <span className="text-[11px] leading-none">★</span>
-          <span>4.9 &middot; 200 reviews</span>
+      {/* Image area — placeholder for client photo */}
+      <div className="relative h-[180px] overflow-hidden bg-cream-alt border-y border-dashed border-line">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2.5 text-muted">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.4" viewBox="0 0 24 24" aria-hidden>
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="9" cy="9" r="1.6" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 15l-5-5L5 21" />
+          </svg>
+          <div className="font-mono text-[10px] uppercase tracking-[0.18em]">Your photo here</div>
         </div>
-        {/* Overlay text bottom-left */}
-        <div className="relative h-full flex flex-col justify-end p-5">
-          <div className="text-cream font-display text-[28px] md:text-[32px] font-bold tracking-[-0.03em] leading-[1.05] mb-1.5">
-            Adelaide sparkies,
-            <br />
-            <span className="text-green">5★ rated.</span>
-          </div>
-          <div className="text-cream/65 text-[10px] font-mono uppercase tracking-[0.18em]">
-            Same-day &middot; No callout fee
-          </div>
+        {/* Rating overlay badge — top right (demonstrates ad-overlay capability) */}
+        <div className="absolute top-3 right-3 bg-white border border-line px-2.5 py-1 rounded font-mono text-[10px] uppercase tracking-[0.14em] font-bold flex items-center gap-1 shadow-[0_2px_8px_rgba(10,10,10,0.04)]">
+          <span className="text-amber-500 text-[11px] leading-none">★</span>
+          <span className="text-ink">4.9 &middot; 200 reviews</span>
         </div>
       </div>
       <div className="flex items-center justify-between p-4 gap-3 bg-cream-alt">
