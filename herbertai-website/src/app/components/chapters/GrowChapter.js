@@ -59,41 +59,21 @@ export default function GrowChapter() {
 
           {/* ─── Right: stacked mockups with parallax + rotation ─── */}
           <div className="lg:col-span-7 space-y-14 lg:space-y-20">
-            <motion.div style={{ y: y1 }} className="md:w-[76%] md:-ml-4">
-              <RevealOnScroll>
-                <div className="rotate-[2.5deg]">
-                  <MockupLabel>Paid ad campaign</MockupLabel>
-                  <MockAdCreative />
-                </div>
-              </RevealOnScroll>
-            </motion.div>
+            <MockupSlot y={y1} index="01" widthClass="md:w-[76%] md:-ml-4" indexSide="right" rotate="rotate-[2.5deg]" label="Paid ad campaign">
+              <MockAdCreative />
+            </MockupSlot>
 
-            <motion.div style={{ y: y2 }} className="md:w-[92%] md:ml-auto">
-              <RevealOnScroll delay={0.1}>
-                <div className="rotate-[-2deg]">
-                  <MockupLabel>SEO ranking</MockupLabel>
-                  <MockSEOResult />
-                </div>
-              </RevealOnScroll>
-            </motion.div>
+            <MockupSlot y={y2} index="02" widthClass="md:w-[92%] md:ml-auto" indexSide="left" rotate="rotate-[-2deg]" delay={0.1} label="SEO ranking">
+              <MockSEOResult />
+            </MockupSlot>
 
-            <motion.div style={{ y: y3 }} className="md:w-[64%] md:ml-auto md:mr-16">
-              <RevealOnScroll delay={0.2}>
-                <div className="rotate-[1.5deg]">
-                  <MockupLabel>Automated SMS funnel</MockupLabel>
-                  <MockSMSConversation />
-                </div>
-              </RevealOnScroll>
-            </motion.div>
+            <MockupSlot y={y3} index="03" widthClass="md:w-[70%] md:ml-auto md:mr-12" indexSide="left" rotate="rotate-[1.5deg]" delay={0.2} label="Automated SMS funnel">
+              <MockSMSConversation />
+            </MockupSlot>
 
-            <motion.div style={{ y: y4 }} className="md:w-[88%] md:-ml-6">
-              <RevealOnScroll delay={0.3}>
-                <div className="rotate-[-2.5deg]">
-                  <MockupLabel>Conversion analytics</MockupLabel>
-                  <MockAnalyticsDashboard />
-                </div>
-              </RevealOnScroll>
-            </motion.div>
+            <MockupSlot y={y4} index="04" widthClass="md:w-[88%] md:-ml-6" indexSide="right" rotate="rotate-[-2.5deg]" delay={0.3} label="Conversion analytics">
+              <MockAnalyticsDashboard />
+            </MockupSlot>
           </div>
         </div>
       </div>
@@ -108,6 +88,34 @@ function MockupLabel({ children }) {
       <span className="w-6 h-px bg-muted/60" />
       <span>{children}</span>
     </div>
+  )
+}
+
+/* ─── Wrapper that pairs each mockup with a giant ghosted index ─ */
+function MockupSlot({ y, index, widthClass, indexSide, rotate, delay = 0, label, children }) {
+  const sidePos =
+    indexSide === 'right'
+      ? 'lg:-right-16 xl:-right-24'
+      : 'lg:-left-16 xl:-left-24'
+  return (
+    <motion.div style={{ y }} className={`${widthClass} relative`}>
+      {/* Ghosted index numeral — desktop only, sits behind the card */}
+      <span
+        aria-hidden
+        className={`hidden lg:block absolute -top-6 ${sidePos} font-display font-bold leading-none tracking-tighter text-ink/[0.08] select-none pointer-events-none z-0`}
+        style={{ fontSize: 'clamp(120px, 14vw, 200px)' }}
+      >
+        {index}
+      </span>
+      <div className="relative z-10">
+        <RevealOnScroll delay={delay}>
+          <div className={rotate}>
+            <MockupLabel>{label}</MockupLabel>
+            {children}
+          </div>
+        </RevealOnScroll>
+      </div>
+    </motion.div>
   )
 }
 
