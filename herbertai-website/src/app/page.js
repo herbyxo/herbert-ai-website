@@ -29,7 +29,7 @@ function Pricing() {
   ]
 
   return (
-    <section className="bg-cream-alt border-y border-line">
+    <section className="bg-cream-alt">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 mb-16 md:mb-20">
           <div className="lg:col-span-7">
@@ -102,11 +102,6 @@ function FinalCTA() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
           {/* Left: closing statement */}
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-3 mb-9 font-mono text-[11px] uppercase tracking-[0.18em] text-cream/45">
-              <span className="w-8 h-px bg-green" />
-              <span>The closing pitch</span>
-            </div>
-
             <h2
               className="font-display text-cream"
               style={{

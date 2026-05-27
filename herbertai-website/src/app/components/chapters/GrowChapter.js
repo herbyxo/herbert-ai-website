@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
 import RevealOnScroll from '../motion/RevealOnScroll'
 
@@ -8,12 +8,14 @@ const CARD = 'bg-white rounded-3xl border border-ink/25'
 
 export default function GrowChapter() {
   const ref = useRef(null)
+  const reduced = useReducedMotion()
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [60, -60])
-  const y2 = useTransform(scrollYProgress, [0, 1], [100, -100])
-  const y3 = useTransform(scrollYProgress, [0, 1], [40, -40])
-  const y4 = useTransform(scrollYProgress, [0, 1], [80, -80])
+  // Reduced-motion users get static positioning — no parallax.
+  const y1 = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [60, -60])
+  const y2 = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [100, -100])
+  const y3 = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [40, -40])
+  const y4 = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [80, -80])
 
   return (
     <section ref={ref} className="bg-cream relative overflow-x-hidden">

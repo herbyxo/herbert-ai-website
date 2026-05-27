@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
 import RevealOnScroll from '../motion/RevealOnScroll'
 
@@ -8,14 +8,15 @@ const CARD = 'bg-white rounded-3xl border border-ink/25'
 
 export default function AutomateChapter() {
   const ref = useRef(null)
+  const reduced = useReducedMotion()
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [80, -80])
-  const y2 = useTransform(scrollYProgress, [0, 1], [40, -40])
-  const y3 = useTransform(scrollYProgress, [0, 1], [100, -100])
+  const y1 = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [80, -80])
+  const y2 = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [40, -40])
+  const y3 = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [100, -100])
 
   return (
-    <section ref={ref} className="bg-cream-alt border-y border-line relative overflow-x-hidden">
+    <section ref={ref} className="bg-cream-alt relative overflow-x-hidden">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-28 md:py-44">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           {/* ─── Left: opener (sticky on desktop) ─── */}
