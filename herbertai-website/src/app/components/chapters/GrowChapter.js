@@ -57,21 +57,21 @@ export default function GrowChapter() {
             </RevealOnScroll>
           </div>
 
-          {/* ─── Right: stacked mockups with parallax + rotation ─── */}
-          <div className="lg:col-span-7 space-y-14 lg:space-y-20">
-            <MockupSlot y={y1} index="01" widthClass="md:w-[76%] md:-ml-4" indexSide="right" rotate="rotate-[2.5deg]" label="Paid ad campaign">
+          {/* ─── Right: zigzag mockups with parallax + rotation ─── */}
+          <div className="lg:col-span-7 space-y-10 lg:space-y-14">
+            <MockupSlot y={y1} index="01" side="left"  rotate="rotate-[3deg]"   bleed label="Paid ad campaign">
               <MockAdCreative />
             </MockupSlot>
 
-            <MockupSlot y={y2} index="02" widthClass="md:w-[92%] md:ml-auto" indexSide="left" rotate="rotate-[-2deg]" delay={0.1} label="SEO ranking">
+            <MockupSlot y={y2} index="02" side="right" rotate="rotate-[-2.5deg]" delay={0.1} label="SEO ranking">
               <MockSEOResult />
             </MockupSlot>
 
-            <MockupSlot y={y3} index="03" widthClass="md:w-[70%] md:ml-auto md:mr-12" indexSide="left" rotate="rotate-[1.5deg]" delay={0.2} label="Automated SMS funnel">
+            <MockupSlot y={y3} index="03" side="left"  rotate="rotate-[2deg]"    delay={0.2} bleed label="Automated SMS funnel">
               <MockSMSConversation />
             </MockupSlot>
 
-            <MockupSlot y={y4} index="04" widthClass="md:w-[88%] md:-ml-6" indexSide="right" rotate="rotate-[-2.5deg]" delay={0.3} label="Conversion analytics">
+            <MockupSlot y={y4} index="04" side="right" rotate="rotate-[-3deg]"   delay={0.3} label="Conversion analytics">
               <MockAnalyticsDashboard />
             </MockupSlot>
           </div>
@@ -91,23 +91,28 @@ function MockupLabel({ children }) {
   )
 }
 
-/* ─── Wrapper that pairs each mockup with a giant ghosted index ─ */
-function MockupSlot({ y, index, widthClass, indexSide, rotate, delay = 0, label, children }) {
-  const sidePos =
-    indexSide === 'right'
-      ? 'lg:-right-16 xl:-right-24'
-      : 'lg:-left-16 xl:-left-24'
+/* ─── Wrapper: zigzag positioning + giant ghosted index on opposite side ─ */
+function MockupSlot({ y, index, side, rotate, bleed = false, delay = 0, label, children }) {
+  const isLeft = side === 'left'
+  // Card alignment + optional bleed past column edge for sticker feel
+  const alignClass = isLeft
+    ? `justify-start ${bleed ? 'lg:-ml-12 xl:-ml-20' : ''}`
+    : `justify-end   ${bleed ? 'lg:-mr-12 xl:-mr-20' : ''}`
+  // Ghosted index sits opposite the card, centred vertically
+  const indexPosClass = isLeft
+    ? 'right-0 lg:-right-8 xl:-right-16'
+    : 'left-0  lg:-left-8  xl:-left-16'
+
   return (
-    <motion.div style={{ y }} className={`${widthClass} relative`}>
-      {/* Ghosted index numeral — desktop only, sits behind the card */}
+    <motion.div style={{ y }} className="relative w-full">
       <span
         aria-hidden
-        className={`hidden lg:block absolute -top-6 ${sidePos} font-display font-bold leading-none tracking-tighter text-ink/[0.08] select-none pointer-events-none z-0`}
-        style={{ fontSize: 'clamp(120px, 14vw, 200px)' }}
+        className={`hidden lg:block absolute top-1/2 -translate-y-1/2 ${indexPosClass} font-display font-bold leading-none tracking-tighter text-ink/[0.08] select-none pointer-events-none z-0`}
+        style={{ fontSize: 'clamp(140px, 17vw, 260px)' }}
       >
         {index}
       </span>
-      <div className="relative z-10">
+      <div className={`relative z-10 flex ${alignClass}`}>
         <RevealOnScroll delay={delay}>
           <div className={rotate}>
             <MockupLabel>{label}</MockupLabel>

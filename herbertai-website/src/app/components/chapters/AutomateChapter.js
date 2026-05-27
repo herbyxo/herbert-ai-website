@@ -56,17 +56,17 @@ export default function AutomateChapter() {
             </RevealOnScroll>
           </div>
 
-          {/* ─── Right: stacked mockups with parallax + rotation ─── */}
-          <div className="lg:col-span-7 space-y-14 lg:space-y-20">
-            <MockupSlot y={y1} index="01" widthClass="md:w-[92%] md:-ml-4" indexSide="right" rotate="rotate-[-2deg]" label="AI voice agent · live call">
+          {/* ─── Right: zigzag mockups with parallax + rotation ─── */}
+          <div className="lg:col-span-7 space-y-10 lg:space-y-14">
+            <MockupSlot y={y1} index="01" side="left"  rotate="rotate-[-2.5deg]" bleed label="AI voice agent · live call">
               <MockVoiceTranscript />
             </MockupSlot>
 
-            <MockupSlot y={y2} index="02" widthClass="md:w-[78%] md:ml-auto md:-mr-4" indexSide="left" rotate="rotate-[2.5deg]" delay={0.1} label="Workflow automation · n8n">
+            <MockupSlot y={y2} index="02" side="right" rotate="rotate-[3deg]"    delay={0.1} bleed label="Workflow automation · n8n">
               <MockN8nFlow />
             </MockupSlot>
 
-            <MockupSlot y={y3} index="03" widthClass="md:w-[72%] md:ml-auto md:mr-16" indexSide="left" rotate="rotate-[-1.5deg]" delay={0.2} label="AI chatbot · 2am lead capture">
+            <MockupSlot y={y3} index="03" side="left"  rotate="rotate-[-2deg]"   delay={0.2} label="AI chatbot · 2am lead capture">
               <MockChatbotConversation />
             </MockupSlot>
           </div>
@@ -86,22 +86,26 @@ function MockupLabel({ children }) {
   )
 }
 
-/* ─── Wrapper: pairs each mockup with a giant ghosted index ────── */
-function MockupSlot({ y, index, widthClass, indexSide, rotate, delay = 0, label, children }) {
-  const sidePos =
-    indexSide === 'right'
-      ? 'lg:-right-16 xl:-right-24'
-      : 'lg:-left-16 xl:-left-24'
+/* ─── Wrapper: zigzag positioning + giant ghosted index on opposite side ─ */
+function MockupSlot({ y, index, side, rotate, bleed = false, delay = 0, label, children }) {
+  const isLeft = side === 'left'
+  const alignClass = isLeft
+    ? `justify-start ${bleed ? 'lg:-ml-12 xl:-ml-20' : ''}`
+    : `justify-end   ${bleed ? 'lg:-mr-12 xl:-mr-20' : ''}`
+  const indexPosClass = isLeft
+    ? 'right-0 lg:-right-8 xl:-right-16'
+    : 'left-0  lg:-left-8  xl:-left-16'
+
   return (
-    <motion.div style={{ y }} className={`${widthClass} relative`}>
+    <motion.div style={{ y }} className="relative w-full">
       <span
         aria-hidden
-        className={`hidden lg:block absolute -top-6 ${sidePos} font-display font-bold leading-none tracking-tighter text-ink/[0.08] select-none pointer-events-none z-0`}
-        style={{ fontSize: 'clamp(120px, 14vw, 200px)' }}
+        className={`hidden lg:block absolute top-1/2 -translate-y-1/2 ${indexPosClass} font-display font-bold leading-none tracking-tighter text-ink/[0.08] select-none pointer-events-none z-0`}
+        style={{ fontSize: 'clamp(140px, 17vw, 260px)' }}
       >
         {index}
       </span>
-      <div className="relative z-10">
+      <div className={`relative z-10 flex ${alignClass}`}>
         <RevealOnScroll delay={delay}>
           <div className={rotate}>
             <MockupLabel>{label}</MockupLabel>
