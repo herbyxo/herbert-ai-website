@@ -56,9 +56,10 @@ export default function MagneticCursor() {
         const rect = targetRef.current.getBoundingClientRect()
         const cx = rect.left + rect.width / 2
         const cy = rect.top + rect.height / 2
-        // 60% pull toward centre, 40% follow mouse
-        mouseX.set(cx * 0.6 + e.clientX * 0.4)
-        mouseY.set(cy * 0.6 + e.clientY * 0.4)
+        // subtle drift toward element centre — 25% pull, 75% follow mouse
+        // (was 60/40 — too locked on bigger targets like CTAs)
+        mouseX.set(cx * 0.25 + e.clientX * 0.75)
+        mouseY.set(cy * 0.25 + e.clientY * 0.75)
       } else {
         mouseX.set(e.clientX)
         mouseY.set(e.clientY)
@@ -102,12 +103,13 @@ export default function MagneticCursor() {
         y: cursorY,
         translateX: '-50%',
         translateY: '-50%',
-        width: hovering ? 56 : 14,
-        height: hovering ? 56 : 14,
-        background: hovering ? 'rgba(0, 255, 136, 0.18)' : '#00FF88',
-        border: hovering ? '1px solid rgba(0, 255, 136, 0.6)' : '0',
-        mixBlendMode: hovering ? 'normal' : 'difference',
-        transition: 'width 220ms ease, height 220ms ease, background 220ms ease',
+        width: hovering ? 48 : 14,
+        height: hovering ? 48 : 14,
+        background: hovering ? 'transparent' : '#00FF88',
+        border: hovering ? '1.5px solid #00FF88' : '0',
+        // difference blend always — visible on cream, green CTAs, ink panels alike
+        mixBlendMode: 'difference',
+        transition: 'width 220ms ease, height 220ms ease, background 220ms ease, border 220ms ease',
       }}
     />
   )
