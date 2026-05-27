@@ -94,7 +94,7 @@ function DropdownLink({ label, children }) {
 
 function DropItem({ href, title, sub }) {
   return (
-    <Link href={href} data-magnetic className="block px-4 py-3 hover:bg-cream-alt transition-colors">
+    <Link href={href} className="block px-4 py-3 hover:bg-cream-alt transition-colors">
       <div className="font-medium text-ink text-[14px]">{title}</div>
       <div className="text-[12px] text-muted mt-0.5">{sub}</div>
     </Link>
