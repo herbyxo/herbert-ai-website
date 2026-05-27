@@ -121,8 +121,8 @@ function MockupSlot({ y, index, side, rotate, bleed = false, delay = 0, label, c
 function MockDashboard() {
   const navItems = [
     { label: 'Overview', active: true },
-    { label: 'Bookings' },
-    { label: 'Customers' },
+    { label: 'Classes' },
+    { label: 'Members' },
     { label: 'Reports' },
     { label: 'Settings' },
   ]
@@ -133,12 +133,12 @@ function MockDashboard() {
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-1.5 rounded-full bg-green hi-pulse" />
           <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-ink-soft">
-            adelaide electric &middot; admin
+            studio twenty &middot; admin
           </div>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-5 h-5 rounded-full bg-ink flex items-center justify-center">
-            <span className="text-cream text-[9px] font-bold">A</span>
+            <span className="text-cream text-[9px] font-bold">S</span>
           </div>
         </div>
       </div>
@@ -163,21 +163,21 @@ function MockDashboard() {
         <div className="flex-1 p-4 min-w-0">
           {/* KPI tiles */}
           <div className="grid grid-cols-3 gap-2 mb-3">
-            <Tile label="This week" value="$8,420" trend="+12%" />
-            <Tile label="Open jobs" value="14" trend="+3" />
-            <Tile label="Conv. rate" value="68%" trend="+5%" />
+            <Tile label="This week" value="$5,860" trend="+9%" />
+            <Tile label="Classes" value="42" trend="+4" />
+            <Tile label="Attendance" value="89%" trend="+6%" />
           </div>
 
           {/* Mini bar chart */}
           <div className="border border-line rounded-lg p-3 mb-3">
             <div className="flex items-center justify-between mb-2">
               <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">
-                Bookings by day
+                Class attendance by day
               </div>
               <div className="font-mono text-[9px] uppercase tracking-[0.12em] text-muted">7d</div>
             </div>
             <div className="flex items-end gap-1 h-12">
-              {[40, 65, 50, 80, 70, 95, 88].map((h, i) => (
+              {[55, 70, 60, 85, 75, 92, 88].map((h, i) => (
                 <div key={i} className="flex-1 rounded-sm bg-green-deep/80" style={{ height: `${h}%` }} />
               ))}
             </div>
@@ -189,9 +189,9 @@ function MockDashboard() {
               Latest bookings
             </div>
             {[
-              { name: 'Sarah K.', service: 'Switchboard upgrade', time: '2m' },
-              { name: 'Brett L.', service: 'Powerpoint install x4', time: '23m' },
-              { name: 'Maya T.', service: 'Safety switch fault', time: '1h' },
+              { name: 'Sarah K.', service: 'Reformer · 7am Thu', time: '2m' },
+              { name: 'Brett L.', service: 'Mat class · 6am Fri', time: '23m' },
+              { name: 'Maya T.', service: '1:1 Reformer · 9am Sat', time: '1h' },
             ].map((r, i) => (
               <div key={i} className="flex items-center gap-2 px-3 py-2 text-[11px] border-b border-line last:border-b-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-deep shrink-0" />
@@ -232,9 +232,9 @@ function MockBookingFlow() {
           Step 02 of 03 &middot; Pick a time
         </div>
         <div className="text-[18px] font-semibold text-ink tracking-[-0.01em]">
-          Switchboard inspection
+          Reformer Pilates &middot; group class
         </div>
-        <div className="text-[12px] text-muted mt-0.5">60 min &middot; $189 fixed price</div>
+        <div className="text-[12px] text-muted mt-0.5">60 min &middot; $45 drop-in</div>
       </div>
 
       {/* Calendar strip */}
@@ -262,11 +262,11 @@ function MockBookingFlow() {
           Thursday, June 7 &middot; available slots
         </div>
         <div className="grid grid-cols-3 gap-1.5">
-          {['9:00', '10:30', '12:00', '1:30', '3:00', '4:30'].map((t, i) => (
+          {['6:00am', '7:30am', '9:00am', '12:00pm', '5:30pm', '6:45pm'].map((t, i) => (
             <button
               key={t}
               className={`text-[12px] rounded-md py-2 border ${
-                i === 2
+                i === 1
                   ? 'bg-green text-ink border-green font-semibold'
                   : 'border-line text-ink hover:border-ink/40'
               }`}
@@ -281,7 +281,7 @@ function MockBookingFlow() {
       <div className="px-5 pb-5 flex items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Selected</div>
-          <div className="text-[12px] font-medium text-ink mt-0.5 truncate">Thu Jun 7 &middot; 12:00</div>
+          <div className="text-[12px] font-medium text-ink mt-0.5 truncate">Thu Jun 7 &middot; 7:30am</div>
         </div>
         <button className="bg-ink text-cream px-4 py-2 rounded-full text-[12px] font-semibold inline-flex items-center gap-1.5">
           Continue <span aria-hidden>→</span>
@@ -294,24 +294,24 @@ function MockBookingFlow() {
 /* ─── Mock #3: Internal customer database (table view) ─────────── */
 function MockAdminPanel() {
   const rows = [
-    { name: 'Sarah Kim',     phone: '0412 …', status: 'booked',   amount: '$320', date: 'Today' },
-    { name: 'Brett Lewis',   phone: '0408 …', status: 'quoted',   amount: '$185', date: 'Today' },
-    { name: 'Maya Thompson', phone: '0421 …', status: 'booked',   amount: '$420', date: 'Yesterday' },
-    { name: 'Sam Patel',     phone: '0455 …', status: 'follow-up', amount: '—',    date: 'Yesterday' },
-    { name: 'Jen O\'Brien',  phone: '0467 …', status: 'booked',   amount: '$95',  date: '2d ago' },
+    { name: 'Sarah Kim',     phone: '0412 …', status: 'active', plan: 'Unlimited',  date: '2d ago' },
+    { name: 'Brett Lewis',   phone: '0408 …', status: 'trial',  plan: '2 weeks',    date: 'Today' },
+    { name: 'Maya Thompson', phone: '0421 …', status: 'active', plan: '10-pack',    date: 'Today' },
+    { name: 'Sam Patel',     phone: '0455 …', status: 'lapsed', plan: 'Unlimited',  date: '5d ago' },
+    { name: 'Jen O\'Brien',  phone: '0467 …', status: 'active', plan: '10-pack',    date: 'Yesterday' },
   ]
   const statusColor = {
-    booked:     'bg-green-deep/15 text-green-deep',
-    quoted:     'bg-ink/8 text-ink-soft',
-    'follow-up': 'bg-amber-100 text-amber-700',
+    active: 'bg-green-deep/15 text-green-deep',
+    trial:  'bg-ink/8 text-ink-soft',
+    lapsed: 'bg-amber-100 text-amber-700',
   }
   return (
     <div className={`${CARD} max-w-[580px] overflow-hidden`}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-line bg-cream-alt">
         <div className="flex items-center gap-2">
-          <div className="text-[12px] font-semibold text-ink">Customers</div>
-          <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">247 records</div>
+          <div className="text-[12px] font-semibold text-ink">Members</div>
+          <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">183 records</div>
         </div>
         <div className="flex items-center gap-1.5">
           <div className="border border-line bg-white rounded-md px-2 py-1 font-mono text-[10px] text-muted">All</div>
@@ -322,12 +322,12 @@ function MockAdminPanel() {
       </div>
 
       {/* Column heads */}
-      <div className="grid grid-cols-[2fr_1.2fr_1fr_0.8fr_0.8fr] gap-3 px-4 py-2 border-b border-line font-mono text-[8.5px] uppercase tracking-[0.16em] text-muted bg-cream-alt/40">
+      <div className="grid grid-cols-[2fr_1.2fr_1fr_0.9fr_0.8fr] gap-3 px-4 py-2 border-b border-line font-mono text-[8.5px] uppercase tracking-[0.16em] text-muted bg-cream-alt/40">
         <div>Name</div>
         <div>Phone</div>
         <div>Status</div>
-        <div>Amount</div>
-        <div>Date</div>
+        <div>Plan</div>
+        <div>Joined</div>
       </div>
 
       {/* Rows */}
@@ -335,7 +335,7 @@ function MockAdminPanel() {
         {rows.map((r, i) => (
           <div
             key={i}
-            className="grid grid-cols-[2fr_1.2fr_1fr_0.8fr_0.8fr] gap-3 px-4 py-2.5 items-center border-b border-line last:border-b-0 text-[12px]"
+            className="grid grid-cols-[2fr_1.2fr_1fr_0.9fr_0.8fr] gap-3 px-4 py-2.5 items-center border-b border-line last:border-b-0 text-[12px]"
           >
             <div className="flex items-center gap-2 min-w-0">
               <div className="w-5 h-5 rounded-full bg-cream-alt border border-line flex items-center justify-center text-[9px] font-semibold text-ink shrink-0">
@@ -349,7 +349,7 @@ function MockAdminPanel() {
                 {r.status}
               </span>
             </div>
-            <div className="font-mono text-[11px] text-ink">{r.amount}</div>
+            <div className="font-mono text-[11px] text-ink truncate">{r.plan}</div>
             <div className="font-mono text-[10px] text-muted truncate">{r.date}</div>
           </div>
         ))}
@@ -358,7 +358,7 @@ function MockAdminPanel() {
       {/* Footer */}
       <div className="bg-cream-alt/60 border-t border-line px-4 py-2 flex items-center justify-between">
         <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">
-          Showing 5 of 247
+          Showing 5 of 183
         </div>
         <div className="flex items-center gap-1 font-mono text-[10px] text-ink-soft">
           <button className="px-1.5 py-0.5 border border-line rounded">‹</button>
