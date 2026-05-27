@@ -61,14 +61,23 @@ export default function Hero() {
           transition={{ duration: 0.55, delay: 0.85, ease: EASE }}
           className="mt-10 md:mt-12 text-[18px] md:text-[20px] text-muted leading-[1.5] max-w-[54ch]"
         >
-          Adelaide&rsquo;s automation &amp; growth studio. Custom-built, shipped in weeks.
+          Adelaide-based automation &amp; growth studio. Custom-built, shipped in weeks.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, delay: 1.0, ease: EASE }}
+          className="mt-10 md:mt-12 text-[15px] md:text-[16px] text-ink-soft leading-[1.55] max-w-[52ch]"
+        >
+          Hi &mdash; I&rsquo;m Will. Tell me where the friction is, I&rsquo;ll show you what I&rsquo;d build.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.95, ease: EASE }}
-          className="mt-8 md:mt-10 flex flex-wrap gap-3"
+          transition={{ duration: 0.55, delay: 1.15, ease: EASE }}
+          className="mt-6 md:mt-7 flex flex-wrap gap-3"
         >
           <Link
             href="/contact"
@@ -78,42 +87,14 @@ export default function Hero() {
             Get started <span aria-hidden>→</span>
           </Link>
           <Link
-            href="/services"
+            href="/contact"
             data-magnetic
             className="text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 border border-ink hover:bg-ink hover:text-cream transition-colors duration-300"
           >
-            See what we build
+            What slows your business down? <span aria-hidden>→</span>
           </Link>
-        </motion.div>
-
-        {/* ─── Stat row pinned to bottom of viewport ─── */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 1.1, ease: EASE }}
-          className="mt-auto pt-10 md:pt-14 border-t border-line"
-        >
-          <div className="grid grid-cols-3 gap-6 md:gap-12">
-            <Stat value="Solo" suffix="." label="Built by Will, in Adelaide" />
-            <Stat value="2" suffix=" wks" label="Brief to working version" />
-            <Stat value="0" suffix=" lock-in" label="Cancel anytime · No retainer" />
-          </div>
         </motion.div>
       </div>
     </section>
-  )
-}
-
-function Stat({ value, suffix, label }) {
-  return (
-    <div>
-      <div className="text-[36px] md:text-[52px] tracking-[-0.03em] leading-none mb-2 text-ink font-bold">
-        {value}
-        <span className="text-green-deep">{suffix}</span>
-      </div>
-      <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.16em] text-muted">
-        {label}
-      </div>
-    </div>
   )
 }
