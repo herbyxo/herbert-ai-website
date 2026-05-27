@@ -10,7 +10,6 @@ export default function GrowChapter() {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
 
-  // each mockup gets a slightly different parallax speed for depth
   const y1 = useTransform(scrollYProgress, [0, 1], [60, -60])
   const y2 = useTransform(scrollYProgress, [0, 1], [100, -100])
   const y3 = useTransform(scrollYProgress, [0, 1], [40, -40])
@@ -58,18 +57,20 @@ export default function GrowChapter() {
           </div>
 
           {/* ─── Right: stacked mockups with parallax + rotation ─── */}
-          <div className="lg:col-span-7 space-y-10 lg:space-y-14">
+          <div className="lg:col-span-7 space-y-14 lg:space-y-16">
             <motion.div style={{ y: y1 }} className="md:w-[88%] md:ml-auto">
               <RevealOnScroll>
                 <div className="rotate-[-1deg]">
+                  <MockupLabel>Customer review</MockupLabel>
                   <MockGoogleReview />
                 </div>
               </RevealOnScroll>
             </motion.div>
 
-            <motion.div style={{ y: y2 }} className="md:w-[78%]">
+            <motion.div style={{ y: y2 }} className="md:w-[80%]">
               <RevealOnScroll delay={0.1}>
                 <div className="rotate-[1.5deg]">
+                  <MockupLabel>Paid ad campaign</MockupLabel>
                   <MockAdCreative />
                 </div>
               </RevealOnScroll>
@@ -78,6 +79,7 @@ export default function GrowChapter() {
             <motion.div style={{ y: y3 }} className="md:w-[70%] md:ml-auto md:mr-12">
               <RevealOnScroll delay={0.2}>
                 <div className="rotate-[-0.5deg]">
+                  <MockupLabel>Lead capture & SMS</MockupLabel>
                   <MockSMSConversation />
                 </div>
               </RevealOnScroll>
@@ -86,7 +88,8 @@ export default function GrowChapter() {
             <motion.div style={{ y: y4 }} className="md:w-[88%]">
               <RevealOnScroll delay={0.3}>
                 <div className="rotate-[-1.5deg]">
-                  <MockLandingPageHero />
+                  <MockupLabel>Conversion analytics</MockupLabel>
+                  <MockAnalyticsDashboard />
                 </div>
               </RevealOnScroll>
             </motion.div>
@@ -97,7 +100,17 @@ export default function GrowChapter() {
   )
 }
 
-/* ─── Mock #1: Google-style customer review ───────────────────── */
+/* ─── Description label above each mockup ─────────────────────── */
+function MockupLabel({ children }) {
+  return (
+    <div className="flex items-center gap-3 mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
+      <span className="w-6 h-px bg-muted/60" />
+      <span>{children}</span>
+    </div>
+  )
+}
+
+/* ─── Mock #1: Customer review ─────────────────────────────────── */
 function MockGoogleReview() {
   return (
     <div className={`${CARD} p-6 max-w-md`}>
@@ -121,7 +134,7 @@ function MockGoogleReview() {
   )
 }
 
-/* ─── Mock #2: Social ad creative preview ─────────────────────── */
+/* ─── Mock #2: Paid ad campaign (richer, trade-specific) ───────── */
 function MockAdCreative() {
   return (
     <div className={`${CARD} max-w-md overflow-hidden`}>
@@ -130,36 +143,45 @@ function MockAdCreative() {
           <span className="text-green text-[14px] font-bold">A</span>
         </div>
         <div className="flex-1 min-w-0">
-          <div className="text-[14px] font-semibold text-ink truncate">Your Business</div>
+          <div className="flex items-center gap-1">
+            <div className="text-[14px] font-semibold text-ink truncate">Adelaide Electric</div>
+            <svg className="w-3.5 h-3.5 text-green-deep shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+          </div>
           <div className="text-[10px] text-muted font-mono uppercase tracking-[0.16em] mt-0.5">Sponsored</div>
         </div>
       </div>
-      <div className="bg-ink relative h-[180px] flex items-center justify-center overflow-hidden">
-        <div
-          aria-hidden
-          className="absolute -top-20 -right-20 w-72 h-72 rounded-full"
-          style={{ background: 'radial-gradient(circle, rgba(0,255,136,0.35), transparent 60%)' }}
-        />
-        <div className="relative font-display text-[28px] md:text-[34px] font-bold text-cream tracking-[-0.03em] text-center px-4">
-          Save 5 hours
-          <br />
-          a week.
+      <div className="px-4 pb-3">
+        <p className="text-[13px] text-ink-soft leading-[1.45]">
+          Looking for a sparky? Get a free quote in 60 seconds &mdash; same-day service, no callout fee.
+        </p>
+      </div>
+      {/* Split image area: 5★ rating + jobs-this-month */}
+      <div className="relative h-[160px] grid grid-cols-2 gap-px bg-line">
+        <div className="bg-green flex flex-col items-center justify-center text-ink p-4">
+          <div className="font-display text-[44px] font-bold leading-none tracking-[-0.03em]">★ 5.0</div>
+          <div className="text-[10px] font-mono uppercase tracking-[0.18em] mt-2 text-ink-soft">Avg rating</div>
+        </div>
+        <div className="bg-ink flex flex-col items-center justify-center text-cream p-4">
+          <div className="font-display text-[40px] font-bold leading-none tracking-[-0.03em]">200+</div>
+          <div className="text-[10px] font-mono uppercase tracking-[0.18em] mt-2 text-cream/60">Jobs this month</div>
         </div>
       </div>
-      <div className="flex items-center justify-between p-4 gap-3">
+      <div className="flex items-center justify-between p-4 gap-3 bg-cream-alt">
         <div className="min-w-0">
-          <div className="text-[12px] text-muted font-mono uppercase tracking-[0.12em]">yourbusiness.com</div>
-          <div className="text-[13px] font-medium text-ink mt-1 truncate">Stop missing calls.</div>
+          <div className="text-[10px] text-muted font-mono uppercase tracking-[0.12em]">adelaideelectric.com.au</div>
+          <div className="text-[13px] font-medium text-ink mt-1 truncate">Free quotes, same-day service</div>
         </div>
-        <button className="bg-cream-alt text-ink px-3 py-1.5 rounded-md text-[12px] font-medium shrink-0">
-          Learn more
+        <button className="bg-ink text-cream px-3 py-1.5 rounded-md text-[12px] font-medium shrink-0">
+          Book now
         </button>
       </div>
     </div>
   )
 }
 
-/* ─── Mock #3: SMS conversation (customer + agent) ────────────── */
+/* ─── Mock #3: SMS conversation ────────────────────────────────── */
 function MockSMSConversation() {
   return (
     <div className={`${CARD} p-6 max-w-sm`}>
@@ -202,38 +224,88 @@ function Dot({ delay }) {
   )
 }
 
-/* ─── Mock #4: Landing-page hero snippet ──────────────────────── */
-function MockLandingPageHero() {
+/* ─── Mock #4: Live analytics dashboard ─────────────────────────── */
+function MockAnalyticsDashboard() {
+  const stats = [
+    { value: '3,247', label: 'Visitors', change: '+18%' },
+    { value: '127', label: 'Leads', change: '+34%' },
+    { value: '42', label: 'Bookings', change: '+28%' },
+  ]
   return (
     <div className={`${CARD} max-w-md overflow-hidden`}>
+      {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-line">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-green" />
-          <div className="text-[12px] font-semibold text-ink">your-business</div>
+          <div className="w-2 h-2 rounded-full bg-green hi-pulse" />
+          <div className="text-[12px] font-semibold text-ink">your-business · analytics</div>
         </div>
-        <div className="flex gap-4 text-[10px] text-muted font-mono uppercase tracking-[0.12em]">
-          <span>Services</span>
-          <span>Contact</span>
-        </div>
+        <div className="text-[10px] text-muted font-mono uppercase tracking-[0.12em]">Last 30 days</div>
       </div>
-      <div className="p-6">
-        <div
-          className="font-display text-[26px] md:text-[28px] leading-[1.05] tracking-[-0.03em] text-ink font-bold mb-3"
-        >
-          Get a quote in
-          <br />
-          <span className="bg-green inline-block px-1.5 -mx-1.5 mt-0.5">30 seconds.</span>
-        </div>
-        <p className="text-[12px] text-muted leading-[1.5] mb-5">
-          Custom-built ads driving real business to your door.
-        </p>
-        <div className="flex gap-2">
-          <div className="flex-1 px-3 py-2 text-[12px] border border-line rounded-md text-muted">
-            Your email
+
+      {/* Stat cards */}
+      <div className="grid grid-cols-3 divide-x divide-line">
+        {stats.map((s) => (
+          <div key={s.label} className="p-4">
+            <div className="text-[10px] font-mono uppercase tracking-[0.16em] text-muted mb-1.5">
+              {s.label}
+            </div>
+            <div className="font-display text-[24px] font-bold text-ink tracking-[-0.02em] leading-none">
+              {s.value}
+            </div>
+            <div className="text-[11px] text-green-deep font-mono uppercase tracking-[0.12em] mt-1.5 flex items-center gap-1">
+              <span aria-hidden>↑</span>
+              <span>{s.change}</span>
+            </div>
           </div>
-          <div className="bg-ink text-cream px-3 py-2 rounded-md text-[12px] font-medium">Start</div>
+        ))}
+      </div>
+
+      {/* Sparkline chart */}
+      <div className="p-4 border-t border-line">
+        <div className="text-[10px] font-mono uppercase tracking-[0.16em] text-muted mb-3">
+          Bookings, last 30 days
+        </div>
+        <svg viewBox="0 0 200 50" className="w-full h-[50px]" preserveAspectRatio="none" aria-hidden>
+          <polyline
+            points="0,42 20,38 40,40 60,30 80,32 100,24 120,20 140,17 160,14 180,9 200,6"
+            fill="none"
+            stroke="var(--color-green-deep)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            vectorEffect="non-scaling-stroke"
+          />
+          <polygon
+            points="0,42 20,38 40,40 60,30 80,32 100,24 120,20 140,17 160,14 180,9 200,6 200,50 0,50"
+            fill="var(--color-green)"
+            fillOpacity="0.12"
+          />
+        </svg>
+      </div>
+
+      {/* Live activity */}
+      <div className="px-4 pb-4 border-t border-line pt-4">
+        <div className="text-[10px] font-mono uppercase tracking-[0.16em] text-muted mb-2.5">
+          Live activity
+        </div>
+        <div className="space-y-1.5">
+          <ActivityLine pulse text="New booking" time="2m" />
+          <ActivityLine text="Form submission" time="8m" />
+          <ActivityLine text="New booking" time="14m" />
         </div>
       </div>
+    </div>
+  )
+}
+
+function ActivityLine({ pulse, text, time }) {
+  return (
+    <div className="flex items-center gap-2 text-[12px]">
+      <span
+        className={`w-1.5 h-1.5 rounded-full shrink-0 ${pulse ? 'bg-green hi-pulse' : 'bg-muted/40'}`}
+      />
+      <span className="text-ink-soft flex-1">{text}</span>
+      <span className="font-mono text-[10px] text-muted">{time} ago</span>
     </div>
   )
 }
