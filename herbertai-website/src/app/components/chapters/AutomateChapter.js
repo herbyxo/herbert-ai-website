@@ -58,15 +58,15 @@ export default function AutomateChapter() {
 
           {/* ─── Right: zigzag mockups with parallax + rotation ─── */}
           <div className="lg:col-span-7 space-y-10 lg:space-y-14">
-            <MockupSlot y={y1} index="01" side="left"  rotate="rotate-[-2.5deg]" bleed label="AI voice agent · live call">
+            <MockupSlot y={y1} index="01" side="right" rotate="rotate-[-2.5deg]" bleed label="AI voice agent · live call">
               <MockVoiceTranscript />
             </MockupSlot>
 
-            <MockupSlot y={y2} index="02" side="right" rotate="rotate-[3deg]"    delay={0.1} bleed label="Workflow automation · n8n">
+            <MockupSlot y={y2} index="02" side="left"  rotate="rotate-[2.5deg]"  delay={0.1} label="Workflow automation · n8n">
               <MockN8nFlow />
             </MockupSlot>
 
-            <MockupSlot y={y3} index="03" side="left"  rotate="rotate-[-2deg]"   delay={0.2} label="AI chatbot · 2am lead capture">
+            <MockupSlot y={y3} index="03" side="right" rotate="rotate-[-2deg]"   delay={0.2} bleed label="AI chatbot · 2am lead capture">
               <MockChatbotConversation />
             </MockupSlot>
           </div>
@@ -89,9 +89,11 @@ function MockupLabel({ children }) {
 /* ─── Wrapper: zigzag positioning + giant ghosted index on opposite side ─ */
 function MockupSlot({ y, index, side, rotate, bleed = false, delay = 0, label, children }) {
   const isLeft = side === 'left'
+  // LEFT side stays inside the col-span-7 lane (respects the sticky H2 to its left).
+  // Bleed is only permitted on RIGHT side, pushing toward the page edge where nothing collides.
   const alignClass = isLeft
-    ? `justify-start ${bleed ? 'lg:-ml-12 xl:-ml-20' : ''}`
-    : `justify-end   ${bleed ? 'lg:-mr-12 xl:-mr-20' : ''}`
+    ? 'justify-start'
+    : `justify-end ${bleed ? 'lg:-mr-12 xl:-mr-20' : ''}`
   const indexPosClass = isLeft
     ? 'right-0 lg:-right-8 xl:-right-16'
     : 'left-0  lg:-left-8  xl:-left-16'

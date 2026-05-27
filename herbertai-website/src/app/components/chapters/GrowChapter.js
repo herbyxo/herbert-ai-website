@@ -59,19 +59,19 @@ export default function GrowChapter() {
 
           {/* ─── Right: zigzag mockups with parallax + rotation ─── */}
           <div className="lg:col-span-7 space-y-10 lg:space-y-14">
-            <MockupSlot y={y1} index="01" side="left"  rotate="rotate-[3deg]"   bleed label="Paid ad campaign">
+            <MockupSlot y={y1} index="01" side="right" rotate="rotate-[-2.5deg]" bleed label="Paid ad campaign">
               <MockAdCreative />
             </MockupSlot>
 
-            <MockupSlot y={y2} index="02" side="right" rotate="rotate-[-2.5deg]" delay={0.1} label="SEO ranking">
+            <MockupSlot y={y2} index="02" side="left"  rotate="rotate-[2deg]"    delay={0.1} label="SEO ranking">
               <MockSEOResult />
             </MockupSlot>
 
-            <MockupSlot y={y3} index="03" side="left"  rotate="rotate-[2deg]"    delay={0.2} bleed label="Automated SMS funnel">
+            <MockupSlot y={y3} index="03" side="right" rotate="rotate-[-3deg]"   delay={0.2} bleed label="Automated SMS funnel">
               <MockSMSConversation />
             </MockupSlot>
 
-            <MockupSlot y={y4} index="04" side="right" rotate="rotate-[-3deg]"   delay={0.3} label="Conversion analytics">
+            <MockupSlot y={y4} index="04" side="left"  rotate="rotate-[2.5deg]"  delay={0.3} label="Conversion analytics">
               <MockAnalyticsDashboard />
             </MockupSlot>
           </div>
@@ -95,9 +95,11 @@ function MockupLabel({ children }) {
 function MockupSlot({ y, index, side, rotate, bleed = false, delay = 0, label, children }) {
   const isLeft = side === 'left'
   // Card alignment + optional bleed past column edge for sticker feel
+  // LEFT side stays inside the col-span-7 lane (respects the sticky H2 to its left).
+  // Bleed is only permitted on RIGHT side, pushing toward the page edge where nothing collides.
   const alignClass = isLeft
-    ? `justify-start ${bleed ? 'lg:-ml-12 xl:-ml-20' : ''}`
-    : `justify-end   ${bleed ? 'lg:-mr-12 xl:-mr-20' : ''}`
+    ? 'justify-start'
+    : `justify-end ${bleed ? 'lg:-mr-12 xl:-mr-20' : ''}`
   // Ghosted index sits opposite the card, centred vertically
   const indexPosClass = isLeft
     ? 'right-0 lg:-right-8 xl:-right-16'
