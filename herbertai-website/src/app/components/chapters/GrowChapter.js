@@ -176,15 +176,43 @@ function MockAdCreative() {
           Looking for a sparky? Get a free quote in 60 seconds &mdash; same-day service, no callout fee.
         </p>
       </div>
-      {/* Split image area: 5★ rating + jobs-this-month */}
-      <div className="relative h-[160px] grid grid-cols-2 gap-px bg-line">
-        <div className="bg-green flex flex-col items-center justify-center text-ink p-4">
-          <div className="font-display text-[44px] font-bold leading-none tracking-[-0.03em]">★ 5.0</div>
-          <div className="text-[10px] font-mono uppercase tracking-[0.18em] mt-2 text-ink-soft">Avg rating</div>
+      {/* Image area — atmospheric "photo" placeholder with overlay text + rating badge */}
+      <div className="relative h-[180px] overflow-hidden bg-ink">
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background: `
+              radial-gradient(circle at 75% 25%, rgba(0,255,136,0.22), transparent 55%),
+              radial-gradient(circle at 20% 80%, rgba(0,255,136,0.08), transparent 50%),
+              linear-gradient(140deg, #1a1a1a 0%, #0a0a0a 100%)
+            `,
+          }}
+        />
+        {/* subtle grain for atmosphere */}
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+          }}
+        />
+        {/* Rating badge top-right */}
+        <div className="absolute top-3 right-3 bg-green text-ink px-2.5 py-1 rounded font-mono text-[10px] uppercase tracking-[0.14em] font-bold flex items-center gap-1">
+          <span className="text-[11px] leading-none">★</span>
+          <span>4.9 &middot; 200 reviews</span>
         </div>
-        <div className="bg-ink flex flex-col items-center justify-center text-cream p-4">
-          <div className="font-display text-[40px] font-bold leading-none tracking-[-0.03em]">200+</div>
-          <div className="text-[10px] font-mono uppercase tracking-[0.18em] mt-2 text-cream/60">Jobs this month</div>
+        {/* Overlay text bottom-left */}
+        <div className="relative h-full flex flex-col justify-end p-5">
+          <div className="text-cream font-display text-[28px] md:text-[32px] font-bold tracking-[-0.03em] leading-[1.05] mb-1.5">
+            Adelaide sparkies,
+            <br />
+            <span className="text-green">5★ rated.</span>
+          </div>
+          <div className="text-cream/65 text-[10px] font-mono uppercase tracking-[0.18em]">
+            Same-day &middot; No callout fee
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-between p-4 gap-3 bg-cream-alt">
