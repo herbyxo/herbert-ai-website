@@ -34,43 +34,24 @@ export default function Footer() {
     <footer className="bg-cream border-t border-line">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-10">
 
-        {/* Big typographic anchor */}
-        <div
-          aria-hidden
-          className="font-display text-ink leading-[0.88] tracking-[-0.04em] font-bold"
-          style={{ fontSize: 'var(--text-display-md)' }}
-        >
-          Built to run itself<span className="text-green-deep">.</span>
-        </div>
+        {/* Big typographic anchor — the wordmark at display scale */}
+        <Link href="/" data-magnetic aria-label="Herbert AI — home" className="inline-flex items-baseline gap-3 group">
+          <span
+            className="font-display text-ink leading-[0.88] tracking-[-0.04em] font-bold"
+            style={{ fontSize: 'var(--text-display-md)' }}
+          >
+            herbert ai
+          </span>
+          <span
+            className="rounded-full bg-green shrink-0"
+            style={{ width: '0.5em', height: '0.5em', boxShadow: '0 0 16px var(--green-glow)' }}
+          />
+        </Link>
 
         {/* Divider */}
         <div className="mt-16 lg:mt-24 pt-10 border-t border-line grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 lg:gap-12">
           {/* Identity */}
           <div className="max-w-[36ch]">
-            <Link href="/" data-magnetic className="inline-flex items-center gap-2.5 mb-5">
-              <svg
-                aria-hidden
-                viewBox="0 0 32 32"
-                className="w-6 h-6 shrink-0"
-                style={{ filter: 'drop-shadow(0 0 6px var(--green-glow))' }}
-              >
-                <rect width="32" height="32" rx="7" fill="#0A0A0A" />
-                <text
-                  x="50%"
-                  y="24"
-                  fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
-                  fontWeight="700"
-                  fontSize="22"
-                  letterSpacing="-1"
-                  fill="#F5F0E5"
-                  textAnchor="middle"
-                >
-                  h
-                </text>
-                <circle cx="24.5" cy="8.5" r="2.4" fill="#00FF88" />
-              </svg>
-              <span className="text-[16px] font-semibold tracking-[-0.02em] text-ink">herbert ai</span>
-            </Link>
             <p className="text-muted text-[14px] leading-[1.6] max-w-md">
               Adelaide-based automation &amp; growth studio for SMBs.
               Custom-built systems &mdash; ads, websites, dashboards, voice agents,

@@ -36,9 +36,9 @@ function FinalCTA() {
                 fontWeight: 800,
               }}
             >
-              Keen to earn more,
+              Got something
               <br />
-              run less admin?
+              worth building?
             </h2>
 
             <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">
