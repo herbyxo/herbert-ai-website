@@ -102,7 +102,7 @@ const jsonLd = {
   logo: `${SITE_URL}/icon.svg`,
   image: `${SITE_URL}/opengraph-image`,
   telephone: '+61448111840',
-  email: 'herbert_aisolutions@outlook.com',
+  email: 'hello@herbert-aisolutions.com',
   founder: { '@type': 'Person', name: 'Will Herbert', jobTitle: 'Founder' },
   address: {
     '@type': 'PostalAddress',

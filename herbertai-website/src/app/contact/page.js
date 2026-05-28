@@ -69,8 +69,8 @@ export default function Contact() {
           {/* Info */}
           <div className="space-y-5">
             <InfoCard label="Email">
-              <a href="mailto:herbert_aisolutions@outlook.com" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors break-words">
-                herbert_aisolutions@outlook.com
+              <a href="mailto:hello@herbert-aisolutions.com" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors break-words">
+                hello@herbert-aisolutions.com
               </a>
             </InfoCard>
             <InfoCard label="Phone">
