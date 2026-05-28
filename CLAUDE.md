@@ -11,23 +11,21 @@ Herbert AI has repositioned as an **automation & growth studio for SMBs** (targe
 
 ---
 
-## 🚧 Active redesign — read these BEFORE making any design changes
+## ✅ Art-directed studio register — SHIPPED on `main` (live)
 
-A full art-directed homepage rebuild is in progress on branch **`preview/art-direction-homepage`**. The site has moved off the warm-trade register (white/gray-50/black CTA) and onto an art-directed studio register (cream + ink + neon green, Bricolage Grotesque display + Geist, magnetic cursor, scroll storytelling).
+The full art-directed homepage rebuild is **done, merged to `main`, and live** at herbert-aisolutions.com. The site moved off the warm-trade register (white/gray-50/black CTA) onto an art-directed studio register: cream + ink + neon green, Bricolage Grotesque display + Geist, magnetic cursor, Lenis smooth scroll, scroll-storytelling chapters.
 
-**Source of truth — read in this order before touching anything visual:**
+**Source of truth for any visual change — read before touching anything visual:**
 1. `herbertai-website/docs/design/CHARTER.md` — locked register, palette, type system, signature interactions, anti-references
-2. `herbertai-website/docs/design/PLAN.md` — phase-by-phase work order, asset list, locked hero copy, what's in/out of scope
+2. `herbertai-website/docs/design/PLAN.md` — original phase plan + asset list (historical; build is complete)
 
-**Where the build is up to (8 phases total):**
-- ✅ Phase 0 — Foundation (Framer Motion + Lenis + Bricolage, motion primitives, type/radius/spacing tokens)
-- ✅ Phase 1 — Header rebuild (magnetic links, fullscreen mobile overlay)
-- ✅ Phase 2 — Hero (3-line stacked manifesto with green flood, no stat row, founder note + question-prompt 2nd CTA)
-- ✅ Phase 3 — GROW chapter (4 mockups: paid ad / SEO ranking / SMS funnel / analytics, with ghosted 01-04 indices)
-- ⏭ Phase 4 — AUTOMATE chapter (voice agent transcript, n8n flow, chatbot conversation)
-- ⏭ Phase 5 — BUILD chapter (dashboard, booking flow, admin panel)
-- ⏭ Phase 6 — Footer + final CTA rebuild
-- ⏭ Phase 7 — Polish + ship checklist + merge to main
+**Current homepage structure** (`src/app/page.js`): `Hero → GrowChapter → AutomateChapter → BuildChapter → FinalCTA`. Pricing section was dropped from the homepage (lives at `/pricing`). Primary CTA is the `/start` async intake page (replaced "book a call").
+
+**Key components:**
+- `components/Hero.js` — 3-line manifesto, green-flood wipe, founder note + question-prompt CTAs. Uses `useReducedMotion()` + `initial={false}` (do NOT revert — fixes a blank-hero bug under reduce-motion).
+- `components/motion/` — `MagneticCursor`, `LenisProvider`, `RevealOnScroll`
+- `components/chapters/` — `GrowChapter` (barber "Forge Barber"), `AutomateChapter`, `BuildChapter` (pilates "Studio Twenty")
+- Hero display floor is `clamp(60px, 14vw, 280px)` — tuned for iPhone-X-and-up (375px+).
 
 **Locked hero copy** (don't rewrite without explicit ask):
 ```
@@ -36,9 +34,8 @@ More money.        ← green flood / accent
 Built to run itself.
 ```
 Sub-line: *"Adelaide-based automation & growth studio. Custom-built, shipped in weeks."*
-Founder note: *"Hi — I'm Will. Tell me where the friction is, I'll show you what I'd build."*
 
-**The "Legacy conventions" section below describes the OLD warm-trade register and is being phased out.** Do not follow it for new work. CHARTER.md supersedes everything below.
+**The "Legacy conventions" section below describes the OLD warm-trade register that was replaced.** Do not follow it. CHARTER.md supersedes everything below.
 
 ---
 
