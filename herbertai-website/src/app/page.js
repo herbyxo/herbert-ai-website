@@ -36,14 +36,14 @@ function FinalCTA() {
                 fontWeight: 800,
               }}
             >
-              Tell me what&rsquo;s slow.
+              Keen to earn more,
               <br />
-              I&rsquo;ll show you what I&rsquo;d build.
+              run less admin?
             </h2>
 
             <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">
-              30-minute call. No deck, no pitch. You walk me through the bottleneck;
-              I tell you whether it&rsquo;s worth building, what it would cost, and how long it would take.
+              30-minute call. No pitch, no deck. You&rsquo;ll leave with a fixed quote
+              and timeline &mdash; or a clear no.
             </p>
           </div>
 
