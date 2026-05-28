@@ -50,11 +50,11 @@ function FinalCTA() {
           {/* Right: single CTA + founder note */}
           <div className="lg:col-span-5 flex flex-col gap-6 lg:items-end">
             <Link
-              href="/contact"
+              href="/start"
               data-magnetic
               className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
             >
-              Book a 30-min call <span aria-hidden>→</span>
+              Tell me about your business <span aria-hidden>→</span>
             </Link>
 
             <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">

@@ -18,6 +18,7 @@ const NAV_COLS = [
   {
     label: 'Talk',
     links: [
+      ['/start', 'Start a project'],
       ['/contact', 'Book a call'],
       ['/faq', 'FAQ'],
       ['mailto:hello@herbert-aisolutions.com', 'hello@herbert-aisolutions.com'],

@@ -8,6 +8,7 @@ export default function sitemap() {
     { path: '/industries', priority: 0.9 },
     { path: '/pricing', priority: 0.9 },
     { path: '/about', priority: 0.8 },
+    { path: '/start', priority: 0.95 },
     { path: '/contact', priority: 0.8 },
     { path: '/faq', priority: 0.7 },
     { path: '/property-managers', priority: 0.8 },

@@ -51,11 +51,11 @@ export default function Header() {
 
         <div className="hidden md:block">
           <Link
-            href="/contact"
+            href="/start"
             data-magnetic
             className="bg-ink text-cream px-4 py-2 rounded-full text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
           >
-            Get started <span aria-hidden>→</span>
+            Start a project <span aria-hidden>→</span>
           </Link>
         </div>
 
@@ -213,11 +213,11 @@ function MobileOverlay({ onClose }) {
         className="px-6 mt-10"
       >
         <Link
-          href="/contact"
+          href="/start"
           onClick={onClose}
           className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2"
         >
-          Get started <span aria-hidden>→</span>
+          Start a project <span aria-hidden>→</span>
         </Link>
       </motion.div>
     </motion.div>

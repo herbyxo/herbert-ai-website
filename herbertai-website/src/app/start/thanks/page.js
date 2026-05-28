@@ -1,0 +1,63 @@
+import Link from 'next/link'
+
+export const metadata = {
+  title: 'Brief received',
+  description: 'Your project brief is in. Will reply within a business day.',
+  alternates: { canonical: '/start/thanks' },
+  robots: { index: false, follow: true },
+}
+
+export default function Thanks() {
+  return (
+    <section className="bg-cream">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 min-h-[80vh] flex flex-col justify-center py-20 md:py-28">
+        <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+          <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+          <span>Brief received</span>
+        </div>
+
+        <h1
+          className="font-display text-ink"
+          style={{
+            fontSize: 'var(--text-display-lg)',
+            lineHeight: 0.92,
+            letterSpacing: '-0.04em',
+            fontWeight: 800,
+          }}
+        >
+          Got it.
+          <br />
+          Talk soon.
+        </h1>
+
+        <p className="mt-9 md:mt-12 max-w-[60ch] text-[17px] md:text-[19px] text-muted leading-[1.55]">
+          Your brief landed. I&rsquo;ll come back within a business day with one of
+          three things: a fixed quote and timeline, a clarifying question or two,
+          or a clear no.
+        </p>
+
+        <p className="mt-6 max-w-[60ch] text-[15px] md:text-[16px] text-ink-soft leading-[1.6]">
+          Check your inbox &mdash; I&rsquo;ve sent a confirmation echo with what you submitted,
+          so you have a copy and so you can reply if you forgot anything.
+        </p>
+
+        <div className="mt-12 flex flex-wrap items-center gap-4">
+          <Link
+            href="/"
+            data-magnetic
+            className="bg-ink text-cream px-6 py-3.5 rounded-full text-[15px] font-semibold inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
+          >
+            <span aria-hidden>&larr;</span> Back to home
+          </Link>
+          <Link
+            href="/case-studies"
+            data-magnetic
+            className="text-[14px] font-medium text-ink hover:text-green-deep transition"
+          >
+            See recent builds &rarr;
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
