@@ -42,8 +42,7 @@ function FinalCTA() {
             </h2>
 
             <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">
-              Send me the details. I&rsquo;ll come back within a business day with a fixed quote
-              and timeline &mdash; or a clear no. No pitch deck, no sales call.
+              Email me direct, or tell me a bit about your operations below.
             </p>
           </div>
 
