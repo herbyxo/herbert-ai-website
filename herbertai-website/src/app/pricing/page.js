@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
   title: 'Pricing',
@@ -12,6 +13,25 @@ export const metadata = {
     url: '/pricing',
   },
 }
+
+const tiers = [
+  {
+    range: '$1k — $3k',
+    title: 'Small fix · tune-up',
+    body: 'A few hours of work. Site edits, a single page added, prompt tuning on a live voice agent, a one-off workflow.',
+  },
+  {
+    range: '$3k — $10k',
+    title: 'Productised pattern',
+    body: 'A new website. A voice agent build with custom prompt. A chatbot widget. A defined automation workflow.',
+    common: true,
+  },
+  {
+    range: '$10k — $25k+',
+    title: 'Full custom build',
+    body: 'Operator console with bookings, customers, reports. Bespoke booking system. Multi-system integration.',
+  },
+]
 
 const models = [
   {
@@ -71,214 +91,241 @@ const faqs = [
 export default function Pricing() {
   return (
     <>
-      {/* Hero */}
+      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
           <Eyebrow>Pricing</Eyebrow>
-          <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
-            Priced on scope. <span className="serif-em text-green-deep">Not on a menu.</span>
+          <h1
+            className="font-display text-ink max-w-[14ch]"
+            style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
+          >
+            Priced on scope.
+            <br />
+            Not on a menu.
           </h1>
-          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch] mb-9">
-            Every business needs something different &mdash; so every quote starts with a free 30-minute scoping
-            call. You walk away with a fixed quote and timeline, or a clear no. No hourly creep, no lock-in, no agency overhead.
+          <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[56ch]">
+            Every business needs something different &mdash; so every quote starts with a free
+            30-minute scoping call. You walk away with a fixed quote and timeline, or a clear no.
+            No hourly creep, no lock-in, no agency overhead.
           </p>
           <Link
             href="/contact"
             data-magnetic
-            className="bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
+            className="mt-10 bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
           >
             Book a free 30-min call <span aria-hidden>&rarr;</span>
           </Link>
         </div>
       </section>
 
-      {/* Typical range — horizontal scale */}
-      <section className="bg-cream border-y border-line">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
-          <div className="max-w-[44ch] mb-14">
+      {/* ─── Typical range — horizontal scale on the page surface ─── */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
+          <RevealOnScroll>
             <Eyebrow>What it usually costs</Eyebrow>
-            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Most projects fall between <span className="serif-em">$1k and $15k.</span>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <h2
+              className="font-display text-ink max-w-[16ch] mb-16"
+              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+            >
+              Most projects land between $1k and $15k.
             </h2>
-          </div>
+          </RevealOnScroll>
 
-          {/* Scale */}
           <div className="relative">
-            {/* The connecting line (desktop only) */}
-            <div className="hidden md:block absolute top-[10px] left-0 right-0 h-px bg-ink/15" aria-hidden />
+            {/* connecting line (desktop) */}
+            <div className="hidden md:block absolute top-[7px] left-0 right-0 h-px bg-ink/15" aria-hidden />
 
-            <div className="grid md:grid-cols-3 gap-10 md:gap-0 relative">
-              {[
-                {
-                  range: '$1k  →  $3k',
-                  title: 'Small fix · tune-up',
-                  body: 'A few hours of work. Site edits, a single page added, prompt tuning on a live voice agent, a one-off workflow.',
-                },
-                {
-                  range: '$3k  →  $10k',
-                  title: 'Productised pattern',
-                  body: 'A new website. A voice agent build with custom prompt. A chatbot widget. A defined automation workflow.',
-                  highlight: true,
-                },
-                {
-                  range: '$10k  →  $25k+',
-                  title: 'Full custom build',
-                  body: 'Operator console with bookings, customers, reports. Bespoke booking system. Multi-system integration.',
-                },
-              ].map((t, i) => (
-                <div
+            <div className="grid md:grid-cols-3 gap-12 md:gap-0 relative">
+              {tiers.map((t, i) => (
+                <RevealOnScroll
                   key={t.title}
-                  className={`relative ${i === 0 ? 'md:pr-8' : i === 1 ? 'md:px-8 md:border-x md:border-line/0' : 'md:pl-8'}`}
+                  delay={i * 0.08}
+                  className={i === 0 ? 'md:pr-10' : i === 1 ? 'md:px-10' : 'md:pl-10'}
                 >
-                  {/* Marker dot — sits on the line */}
-                  <div
-                    aria-hidden
-                    className={`hidden md:block absolute top-[6px] left-0 w-[10px] h-[10px] rounded-full ${
-                      t.highlight ? 'bg-green-deep ring-4 ring-green/15' : 'bg-ink'
-                    } z-10`}
-                  />
-
-                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted mb-8 md:pl-5">
-                    {t.range}
+                  <div className="relative">
+                    {/* marker dot — green only on the common path (signature guidance accent) */}
+                    <div
+                      aria-hidden
+                      className={`hidden md:block absolute top-[2px] left-0 w-[11px] h-[11px] rounded-full z-10 ${
+                        t.common ? 'bg-green-deep ring-4 ring-green/15' : 'bg-ink'
+                      }`}
+                    />
+                    <div className="md:pl-6">
+                      <div
+                        className="font-display text-ink mb-5"
+                        style={{ fontSize: '30px', letterSpacing: '-0.03em', fontWeight: 800 }}
+                      >
+                        {t.range}
+                      </div>
+                      <h3 className="text-[19px] font-medium tracking-[-0.01em] text-ink mb-2.5 flex items-center gap-2.5 flex-wrap">
+                        {t.title}
+                        {t.common && (
+                          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-green-deep">
+                            most common
+                          </span>
+                        )}
+                      </h3>
+                      <p className="text-[14px] text-muted leading-[1.6] max-w-[34ch]">{t.body}</p>
+                    </div>
                   </div>
-                  <div className="md:pl-5">
-                    <h3 className="text-[20px] font-medium tracking-[-0.01em] text-ink mb-2">
-                      {t.title}
-                      {t.highlight && (
-                        <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.16em] text-green-deep align-middle">
-                          most common
-                        </span>
-                      )}
-                    </h3>
-                    <p className="text-[14px] text-muted leading-[1.6] max-w-[34ch]">
-                      {t.body}
-                    </p>
-                  </div>
-                </div>
+                </RevealOnScroll>
               ))}
             </div>
           </div>
 
-          {/* Retainer note */}
-          <div className="mt-14 pt-6 border-t border-line flex flex-wrap items-baseline gap-x-6 gap-y-2">
+          {/* retainer note */}
+          <div className="mt-16 pt-6 border-t border-line flex flex-wrap items-baseline gap-x-6 gap-y-2">
             <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">Retainers</div>
             <div className="text-[15px] text-ink-soft">
-              From <span className="font-semibold text-ink">$150/mo</span> for ongoing systems &mdash; hosting, monitoring, prompt updates, content changes. Cancel anytime.
+              From <span className="font-semibold text-ink">$150/mo</span> for ongoing systems &mdash; hosting,
+              monitoring, prompt updates, content changes. Cancel anytime.
             </div>
           </div>
         </div>
       </section>
 
-      {/* Three models — editorial directory rows */}
-      <section className="bg-cream-alt border-y border-line reveal">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <div className="max-w-[44ch] mb-16">
+      {/* ─── Three models — discrete cards (CHARTER-blessed object) ─ */}
+      <section className="bg-cream-alt">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
+          <RevealOnScroll>
             <Eyebrow>How we price</Eyebrow>
-            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Three models. <span className="serif-em text-green-deep">One fits.</span>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <h2
+              className="font-display text-ink max-w-[12ch] mb-16"
+              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+            >
+              Three models. One fits.
             </h2>
-          </div>
+          </RevealOnScroll>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {models.map((m) => (
-              <div
-                key={m.n}
-                className={`rounded-3xl p-8 border flex flex-col ${m.highlight ? 'bg-ink text-white border-ink' : 'bg-cream border-line'}`}
-              >
-                <div className="flex items-center gap-2 mb-8">
-                  <span className={`font-mono text-[11px] ${m.highlight ? 'text-white/40' : 'text-muted'}`}>{m.n}</span>
-                  <span className={`w-1 h-1 rounded-full ${m.highlight ? 'bg-green' : 'bg-green-deep'}`} />
-                  <span className={`font-mono text-[11px] uppercase tracking-[0.18em] ${m.highlight ? 'text-white/55' : 'text-muted'}`}>{m.tag}</span>
-                  {m.highlight && (
-                    <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.16em] text-green">Common</span>
-                  )}
-                </div>
-                <h3 className={`text-[26px] md:text-[28px] font-medium tracking-[-0.02em] mb-4 ${m.highlight ? 'text-white' : 'text-ink'}`}>
-                  {m.name}
-                </h3>
-                <p className={`text-[15px] leading-[1.65] mb-7 ${m.highlight ? 'text-white/70' : 'text-muted'}`}>
-                  {m.body}
-                </p>
-
-                <div className={`mt-auto pt-6 border-t ${m.highlight ? 'border-white/15' : 'border-line'}`}>
-                  <div className={`font-mono text-[10px] uppercase tracking-[0.18em] mb-3 ${m.highlight ? 'text-white/50' : 'text-muted'}`}>
-                    Typical fit
+            {models.map((m, i) => (
+              <RevealOnScroll key={m.n} delay={i * 0.08} className="h-full">
+                <div
+                  className={`rounded-3xl p-8 border flex flex-col h-full ${
+                    m.highlight ? 'bg-ink text-cream border-ink' : 'bg-cream border-line'
+                  }`}
+                >
+                  <div className="flex items-center gap-2 mb-8">
+                    <span className={`font-mono text-[11px] ${m.highlight ? 'text-cream/40' : 'text-muted'}`}>{m.n}</span>
+                    <span className={`w-1 h-1 rounded-full ${m.highlight ? 'bg-green' : 'bg-green-deep'}`} />
+                    <span className={`font-mono text-[11px] uppercase tracking-[0.18em] ${m.highlight ? 'text-cream/55' : 'text-muted'}`}>
+                      {m.tag}
+                    </span>
                   </div>
-                  <ul className="space-y-2">
-                    {m.fits.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5">
-                        <span className={`w-1 h-1 rounded-full mt-2 shrink-0 ${m.highlight ? 'bg-green' : 'bg-green-deep'}`} />
-                        <span className={`text-[14px] leading-[1.45] ${m.highlight ? 'text-white/80' : 'text-ink-soft'}`}>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className={`text-[26px] md:text-[28px] font-medium tracking-[-0.02em] mb-4 ${m.highlight ? 'text-cream' : 'text-ink'}`}>
+                    {m.name}
+                  </h3>
+                  <p className={`text-[15px] leading-[1.65] mb-7 ${m.highlight ? 'text-cream/70' : 'text-muted'}`}>
+                    {m.body}
+                  </p>
+                  <div className={`mt-auto pt-6 border-t ${m.highlight ? 'border-cream/15' : 'border-line'}`}>
+                    <div className={`font-mono text-[10px] uppercase tracking-[0.18em] mb-3 ${m.highlight ? 'text-cream/50' : 'text-muted'}`}>
+                      Typical fit
+                    </div>
+                    <ul className="space-y-2">
+                      {m.fits.map((f) => (
+                        <li key={f} className="flex items-start gap-2.5">
+                          <span className={`w-1 h-1 rounded-full mt-2 shrink-0 ${m.highlight ? 'bg-green' : 'bg-green-deep'}`} />
+                          <span className={`text-[14px] leading-[1.45] ${m.highlight ? 'text-cream/80' : 'text-ink-soft'}`}>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What you can expect from a quote */}
-      <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 reveal">
-        <div>
-          <Eyebrow>What you get in a quote</Eyebrow>
-          <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[16ch] text-ink">
-            One number. <span className="serif-em text-green-deep">Real timeline.</span>
-          </h2>
-        </div>
-        <div className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
-          <p>
-            Every quote includes: a written scope of what gets built, a fixed price (not a range),
-            a delivery date, what&apos;s in scope and what isn&apos;t, and what happens if you want to
-            change something mid-build.
-          </p>
-          <p>
-            If the project comes in faster than expected, the price stays the same — but I&apos;ll
-            mention it before billing. If something genuinely outside the scope comes up, I quote
-            it separately rather than letting it creep into the original number.
-          </p>
-          <p>
-            For ongoing retainers, the monthly number covers everything in scope — no hidden
-            per-call, per-message, or per-request fees buried in the terms.
-          </p>
+      {/* ─── What's in a quote — editorial split ──────────────────── */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+          <div>
+            <RevealOnScroll>
+              <Eyebrow>What you get in a quote</Eyebrow>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.08}>
+              <h2
+                className="font-display text-ink max-w-[12ch]"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+              >
+                One number. A real timeline.
+              </h2>
+            </RevealOnScroll>
+          </div>
+          <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
+            <div className="space-y-5">
+              <p>
+                Every quote includes: a written scope of what gets built, a fixed price (not a range),
+                a delivery date, what&apos;s in scope and what isn&apos;t, and what happens if you want to
+                change something mid-build.
+              </p>
+              <p>
+                If the project comes in faster than expected, the price stays the same — but I&apos;ll
+                mention it before billing. If something genuinely outside the scope comes up, I quote
+                it separately rather than letting it creep into the original number.
+              </p>
+              <p>
+                For ongoing retainers, the monthly number covers everything in scope — no hidden
+                per-call, per-message, or per-request fees buried in the terms.
+              </p>
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
-      {/* FAQs */}
-      <section className="bg-cream-alt border-y border-line reveal">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <div className="max-w-[44ch] mb-12">
+      {/* ─── FAQs ─────────────────────────────────────────────────── */}
+      <section className="bg-cream-alt">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
+          <RevealOnScroll>
             <Eyebrow>Pricing FAQs</Eyebrow>
-            <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] text-ink">
-              Common questions. <span className="serif-em text-green-deep">Straight answers.</span>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <h2
+              className="font-display text-ink max-w-[14ch] mb-14"
+              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+            >
+              Common questions. Straight answers.
             </h2>
-          </div>
+          </RevealOnScroll>
           <div className="grid md:grid-cols-2 gap-5">
-            {faqs.map((f) => (
-              <div key={f.q} className="bg-cream border border-line rounded-3xl p-7 lift">
-                <h3 className="text-[17px] font-medium text-ink mb-2.5 tracking-[-0.01em]">{f.q}</h3>
-                <p className="text-[15px] text-muted leading-[1.6]">{f.a}</p>
-              </div>
+            {faqs.map((f, i) => (
+              <RevealOnScroll key={f.q} delay={(i % 2) * 0.08}>
+                <div className="bg-cream border border-line rounded-3xl p-7 lift h-full">
+                  <h3 className="text-[17px] font-medium text-ink mb-2.5 tracking-[-0.01em]">{f.q}</h3>
+                  <p className="text-[15px] text-muted leading-[1.6]">{f.a}</p>
+                </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto reveal">
-        <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
-          <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
-          <div className="relative">
-            <Eyebrow color="white" center>Free scoping call</Eyebrow>
-            <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[22ch] mx-auto">
-              30 minutes. <span className="serif-em text-green">No deck, no pitch.</span>
-            </h2>
-            <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[54ch] mx-auto">
-              You walk me through the bottleneck. I walk you through what I&apos;d build, what it would cost,
-              and how long it would take. You leave with a fixed quote &mdash; or a clear no.
-            </p>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 justify-center">
+      {/* ─── Closing CTA — full-bleed ink (matches homepage FinalCTA) ─ */}
+      <section className="bg-ink text-cream relative overflow-hidden">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+            <div className="lg:col-span-8">
+              <Eyebrow color="white">Free scoping call</Eyebrow>
+              <h2
+                className="font-display text-cream"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
+              >
+                Thirty minutes.
+                <br />
+                No deck, no pitch.
+              </h2>
+              <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
+                You walk me through the bottleneck. I walk you through what I&apos;d build, what it would
+                cost, and how long it would take. You leave with a fixed quote &mdash; or a clear no.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
                 href="/contact"
                 data-magnetic
@@ -286,7 +333,7 @@ export default function Pricing() {
               >
                 Book a free 30-min call <span aria-hidden>&rarr;</span>
               </Link>
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/45">
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
                 Fixed quote within 24 hours
               </span>
             </div>
@@ -297,13 +344,13 @@ export default function Pricing() {
   )
 }
 
-function Eyebrow({ children, color = 'ink', center }) {
+/* ─── Eyebrow ──────────────────────────────────────────────────── */
+function Eyebrow({ children, color = 'ink' }) {
   const isWhite = color === 'white'
   return (
-    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
+    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
-      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }
