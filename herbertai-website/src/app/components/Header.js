@@ -103,7 +103,7 @@ function DropdownLink({ label, children }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div className="absolute left-0 top-full mt-3 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+      <div className="absolute left-0 top-full pt-3 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
         <div className="bg-cream border border-line rounded-2xl shadow-[0_8px_32px_rgba(10,10,10,0.06)] py-2">
           {children}
         </div>
