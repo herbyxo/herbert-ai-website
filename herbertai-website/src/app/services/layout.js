@@ -1,12 +1,12 @@
 export const metadata = {
-  title: 'Services',
+  title: 'Web design, AI & automation — Adelaide',
   description:
-    'Three service buckets — Grow (ads, SEO, email, landing pages), Automate (AI voice agents, chatbots, workflow automation, CRM), and Build (custom websites, dashboards, booking systems). Productised plans + custom builds quoted on scope.',
+    'Adelaide web design & development, AI voice agents, chatbots, and workflow automation for small business. Three buckets — Grow (ads, SEO, email, landing pages), Automate (voice, chat, n8n, CRM), Build (custom websites, dashboards, booking systems). Productised plans + custom builds quoted on scope.',
   alternates: { canonical: '/services' },
   openGraph: {
-    title: 'Services · Herbert AI',
+    title: 'Web design, AI & automation in Adelaide · Herbert AI',
     description:
-      'Three service buckets — Grow, Automate, Build. Custom AI voice agents, websites, dashboards, workflow automation for SMBs.',
+      'Adelaide web design, development, AI voice agents, chatbots and workflow automation for SMBs. Grow, Automate, Build — productised plans + custom builds.',
     url: '/services',
   },
 }
