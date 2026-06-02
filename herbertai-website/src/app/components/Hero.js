@@ -68,23 +68,14 @@ export default function Hero() {
           Adelaide-based automation &amp; growth studio. Custom-built, shipped in weeks.
         </motion.p>
 
-        <motion.p
-          initial={init(16)}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 1.0, ease: EASE }}
-          className="mt-10 md:mt-12 text-[15px] md:text-[16px] text-ink-soft leading-[1.55] max-w-[52ch]"
-        >
-          Hi &mdash; I&rsquo;m Will. Tell me where the friction is, I&rsquo;ll show you what I&rsquo;d build.
-        </motion.p>
-
         <motion.div
           initial={init(16)}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 1.15, ease: EASE }}
-          className="mt-6 md:mt-7 flex flex-wrap gap-3"
+          transition={{ duration: 0.55, delay: 1.0, ease: EASE }}
+          className="mt-10 md:mt-12 flex flex-wrap gap-3"
         >
           <Link
-            href="/contact"
+            href="/start"
             data-magnetic
             className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
           >
