@@ -115,7 +115,7 @@ export default function Services() {
           <p className="text-[15px] text-muted leading-[1.6] mt-4 max-w-[60ch]">
             Got a specific industry?{' '}
             <Link href="/industries" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
-              See example systems we build for your trade
+              See if it&rsquo;s one we work with
             </Link>.
           </p>
         </div>
