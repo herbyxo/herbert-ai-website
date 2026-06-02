@@ -83,33 +83,28 @@ export default function Industries() {
             </h2>
           </RevealOnScroll>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {industries.map((ind, i) => {
-              const Wrapper = ind.href ? Link : 'div'
-              const wrapperProps = ind.href
-                ? { href: ind.href, className: 'block group h-full' }
-                : { className: 'h-full' }
-              return (
-                <RevealOnScroll key={ind.tag} delay={(i % 3) * 0.08} className="h-full">
-                  <Wrapper {...wrapperProps}>
-                    <div className="bg-cream border border-line rounded-3xl p-7 flex flex-col lift h-full">
-                      <div className="flex items-center gap-2 mb-6">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-deep shrink-0" />
-                        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{ind.tag}</span>
-                      </div>
-                      <h3 className="text-[22px] md:text-[24px] font-medium tracking-[-0.01em] text-ink leading-[1.25]">
-                        {ind.description}
-                      </h3>
-                      {ind.proof && (
-                        <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted mt-auto pt-6">
-                          · {ind.proof}
-                        </p>
-                      )}
-                    </div>
-                  </Wrapper>
-                </RevealOnScroll>
-              )
-            })}
+          {/* Editorial list — hairline rows, not cards */}
+          <div className="border-b border-line">
+            {industries.map((ind, i) => (
+              <RevealOnScroll key={ind.tag} delay={i * 0.05}>
+                <div className="grid md:grid-cols-[1fr_1.1fr] md:items-baseline gap-x-8 py-7 md:py-8 border-t border-line transition-[padding] duration-300 md:hover:pl-3">
+                  <div className="flex items-baseline gap-4">
+                    <span className="font-mono text-[12px] text-muted tracking-[0.1em] shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <h3
+                      className="font-display text-ink leading-[1] tracking-[-0.03em]"
+                      style={{ fontSize: 'clamp(28px, 4vw, 36px)', fontWeight: 800 }}
+                    >
+                      {ind.tag}
+                    </h3>
+                  </div>
+                  <p className="mt-2 md:mt-0 text-[16px] md:text-[18px] text-muted leading-[1.5]">
+                    {ind.description}
+                  </p>
+                </div>
+              </RevealOnScroll>
+            ))}
           </div>
         </div>
       </section>
