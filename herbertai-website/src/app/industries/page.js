@@ -17,29 +17,27 @@ export const metadata = {
 const industries = [
   {
     tag: 'Trades',
-    description: 'Sparkies, plumbers, builders, HVAC',
-    proof: 'Master Freeze · Guy’s Electrical',
+    description: 'sparkies, plumbers, builders, HVAC',
   },
   {
     tag: 'Hospitality',
-    description: 'Cafés, restaurants, salons, gyms',
-    proof: 'Blendz By Ben',
+    description: 'cafés, restaurants, salons, gyms',
   },
   {
     tag: 'Property',
-    description: 'Residential property management',
+    description: 'residential property management',
   },
   {
     tag: 'Accounting',
-    description: 'Accountants, bookkeepers, tax agents',
+    description: 'accountants, bookkeepers, tax agents',
   },
   {
     tag: 'Health',
-    description: 'Physio, chiro, OT, dental, allied health',
+    description: 'physio, chiro, OT, dental, allied health',
   },
   {
     tag: 'Creative',
-    description: 'Photographers, videographers, designers',
+    description: 'photographers, videographers, designers',
   },
 ]
 
@@ -94,7 +92,7 @@ export default function Industries() {
               return (
                 <RevealOnScroll key={ind.tag} delay={(i % 3) * 0.08} className="h-full">
                   <Wrapper {...wrapperProps}>
-                    <div className={`bg-cream border border-line rounded-3xl p-7 min-h-[200px] flex flex-col lift h-full ${ind.href ? 'group-hover:border-ink/30' : ''}`}>
+                    <div className="bg-cream border border-line rounded-3xl p-7 flex flex-col lift h-full">
                       <div className="flex items-center gap-2 mb-6">
                         <span className="w-1.5 h-1.5 rounded-full bg-green-deep shrink-0" />
                         <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{ind.tag}</span>
