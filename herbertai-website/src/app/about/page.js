@@ -1,14 +1,15 @@
 import Link from 'next/link'
+import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'About Will Herbert',
+  title: 'About — Adelaide web & automation studio',
   description:
-    'Will Herbert runs Herbert AI — a solo automation & growth studio in Adelaide, building bespoke systems for small business. Direct line to the builder, no agency overhead.',
+    'Will Herbert runs Herbert AI, an Adelaide web design & automation studio for small business. Solo builder, direct line, no agency overhead — websites, dashboards, voice agents, and workflow automation.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Will Herbert · Herbert AI',
+    title: 'About — Adelaide web & automation studio · Herbert AI',
     description:
-      'Solo automation & growth studio in Adelaide. Direct line to the builder.',
+      'Adelaide web design & automation studio for small business. Solo builder, direct line, no agency overhead.',
     url: '/about',
   },
 }
@@ -76,18 +77,21 @@ const recent = [
 export default function About() {
   return (
     <>
-      {/* Hero */}
+      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
           <Eyebrow>About</Eyebrow>
-          <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
-            Hi, I&apos;m <span className="serif-em text-green-deep">Will Herbert.</span> I build automation for small business.
+          <h1
+            className="font-display text-ink max-w-[20ch]"
+            style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
+          >
+            Hi, I&apos;m Will Herbert. I build automation for small business.
           </h1>
-          <div className="max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.6]">
+          <div className="mt-9 max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.55]">
             <p>
-              Herbert AI is a solo automation &amp; growth studio in Adelaide. I help small businesses grow and run themselves —
-              ad campaigns, websites, dashboards, voice agents, workflow automation, whatever the business
-              actually needs — for owners who want a thing built and don&apos;t want to hire an agency to do it.
+              Herbert AI is an Adelaide web design &amp; automation studio for small business. I help owners grow and
+              run themselves — ad campaigns, websites, dashboards, voice agents, workflow automation, whatever the
+              business actually needs — for people who want a thing built and don&apos;t want to hire an agency to do it.
             </p>
             <p>
               Started with AI receptionists for tradies, which is where the voice-agent proof comes from.
@@ -98,147 +102,188 @@ export default function About() {
         </div>
       </section>
 
-      {/* What I build */}
-      <section className="bg-cream-alt border-y border-line">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <div className="max-w-[40ch] mb-16">
-            <Eyebrow>What I actually build</Eyebrow>
-            <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-              Three kinds of work, <span className="serif-em text-green-deep">one builder.</span>
-            </h2>
-          </div>
+      {/* ─── What I build ─── */}
+      <section className="bg-cream-alt">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
+          <RevealOnScroll className="max-w-[40ch] mb-16">
+            <div>
+              <Eyebrow>What I actually build</Eyebrow>
+              <h2
+                className="font-display text-ink"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+              >
+                Three kinds of work, one builder.
+              </h2>
+            </div>
+          </RevealOnScroll>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {capabilities.map((c) => (
-              <div key={c.title} className="bg-cream rounded-3xl p-8 md:p-10 border border-line">
-                <div className="flex items-center gap-2 mb-7">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
-                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{c.tag}</span>
+            {capabilities.map((c, i) => (
+              <RevealOnScroll key={c.title} delay={i * 0.08} className="h-full">
+                <div className="bg-cream border border-line rounded-3xl p-7 h-full lift">
+                  <div className="flex items-center gap-2 mb-7">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+                    <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{c.tag}</span>
+                  </div>
+                  <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{c.title}</h3>
+                  <p className="text-[15px] text-muted leading-[1.6]">{c.body}</p>
                 </div>
-                <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{c.title}</h3>
-                <p className="text-[15px] text-muted leading-[1.6]">{c.body}</p>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How it goes */}
-      <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
-        <div>
-          <Eyebrow>How working with me actually goes</Eyebrow>
-          <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[18ch] text-ink">
-            Three steps. <span className="serif-em text-green-deep">No agency overhead.</span>
-          </h2>
-        </div>
-        <div className="grid gap-8 pt-1">
-          {steps.map((s) => (
-            <div key={s.n} className="flex gap-5">
-              <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{s.n}</span>
-              <div>
-                <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{s.title}</h3>
-                <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{s.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why solo */}
-      <section className="bg-cream-alt border-y border-line">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+      {/* ─── How it goes — editorial split ─── */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
           <div>
-            <Eyebrow>Why solo, why bespoke</Eyebrow>
-            <h2 className="text-[40px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] max-w-[16ch] text-ink">
-              No agency. <span className="serif-em text-green-deep">No template.</span>
-            </h2>
+            <RevealOnScroll>
+              <Eyebrow>How working with me actually goes</Eyebrow>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.08}>
+              <h2
+                className="font-display text-ink max-w-[14ch]"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+              >
+                Three steps. No agency overhead.
+              </h2>
+            </RevealOnScroll>
           </div>
-          <div className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7]">
-            <p>
-              You talk to the person building it. Not a sales rep, not an account manager,
-              not a junior who escalates to a senior. Me. That&apos;s the whole pitch.
-            </p>
-            <p>
-              No template either — your business doesn&apos;t look like the last one, and the system
-              shouldn&apos;t pretend it does. Custom prompts, custom dashboards, custom workflows. Quoted once, shipped, done.
-            </p>
-            <p>
-              No retainer, no lock-in, no quarterly business review. If it&apos;s working, leave it running.
-              If you need a tweak, message me.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Recent work */}
-      <section className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="max-w-[40ch] mb-12">
-          <Eyebrow>Recent work</Eyebrow>
-          <h2 className="text-[40px] md:text-[56px] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
-            A few things <span className="serif-em text-green-deep">running live.</span>
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-5">
-          {recent.map((r) => {
-            const inner = (
-              <>
-                <div className="flex items-center gap-2 mb-7">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
-                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{r.tag}</span>
+          <RevealOnScroll delay={0.12} className="grid gap-8 pt-1">
+            <div className="grid gap-8">
+              {steps.map((s) => (
+                <div key={s.n} className="flex gap-5">
+                  <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{s.n}</span>
+                  <div>
+                    <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{s.title}</h3>
+                    <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{s.body}</p>
+                  </div>
                 </div>
-                <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-3 text-ink">{r.name}</h3>
-                <p className="text-[14px] text-muted leading-[1.6] mb-7">{r.body}</p>
-                <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
-                  {r.external ? 'Visit site' : 'See more'} <span aria-hidden>→</span>
-                </span>
-              </>
-            )
-            return r.external ? (
-              <a
-                key={r.name}
-                href={r.href}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block lift"
-              >
-                {inner}
-              </a>
-            ) : (
-              <Link
-                key={r.name}
-                href={r.href}
-                className="bg-cream-alt rounded-3xl p-8 border border-line hover:border-ink/40 transition-colors block lift"
-              >
-                {inner}
-              </Link>
-            )
-          })}
+              ))}
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="px-6 lg:px-12 pb-24 md:pb-32 max-w-[1280px] mx-auto">
-        <div className="bg-ink text-white rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden">
-          <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
-          <div className="relative">
-            <Eyebrow color="white" center>Ready when you are</Eyebrow>
-            <h2 className="text-[40px] md:text-[64px] font-medium leading-[1.02] tracking-[-0.03em] mb-6 max-w-[18ch] mx-auto">
-              Got an idea? <span className="serif-em text-green">Get in touch.</span>
-            </h2>
-            <p className="text-white/70 text-[17px] leading-[1.6] mb-10 max-w-[52ch] mx-auto">
-              30-minute call, no pitch. Tell me the bottleneck — I&apos;ll tell you whether it&apos;s worth building.
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center">
+      {/* ─── Why solo — editorial split ─── */}
+      <section className="bg-cream-alt">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+          <div>
+            <RevealOnScroll>
+              <Eyebrow>Why solo, why bespoke</Eyebrow>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.08}>
+              <h2
+                className="font-display text-ink max-w-[12ch]"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+              >
+                No agency. No template.
+              </h2>
+            </RevealOnScroll>
+          </div>
+          <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
+            <div className="space-y-5">
+              <p>
+                You talk to the person building it. Not a sales rep, not an account manager,
+                not a junior who escalates to a senior. Me. That&apos;s the whole pitch.
+              </p>
+              <p>
+                No template either — your business doesn&apos;t look like the last one, and the system
+                shouldn&apos;t pretend it does. Custom prompts, custom dashboards, custom workflows. Quoted once, shipped, done.
+              </p>
+              <p>
+                No retainer, no lock-in, no quarterly business review. If it&apos;s working, leave it running.
+                If you need a tweak, message me.
+              </p>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
+      {/* ─── Recent work ─── */}
+      <section className="bg-cream">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
+          <RevealOnScroll className="max-w-[40ch] mb-14">
+            <div>
+              <Eyebrow>Recent work</Eyebrow>
+              <h2
+                className="font-display text-ink"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+              >
+                A few things running live.
+              </h2>
+            </div>
+          </RevealOnScroll>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {recent.map((r, i) => {
+              const inner = (
+                <>
+                  <div className="flex items-center gap-2 mb-7">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+                    <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{r.tag}</span>
+                  </div>
+                  <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-3 text-ink">{r.name}</h3>
+                  <p className="text-[14px] text-muted leading-[1.6] mb-7">{r.body}</p>
+                  <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
+                    {r.external ? 'Visit site' : 'See more'} <span aria-hidden>→</span>
+                  </span>
+                </>
+              )
+              return (
+                <RevealOnScroll key={r.name} delay={i * 0.08} className="h-full">
+                  {r.external ? (
+                    <a
+                      href={r.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-white border border-line rounded-3xl p-7 hover:border-ink/40 transition-colors block lift h-full"
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <Link
+                      href={r.href}
+                      className="bg-white border border-line rounded-3xl p-7 hover:border-ink/40 transition-colors block lift h-full"
+                    >
+                      {inner}
+                    </Link>
+                  )}
+                </RevealOnScroll>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Closing CTA — full-bleed ink (matches homepage FinalCTA) ─ */}
+      <section className="bg-ink text-cream relative overflow-hidden">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+            <div className="lg:col-span-8">
+              <Eyebrow color="white">Ready when you are</Eyebrow>
+              <h2
+                className="font-display text-cream max-w-[16ch]"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
+              >
+                Got an idea? Get in touch.
+              </h2>
+              <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
+                30-minute call, no pitch. Tell me the bottleneck — I&apos;ll tell you whether it&apos;s worth building.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
                 href="/contact"
+                data-magnetic
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
                 Talk to Will <span aria-hidden>→</span>
               </Link>
               <Link
                 href="/services"
-                className="text-white px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-white/20 hover:border-white/50 transition-colors"
+                className="text-cream px-6 py-3.5 rounded-full font-medium text-[16px] inline-flex items-center gap-2 border border-cream/20 hover:border-cream/50 transition-colors"
               >
                 See services
               </Link>
@@ -250,13 +295,13 @@ export default function About() {
   )
 }
 
-function Eyebrow({ children, color = 'ink', center }) {
+/* ─── Eyebrow ──────────────────────────────────────────────────── */
+function Eyebrow({ children, color = 'ink' }) {
   const isWhite = color === 'white'
   return (
-    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
+    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
-      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }

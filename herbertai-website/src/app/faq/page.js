@@ -1,14 +1,15 @@
 import Link from 'next/link'
+import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'FAQ',
+  title: 'FAQ — pricing, timelines & process',
   description:
-    'Common questions about Herbert AI — what we build, project timelines, AI voice agent realism, custom vs productised pricing, customisation, contracts, ownership, and getting started.',
+    'Common questions about Herbert AI, an Adelaide automation & growth studio — what we build, project timelines, AI voice agent realism, custom vs productised pricing, contracts, ownership, and getting started.',
   alternates: { canonical: '/faq' },
   openGraph: {
-    title: 'FAQ · Herbert AI',
+    title: 'FAQ — Adelaide automation & growth studio · Herbert AI',
     description:
-      'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI actually goes.',
+      'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI in Adelaide actually goes.',
     url: '/faq',
   },
 }
@@ -68,52 +69,105 @@ const faqs = [
   },
 ]
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.a,
+    },
+  })),
+}
+
 export default function FAQ() {
   return (
     <>
-      {/* Hero */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
+      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
           <Eyebrow>FAQ</Eyebrow>
-          <h1 className="text-[48px] md:text-[64px] lg:text-[80px] font-semibold tracking-[-0.03em] leading-[1] mb-7 max-w-[18ch] text-ink">
-            Common questions. <span className="serif-em text-green-deep">Straight answers.</span>
+          <h1
+            className="font-display text-ink max-w-[16ch]"
+            style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
+          >
+            Common questions. Straight answers.
           </h1>
-          <p className="text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            If you don&apos;t see your question answered below, just <Link href="/contact" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">get in touch</Link>.
+          <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[60ch]">
+            Everything you might want to know before working with Herbert AI &mdash; an
+            Adelaide automation &amp; growth studio for small business. If you don&apos;t see
+            your question answered below, just{' '}
+            <Link href="/contact" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
+              get in touch
+            </Link>.
           </p>
         </div>
       </section>
 
-      {/* FAQs */}
-      <section className="bg-cream-alt border-y border-line">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
+      {/* ─── FAQs ─────────────────────────────────────────────────── */}
+      <section className="bg-cream-alt">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
+          <RevealOnScroll>
+            <Eyebrow>Questions</Eyebrow>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <h2
+              className="font-display text-ink max-w-[14ch] mb-14"
+              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+            >
+              The ones people ask most.
+            </h2>
+          </RevealOnScroll>
           <div className="grid md:grid-cols-2 gap-5">
-            {faqs.map((f) => (
-              <div key={f.q} className="bg-cream border border-line rounded-3xl p-7">
-                <h2 className="text-[17px] font-medium text-ink mb-3 tracking-[-0.01em] leading-[1.35]">{f.q}</h2>
-                <p className="text-[15px] text-muted leading-[1.6]">{f.a}</p>
-              </div>
+            {faqs.map((f, i) => (
+              <RevealOnScroll key={f.q} delay={(i % 2) * 0.08}>
+                <div className="bg-cream border border-line rounded-3xl p-7 lift h-full">
+                  <h3 className="text-[17px] font-medium text-ink mb-3 tracking-[-0.01em] leading-[1.35]">{f.q}</h3>
+                  <p className="text-[15px] text-muted leading-[1.6]">{f.a}</p>
+                </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-28">
-          <div className="bg-ink text-white rounded-[32px] p-12 md:p-16 text-center relative overflow-hidden">
-            <div className="hero-blob absolute top-[-200px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] pointer-events-none" />
-            <div className="relative">
-              <Eyebrow color="white" center>Still have questions?</Eyebrow>
-              <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.05] tracking-[-0.03em] mb-6 max-w-[24ch] mx-auto">
-                Book a 30-minute call. <span className="serif-em text-green">No pitch.</span>
+      {/* ─── Closing CTA — full-bleed ink ─────────────────────────── */}
+      <section className="bg-ink text-cream relative overflow-hidden">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+            <div className="lg:col-span-8">
+              <Eyebrow color="white">Still have questions?</Eyebrow>
+              <h2
+                className="font-display text-cream"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
+              >
+                Book a 30-minute call.
+                <br />
+                No pitch.
               </h2>
+              <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
+                You explain the bottleneck. I scope what would actually fix it, then quote it.
+                If it&apos;s worth doing, we ship.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+                data-magnetic
+                className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
-                Talk to Will <span aria-hidden>→</span>
+                Talk to Will <span aria-hidden>&rarr;</span>
               </Link>
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
+                Adelaide · solo · no account manager
+              </span>
             </div>
           </div>
         </div>
@@ -122,13 +176,13 @@ export default function FAQ() {
   )
 }
 
-function Eyebrow({ children, color = 'ink', center }) {
+/* ─── Eyebrow ──────────────────────────────────────────────────── */
+function Eyebrow({ children, color = 'ink' }) {
   const isWhite = color === 'white'
   return (
-    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-white/55' : 'text-muted'} ${center ? 'justify-center' : ''}`}>
+    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
       <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
       {children}
-      {center && <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />}
     </div>
   )
 }
