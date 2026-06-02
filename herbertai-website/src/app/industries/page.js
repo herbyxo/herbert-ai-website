@@ -58,8 +58,7 @@ export default function Industries() {
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
             Adelaide automation studio building custom web and AI systems for small businesses
-            across these industries &mdash; trades, hospitality, property, accounting, allied
-            health, creative. Each one gets a tailored build, scoped to what your business
+            across multiple industries. Each one gets a tailored build, scoped to what your business
             actually needs and quoted on the work. Adelaide-based, Australia-wide.
           </p>
           <p className="text-[15px] text-muted leading-[1.6] mt-4 max-w-[60ch]">
