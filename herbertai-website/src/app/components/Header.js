@@ -43,6 +43,7 @@ export default function Header() {
             <DropItem href="/services#automate" title="Automate" sub="Voice agents, chatbots, workflows, CRM" />
             <DropItem href="/services#build" title="Build" sub="Websites, dashboards, custom systems" />
           </DropdownLink>
+          <NavLink href="/case-studies">Work</NavLink>
           <NavLink href="/industries">Industries</NavLink>
           <NavLink href="/pricing">Pricing</NavLink>
           <NavLink href="/about">About</NavLink>
@@ -125,6 +126,7 @@ function DropItem({ href, title, sub }) {
 function MobileOverlay({ onClose }) {
   const links = [
     ['/services', 'Services'],
+    ['/case-studies', 'Work'],
     ['/industries', 'Industries'],
     ['/pricing', 'Pricing'],
     ['/about', 'About'],

@@ -10,6 +10,7 @@ const NAV_COLS = [
     label: 'Studio',
     links: [
       ['/services', 'Services'],
+      ['/case-studies', 'Work'],
       ['/industries', 'Industries'],
       ['/pricing', 'Pricing'],
       ['/about', 'About'],
