@@ -28,8 +28,6 @@ const industries = [
   {
     tag: 'Property',
     description: 'Residential property management',
-    proof: 'See Property Manager AI →',
-    href: '/property-managers',
   },
   {
     tag: 'Accounting',

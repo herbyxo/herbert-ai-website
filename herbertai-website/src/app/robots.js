@@ -4,7 +4,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/preview/', '/api/'],
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://herbert-aisolutions.com/sitemap.xml',

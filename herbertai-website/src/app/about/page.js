@@ -65,13 +65,6 @@ const recent = [
     href: '/services#automate',
     external: false,
   },
-  {
-    tag: 'Property · productised',
-    name: 'Property manager AI',
-    body: 'Productised voice + portal system for residential property managers. Handles tenant maintenance reports end-to-end.',
-    href: '/property-managers',
-    external: false,
-  },
 ]
 
 export default function About() {
