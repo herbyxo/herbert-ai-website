@@ -112,15 +112,15 @@ export default function Services() {
             {/* Inline demo */}
             {bucket.demo === 'voice' && <VoiceDemo />}
 
-            {/* Build → point to real shipped work */}
+            {/* Build → start a conversation */}
             {bucket.id === 'build' && (
               <RevealOnScroll className="mt-12">
                 <Link
-                  href="/case-studies"
+                  href="/contact"
                   data-magnetic
                   className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
                 >
-                  See real builds &mdash; case studies <span aria-hidden>→</span>
+                  Got a build in mind? Let&rsquo;s talk <span aria-hidden>→</span>
                 </Link>
               </RevealOnScroll>
             )}
