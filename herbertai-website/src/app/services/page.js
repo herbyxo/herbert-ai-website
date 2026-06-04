@@ -154,13 +154,6 @@ export default function Services() {
                 >
                   How we price <span aria-hidden>→</span>
                 </Link>
-                <Link
-                  href="/contact"
-                  data-magnetic
-                  className="text-cream px-6 py-3.5 rounded-full font-medium text-[15px] inline-flex items-center justify-between gap-2 border border-cream/20 hover:border-cream/50 transition-colors"
-                >
-                  Get a quote <span aria-hidden>→</span>
-                </Link>
               </div>
             </div>
           </div>
