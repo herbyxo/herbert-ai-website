@@ -1,7 +1,4 @@
-'use client'
-
 import Link from 'next/link'
-import { useState, useEffect, useCallback } from 'react'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 /* ─── Service catalogue ─────────────────────────────────────────────── */
@@ -42,7 +39,6 @@ const buckets = [
     label: 'Build',
     headline: 'Custom software for your business.',
     body: 'Websites, dashboards, internal tools — bespoke custom builds. Yours to keep, no platform lock-in.',
-    demo: 'web',
     services: [
       { tag: 'Web', title: 'Marketing websites', body: 'Custom-coded sites, no template. Mobile-first, fast, modern hosting.', hasDemo: true },
       { tag: 'Dashboard', title: 'Custom dashboards', body: 'Admin panels, customer database, owner consoles. Secure email-link login — no passwords to remember.' },
@@ -54,47 +50,9 @@ const buckets = [
   },
 ]
 
-const claremontShots = [
-  { src: '/portfolio/claremont/claremont-1.png', label: 'Hero' },
-  { src: '/portfolio/claremont/claremont-2.png', label: 'Services' },
-  { src: '/portfolio/claremont/claremont-3.png', label: 'About' },
-  { src: '/portfolio/claremont/claremont-4.png', label: 'Listings' },
-  { src: '/portfolio/claremont/claremont-5.jpg', label: 'Contact' },
-  { src: '/portfolio/claremont/claremont-6.png', label: 'Detail · 06' },
-  { src: '/portfolio/claremont/claremont-7.png', label: 'Detail · 07' },
-  { src: '/portfolio/claremont/claremont-8.png', label: 'Detail · 08' },
-]
-
 /* ─── Page ──────────────────────────────────────────────────────────── */
 
 export default function Services() {
-  const [lightbox, setLightbox] = useState(null)
-  const closeLightbox = useCallback(() => setLightbox(null), [])
-  const prevImage = useCallback(() => {
-    setLightbox((lb) => lb && { index: (lb.index - 1 + claremontShots.length) % claremontShots.length })
-  }, [])
-  const nextImage = useCallback(() => {
-    setLightbox((lb) => lb && { index: (lb.index + 1) % claremontShots.length })
-  }, [])
-
-  useEffect(() => {
-    if (!lightbox) return
-    const handler = (e) => {
-      if (e.key === 'Escape') closeLightbox()
-      if (e.key === 'ArrowLeft') prevImage()
-      if (e.key === 'ArrowRight') nextImage()
-    }
-    window.addEventListener('keydown', handler)
-    return () => window.removeEventListener('keydown', handler)
-  }, [lightbox, closeLightbox, prevImage, nextImage])
-
-  useEffect(() => {
-    document.body.style.overflow = lightbox ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [lightbox])
-
-  const current = lightbox ? claremontShots[lightbox.index] : null
-
   return (
     <>
       {/* ─── Hero — static (above the fold) ─── */}
@@ -153,7 +111,19 @@ export default function Services() {
 
             {/* Inline demo */}
             {bucket.demo === 'voice' && <VoiceDemo />}
-            {bucket.demo === 'web' && <WebDemo shots={claremontShots} onOpen={(index) => setLightbox({ index })} />}
+
+            {/* Build → point to real shipped work */}
+            {bucket.id === 'build' && (
+              <RevealOnScroll className="mt-12">
+                <Link
+                  href="/case-studies"
+                  data-magnetic
+                  className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
+                >
+                  See real builds &mdash; case studies <span aria-hidden>→</span>
+                </Link>
+              </RevealOnScroll>
+            )}
           </div>
         </section>
       ))}
@@ -227,37 +197,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* ─── Lightbox ─── */}
-      {lightbox && current && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm" onClick={closeLightbox}>
-          <div className="relative max-w-6xl w-full mx-4 flex flex-col" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between mb-3 px-1">
-              <div>
-                <span className="text-white font-medium text-sm">Claremont Property</span>
-                <span className="text-white/50 text-sm ml-2">— {current.label}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-white/40 text-[11px]">{lightbox.index + 1} / {claremontShots.length}</span>
-                <button onClick={closeLightbox} className="text-white/50 hover:text-white text-2xl leading-none font-light" aria-label="Close">×</button>
-              </div>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden bg-ink shadow-2xl">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={current.src} alt={`Claremont — ${current.label}`} className="w-full h-auto max-h-[80vh] object-contain" />
-              <button onClick={prevImage} className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl" aria-label="Previous">‹</button>
-              <button onClick={nextImage} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl" aria-label="Next">›</button>
-            </div>
-            <div className="flex gap-2 mt-3 justify-center flex-wrap">
-              {claremontShots.map((shot, idx) => (
-                <button key={idx} onClick={() => setLightbox({ index: idx })} className={`w-16 h-10 rounded overflow-hidden border-2 transition-all ${idx === lightbox.index ? 'border-white' : 'border-transparent opacity-50 hover:opacity-80'}`} aria-label={shot.label}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={shot.src} alt={shot.label} className="w-full h-full object-cover object-top" />
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </>
   )
 }
@@ -298,43 +237,6 @@ function VoiceDemo() {
         <audio controls preload="metadata" className="w-full" style={{ filter: 'invert(0.85)' }}>
           <source src="/steve-demo.wav" type="audio/wav" />
         </audio>
-      </div>
-    </div>
-  )
-}
-
-function WebDemo({ shots, onOpen }) {
-  return (
-    <div className="mt-14">
-      <div className="max-w-[44ch] mb-8">
-        <Eyebrow>Example · design</Eyebrow>
-        <h3 className="text-[24px] md:text-[28px] font-medium tracking-[-0.01em] text-ink mb-3">
-          Editorial real estate concept.
-        </h3>
-        <p className="text-[14px] text-muted leading-[1.6]">
-          Concept design for a premium London real estate brand. Click any thumbnail to view.
-        </p>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {shots.map((shot, idx) => (
-          <button
-            key={idx}
-            onClick={() => onOpen(idx)}
-            className={`group relative rounded-2xl overflow-hidden border border-line bg-cream-alt hover:border-ink/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-cream ${idx === 0 ? 'col-span-2' : ''}`}
-            aria-label={`View ${shot.label}`}
-          >
-            <div className="relative w-full aspect-video bg-cream-alt">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={shot.src} alt={`Claremont — ${shot.label}`} className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-200 flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-cream text-ink text-[12px] font-medium px-3 py-1.5 rounded-full">View</span>
-              </div>
-            </div>
-            <div className="px-3 py-2 text-left">
-              <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted">{shot.label}</span>
-            </div>
-          </button>
-        ))}
       </div>
     </div>
   )
