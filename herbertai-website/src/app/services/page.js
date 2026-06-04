@@ -175,8 +175,9 @@ export default function Services() {
                   Got something more specific?
                 </h2>
                 <p className="text-muted text-[17px] leading-[1.6] max-w-[52ch]">
-                  Custom systems are scoped to your bottleneck and quoted on the build. Tell us what&apos;s slow,
-                  what&apos;s broken, or what doesn&apos;t exist yet — we&apos;ll come back with an approach and a price.
+                  Custom systems are scoped to your bottleneck and quoted on the build. Tell me a bit
+                  about how your business runs, and together we&rsquo;ll land on the best solution for
+                  your needs.
                 </p>
               </div>
               <Link
