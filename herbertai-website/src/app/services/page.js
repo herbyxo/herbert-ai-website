@@ -142,8 +142,9 @@ export default function Services() {
                   Priced on scope. Not on a menu.
                 </h2>
                 <p className="text-cream/70 text-[17px] leading-[1.6] max-w-[52ch]">
-                  Every project quoted on scope — fixed price, fixed timeline. Three pricing
-                  models depending on the work: fixed quote, hourly, or monthly retainer.
+                  Every project is different, so every quote is based on your specifications.
+                  I&rsquo;ll always work within your budget and deliver exactly what you&rsquo;re
+                  after &mdash; while staying competitive with anyone out there.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
