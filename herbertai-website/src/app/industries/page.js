@@ -129,7 +129,7 @@ export default function Industries() {
                 </p>
               </div>
               <Link
-                href="/contact"
+                href="/start"
                 data-magnetic
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300 self-start md:self-end"
               >
