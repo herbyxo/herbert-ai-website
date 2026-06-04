@@ -179,7 +179,7 @@ export default function Services() {
                 </p>
               </div>
               <Link
-                href="/contact"
+                href="/start"
                 data-magnetic
                 className="bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:bg-ink-soft transition-colors self-start md:self-end"
               >
