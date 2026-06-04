@@ -4,62 +4,14 @@ import RevealOnScroll from '../components/motion/RevealOnScroll'
 export const metadata = {
   title: 'Pricing',
   description:
-    'Herbert AI prices every project on scope — three models depending on the work: fixed quote for builds, hourly for small fixes, retainer for ongoing systems. No public price list, no lock-in.',
+    'Herbert AI prices every project on scope — no public price list, no off-the-shelf packages. Tell me what you need and you get one fixed quote and a real timeline. No hourly creep, no lock-in.',
   alternates: { canonical: '/pricing' },
   openGraph: {
     title: 'Pricing · Herbert AI',
-    description:
-      'Three pricing models: fixed quote, hourly, or retainer. Priced on scope, not on a menu.',
+    description: 'Priced on scope, not on a menu. Every project quoted on what you actually need.',
     url: '/pricing',
   },
 }
-
-const tiers = [
-  {
-    range: '$1k — $3k',
-    title: 'Small fix · tune-up',
-    body: 'A few hours of work. Site edits, a single page added, prompt tuning on a live voice agent, a one-off workflow.',
-  },
-  {
-    range: '$3k — $10k',
-    title: 'Productised pattern',
-    body: 'A new website. A voice agent build with custom prompt. A chatbot widget. A defined automation workflow.',
-    common: true,
-  },
-  {
-    range: '$10k — $25k+',
-    title: 'Full custom build',
-    body: 'Operator console with bookings, customers, reports. Bespoke booking system. Multi-system integration.',
-  },
-]
-
-const models = [
-  {
-    n: '01',
-    tag: 'Fixed quote',
-    name: 'For defined builds.',
-    body:
-      "Most engagements run on a fixed quote. You tell me what's broken or what needs to exist; I scope it; you get one number and a timeline. No hourly creep, no surprise invoice.",
-    fits: ['New website', 'Voice agent build', 'Dashboard / portal', 'Workflow automation', 'Custom system'],
-  },
-  {
-    n: '02',
-    tag: 'Hourly',
-    name: 'For small fixes.',
-    body:
-      "For tweaks, tune-ups, or work that's too small to scope formally — content edits, a new page on an existing site, prompt tuning on a live voice agent. Tracked honestly, invoiced monthly.",
-    fits: ['Site tweaks', 'Prompt tuning', 'Small additions', 'Bug fixes', 'Ad-hoc questions'],
-  },
-  {
-    n: '03',
-    tag: 'Monthly retainer',
-    name: 'For ongoing systems.',
-    body:
-      "For systems that need to keep running — voice agents, chatbots, hosted websites. Monthly retainer covers hosting, monitoring, prompt updates, content changes. Cancel anytime.",
-    fits: ['Voice agent hosting', 'Website hosting + updates', 'Chatbot operations', 'Ongoing improvements'],
-    highlight: true,
-  },
-]
 
 const faqs = [
   {
@@ -67,8 +19,8 @@ const faqs = [
     a: 'Because every business is different. A "barbershop website" costs different things depending on whether you need bookings, payments, gift vouchers, or just a brochure. A flat price list either prices the simple jobs too high or the complex ones too low. Quoting on scope gets you the right number for your actual situation.',
   },
   {
-    q: 'How does a scoping call actually go?',
-    a: '30 minutes. You walk me through what\'s slow, broken, or doesn\'t exist yet. I ask enough questions to scope honestly. If it\'s worth building, I send a fixed quote and timeline within a day. If it isn\'t, I\'ll tell you.',
+    q: 'How does getting a quote work?',
+    a: 'Tell me what you need — through the project brief or a quick email. I\'ll ask enough questions to scope it honestly, then send a fixed quote and a timeline, usually within a day. If it\'s not worth building, I\'ll tell you that instead.',
   },
   {
     q: 'What\'s the minimum engagement?',
@@ -84,7 +36,7 @@ const faqs = [
   },
   {
     q: 'Can I pay monthly instead of upfront?',
-    a: 'Yes — for larger builds I\'ll often split the fixed quote across the build window (e.g. 3 monthly payments across a 6-week build). Or keep it on retainer once the system is live.',
+    a: 'Yes — for larger builds I\'ll often split the fixed quote across the build window (e.g. three monthly payments across a 6-week build). Or keep it on retainer once the system is live.',
   },
 ]
 
@@ -104,141 +56,55 @@ export default function Pricing() {
             Not on a menu.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[56ch]">
-            Every business needs something different &mdash; so every quote starts with a free
-            30-minute scoping call. You walk away with a fixed quote and timeline, or a clear no.
-            No hourly creep, no lock-in, no agency overhead.
+            No two businesses need the same thing, so I don&rsquo;t run a price list. Tell me what
+            you&rsquo;re after and I&rsquo;ll quote it &mdash; one fixed number, a real timeline, and
+            no hourly creep or lock-in.
           </p>
           <Link
-            href="/contact"
+            href="/start"
             data-magnetic
             className="mt-10 bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
           >
-            Book a free 30-min call <span aria-hidden>&rarr;</span>
+            Get a quote <span aria-hidden>&rarr;</span>
           </Link>
         </div>
       </section>
 
-      {/* ─── Typical range — horizontal scale on the page surface ─── */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-          <RevealOnScroll>
-            <Eyebrow>What it usually costs</Eyebrow>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.08}>
-            <h2
-              className="font-display text-ink max-w-[16ch] mb-16"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-            >
-              Most projects land between $1k and $15k.
-            </h2>
-          </RevealOnScroll>
-
-          <div className="relative">
-            {/* connecting line (desktop) */}
-            <div className="hidden md:block absolute top-[7px] left-0 right-0 h-px bg-ink/15" aria-hidden />
-
-            <div className="grid md:grid-cols-3 gap-12 md:gap-0 relative">
-              {tiers.map((t, i) => (
-                <RevealOnScroll
-                  key={t.title}
-                  delay={i * 0.08}
-                  className={i === 0 ? 'md:pr-10' : i === 1 ? 'md:px-10' : 'md:pl-10'}
-                >
-                  <div className="relative">
-                    {/* marker dot — green only on the common path (signature guidance accent) */}
-                    <div
-                      aria-hidden
-                      className={`hidden md:block absolute top-[2px] left-0 w-[11px] h-[11px] rounded-full z-10 ${
-                        t.common ? 'bg-green-deep ring-4 ring-green/15' : 'bg-ink'
-                      }`}
-                    />
-                    <div className="md:pl-6">
-                      <div
-                        className="font-display text-ink mb-5"
-                        style={{ fontSize: '30px', letterSpacing: '-0.03em', fontWeight: 800 }}
-                      >
-                        {t.range}
-                      </div>
-                      <h3 className="text-[19px] font-medium tracking-[-0.01em] text-ink mb-2.5 flex items-center gap-2.5 flex-wrap">
-                        {t.title}
-                        {t.common && (
-                          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-green-deep">
-                            most common
-                          </span>
-                        )}
-                      </h3>
-                      <p className="text-[14px] text-muted leading-[1.6] max-w-[34ch]">{t.body}</p>
-                    </div>
-                  </div>
-                </RevealOnScroll>
-              ))}
-            </div>
-          </div>
-
-          {/* retainer note */}
-          <div className="mt-16 pt-6 border-t border-line flex flex-wrap items-baseline gap-x-6 gap-y-2">
-            <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">Retainers</div>
-            <div className="text-[15px] text-ink-soft">
-              From <span className="font-semibold text-ink">$150/mo</span> for ongoing systems &mdash; hosting,
-              monitoring, prompt updates, content changes. Cancel anytime.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Three models — discrete cards (CHARTER-blessed object) ─ */}
+      {/* ─── How it works — editorial split (no numbers) ──────────── */}
       <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-          <RevealOnScroll>
-            <Eyebrow>How we price</Eyebrow>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.08}>
-            <h2
-              className="font-display text-ink max-w-[12ch] mb-16"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-            >
-              Three models. One fits.
-            </h2>
-          </RevealOnScroll>
-
-          <div className="grid md:grid-cols-3 gap-5">
-            {models.map((m, i) => (
-              <RevealOnScroll key={m.n} delay={i * 0.08} className="h-full">
-                <div
-                  className={`rounded-3xl p-8 border flex flex-col h-full ${
-                    m.highlight ? 'bg-ink text-cream border-ink' : 'bg-cream border-line'
-                  }`}
-                >
-                  <div className="flex items-center gap-2 mb-8">
-                    <span className={`font-mono text-[11px] ${m.highlight ? 'text-cream/40' : 'text-muted'}`}>{m.n}</span>
-                    <span className={`w-1 h-1 rounded-full ${m.highlight ? 'bg-green' : 'bg-green-deep'}`} />
-                    <span className={`font-mono text-[11px] uppercase tracking-[0.18em] ${m.highlight ? 'text-cream/55' : 'text-muted'}`}>
-                      {m.tag}
-                    </span>
-                  </div>
-                  <h3 className={`text-[26px] md:text-[28px] font-medium tracking-[-0.02em] mb-4 ${m.highlight ? 'text-cream' : 'text-ink'}`}>
-                    {m.name}
-                  </h3>
-                  <p className={`text-[15px] leading-[1.65] mb-7 ${m.highlight ? 'text-cream/70' : 'text-muted'}`}>
-                    {m.body}
-                  </p>
-                  <div className={`mt-auto pt-6 border-t ${m.highlight ? 'border-cream/15' : 'border-line'}`}>
-                    <div className={`font-mono text-[10px] uppercase tracking-[0.18em] mb-3 ${m.highlight ? 'text-cream/50' : 'text-muted'}`}>
-                      Typical fit
-                    </div>
-                    <ul className="space-y-2">
-                      {m.fits.map((f) => (
-                        <li key={f} className="flex items-start gap-2.5">
-                          <span className={`w-1 h-1 rounded-full mt-2 shrink-0 ${m.highlight ? 'bg-green' : 'bg-green-deep'}`} />
-                          <span className={`text-[14px] leading-[1.45] ${m.highlight ? 'text-cream/80' : 'text-ink-soft'}`}>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </RevealOnScroll>
-            ))}
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+          <div>
+            <RevealOnScroll>
+              <Eyebrow>How it works</Eyebrow>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.08}>
+              <h2
+                className="font-display text-ink max-w-[14ch]"
+                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
+              >
+                Every project, quoted on its own.
+              </h2>
+            </RevealOnScroll>
           </div>
+          <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
+            <div className="space-y-5">
+              <p>
+                There&rsquo;s no menu and no off-the-shelf package. You tell me what you want built
+                &mdash; or what&rsquo;s slow, broken, or missing &mdash; and I scope it properly before
+                quoting. You get one fixed price and a timeline, not a range and not an hourly guess.
+              </p>
+              <p>
+                Depending on the work, that&rsquo;s a fixed quote for a defined build, an hourly rate
+                for small tweaks, or a monthly retainer for anything that needs to keep running. I&rsquo;ll
+                tell you which one actually makes sense for your job.
+              </p>
+              <p>
+                No lock-in either way. Fixed builds pay on delivery, retainers are month-to-month, and
+                I always aim to come in competitive &mdash; within your budget, and sharp against anyone
+                else out there.
+              </p>
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -311,30 +177,30 @@ export default function Pricing() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
             <div className="lg:col-span-8">
-              <Eyebrow color="white">Free scoping call</Eyebrow>
+              <Eyebrow color="white">Get a quote</Eyebrow>
               <h2
                 className="font-display text-cream"
                 style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
               >
-                Thirty minutes.
+                Tell me what
                 <br />
-                No deck, no pitch.
+                you&rsquo;re after.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                You walk me through the bottleneck. I walk you through what I&apos;d build, what it would
-                cost, and how long it would take. You leave with a fixed quote &mdash; or a clear no.
+                Send me a bit about your business and what you want built. You&apos;ll get a fixed
+                quote and a real timeline back &mdash; or a clear no if it&apos;s not worth doing.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
-                href="/contact"
+                href="/start"
                 data-magnetic
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
-                Book a free 30-min call <span aria-hidden>&rarr;</span>
+                Get a quote <span aria-hidden>&rarr;</span>
               </Link>
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
-                Fixed quote within 24 hours
+                Fixed quote, usually within a day
               </span>
             </div>
           </div>
