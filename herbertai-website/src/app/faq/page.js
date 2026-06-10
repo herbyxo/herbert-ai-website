@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: 'Does the AI voice sound robotic?',
-    a: 'No. The voice agents use ElevenLabs voices on top of GPT-4o — natural, conversational, adapts mid-call. Most callers don’t realise it’s an AI until you tell them.',
+    a: 'No. The voice agents use natural, current-generation AI voices — conversational, and they adapt mid-call. Most callers don’t realise it’s an AI until you tell them.',
   },
   {
     q: 'What if the AI can’t answer something?',
@@ -113,18 +113,7 @@ export default function FAQ() {
 
       {/* ─── FAQs ─────────────────────────────────────────────────── */}
       <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-          <RevealOnScroll>
-            <Eyebrow>Questions</Eyebrow>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.08}>
-            <h2
-              className="font-display text-ink max-w-[14ch] mb-14"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-            >
-              The ones people ask most.
-            </h2>
-          </RevealOnScroll>
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
           <div className="grid md:grid-cols-2 gap-5">
             {faqs.map((f, i) => (
               <RevealOnScroll key={f.q} delay={(i % 2) * 0.08}>
