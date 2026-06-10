@@ -195,7 +195,7 @@ function Field({ id, label, type, placeholder, required, rows }) {
   return (
     <div>
       <label htmlFor={id} className="block text-[14px] text-ink font-medium mb-2">
-        {label} {required && <span aria-hidden className="text-muted font-normal">·</span>}
+        {label}
       </label>
       {isTextarea ? (
         <textarea

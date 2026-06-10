@@ -49,6 +49,19 @@ export default function Contact() {
                 <input type="hidden" name="from_name" value="Herbert AI — contact form" />
                 <input type="hidden" name="subject" value="New message — Herbert AI site" />
                 <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/start/thanks" />
+                {/* Web3Forms built-in auto-response to the sender */}
+                <input
+                  type="hidden"
+                  name="autoresponse_subject"
+                  value="Thanks — Herbert AI got your message"
+                />
+                <input
+                  type="hidden"
+                  name="autoresponse_message"
+                  value={`Hi — Will here from Herbert AI.\n\nThanks for reaching out. I've got your message and I'll come back within a business day.\n\nIf you remember anything you forgot to include, just reply to this email.\n\n— Will Herbert\nHerbert AI · Adelaide`}
+                />
+                {/* Honeypot for spam */}
+                <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
                 <Field id="name" label="Name" type="text" placeholder="Your name" required />
                 <Field id="email" label="Email" type="email" placeholder="you@business.com" required />

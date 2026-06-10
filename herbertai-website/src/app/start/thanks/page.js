@@ -37,8 +37,8 @@ export default function Thanks() {
         </p>
 
         <p className="mt-6 max-w-[60ch] text-[15px] md:text-[16px] text-ink-soft leading-[1.6]">
-          Check your inbox &mdash; I&rsquo;ve sent a confirmation echo with what you submitted,
-          so you have a copy and so you can reply if you forgot anything.
+          I&rsquo;ve sent a confirmation to your email &mdash; if you remember anything you
+          forgot to include, just reply to it.
         </p>
 
         <div className="mt-12 flex flex-wrap items-center gap-4">
@@ -50,11 +50,11 @@ export default function Thanks() {
             <span aria-hidden>&larr;</span> Back to home
           </Link>
           <Link
-            href="/case-studies"
+            href="/services"
             data-magnetic
             className="text-[14px] font-medium text-ink hover:text-green-deep transition"
           >
-            See recent builds &rarr;
+            See what I build &rarr;
           </Link>
         </div>
       </div>
