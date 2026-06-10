@@ -19,16 +19,19 @@ const capabilities = [
     tag: 'Not enough customers',
     title: 'Grow',
     body: 'Paid ads, SEO, landing pages, email + SMS, lead funnels — the systems that bring new business through the door.',
+    href: '/services#grow',
   },
   {
     tag: 'Drowning in admin',
     title: 'Automate',
     body: 'Voice agents, chatbots, workflow automation, CRM setup — anything repetitive that a computer can handle without you in the loop.',
+    href: '/services#automate',
   },
   {
     tag: 'No real system',
     title: 'Build',
     body: 'Websites, dashboards, customer portals, booking systems — custom software, built bespoke and yours to keep.',
+    href: '/services#build',
   },
 ]
 
@@ -41,12 +44,12 @@ const steps = [
   {
     n: '02',
     title: 'We scope',
-    body: 'I write up the plan and the price. Fixed quote on custom builds, productised plan on the off-the-shelf patterns. No surprises later.',
+    body: 'I write up the plan and the price. One fixed quote, a real timeline. No surprises later.',
   },
   {
     n: '03',
     title: 'I build, you keep',
-    body: 'One to three weeks, usually. You see progress as I ship. When it’s live, it’s your system — direct line to me for tweaks, no retainer lock.',
+    body: 'One to three weeks, usually. You see progress as I ship. When it’s live, it’s your system — direct line to me for tweaks.',
   },
 ]
 
@@ -113,14 +116,17 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-5">
             {capabilities.map((c, i) => (
               <RevealOnScroll key={c.title} delay={i * 0.08} className="h-full">
-                <div className="bg-cream border border-line rounded-3xl p-7 h-full lift">
+                <Link href={c.href} className="bg-cream border border-line rounded-3xl p-7 h-full lift hover:border-ink/40 transition-colors flex flex-col">
                   <div className="flex items-center gap-2 mb-7">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
                     <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{c.tag}</span>
                   </div>
                   <h3 className="text-[24px] font-medium tracking-[-0.02em] mb-3 text-ink">{c.title}</h3>
-                  <p className="text-[15px] text-muted leading-[1.6]">{c.body}</p>
-                </div>
+                  <p className="text-[15px] text-muted leading-[1.6] mb-7">{c.body}</p>
+                  <span className="mt-auto inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
+                    See the services <span aria-hidden>→</span>
+                  </span>
+                </Link>
               </RevealOnScroll>
             ))}
           </div>
@@ -139,7 +145,7 @@ export default function About() {
                 className="font-display text-ink max-w-[14ch]"
                 style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
               >
-                Three steps. No agency overhead.
+                Three steps, start to ship.
               </h2>
             </RevealOnScroll>
           </div>
@@ -209,7 +215,7 @@ export default function About() {
             </div>
           </RevealOnScroll>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 gap-5">
             {recent.map((r, i) => {
               const inner = (
                 <>

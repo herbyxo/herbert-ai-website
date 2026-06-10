@@ -4,7 +4,7 @@ import RevealOnScroll from '../components/motion/RevealOnScroll'
 export const metadata = {
   title: 'FAQ — pricing, timelines & process',
   description:
-    'Common questions about Herbert AI, an Adelaide automation & growth studio — what we build, project timelines, AI voice agent realism, custom vs productised pricing, contracts, ownership, and getting started.',
+    'Common questions about Herbert AI, an Adelaide automation & growth studio — what we build, project timelines, AI voice agent realism, pricing, contracts, ownership, and getting started.',
   alternates: { canonical: '/faq' },
   openGraph: {
     title: 'FAQ — Adelaide automation & growth studio · Herbert AI',
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'How long does a project take?',
-    a: 'Productised plans: 1–2 weeks for a website, 3–5 days for a voice agent or chatbot. Custom builds: quoted with a fixed timeline up-front. Most full-stack builds (site + dashboard + automation) ship in 2–4 weeks.',
+    a: 'A typical website runs 1–2 weeks; a voice agent or chatbot 3–5 days. Every quote comes with a fixed timeline up-front, and most full-stack builds (site + dashboard + automation) ship in 2–4 weeks.',
   },
   {
     q: 'How do I get started?',
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: 'Are there contracts or lock-in?',
-    a: 'No. Productised plans are month-to-month, cancel anytime. Custom builds are a fixed-quote project — you own the system when it’s live, no ongoing fees unless you want hosting / maintenance.',
+    a: 'No. Builds are fixed-quote projects — you own the system when it’s live, no ongoing fees unless you want hosting or maintenance. Anything ongoing is month-to-month, cancel anytime.',
   },
   {
     q: 'Can I start with one thing and add more later?',
