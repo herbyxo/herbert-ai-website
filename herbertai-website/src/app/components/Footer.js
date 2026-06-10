@@ -93,7 +93,10 @@ export default function Footer() {
         {/* Bottom strip */}
         <div className="mt-16 pt-6 border-t border-line flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
           <span>© {new Date().getFullYear()} Herbert AI</span>
-          <span>Adelaide &middot; South Australia</span>
+          <span className="flex items-center gap-5">
+            <Link href="/privacy" className="hover:text-ink transition-colors">Privacy</Link>
+            <span>Adelaide &middot; South Australia</span>
+          </span>
         </div>
       </div>
     </footer>
