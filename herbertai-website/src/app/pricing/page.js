@@ -70,50 +70,12 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ─── How it works — editorial split (no numbers) ──────────── */}
+      {/* ─── How it works — editorial split ───────────────────────── */}
       <section className="bg-cream-alt">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
           <div>
             <RevealOnScroll>
               <Eyebrow>How it works</Eyebrow>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.08}>
-              <h2
-                className="font-display text-ink max-w-[14ch]"
-                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-              >
-                Every project, quoted on its own.
-              </h2>
-            </RevealOnScroll>
-          </div>
-          <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
-            <div className="space-y-5">
-              <p>
-                There&rsquo;s no menu and no off-the-shelf package. You tell me what you want built
-                &mdash; or what&rsquo;s slow, broken, or missing &mdash; and I scope it properly before
-                quoting. You get one fixed price and a timeline, not a range and not an hourly guess.
-              </p>
-              <p>
-                Depending on the work, that&rsquo;s a fixed quote for a defined build, an hourly rate
-                for small tweaks, or a monthly retainer for anything that needs to keep running. I&rsquo;ll
-                tell you which one actually makes sense for your job.
-              </p>
-              <p>
-                No lock-in either way. Fixed builds pay on delivery, retainers are month-to-month, and
-                I always aim to come in competitive &mdash; within your budget, and sharp against anyone
-                else out there.
-              </p>
-            </div>
-          </RevealOnScroll>
-        </div>
-      </section>
-
-      {/* ─── What's in a quote — editorial split ──────────────────── */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
-          <div>
-            <RevealOnScroll>
-              <Eyebrow>What you get in a quote</Eyebrow>
             </RevealOnScroll>
             <RevealOnScroll delay={0.08}>
               <h2
@@ -127,18 +89,25 @@ export default function Pricing() {
           <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
             <div className="space-y-5">
               <p>
-                Every quote includes: a written scope of what gets built, a fixed price (not a range),
-                a delivery date, what&apos;s in scope and what isn&apos;t, and what happens if you want to
-                change something mid-build.
+                You tell me what you want built &mdash; or what&rsquo;s slow, broken, or missing &mdash;
+                and I scope it properly before quoting. Every quote includes a written scope of what
+                gets built, a fixed price (not a range), a delivery date, what&apos;s in scope and what
+                isn&apos;t, and what happens if you want to change something mid-build.
+              </p>
+              <p>
+                Depending on the work, that&rsquo;s a fixed quote for a defined build, an hourly rate
+                for small tweaks, or a monthly retainer for anything that needs to keep running. I&rsquo;ll
+                tell you which one actually makes sense for your job.
               </p>
               <p>
                 If the project comes in faster than expected, the price stays the same — but I&apos;ll
                 mention it before billing. If something genuinely outside the scope comes up, I quote
-                it separately rather than letting it creep into the original number.
+                it separately rather than letting it creep into the original number. For retainers, the
+                monthly number covers everything in scope — no hidden per-call or per-request fees.
               </p>
               <p>
-                For ongoing retainers, the monthly number covers everything in scope — no hidden
-                per-call, per-message, or per-request fees buried in the terms.
+                And I always aim to come in competitive &mdash; within your budget, and sharp against
+                anyone else out there.
               </p>
             </div>
           </RevealOnScroll>
@@ -146,7 +115,7 @@ export default function Pricing() {
       </section>
 
       {/* ─── FAQs ─────────────────────────────────────────────────── */}
-      <section className="bg-cream-alt">
+      <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
           <RevealOnScroll>
             <Eyebrow>Pricing FAQs</Eyebrow>
@@ -162,7 +131,7 @@ export default function Pricing() {
           <div className="grid md:grid-cols-2 gap-5">
             {faqs.map((f, i) => (
               <RevealOnScroll key={f.q} delay={(i % 2) * 0.08}>
-                <div className="bg-cream border border-line rounded-3xl p-7 lift h-full">
+                <div className="bg-white border border-line rounded-3xl p-7 lift h-full">
                   <h3 className="text-[17px] font-medium text-ink mb-2.5 tracking-[-0.01em]">{f.q}</h3>
                   <p className="text-[15px] text-muted leading-[1.6]">{f.a}</p>
                 </div>
