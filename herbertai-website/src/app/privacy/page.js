@@ -17,7 +17,7 @@ const sections = [
     body: [
       'Forms. If you send a message or a project brief, you give us your name, contact details, and whatever you write about your business. Submissions are processed by Web3Forms (a form-delivery service) and arrive as email. That information is used to reply to you and scope your project — nothing else. No marketing list, no newsletter, no reselling.',
       'Email. Mail to hello@herbert-aisolutions.com is forwarded to a private inbox. Correspondence is kept like normal business email.',
-      'Analytics. The site uses Vercel Web Analytics and Speed Insights to count visits, pages, and load performance. These are anonymised and cookieless — they don’t identify you or follow you to other sites.',
+      'Analytics. The site uses Vercel Web Analytics and Speed Insights to count visits, pages, and load performance, and keeps its own first-party count of page views (page path, referring site, and device type — nothing identifying). All of it is anonymised and cookieless — none of it identifies you or follows you to other sites.',
       'Advertising. When we run Google Ads campaigns, Google’s conversion-tracking cookie may be set so we can tell whether an ad click led to an enquiry, and Google may use it to show our ads to past visitors (remarketing). You can opt out of personalised ads at adssettings.google.com.',
     ],
   },

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Instrument_Serif, Bricolage_Grotesque } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import TrackBeacon from './components/TrackBeacon'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import LenisProvider from './components/motion/LenisProvider'
@@ -151,6 +152,7 @@ export default function RootLayout({ children }) {
         />
         <Analytics />
         <SpeedInsights />
+        <TrackBeacon />
       </body>
     </html>
   )
