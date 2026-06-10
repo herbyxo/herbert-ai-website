@@ -28,9 +28,9 @@ export default function Contact() {
             Tell me what&apos;s slow, what&apos;s broken, or what doesn&apos;t exist yet.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            Herbert AI is an Adelaide web design &amp; automation studio for small business. Book a
-            free 30-minute scoping call, no pitch. If it&apos;s worth building, I&apos;ll come back
-            with a fixed quote and timeline.
+            Herbert AI is an Adelaide web design &amp; automation studio for small business. Send a
+            message or book a free 30-minute call, no pitch. If it&apos;s worth building, I&apos;ll
+            come back with a fixed quote and timeline.
           </p>
         </div>
       </section>
@@ -46,6 +46,9 @@ export default function Contact() {
 
               <form action="https://api.web3forms.com/submit" method="POST" className="space-y-5">
                 <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
+                <input type="hidden" name="from_name" value="Herbert AI — contact form" />
+                <input type="hidden" name="subject" value="New message — Herbert AI site" />
+                <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/start/thanks" />
 
                 <Field id="name" label="Name" type="text" placeholder="Your name" required />
                 <Field id="email" label="Email" type="email" placeholder="you@business.com" required />
