@@ -12,9 +12,7 @@ const buckets = [
     services: [
       { tag: 'Ads', title: 'Paid ads · Google + Meta', body: 'Campaign setup, creative, daily monitoring. Scoped to your budget and target market.' },
       { tag: 'SEO', title: 'Organic search', body: 'Technical SEO, local SEO, content. Get found by the people already searching for what you do.' },
-      { tag: 'Landing', title: 'Landing pages', body: 'Single-purpose conversion pages. Built for a specific campaign, lead magnet, or offer.' },
       { tag: 'Email · SMS', title: 'Email + SMS marketing', body: 'List management, broadcast campaigns, automated sequences. Resend + Twilio under the hood.' },
-      { tag: 'Reviews', title: 'Review collection', body: 'Automated post-job SMS asking for a Google review. Boost your local search ranking.' },
       { tag: 'Funnels', title: 'Lead magnets + funnels', body: 'Free-PDF → email capture → nurture sequence → call booked. Whole funnel built and wired.' },
     ],
   },
@@ -28,10 +26,7 @@ const buckets = [
       { tag: 'Voice', title: 'AI voice agents', body: 'A 24/7 receptionist. Custom prompt per business. Qualifies, books, SMSs confirmations.', hasDemo: true },
       { tag: 'Chat', title: 'AI chatbot widget', body: 'Site widget trained on your business. Captures leads, answers questions, books through chat.' },
       { tag: 'Workflows', title: 'Workflow automation', body: 'Tool-to-tool stitching. AroFlo, CRM, Calendar, Gmail, SMS — all talking to each other. Built in n8n.' },
-      { tag: 'Agents', title: 'Custom AI agents', body: 'AI agents trained on your business — answer staff questions from your docs, draft proposals, run internal tasks. Beyond receptionists.' },
-      { tag: 'CRM', title: 'CRM setup + automation', body: 'HubSpot or Pipedrive setup, pipeline, follow-up rules, lead routing. Wired to the rest of your stack.' },
       { tag: 'Booking', title: 'Booking + calendar', body: 'Custom booking flows, deposit handling, calendar sync, SMS reminders, no-show recovery.' },
-      { tag: 'Alerts', title: 'Internal alerts + ops', body: 'Slack or SMS triggers on key events. Big lead came in? Contract signed? You know instantly.' },
     ],
   },
   {
@@ -44,8 +39,6 @@ const buckets = [
       { tag: 'Dashboard', title: 'Custom dashboards', body: 'Admin panels, customer database, owner consoles. Secure email-link login — no passwords to remember.' },
       { tag: 'Portals', title: 'Customer portals', body: 'Customers log in to see their bookings, files, and history. Email-link or phone-number sign-in — no passwords.' },
       { tag: 'Booking', title: 'Custom booking systems', body: 'Fully bespoke — not Calendly with a logo. Service selection, deposits, calendar sync.' },
-      { tag: 'Commerce', title: 'E-commerce setups', body: 'Shopify customisation, Stripe checkouts, custom storefronts where Shopify isn’t the right fit.' },
-      { tag: 'App-style', title: 'Phone-installable web apps', body: 'Sit on the home screen like an app, send push notifications, work offline. Faster and cheaper to ship than a real mobile app.' },
     ],
   },
 ]
@@ -101,7 +94,7 @@ export default function Services() {
             </RevealOnScroll>
 
             {/* Service cards */}
-            <RevealOnScroll className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <RevealOnScroll className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               <>
                 {bucket.services.map((s) => (
                   <ServiceCard key={s.title} service={s} />
