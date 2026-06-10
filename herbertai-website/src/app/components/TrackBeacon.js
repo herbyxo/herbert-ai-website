@@ -9,8 +9,8 @@ import { usePathname } from 'next/navigation'
  * The key below is Supabase's *publishable* key; RLS on the table is
  * insert-only for anon, so it can write hits but never read anything.
  */
-const ENDPOINT = 'https://pfraycnlwonyppwhaxkf.supabase.co/rest/v1/hq_site_hits'
-const PUBLISHABLE_KEY = 'sb_publishable_RzxcJeiVIeSiIqj0w33WXA_cc96R1HU'
+const ENDPOINT = 'https://ehegbryzixmafirpclji.supabase.co/rest/v1/hq_site_hits'
+const PUBLISHABLE_KEY = 'sb_publishable_Ku7FRo38BjXuYrWQsIkvhw_8uddVI1c'
 
 export default function TrackBeacon() {
   const pathname = usePathname()
