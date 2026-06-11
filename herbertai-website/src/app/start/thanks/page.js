@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Brief received',
@@ -10,6 +11,13 @@ export const metadata = {
 export default function Thanks() {
   return (
     <section className="bg-cream">
+      {/* Google Ads conversion — every lead form redirects here, so one
+          page-load event == one form submit. */}
+      <Script id="gtag-conversion" strategy="afterInteractive">
+        {`if (typeof gtag === 'function') {
+            gtag('event', 'conversion', { send_to: 'AW-18228080032/RaGxCLSS6bwcEKDb6fND' });
+          }`}
+      </Script>
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 min-h-[80vh] flex flex-col justify-center py-20 md:py-28">
         <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
           <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />

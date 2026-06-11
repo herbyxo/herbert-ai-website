@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import { Geist, Geist_Mono, Instrument_Serif, Bricolage_Grotesque } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -155,6 +156,17 @@ export default function RootLayout({ children }) {
         <Analytics />
         <SpeedInsights />
         <TrackBeacon />
+        {/* Google Ads tag — conversion tracking for paid campaigns */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18228080032"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18228080032');`}
+        </Script>
       </body>
     </html>
   )
