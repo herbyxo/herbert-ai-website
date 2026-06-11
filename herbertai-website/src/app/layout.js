@@ -42,10 +42,11 @@ const SITE_DESC =
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Herbert AI — automation & growth studio for SMBs',
+    default: 'Web Design & Automation Studio in Adelaide — Herbert AI',
     template: '%s · Herbert AI',
   },
-  description: SITE_DESC,
+  description:
+    'Adelaide web design & automation for small business. Custom websites, AI receptionists and workflow automation — built by Will Herbert, shipped in weeks.',
   applicationName: SITE_NAME,
   authors: [{ name: 'Will Herbert', url: `${SITE_URL}/about` }],
   creator: 'Will Herbert',
@@ -71,14 +72,14 @@ export const metadata = {
     locale: 'en_AU',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Herbert AI — automation & growth studio for SMBs',
-    description: SITE_DESC,
+    title: 'Web Design & Automation Studio in Adelaide — Herbert AI',
+    description:
+      'Adelaide web design & automation for small business. Custom websites, AI receptionists and workflow automation — built by Will Herbert, shipped in weeks.',
   },
+  // No hardcoded twitter title/description — it overrode every page's own
+  // values. Twitter falls back to per-page openGraph.
   twitter: {
     card: 'summary_large_image',
-    title: 'Herbert AI — automation & growth studio for SMBs',
-    description:
-      'Automation & growth studio for SMBs. Built bespoke by Will Herbert in Adelaide.',
   },
   robots: {
     index: true,
@@ -95,7 +96,7 @@ export const metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': ['ProfessionalService', 'LocalBusiness'],
   '@id': `${SITE_URL}/#business`,
   name: SITE_NAME,
   alternateName: 'Herbert AI Studio',
@@ -113,6 +114,7 @@ const jsonLd = {
     addressRegion: 'SA',
     addressCountry: 'AU',
   },
+  geo: { '@type': 'GeoCoordinates', latitude: -34.9285, longitude: 138.6007 },
   areaServed: [
     { '@type': 'City', name: 'Adelaide' },
     { '@type': 'AdministrativeArea', name: 'South Australia' },

@@ -9,6 +9,7 @@ export const metadata = {
     title: 'Start a project · Herbert AI',
     description: 'Tell me about your business. Free scoping reply within a business day.',
     url: '/start',
+    images: ['/opengraph-image'],
   },
 }
 

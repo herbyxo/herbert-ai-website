@@ -11,6 +11,7 @@ export const metadata = {
     description:
       'Book a free 30-minute scoping call with an Adelaide web design & automation studio. No pitch — a fixed quote and timeline if it’s worth building.',
     url: '/contact',
+    images: ['/opengraph-image'],
   },
 }
 

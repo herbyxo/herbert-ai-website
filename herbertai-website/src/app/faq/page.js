@@ -11,6 +11,7 @@ export const metadata = {
     description:
       'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI in Adelaide actually goes.',
     url: '/faq',
+    images: ['/opengraph-image'],
   },
 }
 

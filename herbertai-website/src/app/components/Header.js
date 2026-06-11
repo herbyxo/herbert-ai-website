@@ -42,6 +42,7 @@ export default function Header() {
             <DropItem href="/services#grow" title="Grow" sub="Ads, SEO, email, landing pages" />
             <DropItem href="/services#automate" title="Automate" sub="Voice agents, chatbots, workflows, CRM" />
             <DropItem href="/services#build" title="Build" sub="Websites, dashboards, custom systems" />
+            <DropItem href="/web-design-adelaide" title="Web design" sub="Free homepage mockup in 48 hours" />
           </DropdownLink>
           {/* Hidden until case studies are fleshed out — restore when ready */}
           {/* <NavLink href="/case-studies">Work</NavLink> */}

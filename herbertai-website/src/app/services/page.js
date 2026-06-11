@@ -56,7 +56,7 @@ export default function Services() {
             className="font-display text-ink max-w-[16ch]"
             style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
           >
-            What we build for small business.
+            Web design, AI &amp; automation for small business.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
             Adelaide-based studio for web design, development, AI automation and growth.
@@ -108,13 +108,22 @@ export default function Services() {
             {/* Build → start a conversation */}
             {bucket.id === 'build' && (
               <RevealOnScroll className="mt-12">
-                <Link
-                  href="/contact"
-                  data-magnetic
-                  className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
-                >
-                  Got a build in mind? Let&rsquo;s talk <span aria-hidden>→</span>
-                </Link>
+                <div className="flex flex-col items-start gap-4">
+                  <Link
+                    href="/web-design-adelaide"
+                    data-magnetic
+                    className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
+                  >
+                    Web design in Adelaide &mdash; free homepage mockup in 48 hours <span aria-hidden>→</span>
+                  </Link>
+                  <Link
+                    href="/contact"
+                    data-magnetic
+                    className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
+                  >
+                    Got a build in mind? Let&rsquo;s talk <span aria-hidden>→</span>
+                  </Link>
+                </div>
               </RevealOnScroll>
             )}
           </div>

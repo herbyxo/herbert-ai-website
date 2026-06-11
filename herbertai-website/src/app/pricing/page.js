@@ -2,7 +2,7 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'Pricing',
+  title: 'Pricing — Adelaide Web Design & Automation',
   description:
     'Herbert AI prices every project on scope — no public price list, no off-the-shelf packages. Tell me what you need and you get one fixed quote and a real timeline. No hourly creep, no lock-in.',
   alternates: { canonical: '/pricing' },
@@ -10,6 +10,7 @@ export const metadata = {
     title: 'Pricing · Herbert AI',
     description: 'Priced on scope, not on a menu. Every project quoted on what you actually need.',
     url: '/pricing',
+    images: ['/opengraph-image'],
   },
 }
 

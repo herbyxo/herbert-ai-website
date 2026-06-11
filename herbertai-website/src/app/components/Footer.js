@@ -11,6 +11,7 @@ const NAV_COLS = [
     links: [
       ['/services', 'Services'],
       // ['/case-studies', 'Work'], // hidden until case studies are fleshed out
+      ['/web-design-adelaide', 'Web Design Adelaide'],
       ['/industries', 'Industries'],
       ['/pricing', 'Pricing'],
       ['/about', 'About'],
@@ -96,6 +97,7 @@ export default function Footer() {
           <span className="flex items-center gap-5">
             <Link href="/privacy" className="hover:text-ink transition-colors">Privacy</Link>
             <span>Adelaide &middot; South Australia</span>
+            <a href="tel:+61448111840" className="hover:text-ink transition-colors">0448 111 840</a>
           </span>
         </div>
       </div>

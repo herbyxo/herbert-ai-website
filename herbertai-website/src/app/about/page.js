@@ -11,6 +11,7 @@ export const metadata = {
     description:
       'Adelaide web design & automation studio for small business. Solo builder, direct line, no agency overhead.',
     url: '/about',
+    images: ['/opengraph-image'],
   },
 }
 

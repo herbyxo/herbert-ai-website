@@ -1,7 +1,7 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'Web Design Adelaide — Free Homepage Mockup in 48 Hours',
+  title: { absolute: 'Web Design Adelaide — Free Homepage Mockup in 48 Hours' },
   description:
     'Adelaide web design for small business. See your new website before you spend a cent — free homepage mockup in 48 hours, fixed quote, live in weeks. Custom-coded, no templates, no agency retainers.',
   alternates: { canonical: '/web-design-adelaide' },
@@ -10,12 +10,50 @@ export const metadata = {
     description:
       'See your new website before you spend a cent — free homepage mockup in 48 hours, fixed quote, live in weeks.',
     url: '/web-design-adelaide',
+    images: ['/opengraph-image'],
   },
+}
+
+const faqs = [
+  {
+    q: 'How much does a website cost?',
+    a: 'Every site is quoted on scope — a clean five-page site costs a lot less than one with bookings and payments. You’ll get one fixed price with your mockup. No hourly billing, no agency retainers, no surprises.',
+  },
+  {
+    q: 'Is the mockup really free?',
+    a: 'Yes. You get a real homepage design for your business within 48 hours, before any money changes hands. If you don’t go ahead, that’s completely fine — it costs you nothing.',
+  },
+  {
+    q: 'How long does the full build take?',
+    a: 'Most sites go live in two to four weeks from sign-off. Bigger builds with bookings or dashboards run longer — your quote comes with a real timeline.',
+  },
+  {
+    q: 'Who actually does the work?',
+    a: 'Will Herbert — Adelaide-based, solo. You talk directly to the person designing and building your site. No account managers, no handoffs, no offshore team.',
+  },
+]
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.a,
+    },
+  })),
 }
 
 export default function WebDesignAdelaide() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-40 md:pb-28">
@@ -231,22 +269,9 @@ export default function WebDesignAdelaide() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
           <Eyebrow>Common questions</Eyebrow>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 max-w-[1000px]">
-            <Faq
-              q="How much does a website cost?"
-              a="Every site is quoted on scope — a clean five-page site costs a lot less than one with bookings and payments. You'll get one fixed price with your mockup. No hourly billing, no agency retainers, no surprises."
-            />
-            <Faq
-              q="Is the mockup really free?"
-              a="Yes. You get a real homepage design for your business within 48 hours, before any money changes hands. If you don't go ahead, that's completely fine — it costs you nothing."
-            />
-            <Faq
-              q="How long does the full build take?"
-              a="Most sites go live in two to four weeks from sign-off. Bigger builds with bookings or dashboards run longer — your quote comes with a real timeline."
-            />
-            <Faq
-              q="Who actually does the work?"
-              a="Will Herbert — Adelaide-based, solo. You talk directly to the person designing and building your site. No account managers, no handoffs, no offshore team."
-            />
+            {faqs.map((f) => (
+              <Faq key={f.q} q={f.q} a={f.a} />
+            ))}
           </div>
         </div>
       </section>
