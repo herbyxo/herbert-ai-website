@@ -2,12 +2,12 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'Industries — Adelaide Automation Studio',
+  title: 'Industries | Adelaide Automation Studio',
   description:
     'Web design & automation for trades, hospitality, property management, accounting, allied health and creative businesses across Adelaide and Australia-wide. Custom systems scoped to your industry.',
   alternates: { canonical: '/industries' },
   openGraph: {
-    title: 'Industries — Adelaide automation studio · Herbert AI',
+    title: 'Industries | Adelaide automation studio · Herbert AI',
     description:
       'Industry automation in Adelaide — for trades, hospitality, property, accounting, allied health and creative SMBs. Custom builds, quoted on scope.',
     url: '/industries',

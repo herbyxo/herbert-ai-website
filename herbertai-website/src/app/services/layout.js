@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Web design, AI & automation — Adelaide',
+  title: 'Web design, AI & automation | Adelaide',
   description:
     'Adelaide web design, AI voice agents, chatbots and workflow automation for small business. Grow, Automate, Build — every project custom-built and quoted on scope.',
   alternates: { canonical: '/services' },

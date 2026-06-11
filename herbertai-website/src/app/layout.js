@@ -43,7 +43,7 @@ const SITE_DESC =
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Web Design & Automation Studio in Adelaide — Herbert AI',
+    default: 'Web Design & Automation Studio in Adelaide | Herbert AI',
     template: '%s · Herbert AI',
   },
   description:
@@ -73,7 +73,7 @@ export const metadata = {
     locale: 'en_AU',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Web Design & Automation Studio in Adelaide — Herbert AI',
+    title: 'Web Design & Automation Studio in Adelaide | Herbert AI',
     description:
       'Adelaide web design & automation for small business. Custom websites, AI receptionists and workflow automation — built by Will Herbert, shipped in weeks.',
   },

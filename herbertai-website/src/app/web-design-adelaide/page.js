@@ -1,7 +1,7 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: { absolute: 'Web Design Adelaide — Free Homepage Mockup in 48 Hours' },
+  title: { absolute: 'Web Design Adelaide | Free Homepage Mockup in 48 Hours' },
   description:
     'Adelaide web design for small business. See your new website before you spend a cent — free homepage mockup in 48 hours, fixed quote, live in weeks. Custom-coded, no templates, no agency retainers.',
   alternates: { canonical: '/web-design-adelaide' },

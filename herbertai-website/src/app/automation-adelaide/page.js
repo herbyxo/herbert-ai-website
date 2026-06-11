@@ -1,7 +1,7 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: { absolute: 'Business Automation Adelaide — Custom Workflows & AI' },
+  title: { absolute: 'Business Automation Adelaide | Custom Workflows & AI' },
   description:
     'Adelaide business automation for small business. Invoices chased, bookings confirmed, leads followed up — built to run itself. Free automation map in 48 hours.',
   alternates: { canonical: '/automation-adelaide' },

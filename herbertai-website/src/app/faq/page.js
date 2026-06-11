@@ -2,12 +2,12 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'FAQ — pricing, timelines & process',
+  title: 'FAQ | pricing, timelines & process',
   description:
     'Common questions about Herbert AI, an Adelaide automation & growth studio — what we build, project timelines, AI voice agent realism, pricing, contracts, ownership, and getting started.',
   alternates: { canonical: '/faq' },
   openGraph: {
-    title: 'FAQ — Adelaide automation & growth studio · Herbert AI',
+    title: 'FAQ | Adelaide automation & growth studio · Herbert AI',
     description:
       'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI in Adelaide actually goes.',
     url: '/faq',

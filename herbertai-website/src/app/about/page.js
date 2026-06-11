@@ -2,12 +2,12 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'About — Adelaide web & automation studio',
+  title: 'About | Adelaide web & automation studio',
   description:
     'Will Herbert runs Herbert AI, an Adelaide web design & automation studio for small business. Solo builder, direct line, no agency overhead — websites, dashboards, voice agents, and workflow automation.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About — Adelaide web & automation studio · Herbert AI',
+    title: 'About | Adelaide web & automation studio · Herbert AI',
     description:
       'Adelaide web design & automation studio for small business. Solo builder, direct line, no agency overhead.',
     url: '/about',

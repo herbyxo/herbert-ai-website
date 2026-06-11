@@ -1,7 +1,7 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: { absolute: 'AI Receptionist for Australian Small Business — Herbert AI' },
+  title: { absolute: 'AI Receptionist for Australian Small Business | Herbert AI' },
   description:
     'An AI receptionist that answers every call 24/7, qualifies the job and books it in — built custom for Australian small businesses. Hear a demo for free.',
   alternates: { canonical: '/ai-receptionist' },
