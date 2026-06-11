@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
@@ -47,13 +45,6 @@ export default function WebDesignAdelaide() {
             >
               Get my free mockup <span aria-hidden>&rarr;</span>
             </a>
-            <Link
-              href="/case-studies/blendz"
-              data-magnetic
-              className="inline-flex items-center gap-2 border border-line text-ink px-7 py-3.5 rounded-full font-semibold text-[15px] hover:border-ink transition-colors"
-            >
-              See a live build
-            </Link>
           </div>
 
           {/* Proof strip */}
@@ -95,51 +86,43 @@ export default function WebDesignAdelaide() {
         </div>
       </section>
 
-      {/* ─── Live work / proof ─── */}
+      {/* ─── Why a mockup / proof ─── */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <Eyebrow>Recent build</Eyebrow>
-          <div className="grid md:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-center">
+          <Eyebrow>Why a free mockup</Eyebrow>
+          <div className="grid md:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-start">
             <RevealOnScroll>
               <div>
-                <h2 className="font-display text-ink" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-                  Blendz By Ben
+                <h2 className="font-display text-ink max-w-[14ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
+                  The mockup is the pitch.
                 </h2>
                 <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[52ch]">
-                  A busy barbershop running on a generic booking page. Herbert AI built the
-                  full thing custom — website, online bookings with card payments and
-                  tipping, an owner dashboard, SMS reminders, and an automated Google
-                  review funnel. Built solo, shipped in weeks.
+                  Anyone can show you a polished portfolio of someone else&apos;s business.
+                  I&apos;d rather show you yours. The mockup is real design work — your
+                  name, your services, your customers — so the thing you&apos;re judging is
+                  the actual thing you&apos;d be buying.
                 </p>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <Link
-                    href="/case-studies/blendz"
-                    data-magnetic
-                    className="inline-flex items-center gap-2 bg-ink text-cream px-6 py-3 rounded-full font-semibold text-[14px] hover:bg-ink-soft transition-colors"
-                  >
-                    Read the case study <span aria-hidden>&rarr;</span>
-                  </Link>
-                  <a
-                    href="https://blendzbyben.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted hover:text-ink transition-colors"
-                  >
-                    blendzbyben.com {'↗'}
-                  </a>
-                </div>
+                <p className="mt-5 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[52ch]">
+                  If it&apos;s not right, you say no and keep your money. If it is, you
+                  already know exactly what you&apos;re getting before you spend a dollar.
+                </p>
               </div>
             </RevealOnScroll>
             <RevealOnScroll delay={0.08}>
-              <Link href="/case-studies/blendz" className="block rounded-3xl overflow-hidden border border-line lift">
-                <Image
-                  src="/portfolio/blendz/home.png"
-                  alt="Blendz By Ben — custom barbershop website and booking system built by Herbert AI"
-                  width={1440}
-                  height={900}
-                  className="w-full h-auto"
+              <div className="space-y-5 md:pt-4">
+                <ProofPoint
+                  title="Real systems, not just pages"
+                  body="Recent work includes a full custom booking platform — online payments, owner dashboard, SMS reminders, automated review collection — built and shipped solo in weeks."
                 />
-              </Link>
+                <ProofPoint
+                  title="One person, start to finish"
+                  body="You deal directly with the person designing and coding your site. No account managers, no handoffs, nothing lost in translation."
+                />
+                <ProofPoint
+                  title="Nothing to cancel, ever"
+                  body="The mockup is free and the build is a fixed quote. No subscriptions, no retainers, no contracts that outlive their usefulness."
+                />
+              </div>
             </RevealOnScroll>
           </div>
         </div>
@@ -157,7 +140,7 @@ export default function WebDesignAdelaide() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-[1000px]">
             <Inclusion title="Built custom, loads fast" body="Hand-coded on the same stack the big tech companies use — not Wix, not a WordPress theme. Fast on a phone in a car park." />
             <Inclusion title="Designed to win customers" body="Clear offer, proof, and a way to contact you on every page. A website that earns its keep, not a brochure." />
-            <Inclusion title="Bookings & payments" body="Need appointments, online payment, or a quote form? Built in — like the Blendz booking system." />
+            <Inclusion title="Bookings & payments" body="Need appointments, online payments, or a quote form? Built in — full booking systems are part of the kit." />
             <Inclusion title="Google-ready" body="SEO foundations done properly — titles, speed, structure, local keywords — so Adelaide customers can actually find you." />
             <Inclusion title="Hosting & care" body="I host it, watch it, and fix it. You run your business; the site just works." />
             <Inclusion title="You own everything" body="The site, the code, the domain, the content — yours. No lock-in, no hostage fees." />
@@ -307,6 +290,15 @@ function Step({ n, title, body }) {
         <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{body}</p>
       </div>
     </RevealOnScroll>
+  )
+}
+
+function ProofPoint({ title, body }) {
+  return (
+    <div className="bg-cream-alt border border-line rounded-3xl p-6">
+      <h3 className="text-[16px] font-semibold tracking-[-0.01em] text-ink mb-2">{title}</h3>
+      <p className="text-[14px] text-muted leading-[1.55]">{body}</p>
+    </div>
   )
 }
 

@@ -12,8 +12,6 @@ export default function sitemap() {
     { path: '/contact', priority: 0.8 },
     { path: '/faq', priority: 0.7 },
     { path: '/privacy', priority: 0.3 },
-    { path: '/case-studies', priority: 0.85 },
-    { path: '/case-studies/blendz', priority: 0.8 },
     { path: '/web-design-adelaide', priority: 0.85 },
   ]
   return routes.map((r) => ({
