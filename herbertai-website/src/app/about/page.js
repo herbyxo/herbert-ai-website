@@ -55,16 +55,16 @@ const steps = [
 
 const recent = [
   {
-    tag: 'Hospitality · Adelaide',
-    name: 'Blendz By Ben',
-    body: 'Full-stack rebuild — custom site, owner dashboard, booking flow, SMS + email automation. Replaced a generic Setmore booking page on someone else’s domain.',
-    href: 'https://blendzbyben.com',
-    external: true,
+    tag: 'Hospitality · Booking platform',
+    name: 'Custom booking system',
+    body: 'Full-stack build running live — custom site, online payments and tipping, owner dashboard, SMS reminders, automated Google review collection. Shipped solo in weeks.',
+    href: '/services#build',
+    external: false,
   },
   {
-    tag: 'Trades · Sydney',
-    name: 'Master Freeze',
-    body: 'AI voice receptionist for a commercial refrigeration company. Qualifies callouts, books jobs, escalates emergencies.',
+    tag: 'Trades · Voice agent',
+    name: 'AI voice receptionist',
+    body: 'Answers the phone, qualifies the job, collects the details, escalates emergencies. There’s an unedited call recording on the services page — judge it yourself.',
     href: '/services#automate',
     external: false,
   },

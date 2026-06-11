@@ -208,13 +208,14 @@ function VoiceDemo() {
   return (
     <div className="mt-14 grid md:grid-cols-[1fr_1.4fr] gap-8 md:gap-12 items-center bg-white border border-line rounded-3xl p-8 md:p-10">
       <div>
-        <Eyebrow>Example · live</Eyebrow>
+        <Eyebrow>Demo · unedited</Eyebrow>
         <h3 className="text-[24px] md:text-[28px] font-medium tracking-[-0.01em] text-ink mb-3">
           A real call handled by the voice agent.
         </h3>
         <p className="text-[14px] text-muted leading-[1.6]">
-          Master Freeze · commercial refrigeration · Sydney.
-          Customer reported a refrigerant leak. Agent qualified the job, collected access details, closed the call. Zero human involvement.
+          Demo build for a commercial refrigeration company. Customer reported a
+          refrigerant leak — the agent qualified the job, collected access details,
+          closed the call. Zero human involvement.
         </p>
       </div>
       <div className="bg-ink rounded-2xl p-6">
