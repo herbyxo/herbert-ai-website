@@ -105,6 +105,19 @@ export default function Services() {
             {/* Inline demo */}
             {bucket.demo === 'voice' && <VoiceDemo />}
 
+            {/* Automate → AI receptionist landing page */}
+            {bucket.id === 'automate' && (
+              <RevealOnScroll className="mt-12">
+                <Link
+                  href="/ai-receptionist"
+                  data-magnetic
+                  className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
+                >
+                  AI receptionist for your business &mdash; hear a live demo <span aria-hidden>→</span>
+                </Link>
+              </RevealOnScroll>
+            )}
+
             {/* Build → start a conversation */}
             {bucket.id === 'build' && (
               <RevealOnScroll className="mt-12">

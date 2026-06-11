@@ -12,6 +12,8 @@ const NAV_COLS = [
       ['/services', 'Services'],
       // ['/case-studies', 'Work'], // hidden until case studies are fleshed out
       ['/web-design-adelaide', 'Web Design Adelaide'],
+      ['/ai-receptionist', 'AI Receptionist'],
+      ['/automation-adelaide', 'Automation Adelaide'],
       ['/industries', 'Industries'],
       ['/pricing', 'Pricing'],
       ['/about', 'About'],
