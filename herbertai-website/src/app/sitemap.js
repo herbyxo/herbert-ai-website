@@ -15,6 +15,7 @@ export default function sitemap() {
     { path: '/web-design-adelaide', priority: 0.85 },
     { path: '/ai-receptionist', priority: 0.85 },
     { path: '/automation-adelaide', priority: 0.85 },
+    { path: '/google-ads-adelaide', priority: 0.85 },
   ]
   return routes.map((r) => ({
     url: `${BASE}${r.path}`,

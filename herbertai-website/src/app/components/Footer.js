@@ -14,6 +14,7 @@ const NAV_COLS = [
       ['/web-design-adelaide', 'Web Design Adelaide'],
       ['/ai-receptionist', 'AI Receptionist'],
       ['/automation-adelaide', 'Automation Adelaide'],
+      ['/google-ads-adelaide', 'Google Ads Adelaide'],
       ['/industries', 'Industries'],
       ['/pricing', 'Pricing'],
       ['/about', 'About'],

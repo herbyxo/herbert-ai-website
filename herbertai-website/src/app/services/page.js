@@ -105,6 +105,19 @@ export default function Services() {
             {/* Inline demo */}
             {bucket.demo === 'voice' && <VoiceDemo />}
 
+            {/* Grow → Google Ads landing page */}
+            {bucket.id === 'grow' && (
+              <RevealOnScroll className="mt-12">
+                <Link
+                  href="/google-ads-adelaide"
+                  data-magnetic
+                  className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
+                >
+                  AI-optimised Google Ads, run by the builder <span aria-hidden>→</span>
+                </Link>
+              </RevealOnScroll>
+            )}
+
             {/* Automate → AI receptionist landing page */}
             {bucket.id === 'automate' && (
               <RevealOnScroll className="mt-12">
