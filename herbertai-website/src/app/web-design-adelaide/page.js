@@ -218,12 +218,12 @@ export default function WebDesignAdelaide() {
                 <input
                   type="hidden"
                   name="autoresponse_subject"
-                  value="Got it — your free mockup is in the works"
+                  value="Thanks, I've got your details"
                 />
                 <input
                   type="hidden"
                   name="autoresponse_message"
-                  value={`Hi — Will here from Herbert AI.\n\nThanks for the details. I'm on your free homepage mockup now — you'll have it in your inbox within 48 hours, along with a fixed quote if you'd like the full site built.\n\nIf you think of anything else worth including, just reply to this email.\n\n— Will Herbert\nHerbert AI · Adelaide`}
+                  value="Thanks, I've got your details and I'll be in touch with your mockup shortly - Will"
                 />
                 {/* Honeypot for spam */}
                 <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
