@@ -2,14 +2,14 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'About | Adelaide web & automation studio',
+  title: 'About | Adelaide web design & automation',
   description:
-    'Will Herbert runs Herbert AI, an Adelaide web design & automation studio for small business. Solo builder, direct line, no agency overhead — websites, dashboards, voice agents, and workflow automation.',
+    'Will Herbert runs Herbert AI — Adelaide web design & automation for small business. Solo builder, direct line, no agency overhead — websites, dashboards, voice agents, and workflow automation.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About | Adelaide web & automation studio · Herbert AI',
+    title: 'About | Adelaide web design & automation · Herbert AI',
     description:
-      'Adelaide web design & automation studio for small business. Solo builder, direct line, no agency overhead.',
+      'Adelaide web design & automation for small business. Solo builder, direct line, no agency overhead.',
     url: '/about',
     images: ['/opengraph-image'],
   },
@@ -86,7 +86,7 @@ export default function About() {
           </h1>
           <div className="mt-9 max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.55]">
             <p>
-              Herbert AI is an Adelaide web design &amp; automation studio for small business. I help owners grow and
+              Herbert AI is web design &amp; automation for Adelaide small business. I help owners grow and
               run themselves — ad campaigns, websites, dashboards, voice agents, workflow automation, whatever the
               business actually needs — for people who want a thing built and don&apos;t want to hire an agency to do it.
             </p>

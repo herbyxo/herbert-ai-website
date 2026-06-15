@@ -7,7 +7,7 @@ const ownerUrl = process.env.NEXT_PUBLIC_OWNER_CONSOLE_URL
 
 const NAV_COLS = [
   {
-    label: 'Studio',
+    label: 'Work',
     links: [
       ['/services', 'Services'],
       // ['/case-studies', 'Work'], // hidden until case studies are fleshed out
@@ -55,7 +55,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-muted text-[14px] leading-[1.6] max-w-md">
-              Adelaide-based automation &amp; growth studio for SMBs.
+              Adelaide-based automation &amp; growth for SMBs.
               Custom-built systems &mdash; ads, websites, dashboards, voice agents,
               workflows. Shipped in weeks, owned by you.
             </p>

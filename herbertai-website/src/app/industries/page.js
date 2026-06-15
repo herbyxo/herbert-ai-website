@@ -2,12 +2,12 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'Industries | Adelaide Automation Studio',
+  title: 'Industries | Adelaide Automation & Web Design',
   description:
     'Web design & automation for trades, hospitality, property management, accounting, allied health and creative businesses across Adelaide and Australia-wide. Custom systems scoped to your industry.',
   alternates: { canonical: '/industries' },
   openGraph: {
-    title: 'Industries | Adelaide automation studio · Herbert AI',
+    title: 'Industries | Adelaide automation & web design · Herbert AI',
     description:
       'Industry automation in Adelaide — for trades, hospitality, property, accounting, allied health and creative SMBs. Custom builds, quoted on scope.',
     url: '/industries',
@@ -56,7 +56,7 @@ export default function Industries() {
             Industries we work with.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
-            Adelaide automation studio building custom web and AI systems for small businesses
+            Adelaide web design &amp; automation, building custom web and AI systems for small businesses
             across multiple industries. Each one gets a tailored build, scoped to what your business
             actually needs and quoted on the work. Adelaide-based, Australia-wide.
           </p>

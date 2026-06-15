@@ -38,12 +38,12 @@ const bricolage = Bricolage_Grotesque({
 const SITE_URL = 'https://herbert-aisolutions.com'
 const SITE_NAME = 'Herbert AI'
 const SITE_DESC =
-  'Automation & growth studio for SMBs. Custom ads, websites, dashboards, voice agents, and workflow automation — built bespoke by Will Herbert in Adelaide.'
+  'Automation & growth for SMBs. Custom ads, websites, dashboards, voice agents, and workflow automation — built bespoke by Will Herbert in Adelaide.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Web Design & Automation Studio in Adelaide | Herbert AI',
+    default: 'Web Design & Automation in Adelaide | Herbert AI',
     template: '%s · Herbert AI',
   },
   description:
@@ -53,7 +53,7 @@ export const metadata = {
   creator: 'Will Herbert',
   publisher: SITE_NAME,
   keywords: [
-    'automation studio',
+    'AI automation Adelaide',
     'AI voice agents',
     'AI receptionist',
     'small business automation',
@@ -73,7 +73,7 @@ export const metadata = {
     locale: 'en_AU',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Web Design & Automation Studio in Adelaide | Herbert AI',
+    title: 'Web Design & Automation in Adelaide | Herbert AI',
     description:
       'Adelaide web design & automation for small business. Custom websites, AI receptionists and workflow automation — built by Will Herbert, shipped in weeks.',
   },
@@ -100,9 +100,9 @@ const jsonLd = {
   '@type': ['ProfessionalService', 'LocalBusiness'],
   '@id': `${SITE_URL}/#business`,
   name: SITE_NAME,
-  alternateName: 'Herbert AI Studio',
+  alternateName: 'Herbert AI — web design & automation',
   description:
-    'Automation & growth studio for SMBs. Custom AI voice agents, chatbots, workflow automation, websites, and dashboards — built bespoke by Will Herbert in Adelaide.',
+    'Automation & growth for SMBs. Custom AI voice agents, chatbots, workflow automation, websites, and dashboards — built bespoke by Will Herbert in Adelaide.',
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
   image: `${SITE_URL}/opengraph-image`,

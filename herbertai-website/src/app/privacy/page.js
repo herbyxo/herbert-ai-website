@@ -9,7 +9,7 @@ const sections = [
   {
     h: 'Who we are',
     body: [
-      'Herbert AI is an Adelaide-based web design & automation studio run by Will Herbert. This page explains what information the site collects and what happens to it. Questions about any of it: hello@herbert-aisolutions.com.',
+      'Herbert AI is an Adelaide-based web design & automation business run by Will Herbert. This page explains what information the site collects and what happens to it. Questions about any of it: hello@herbert-aisolutions.com.',
     ],
   },
   {

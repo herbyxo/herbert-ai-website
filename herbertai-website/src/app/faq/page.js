@@ -4,10 +4,10 @@ import RevealOnScroll from '../components/motion/RevealOnScroll'
 export const metadata = {
   title: 'FAQ | pricing, timelines & process',
   description:
-    'Common questions about Herbert AI, an Adelaide automation & growth studio — what we build, project timelines, AI voice agent realism, pricing, contracts, ownership, and getting started.',
+    'Common questions about Herbert AI, Adelaide automation & growth — what we build, project timelines, AI voice agent realism, pricing, contracts, ownership, and getting started.',
   alternates: { canonical: '/faq' },
   openGraph: {
-    title: 'FAQ | Adelaide automation & growth studio · Herbert AI',
+    title: 'FAQ | Adelaide automation & growth · Herbert AI',
     description:
       'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI in Adelaide actually goes.',
     url: '/faq',
@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: 'What if I need something that isn’t on the services page?',
-    a: 'That’s the whole point of the studio. Most real work is bespoke — n8n workflows wired through AroFlo, a custom intake system, an internal admin tool, an integration nobody’s built yet. Tell me the bottleneck, I’ll quote it.',
+    a: 'That’s the whole point. Most real work is bespoke — n8n workflows wired through AroFlo, a custom intake system, an internal admin tool, an integration nobody’s built yet. Tell me the bottleneck, I’ll quote it.',
   },
   {
     q: 'Do I need any technical knowledge?',
@@ -103,7 +103,7 @@ export default function FAQ() {
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[60ch]">
             Everything you might want to know before working with Herbert AI &mdash; an
-            Adelaide automation &amp; growth studio for small business. If you don&apos;t see
+            Adelaide automation &amp; growth for small business. If you don&apos;t see
             your question answered below, just{' '}
             <Link href="/contact" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
               get in touch

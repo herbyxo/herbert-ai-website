@@ -59,7 +59,7 @@ export default function Services() {
             Web design, AI &amp; automation for small business.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
-            Adelaide-based studio for web design, development, AI automation and growth.
+            Adelaide-based web design, development, AI automation and growth.
             Three buckets &mdash; grow, automate, build. Every project scoped to your
             business and quoted on the work.
           </p>

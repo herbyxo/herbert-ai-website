@@ -2,14 +2,14 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: 'Contact an Adelaide Web & Automation Studio',
+  title: 'Contact | Adelaide Web Design & Automation',
   description:
-    'Contact Herbert AI — an Adelaide web design & automation studio. Book a free 30-minute scoping call, no pitch. Email, phone, or Calendly. Usually replies within a day.',
+    'Contact Herbert AI — Adelaide web design & automation. Book a free 30-minute scoping call, no pitch. Email, phone, or Calendly. Usually replies within a day.',
   alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Contact · Herbert AI',
     description:
-      'Book a free 30-minute scoping call with an Adelaide web design & automation studio. No pitch — a fixed quote and timeline if it’s worth building.',
+      'Book a free 30-minute scoping call with Herbert AI — Adelaide web design & automation. No pitch — a fixed quote and timeline if it’s worth building.',
     url: '/contact',
     images: ['/opengraph-image'],
   },
@@ -29,7 +29,7 @@ export default function Contact() {
             Tell me what&apos;s slow, what&apos;s broken, or what doesn&apos;t exist yet.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            Herbert AI is an Adelaide web design &amp; automation studio for small business. Send a
+            Herbert AI is web design &amp; automation for Adelaide small business. Send a
             message or book a free 30-minute call, no pitch. If it&apos;s worth building, I&apos;ll
             come back with a fixed quote and timeline.
           </p>

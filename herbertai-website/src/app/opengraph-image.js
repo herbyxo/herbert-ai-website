@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Herbert AI — automation & growth studio for SMBs'
+export const alt = 'Herbert AI — automation & growth for SMBs'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -63,8 +63,8 @@ export default async function OG() {
               gap: 18,
             }}
           >
-            <span>Automation & growth</span>
-            <span>studio for</span>
+            <span>Web design,</span>
+            <span>automation & growth for</span>
             <span style={{ color: '#00FF88', fontStyle: 'italic' }}>SMBs.</span>
           </div>
         </div>
