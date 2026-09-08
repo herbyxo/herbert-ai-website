@@ -188,7 +188,15 @@ export default function RootLayout({ children }) {
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-18228080032');`}
+            gtag('config', 'AW-18228080032');
+            // Website call conversion (Google Ads action 7753449754, created by
+            // the marketing engine 2026-09-08). For visitors who arrived from an
+            // ad, Google swaps the number below wherever it is shown with a
+            // forwarding number, and a call over 60 seconds counts as a lead.
+            // The text must match how the number is written on the pages.
+            gtag('config', 'AW-18228080032/z7BrCJqCkfEcEKDb6fND', {
+              'phone_conversion_number': '0448 111 840'
+            });`}
         </Script>
       </body>
     </html>
