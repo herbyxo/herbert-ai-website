@@ -15,7 +15,7 @@ art-directed studio register (cream, ink, neon green, Bricolage). Will's call.
 
 ## Pages
 
-- [~] /lp/web-design (built on preview/paid-landing-pages, awaiting Will)
+- [~] /lp/web-design (built in the charter skin; Will picked structure A, theme pending)
 - [ ] /lp/website-redesign (built, same template, not yet shown)
 - [ ] /lp/tradie-websites (built, same template, not yet shown)
 
@@ -29,7 +29,11 @@ flood with the form in it, slim footer with ABN and Privacy.
 
 Preview: https://herbert-ai-website-git-preview-paid-landing-pages-herbert-ai.vercel.app/lp/web-design (Vercel, SSO-gated; Will's login). PNG on disk: headless Chrome from the CLI hands off to the running Chrome on this Mac and ignores window size, so no full-page PNG yet; the pane rendered the hero correctly and the engine audit passed all three pages.
 
-Will's pick: (pending)
-Tweaks: (pending)
+Will's pick (2026-09-11, skins page): "i think i like A the most. can u do A, but then give some options in terms of theme for A?"
+So: the direct-response structure over the charter's register, for the paid page. Theme
+options for A shown next (design-pass-skins-a-themes-2026-09-11.html). Candidate register
+rule, not yet confirmed by Will: on a paid landing page the direct-response structure
+wins over the brand register.
+Tweaks: (pending, after the theme pick)
 Applied commit: 5fb0827 on preview/paid-landing-pages (built, lint clean, engine audit passes: first field 67 words in, 3 required fields)
 Register rule: (pending)
