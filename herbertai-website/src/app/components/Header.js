@@ -7,7 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  if (pathname?.startsWith('/preview')) return null
+  // Paid landing pages carry no site navigation: one goal per page, and the
+  // site's own nav is the first thing a visitor from an ad would click away on.
+  if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/')) return null
 
   return (
     <header className="bg-cream">

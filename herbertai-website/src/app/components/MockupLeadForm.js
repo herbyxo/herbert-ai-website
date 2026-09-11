@@ -22,8 +22,12 @@
 // viewing attention never reaches (NN/g). Both variants are ONE component
 // posting to ONE endpoint, so the hidden fields, the engine notification and
 // the thanks redirect cannot drift apart.
-export default function MockupLeadForm({ variant = 'full', onGreen = false }) {
+export default function MockupLeadForm({ variant = 'full', onGreen = false, source = 'Web Design Adelaide', compactField = 'business' }) {
   const compact = variant === 'compact'
+  // `source` names the page in the email subject so an enquiry from the
+  // redesign page reads as one; `compactField` lets the compact form lead with
+  // the one thing that page's mockup cannot start without (the current site,
+  // for a redesign).
 
   function notifyEngine(e) {
     try {
@@ -55,8 +59,8 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false }) {
     <form action="https://api.web3forms.com/submit" method="POST"
       onSubmit={notifyEngine} className={compact ? 'space-y-3' : 'space-y-5'}>
       <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
-      <input type="hidden" name="from_name" value="Herbert AI — Web Design Adelaide" />
-      <input type="hidden" name="subject" value="New mockup request — Web Design Adelaide" />
+      <input type="hidden" name="from_name" value={`Herbert AI, ${source}`} />
+      <input type="hidden" name="subject" value={`New mockup request, ${source}`} />
       <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/start/thanks" />
       <input
         type="hidden"
@@ -75,8 +79,11 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false }) {
         <>
           <div className="flex flex-col sm:flex-row gap-3">
             <input
-              id="c-business" name="business" type="text" required autoComplete="organization"
-              placeholder="Your business"
+              id={compactField === 'website' ? 'c-website' : 'c-business'}
+              name={compactField === 'website' ? 'website' : 'business'}
+              type="text" required
+              autoComplete={compactField === 'website' ? 'url' : 'organization'}
+              placeholder={compactField === 'website' ? 'Your current website' : 'Your business'}
               className="flex-1 min-w-0 px-5 py-3.5 bg-cream border border-line rounded-full text-[15px] text-ink placeholder:text-muted focus:border-ink focus:outline-none transition-colors"
             />
             <input

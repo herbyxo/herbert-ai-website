@@ -33,7 +33,7 @@ const NAV_COLS = [
 
 export default function Footer() {
   const pathname = usePathname()
-  if (pathname?.startsWith('/preview')) return null
+  if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/')) return null
 
   return (
     <footer className="bg-cream border-t border-line">
