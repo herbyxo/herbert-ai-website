@@ -12,18 +12,13 @@ export default function Page() {
     <LandingPage
       source="Web Design Adelaide"
       eyebrow="Web design, Adelaide"
-      h1="See your new website before you pay a"
-      em="cent."
+      h1="See your new website before you pay a cent."
       sub="Tell me about your business and I will design your homepage, free, within 48 hours. No deposit, no obligation. If you like it, you get one fixed quote and the site is live in weeks."
+      checks={['Free mockup in 48 hours', 'No deposit. One fixed price', 'You own the site, the code, the domain']}
       steps={[
         { title: 'Tell me about your business', body: 'Two fields, two minutes. What you do and where to send the design.' },
         { title: 'Your homepage mockup in 48 hours', body: 'A real design with your name, your services and your branding. No payment, no obligation.' },
         { title: 'Like it? Fixed quote, live in weeks', body: 'One fixed price and a real timeline. If not, it cost you nothing.' },
-      ]}
-      points={[
-        { title: 'One fixed price, agreed before we start', body: 'No hourly billing, no agency retainers, no surprises. The quote comes with the mockup.' },
-        { title: 'One person, start to finish', body: 'You deal directly with the person designing and building your site. Nothing lost in handoffs.' },
-        { title: 'You own everything', body: 'The site, the code, the domain, the content. No lock-in, no hostage fees.' },
       ]}
       faqs={[
         { q: 'How much does a website cost?', a: 'Every site is quoted on scope. A clean five-page site costs a lot less than one with bookings and payments. You get one fixed price with your mockup.' },

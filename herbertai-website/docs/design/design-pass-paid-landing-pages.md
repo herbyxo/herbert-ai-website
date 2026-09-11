@@ -15,9 +15,9 @@ art-directed studio register (cream, ink, neon green, Bricolage). Will's call.
 
 ## Pages
 
-- [~] /lp/web-design (built in the charter skin; Will picked structure A, theme pending)
-- [ ] /lp/website-redesign (built, same template, not yet shown)
-- [ ] /lp/tradie-websites (built, same template, not yet shown)
+- [x] /lp/web-design (A2/S3 built; picks logged; register rule written)
+- [x] /lp/website-redesign (A2/S3, same component)
+- [x] /lp/tradie-websites (A2/S3, same component)
 
 ## /lp/web-design
 
@@ -40,6 +40,11 @@ So: A2 (ink and the house green, sharp); shade options next
 (design-pass-skins-a2-shades-2026-09-11.html); ABN in the footer only; no face slot; the
 register rule is locked and written to design-taste/registers/marketing-landing-page.md.
 Also dropped on the way: the star row (no public review count to back it).
-Tweaks: (pending, after the shade pick)
+Shade pick (2026-09-11): "S3". Deep green (#0B7A3E) with white button text, white ground,
+charcoal ink (#1F2125), the card border in the same green. Built into the real component
+next; A2/S3 becomes /lp/web-design and the other two pages follow it.
+Tweaks: none asked for at the pick.
+Applied commit: see git log on preview/paid-landing-pages ("reskin the paid landing pages to A2/S3"). Verified on the dev server at desktop and phone width, console clean, engine audit passes all three pages.
+Register rule: locked, design-taste/registers/marketing-landing-page.md.
 Applied commit: 5fb0827 on preview/paid-landing-pages (built, lint clean, engine audit passes: first field 67 words in, 3 required fields)
 Register rule: (pending)

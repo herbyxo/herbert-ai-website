@@ -12,18 +12,13 @@ export default function Page() {
     <LandingPage
       source="Tradie Websites Adelaide"
       eyebrow="Websites for tradies, Adelaide"
-      h1="A tradie website that gets you"
-      em="called."
+      h1="A tradie website that gets you called."
       sub="Your trade, your suburbs, your number on every page. I design your homepage free within 48 hours. No deposit. If you like it, one fixed price and it is live in about two weeks."
+      checks={['Free mockup in 48 hours', 'No deposit. One fixed price, no retainer', 'Your number on every page, one tap']}
       steps={[
         { title: 'Tell me your trade and your area', body: 'Two fields, two minutes. What you do and where to send the design.' },
         { title: 'Your homepage mockup in 48 hours', body: 'Your trade, your suburbs, your number where people can tap it. No payment, no obligation.' },
         { title: 'Like it? Fixed price, live in about two weeks', body: 'Most tradie sites are a handful of pages. One fixed price, no retainer. If not, it cost you nothing.' },
-      ]}
-      points={[
-        { title: 'Built for phones first', body: 'Most people looking for a tradie are searching from one, often on site. The page loads fast and the number is one tap.' },
-        { title: 'Quote requests, not clicks', body: 'A short form that asks the three things you need to quote a job, and sends it straight to your phone.' },
-        { title: 'You own everything', body: 'The site, the code, the domain, the content. No lock-in, no hostage fees.' },
       ]}
       faqs={[
         { q: 'How much does a tradie website cost?', a: 'One fixed price, quoted with your mockup. Most tradie sites are a handful of pages, so they cost less than you think and go live in about two weeks.' },

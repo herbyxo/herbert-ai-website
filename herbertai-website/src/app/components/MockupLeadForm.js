@@ -22,8 +22,13 @@
 // viewing attention never reaches (NN/g). Both variants are ONE component
 // posting to ONE endpoint, so the hidden fields, the engine notification and
 // the thanks redirect cannot drift apart.
-export default function MockupLeadForm({ variant = 'full', onGreen = false, source = 'Web Design Adelaide', compactField = 'business' }) {
+export default function MockupLeadForm({ variant = 'full', onGreen = false, source = 'Web Design Adelaide', compactField = 'business', look = 'pill' }) {
   const compact = variant === 'compact'
+  // `look`: 'pill' is the organic page (cream, rounded-full, the site's green).
+  // 'direct' is the paid landing pages (BUILD-PLAN G-C12 field test, Will's pick
+  // A2/S3 on 2026-09-11): stacked square fields, deep green button, white text.
+  // Same hidden fields, same endpoint, same redirect, so the two cannot drift.
+  const direct = look === 'direct'
   // `source` names the page in the email subject so an enquiry from the
   // redesign page reads as one; `compactField` lets the compact form lead with
   // the one thing that page's mockup cannot start without (the current site,
@@ -75,7 +80,42 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
       {/* Honeypot for spam */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
-      {compact ? (
+      {compact && direct ? (
+        <>
+          <div className="flex flex-col gap-2.5">
+            <input
+              id={compactField === 'website' ? 'd-website' : 'd-business'}
+              name={compactField === 'website' ? 'website' : 'business'}
+              type="text" required
+              autoComplete={compactField === 'website' ? 'url' : 'organization'}
+              placeholder={compactField === 'website' ? 'Your current website' : 'Your business'}
+              className={`w-full px-3.5 py-3 rounded-[4px] border text-[15px] focus:outline-none focus:border-[#0B7A3E] transition-colors ${
+                onGreen
+                  ? 'bg-[#24272C] border-[#3A3D44] text-white placeholder:text-[#8B9096]'
+                  : 'bg-white border-[#C9CCC9] text-[#1F2125] placeholder:text-[#62666C]'
+              }`}
+            />
+            <input
+              id="d-email" name="email" type="email" required autoComplete="email"
+              placeholder="you@business.com"
+              className={`w-full px-3.5 py-3 rounded-[4px] border text-[15px] focus:outline-none focus:border-[#0B7A3E] transition-colors ${
+                onGreen
+                  ? 'bg-[#24272C] border-[#3A3D44] text-white placeholder:text-[#8B9096]'
+                  : 'bg-white border-[#C9CCC9] text-[#1F2125] placeholder:text-[#62666C]'
+              }`}
+            />
+            <button
+              type="submit"
+              className="w-full py-3.5 px-4 rounded-[4px] bg-[#0B7A3E] hover:bg-[#09612F] text-white font-bold text-[16px] transition-colors"
+            >
+              Get my free mockup
+            </button>
+          </div>
+          <p className={`text-[12.5px] text-center ${onGreen ? 'text-[#A9ADB3]' : 'text-[#62666C]'}`}>
+            No deposit. No obligation. Reply within 48 hours.
+          </p>
+        </>
+      ) : compact ? (
         <>
           <div className="flex flex-col sm:flex-row gap-3">
             <input
