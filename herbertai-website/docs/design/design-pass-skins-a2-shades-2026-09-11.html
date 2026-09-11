@@ -1,0 +1,234 @@
+<title>A2, Three Shades</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Archivo:wght@400;500;600;800&display=swap">
+<style>
+  :root {
+    --w-bg: #FBFAF7; --w-ink: #151417; --w-muted: #6D6A66; --w-line: #E4E0D8; --w-chip: #2B4CFF; --w-panel: #FFFFFF;
+    --w-font: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; --w-mono: "JetBrains Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --w-bg: #111114; --w-ink: #ECEAE4; --w-muted: #9A968F; --w-line: #2A2A2F; --w-chip: #8FA3FF; --w-panel: #18181C; }
+  }
+  :root[data-theme="dark"] { --w-bg: #111114; --w-ink: #ECEAE4; --w-muted: #9A968F; --w-line: #2A2A2F; --w-chip: #8FA3FF; --w-panel: #18181C; }
+  * { box-sizing: border-box; }
+  body { background: var(--w-bg); color: var(--w-ink); font-family: var(--w-font); margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1440px; margin: 0 auto; padding: 40px 24px 80px; }
+  .intro { max-width: 68ch; }
+  .intro .lab { font-family: var(--w-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--w-muted); margin-bottom: 18px; }
+  .intro h1 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; text-wrap: balance; }
+  .intro p { font-size: 16px; line-height: 1.55; color: var(--w-muted); margin: 0 0 12px; }
+  .intro p b { color: var(--w-ink); font-weight: 600; }
+  .boards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 40px; align-items: start; }
+  @media (max-width: 1180px) { .boards { grid-template-columns: 1fr; } }
+  .board { border: 1px solid var(--w-line); background: var(--w-panel); border-radius: 10px; overflow: hidden; }
+  .cap { padding: 18px 18px 16px; border-bottom: 1px solid var(--w-line); }
+  .cap .k { font-family: var(--w-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--w-chip); }
+  .cap h2 { margin: 6px 0 8px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  .cap p { margin: 0 0 8px; font-size: 13.5px; line-height: 1.5; color: var(--w-muted); }
+  .cap p:last-child { margin-bottom: 0; }
+  .sw { display: flex; gap: 6px; margin: 10px 0 6px; flex-wrap: wrap; }
+  .sw span { display: inline-flex; align-items: center; gap: 5px; font-family: var(--w-mono); font-size: 10.5px; color: var(--w-muted); }
+  .sw i { width: 20px; height: 20px; border-radius: 5px; border: 1px solid rgba(0,0,0,.08); display: inline-block; }
+  .phone { padding: 18px; background: var(--w-bg); border-top: 1px solid var(--w-line); }
+  .screen { width: 390px; max-width: 100%; margin: 0 auto; border-radius: 22px; overflow: hidden; box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 18px 48px rgba(0,0,0,.14); }
+  .foot { margin-top: 40px; font-size: 13px; color: var(--w-muted); max-width: 68ch; line-height: 1.55; }
+
+  /* ---- the A2 skeleton: Archivo, sharp corners, green on the interactive only ---- */
+  .lp { font-size: 15px; line-height: 1.5; background: var(--bg); color: var(--ink); font-family: "Archivo", Arial, sans-serif; }
+  .lp a { text-decoration: none; color: inherit; }
+  .lp .bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+  .lp .mark { display: flex; align-items: center; gap: 8px; font-weight: 600; letter-spacing: -0.01em; }
+  .lp .mark svg { width: 22px; height: 22px; }
+  .lp .call { display: inline-flex; align-items: center; gap: 6px; background: var(--acc); color: var(--on-acc); font-weight: 700; padding: 9px 12px; border-radius: 4px; font-size: 13.5px; }
+  .lp .call svg { width: 14px; height: 14px; fill: var(--on-acc); }
+  .lp .hero { padding: 26px 18px 30px; }
+  .lp .eyebrow { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 14px; color: var(--acc-text); font-weight: 700; }
+  .lp h1 { margin: 0; font-size: 31px; line-height: 1.08; font-weight: 800; letter-spacing: -0.03em; text-wrap: balance; }
+  .lp .sub { margin: 14px 0 0; color: var(--mut); font-size: 15px; }
+  .lp .checks { margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; font-size: 14.5px; }
+  .lp .checks li { display: flex; gap: 8px; align-items: flex-start; }
+  .lp .chk { width: 18px; height: 18px; flex: none; margin-top: 1px; color: var(--acc); }
+  .lp .chk circle { fill: currentColor; }
+  .lp .chk path { stroke: var(--on-acc); }
+  .lp .card { margin-top: 18px; border: 2px solid var(--card-border); border-radius: 6px; padding: 16px; background: var(--card-bg); }
+  .lp .card .t { font-weight: 800; font-size: 16px; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .lp .form { display: flex; flex-direction: column; gap: 10px; }
+  .lp .form .f { display: block; width: 100%; padding: 12px 14px; font: inherit; border: 1px solid var(--field); border-radius: 4px; background: var(--field-bg); color: var(--ink); }
+  .lp .form .btn { display: block; width: 100%; padding: 13px 16px; font: inherit; font-weight: 700; font-size: 16px; text-align: center; border: 0; border-radius: 4px; background: var(--acc); color: var(--on-acc); }
+  .lp .fine { margin: 8px 0 0; font-size: 12.5px; color: var(--mut); text-align: center; }
+  .lp .who { margin-top: 12px; font-size: 12.5px; color: var(--mut); line-height: 1.4; text-align: center; }
+  .lp .who b { color: var(--ink); font-weight: 600; }
+  .lp .sec { padding: 26px 18px; }
+  .lp .sec.band { background: var(--band); }
+  .lp h2 { margin: 0 0 14px; font-size: 22px; font-weight: 800; letter-spacing: -0.025em; text-wrap: balance; }
+  .lp .steps { display: flex; flex-direction: column; gap: 16px; }
+  .lp .step .num { font-size: 11px; letter-spacing: 0.16em; margin-bottom: 4px; color: var(--acc-text); font-weight: 700; }
+  .lp .step h3 { margin: 0 0 4px; font-size: 16px; font-weight: 600; }
+  .lp .step p { margin: 0; font-size: 14px; color: var(--mut); }
+  .lp .proof { border-left: 4px solid var(--acc); padding-left: 14px; }
+  .lp .proof .lab { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mut); }
+  .lp .proof q { display: block; font-size: 16px; line-height: 1.4; margin: 10px 0 12px; quotes: "\201C" "\201D"; }
+  .lp .proof ul { margin: 0; padding-left: 18px; font-size: 14px; }
+  .lp .proof li { margin-bottom: 4px; }
+  .lp .faq h3 { margin: 12px 0 4px; font-size: 15px; font-weight: 600; }
+  .lp .faq p { margin: 0; font-size: 14px; color: var(--mut); }
+  .lp .cta { padding: 30px 18px; background: var(--cta-bg); color: var(--cta-ink); }
+  .lp .cta h2 { color: var(--cta-ink); }
+  .lp .cta .form .f { border-color: var(--cta-field); background: var(--cta-field-bg); color: var(--cta-ink); }
+  .lp .cta .fine { color: var(--cta-mut); }
+  .lp .foot { padding: 16px 18px; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; color: var(--mut); border-top: 1px solid var(--line); }
+  .lp .sticky { position: sticky; bottom: 0; display: flex; justify-content: center; align-items: center; gap: 8px; background: var(--acc); color: var(--on-acc); padding: 12px; font-weight: 700; font-size: 15px; }
+  .lp .sticky svg { width: 16px; height: 16px; fill: var(--on-acc); }
+
+  /* ---- S1: soft. Off-white, charcoal, the green one step down from neon ---- */
+  .s1 { --bg: #FAFAF8; --ink: #1A1B1E; --mut: #62666C; --line: #E4E6E4; --band: #F1F3F0;
+        --field: #C9CCC9; --field-bg: #FFFFFF; --card-bg: #FFFFFF; --card-border: #1A1B1E;
+        --acc: #12B34A; --on-acc: #0E0F12; --acc-text: #0F8A4B;
+        --cta-bg: #1B1D21; --cta-ink: #F4F5F3; --cta-mut: #A9ADB3; --cta-field: #3A3D44; --cta-field-bg: #24272C; }
+  /* ---- S2: tinted. The green becomes part of the page, not a sticker on it ---- */
+  .s2 { --bg: #FBFCFA; --ink: #17191C; --mut: #5E6469; --line: #DFE6E1; --band: #EDF6F0;
+        --field: #C4CFC8; --field-bg: #FFFFFF; --card-bg: #FFFFFF; --card-border: #17191C;
+        --acc: #00C853; --on-acc: #0E0F12; --acc-text: #0B7A3E;
+        --cta-bg: #10231A; --cta-ink: #F2F7F3; --cta-mut: #9FB5A7; --cta-field: #2C4A39; --cta-field-bg: #182E23; }
+  /* ---- S3: deep. White kept, the green goes deep and the button text goes white ---- */
+  .s3 { --bg: #FFFFFF; --ink: #1F2125; --mut: #62666C; --line: #E5E7E5; --band: #F3F4F2;
+        --field: #C9CCC9; --field-bg: #FFFFFF; --card-bg: #FFFFFF; --card-border: #0B7A3E;
+        --acc: #0B7A3E; --on-acc: #FFFFFF; --acc-text: #0B7A3E;
+        --cta-bg: #1B1D21; --cta-ink: #F4F5F3; --cta-mut: #A9ADB3; --cta-field: #3A3D44; --cta-field-bg: #24272C; }
+</style>
+
+<div class="wrap">
+  <div class="intro">
+    <div class="lab">Design pass, 11 Sep 2026, paid landing page /lp/web-design, A2</div>
+    <h1>A2, three shades. Pick by gut.</h1>
+    <p>Your other calls are already in: <b>ABN in the footer only, no photo, and the rule is locked.</b> The star row went too, since there is no public review count to back it. What was harsh in A2 is the trio at full strength, pure white, near-black and neon green. Each board eases that a different way. Archivo, 4px corners and the layout do not move.</p>
+  </div>
+
+  <div class="boards">
+
+    <section class="board">
+      <div class="cap">
+        <div class="k">S1</div>
+        <h2>Soft</h2>
+        <p>Off-white instead of white, charcoal instead of black, and the green one step down from neon. The least change: it is still A2, with the edges taken off.</p>
+        <div class="sw"><span><i style="background:#FAFAF8"></i>FAFAF8</span><span><i style="background:#F1F3F0"></i>F1F3F0</span><span><i style="background:#1A1B1E"></i>1A1B1E</span><span><i style="background:#12B34A"></i>12B34A</span><span><i style="background:#62666C"></i>62666C</span></div>
+      </div>
+      <div class="phone"><div class="screen"><div class="lp s1">
+        <div class="bar">
+          <div class="mark"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1A1B1E"/><text x="16" y="24" font-family="Arial" font-weight="700" font-size="22" fill="#FAFAF8" text-anchor="middle">h</text><circle cx="24.5" cy="8.5" r="2.4" fill="#12B34A"/></svg>herbert ai</div>
+          <a class="call" href="tel:+61448111840"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>0448 111 840</a>
+        </div>
+        <div class="hero">
+          <div class="eyebrow">Web design, Adelaide</div>
+          <h1>See your new website before you pay a cent.</h1>
+          <p class="sub">A free homepage mockup within 48 hours. No deposit, no obligation. If you like it, one fixed quote and the site is live in weeks.</p>
+          <ul class="checks">
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Free mockup in 48 hours</li>
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>No deposit. One fixed price</li>
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>You own the site, the code, the domain</li>
+          </ul>
+          <div class="card">
+            <p class="t">Get your free homepage mockup</p>
+            <form class="form" onsubmit="return false"><input class="f" type="text" placeholder="Your business"><input class="f" type="email" placeholder="you@business.com"><button class="btn" type="submit">Get my free mockup</button></form>
+            <p class="fine">No deposit. No obligation. Reply within 48 hours.</p>
+            <p class="who"><b>Will Herbert</b> designs and builds it. One person, start to finish. Adelaide.</p>
+          </div>
+        </div>
+        <div class="sec band"><h2>How it works</h2><div class="steps">
+          <div class="step"><div class="num">STEP 1</div><h3>Tell me about your business</h3><p>Two fields, two minutes. What you do and where to send the design.</p></div>
+          <div class="step"><div class="num">STEP 2</div><h3>Your homepage mockup in 48 hours</h3><p>A real design with your name, your services and your branding. No payment, no obligation.</p></div>
+          <div class="step"><div class="num">STEP 3</div><h3>Like it? Fixed quote, live in weeks</h3><p>One fixed price and a real timeline. If not, it cost you nothing.</p></div>
+        </div></div>
+        <div class="sec"><div class="proof"><div class="lab">What arrives in 48 hours</div><q>Mobile dog grooming across the eastern suburbs. Want online booking and a site that doesn't look like 2012.</q><ul><li>A homepage with the business name, the services and the suburbs</li><li>Online booking on the page, not a link away</li><li>A fixed quote for the full build, no deposit</li></ul></div></div>
+        <div class="sec band faq"><h2>Common questions</h2><h3>How much does a website cost?</h3><p>Every site is quoted on scope. You get one fixed price with your mockup.</p><h3>Is the mockup really free?</h3><p>Yes. A real homepage design within 48 hours, before any money changes hands.</p><h3>How long does the build take?</h3><p>Most sites go live in two to four weeks from sign-off.</p></div>
+        <div class="cta"><h2>Your homepage, designed in 48 hours.</h2><form class="form" onsubmit="return false"><input class="f" type="text" placeholder="Your business"><input class="f" type="email" placeholder="you@business.com"><button class="btn" type="submit">Get my free mockup</button></form><p class="fine">No deposit. No obligation.</p></div>
+        <div class="foot"><span>Herbert AI. ABN 83 880 085 162. Adelaide.</span><span>Privacy</span></div>
+        <a class="sticky" href="tel:+61448111840"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call Will: 0448 111 840</a>
+      </div></div></div>
+    </section>
+
+    <section class="board">
+      <div class="cap">
+        <div class="k">S2</div>
+        <h2>Tinted</h2>
+        <p>The green stops being a sticker and becomes part of the page: a green-tinted band behind the steps and questions, hairlines with a green cast, and the dark closing section is a green-black rather than a grey-black. Button one notch under neon.</p>
+        <div class="sw"><span><i style="background:#FBFCFA"></i>FBFCFA</span><span><i style="background:#EDF6F0"></i>EDF6F0</span><span><i style="background:#17191C"></i>17191C</span><span><i style="background:#00C853"></i>00C853</span><span><i style="background:#10231A"></i>10231A</span></div>
+      </div>
+      <div class="phone"><div class="screen"><div class="lp s2">
+        <div class="bar">
+          <div class="mark"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17191C"/><text x="16" y="24" font-family="Arial" font-weight="700" font-size="22" fill="#FBFCFA" text-anchor="middle">h</text><circle cx="24.5" cy="8.5" r="2.4" fill="#00C853"/></svg>herbert ai</div>
+          <a class="call" href="tel:+61448111840"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>0448 111 840</a>
+        </div>
+        <div class="hero">
+          <div class="eyebrow">Web design, Adelaide</div>
+          <h1>See your new website before you pay a cent.</h1>
+          <p class="sub">A free homepage mockup within 48 hours. No deposit, no obligation. If you like it, one fixed quote and the site is live in weeks.</p>
+          <ul class="checks">
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Free mockup in 48 hours</li>
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>No deposit. One fixed price</li>
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>You own the site, the code, the domain</li>
+          </ul>
+          <div class="card">
+            <p class="t">Get your free homepage mockup</p>
+            <form class="form" onsubmit="return false"><input class="f" type="text" placeholder="Your business"><input class="f" type="email" placeholder="you@business.com"><button class="btn" type="submit">Get my free mockup</button></form>
+            <p class="fine">No deposit. No obligation. Reply within 48 hours.</p>
+            <p class="who"><b>Will Herbert</b> designs and builds it. One person, start to finish. Adelaide.</p>
+          </div>
+        </div>
+        <div class="sec band"><h2>How it works</h2><div class="steps">
+          <div class="step"><div class="num">STEP 1</div><h3>Tell me about your business</h3><p>Two fields, two minutes. What you do and where to send the design.</p></div>
+          <div class="step"><div class="num">STEP 2</div><h3>Your homepage mockup in 48 hours</h3><p>A real design with your name, your services and your branding. No payment, no obligation.</p></div>
+          <div class="step"><div class="num">STEP 3</div><h3>Like it? Fixed quote, live in weeks</h3><p>One fixed price and a real timeline. If not, it cost you nothing.</p></div>
+        </div></div>
+        <div class="sec"><div class="proof"><div class="lab">What arrives in 48 hours</div><q>Mobile dog grooming across the eastern suburbs. Want online booking and a site that doesn't look like 2012.</q><ul><li>A homepage with the business name, the services and the suburbs</li><li>Online booking on the page, not a link away</li><li>A fixed quote for the full build, no deposit</li></ul></div></div>
+        <div class="sec band faq"><h2>Common questions</h2><h3>How much does a website cost?</h3><p>Every site is quoted on scope. You get one fixed price with your mockup.</p><h3>Is the mockup really free?</h3><p>Yes. A real homepage design within 48 hours, before any money changes hands.</p><h3>How long does the build take?</h3><p>Most sites go live in two to four weeks from sign-off.</p></div>
+        <div class="cta"><h2>Your homepage, designed in 48 hours.</h2><form class="form" onsubmit="return false"><input class="f" type="text" placeholder="Your business"><input class="f" type="email" placeholder="you@business.com"><button class="btn" type="submit">Get my free mockup</button></form><p class="fine">No deposit. No obligation.</p></div>
+        <div class="foot"><span>Herbert AI. ABN 83 880 085 162. Adelaide.</span><span>Privacy</span></div>
+        <a class="sticky" href="tel:+61448111840"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call Will: 0448 111 840</a>
+      </div></div></div>
+    </section>
+
+    <section class="board">
+      <div class="cap">
+        <div class="k">S3</div>
+        <h2>Deep</h2>
+        <p>White stays, but the green goes deep and the button text goes white. The calmest of the three and the furthest from the site's neon; the form card border picks up the same deep green so the card and the button read as one object.</p>
+        <div class="sw"><span><i style="background:#FFFFFF"></i>FFFFFF</span><span><i style="background:#F3F4F2"></i>F3F4F2</span><span><i style="background:#1F2125"></i>1F2125</span><span><i style="background:#0B7A3E"></i>0B7A3E</span><span><i style="background:#62666C"></i>62666C</span></div>
+      </div>
+      <div class="phone"><div class="screen"><div class="lp s3">
+        <div class="bar">
+          <div class="mark"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1F2125"/><text x="16" y="24" font-family="Arial" font-weight="700" font-size="22" fill="#FFFFFF" text-anchor="middle">h</text><circle cx="24.5" cy="8.5" r="2.4" fill="#0B7A3E"/></svg>herbert ai</div>
+          <a class="call" href="tel:+61448111840"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>0448 111 840</a>
+        </div>
+        <div class="hero">
+          <div class="eyebrow">Web design, Adelaide</div>
+          <h1>See your new website before you pay a cent.</h1>
+          <p class="sub">A free homepage mockup within 48 hours. No deposit, no obligation. If you like it, one fixed quote and the site is live in weeks.</p>
+          <ul class="checks">
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Free mockup in 48 hours</li>
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>No deposit. One fixed price</li>
+            <li><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3L17 9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>You own the site, the code, the domain</li>
+          </ul>
+          <div class="card">
+            <p class="t">Get your free homepage mockup</p>
+            <form class="form" onsubmit="return false"><input class="f" type="text" placeholder="Your business"><input class="f" type="email" placeholder="you@business.com"><button class="btn" type="submit">Get my free mockup</button></form>
+            <p class="fine">No deposit. No obligation. Reply within 48 hours.</p>
+            <p class="who"><b>Will Herbert</b> designs and builds it. One person, start to finish. Adelaide.</p>
+          </div>
+        </div>
+        <div class="sec band"><h2>How it works</h2><div class="steps">
+          <div class="step"><div class="num">STEP 1</div><h3>Tell me about your business</h3><p>Two fields, two minutes. What you do and where to send the design.</p></div>
+          <div class="step"><div class="num">STEP 2</div><h3>Your homepage mockup in 48 hours</h3><p>A real design with your name, your services and your branding. No payment, no obligation.</p></div>
+          <div class="step"><div class="num">STEP 3</div><h3>Like it? Fixed quote, live in weeks</h3><p>One fixed price and a real timeline. If not, it cost you nothing.</p></div>
+        </div></div>
+        <div class="sec"><div class="proof"><div class="lab">What arrives in 48 hours</div><q>Mobile dog grooming across the eastern suburbs. Want online booking and a site that doesn't look like 2012.</q><ul><li>A homepage with the business name, the services and the suburbs</li><li>Online booking on the page, not a link away</li><li>A fixed quote for the full build, no deposit</li></ul></div></div>
+        <div class="sec band faq"><h2>Common questions</h2><h3>How much does a website cost?</h3><p>Every site is quoted on scope. You get one fixed price with your mockup.</p><h3>Is the mockup really free?</h3><p>Yes. A real homepage design within 48 hours, before any money changes hands.</p><h3>How long does the build take?</h3><p>Most sites go live in two to four weeks from sign-off.</p></div>
+        <div class="cta"><h2>Your homepage, designed in 48 hours.</h2><form class="form" onsubmit="return false"><input class="f" type="text" placeholder="Your business"><input class="f" type="email" placeholder="you@business.com"><button class="btn" type="submit">Get my free mockup</button></form><p class="fine">No deposit. No obligation.</p></div>
+        <div class="foot"><span>Herbert AI. ABN 83 880 085 162. Adelaide.</span><span>Privacy</span></div>
+        <a class="sticky" href="tel:+61448111840"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call Will: 0448 111 840</a>
+      </div></div></div>
+    </section>
+
+  </div>
+
+  <div class="foot">Whichever you pick becomes the real /lp/web-design, then the redesign and tradie pages follow it. If none of the three is right, name what is still harsh (the green, the black, the white, the contrast between them) and the next set moves only that.</div>
+</div>

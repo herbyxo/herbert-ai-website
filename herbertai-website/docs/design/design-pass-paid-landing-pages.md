@@ -34,6 +34,12 @@ So: the direct-response structure over the charter's register, for the paid page
 options for A shown next (design-pass-skins-a-themes-2026-09-11.html). Candidate register
 rule, not yet confirmed by Will: on a paid landing page the direct-response structure
 wins over the brand register.
-Tweaks: (pending, after the theme pick)
+Theme pick (2026-09-11): "A2, but can u give options on the shades for the colouring its a
+bit harsh atm, footer only, no photo, lock the rule"
+So: A2 (ink and the house green, sharp); shade options next
+(design-pass-skins-a2-shades-2026-09-11.html); ABN in the footer only; no face slot; the
+register rule is locked and written to design-taste/registers/marketing-landing-page.md.
+Also dropped on the way: the star row (no public review count to back it).
+Tweaks: (pending, after the shade pick)
 Applied commit: 5fb0827 on preview/paid-landing-pages (built, lint clean, engine audit passes: first field 67 words in, 3 required fields)
 Register rule: (pending)
