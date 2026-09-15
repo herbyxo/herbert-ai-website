@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: 'Are there ongoing costs after the pilot?',
-    a: "The first 30 days of hosting, support and AI running costs are included. After that you choose: keep it running for $200 a month, which covers hosting, fixes and normal AI usage, or have it moved onto your own accounts with a written guide to how it works, or roll it into a bigger build. Nothing is ever switched off on you.",
+    a: "The first 30 days of hosting, support and AI running costs are included. After that you choose: keep it running for $200 a month, which covers hosting, fixes and normal AI usage, or have it moved onto your own accounts with a written guide to how it works, or roll it into a bigger build. You get a reminder a week before. If no choice is made by day 30, it's paused and your data is sent to you, and it can still be moved onto your own accounts whenever you're ready.",
   },
   {
     q: 'What if it is not live in 14 days?',
