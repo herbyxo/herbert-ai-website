@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Demo pages, three directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #d9d6cf; font-family: Inter, system-ui, sans-serif; padding: 40px; }
+  .row { display: flex; gap: 48px; align-items: flex-start; }
+  .label { font: 600 15px Inter; color: #1a1a1a; margin-bottom: 6px; }
+  .sub { font: 400 13px Inter; color: #555; margin-bottom: 14px; max-width: 390px; line-height: 1.45; }
+  .phone { width: 390px; border-radius: 28px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
+
+  /* ── A: live app replay ───────────────────────────── */
+  .a { background: #f7f7f8; color: #111827; font-family: Inter, sans-serif; }
+  .a .top { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 14px 18px; font-size: 12px; color: #6b7280; }
+  .a .top b { color: #111827; font-weight: 600; }
+  .a .hero { padding: 26px 18px 18px; }
+  .a h1 { font-size: 27px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; }
+  .a .hero p { margin-top: 10px; font-size: 15px; color: #4b5563; line-height: 1.5; }
+  .a .app { margin: 0 12px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+  .a .appbar { display: flex; justify-content: space-between; align-items: center; padding: 11px 14px; border-bottom: 1px solid #e5e7eb; font-size: 13px; font-weight: 600; }
+  .a .appbar span { font-weight: 500; color: #6b7280; font-size: 12px; }
+  .a .file { display: flex; gap: 10px; padding: 11px 14px; border-bottom: 1px solid #f0f0f2; position: relative; }
+  .a .rail { width: 3px; border-radius: 2px; align-self: stretch; }
+  .a .file .n { font-size: 14px; font-weight: 600; }
+  .a .file .m { font-size: 12px; color: #6b7280; margin-top: 2px; }
+  .a .file .c { margin-left: auto; font-size: 12px; font-weight: 500; white-space: nowrap; }
+  .a .sel { background: #f5f7ff; }
+  .a .tl { padding: 14px 14px 6px; }
+  .a .tl h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: #6b7280; font-weight: 600; margin-bottom: 10px; }
+  .a .ev { display: flex; gap: 12px; padding-bottom: 14px; position: relative; }
+  .a .ev .d { width: 44px; flex: none; font-size: 12px; color: #6b7280; padding-top: 1px; }
+  .a .ev .t { font-size: 13.5px; line-height: 1.4; }
+  .a .ev .t small { display: block; color: #6b7280; font-size: 12px; margin-top: 2px; }
+  .a .dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex: none; }
+  .a .scrub { display: flex; align-items: center; gap: 10px; padding: 10px 14px 14px; font-size: 12px; color: #6b7280; }
+  .a .bar { flex: 1; height: 4px; background: #e5e7eb; border-radius: 2px; position: relative; }
+  .a .bar i { position: absolute; left: 0; top: 0; bottom: 0; width: 72%; background: #4f46e5; border-radius: 2px; }
+  .a .play { width: 26px; height: 26px; border-radius: 50%; background: #111827; color: #fff; display: grid; place-items: center; font-size: 10px; }
+  .a .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 12px 0; }
+  .a .compare div { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; font-size: 12px; color: #6b7280; }
+  .a .compare b { display: block; font-size: 20px; color: #111827; letter-spacing: -0.02em; margin-top: 4px; }
+  .a .cta { padding: 22px 18px 30px; }
+  .a .btn { display: block; text-align: center; background: #111827; color: #fff; border-radius: 8px; padding: 14px; font-weight: 600; font-size: 15px; }
+  .a .cta p { text-align: center; font-size: 12.5px; color: #6b7280; margin-top: 10px; }
+
+  /* ── B: before and after story (Herbert cream) ────── */
+  .b { background: #F5F0E5; color: #0A0A0A; font-family: Geist, sans-serif; }
+  .b .top { padding: 16px 20px; display: flex; justify-content: space-between; font: 500 10px 'Geist Mono'; letter-spacing: .14em; text-transform: uppercase; color: #6B6660; border-bottom: 1px solid #E2DBCB; }
+  .b .hero { padding: 34px 20px 26px; }
+  .b h1 { font-size: 36px; line-height: 1; letter-spacing: -0.035em; font-weight: 800; }
+  .b .hero p { margin-top: 14px; font-size: 16px; line-height: 1.5; color: #1A1A1A; }
+  .b .eyebrow { display: flex; align-items: center; gap: 10px; font: 500 10px 'Geist Mono'; letter-spacing: .16em; text-transform: uppercase; color: #6B6660; margin: 0 20px 12px; }
+  .b .eyebrow:after { content: ""; flex: 1; height: 1px; background: #E2DBCB; }
+  .b .before { margin: 0 12px 26px; background: #EFE9DC; border-radius: 24px; padding: 18px; }
+  .b .before h2, .b .after h2 { font-size: 20px; letter-spacing: -0.02em; font-weight: 700; line-height: 1.15; }
+  .b .msg { background: #F5F0E5; border: 1px solid #E2DBCB; border-radius: 14px; padding: 10px 12px; margin-top: 10px; font-size: 13.5px; line-height: 1.4; }
+  .b .msg small { display: block; font: 500 10px 'Geist Mono'; color: #6B6660; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 3px; }
+  .b .tally { margin-top: 14px; font-size: 14px; color: #1A1A1A; line-height: 1.5; }
+  .b .after { margin: 0 12px; background: #0A0A0A; color: #F5F0E5; border-radius: 24px; padding: 18px; }
+  .b .step { display: flex; gap: 12px; margin-top: 14px; font-size: 14px; line-height: 1.4; }
+  .b .step .k { font: 500 10px 'Geist Mono'; color: #00FF88; width: 46px; flex: none; padding-top: 3px; letter-spacing: .08em; }
+  .b .step small { display: block; color: #a8a295; font-size: 12.5px; margin-top: 2px; }
+  .b .done { margin-top: 16px; border-top: 1px solid #2a2a2a; padding-top: 14px; display: flex; justify-content: space-between; font-size: 14px; }
+  .b .done b { color: #00FF88; font-weight: 600; }
+  .b .cta { padding: 28px 20px 34px; }
+  .b .btn { display: block; text-align: center; background: #0A0A0A; color: #F5F0E5; border-radius: 999px; padding: 15px; font-weight: 600; font-size: 15px; }
+  .b .cta p { text-align: center; font-size: 13px; color: #6B6660; margin-top: 10px; }
+
+  /* ── C: the client's inbox ────────────────────────── */
+  .c { background: #fff; color: #1f1f1f; font-family: Inter, sans-serif; }
+  .c .top { background: #0b57d0; color: #fff; padding: 12px 18px; font-size: 12.5px; }
+  .c .top b { font-weight: 600; }
+  .c .hero { padding: 22px 18px 16px; border-bottom: 1px solid #eee; }
+  .c h1 { font-size: 24px; line-height: 1.2; letter-spacing: -0.015em; font-weight: 700; }
+  .c .hero p { margin-top: 8px; font-size: 14.5px; color: #555; line-height: 1.5; }
+  .c .mail { padding: 16px 18px; border-bottom: 1px solid #eee; }
+  .c .who { display: flex; gap: 10px; align-items: center; }
+  .c .av { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 600; font-size: 13px; color: #fff; flex: none; }
+  .c .who .n { font-size: 14px; font-weight: 600; }
+  .c .who .e { font-size: 12px; color: #666; }
+  .c .who .time { margin-left: auto; font-size: 12px; color: #666; }
+  .c .subj { font-size: 16px; font-weight: 600; margin: 12px 0 8px; }
+  .c .body { font-size: 14px; line-height: 1.55; color: #333; }
+  .c .check { margin: 10px 0; border: 1px solid #e3e3e3; border-radius: 8px; }
+  .c .check div { display: flex; justify-content: space-between; padding: 8px 10px; font-size: 13px; border-bottom: 1px solid #f0f0f0; }
+  .c .check div:last-child { border-bottom: 0; }
+  .c .ok { color: #188038; font-weight: 600; }
+  .c .wait { color: #b06000; font-weight: 600; }
+  .c .tag { display: inline-block; font-size: 11px; font-weight: 600; background: #e8f0fe; color: #0b57d0; border-radius: 4px; padding: 2px 6px; margin-left: 6px; vertical-align: 1px; }
+  .c .att { display: flex; gap: 8px; margin-top: 10px; }
+  .c .att span { border: 1px solid #ddd; border-radius: 6px; padding: 6px 8px; font-size: 12px; }
+  .c .cta { padding: 20px 18px 30px; background: #f8f9fb; }
+  .c .cta h2 { font-size: 17px; font-weight: 600; }
+  .c .cta p { font-size: 13.5px; color: #555; margin: 6px 0 14px; line-height: 1.5; }
+  .c .btn { display: block; text-align: center; background: #0b57d0; color: #fff; border-radius: 999px; padding: 13px; font-weight: 600; font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="row">
+
+  <!-- A -->
+  <div>
+    <div class="label">A. Live app replay</div>
+    <div class="sub">The page is mostly the software itself, a clean ops tool that plays through one client's tax season on a loop. Least selling, most "this is real".</div>
+    <div class="phone a">
+      <div class="top">Demo prepared for <b>Harbour Street Accountants</b></div>
+      <div class="hero">
+        <h1>Tax time documents, chased without anyone chasing.</h1>
+        <p>Every client gets the right list, the reminders go out on their own, and your team only steps in when a file is complete.</p>
+      </div>
+      <div class="app">
+        <div class="appbar">Client documents <span>Tax season 2026</span></div>
+        <div class="file"><div class="rail" style="background:#16a34a"></div><div><div class="n">Sarah Chen</div><div class="m">5 of 5 received</div></div><div class="c" style="color:#16a34a">Ready to lodge</div></div>
+        <div class="file sel"><div class="rail" style="background:#d97706"></div><div><div class="n">Tom and Priya Walsh</div><div class="m">3 of 5 received</div></div><div class="c" style="color:#d97706">Reminder day 7</div></div>
+        <div class="file"><div class="rail" style="background:#9ca3af"></div><div><div class="n">Marco Rossi</div><div class="m">0 of 4 received</div></div><div class="c" style="color:#6b7280">Request sent today</div></div>
+        <div class="tl">
+          <h3>Tom and Priya Walsh</h3>
+          <div class="ev"><div class="d">1 Jul</div><div class="dot" style="background:#4f46e5"></div><div class="t">Document request sent<small>Payslips, bank interest, rental statement, health cover, donations</small></div></div>
+          <div class="ev"><div class="d">4 Jul</div><div class="dot" style="background:#4f46e5"></div><div class="t">Reminder sent, nothing received yet</div></div>
+          <div class="ev"><div class="d">5 Jul</div><div class="dot" style="background:#16a34a"></div><div class="t">Priya replied with 3 files<small>Matched to payslips, bank interest, donations</small></div></div>
+          <div class="ev"><div class="d">8 Jul</div><div class="dot" style="background:#d97706"></div><div class="t">Reminder for the last 2 documents</div></div>
+        </div>
+        <div class="scrub"><div class="play">▶</div><div class="bar"><i></i></div>Day 8</div>
+      </div>
+      <div class="compare">
+        <div>Chasing by hand<b>6 hrs a week</b></div>
+        <div>With the workflow<b>10 min a day</b></div>
+      </div>
+      <div class="cta">
+        <div class="btn">Book a 15 minute call</div>
+        <p>Live in 14 days or it's free. $3,500 fixed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div>
+    <div class="label">B. Before and after story</div>
+    <div class="sub">The Herbert site's cream and ink brand. A scrolling page: the week as it is now, then the same week with the workflow, then the call to book.</div>
+    <div class="phone b">
+      <div class="top"><span>Herbert AI</span><span>For Harbour Street Accountants</span></div>
+      <div class="hero">
+        <h1>Stop chasing clients for documents.</h1>
+        <p>A look at what tax season could look like at Harbour Street Accountants, with the chasing handled by software.</p>
+      </div>
+      <div class="eyebrow">Now</div>
+      <div class="before">
+        <h2>A normal week in July</h2>
+        <div class="msg"><small>Mon, to Tom Walsh</small>Hi Tom, just following up on the documents for your return...</div>
+        <div class="msg"><small>Wed, to Tom Walsh</small>Hi Tom, sorry to chase again, we still need your rental statement...</div>
+        <div class="msg"><small>Fri, from Priya Walsh</small>Sent these last week? Which ones are still missing?</div>
+        <div class="tally">Multiply that by every client, and it's roughly 6 hours a week of someone writing the same email.</div>
+      </div>
+      <div class="eyebrow">With the workflow</div>
+      <div class="after">
+        <h2>The same week, handled</h2>
+        <div class="step"><div class="k">1 JUL</div><div>Tom and Priya get their own checklist by email<small>Five documents, one upload link</small></div></div>
+        <div class="step"><div class="k">4 JUL</div><div>A reminder goes out on its own<small>Only for what is still missing</small></div></div>
+        <div class="step"><div class="k">5 JUL</div><div>Priya uploads three files<small>Each one ticked off automatically</small></div></div>
+        <div class="step"><div class="k">9 JUL</div><div>Last two arrive, file marked complete<small>Your team gets one notification</small></div></div>
+        <div class="done"><span>Emails written by hand</span><b>0</b></div>
+      </div>
+      <div class="cta">
+        <div class="btn">Book a 15 minute call</div>
+        <p>Live in 14 days or it's free. $3,500 fixed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div>
+    <div class="label">C. The client's inbox</div>
+    <div class="sub">Shows the emails the firm's clients would actually receive, in a familiar inbox layout, the way the WhatsApp demos show the chat. Most concrete, least about the firm's side.</div>
+    <div class="phone c">
+      <div class="top">Demo prepared for <b>Harbour Street Accountants</b></div>
+      <div class="hero">
+        <h1>What your clients would see at tax time</h1>
+        <p>These emails go out on their own. Your team only sees the file once every document is in.</p>
+      </div>
+      <div class="mail">
+        <div class="who"><div class="av" style="background:#0b57d0">HS</div><div><div class="n">Harbour Street Accountants</div><div class="e">to Tom and Priya Walsh</div></div><div class="time">4 Jul</div></div>
+        <div class="subj">2 documents still needed for your 2026 return<span class="tag">Automatic</span></div>
+        <div class="body">Hi Tom and Priya, thanks for sending your payslips, bank interest and donations. We just need two more to get started:</div>
+        <div class="check">
+          <div><span>Payslips</span><span class="ok">Received</span></div>
+          <div><span>Bank interest</span><span class="ok">Received</span></div>
+          <div><span>Donation receipts</span><span class="ok">Received</span></div>
+          <div><span>Rental property statement</span><span class="wait">Needed</span></div>
+          <div><span>Private health statement</span><span class="wait">Needed</span></div>
+        </div>
+        <div class="body">Upload them here and we'll take it from there.</div>
+      </div>
+      <div class="mail">
+        <div class="who"><div class="av" style="background:#8e44ad">PW</div><div><div class="n">Priya Walsh</div><div class="e">to Harbour Street Accountants</div></div><div class="time">9 Jul</div></div>
+        <div class="body" style="margin-top:10px">Here are the last two.</div>
+        <div class="att"><span>rental-statement.pdf</span><span>health-cover.pdf</span></div>
+      </div>
+      <div class="cta">
+        <h2>This could run at Harbour Street</h2>
+        <p>Working software on your document chasing in 14 days, $3,500 fixed, or it's free.</p>
+        <div class="btn">Book a 15 minute call</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
