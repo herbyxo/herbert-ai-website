@@ -13,7 +13,7 @@ Herbert AI has repositioned as an **automation & growth studio for SMBs** (targe
 
 ## ✅ Art-directed studio register — SHIPPED on `main` (live)
 
-The full art-directed homepage rebuild is **done, merged to `main`, and live** at herbert-aisolutions.com. The site moved off the warm-trade register (white/gray-50/black CTA) onto an art-directed studio register: cream + ink + neon green, Bricolage Grotesque display + Geist, magnetic cursor, Lenis smooth scroll, scroll-storytelling chapters.
+The full art-directed homepage rebuild is **done, merged to `main`, and live** at herbert-aisolutions.com. The site moved off the warm-trade register (white/gray-50/black CTA) onto an art-directed studio register: cream + ink + neon green, Bricolage Grotesque display + Geist, Lenis smooth scroll, scroll-storytelling chapters. The custom magnetic cursor was removed site-wide on 15 Sep 2026 at Will's request; the normal system cursor is used everywhere.
 
 **Source of truth for any visual change — read before touching anything visual:**
 1. `herbertai-website/docs/design/CHARTER.md` — locked register, palette, type system, signature interactions, anti-references
@@ -23,7 +23,7 @@ The full art-directed homepage rebuild is **done, merged to `main`, and live** a
 
 **Key components:**
 - `components/Hero.js` — 3-line manifesto, green-flood wipe, founder note + question-prompt CTAs. Uses `useReducedMotion()` + `initial={false}` (do NOT revert — fixes a blank-hero bug under reduce-motion).
-- `components/motion/` — `MagneticCursor`, `LenisProvider`, `RevealOnScroll`
+- `components/motion/`: `LenisProvider`, `RevealOnScroll`
 - `components/chapters/` — `GrowChapter` (barber "Forge Barber"), `AutomateChapter`, `BuildChapter` (pilates "Studio Twenty")
 - Hero display floor is `clamp(60px, 14vw, 280px)` — tuned for iPhone-X-and-up (375px+).
 
@@ -73,4 +73,6 @@ The app lives in `herbertai-website/` (repo root is a wrapper). Routes are groun
 ---
 
 ## Current Pages
-Enumerate from `src/app/**/page.js` (currently: `/`, `/about`, `/ai-receptionist`, `/automation-adelaide`, `/contact`, `/faq`, `/google-ads-adelaide`, `/industries`, `/pricing`, `/privacy`, `/services`, `/start`, `/start/thanks`, `/web-design-adelaide`). Keep `sitemap.js` and `llms.txt` in sync with this set.
+Enumerate from `src/app/**/page.js` (currently: `/`, `/about`, `/ai-receptionist`, `/automation-adelaide`, `/contact`, `/faq`, `/google-ads-adelaide`, `/industries`, `/pricing`, `/privacy`, `/services`, `/start`, `/start/thanks`, `/web-design-adelaide`, plus the paid landing pages `/lp/web-design`, `/lp/website-redesign`, `/lp/tradie-websites`). Keep `sitemap.js` and `llms.txt` in sync with the organic set; the `/lp/*` pages are `noindex`, deliberately NOT in the sitemap, and not in the nav.
+
+**Paid landing pages (`/lp/*`, added 2026-09-11).** One component, `src/app/components/landing/LandingPage.js`, one config per Google Ads ad group. They do NOT follow CHARTER.md: Will picked the direct-response structure over the brand register on rendered boards (ledger: `herbertai-website/docs/design/design-pass-paid-landing-pages.md`; rule locked in design-taste `registers/marketing-landing-page.md`). Archivo loads only on these routes; the palette lives in the component. Header and Footer hide on `/lp/` the way they hide on `/preview`. The lead form is the shared `MockupLeadForm` with `look="direct"`, same endpoint and redirect as the organic page, so the two cannot drift. The organic `/web-design-adelaide` is untouched and is the control in the marketing-engine landing page field test (`code/marketing-engine/lab/landing-page-principles.md`).

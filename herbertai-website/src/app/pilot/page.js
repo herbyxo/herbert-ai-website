@@ -86,7 +86,6 @@ export default function Pilot() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#book"
-              data-magnetic
               className="inline-flex items-center gap-2 bg-green text-ink px-7 py-3.5 rounded-full font-semibold text-[15px] hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
             >
               Find my bottleneck <span aria-hidden>&rarr;</span>
@@ -215,7 +214,6 @@ export default function Pilot() {
 
                 <button
                   type="submit"
-                  data-magnetic
                   className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
                 >
                   Book my 15 minute call <span aria-hidden>&rarr;</span>
@@ -249,7 +247,6 @@ export default function Pilot() {
           </h2>
           <a
             href="#book"
-            data-magnetic
             className="mt-10 inline-flex items-center gap-2 bg-ink text-cream px-8 py-4 rounded-full font-semibold text-[16px] hover:bg-ink-soft transition-colors"
           >
             Find my bottleneck <span aria-hidden>&rarr;</span>

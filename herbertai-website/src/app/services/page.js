@@ -110,7 +110,6 @@ export default function Services() {
               <RevealOnScroll className="mt-12">
                 <Link
                   href="/google-ads-adelaide"
-                  data-magnetic
                   className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
                 >
                   AI-optimised Google Ads, run by the builder <span aria-hidden>→</span>
@@ -123,7 +122,6 @@ export default function Services() {
               <RevealOnScroll className="mt-12">
                 <Link
                   href="/ai-receptionist"
-                  data-magnetic
                   className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
                 >
                   AI receptionist for your business &mdash; hear a live demo <span aria-hidden>→</span>
@@ -137,14 +135,12 @@ export default function Services() {
                 <div className="flex flex-col items-start gap-4">
                   <Link
                     href="/web-design-adelaide"
-                    data-magnetic
                     className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
                   >
                     Web design in Adelaide &mdash; free homepage mockup in 48 hours <span aria-hidden>→</span>
                   </Link>
                   <Link
                     href="/contact"
-                    data-magnetic
                     className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
                   >
                     Got a build in mind? Let&rsquo;s talk <span aria-hidden>→</span>
@@ -178,7 +174,6 @@ export default function Services() {
               <div className="flex flex-col gap-3">
                 <Link
                   href="/pricing"
-                  data-magnetic
                   className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
                 >
                   How we price <span aria-hidden>→</span>
@@ -210,7 +205,6 @@ export default function Services() {
               </div>
               <Link
                 href="/start"
-                data-magnetic
                 className="bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:bg-ink-soft transition-colors self-start md:self-end"
               >
                 Scope a custom build <span aria-hidden>→</span>

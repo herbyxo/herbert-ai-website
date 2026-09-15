@@ -54,14 +54,12 @@ export default function Thanks() {
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <Link
             href="/"
-            data-magnetic
             className="bg-ink text-cream px-6 py-3.5 rounded-full text-[15px] font-semibold inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
           >
             <span aria-hidden>&larr;</span> Back to home
           </Link>
           <Link
             href="/services"
-            data-magnetic
             className="text-[14px] font-medium text-ink hover:text-green-deep transition"
           >
             See what I build &rarr;

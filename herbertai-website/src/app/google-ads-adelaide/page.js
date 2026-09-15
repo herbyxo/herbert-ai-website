@@ -78,7 +78,6 @@ export default function GoogleAdsAdelaide() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#audit"
-              data-magnetic
               className="inline-flex items-center gap-2 bg-green text-ink px-7 py-3.5 rounded-full font-semibold text-[15px] hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
             >
               Get my free game plan <span aria-hidden>&rarr;</span>
@@ -249,7 +248,6 @@ export default function GoogleAdsAdelaide() {
 
                 <button
                   type="submit"
-                  data-magnetic
                   className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
                 >
                   Send — get my free game plan <span aria-hidden>&rarr;</span>
@@ -283,7 +281,6 @@ export default function GoogleAdsAdelaide() {
           </h2>
           <a
             href="#audit"
-            data-magnetic
             className="mt-10 inline-flex items-center gap-2 bg-ink text-cream px-8 py-4 rounded-full font-semibold text-[16px] hover:bg-ink-soft transition-colors"
           >
             Get my free game plan <span aria-hidden>&rarr;</span>

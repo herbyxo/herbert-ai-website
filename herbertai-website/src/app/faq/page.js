@@ -150,7 +150,6 @@ export default function FAQ() {
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
                 href="/contact"
-                data-magnetic
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
                 Talk to Will <span aria-hidden>&rarr;</span>

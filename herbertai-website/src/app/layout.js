@@ -6,7 +6,6 @@ import TrackBeacon from './components/TrackBeacon'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import LenisProvider from './components/motion/LenisProvider'
-import MagneticCursor from './components/motion/MagneticCursor'
 import './globals.css'
 
 // Only the weights the site actually uses. Every extra weight is another file
@@ -159,7 +158,6 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen flex flex-col bg-cream text-ink font-sans">
         <a href="#main" className="skip-link">Skip to content</a>
         <LenisProvider>
-          <MagneticCursor />
           <Header />
           <main id="main" className="flex-grow">{children}</main>
           <Footer />

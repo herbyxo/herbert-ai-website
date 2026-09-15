@@ -76,14 +76,12 @@ export default function Hero() {
         >
           <Link
             href="/start"
-            data-magnetic
             className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
           >
             Get started <span aria-hidden>→</span>
           </Link>
           <Link
             href="/contact"
-            data-magnetic
             className="text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 border border-ink hover:bg-ink hover:text-cream transition-colors duration-300"
           >
             What slows your business down? <span aria-hidden>→</span>

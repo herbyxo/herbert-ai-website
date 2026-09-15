@@ -165,7 +165,7 @@ export default function Start() {
         <div className="max-w-[820px] mx-auto px-6 lg:px-12 py-14 md:py-20 text-center">
           <p className="text-[15px] md:text-[16px] text-muted leading-[1.65]">
             Prefer a call?{' '}
-            <Link href="/contact" data-magnetic className="text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-ink transition">
+            <Link href="/contact" className="text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-ink transition">
               Email or grab a 30-minute slot directly
             </Link>
             .

@@ -132,7 +132,7 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
               className="flex-1 min-w-0 px-5 py-3.5 bg-cream border border-line rounded-full text-[15px] text-ink placeholder:text-muted focus:border-ink focus:outline-none transition-colors"
             />
             <button
-              type="submit" data-magnetic
+              type="submit"
               className={`shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-[15px] transition-all duration-300 ${
                 onGreen
                   ? 'bg-ink text-cream hover:bg-ink-soft'
@@ -175,7 +175,6 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
 
       <button
         type="submit"
-        data-magnetic
         className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
       >
         Send &mdash; get my free mockup <span aria-hidden>&rarr;</span>

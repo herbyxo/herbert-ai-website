@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="bg-cream">
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
-        <Link href="/" data-magnetic className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2.5 group">
           <svg
             aria-hidden
             viewBox="0 0 32 32"
@@ -57,7 +57,6 @@ export default function Header() {
         <div className="hidden md:block">
           <Link
             href="/start"
-            data-magnetic
             className="bg-ink text-cream px-4 py-2 rounded-full text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
           >
             Start a project <span aria-hidden>→</span>
@@ -65,7 +64,6 @@ export default function Header() {
         </div>
 
         <button
-          data-magnetic
           className="md:hidden text-ink"
           onClick={() => setMobileMenuOpen(true)}
           aria-label="Open menu"
@@ -88,7 +86,7 @@ export default function Header() {
 /* ─── desktop nav link with animated underline-fill on hover ──── */
 function NavLink({ href, children }) {
   return (
-    <Link href={href} data-magnetic className="relative group inline-block py-1">
+    <Link href={href} className="relative group inline-block py-1">
       <span className="text-ink">{children}</span>
       <span
         aria-hidden
@@ -102,7 +100,7 @@ function NavLink({ href, children }) {
 function DropdownLink({ label, children }) {
   return (
     <div className="relative group">
-      <button data-magnetic className="flex items-center gap-1 py-1 text-ink">
+      <button className="flex items-center gap-1 py-1 text-ink">
         <span>{label}</span>
         <svg className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

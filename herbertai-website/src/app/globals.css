@@ -78,14 +78,6 @@ body {
   background: radial-gradient(circle, var(--green-glow), transparent 60%);
 }
 
-/* ─── magnetic cursor hides the system cursor on hover-capable devices ── */
-@media (hover: hover) and (pointer: fine) {
-  body.magnetic-cursor-active,
-  body.magnetic-cursor-active * {
-    cursor: none !important;
-  }
-}
-
 /* ─────────────────────────────────────────────────────────────
    Scroll-triggered reveals (CSS view-timeline progressive enhancement)
    Chrome/Edge get fade+rise on scroll; Safari/Firefox just see the content.

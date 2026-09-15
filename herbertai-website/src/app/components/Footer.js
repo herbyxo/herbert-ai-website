@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 lg:gap-12">
           {/* Identity — wordmark heads the descriptor column */}
           <div className="max-w-[36ch]">
-            <Link href="/" data-magnetic aria-label="Herbert AI — home" className="inline-flex items-baseline gap-2 group mb-6">
+            <Link href="/" aria-label="Herbert AI — home" className="inline-flex items-baseline gap-2 group mb-6">
               <span
                 className="font-display text-ink leading-[0.9] tracking-[-0.03em] font-bold"
                 style={{ fontSize: '32px' }}
@@ -75,7 +75,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {managerUrl && (
                   <li>
-                    <Link href={managerUrl} data-magnetic className="text-[14px] text-ink-soft hover:text-ink transition-colors inline-flex items-center gap-1.5 group">
+                    <Link href={managerUrl} className="text-[14px] text-ink-soft hover:text-ink transition-colors inline-flex items-center gap-1.5 group">
                       Manager portal
                       <span aria-hidden className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">↗</span>
                     </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
                 )}
                 {ownerUrl && (
                   <li>
-                    <Link href={ownerUrl} data-magnetic className="text-[14px] text-ink-soft hover:text-ink transition-colors inline-flex items-center gap-1.5 group">
+                    <Link href={ownerUrl} className="text-[14px] text-ink-soft hover:text-ink transition-colors inline-flex items-center gap-1.5 group">
                       Owner console
                       <span aria-hidden className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">↗</span>
                     </Link>
@@ -121,7 +121,6 @@ function FooterNavCol({ label, links }) {
             <li key={href}>
               <Link
                 href={href}
-                data-magnetic
                 className="text-[14px] text-ink-soft hover:text-ink transition-colors inline-block"
               >
                 {text}

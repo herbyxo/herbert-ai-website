@@ -63,7 +63,6 @@ export default function Pricing() {
           </p>
           <Link
             href="/start"
-            data-magnetic
             className="mt-10 bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
           >
             Get a quote <span aria-hidden>&rarr;</span>
@@ -164,7 +163,6 @@ export default function Pricing() {
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
                 href="/start"
-                data-magnetic
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
                 Get a quote <span aria-hidden>&rarr;</span>

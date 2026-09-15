@@ -20,7 +20,7 @@ Locked: 2026-05-27. This is the source of truth for visual direction. Component 
 DNA:
 - Oversized typography as the hero (display sizes ≥160px desktop)
 - Scroll-driven storytelling for the "how it works" sequence — motion serves comprehension
-- Custom magnetic cursor + scroll-reactive elements — craft cues at every interactive surface
+- Scroll-reactive elements as craft cues (the custom magnetic cursor was removed 15 Sep 2026, see Signature interactions)
 - Asymmetric, broken grids; content can bleed past container edges
 - Cream + ink palette retained; neon green amplified as a signature flood, not just an accent
 
@@ -80,7 +80,7 @@ mono-label   10–11px / tracking 0.18em / uppercase
 | `--color-ink-soft` | `#1A1A1A` | Secondary dark surfaces. |
 | `--color-muted` | `#6B6660` | Secondary text. |
 | `--color-line` | `#E2DBCB` | Hairline rules ONLY where space-separation isn't enough. |
-| `--color-green` | `#00FF88` | Signature accent — interactive states, magnetic cursor, hero accent flood. |
+| `--color-green` | `#00FF88` | Signature accent: interactive states, hero accent flood. |
 | `--color-green-deep` | `#00D924` | On-cream usage of green (contrast). |
 
 **Accent discipline (the rule from the skill):** green has ONE semantic role — interactive + signature. It does NOT colour for typographic emphasis (use weight). It does NOT tint backgrounds as decoration. The exception is the deliberate **green-flood moment** — exactly ONE section per page where green is the entire background. Used like a director uses a colour cue, not as decoration.
@@ -113,10 +113,9 @@ mono-label   10–11px / tracking 0.18em / uppercase
 
 ## Signature interactions
 
-**Two locked, both with one-sentence reasons:**
+**Originally two locked; the first was removed 15 Sep 2026:**
 
-1. **Magnetic cursor with subtle text-distortion on hover over interactive elements.**
-   *Reason: signals operator-grade craft at every interactive surface — buyers feel the difference before reading a word.*
+1. **Magnetic cursor: REMOVED 15 Sep 2026.** Will: "get rid of the bubble cursor and just have the normal cursor", across the whole site. The system cursor is back everywhere; do not reintroduce a custom cursor.
 
 2. **Scroll-revealed workflow on "How It Works" — agent → transcribe → AroFlo → SMS chain builds itself as the user scrolls.**
    *Reason: lets the visitor SEE the product working without screenshots; motion IS the explanation.*
@@ -139,7 +138,7 @@ If a design decision moves us toward any of these three, the decision is wrong.
 
 ## Stack additions
 
-- **Framer Motion** — for scroll-driven sequences, magnetic cursor, page transitions. Required.
+- **Framer Motion**: for scroll-driven sequences and page transitions. Required.
 - **Lenis** (`@studio-freight/lenis`) — smooth scroll. Required for art-direction-grade scroll feel. ~3kb.
 - No GSAP (Framer Motion handles what we need; GSAP licence cost not worth it).
 - No Lottie. No Spline. No Three.js.
