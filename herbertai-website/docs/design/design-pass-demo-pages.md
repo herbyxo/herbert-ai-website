@@ -22,3 +22,13 @@ made-up and would need framing as an example or removing.
 
 Pick: A. Will, 15 Sep 2026: "A, whats the difference between A and C though".
 C's email card opens from a tapped timeline event: Will, "ok" (15 Sep 2026).
+
+## [~] Accountants template (15 Sep 2026)
+
+Built in b7be0ef, live at /demo/accountants?for=<name>. Plays the season once
+from day 0 then rests on the final state (reduced motion starts at the end); tap
+"View email" on a sent event to open the email the client got. The made-up hours
+comparison was replaced with an example stated as one ("Say <firm> has 150
+clients..."). Verified at 375 in the Browser pane: Inter loaded, no horizontal
+overflow, site header and footer hidden, unknown industry 404s, production 200
+with noindex. Waiting on Will's sign-off before the other three industries.
