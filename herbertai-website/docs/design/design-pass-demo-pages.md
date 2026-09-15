@@ -20,4 +20,5 @@ Recommendation given: A, with C's email card as what opens when a timeline event
 is tapped. Open question noted: the "6 hrs a week / 10 min a day" comparison is
 made-up and would need framing as an example or removing.
 
-Pick: (waiting on Will)
+Pick: A. Will, 15 Sep 2026: "A, whats the difference between A and C though".
+C's email card opens from a tapped timeline event: Will, "ok" (15 Sep 2026).

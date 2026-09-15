@@ -9,7 +9,7 @@ export default function Header() {
   const pathname = usePathname()
   // Paid landing pages carry no site navigation: one goal per page, and the
   // site's own nav is the first thing a visitor from an ad would click away on.
-  if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/')) return null
+  if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/') || pathname?.startsWith('/demo/')) return null
 
   return (
     <header className="bg-cream">
