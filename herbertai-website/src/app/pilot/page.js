@@ -28,6 +28,10 @@ const faqs = [
     a: 'If you go ahead with a bigger build within 60 days, the whole $3,500 comes off that price. The pilot ends up costing you nothing. If you stop at the pilot, you keep the working system either way.',
   },
   {
+    q: 'Are there ongoing costs after the pilot?',
+    a: "The first 30 days of hosting, support and AI running costs are included. After that you choose: keep it running for $200 a month, which covers hosting, fixes and normal AI usage, or have it moved onto your own accounts with a written guide to how it works, or roll it into a bigger build. Nothing is ever switched off on you.",
+  },
+  {
     q: 'What if it is not live in 14 days?',
     a: "Then it's free. The clock starts when you've given access to the tools involved and we've had the kickoff chat. Fourteen days later it's running or you don't pay.",
   },
