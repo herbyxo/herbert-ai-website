@@ -1,14 +1,14 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: { absolute: 'The Bottleneck Pilot | Working Software in 14 Days | Herbert AI' },
+  title: { absolute: 'Free AI Audit, Then Working Software in 14 Days | Herbert AI' },
   description:
-    'One fixed price. We find the admin job that wastes the most time in your business and put working software on it in 14 days. Live in 14 days or it is free.',
+    'A free 45 minute AI audit puts a cost on every repetitive job in your business. Then the Bottleneck Pilot builds software on the worst one: live in 14 days, $3,500 fixed, or it is free.',
   alternates: { canonical: '/pilot' },
   openGraph: {
-    title: 'The Bottleneck Pilot · Herbert AI',
+    title: 'Free AI audit · Herbert AI',
     description:
-      'Working software on your worst admin bottleneck in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
+      'Forty five minutes with Will, a written page on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
     url: '/pilot',
     images: ['/opengraph-image'],
   },
@@ -16,12 +16,20 @@ export const metadata = {
 
 const faqs = [
   {
+    q: 'What is the AI audit, and why is it free?',
+    a: "Forty five minutes with Will on how your business runs, then a written page within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap. It's free because it's how Will finds out whether there's a job worth building on. If there is, he quotes the pilot. If there isn't, he says so, and the page is yours either way.",
+  },
+  {
+    q: 'Do I have to buy the pilot after the audit?',
+    a: 'No. The audit ends with a written page and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
+  },
+  {
     q: 'What counts as a bottleneck?',
     a: 'Any office job someone does over and over that follows the same steps every time. Chasing documents or invoices, re-typing details between systems, writing the same emails, confirming bookings by hand. If your team groans about it, it qualifies.',
   },
   {
     q: 'What do I actually get for $3,500?',
-    a: 'One live, working workflow built for your business and running on your real data by day 14, a walkthrough with your team, and a one-page map of the next three time sinks in your business. Software, not a report.',
+    a: 'One AI employee, built for one job in your business and running on your real data by day 14. It has a role, say an AI document chaser or an AI front desk assistant, it does that job every day, and your team approves anything that goes out. Plus a walkthrough with your team and a twelve month AI roadmap of the next jobs worth handing over. Software, not a report.',
   },
   {
     q: 'What does "credited in full" mean?',
@@ -65,7 +73,7 @@ export default function Pilot() {
       {/* ─── Hero: static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-40 md:pb-28">
-          <Eyebrow>The Bottleneck Pilot</Eyebrow>
+          <Eyebrow>Free AI audit</Eyebrow>
           <h1
             className="font-display text-ink max-w-[16ch]"
             style={{
@@ -75,29 +83,30 @@ export default function Pilot() {
               fontWeight: 800,
             }}
           >
-            Working software in <em className="serif-em">14 days.</em>
+            Find the job that <em className="serif-em">costs you most.</em>
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            Every business has one admin job that eats more time than it should.
-            We find the most expensive one in yours and put working software on
-            it: live, on your real data, doing a real job. Not a report. Not a
-            roadmap. A working system.
+            A free 45 minute AI audit with Will: where the hours go, what each
+            repetitive job costs you a year, and which one to hand to software
+            first. Written up within two business days, yours to keep. If you
+            want the first one built, that&apos;s the Bottleneck Pilot: live in
+            14 days, $3,500 fixed, or it&apos;s free.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#book"
               className="inline-flex items-center gap-2 bg-green text-ink px-7 py-3.5 rounded-full font-semibold text-[15px] hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
             >
-              Find my bottleneck <span aria-hidden>&rarr;</span>
+              Book my free AI audit <span aria-hidden>&rarr;</span>
             </a>
           </div>
 
           {/* Terms strip */}
           <div className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[820px]">
-            <Stat n="$3,500" label="Fixed. No hourly billing" />
+            <Stat n="Free" label="45 minute audit, written up" />
+            <Stat n="$3,500" label="Pilot. Fixed, no hourly billing" />
             <Stat n="14 days" label="Live, or it's free" />
             <Stat n="100%" label="Credited to a bigger build" />
-            <Stat n="1" label="Builder, start to finish" />
           </div>
         </div>
       </section>
@@ -107,25 +116,25 @@ export default function Pilot() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
           <Eyebrow>How it works</Eyebrow>
           <h2 className="font-display text-ink mb-14" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-            Two weeks.
+            Audit first.
             <br />
-            Three steps.
+            Then fourteen days.
           </h2>
           <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
             <Step
               n="01"
-              title="A 60 minute chat"
-              body="You talk through how the business runs and where the time goes. Will listens and finds the job that costs you the most. No slides, no pitch."
+              title="The free AI audit"
+              body="Forty five minutes on how the business runs and where the time goes. Within two business days you get a written page: the three jobs eating the most hours, what each costs you a year, and which one to hand over first. No obligation."
             />
             <Step
               n="02"
-              title="Will builds it"
-              body="Two weeks, built around the tools you already use. You get a progress update, not a project plan, and nothing changes for your team until it's ready."
+              title="Will builds your first AI employee"
+              body="Two weeks, built around the tools you already use. It gets one job and a name, say an AI document chaser. You get a progress update, not a project plan, and nothing changes for your team until it's ready."
             />
             <Step
               n="03"
               title="Live on day 14"
-              body="Your team starts using it the same day, with a walkthrough so everyone knows how. You also get a one-page map of the next three time sinks in your business."
+              body="Your team starts using it the same day, with a walkthrough so everyone knows how, and a twelve month AI roadmap of the next jobs worth handing over."
             />
           </div>
         </div>
@@ -157,12 +166,12 @@ export default function Pilot() {
           <div>
             <Eyebrow>Start here</Eyebrow>
             <h2 className="font-display text-ink" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-              Book the 15 minute call.
+              Book your free AI audit.
             </h2>
             <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[46ch]">
-              Tell us what a normal week looks like and Will calls you to find the
-              bottleneck. Fifteen minutes, no obligation. If the pilot is not the
-              right fit, you&apos;ll be told so on the call.
+              Tell us what a normal week looks like and Will calls you within a
+              business day to set a time. Forty five minutes, no preparation, no
+              obligation. If software is not the answer for you, the audit says so.
             </p>
             <p className="mt-6 text-[14px] text-muted">
               Prefer to talk now?{' '}
@@ -178,17 +187,17 @@ export default function Pilot() {
               <form action="https://api.web3forms.com/submit" method="POST" className="space-y-5">
                 <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
                 <input type="hidden" name="from_name" value="Herbert AI · Bottleneck Pilot" />
-                <input type="hidden" name="subject" value="New pilot request · /pilot" />
+                <input type="hidden" name="subject" value="New AI audit request · /pilot" />
                 <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/start/thanks" />
                 <input
                   type="hidden"
                   name="autoresponse_subject"
-                  value="Got it, let's find your bottleneck"
+                  value="Got it, let's book your AI audit"
                 />
                 <input
                   type="hidden"
                   name="autoresponse_message"
-                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call to find the bottleneck. Fifteen minutes, no pitch.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
+                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call within a business day to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
                 />
                 {/* Honeypot for spam */}
                 <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -216,7 +225,7 @@ export default function Pilot() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
                 >
-                  Book my 15 minute call <span aria-hidden>&rarr;</span>
+                  Book my free AI audit <span aria-hidden>&rarr;</span>
                 </button>
                 <p className="text-[12px] text-muted text-center">
                   No obligation. Reply within a business day.
@@ -249,7 +258,7 @@ export default function Pilot() {
             href="#book"
             className="mt-10 inline-flex items-center gap-2 bg-ink text-cream px-8 py-4 rounded-full font-semibold text-[16px] hover:bg-ink-soft transition-colors"
           >
-            Find my bottleneck <span aria-hidden>&rarr;</span>
+            Book my free AI audit <span aria-hidden>&rarr;</span>
           </a>
         </div>
       </section>

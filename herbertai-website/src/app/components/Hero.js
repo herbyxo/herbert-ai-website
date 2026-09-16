@@ -75,16 +75,16 @@ export default function Hero() {
           className="mt-10 md:mt-12 flex flex-wrap gap-3"
         >
           <Link
-            href="/start"
+            href="/pilot#book"
             className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
           >
-            Get started <span aria-hidden>→</span>
+            Book a free AI audit <span aria-hidden>→</span>
           </Link>
           <Link
-            href="/contact"
+            href="/start"
             className="text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 border border-ink hover:bg-ink hover:text-cream transition-colors duration-300"
           >
-            What slows your business down? <span aria-hidden>→</span>
+            Start a project <span aria-hidden>→</span>
           </Link>
         </motion.div>
       </div>

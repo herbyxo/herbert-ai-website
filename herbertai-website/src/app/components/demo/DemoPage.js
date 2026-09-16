@@ -176,10 +176,11 @@ export default function DemoPage({ industry, firm }) {
 
         <section className="px-5 pt-6 pb-10">
           <a href="/pilot#book" className="block text-center bg-[#111827] text-white rounded-lg py-3.5 font-semibold text-[15px]">
-            Book a 15 minute call
+            Book a free AI audit
           </a>
           <p className="text-center text-[13px] text-[#6B7280] mt-3">
-            Working software on your {industry.bottleneck} in 14 days. $3,500 fixed, or it&apos;s free.
+            Forty five minutes with Will and a written page on what your {industry.bottleneck} costs. No obligation.
+            If you want it built: live in 14 days, $3,500 fixed, or it&apos;s free.
           </p>
           <p className="text-center text-[13px] text-[#6B7280] mt-1">
             Or call Will on <a href={PHONE_HREF} className="text-[#111827] font-medium">{PHONE}</a>
