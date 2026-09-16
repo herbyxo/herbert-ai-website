@@ -32,3 +32,27 @@ comparison was replaced with an example stated as one ("Say <firm> has 150
 clients..."). Verified at 375 in the Browser pane: Inter loaded, no horizontal
 overflow, site header and footer hidden, unknown industry 404s, production 200
 with noindex. Waiting on Will's sign-off before the other three industries.
+
+## [~] Allied health, trades and real estate templates (16 Sep 2026)
+
+Same component, three more entries in `industries.js`. The component now lets a
+row carry its own second line (a quoted price, a fault) instead of a document
+count, lets an email name its own recipient (a GP, a landlord, a plumber) and
+its own button, and lets a checklist industry hide the list on an email to
+someone other than the client. Made-up names throughout, no client wording.
+
+- Allied health: new patient intake, four items, the referral chased from the
+  GP by email. "New patient paperwork, done before they walk in."
+- Trades: open quotes followed up on a schedule, a customer reply pausing the
+  follow-ups, a revised quote sent after the office changed the price.
+  "Quotes followed up, without anyone remembering to."
+- Real estate: one maintenance request, landlord approval with a cost cap,
+  the job sent to the plumber, the tenant told the time. "Maintenance
+  handled, without the phone tennis."
+
+Verified at 375 in the Browser pane: each plays through to its final state, the
+email cards open with the right recipient and button, no horizontal overflow,
+no console errors, header and footer hidden, noindex on all four, unknown
+industry 404s. Built in the website-demo-pages worktree, which needed its own
+node_modules (Turbopack refuses a symlink that points outside the project
+root). Waiting on Will's sign-off alongside the accountants page.

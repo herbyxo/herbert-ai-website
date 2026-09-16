@@ -32,6 +32,15 @@ function statusAt(client, day) {
   return s
 }
 
+// Second line of a row: an event can say it outright (a revised price), a
+// checklist industry counts documents, anything else shows the row's own line.
+function rowSub(client, s) {
+  if (!s) return 'Not started'
+  if (s.note) return s.note
+  if (client.total != null) return `${s.received} of ${client.total} received`
+  return client.sub || ''
+}
+
 export default function DemoPage({ industry, firm }) {
   const lastDay = Math.max(...industry.timeline.map((e) => e.day), ...industry.clients.flatMap((c) => c.status.map((s) => s.day)))
   const [day, setDay] = useState(0)
@@ -103,7 +112,7 @@ export default function DemoPage({ industry, firm }) {
                   <span className="w-[3px] rounded-sm self-stretch transition-colors duration-300" style={{ background: s ? TONE[s.tone] : '#E5E7EB' }} />
                   <div className="min-w-0">
                     <div className="text-[14px] font-semibold">{c.name}</div>
-                    <div className="text-[12px] text-[#6B7280] mt-0.5">{s ? `${s.received} of ${c.total} received` : 'Not started'}</div>
+                    <div className="text-[12px] text-[#6B7280] mt-0.5">{rowSub(c, s)}</div>
                   </div>
                   <div className="ml-auto text-[12px] font-medium whitespace-nowrap pt-0.5 transition-colors duration-300" style={{ color: s ? (s.tone === 'idle' ? '#6B7280' : TONE[s.tone]) : '#9CA3AF' }}>
                     {s ? s.label : ''}
@@ -196,8 +205,13 @@ export default function DemoPage({ industry, firm }) {
 }
 
 function EmailCard({ industry, event, firm, client }) {
-  const got = new Set(event.received)
-  const needed = industry.docs.filter((_, i) => !got.has(i)).length
+  // Checklist industries (documents in, documents still needed) show the list on
+  // every client email; an email to someone else, or a plain message, does not.
+  const docs = industry.docs && event.email.checklist !== false ? industry.docs : null
+  const got = new Set(event.received || [])
+  const needed = docs ? docs.filter((_, i) => !got.has(i)).length : 0
+  const cta = event.email.cta ?? (docs ? `Upload ${needed === docs.length ? 'documents' : `the last ${needed}`}` : null)
+  const to = event.email.to || client.name
   const initials = firm.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase()
   return (
     <div className="mt-3 sm:ml-[58px] border border-[#E5E7EB] rounded-lg bg-white overflow-hidden">
@@ -205,24 +219,22 @@ function EmailCard({ industry, event, firm, client }) {
         <span className="w-7 h-7 rounded-full bg-[#4F46E5] text-white text-[11px] font-semibold grid place-items-center shrink-0">{initials}</span>
         <div className="min-w-0">
           <div className="text-[12.5px] font-semibold leading-[1.3]">{firm}</div>
-          <div className="text-[11.5px] text-[#6B7280]">to {client.name}</div>
+          <div className="text-[11.5px] text-[#6B7280]">to {to}</div>
         </div>
       </div>
       <div className="px-3 py-3">
         <span className="inline-block text-[10.5px] font-semibold text-[#4F46E5] bg-[#EEF2FF] rounded px-1.5 py-0.5 mb-2">Sent automatically</span>
-        <div className="text-[14px] font-semibold leading-[1.3]">{event.email.subject}</div>
-        <p className="text-[13px] leading-[1.5] text-[#374151] mt-2">{event.email.intro}</p>
-        <ul className="mt-2.5 border border-[#EEF0F2] rounded-md">
-          {industry.docs.map((d, i) => (
+        <div className="text-[14px] font-semibold leading-[1.3]">{event.email.subject.replaceAll('{firm}', firm)}</div>
+        <p className="text-[13px] leading-[1.5] text-[#374151] mt-2">{event.email.intro.replaceAll('{firm}', firm)}</p>
+        {docs && <ul className="mt-2.5 border border-[#EEF0F2] rounded-md">
+          {docs.map((d, i) => (
             <li key={d} className="flex justify-between px-2.5 py-1.5 text-[12.5px] border-b border-[#F3F4F6] last:border-b-0">
               <span>{d}</span>
               <span className={got.has(i) ? 'text-[#16A34A] font-semibold' : 'text-[#D97706] font-semibold'}>{got.has(i) ? 'Received' : 'Needed'}</span>
             </li>
           ))}
-        </ul>
-        <div className="mt-3 text-center text-[12.5px] font-semibold text-white bg-[#4F46E5] rounded-md py-2">
-          Upload {needed === industry.docs.length ? 'documents' : `the last ${needed}`}
-        </div>
+        </ul>}
+        {cta && <div className="mt-3 text-center text-[12.5px] font-semibold text-white bg-[#4F46E5] rounded-md py-2">{cta}</div>}
       </div>
     </div>
   )
