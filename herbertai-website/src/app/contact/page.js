@@ -29,7 +29,7 @@ export default function Contact() {
             Tell me what&apos;s slow, what&apos;s broken, or what doesn&apos;t exist yet.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            Herbert AI is web design &amp; automation for Adelaide small business. Send a
+            Herbert AI is custom software and AI for small businesses, built in Adelaide. Send a
             message or book a free 30-minute call, no pitch. If it&apos;s worth building, I&apos;ll
             come back with a fixed quote and timeline.
           </p>

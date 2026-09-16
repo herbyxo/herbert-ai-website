@@ -1,50 +1,101 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import { Eyebrow, AuditButton } from '../components/site/shared'
 
 export const metadata = {
-  title: 'Pricing | Adelaide Web Design & Automation',
+  title: 'Pricing | Free AI audit, $3,500 pilot, builds from $25,000',
   description:
-    'Herbert AI prices every project on scope — no public price list, no off-the-shelf packages. Tell me what you need and you get one fixed quote and a real timeline. No hourly creep, no lock-in.',
+    'Four rungs, each priced before you climb it. A free AI audit, a $3,500 Bottleneck Pilot that is live in 14 days or free, full builds from $25,000 scoped after the audit, retainers from $1,000 a month.',
   alternates: { canonical: '/pricing' },
   openGraph: {
     title: 'Pricing · Herbert AI',
-    description: 'Priced on scope, not on a menu. Every project quoted on what you actually need.',
+    description: 'The audit is free. The pilot is $3,500. Builds from $25,000. Retainers from $1,000 a month.',
     url: '/pricing',
     images: ['/opengraph-image'],
   },
 }
 
+// Order matters: the accessible number first, the build floor after it, and
+// the sentence that tells a visitor the big number is not the ask. Decided
+// 16 Sep 2026 on the pricing research (identity-2026-09-16 in the files repo).
+const rungs = [
+  {
+    n: '01',
+    title: 'Free AI audit',
+    price: 'Free',
+    lines: [
+      'Forty five minutes with Will on how your business runs.',
+      'A written page within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap.',
+      'Yours to keep whether or not you go further.',
+    ],
+  },
+  {
+    n: '02',
+    title: 'Bottleneck Pilot',
+    price: '$3,500, fixed',
+    lines: [
+      'One AI employee built for one job, live on your real data in 14 days. Live in 14 days or it is free.',
+      'The full $3,500 comes off a bigger build signed within 60 days.',
+      'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or take it onto your own accounts with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
+      'Founding clients: the first three pilots that agree to a named case study and a testimonial get 90 days of included care instead of 30.',
+    ],
+  },
+  {
+    n: '03',
+    title: 'Full build',
+    price: 'From $25,000',
+    lines: [
+      'The system your AI employees run in: files, comms, follow-ups and reporting on one platform your team works out of every day, and your business owns.',
+      'Scoped and priced after the audit, as one fixed number with a written scope and a delivery date. Not a range, no hourly creep.',
+      'If the audit shows the saving would not comfortably cover the price, you will be told so, and the pilot is not the right next step.',
+    ],
+  },
+  {
+    n: '04',
+    title: 'Retainer',
+    price: 'From $1,000 a month',
+    lines: [
+      'Hosting, incidents, a set number of small changes a month, and a usage cap.',
+      'Every month you get a short report: what the system handled, hours it saved, anything it got wrong, one improvement shipped and one proposed for next month.',
+      'Month to month. Nothing switches off without being handed over to you first.',
+    ],
+  },
+]
+
 const faqs = [
   {
-    q: 'Why don\'t you list prices?',
-    a: 'Because every business is different. A "barbershop website" costs different things depending on whether you need bookings, payments, gift vouchers, or just a brochure. A flat price list either prices the simple jobs too high or the complex ones too low. Quoting on scope gets you the right number for your actual situation.',
+    q: 'Why is the audit free?',
+    a: 'Because it is how Will finds out whether there is a job worth building on. If there is, he quotes the pilot. If there is not, he says so, and the page is yours either way. Cutting the price would not make it more useful; keeping it to diagnosis does.',
   },
   {
-    q: 'How does getting a quote work?',
-    a: 'Tell me what you need — through the project brief or a quick email. I\'ll ask enough questions to scope it honestly, then send a fixed quote and a timeline, usually within a day. If it\'s not worth building, I\'ll tell you that instead.',
+    q: 'Do I have to buy the pilot after the audit?',
+    a: 'No. The audit ends with a written page and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
   },
   {
-    q: 'What\'s the minimum engagement?',
-    a: 'No minimum. Smallest job I\'ve done was a one-page site fix for a few hours. Largest was a 6-week full-stack rebuild. I\'ll quote either honestly.',
+    q: 'What does $3,500 actually get me?',
+    a: 'One AI employee, built for one job in your business, running on your real data by day 14, with your team approving anything that goes out. Plus a walkthrough with your team and a twelve month roadmap of the next jobs worth handing over. Software, not a report.',
   },
   {
-    q: 'Any lock-in or contracts?',
-    a: 'No. Fixed-quote builds pay on delivery. Retainers are month-to-month, cancel anytime. Hourly is invoiced for actual time spent — if it took less than expected, you pay less.',
+    q: 'Why do builds start at $25,000?',
+    a: 'A full build is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts, not billed as it goes. The pilot exists so you never have to take that on trust.',
   },
   {
-    q: 'Do you take a deposit?',
-    a: 'For fixed-quote builds over a couple of weeks, yes — usually 30% on scope sign-off, balance on delivery. Smaller jobs invoiced on completion.',
+    q: 'What is in the retainer, and what is not?',
+    a: 'In: hosting, fixing anything that breaks, a set number of small changes each month, and the monthly report. Not in: new features, which are quoted separately so the monthly number never creeps. There is no minimum term.',
   },
   {
-    q: 'Can I pay monthly instead of upfront?',
-    a: 'Yes — for larger builds I\'ll often split the fixed quote across the build window (e.g. three monthly payments across a 6-week build). Or keep it on retainer once the system is live.',
+    q: 'Deposits and payment?',
+    a: 'The pilot is paid on go-live. Builds take about a third on signing and the rest against demonstrated working software at each milestone, never against a status report. Retainers are billed monthly.',
+  },
+  {
+    q: 'Any lock-in?',
+    a: 'None. You own what gets built, your data and your accounts. A full build runs on your own accounts from day one. A pilot runs on ours for speed and moves to yours whenever you want, with a written guide to how it works.',
   },
 ]
 
 export default function Pricing() {
   return (
     <>
-      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
           <Eyebrow>Pricing</Eyebrow>
@@ -52,81 +103,59 @@ export default function Pricing() {
             className="font-display text-ink max-w-[14ch]"
             style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
           >
-            Priced on scope.
+            The audit is free.
             <br />
-            Not on a menu.
+            The rest is fixed.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[56ch]">
-            No two businesses need the same thing, so I don&rsquo;t run a price list. Tell me what
-            you&rsquo;re after and I&rsquo;ll quote it &mdash; one fixed number, a real timeline, and
-            no hourly creep or lock-in.
+            Four rungs, taken in order, each priced before you climb it. No hourly billing,
+            no ranges that turn into invoices, and nothing you pay for before you have seen
+            what it would save you.
           </p>
-          <Link
-            href="/start"
-            className="mt-10 bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
-          >
-            Get a quote <span aria-hidden>&rarr;</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* ─── How it works — editorial split ───────────────────────── */}
-      <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
-          <div>
-            <RevealOnScroll>
-              <Eyebrow>How it works</Eyebrow>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.08}>
-              <h2
-                className="font-display text-ink max-w-[12ch]"
-                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-              >
-                One number. A real timeline.
-              </h2>
-            </RevealOnScroll>
+          <div className="mt-10 flex flex-wrap items-center gap-6">
+            <AuditButton />
+            <Link href="/start" className="text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
+              Already know what you want? Start a project
+            </Link>
           </div>
-          <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
-            <div className="space-y-5">
-              <p>
-                You tell me what you want built &mdash; or what&rsquo;s slow, broken, or missing &mdash;
-                and I scope it properly before quoting. Every quote includes a written scope of what
-                gets built, a fixed price (not a range), a delivery date, what&apos;s in scope and what
-                isn&apos;t, and what happens if you want to change something mid-build.
-              </p>
-              <p>
-                Depending on the work, that&rsquo;s a fixed quote for a defined build, an hourly rate
-                for small tweaks, or a monthly retainer for anything that needs to keep running. I&rsquo;ll
-                tell you which one actually makes sense for your job.
-              </p>
-              <p>
-                If the project comes in faster than expected, the price stays the same — but I&apos;ll
-                mention it before billing. If something genuinely outside the scope comes up, I quote
-                it separately rather than letting it creep into the original number. For retainers, the
-                monthly number covers everything in scope — no hidden per-call or per-request fees.
-              </p>
-              <p>
-                And I always aim to come in competitive &mdash; within your budget, and sharp against
-                anyone else out there.
-              </p>
-            </div>
-          </RevealOnScroll>
         </div>
       </section>
 
-      {/* ─── FAQs ─────────────────────────────────────────────────── */}
+      <section className="bg-cream-alt">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
+          <div className="border-b border-line">
+            {rungs.map((r, i) => (
+              <RevealOnScroll key={r.n} delay={i * 0.05}>
+                <div className="grid lg:grid-cols-[1fr_1.6fr] gap-x-12 gap-y-4 py-10 md:py-12 border-t border-line">
+                  <div>
+                    <div className="font-mono text-[12px] tracking-[0.18em] text-green-deep mb-3">{r.n}</div>
+                    <h2
+                      className="font-display text-ink leading-[1] tracking-[-0.03em] mb-3"
+                      style={{ fontSize: 'clamp(30px, 4vw, 44px)', fontWeight: 800 }}
+                    >
+                      {r.title}
+                    </h2>
+                    <div className="text-[18px] md:text-[20px] font-semibold text-ink tracking-[-0.01em]">{r.price}</div>
+                  </div>
+                  <ul className="space-y-3 pt-1">
+                    {r.lines.map((l) => (
+                      <li key={l} className="flex gap-3 text-[15px] md:text-[16px] text-muted leading-[1.6]">
+                        <span className="mt-[11px] w-1.5 h-1.5 rounded-full bg-ink shrink-0" />
+                        <span>{l}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
           <RevealOnScroll>
-            <Eyebrow>Pricing FAQs</Eyebrow>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.08}>
-            <h2
-              className="font-display text-ink max-w-[14ch] mb-14"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-            >
-              Common questions. Straight answers.
-            </h2>
+            <Eyebrow>Common questions</Eyebrow>
           </RevealOnScroll>
           <div className="grid md:grid-cols-2 gap-5">
             {faqs.map((f, i) => (
@@ -141,50 +170,33 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ─── Closing CTA — full-bleed ink (matches homepage FinalCTA) ─ */}
       <section className="bg-ink text-cream relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
             <div className="lg:col-span-8">
-              <Eyebrow color="white">Get a quote</Eyebrow>
+              <Eyebrow color="white">Start here</Eyebrow>
               <h2
                 className="font-display text-cream"
                 style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
               >
-                Tell me what
+                Find out what the job
                 <br />
-                you&rsquo;re after.
+                is costing you.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                Send me a bit about your business and what you want built. You&apos;ll get a fixed
-                quote and a real timeline back &mdash; or a clear no if it&apos;s not worth doing.
+                Forty five minutes with Will, a written page back within two business days,
+                and no obligation to build anything.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
-              <Link
-                href="/start"
-                className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
-              >
-                Get a quote <span aria-hidden>&rarr;</span>
-              </Link>
+              <AuditButton dark />
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
-                Fixed quote, usually within a day
+                Free. Yours to keep either way.
               </span>
             </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
-
-/* ─── Eyebrow ──────────────────────────────────────────────────── */
-function Eyebrow({ children, color = 'ink' }) {
-  const isWhite = color === 'white'
-  return (
-    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
-      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
-      {children}
-    </div>
   )
 }

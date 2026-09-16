@@ -1,30 +1,28 @@
 # Herbert AI
 
-> Automation & growth studio for SMBs. Solo, Adelaide-based, run by Will Herbert. Builds bespoke systems for small business: AI voice agents, chatbots, workflow automation, custom websites, dashboards, customer portals, and growth services (ads, SEO, email marketing).
+> Custom software and AI for small businesses, built in Adelaide by Will Herbert. One builder, from a free AI audit to the system a business runs on. Every engagement starts with the free audit; the first build is one AI employee for one job, live in 14 days.
 
-Herbert AI is a solo studio. Clients are small businesses across trades, hospitality, property management, accounting, allied health, and creative industries. Every project is quoted on scope — no public price list, no off-the-shelf packages.
+Herbert AI sells one ladder, taken in order: a free 45 minute AI audit with a written page back within two business days; the Bottleneck Pilot, one AI employee for one job, $3,500 fixed, live in 14 days or free, credited in full to a bigger build within 60 days; a full operations build from $25,000, scoped after the audit; and a retainer from $1,000 a month with a monthly report. Clients are owner-operated businesses with roughly 3 to 20 staff, first in accounting, allied health, trades and real estate. Clients are not named publicly.
 
 ## Pages
 
-- [Home](https://herbert-aisolutions.com/): What Herbert AI is and what it does.
-- [Services](https://herbert-aisolutions.com/services): Three buckets — Grow (ads, SEO, email, landing pages, lead funnels), Automate (voice agents, chatbots, workflow automation, custom AI agents, CRM, booking automation), Build (websites, dashboards, customer portals, booking systems, e-commerce).
-- [Industries](https://herbert-aisolutions.com/industries): Industries Herbert AI works with — trades, hospitality, property, accounting, health, creative.
-- [Pricing](https://herbert-aisolutions.com/pricing): How quoting works — priced on scope, not on a menu.
-- [About](https://herbert-aisolutions.com/about): About Will Herbert and how working with the studio actually goes.
-- [FAQ](https://herbert-aisolutions.com/faq): Common questions about timelines, pricing, customisation, contracts, and getting started.
-- [Bottleneck Pilot](https://herbert-aisolutions.com/pilot): Fixed-price entry offer. One live workflow on the business's worst admin bottleneck in 14 days, $3,500, credited in full toward a bigger build.
-- [Contact](https://herbert-aisolutions.com/contact): How to get in touch — email, phone, Calendly.
+- [Home](https://herbert-aisolutions.com/): what Herbert AI is, the ladder, the systems, the four industries.
+- [How it works](https://herbert-aisolutions.com/pilot): the free AI audit, the Bottleneck Pilot, what comes after, and the booking form.
+- [What gets built](https://herbert-aisolutions.com/services): AI employees (one job each, a person approves what goes out), the operations system they run in, and the growth modules that come after.
+- [The systems](https://herbert-aisolutions.com/work): a property manager's dashboard to click into, an accountant's document chaser demo, an operations hub for a finance brokerage, a marketing engine, a barbershop booking platform, a voice receptionist call.
+- [Industries](https://herbert-aisolutions.com/industries): accountants and bookkeepers, allied health, trades with an office, real estate and property management, each with its own page.
+- [Pricing](https://herbert-aisolutions.com/pricing): the four rungs and what each costs.
+- [About](https://herbert-aisolutions.com/about): Will Herbert and how working with him goes.
+- [FAQ](https://herbert-aisolutions.com/faq): common questions.
+- [Contact](https://herbert-aisolutions.com/contact): email and phone.
+- Also: [AI receptionist](https://herbert-aisolutions.com/ai-receptionist), [Web design Adelaide](https://herbert-aisolutions.com/web-design-adelaide), [Google Ads Adelaide](https://herbert-aisolutions.com/google-ads-adelaide).
 
 ## Pricing
 
-Every project is quoted on scope: one fixed quote and a real timeline, usually within a day. No hourly creep, no lock-in, no agency retainer. Retainers are month-to-month.
-
-## Work
-
-Recent builds include a full-stack site + owner dashboard + booking system with deposits and automated email/SMS for an Adelaide barbershop, and AI voice receptionists handling after-hours and overflow calls for trade and refrigeration businesses.
+Audit free. Pilot $3,500 fixed, live in 14 days or free, first 30 days of hosting and support included, then $200 a month care, handover to the client's own accounts, or a build. Builds from $25,000 as one fixed number with a written scope. Retainers from $1,000 a month, month to month. If the audit shows the saving would not comfortably cover the price, the client is told so.
 
 ## Owner
 
-Will Herbert — solo founder, Adelaide, South Australia.
-Email: herbert_aisolutions@outlook.com
+Will Herbert, Adelaide, South Australia.
+Email: hello@herbert-aisolutions.com
 Phone: +61 448 111 840

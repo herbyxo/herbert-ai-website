@@ -1,7 +1,7 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 
 export const metadata = {
-  title: { absolute: 'Free AI Audit, Then Working Software in 14 Days | Herbert AI' },
+  title: { absolute: 'How it works: a free AI audit, then working software in 14 days | Herbert AI' },
   description:
     'A free 45 minute AI audit puts a cost on every repetitive job in your business. Then the Bottleneck Pilot builds software on the worst one: live in 14 days, $3,500 fixed, or it is free.',
   alternates: { canonical: '/pilot' },
@@ -156,6 +156,35 @@ export default function Pilot() {
             <Inclusion title="Booking admin" body="Confirmations, reschedules and reminders handled without touching the calendar." />
             <Inclusion title="Handovers" body="Job details that live in one person's head or inbox, put on one screen the whole team can see." />
             <Inclusion title="The Monday report" body="The numbers you compile by hand every week, compiled for you." />
+          </div>
+        </div>
+      </section>
+
+      {/* ─── After the pilot: the rungs above it ─── */}
+      <section className="bg-cream-alt">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+          <Eyebrow>After the pilot</Eyebrow>
+          <h2 className="font-display text-ink mb-14" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
+            One job first.
+            <br />
+            Then the system.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
+            <Step
+              n="04"
+              title="A full build"
+              body="When one job runs itself, the next ones follow. A full build puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns. Scoped after the audit, from $25,000, with the pilot's $3,500 taken off."
+            />
+            <Step
+              n="05"
+              title="Keep it running"
+              body="A retainer from $1,000 a month covers hosting, fixes, a set number of small changes, and a monthly report on what the system handled and one improvement shipped. Month to month, and nothing switches off without being handed over to you first."
+            />
+            <Step
+              n="06"
+              title="The first three"
+              body="The first three pilot clients who agree to a named case study and a testimonial get 90 days of included care instead of 30. The price is the same; the proof is what we are short of."
+            />
           </div>
         </div>
       </section>

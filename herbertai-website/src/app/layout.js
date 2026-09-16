@@ -50,11 +50,11 @@ const SITE_DESC =
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Web Design & Automation in Adelaide | Herbert AI',
+    default: 'Custom Software & AI for Small Business | Herbert AI, Adelaide',
     template: '%s · Herbert AI',
   },
   description:
-    'Adelaide web design & automation for small business. Custom websites, AI receptionists and workflow automation — built by Will Herbert, shipped in weeks.',
+    'Custom software and AI for small businesses, built in Adelaide by Will Herbert. A free AI audit finds the job that costs you most; the Bottleneck Pilot builds one AI employee for it, live in 14 days.',
   applicationName: SITE_NAME,
   authors: [{ name: 'Will Herbert', url: `${SITE_URL}/about` }],
   creator: 'Will Herbert',
@@ -80,9 +80,9 @@ export const metadata = {
     locale: 'en_AU',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Web Design & Automation in Adelaide | Herbert AI',
+    title: 'Custom Software & AI for Small Business | Herbert AI, Adelaide',
     description:
-      'Adelaide web design & automation for small business. Custom websites, AI receptionists and workflow automation — built by Will Herbert, shipped in weeks.',
+      'A free AI audit finds the job that costs you most. The Bottleneck Pilot builds one AI employee for it, live in 14 days. Built in Adelaide by Will Herbert.',
   },
   // No hardcoded twitter title/description — it overrode every page's own
   // values. Twitter falls back to per-page openGraph.

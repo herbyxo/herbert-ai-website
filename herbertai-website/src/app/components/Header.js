@@ -40,18 +40,11 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink">
-          <DropdownLink label="Services">
-            <DropItem href="/services#grow" title="Grow" sub="Ads, SEO, email, landing pages" />
-            <DropItem href="/services#automate" title="Automate" sub="Voice agents, chatbots, workflows, CRM" />
-            <DropItem href="/services#build" title="Build" sub="Websites, dashboards, custom systems" />
-            <DropItem href="/web-design-adelaide" title="Web design" sub="Free homepage mockup in 48 hours" />
-          </DropdownLink>
-          {/* Hidden until case studies are fleshed out — restore when ready */}
-          {/* <NavLink href="/case-studies">Work</NavLink> */}
+          <NavLink href="/pilot">How it works</NavLink>
+          <NavLink href="/services">What gets built</NavLink>
           <NavLink href="/industries">Industries</NavLink>
           <NavLink href="/pricing">Pricing</NavLink>
           <NavLink href="/about">About</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
         </nav>
 
         <div className="hidden md:block">
@@ -96,43 +89,14 @@ function NavLink({ href, children }) {
   )
 }
 
-/* ─── desktop dropdown ────────────────────────────────────────── */
-function DropdownLink({ label, children }) {
-  return (
-    <div className="relative group">
-      <button className="flex items-center gap-1 py-1 text-ink">
-        <span>{label}</span>
-        <svg className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <div className="absolute left-0 top-full pt-3 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
-        <div className="bg-cream border border-line rounded-2xl shadow-[0_8px_32px_rgba(10,10,10,0.06)] py-2">
-          {children}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function DropItem({ href, title, sub }) {
-  return (
-    <Link href={href} className="block px-4 py-3 hover:bg-cream-alt transition-colors">
-      <div className="font-medium text-ink text-[14px]">{title}</div>
-      <div className="text-[12px] text-muted mt-0.5">{sub}</div>
-    </Link>
-  )
-}
-
 /* ─── mobile fullscreen overlay with big-type nav ─────────────── */
 function MobileOverlay({ onClose }) {
   const links = [
-    ['/services', 'Services'],
-    // ['/case-studies', 'Work'], // hidden until case studies are fleshed out
+    ['/pilot', 'How it works'],
+    ['/services', 'What gets built'],
     ['/industries', 'Industries'],
     ['/pricing', 'Pricing'],
     ['/about', 'About'],
-    ['/faq', 'FAQ'],
     ['/contact', 'Contact'],
   ]
 

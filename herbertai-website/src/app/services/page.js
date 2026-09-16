@@ -1,158 +1,140 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import { Eyebrow, AuditButton } from '../components/site/shared'
 
-/* ─── Service catalogue ─────────────────────────────────────────────── */
+export const metadata = {
+  title: 'What gets built | Custom software and AI for small business',
+  description:
+    'AI employees for one job each, the operations system they run in, and the growth modules that come after. Custom built in Adelaide, owned by you. Every engagement starts with a free AI audit.',
+  alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'What gets built · Herbert AI',
+    description: 'AI employees, the system they run in, and what comes after. Every engagement starts with a free AI audit.',
+    url: '/services',
+    images: ['/opengraph-image'],
+  },
+}
 
-const buckets = [
+// Capability inventory under the ladder. Grow is framed as what comes after
+// the operations build, not a front door. Decided 16 Sep 2026.
+const groups = [
+  {
+    id: 'employees',
+    label: 'AI employees',
+    headline: 'One job each. A person approves what goes out.',
+    body: 'Each AI employee takes over one repetitive job and runs it every day. It reads what comes in, drafts what goes out, and hands the exceptions to your team. The pilot builds the first one.',
+    demo: 'voice',
+    items: [
+      { tag: 'Accounting', title: 'AI document chaser', body: 'Sends each client their checklist, chases only what is missing, matches files as they land, tells your team when a return is ready.' },
+      { tag: 'Allied health', title: 'AI front desk assistant', body: 'Intake forms before the first visit, referral chasing, recalls when they fall due, same-day follow-up on a no-show.' },
+      { tag: 'Trades', title: 'AI quote follow-up', body: 'Every quote followed up on a schedule, common questions answered, the ones worth a call flagged, job details handed to the tech when it is won.' },
+      { tag: 'Real estate', title: 'AI maintenance coordinator', body: 'Logs the tenant’s request, gets the landlord’s approval, dispatches the tradie, keeps everyone updated.' },
+      { tag: 'Phones', title: 'AI voice receptionist', body: 'Answers the phone, qualifies the job, books it, sends the confirmation. There is a real call below.' },
+      { tag: 'Website', title: 'Chat on your site', body: 'Answers questions from your own material, captures the lead, books through the chat.' },
+      { tag: 'Between systems', title: 'Workflow automation', body: 'Your job system, calendar, inbox and invoicing talking to each other, so nothing gets re-typed.' },
+      { tag: 'Bookings', title: 'Booking automation', body: 'Confirmations, reschedules, deposits and reminders handled without anyone touching the calendar.' },
+    ],
+  },
+  {
+    id: 'system',
+    label: 'The system they run in',
+    headline: 'One place your whole office works out of.',
+    body: 'When a few AI employees are running, they need somewhere to live. The full build puts your files, comms, follow-ups and numbers on one system your business owns, built around how you already work.',
+    items: [
+      { tag: 'Operations', title: 'Operations hub', body: 'Every client file or job on one board, with who is waiting on what, and the next action already drafted.' },
+      { tag: 'Clients', title: 'Client and customer portals', body: 'Clients log in with an email link to upload documents, see their file and check where things are.' },
+      { tag: 'Owner', title: 'Dashboards and reporting', body: 'The numbers you compile by hand every week, compiled for you and on one screen.' },
+      { tag: 'Bookings', title: 'Custom booking systems', body: 'Service selection, deposits, calendar sync and reminders, built for your business rather than a template with your logo.' },
+      { tag: 'Web', title: 'Websites', body: 'Custom coded, fast, built to feed the system behind it rather than sit on its own.' },
+      { tag: 'Internal', title: 'Internal tools', body: 'The spreadsheet that became a system: approvals, checklists, handovers, whatever your team runs on.' },
+    ],
+  },
   {
     id: 'grow',
-    label: 'Grow',
-    headline: 'Get more customers through the door.',
-    body: 'Paid traffic, organic, lifecycle marketing — the systems that bring new business in. Set up once, run on their own, measured monthly.',
-    services: [
-      { tag: 'Ads', title: 'Paid ads · Google + Meta', body: 'Campaign setup, creative, daily monitoring. Scoped to your budget and target market.' },
-      { tag: 'SEO', title: 'Organic search', body: 'Technical SEO, local SEO, content. Get found by the people already searching for what you do.' },
-      { tag: 'Email · SMS', title: 'Email + SMS marketing', body: 'List management, broadcast campaigns, automated sequences. Resend + Twilio under the hood.' },
-      { tag: 'Funnels', title: 'Lead magnets + funnels', body: 'Free-PDF → email capture → nurture sequence → call booked. Whole funnel built and wired.' },
+    label: 'What comes after',
+    headline: 'Growth, once the office runs itself.',
+    body: 'Growth modules bolt onto the operations system rather than replace it, so new customers land in a business that can handle them.',
+    items: [
+      { tag: 'Ads', title: 'Google and Meta ads', body: 'Written, tested and paused by a marketing engine, with a landing page per ad group and the numbers on one screen.' },
+      { tag: 'Search', title: 'SEO', body: 'Technical and local search, so the people already looking for what you do can find you.' },
+      { tag: 'Email and SMS', title: 'Lifecycle messaging', body: 'Automated sequences to the customers you already have: reviews, reminders, reactivation.' },
+      { tag: 'Pages', title: 'Landing pages and funnels', body: 'Pages built for one ad group or one offer, measured on what they convert.' },
     ],
-  },
-  {
-    id: 'automate',
-    label: 'Automate',
-    headline: 'Handle the admin without you in the loop.',
-    body: 'Voice, chat, workflows — anything where a computer can do the boring repetitive work. You see the outcomes, not the process.',
-    demo: 'voice',
-    services: [
-      { tag: 'Voice', title: 'AI voice agents', body: 'A 24/7 receptionist. Custom prompt per business. Qualifies, books, SMSs confirmations.', hasDemo: true },
-      { tag: 'Chat', title: 'AI chatbot widget', body: 'Site widget trained on your business. Captures leads, answers questions, books through chat.' },
-      { tag: 'Workflows', title: 'Workflow automation', body: 'Tool-to-tool stitching. AroFlo, CRM, Calendar, Gmail, SMS — all talking to each other. Built in n8n.' },
-      { tag: 'Booking', title: 'Booking + calendar', body: 'Custom booking flows, deposit handling, calendar sync, SMS reminders, no-show recovery.' },
-    ],
-  },
-  {
-    id: 'build',
-    label: 'Build',
-    headline: 'Custom software for your business.',
-    body: 'Websites, dashboards, internal tools — bespoke custom builds. Yours to keep, no platform lock-in.',
-    services: [
-      { tag: 'Web', title: 'Marketing websites', body: 'Custom-coded sites, no template. Mobile-first, fast, modern hosting.', hasDemo: true },
-      { tag: 'Dashboard', title: 'Custom dashboards', body: 'Admin panels, customer database, owner consoles. Secure email-link login — no passwords to remember.' },
-      { tag: 'Portals', title: 'Customer portals', body: 'Customers log in to see their bookings, files, and history. Email-link or phone-number sign-in — no passwords.' },
-      { tag: 'Booking', title: 'Custom booking systems', body: 'Fully bespoke — not Calendly with a logo. Service selection, deposits, calendar sync.' },
+    links: [
+      ['/google-ads-adelaide', 'Google Ads, run by the builder'],
+      ['/web-design-adelaide', 'Web design in Adelaide'],
     ],
   },
 ]
 
-/* ─── Page ──────────────────────────────────────────────────────────── */
-
 export default function Services() {
   return (
     <>
-      {/* ─── Hero — static (above the fold) ─── */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
-          <Eyebrow>Services</Eyebrow>
+          <Eyebrow>What gets built</Eyebrow>
           <h1
             className="font-display text-ink max-w-[16ch]"
             style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
           >
-            Web design, AI &amp; automation for small business.
+            One AI employee first. Then the system.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
-            Adelaide-based web design, development, AI automation and growth.
-            Three buckets &mdash; grow, automate, build. Every project scoped to your
-            business and quoted on the work.
+            Every engagement starts with a free AI audit and one AI employee on the job that
+            costs you most. This is what the system your business runs on can include after
+            that, built to order in Adelaide and owned by you.
           </p>
-          <p className="text-[15px] text-muted leading-[1.6] mt-4 max-w-[60ch]">
-            Got a specific industry?{' '}
-            <Link href="/industries" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
-              See if it&rsquo;s one we work with
-            </Link>.
-          </p>
+          <div className="mt-10">
+            <AuditButton />
+          </div>
         </div>
       </section>
 
-      {/* ─── Buckets ─── */}
-      {buckets.map((bucket, i) => (
-        <section
-          key={bucket.id}
-          id={bucket.id}
-          className={`${i % 2 === 0 ? 'bg-cream-alt' : 'bg-cream'} scroll-mt-24`}
-        >
+      {groups.map((g, i) => (
+        <section key={g.id} id={g.id} className={`${i % 2 === 0 ? 'bg-cream-alt' : 'bg-cream'} scroll-mt-24`}>
           <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-            <RevealOnScroll className="max-w-[44ch] mb-14">
+            <RevealOnScroll className="max-w-[46ch] mb-14">
               <div>
-                <Eyebrow>{bucket.label}</Eyebrow>
+                <Eyebrow>{g.label}</Eyebrow>
                 <h2
                   className="font-display text-ink mb-5"
                   style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
                 >
-                  {bucket.headline}
+                  {g.headline}
                 </h2>
-                <p className="text-[16px] md:text-[17px] text-muted leading-[1.6]">{bucket.body}</p>
+                <p className="text-[16px] md:text-[17px] text-muted leading-[1.6]">{g.body}</p>
               </div>
             </RevealOnScroll>
-
-            {/* Service cards */}
             <RevealOnScroll className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               <>
-                {bucket.services.map((s) => (
-                  <ServiceCard key={s.title} service={s} />
+                {g.items.map((s) => (
+                  <div key={s.title} className="bg-white border border-line rounded-3xl p-7 min-h-[200px] flex flex-col lift">
+                    <div className="flex items-center gap-2 mb-5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-deep shrink-0" />
+                      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{s.tag}</span>
+                    </div>
+                    <h3 className="text-[20px] font-medium tracking-[-0.01em] text-ink mb-3 leading-[1.25]">{s.title}</h3>
+                    <p className="text-[14px] text-muted leading-[1.6]">{s.body}</p>
+                  </div>
                 ))}
               </>
             </RevealOnScroll>
-
-            {/* Inline demo */}
-            {bucket.demo === 'voice' && <VoiceDemo />}
-
-            {/* Grow → Google Ads landing page */}
-            {bucket.id === 'grow' && (
-              <RevealOnScroll className="mt-12">
-                <Link
-                  href="/google-ads-adelaide"
-                  className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
-                >
-                  AI-optimised Google Ads, run by the builder <span aria-hidden>→</span>
-                </Link>
-              </RevealOnScroll>
-            )}
-
-            {/* Automate → AI receptionist landing page */}
-            {bucket.id === 'automate' && (
-              <RevealOnScroll className="mt-12">
-                <Link
-                  href="/ai-receptionist"
-                  className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
-                >
-                  AI receptionist for your business &mdash; hear a live demo <span aria-hidden>→</span>
-                </Link>
-              </RevealOnScroll>
-            )}
-
-            {/* Build → start a conversation */}
-            {bucket.id === 'build' && (
-              <RevealOnScroll className="mt-12">
-                <div className="flex flex-col items-start gap-4">
-                  <Link
-                    href="/web-design-adelaide"
-                    className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
-                  >
-                    Web design in Adelaide &mdash; free homepage mockup in 48 hours <span aria-hidden>→</span>
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors"
-                  >
-                    Got a build in mind? Let&rsquo;s talk <span aria-hidden>→</span>
-                  </Link>
-                </div>
+            {g.demo === 'voice' && <VoiceDemo />}
+            {g.links && (
+              <RevealOnScroll className="mt-12 flex flex-col items-start gap-3">
+                <>
+                  {g.links.map(([href, label]) => (
+                    <Link key={href} href={href} className="inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
+                      {label} <span aria-hidden>&rarr;</span>
+                    </Link>
+                  ))}
+                </>
               </RevealOnScroll>
             )}
           </div>
         </section>
       ))}
 
-      {/* ─── Pricing teaser — ink panel ─── */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
           <div className="bg-ink text-cream rounded-3xl p-12 md:p-20">
@@ -163,12 +145,11 @@ export default function Services() {
                   className="font-display text-cream mb-6 max-w-[16ch]"
                   style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}
                 >
-                  Priced on scope. Not on a menu.
+                  The audit is free. The rest is fixed.
                 </h2>
                 <p className="text-cream/70 text-[17px] leading-[1.6] max-w-[52ch]">
-                  Every project is different, so every quote is based on your specifications.
-                  I&rsquo;ll always work within your budget and deliver exactly what you&rsquo;re
-                  after &mdash; while staying competitive with anyone out there.
+                  The pilot is $3,500, live in 14 days or it&apos;s free. Builds start from
+                  $25,000 and are scoped after the audit. Retainers from $1,000 a month.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
@@ -176,60 +157,14 @@ export default function Services() {
                   href="/pricing"
                   className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
                 >
-                  How we price <span aria-hidden>→</span>
+                  See the pricing <span aria-hidden>&rarr;</span>
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* ─── Custom builds CTA ─── */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pb-24 md:pb-32">
-          <div className="bg-cream-alt border border-line rounded-3xl p-12 md:p-20">
-            <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-end">
-              <div>
-                <Eyebrow>Doesn&apos;t fit the menu?</Eyebrow>
-                <h2
-                  className="font-display text-ink mb-6 max-w-[14ch]"
-                  style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}
-                >
-                  Got something more specific?
-                </h2>
-                <p className="text-muted text-[17px] leading-[1.6] max-w-[52ch]">
-                  Custom systems are scoped to your bottleneck and quoted on the build. Tell me a bit
-                  about how your business runs, and together we&rsquo;ll land on the best solution for
-                  your needs.
-                </p>
-              </div>
-              <Link
-                href="/start"
-                className="bg-ink text-cream px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:bg-ink-soft transition-colors self-start md:self-end"
-              >
-                Scope a custom build <span aria-hidden>→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </>
-  )
-}
-
-/* ─── Components ────────────────────────────────────────────────────── */
-
-function ServiceCard({ service }) {
-  return (
-    <div className="bg-white border border-line rounded-3xl p-7 min-h-[200px] flex flex-col lift">
-      <div className="flex items-center gap-2 mb-5">
-        <span className="w-1.5 h-1.5 rounded-full bg-green-deep shrink-0" />
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{service.tag}</span>
-      </div>
-      <h3 className="text-[20px] font-medium tracking-[-0.01em] text-ink mb-3 leading-[1.25]">{service.title}</h3>
-      <p className="text-[14px] text-muted leading-[1.6]">{service.body}</p>
-    </div>
   )
 }
 
@@ -237,14 +172,14 @@ function VoiceDemo() {
   return (
     <div className="mt-14 grid md:grid-cols-[1fr_1.4fr] gap-8 md:gap-12 items-center bg-white border border-line rounded-3xl p-8 md:p-10">
       <div>
-        <Eyebrow>Demo · unedited</Eyebrow>
+        <Eyebrow>Demo, unedited</Eyebrow>
         <h3 className="text-[24px] md:text-[28px] font-medium tracking-[-0.01em] text-ink mb-3">
-          A real call handled by the voice agent.
+          A real call handled by the voice receptionist.
         </h3>
         <p className="text-[14px] text-muted leading-[1.6]">
-          Demo build for a commercial refrigeration company. Customer reported a
-          refrigerant leak — the agent qualified the job, collected access details,
-          closed the call. Zero human involvement.
+          Demo build for a commercial refrigeration business. The caller reported a
+          refrigerant leak; the receptionist qualified the job, collected access details
+          and closed the call. Nobody else was on the line.
         </p>
       </div>
       <div className="bg-ink rounded-2xl p-6">
@@ -256,16 +191,6 @@ function VoiceDemo() {
           <source src="/steve-demo.wav" type="audio/wav" />
         </audio>
       </div>
-    </div>
-  )
-}
-
-function Eyebrow({ children, color = 'ink' }) {
-  const isWhite = color === 'white'
-  return (
-    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
-      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
-      {children}
     </div>
   )
 }

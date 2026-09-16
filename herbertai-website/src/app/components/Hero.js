@@ -65,7 +65,7 @@ export default function Hero() {
           transition={{ duration: 0.55, delay: 0.85, ease: EASE }}
           className="mt-10 md:mt-12 text-[18px] md:text-[20px] text-muted leading-[1.5] max-w-[54ch]"
         >
-          Adelaide-based automation &amp; growth. Custom-built, shipped in weeks.
+          Custom software and AI for small businesses, built in Adelaide.
         </motion.p>
 
         <motion.div

@@ -11,6 +11,14 @@ const nextConfig = {
         destination: 'https://herbert-aisolutions.com/:path*',
         permanent: true,
       },
+      // The automation page carried a competing free offer (an "automation
+      // map"); the free AI audit replaced it on 16 Sep 2026. Keeps the
+      // search equity (about 70 searches a month) pointed at the offer.
+      {
+        source: '/automation-adelaide',
+        destination: '/pilot',
+        permanent: true,
+      },
       // Case-study pages removed 2026-06 (no client portfolio shown until
       // there's enough of one) — redirect any indexed URLs to the homepage.
       {

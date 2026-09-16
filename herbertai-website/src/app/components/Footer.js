@@ -5,16 +5,17 @@ import { usePathname } from 'next/navigation'
 const managerUrl = process.env.NEXT_PUBLIC_MANAGER_DASHBOARD_URL
 const ownerUrl = process.env.NEXT_PUBLIC_OWNER_CONSOLE_URL
 
+// The footer carries the ladder (Work), the ways in (Talk) and the pages that
+// stay live for search but not in the nav (Also): the receptionist, web design
+// and Google Ads pages sit on demand that exists and keep their ranking equity
+// out of the spine. Decided 16 Sep 2026, docs/restructure-2026-09/PROJECT.md.
 const NAV_COLS = [
   {
     label: 'Work',
     links: [
-      ['/services', 'Services'],
-      // ['/case-studies', 'Work'], // hidden until case studies are fleshed out
-      ['/web-design-adelaide', 'Web Design Adelaide'],
-      ['/ai-receptionist', 'AI Receptionist'],
-      ['/automation-adelaide', 'Automation Adelaide'],
-      ['/google-ads-adelaide', 'Google Ads Adelaide'],
+      ['/pilot', 'How it works'],
+      ['/services', 'What gets built'],
+      ['/work', 'The systems'],
       ['/industries', 'Industries'],
       ['/pricing', 'Pricing'],
       ['/about', 'About'],
@@ -23,10 +24,19 @@ const NAV_COLS = [
   {
     label: 'Talk',
     links: [
+      ['/pilot#book', 'Book a free AI audit'],
       ['/start', 'Start a project'],
-      ['/contact', 'Book a call'],
+      ['/contact', 'Contact'],
       ['/faq', 'FAQ'],
       ['mailto:hello@herbert-aisolutions.com', 'hello@herbert-aisolutions.com'],
+    ],
+  },
+  {
+    label: 'Also',
+    links: [
+      ['/ai-receptionist', 'AI receptionist'],
+      ['/web-design-adelaide', 'Web design Adelaide'],
+      ['/google-ads-adelaide', 'Google Ads Adelaide'],
     ],
   },
 ]
@@ -40,9 +50,9 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-10">
 
         <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 lg:gap-12">
-          {/* Identity — wordmark heads the descriptor column */}
+          {/* Identity */}
           <div className="max-w-[36ch]">
-            <Link href="/" aria-label="Herbert AI — home" className="inline-flex items-baseline gap-2 group mb-6">
+            <Link href="/" aria-label="Herbert AI, home" className="inline-flex items-baseline gap-2 group mb-6">
               <span
                 className="font-display text-ink leading-[0.9] tracking-[-0.03em] font-bold"
                 style={{ fontSize: '32px' }}
@@ -55,18 +65,16 @@ export default function Footer() {
               />
             </Link>
             <p className="text-muted text-[14px] leading-[1.6] max-w-md">
-              Adelaide-based automation &amp; growth for SMBs.
-              Custom-built systems: ads, websites, dashboards, voice agents,
-              workflows. Shipped in weeks, owned by you.
+              Custom software and AI for small businesses, built in Adelaide.
+              One builder, from the free audit to the system your business runs
+              on. You own what gets built.
             </p>
           </div>
 
-          {/* Nav columns */}
           {NAV_COLS.map((col) => (
             <FooterNavCol key={col.label} label={col.label} links={col.links} />
           ))}
 
-          {/* Portals (env-gated) */}
           {(managerUrl || ownerUrl) && (
             <div>
               <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted mb-4">
@@ -94,7 +102,6 @@ export default function Footer() {
           )}
         </div>
 
-        {/* Bottom strip */}
         <div className="mt-16 pt-6 border-t border-line flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
           <span>© {new Date().getFullYear()} Herbert AI</span>
           <span className="flex items-center gap-5">
@@ -115,19 +122,16 @@ function FooterNavCol({ label, links }) {
         {label}
       </div>
       <ul className="space-y-2.5">
-        {links.map(([href, text]) => {
-          const external = href.startsWith('mailto:') || href.startsWith('http')
-          return (
-            <li key={href}>
-              <Link
-                href={href}
-                className="text-[14px] text-ink-soft hover:text-ink transition-colors inline-block"
-              >
-                {text}
-              </Link>
-            </li>
-          )
-        })}
+        {links.map(([href, text]) => (
+          <li key={href}>
+            <Link
+              href={href}
+              className="text-[14px] text-ink-soft hover:text-ink transition-colors inline-block"
+            >
+              {text}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   )
