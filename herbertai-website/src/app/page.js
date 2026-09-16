@@ -68,28 +68,24 @@ const PROOF = [
   {
     tag: 'Live, click in',
     title: 'A property manager’s dashboard',
-    body: 'Tenants log a maintenance request, the system logs it, the manager approves, a tradie is dispatched. Open it and click around; the data is made up.',
     href: 'https://dashboard.herbert-aisolutions.com',
     external: true,
   },
   {
     tag: 'Demo, plays itself',
     title: 'An accountant’s document chaser',
-    body: 'One tax season, played through: checklists out, reminders for only what is missing, files matched as they land. Tap any reminder to read the email the client got.',
     href: '/demo/accountants',
     external: false,
   },
   {
     tag: 'Currently building',
     title: 'An operations hub for a finance brokerage',
-    body: 'Every client file on one board, documents chased automatically, every email drafted for a person to approve. The system a whole office works out of.',
     href: '/work',
     external: false,
   },
   {
     tag: 'Built',
     title: 'A marketing engine',
-    body: 'Google and Meta ads written, tested and paused by the system, with a landing page per ad group and the numbers on one screen.',
     href: '/work',
     external: false,
   },
@@ -118,8 +114,7 @@ function Proof() {
                   <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
                   <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{p.tag}</span>
                 </div>
-                <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-3 text-ink">{p.title}</h3>
-                <p className="text-[15px] text-muted leading-[1.6] mb-7">{p.body}</p>
+                <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-7 text-ink">{p.title}</h3>
                 <span className="mt-auto inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
                   {p.external ? 'Open it' : 'See it'} <span aria-hidden>&rarr;</span>
                 </span>
@@ -167,7 +162,7 @@ function IndustriesStrip() {
             <RevealOnScroll key={ind.slug} delay={i * 0.05}>
               <Link
                 href={`/industries/${ind.slug}`}
-                className="grid md:grid-cols-[1fr_1.4fr_auto] md:items-baseline gap-x-8 py-7 md:py-8 border-t border-line transition-[padding] duration-300 md:hover:pl-3 group"
+                className="grid md:grid-cols-[1fr_auto] md:items-baseline gap-x-8 py-7 md:py-8 border-t border-line transition-[padding] duration-300 md:hover:pl-3 group"
               >
                 <h3
                   className="font-display text-ink leading-[1] tracking-[-0.03em]"
@@ -175,7 +170,6 @@ function IndustriesStrip() {
                 >
                   {ind.name}
                 </h3>
-                <p className="mt-2 md:mt-0 text-[15px] md:text-[17px] text-muted leading-[1.5]">{ind.bottleneck}</p>
                 <span className="mt-3 md:mt-0 text-[13px] font-medium text-ink inline-flex items-center gap-1.5">
                   {ind.employee} <span aria-hidden className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
                 </span>
@@ -205,8 +199,7 @@ function FounderNote() {
             <Eyebrow>Who builds it</Eyebrow>
             <p className="text-[19px] md:text-[22px] text-ink leading-[1.45] tracking-[-0.01em]">
               I&apos;m Will Herbert. I build every system myself, in Adelaide, and you deal
-              with me from the first audit to the day it goes live. No account managers,
-              no hand-offs, and you own what gets built.
+              with me from the audit to the day it goes live.
             </p>
             <Link href="/about" className="mt-6 inline-flex items-center gap-1.5 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
               More about Will
@@ -233,8 +226,7 @@ function FinalCTA() {
               hates doing?
             </h2>
             <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">
-              Book a free AI audit and find out what it costs you. Forty five minutes,
-              a written page back, no obligation.
+              Forty five minutes, free, a written page back.
             </p>
           </div>
           <div className="lg:col-span-5 flex flex-col gap-6 lg:items-end">
