@@ -66,42 +66,42 @@ build-in-public content); a paid audit tier; new services.
 ## Active Plan
 
 ### M1: structure, copy, pricing, proof (this week)
-- [ ] **M1.1: Navigation and footer.** Nav: How it works (`/pilot`), What gets
+- [x] **M1.1: Navigation and footer** (2026-09-16, 545b44b). Nav: How it works (`/pilot`), What gets
   built (`/services`), Industries (`/industries`), Pricing, About, button
   "Free AI audit". Footer gains an "also" line: AI receptionist, Web design
   Adelaide, Google Ads Adelaide. Mobile menu matches.
-- [ ] **M1.2: Home.** Sub-line becomes "Custom software and AI for small
+- [x] **M1.2: Home** (2026-09-16). Sub-line becomes "Custom software and AI for small
   businesses. Adelaide." (manifesto lines unchanged). Sections in order: hero;
   how it works (audit, first AI employee, the system it runs in); proof (the
   systems, linking to `/work`); industries strip (four); founder note with
   name and photo; final call to action. The three bucket chapters are
   retired from home and their capability content moves to `/services`.
-- [ ] **M1.3: `/pilot` as how it works.** Adds the build and retainer rungs
+- [x] **M1.3: `/pilot` as how it works** (2026-09-16). Adds the build and retainer rungs
   after the pilot section, the founding-client exchange (case study for 90
   days of care), and the "AI employee" framing with its honest limit (one
   job, a person approves what goes out). Audit FAQ already live.
-- [ ] **M1.4: `/services` as what gets built.** The Grow, Automate, Build
+- [x] **M1.4: `/services` as what gets built** (2026-09-16). The Grow, Automate, Build
   buckets become a capability list under the rungs; Grow framed as what
   comes after the operations build; one button.
-- [ ] **M1.5: `/pricing`.** Order: audit (free), pilot ($3,500, live in 14
+- [x] **M1.5: `/pricing`** (2026-09-16). Order: audit (free), pilot ($3,500, live in 14
   days or free, credited in full within 60 days), builds from $25,000 scoped
   after the audit, retainers from $1,000 a month with the monthly report,
   the sentence "If the audit shows the saving would not comfortably cover the
   price, you will be told so", and the after-day-30 options. Metadata and
   FAQ schema updated.
-- [ ] **M1.6: `/work` proof page.** The property manager dashboard (live
+- [x] **M1.6: `/work` proof page** (2026-09-16; screenshots of the property dashboard and the accountants demo captured to `public/work/`, the other four systems text-only until M2). The property manager dashboard (live
   link), the operations hub (demo instance from M2.1, placeholder screenshot
   until then), the marketing engine (screenshots), the four industry demos.
   One class-of-work caption each, no names, no numbers.
-- [ ] **M1.7: `/about`.** Founder name, photo, first-person voice, the story
+- [~] **M1.7: `/about`** (2026-09-16; copy done, photo slot renders an initial until Will supplies the file). Founder name, photo, first-person voice, the story
   of what gets built and how, no client names. Photo supplied by Will (GATE:
   the photo).
-- [ ] **M1.8: Old pages and plumbing.** `/property-managers` becomes the real
+- [x] **M1.8: Old pages and plumbing** (2026-09-16). Deviation: there was no `/property-managers` page to redirect (the property manager product lives at dashboard.herbert-aisolutions.com and is now the live proof on the real estate page); `/automation-adelaide` deleted and redirected; the industries index and the four pages ship together on `components/site/shared.js`, so M3.1 to M3.4 are the demo embeds only. `/property-managers` becomes the real
   estate industry page (redirect to `/industries/real-estate`);
   `/automation-adelaide` redirects to `/pilot`; `/industries` becomes an
   index of the four pages; sitemap, llms.txt, `next.config.mjs` redirects,
   the website CLAUDE.md and the herbertai skill route list updated.
-- [ ] **M1.9: Verify and ship.** Lint, production build, every page checked
+- [~] **M1.9: Verify and ship.** Lint and production build clean, every page checked at 375 in the Browser pane (one overflow fixed on the industry h1), redirect and 404 confirmed, on branch `preview/ladder-restructure` awaiting Will's look at the Vercel preview before merge. Lint, production build, every page checked
   at desktop and 375 in the Browser pane, one button per page confirmed,
   production polled after push.
 
