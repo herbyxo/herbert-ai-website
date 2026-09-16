@@ -96,6 +96,67 @@ sections) and tighter (80 to 120px). Recommendation: tighter. Will's
 complaint was getting sick of reading; less air between sections shortens
 the page without cutting more words.
 
+Will's pick (16 Sep 2026): "i like these two pages: https://www.symphonyai.com/ and
+https://www.wix.com/symphony". Neither palette option was picked; the references are
+the direction and the bar. Saved to design-taste swipe as
+`expressive-bento-symphonyai.png` and `expressive-bento-wixsymphony.png`.
+
+### The two references, dissected
+
+- SymphonyAI (symphonyai.com): near-black ground (#1A1A1A, #000), white Inter, a
+  3D animated hero with a scroll-swapped word, then a bento of flat colour tiles
+  (blue #0074E8, orange, yellow #FFB600, teal #05D3AB, purple #A933FB, photos with
+  colour overlays) carrying big numbers, then one section per industry with a
+  coloured dot, three stats in that colour, the product screen framed in a
+  rounded panel of that colour, and a pill button in it. GSAP.
+- Symphony by Wix (wix.com/symphony): light grey ground (#F3F3F3), the hero as a
+  serif regular line then a heavy sans line, eyebrows as {serif in braces}, a
+  dark button with a lime arrow chip, AI agents drawn as a named orbit of
+  coloured dots (Cal, Quinn, Pax, Remi) in a lilac panel and again on black, a
+  marquee of colour tiles with numbers, split colour panels (olive, lilac),
+  product mocks in coloured frames. Sells "a full team of AI agents" to small
+  business, which is the AI employee framing.
+- Shared, and so the thing to clone: AI employees as a named team; colour as flat
+  tiles, several of them, not one accent; the product screen framed in its
+  tile's colour; a neutral grotesque; big numbers on tiles; rounded panels.
+  Where they differ is the ground: one dark, one light.
+
+### Direction boards (16 Sep 2026)
+
+`design-pass-site-2026-09-16-direction-{a,b,c}.png`, from
+`design-pass-site-2026-09-16-directions.py`. Each is the homepage restructured to
+the references, not just recoloured: manifesto beside an "AI employees" orbit
+panel naming the four pilot employees; how it works as three number tiles (45
+min, 14 days, from $25k, offer numbers, never proof numbers); the work as a
+six-tile bento with the two real screenshots framed in their tile colour and the
+other four as text tiles; industries as four panels with a colour dot each and a
+framed screen; founder; close. Type is Geist throughout (Inter-like, matching
+both references), Bricolage dropped; the serif line in the hero is Instrument
+Serif, already loaded.
+
+- A. Light, from Symphony by Wix: light grey ground, white panels, serif then
+  heavy sans hero, dark button with a lime chip, lilac orbit panel, Wix tile
+  colours (lime, blue, orange, yellow, purple, teal), dark close.
+- B. Dark, from SymphonyAI: near-black ground, white type, the house green as the
+  only button and the second manifesto line, SymphonyAI tile colours, white
+  panels for the audit tile and the receptionist tile, green flood close.
+- C. Mixed, both: light ground, the orbit panel and the close in near-black, the
+  SymphonyAI tile colours deepened for a light ground, the house green as the
+  chip on a dark button and as the 14-day tile, serif then heavy sans hero.
+
+Recommendation: C. It keeps the two live demos (both white UIs) readable on a
+light page, gives the SymphonyAI weight to the two places it matters (the team
+panel and the close), keeps the house green in the site without leaning on it,
+and gives each industry its own colour to carry onto its page and its demo. B is
+the boldest and the closest clone but the white product screens fight a dark
+ground everywhere; A reads more like Wix's own brand than Herbert's.
+
+Flags: this leaves the May 2026 charter (cream, ink, neon, Bricolage) entirely;
+CHARTER.md gets rewritten after the pick. The orbit panel puts "AI employees" on
+the home hero, within the research's bound (the four named employees are what a
+pilot delivers). Stat tiles from SymphonyAI cannot be copied with client
+results; the tiles carry offer numbers only.
+
 Will's pick: (pending)
 Tweaks: (pending)
 Applied commit: (pending)

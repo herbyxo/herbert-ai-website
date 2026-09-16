@@ -101,9 +101,7 @@ build-in-public content); a paid audit tier; new services.
   `/automation-adelaide` redirects to `/pilot`; `/industries` becomes an
   index of the four pages; sitemap, llms.txt, `next.config.mjs` redirects,
   the website CLAUDE.md and the herbertai skill route list updated.
-- [~] **M1.9: Verify and ship.** Lint and production build clean, every page checked at 375 in the Browser pane (one overflow fixed on the industry h1), redirect and 404 confirmed, on branch `preview/ladder-restructure` awaiting Will's look at the Vercel preview before merge. Lint, production build, every page checked
-  at desktop and 375 in the Browser pane, one button per page confirmed,
-  production polled after push.
+- [x] **M1.9: Merged to main 16 Sep 2026** (Will: "merge"), production verified: home carries the new descriptor, /pilot, /work and /industries/* return 200, /automation-adelaide redirects 308 to /pilot. The other session's `demo-pages` branch (allied health, trades, real estate demos) waits on Will's sign-off before it merges and the `demoLive` flags flip.
 
 ### M2: proof instances
 - [ ] **M2.1: Operations hub demo instance.** The brokerage hub's mock mode
