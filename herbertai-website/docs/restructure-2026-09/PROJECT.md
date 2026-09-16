@@ -126,7 +126,7 @@ build-in-public content); a paid audit tier; new services.
   property manager dashboard as its live proof.
 
 ### M4: design pass (design-taste, element by element)
-- [ ] **M4.1: Whole-site decisions.** Five to seven scouted references and
+- [~] **M4.1: Whole-site decisions.** (options shown 16 Sep 2026: seven scouted references, four palette boards on the real homepage, type and density shown large; awaiting Will's pick) Five to seven scouted references and
   three palette boards rendered on the real homepage; typeface and density
   shown large; Will picks (GATE: Will's pick). Ledger at
   `docs/design/design-pass-site-2026-09.md`.
