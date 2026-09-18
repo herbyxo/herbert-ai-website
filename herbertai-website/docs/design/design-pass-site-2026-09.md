@@ -157,6 +157,43 @@ the home hero, within the research's bound (the four named employees are what a
 pilot delivers). Stat tiles from SymphonyAI cannot be copied with client
 results; the tiles carry offer numbers only.
 
+Will, 18 Sep 2026, on the three direction boards: "none of these really look
+that good - i meant to use those references as an entire design reference, not
+just colour, can u show 3 mockups of what the entire site could look like when
+trying to use them as reference, and then maybe i can work on them per segment".
+Lesson for the register: when Will names a reference, clone its composition
+(sections, objects, rhythm, nav, type treatment), not its palette on the
+existing page.
+
+### Full homepage clones (18 Sep 2026)
+
+`design-pass-site-2026-09-18-clone-{m1,m2,m3}.png`, from
+`design-pass-site-2026-09-18-clones.py`. Each is the whole homepage composed
+the way the reference composes its own, with Herbert's content.
+
+- Mockup 1, SymphonyAI cloned: announcement bar, dark nav with a blue pill,
+  centred hero with the swapped word ("Our software knows [accountants]") and
+  the lit rails (a CSS stand-in for their 3D render), a three-card strip with
+  coloured underlines, a stat bento on black (offer numbers and the two
+  screenshots), one block per industry with a coloured dot, three points in
+  that colour, a pill button and the screen framed in the colour, a "system it
+  runs in" block, a centred close.
+- Mockup 2, Symphony by Wix cloned: floating pill nav, serif-then-heavy hero
+  with the big dark button and lime chip beside the lilac orbit panel, brace
+  eyebrows, the tile marquee around a phone, the grey split with the labelled
+  orbit, the two-tone panel with notification cards, three grey columns, the
+  giant sans-and-serif heading, the dark team orbit with the four employees
+  named, the numbered steps with the audit as a chat frame.
+- Mockup 3, both composed as one page: Wix's nav, hero, chip button (house
+  green) and team orbit on near-black; SymphonyAI's card strip, stat bento and
+  four industry blocks on black; Wix's numbered steps; the giant heading as the
+  close on black.
+
+Stand-ins to note: the SymphonyAI hero object is CSS, not a 3D render; the
+references' photos of people are replaced by colour or product screens until
+there are photos; the notification cards, phone and chat frames carry made-up
+example states, none of them client results.
+
 Will's pick: (pending)
 Tweaks: (pending)
 Applied commit: (pending)
