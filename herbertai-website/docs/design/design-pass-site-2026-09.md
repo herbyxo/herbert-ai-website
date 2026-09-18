@@ -194,10 +194,31 @@ references' photos of people are replaced by colour or product screens until
 there are photos; the notification cards, phone and chat frames carry made-up
 example states, none of them client results.
 
+Will, 18 Sep 2026, on the clones: "i think we disregard these, and restart from
+the very start in the site rebuild, these dont look too great either. im
+wondering how my loop started, initially you get references similar to the
+vertical, and then i choose and we go from there? what did i do with rob".
+
+Restart. What went wrong, for the record: the 16 Sep scout was heroes only
+and never got a reaction; the two references Will then named were answered
+with palette boards and then with static CSS mockups of the existing page
+structure, and those sites look the way they do because of 3D renders, video,
+photography and motion, none of which a static board can carry. The loop as
+written says: scout, gut pick, dissect, clone in the real app, steer section
+by section with the picked site as the bar. Whole-app decisions after the
+pick, never before it.
+
+## [~] Restart: scout, round two (18 Sep 2026)
+
+Seven AI-for-business sites, full pages captured at 1440 (scratchpad
+`scout2/`, sheet `design-pass-site-2026-09-18-scout2.png`): SymphonyAI and
+Symphony by Wix (Will's two, kept), Sierra, Lindy, Relevance AI, Fin, Harvey
+(the stretch). Cookie banners dismissed with reject or close only, never
+accept. Will picks by gut; then the charter is rewritten from the pick and
+the hero is built for real on a preview branch, motion included, with the
+pick as the bar. The M1 site stays live meanwhile.
+
 Will's pick: (pending)
-Tweaks: (pending)
-Applied commit: (pending)
-Register rule: (pending)
 
 ## [ ] M4.2 Home, section by section
 ## [ ] M4.3 /pilot and /pricing
