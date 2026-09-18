@@ -218,7 +218,29 @@ accept. Will picks by gut; then the charter is rewritten from the pick and
 the hero is built for real on a preview branch, motion included, with the
 pick as the bar. The M1 site stays live meanwhile.
 
+Will, 18 Sep 2026, on the scout: "idk how i feel about any of these to be honest.
+idk how they would compare in the Herbert AI context ... maybe u can do mockups
+of what it would look like based off each of these?"
+
+### The lab (18 Sep 2026)
+
+Seven mockups built as real pages with the motion running, one per reference,
+on branch `preview/design-lab` under `/lab` (index) and `/lab/<slug>`:
+symphonyai, wix-symphony, sierra, lindy, relevance, fin, harvey. Each is the
+first screens of the Herbert AI homepage composed the way that reference
+composes its own. Not indexed, not in the nav or sitemap, header and footer
+hidden, a strip along the bottom switches between the seven. A roman cut of
+Instrument Serif loads for the lab only (the site loads italic only). Verified
+on the dev server: lint and build clean, console clean, no horizontal overflow
+at 375 on any of the seven. Known stand-ins: Sierra's hero needs real footage
+of a person or an office and has a labelled blur instead; the knot and the
+rails are drawn, where the references use 3D renders; figures in the Relevance
+mock are sample data and say so. Headlines vary to fit each reference's
+mechanic; the locked manifesto returns once a direction is picked. Delete
+`/lab` and `components/lab` after the pick.
+
 Will's pick: (pending)
+
 
 ## [ ] M4.2 Home, section by section
 ## [ ] M4.3 /pilot and /pricing
