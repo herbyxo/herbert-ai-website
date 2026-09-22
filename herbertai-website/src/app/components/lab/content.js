@@ -13,6 +13,7 @@ export const REFS = [
   { slug: 'harvey', name: 'Harvey', url: 'harvey.ai' },
   { slug: 'concept-now-hiring', name: 'Concept: Now hiring', url: 'from Herbert AI, not a reference' },
   { slug: 'concept-runs-itself', name: 'Concept: Runs itself', url: 'from Herbert AI, not a reference' },
+  { slug: 'runs-itself-hero', name: 'Runs itself: hero options', url: 'A, B and C, scroll down' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'

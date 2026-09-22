@@ -1,156 +1,119 @@
-# Herbert AI — Design Charter
+# Herbert AI: Design Charter
 
-Locked: 2026-05-27. This is the source of truth for visual direction. Component code follows this; this does not follow component code.
+Rewritten 22 Sep 2026 around the concept **"Runs itself"**, which Will picked from
+two concepts drawn as live pages ("i think the runs itself"). It replaces the
+May 2026 charter (art-directed studio: cream, ink, a neon green flood, Bricolage
+Grotesque display). The live site still renders the May register until the
+rebuild ships section by section; that charter's text is in git history at
+commit `7056612` and summarised under History below.
 
----
-
-## Audience brief
-
-- **Who:** Upmarket SMB owners and ops/marketing leads — 5–30-staff companies, already automation-aware, evaluating studios not freelancers.
-- **Emotional state:** Skeptical-curious. They've been burned by agencies who oversold. They scan for craft cues before reading copy.
-- **What *they* recognise as "designed":** Vercel, Linear, Resn, Locomotive, Active Theory portfolios, art-directed agency sites. They expect motion, scale, and confident typography. A plain trust-template reads as "freelancer" to them.
-- **Competitive whitespace:** Australian SMB automation studios mostly look like template-generic (TopGrowth, Ratchet, MoonAgency) or pure-tradie utilitarian. Almost no one in this category executes godly-tier craft. That gap is ours to take.
-
----
-
-## Register chosen
-
-**Art-directed studio** — godly.website territory, executed for an SMB operator audience.
-
-DNA:
-- Oversized typography as the hero (display sizes ≥160px desktop)
-- Scroll-driven storytelling for the "how it works" sequence — motion serves comprehension
-- Scroll-reactive elements as craft cues (the custom magnetic cursor was removed 15 Sep 2026, see Signature interactions)
-- Asymmetric, broken grids; content can bleed past container edges
-- Cream + ink palette retained; neon green amplified as a signature flood, not just an accent
-
-**Why this register fits:**
-- The audience recognises art-direction as "operator-grade craft." Editorial-flourish alone doesn't read that way to them.
-- Differentiates Herbert AI from every other Australian SMB-services site in the category.
-- Provides a moat: most competitors won't execute this well, won't try.
-
-**Why NOT another register:**
-- Warm trade / SMB — that's what we're leaving (mismatch with "studio" positioning).
-- Sharp-tech / developer-dark — wrong signal; we serve operators, not developers.
-- Pure editorial — too close to HQ (distinctness fail).
-- Soft wellness / playful — wrong tonal range for B2B automation.
+How it was reached: `docs/design/design-pass-site-2026-09.md`. The method is
+design-taste's `loop/concept.md`.
 
 ---
 
-## Type system
+## The concept
 
-**Locked fonts (next/font/google):**
+Herbert AI builds software that does one job in an office every day without
+anyone having to remember to. So the site shows that happening instead of
+describing it. The running system is the page.
 
-| Role | Family | Weights | Notes |
-|---|---|---|---|
-| Display (hero, section H1) | **Bricolage Grotesque** | 700, 800 (variable) | Free on Google Fonts, designed for display use with optical sizing, characterful at 280px. NEW addition. (Initially specced Inter Display but it's not a standalone Google Fonts family.) |
-| Body / UI sans | Geist | 300, 400, 500, 600 | Keep — already in use. |
-| Mono / numeric / labels | Geist Mono | 400, 500 | Keep. Used for eyebrows, stat labels, tabular figures. |
-| Italic emphasis | Instrument Serif | 400 italic | Keep, but use SPARINGLY — once per page max. The art-direction register leans on weight + scale, not italic flourish. |
+The truths it rests on, all literally true: one AI employee per job; a person
+on the client's team approving what goes out; live in 14 days or free; the
+client owns what gets built; real systems a visitor can open (a live property
+dashboard, a demo that plays itself); one person in Adelaide who builds it and
+answers when something needs a human.
 
-**Drop:** Inter Tight — currently loaded but unused.
+The test it passes: every page can be described from the concept alone.
 
-**Scale:**
-
-```
-display-xl   clamp(96px, 14vw, 280px)   — hero only, line-height 0.88, tracking -0.04em
-display-lg   clamp(64px, 8vw, 160px)    — section openers
-display-md   clamp(40px, 5vw, 96px)     — sub-heroes
-h1           clamp(36px, 4.5vw, 64px)
-h2           clamp(28px, 3vw, 44px)
-h3           20–24px
-body         16–17px / line-height 1.55
-small        13–14px
-mono-label   10–11px / tracking 0.18em / uppercase
-```
-
-**Tracking discipline:** display sizes go negative (-0.04em to -0.05em). Body stays at 0. Mono labels expand (+0.18em).
-
-**No mixed-typeface emphasis.** Don't gradient text. Don't colour individual words for emphasis — let size/weight/position do the work. Italic-serif is reserved for ONE moment per page if used at all.
+| Page | What the concept makes it |
+|---|---|
+| Home | An example office's board, jobs finishing while you read, the manifesto beside it |
+| Industries | One board per kind of office, running that industry's jobs |
+| Pricing | The ladder as steps that light in order: audit, first employee, keeping it running, the whole office, care |
+| The systems | The instruments: the live dashboard and the demos, shown running |
+| The audit (`/pilot`) | The first job on the board: booked, done, page sent |
+| About | Who keeps it running: one person, the one who answers when a light goes amber |
 
 ---
 
-## Palette
+## The signature device: the board
 
-| Token | Hex | Role |
-|---|---|---|
-| `--color-cream` | `#F5F0E5` | Default page canvas (warm, distinctive). |
-| `--color-cream-alt` | `#EFE9DC` | Alternating section banding (use sparingly). |
-| `--color-ink` | `#0A0A0A` | Primary text + dark hero/CTA panels. |
-| `--color-ink-soft` | `#1A1A1A` | Secondary dark surfaces. |
-| `--color-muted` | `#6B6660` | Secondary text. |
-| `--color-line` | `#E2DBCB` | Hairline rules ONLY where space-separation isn't enough. |
-| `--color-green` | `#00FF88` | Signature accent: interactive states, hero accent flood. |
-| `--color-green-deep` | `#00D924` | On-cream usage of green (contrast). |
+A list of jobs completing: a time, which AI employee, what it did in the
+office's own words, and its state. Every page carries a version of it, sized to
+the page. It is never decoration: each row is something the software really
+does for that kind of office, with example data labelled as such.
 
-**Accent discipline (the rule from the skill):** green has ONE semantic role — interactive + signature. It does NOT colour for typographic emphasis (use weight). It does NOT tint backgrounds as decoration. The exception is the deliberate **green-flood moment** — exactly ONE section per page where green is the entire background. Used like a director uses a colour cue, not as decoration.
+## Colour means state, and nothing else
 
----
+| State | Meaning |
+|---|---|
+| Green | Done |
+| Amber | Waiting on a person (an approval, a reply) |
+| Grey | Queued |
 
-## Layout & spacing
+Everything else is ink on a ground. No colour for emphasis, no decorative
+tints, no gradients, no brand accent that means nothing. The exact values, and
+whether the May green survives as the "done" colour, are settled in the hero
+round.
 
-- **Container:** `max-w-[1280px]` retained. Content can bleed past container edges deliberately (oversized type, full-bleed photography sections).
-- **Section spacing:** 160–240px vertical (UP from current 96–128px). Art-direction needs more air.
-- **Hero:** ≥ 100vh, left-aligned asymmetric, type dominates ≥ 60% of the visible area at first paint.
-- **Grid:** 12-col implicit, but broken deliberately — overlapping elements, asymmetric splits (7/5, 8/4, never 6/6).
-- **Borders:** none by default. Hairline rules only where space-separation visibly fails the greyscale test.
-- **No card-everywhere.** Content sits on the page surface; cards reserved for genuinely discrete objects (a pricing tier, a service, a case study).
+## Motion means a job finishing, and nothing else
 
----
+Rows arrive, amber turns green when a person approves, counts go up. No reveal
+animations for their own sake, no parallax, no ambient loops, no custom cursor
+(removed 15 Sep 2026). With `prefers-reduced-motion` the board renders its
+finished state at once.
 
-## Border-radius scale
+## Nothing is claimed, things happen
 
-| Token | Value | Where |
-|---|---|---|
-| `rounded-full` | 9999px | CTAs (pills retained — signature shape). |
-| `rounded-3xl` | 24px | Pricing cards, service cards (reduced from 32px). |
-| `rounded-2xl` | 16px | Inline widgets (audio player, badges). |
-| `rounded-none` | 0px | Full-bleed sections, dark hero panels (sharper than current). |
+Copy says what the employee does, in the office's words ("Chased 6 clients for
+missing payslips"), not what Herbert AI is ("smart", "powerful"). Every figure
+on a board is an example office and says so. No client names and no results
+figures in public copy. The employee takes the job, never replaces the person.
 
-**Direction shift:** away from rounded-everywhere toward sharper deliberate edges, except CTAs (which stay pills).
+## Pictures are the instruments
 
----
+The real software: the property dashboard, the demos, a pilot's own screens.
+No stock photography, no illustration, no 3D objects. A founder photo on About
+only.
 
-## Signature interactions
+## Kept from before
 
-**Originally two locked; the first was removed 15 Sep 2026:**
+- The manifesto, locked:
 
-1. **Magnetic cursor: REMOVED 15 Sep 2026.** Will: "get rid of the bubble cursor and just have the normal cursor", across the whole site. The system cursor is back everywhere; do not reintroduce a custom cursor.
+  ```
+  Less admin.
+  More money.
+  Built to run itself.
+  ```
 
-2. **Scroll-revealed workflow on "How It Works" — agent → transcribe → AroFlo → SMS chain builds itself as the user scrolls.**
-   *Reason: lets the visitor SEE the product working without screenshots; motion IS the explanation.*
+  "Built to run itself" is where the concept came from. Sub-line: "Custom
+  software and AI for small businesses, built in Adelaide."
+- One action per organic page: the free AI audit (`/pilot#book`).
+- The normal system cursor.
 
-Everything else is hygiene (smooth fade-in on viewport entry, hover lifts, transition timing). No additional motion ornaments. Specifically NOT adding: Spline 3D, Lottie illustrations, scroll-jacked horizontal sections, video loops in the hero.
+## Open, settled in the section pass
 
----
+- Typeface: Geist throughout, Bricolage kept for display, or a mono for the board.
+- Ground: light paper or dark.
+- The board's form: a product window, a departures board, or an andon board.
 
-## Three concrete anti-references
+All three are put to Will as the hero round. This file gets the answers as they
+land.
 
-The site must NOT look like:
+## Anti-references
 
-1. **HQ (`hq.herbert-aisolutions.com`)** — Will's editorial-italic-cream project. Distinctness fail if we land in the same register.
-2. **Linear marketing (`linear.app`)** — sharp-tech / developer-dark. We're not selling to engineers.
-3. **Calendly / ServiceTitan / Square for Business** — generic-SMB trust-template. Exactly the register we're leaving.
+- A copy of any single reference site. Will, 18 Sep 2026: "its just a copy of
+  these sites. nothings original".
+- Generic AI marketing: purple gradients, glowing orbs, sparkles, fake analytics
+  charts, a robot.
+- HQ (`hq.herbert-aisolutions.com`), Will's editorial-cream command centre.
+- SMB template sites (Calendly, ServiceTitan, Square for Business).
 
-If a design decision moves us toward any of these three, the decision is wrong.
+## History
 
----
-
-## Stack additions
-
-- **Framer Motion**: for scroll-driven sequences and page transitions. Required.
-- **Lenis** (`@studio-freight/lenis`) — smooth scroll. Required for art-direction-grade scroll feel. ~3kb.
-- No GSAP (Framer Motion handles what we need; GSAP licence cost not worth it).
-- No Lottie. No Spline. No Three.js.
-- Keep `next/font` for all faces. No external CDN font loads.
-
----
-
-## Ship checklist hooks
-
-Every PR that touches design must pass:
-- Greyscale test (desaturate mentally — hierarchy still reads).
-- Anti-AI-slop checklist (`C:\Files\Claude\notes\anti-ai-slop-patterns-2026-05-23.md`).
-- Distinctness check vs the three anti-references above.
-- `prefers-reduced-motion` honoured for every animation added.
-- Lighthouse perf ≥ 90 on mobile (motion library tax is real — budget for it).
+May 2026 to September 2026: the art-directed studio register. Cream `#F5F0E5`,
+ink `#0A0A0A`, neon green `#00FF88` with one green-flood section per page,
+Bricolage Grotesque display with Geist and Geist Mono, oversized type,
+scroll-revealed chapters, a magnetic cursor (removed 15 Sep 2026). Will, 16 Sep
+2026: "i dont like the pages in terms of colour and structure".

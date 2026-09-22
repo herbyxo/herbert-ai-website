@@ -10,6 +10,7 @@ import Fin from '../../components/lab/Fin'
 import Harvey from '../../components/lab/Harvey'
 import NowHiring from '../../components/lab/NowHiring'
 import RunsItself from '../../components/lab/RunsItself'
+import RunsItselfHero from '../../components/lab/RunsItselfHero'
 
 const MAP = {
   symphonyai: SymphonyAI,
@@ -21,6 +22,7 @@ const MAP = {
   harvey: Harvey,
   'concept-now-hiring': NowHiring,
   'concept-runs-itself': RunsItself,
+  'runs-itself-hero': RunsItselfHero,
 }
 
 export function generateStaticParams() {

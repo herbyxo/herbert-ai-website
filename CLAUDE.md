@@ -15,6 +15,8 @@ Herbert AI is **custom software and AI for small businesses**, built in Adelaide
 
 The full art-directed homepage rebuild is **done, merged to `main`, and live** at herbert-aisolutions.com. The site moved off the warm-trade register (white/gray-50/black CTA) onto an art-directed studio register: cream + ink + neon green, Bricolage Grotesque display + Geist, Lenis smooth scroll, scroll-storytelling chapters. The custom magnetic cursor was removed site-wide on 15 Sep 2026 at Will's request; the normal system cursor is used everywhere.
 
+**Rebuild under way (22 Sep 2026).** `docs/design/CHARTER.md` was rewritten around the concept "Runs itself": the site shows the running system, colour means only state, motion means only a job finishing. The live pages still render the May register described in this section until each section of the rebuild ships; build new sections to the new charter, not to this section. Ledger: `herbertai-website/docs/design/design-pass-site-2026-09.md`.
+
 **Source of truth for any visual change — read before touching anything visual:**
 1. `herbertai-website/docs/design/CHARTER.md` — locked register, palette, type system, signature interactions, anti-references
 2. `herbertai-website/docs/design/PLAN.md` — original phase plan + asset list (historical; build is complete)

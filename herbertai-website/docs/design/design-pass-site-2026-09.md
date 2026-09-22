@@ -270,7 +270,31 @@ and a strip showing how industries, pricing, the work and the audit or about
 page follow from the idea. "Runs itself" keeps the locked manifesto as its
 headline; "Now hiring" changes the headline and would need Will's yes on that.
 
+Will's pick (22 Sep 2026): "i think the runs itself", and "add the concept step
+as well". Concept step added to design-taste as `loop/concept.md`; SKILL.md,
+master.md, scout.md and anti-patterns.md changed to match (claude-skills
+04b2aa3). CHARTER.md rewritten around the concept. Now hiring stays in the lab
+as a record; its position card may come back as a device on the industry pages.
+
+## [~] M4.2 Home: the hero (options 22 Sep 2026)
+
+Three hero options for "Runs itself", each also carrying one of the open
+whole-site decisions (typeface, ground, the board's form), so one pick settles
+the hero and those three. Each takes its board from a different object outside
+the category, per the concept step. Live at `/lab/runs-itself-hero`, stacked,
+each starting when it scrolls into view.
+
+- A. The product window: light paper, Geist throughout, the board as a clean
+  software window beside the manifesto. What the concept page showed.
+- B. The departures board: light paper, Geist headline, the board as an airport
+  split-flap board in Geist Mono, full width under the manifesto, letters
+  flipping as each job lands.
+- C. The andon board: dark ground, Bricolage display kept from the May site,
+  three big lamps with counts (done, waiting on a person, queued) like a
+  factory floor andon board, a ticker of the latest job beneath.
+
 Will's pick: (pending)
+
 
 
 
