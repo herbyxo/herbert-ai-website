@@ -239,7 +239,39 @@ mock are sample data and say so. Headlines vary to fit each reference's
 mechanic; the locked manifesto returns once a direction is picked. Delete
 `/lab` and `components/lab` after the pick.
 
+Will, 18 Sep 2026, on the lab: "the thing with these demos is its just a copy of
+these sites. nothings original ... what are the steps for original design,
+there has to be some sort of basis at the start right?"
+
+### The missing step: a concept (18 to 22 Sep 2026)
+
+The loop went positioning, scout, pick, clone. It has no step where an idea
+about the business is decided before any reference is looked at, which is
+why every round came back as someone else's site with Herbert's words in it.
+Steps for original work, as put to Will: a truth inventory (what is literally
+true and specific: one person in Adelaide, the job everyone hates, a written
+page in their own numbers, one AI employee with a person approving, live in
+14 days or free, they own it, real systems to click); one concept sentence
+that dramatises one truth, tested by whether the pricing page can be
+described from it alone; a design language derived from the concept (one
+signature device, what colour means, what motion means, what pictures are
+of); references last, per layer, from outside the category; then the section
+loop. To be added to design-taste as the step before the scout.
+
+Three territories offered: "Now hiring" (the site as an employer's positions
+board turned around), "The written page" (the audit report as the motif),
+"Runs itself" (the site is the running system). Recommended "Now hiring".
+
+Will, 22 Sep: "what does runs itself vs now hiring look like". Built as real
+pages in the lab, `/lab/concept-now-hiring` and `/lab/concept-runs-itself`,
+each with its device running (the position description filling itself in and
+a stamp landing; the board of jobs completing with colour meaning only state)
+and a strip showing how industries, pricing, the work and the audit or about
+page follow from the idea. "Runs itself" keeps the locked manifesto as its
+headline; "Now hiring" changes the headline and would need Will's yes on that.
+
 Will's pick: (pending)
+
 
 
 ## [ ] M4.2 Home, section by section

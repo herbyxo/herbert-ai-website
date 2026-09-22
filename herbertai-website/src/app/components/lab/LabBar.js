@@ -11,7 +11,7 @@ export default function LabBar({ current }) {
       style={{ fontFamily: SANS }}
     >
       <div className="flex items-center gap-4 px-4 py-2 overflow-x-auto text-[12px] whitespace-nowrap">
-        <span className="opacity-60">Herbert AI, composed like {ref ? ref.name : 'the references'}{ref ? ` (${ref.url})` : ''}</span>
+        <span className="opacity-60">{ref && ref.slug.startsWith('concept') ? `${ref.name}, ${ref.url}` : `Herbert AI, composed like ${ref ? ref.name : 'the references'}${ref ? ` (${ref.url})` : ''}`}</span>
         <span className="opacity-30">|</span>
         {REFS.map((r, i) => (
           <Link

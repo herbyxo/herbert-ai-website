@@ -8,6 +8,8 @@ import Lindy from '../../components/lab/Lindy'
 import Relevance from '../../components/lab/Relevance'
 import Fin from '../../components/lab/Fin'
 import Harvey from '../../components/lab/Harvey'
+import NowHiring from '../../components/lab/NowHiring'
+import RunsItself from '../../components/lab/RunsItself'
 
 const MAP = {
   symphonyai: SymphonyAI,
@@ -17,6 +19,8 @@ const MAP = {
   relevance: Relevance,
   fin: Fin,
   harvey: Harvey,
+  'concept-now-hiring': NowHiring,
+  'concept-runs-itself': RunsItself,
 }
 
 export function generateStaticParams() {
