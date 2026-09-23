@@ -57,6 +57,58 @@ export const INDUSTRIES = {
     example: 'Say {firm} has 150 clients and half of them need two reminders. That is 150 chase emails a season that nobody writes.',
     bottleneck: 'document chasing',
   },
+  brokers: {
+    label: 'Mortgage and finance brokers',
+    startDate: '2026-08-03',
+    hero: {
+      h1: 'Loan documents and lender conditions, chased for you.',
+      sub: 'Every client gets their own checklist for the application, the reminders go out on their own, and when the lender asks for one more thing the client is asked straight away.',
+    },
+    appTitle: 'Applications',
+    appPeriod: 'August',
+    docs: ['Last two payslips', 'Three months of bank statements', 'Photo ID', 'Contract of sale', 'Savings history'],
+    clients: [
+      { name: 'Ben and Sophie Carter, home loan', total: 5, status: [
+        { day: 0, received: 0, label: 'Request sent', tone: 'idle' },
+        { day: 2, received: 5, label: 'Ready to submit', tone: 'done' },
+      ] },
+      { name: 'Daniel and Mia Okafor, purchase', total: 5, focus: true, status: [
+        { day: 0, received: 0, label: 'Request sent', tone: 'idle' },
+        { day: 2, received: 0, label: 'Reminder sent', tone: 'wait' },
+        { day: 3, received: 4, label: '1 still needed', tone: 'wait' },
+        { day: 5, received: 5, label: 'With the lender', tone: 'wait' },
+        { day: 8, received: 5, label: 'Lender needs a payslip', tone: 'wait' },
+        { day: 9, received: 5, label: 'Condition cleared', tone: 'done' },
+      ] },
+      { name: 'Raj Patel, refinance', total: 4, status: [
+        { day: 1, received: 0, label: 'Request sent', tone: 'idle' },
+        { day: 4, received: 1, label: 'Reminder sent', tone: 'wait' },
+        { day: 8, received: 1, label: 'Reminder sent', tone: 'wait' },
+      ] },
+      { name: 'Chloe Martin, first home', total: 5, status: [
+        { day: 2, received: 0, label: 'Request sent', tone: 'idle' },
+        { day: 6, received: 5, label: 'Ready to submit', tone: 'done' },
+      ] },
+    ],
+    // received: which docs (by index) are in at the time of the event
+    timeline: [
+      { day: 0, kind: 'sent', title: 'Document request sent', detail: 'Their own checklist of five documents and one upload link', received: [],
+        email: { subject: 'Documents for your home loan application', intro: 'Hi Daniel and Mia, thanks for asking us to arrange your home loan. Here is everything the lender will need. Upload them with the link below, whenever suits.' } },
+      { day: 2, kind: 'sent', title: 'Reminder sent', detail: 'Nothing had come in yet', received: [],
+        email: { subject: 'Reminder: documents for your home loan', intro: 'Hi Daniel and Mia, just a reminder that we still need your documents to put the application together. It only takes a few minutes with the link below.' } },
+      { day: 3, kind: 'reply', title: 'Mia uploaded 4 files', detail: 'Matched to payslips, bank statements, ID and savings history', received: [0, 1, 2, 4] },
+      { day: 4, kind: 'sent', title: 'Asked for the contract of sale', detail: 'Only asks for what is still missing', received: [0, 1, 2, 4],
+        email: { subject: 'One document still needed for your home loan', intro: 'Hi Daniel and Mia, thanks for sending those through. We just need the contract of sale to finish the application.' } },
+      { day: 5, kind: 'reply', title: 'Contract of sale arrived', detail: 'File complete, application sent to the lender', received: [0, 1, 2, 3, 4] },
+      { day: 8, kind: 'reply', title: 'Lender asked for a newer payslip', detail: 'A condition before approval, logged against the file', received: [0, 1, 2, 3, 4] },
+      { day: 8, kind: 'sent', title: 'Daniel asked for his latest payslip', detail: 'Sent the moment the condition came in', received: [0, 1, 2, 3, 4],
+        email: { checklist: false, subject: 'One more thing the lender needs', intro: 'Hi Daniel, the lender has asked for your most recent payslip before they approve the loan. Upload it with the link below and we will send it straight on.', cta: 'Upload payslip' } },
+      { day: 9, kind: 'reply', title: 'Payslip arrived, sent to the lender', detail: 'Condition cleared, nobody rang anyone', received: [0, 1, 2, 3, 4] },
+      { day: 9, kind: 'done', title: 'File back with the lender', detail: 'Your broker gets one notification, no chasing done by anyone', received: [0, 1, 2, 3, 4] },
+    ],
+    example: 'Say {firm} writes 12 loans a month and each one needs two reminders and one lender condition chased. That is 36 chases a month that nobody writes.',
+    bottleneck: 'document chasing',
+  },
   'allied-health': {
     label: 'Allied health',
     startDate: '2026-08-03',
