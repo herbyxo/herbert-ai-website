@@ -252,7 +252,7 @@ export const INDUSTRIES = {
     appTitle: 'Quote requests',
     appPeriod: 'October',
     clients: [
-      { name: 'Lena Park, ducted, four bedrooms', sub: 'Measure booked', status: [
+      { name: 'Lena Park, ducted, four bedrooms', sub: 'Asked on Sunday night', status: [
         { day: 0, label: 'Replied in 1 minute', tone: 'wait' },
         { day: 1, label: 'Measure booked', tone: 'wait' },
         { day: 4, label: 'Quote sent', tone: 'wait' },
@@ -268,7 +268,7 @@ export const INDUSTRIES = {
         { day: 4, label: 'Asked about finance', tone: 'wait' },
         { day: 5, label: 'Accepted', tone: 'done' },
       ] },
-      { name: 'Hills Physio, office split system', sub: 'Measure booked', status: [
+      { name: 'Hills Physio, office split system', sub: 'Commercial job', status: [
         { day: 2, label: 'Replied in 1 minute', tone: 'wait' },
         { day: 3, label: 'Measure booked', tone: 'wait' },
       ] },
@@ -289,6 +289,6 @@ export const INDUSTRIES = {
       { day: 6, kind: 'done', title: 'Job handed to your office', detail: 'Your office confirms the install, nobody chased anyone' },
     ],
     example: 'Say {firm} gets 60 quote requests a month over summer and most are answered the next morning. The homeowner who hears back within a minute is usually the one whose measure and quote gets booked first.',
-    bottleneck: 'quote requests',
+    bottleneck: 'quote handling',
   },
 }
