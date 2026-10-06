@@ -28,9 +28,9 @@ async def capture():
             await ctx.close(); print("captured", name, "| weight, spacing, loaded faces:", info)
         await b.close()
 OPTS = [
-  ("1", "Semibold, slightly looser", "Geist 600 at -0.04em. Still strong, a touch calmer, closer to the weight of the board’s own labels.", "weight-1"),
+  ("1", "Semibold, slightly looser", "Geist 600 at -0.04em. Still strong, a touch calmer, closer to the weight of the board’s own labels, so the board reads as the subject. Recommended.", "weight-1"),
   ("2", "Medium, open", "Geist 500 at -0.03em. How product companies set big headlines now: the quietest, lets the board carry the page.", "weight-2"),
-  ("3", "Extra bold, tighter", "Geist 800 at -0.05em. The heaviest, closest to the punch of the old site’s headline. Needs one more font weight loaded.", "weight-3"),
+  ("3", "Extra bold, tighter", "Geist 800 at -0.05em. The heaviest, closest to the punch of the old site’s headline. The wider letters push “More money.” onto two lines at this width, and it needs one more font weight loaded.", "weight-3"),
 ]
 def sheet():
     rows = "".join(f'<section><div class="lab"><b>{n}. {t}</b><span>{d}</span></div><div class="imgs"><img class="zoom" src="assets-2026-10-06/headline-{v}-zoom.png"><img class="full" src="assets-2026-10-06/headline-{v}-full.png"></div></section>' for n, t, d, v in OPTS)
