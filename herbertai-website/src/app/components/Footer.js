@@ -57,7 +57,7 @@ export default function Footer() {
                 className="font-display text-ink leading-[0.9] tracking-[-0.03em] font-bold"
                 style={{ fontSize: '32px' }}
               >
-                herbert ai
+                Herbert AI
               </span>
               <span
                 className="rounded-full bg-green shrink-0"

@@ -381,7 +381,16 @@ there. and why is done on the right and the approved are to the left?"
   lines, which strengthens the bigger-board tweak. The size board was redrawn
   with the fix.
 
-Picks: board size (pending)
+Picks (6 Oct 2026), Will: "1, and yes make the footer Herbert AI too". Board size
+option 1, wider: the board takes about 60 percent, the headline at
+clamp(48px, 5vw, 72px), board rows at 15px. Building it found one more thing:
+at 1024 wide the board's fixed columns squeezed each job to three or four lines,
+so the side-by-side layout starts at 1280 (xl) and narrower screens stack the
+headline above a full-width board. Checked at 1440, 1280, 1024, 768 and 375: no
+horizontal overflow, statuses aligned, no console errors. Footer wordmark is
+now "Herbert AI" (its green dot stays until the logo-mark detail).
+
+Next: the hero detail pass, starting with the logo mark.
 
 
 

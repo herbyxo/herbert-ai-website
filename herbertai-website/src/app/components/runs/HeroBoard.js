@@ -47,7 +47,7 @@ export default function HeroBoard() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
-              className="grid grid-cols-[48px_1fr] md:grid-cols-[52px_168px_minmax(0,1fr)_164px] items-center gap-x-3 gap-y-1 px-3 py-3 border-b border-[#111]/8 last:border-0 text-[14px]"
+              className="grid grid-cols-[48px_1fr] md:grid-cols-[52px_168px_minmax(0,1fr)_164px] items-center gap-x-3 gap-y-1 px-3 py-3 border-b border-[#111]/8 last:border-0 text-[15px]"
             >
               <span className="text-[12px] text-[#777] tabular-nums font-mono">{r.t}</span>
               <span className="font-medium">{r.who}</span>

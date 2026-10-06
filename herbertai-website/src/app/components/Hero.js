@@ -4,15 +4,16 @@ import HeroBoard from './runs/HeroBoard'
 // Homepage hero, rebuilt 6 Oct 2026 for the "Runs itself" concept
 // (docs/design/CHARTER.md): the locked manifesto beside the product itself, an
 // example office's board with its jobs finishing. Picked in the design pass as
-// option A, the product window (docs/design/design-pass-site-2026-09.md).
+// option A, the product window, then board size option 1, wider (6 Oct 2026)
+// (docs/design/design-pass-site-2026-09.md).
 // The May 2026 hero (green-flood wipe, Bricolage display) is in git history.
 
 export default function Hero() {
   return (
     <section className="bg-[#FAFAF8] text-[#111]">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 pb-20 md:pb-28 grid md:grid-cols-[0.9fr_1.1fr] gap-12 items-end">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 pb-20 md:pb-28 grid xl:grid-cols-[0.72fr_1.28fr] gap-12 items-end">
         <div>
-          <h1 className="font-bold tracking-[-0.045em] leading-[0.95]" style={{ fontSize: 'clamp(52px, 6.6vw, 96px)' }}>
+          <h1 className="font-bold tracking-[-0.045em] leading-[0.95]" style={{ fontSize: 'clamp(48px, 5vw, 72px)' }}>
             Less admin.
             <br />
             More money.
