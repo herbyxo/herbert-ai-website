@@ -38,7 +38,7 @@ export default function Header() {
             </text>
             <circle cx="24.5" cy="8.5" r="2.4" fill="#00FF88" />
           </svg>
-          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">herbert ai</span>
+          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">Herbert AI</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink">
@@ -147,7 +147,7 @@ function MobileOverlay({ onClose }) {
             </text>
             <circle cx="24.5" cy="8.5" r="2.4" fill="#00FF88" />
           </svg>
-          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">herbert ai</span>
+          <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">Herbert AI</span>
         </Link>
         <button onClick={onClose} className="text-ink" aria-label="Close menu">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
