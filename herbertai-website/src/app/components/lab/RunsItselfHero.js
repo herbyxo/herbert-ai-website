@@ -1,5 +1,5 @@
 'use client'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SANS, MONO } from './content'
 import { STATE, useBoard, useInView, useFlap } from './board'
@@ -10,11 +10,28 @@ import { STATE, useBoard, useInView, useFlap } from './board'
 
 const DISPLAY = 'var(--font-bricolage), -apple-system, sans-serif'
 
-function Label({ letter, name, note }) {
+function Label({ letter, name, note, onReplay }) {
   return (
-    <div className="bg-[#1b1b1b] text-white px-6 py-3 flex flex-wrap items-baseline gap-x-4 gap-y-1" style={{ fontFamily: SANS }}>
+    <div className="sticky top-0 z-40 bg-[#1b1b1b] text-white px-6 py-3 flex flex-wrap items-center gap-x-4 gap-y-2" style={{ fontFamily: SANS }}>
       <b className="text-[15px]">{letter}. {name}</b>
-      <span className="text-[13px] text-white/60">{note}</span>
+      <span className="text-[13px] text-white/60 flex-1 min-w-[200px]">{note}</span>
+      <button onClick={onReplay} className="rounded-full border border-white/30 px-4 py-1.5 text-[13px] hover:bg-white hover:text-[#1b1b1b] transition-colors">Run again</button>
+    </div>
+  )
+}
+
+// Remounting the option restarts its board from an empty day.
+function Slot({ letter, name, note, Option }) {
+  const [run, setRun] = useState(0)
+  const wrap = useRef(null)
+  const replay = () => {
+    wrap.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    setRun((r) => r + 1)
+  }
+  return (
+    <div ref={wrap}>
+      <Label letter={letter} name={name} note={note} onReplay={replay} />
+      <Option key={run} />
     </div>
   )
 }
@@ -203,12 +220,9 @@ function OptionC() {
 export default function RunsItselfHero() {
   return (
     <main className="pb-12 bg-[#1b1b1b]">
-      <Label letter="A" name="The product window" note="Light paper, Geist throughout, the board as a software window. Reference: the software itself." />
-      <OptionA />
-      <Label letter="B" name="The departures board" note="Light paper, Geist headline, the board in split-flap cells, Geist Mono. Reference: an airport departures board." />
-      <OptionB />
-      <Label letter="C" name="The andon board" note="Dark ground, Bricolage display kept, three lamps with counts. Reference: a factory floor andon board." />
-      <OptionC />
+      <Slot letter="A" name="The product window" note="Light paper, Geist throughout, the board as a software window. Reference: the software itself." Option={OptionA} />
+      <Slot letter="B" name="The departures board" note="Light paper, Geist headline, the board in split-flap cells, Geist Mono. Reference: an airport departures board." Option={OptionB} />
+      <Slot letter="C" name="The andon board" note="Dark ground, Bricolage display kept, three lamps with counts. Reference: a factory floor andon board." Option={OptionC} />
     </main>
   )
 }
