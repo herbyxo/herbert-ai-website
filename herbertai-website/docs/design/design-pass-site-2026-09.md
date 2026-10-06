@@ -363,7 +363,25 @@ detail at a time, three options each:
 8. Header: nav size and weight, and the header button, which says "Free AI
    audit" with an arrow while the hero's says "Book a free AI audit".
 
-Picks: (pending)
+Will, 6 Oct 2026, on the boards: "what 'demo' ? is this not the demo right
+there. and why is done on the right and the approved are to the left?"
+
+- Demo link: dropped. The board is the demo; the `/demo/*` pages are a longer
+  version of the same made-up example (one firm's season with the emails), made
+  for Harry to send prospects, so a link from the board proves nothing the
+  board does not. The critic's "nothing proves it is real" gap is answered, if
+  at all, by the work section further down (the live property dashboard), in
+  its own round. Recorded as a rule candidate: on the homepage, the product
+  shown is the demo; do not link out to another example of it.
+- Status alignment: a real defect, fixed. Each board row is its own grid, so
+  an auto-width status column took each row's own text width and short "Done"
+  sat further right than long "Approved by Sarah, sent". The column is now a
+  fixed 164px and every status dot starts at the same x (measured: all seven at
+  1127px at 1440 wide). Cost: at today's board width the job text wraps to two
+  lines, which strengthens the bigger-board tweak. The size board was redrawn
+  with the fix.
+
+Picks: board size (pending)
 
 
 

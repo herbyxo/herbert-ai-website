@@ -37,6 +37,8 @@ export default function HeroBoard() {
         </span>
       </div>
       <div className="min-h-[392px] px-2 py-2">
+        {/* Each row is its own grid, so every column has a fixed width: an auto
+            column sizes per row and the statuses stop lining up. */}
         <AnimatePresence initial={false}>
           {b.shown.map((r) => (
             <motion.div
@@ -45,13 +47,13 @@ export default function HeroBoard() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
-              className="grid grid-cols-[48px_1fr] md:grid-cols-[52px_168px_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 px-3 py-3 border-b border-[#111]/8 last:border-0 text-[14px]"
+              className="grid grid-cols-[48px_1fr] md:grid-cols-[52px_168px_minmax(0,1fr)_164px] items-center gap-x-3 gap-y-1 px-3 py-3 border-b border-[#111]/8 last:border-0 text-[14px]"
             >
               <span className="text-[12px] text-[#777] tabular-nums font-mono">{r.t}</span>
               <span className="font-medium">{r.who}</span>
               <span className="col-start-2 md:col-start-auto leading-[1.35] text-[#333]">{r.what}</span>
               <span
-                className="col-start-2 md:col-start-auto flex items-center gap-2 text-[12px] leading-[1.3] md:max-w-[150px]"
+                className="col-start-2 md:col-start-auto flex items-center gap-2 text-[12px] leading-[1.3]"
                 style={{ color: r.state === 'done' ? '#0E8F53' : '#9A6300' }}
               >
                 <Lamp s={r.state} />
