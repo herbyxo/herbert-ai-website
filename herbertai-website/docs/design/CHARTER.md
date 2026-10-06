@@ -92,14 +92,20 @@ only.
 - One action per organic page: the free AI audit (`/pilot#book`).
 - The normal system cursor.
 
-## Open, settled in the section pass
+## Settled in the hero round (6 Oct 2026)
 
-- Typeface: Geist throughout, Bricolage kept for display, or a mono for the board.
-- Ground: light paper or dark.
-- The board's form: a product window, a departures board, or an andon board.
+Will picked the product window: "the whole point of it is to showcase the
+product". So:
 
-All three are put to Will as the hero round. This file gets the answers as they
-land.
+- **Typeface:** Geist throughout, weight and size doing the hierarchy; Geist
+  Mono only for times, counts and labels on a board. Bricolage retires with the
+  May register.
+- **Ground:** light paper `#FAFAF8`, ink `#111`, white for the software
+  surfaces. State colours as above (done `#12B76A`, waiting `#F5A623`, queued
+  `#BDBDBD`).
+- **The board's form:** the software itself, a clean product window. Never a
+  metaphor for the product (a departures board, an andon board) where the
+  product can be shown.
 
 ## Anti-references
 

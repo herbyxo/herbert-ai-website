@@ -24,7 +24,7 @@ The full art-directed homepage rebuild is **done, merged to `main`, and live** a
 **Current homepage structure** (`src/app/page.js`, restructured 16 Sep 2026): `Hero → HowItWorks → Proof → IndustriesStrip → FounderNote → FinalCTA`. The three bucket chapters (`components/chapters/*`) are retired from home and no longer imported; their capability content lives on `/services`. The one action on every organic page is the free AI audit (`/pilot#book`); `/start` is the secondary project-intake path. Shared ladder and industry content: `components/site/shared.js`. Plan and decisions: `herbertai-website/docs/restructure-2026-09/PROJECT.md`.
 
 **Key components:**
-- `components/Hero.js` — 3-line manifesto, green-flood wipe, founder note + question-prompt CTAs. Uses `useReducedMotion()` + `initial={false}` (do NOT revert — fixes a blank-hero bug under reduce-motion).
+- `components/Hero.js`: rebuilt 6 Oct 2026 on branch `preview/runs-itself` for the "Runs itself" charter: the locked manifesto in Geist beside `components/runs/HeroBoard.js`, an example office's jobs finishing (engine in `components/runs/board.js`). Until that branch merges, `main` still has the May hero (green-flood wipe, Bricolage).
 - `components/motion/`: `LenisProvider`, `RevealOnScroll`
 - `components/chapters/` — `GrowChapter` (barber "Forge Barber"), `AutomateChapter`, `BuildChapter` (pilates "Studio Twenty")
 - Hero display floor is `clamp(60px, 14vw, 280px)` — tuned for iPhone-X-and-up (375px+).

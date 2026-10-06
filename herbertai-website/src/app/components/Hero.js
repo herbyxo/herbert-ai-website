@@ -1,92 +1,38 @@
-'use client'
+import { AUDIT_HREF } from './site/shared'
+import HeroBoard from './runs/HeroBoard'
 
-import Link from 'next/link'
-import { motion, useReducedMotion } from 'framer-motion'
-
-const EASE = [0.22, 1, 0.36, 1]
+// Homepage hero, rebuilt 6 Oct 2026 for the "Runs itself" concept
+// (docs/design/CHARTER.md): the locked manifesto beside the product itself, an
+// example office's board with its jobs finishing. Picked in the design pass as
+// option A, the product window (docs/design/design-pass-site-2026-09.md).
+// The May 2026 hero (green-flood wipe, Bricolage display) is in git history.
 
 export default function Hero() {
-  const reduced = useReducedMotion()
-  // Under reduce-motion, skip the initial state entirely so SSR opacity:0 doesn't
-  // become a stuck-invisible hero. `initial={false}` tells FM to start from animate.
-  const init = (y = 32) => (reduced ? false : { opacity: 0, y })
   return (
-    <section className="bg-cream">
-      <div className="max-w-[1280px] mx-auto min-h-screen flex flex-col px-6 lg:px-12 pt-16 md:pt-20 pb-12">
-        {/* ─── Headline + sub + CTAs (natural flow at top) ─── */}
-        <h1
-          className="font-display text-ink"
-          style={{
-            fontSize: 'var(--text-display-xl)',
-            lineHeight: 0.88,
-            letterSpacing: '-0.05em',
-            fontWeight: 800,
-          }}
-        >
-          <motion.span
-            initial={init(32)}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.05, ease: EASE }}
-            className="block"
-          >
+    <section className="bg-[#FAFAF8] text-[#111]">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 pb-20 md:pb-28 grid md:grid-cols-[0.9fr_1.1fr] gap-12 items-end">
+        <div>
+          <h1 className="font-bold tracking-[-0.045em] leading-[0.95]" style={{ fontSize: 'clamp(52px, 6.6vw, 96px)' }}>
             Less admin.
-          </motion.span>
-
-          <motion.span
-            initial={init(32)}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.15, ease: EASE }}
-            className="block relative w-fit"
-          >
-            {/* Green flood — wipes left→right after text settles (instant under reduce-motion) */}
-            <motion.span
-              aria-hidden
-              initial={reduced ? false : { scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.65, delay: 0.55, ease: [0.65, 0, 0.35, 1] }}
-              className="absolute inset-0 bg-green origin-left -mx-2 md:-mx-3 -my-1 rounded-[2px]"
-            />
-            <span className="relative">More money.</span>
-          </motion.span>
-
-          <motion.span
-            initial={init(32)}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.25, ease: EASE }}
-            className="block"
-          >
+            <br />
+            More money.
+            <br />
             Built to run itself.
-          </motion.span>
-        </h1>
-
-        <motion.p
-          initial={init(16)}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.85, ease: EASE }}
-          className="mt-10 md:mt-12 text-[18px] md:text-[20px] text-muted leading-[1.5] max-w-[54ch]"
-        >
-          Custom software and AI for small businesses, built in Adelaide.
-        </motion.p>
-
-        <motion.div
-          initial={init(16)}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 1.0, ease: EASE }}
-          className="mt-10 md:mt-12 flex flex-wrap gap-3"
-        >
-          <Link
-            href="/pilot#book"
-            className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
-          >
-            Book a free AI audit <span aria-hidden>→</span>
-          </Link>
-          <Link
-            href="/start"
-            className="text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 border border-ink hover:bg-ink hover:text-cream transition-colors duration-300"
-          >
-            Start a project <span aria-hidden>→</span>
-          </Link>
-        </motion.div>
+          </h1>
+          <p className="mt-7 text-[19px] leading-[1.45] max-w-[38ch] text-[#333]">
+            Custom software and AI for small businesses, built in Adelaide.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <a
+              href={AUDIT_HREF}
+              className="bg-[#111] text-white rounded-full px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors"
+            >
+              Book a free AI audit
+            </a>
+            <span className="text-[15px] text-[#555]">45 minutes, a written page back</span>
+          </div>
+        </div>
+        <HeroBoard />
       </div>
     </section>
   )

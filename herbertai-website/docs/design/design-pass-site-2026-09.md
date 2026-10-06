@@ -293,7 +293,38 @@ each starting when it scrolls into view.
   three big lamps with counts (done, waiting on a person, queued) like a
   factory floor andon board, a ticker of the latest job beneath.
 
-Will's pick: (pending)
+6 Oct 2026: a Run again button added to each option on Will's "rerun these".
+
+Will's pick (6 Oct 2026): "i think B is cool, but the whole point of it is to
+showcase the product is it not? so only A really makes sense". **A.** That
+settles the three open whole-site decisions: Geist throughout, light paper
+ground (#FAFAF8), and the board shown as the software itself. Register rule:
+the hero's device shows the product, not a metaphor for it (design-taste
+`registers/marketing-site.md`).
+
+Built on branch `preview/runs-itself` (cut from the lab branch, main merged
+in): `components/Hero.js` rewritten, the board engine moved to
+`components/runs/board.js` and the homepage board to
+`components/runs/HeroBoard.js`, the header takes the paper ground on `/` only
+until the nav gets its own round. The rest of the homepage is still the May
+register until its sections come up. `/start` loses its hero link and stays
+linked from the footer and pricing. The seven reference clones and the lab's
+roman serif were removed from the lab.
+Verified on the dev server and in a visible headless browser: lint and build
+clean, no console errors, the board starts within a second and finishes by
+twelve, no horizontal overflow at 1440 or 375, reduced motion shows the
+finished day at once.
+
+Bar round (6 Oct 2026): ours against lindy.ai's first screen at 1440x900,
+labels stripped, fresh Sonnet critic. Verdict: ours (B). Gap in the bar: its
+product sits below the fold, so the first screen is a claim and logos. Gap in
+ours: nothing proves the board is real, because it is "an example office" with
+no client name or result. That gap is the deliberate cost of the no client
+names, no proof numbers rule (Grain #15); the candidate fix that keeps the rule
+is a link from the board to a demo that runs for real, offered to Will as a
+tweak, not built.
+
+Tweaks: (pending Will's sign-off on the built hero)
 
 
 

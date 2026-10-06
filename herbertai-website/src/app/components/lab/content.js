@@ -1,21 +1,14 @@
-// Design lab, 18 Sep 2026. Seven mockups of the Herbert AI homepage, each
-// composed the way one reference site composes its own first screens. Not
-// indexed, not in the nav or the sitemap. Delete the /lab route and this folder
-// once a direction is picked (ledger: docs/design/design-pass-site-2026-09.md).
+// Design lab for the September 2026 site pass. Not indexed, not in the nav or
+// the sitemap. Holds the two concepts and each section's options while the pass
+// runs; the seven reference clones were removed on 6 Oct 2026 after Will
+// rejected them. Delete the /lab route and this folder when the pass ends
+// (ledger: docs/design/design-pass-site-2026-09.md).
 
 export const REFS = [
-  { slug: 'symphonyai', name: 'SymphonyAI', url: 'symphonyai.com' },
-  { slug: 'wix-symphony', name: 'Symphony by Wix', url: 'wix.com/symphony' },
-  { slug: 'sierra', name: 'Sierra', url: 'sierra.ai' },
-  { slug: 'lindy', name: 'Lindy', url: 'lindy.ai' },
-  { slug: 'relevance', name: 'Relevance AI', url: 'relevanceai.com' },
-  { slug: 'fin', name: 'Fin', url: 'fin.ai' },
-  { slug: 'harvey', name: 'Harvey', url: 'harvey.ai' },
   { slug: 'concept-now-hiring', name: 'Concept: Now hiring', url: 'from Herbert AI, not a reference' },
   { slug: 'concept-runs-itself', name: 'Concept: Runs itself', url: 'from Herbert AI, not a reference' },
   { slug: 'runs-itself-hero', name: 'Runs itself: hero options', url: 'A, B and C, scroll down' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'
-export const SERIF = 'var(--font-lab-serif), Georgia, serif'
 export const MONO = 'var(--font-geist-mono), monospace'

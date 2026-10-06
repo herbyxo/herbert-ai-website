@@ -1,25 +1,11 @@
 import { notFound } from 'next/navigation'
 import { REFS } from '../../components/lab/content'
 import LabBar from '../../components/lab/LabBar'
-import SymphonyAI from '../../components/lab/SymphonyAI'
-import WixSymphony from '../../components/lab/WixSymphony'
-import Sierra from '../../components/lab/Sierra'
-import Lindy from '../../components/lab/Lindy'
-import Relevance from '../../components/lab/Relevance'
-import Fin from '../../components/lab/Fin'
-import Harvey from '../../components/lab/Harvey'
 import NowHiring from '../../components/lab/NowHiring'
 import RunsItself from '../../components/lab/RunsItself'
 import RunsItselfHero from '../../components/lab/RunsItselfHero'
 
 const MAP = {
-  symphonyai: SymphonyAI,
-  'wix-symphony': WixSymphony,
-  sierra: Sierra,
-  lindy: Lindy,
-  relevance: Relevance,
-  fin: Fin,
-  harvey: Harvey,
   'concept-now-hiring': NowHiring,
   'concept-runs-itself': RunsItself,
   'runs-itself-hero': RunsItselfHero,

@@ -2,7 +2,7 @@
 import { useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SANS, MONO } from './content'
-import { STATE, useBoard, useInView, useFlap } from './board'
+import { STATE, useBoard, useInView, useFlap } from '../runs/board'
 
 // Hero round for the "Runs itself" concept, 22 Sep 2026. Three options, each
 // also settling one open whole-site decision: typeface, ground and the

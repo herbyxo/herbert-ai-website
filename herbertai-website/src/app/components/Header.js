@@ -12,7 +12,9 @@ export default function Header() {
   if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/') || pathname?.startsWith('/demo/') || pathname?.startsWith('/lab')) return null
 
   return (
-    <header className="bg-cream">
+    // The homepage hero moved to the paper ground of the "Runs itself" rebuild
+    // (6 Oct 2026); the header follows it there until the nav gets its own round.
+    <header className={pathname === '/' ? 'bg-[#FAFAF8]' : 'bg-cream'}>
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
         <Link href="/" className="flex items-center gap-2.5 group">
           <svg
