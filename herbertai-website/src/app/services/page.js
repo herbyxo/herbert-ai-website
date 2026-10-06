@@ -57,7 +57,7 @@ const groups = [
     items: [
       { tag: 'Ads', title: 'Google and Meta ads', body: 'Written, tested and paused by a marketing engine, with a landing page per ad group and the numbers on one screen.' },
       { tag: 'Search', title: 'SEO', body: 'Technical and local search, so the people already looking for what you do can find you.' },
-      { tag: 'Email and SMS', title: 'Lifecycle messaging', body: 'Automated sequences to the customers you already have: reviews, reminders, reactivation.' },
+      { tag: 'Email and SMS', title: 'Lifecycle messaging', body: 'Automated sequences to the customers you already have: review requests and reminders.' },
       { tag: 'Pages', title: 'Landing pages and funnels', body: 'Pages built for one ad group or one offer, measured on what they convert.' },
     ],
     links: [
