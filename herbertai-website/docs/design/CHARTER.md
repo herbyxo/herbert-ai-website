@@ -53,7 +53,9 @@ does for that kind of office, with example data labelled as such.
 | Grey | Queued |
 
 Everything else is ink on a ground. No colour for emphasis, no decorative
-tints, no gradients, no brand accent that means nothing. The exact values, and
+tints, no gradients, no brand accent that means nothing. One exception, Will's
+call on 6 Oct 2026: the logo mark keeps its black "h" tile with the green dot
+and glow ("i like todays"). It is the brand, not a state. The exact values, and
 whether the May green survives as the "done" colour, are settled in the hero
 round.
 

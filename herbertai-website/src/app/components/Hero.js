@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { AUDIT_HREF } from './site/shared'
 import HeroBoard from './runs/HeroBoard'
 
@@ -33,7 +34,19 @@ export default function Hero() {
             <span className="text-[15px] text-[#555]">45 minutes, a written page back</span>
           </div>
         </div>
-        <HeroBoard />
+        <div>
+          <HeroBoard />
+          {/* Demo link, option 1 (Will, 6 Oct 2026): a plain link under the board
+              to the deeper demo, one firm's season with the emails its clients get. */}
+          <div className="mt-3.5 text-right">
+            <Link
+              href="/demo/accountants"
+              className="text-[14px] font-medium text-[#111] underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
+            >
+              See it run for an accounting firm <span aria-hidden>&rarr;</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   )
