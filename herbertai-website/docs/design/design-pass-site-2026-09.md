@@ -390,7 +390,25 @@ headline above a full-width board. Checked at 1440, 1280, 1024, 768 and 375: no
 horizontal overflow, statuses aligned, no console errors. Footer wordmark is
 now "Herbert AI" (its green dot stays until the logo-mark detail).
 
-Next: the hero detail pass, starting with the logo mark.
+Will, 6 Oct 2026: "what would the demo page actually look like? is it just the
+same board but goes through more steps, or is there more". Answered with phone
+captures of `/demo/accountants?for=Henderson & Co` at four moments (opens,
+partway, done, an email opened). The demo is one industry in depth: the
+prospect's firm name, a client list with per-client progress, one client's
+timeline on a play bar, and the real email that client receives on tap. It is
+drawn in the ops-tool look (Inter, indigo for sent), not the new site's.
+
+## [~] Hero detail 1: the logo mark (options 6 Oct 2026)
+
+Board: `design-pass-site-2026-10-06-logo-mark.png`, from
+`design-pass-site-2026-10-06-logo-mark.py`. Today: the May register's black "h"
+tile with a neon dot and a green glow. 1 wordmark only; 2 the tile kept, redrawn
+in Geist, dot and glow removed; 3 the wordmark followed by the board's green
+lamp, as if the business itself is running (recommended; it bends "green means
+done" into "green means running"). The footer and the phone menu follow the
+pick.
+
+Will's pick: (pending)
 
 
 
