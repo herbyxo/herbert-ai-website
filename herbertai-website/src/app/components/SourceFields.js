@@ -44,10 +44,15 @@ export default function SourceFields({ service = 'AI audit' }) {
 
   useEffect(() => {
     const t = readTouch()
-    setTouch(t)
-    setPage(window.location.pathname)
+    // Deferred so the state updates are not synchronous inside the effect
+    // (react-hooks/set-state-in-effect); the server-rendered values are empty
+    // either way, so there is nothing to mismatch on hydration.
+    const timer = setTimeout(() => {
+      setTouch(t)
+      setPage(window.location.pathname)
+    }, 0)
     const form = ref.current?.form
-    if (!form) return undefined
+    if (!form) return () => clearTimeout(timer)
     const notify = () => {
       try {
         const body = JSON.stringify({
@@ -71,7 +76,10 @@ export default function SourceFields({ service = 'AI audit' }) {
       }
     }
     form.addEventListener('submit', notify)
-    return () => form.removeEventListener('submit', notify)
+    return () => {
+      clearTimeout(timer)
+      form.removeEventListener('submit', notify)
+    }
   }, [service])
 
   return (
