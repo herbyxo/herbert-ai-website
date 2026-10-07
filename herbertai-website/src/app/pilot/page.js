@@ -199,8 +199,8 @@ export default function Pilot() {
               Book your free AI audit.
             </h2>
             <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[46ch]">
-              Tell us what a normal week looks like and Will calls you within a
-              business day to set a time. Forty five minutes, no preparation, no
+              Tell us what a normal week looks like and Will calls you the same
+              day to set a time. Forty five minutes, no preparation, no
               obligation. If software is not the answer for you, the audit says so.
             </p>
             <p className="mt-6 text-[14px] text-muted">
@@ -227,7 +227,7 @@ export default function Pilot() {
                 <input
                   type="hidden"
                   name="autoresponse_message"
-                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call within a business day to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
+                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call today to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
                 />
                 <SourceFields service="AI audit" />
                 {/* Honeypot for spam */}
@@ -259,7 +259,7 @@ export default function Pilot() {
                   Book my free AI audit <span aria-hidden>&rarr;</span>
                 </button>
                 <p className="text-[12px] text-muted text-center">
-                  No obligation. Reply within a business day.
+                  No obligation. Will calls you the same day.
                 </p>
               </form>
             </div>
