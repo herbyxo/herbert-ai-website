@@ -100,7 +100,17 @@ export default function SampleAudit() {
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pb-20 md:pb-24">
           <Eyebrow>Where the time goes</Eyebrow>
-          <div className="overflow-x-auto">
+          <ul className="md:hidden divide-y divide-line border-y border-line">
+            {jobs.map(j => (
+              <li key={j.who + j.hours} className="py-5">
+                <p className="text-[15px] text-ink-soft leading-[1.5]">{j.job}</p>
+                <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
+                  {j.who} · {j.hours} hours a week · <span className="text-ink">{j.cost} a year</span>
+                </p>
+              </li>
+            ))}
+          </ul>
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse">
               <thead>
                 <tr>
@@ -170,7 +180,17 @@ export default function SampleAudit() {
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 md:py-24">
           <Eyebrow>The next twelve months</Eyebrow>
-          <div className="overflow-x-auto">
+          <ul className="md:hidden divide-y divide-line border-y border-line">
+            {phases.map(p => (
+              <li key={p.when} className="py-5">
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-green-deep">{p.when}</p>
+                <p className="mt-2 text-[16px] font-semibold text-ink leading-[1.4]">{p.what}</p>
+                <p className="mt-2 text-[15px] text-muted leading-[1.5]">{p.why}</p>
+                <p className="mt-2 text-[13px] text-muted">Rough cost: {p.cost}</p>
+              </li>
+            ))}
+          </ul>
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full min-w-[720px] border-collapse">
               <thead>
                 <tr>
