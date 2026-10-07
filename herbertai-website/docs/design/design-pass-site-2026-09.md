@@ -452,7 +452,16 @@ drawing: option 1 top 0px, option 3 top 0px and bottom 0px. Notes for whoever
 builds it: the capitals start 0.118em below the headline's box (measured from
 pixels; canvas font metrics were unreliable), and the page applies margin
 changes with a short delay, so the board script converges in settled steps.
-Will's pick: (pending)
+Will's pick (7 Oct 2026): "3". Built into `components/Hero.js` as layout, not
+an offset: from 1280 up the hero is a two-row grid. Row one holds the text and
+the board, so they share a top and bottom; the headline is pulled up 0.118em so
+its capitals start on the board's top edge, and the button is pushed to the
+row's bottom. Row two holds the note and the demo link on one baseline. The
+board fills its cell, so the edges hold whatever the board's height. Below 1280
+the items stack in reading order. Measured at 1440 and 1280: capitals within
+1px of the board's top (from pixels), button bottom 0px from the board's
+bottom, note and link baselines equal; no horizontal overflow at 1440, 1280,
+1024 or 375; no console errors.
 
 
 
