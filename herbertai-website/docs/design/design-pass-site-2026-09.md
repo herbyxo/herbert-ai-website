@@ -480,4 +480,15 @@ Today: 19px #333 under the headline, space above the button. 1 quieter, 17px
 #666; 2 moved down to sit just above the button, the space moving between the
 headline and the sub-line (recommended); 3 bigger, 22px in ink. All four keep
 the button on the board's bottom edge (measured 0px).
+Will's pick (7 Oct 2026): "today". 19px #333 under the headline stays.
+
+## [~] Hero detail 5: the button (options 7 Oct 2026)
+
+Board: `design-pass-site-2026-10-07-button.png`, from
+`design-pass-site-2026-10-07-button.py`. Today: black pill, 16px, no arrow,
+while the header button is a smaller pill with an arrow. 1 add the arrow, the
+two buttons then match (recommended); 2 the arrow and squarer corners (10px)
+matching the board's window, the header button following; 3 the arrow, 18px
+and more padding. The note is unchanged in all three, and every option keeps
+the button's bottom on the board's bottom edge (measured 0px).
 Will's pick: (pending)
