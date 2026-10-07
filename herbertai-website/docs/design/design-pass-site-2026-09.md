@@ -509,5 +509,20 @@ only on the lamp, the status words grey and the dot carrying the state
 (recommended: closest to "colour means state"). Stills show the finished day,
 so every lamp is green; while the board runs, waiting rows show amber lamps
 the same way.
+Will's pick (7 Oct 2026): "today". The board's type and colours stay.
+
+## [~] Hero detail 7: spacing (options 7 Oct 2026)
+
+Board: `design-pass-site-2026-10-07-spacing.png`, from
+`design-pass-site-2026-10-07-spacing.py`, each option as the whole 1440x900
+first screen and again with the gaps measured. Today: 80px above the board's
+top, 48px between the columns, 115px below; 143px of the next section shows
+above the fold. 1 tighter, 56 / 40 / 75px, 207px of the next section shows with
+its heading cut at the fold (recommended); 2 more air, 112px above and 147px
+below with the column gap kept, 79px of the next section shows; 3 exactly one
+screen, the hero filling the space under the header with the content centred,
+the next section starting at the fold. Found while drawing: any column gap over
+48px narrows the text column enough that "More money." breaks onto two lines
+at 72px, so the gap can only shrink.
 Will's pick: (pending)
 
