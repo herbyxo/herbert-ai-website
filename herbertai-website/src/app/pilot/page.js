@@ -1,4 +1,5 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import SourceFields from '../components/SourceFields'
 
 export const metadata = {
   title: { absolute: 'How it works: a free AI audit, then working software in 14 days | Herbert AI' },
@@ -183,7 +184,7 @@ export default function Pilot() {
             <Step
               n="06"
               title="The first three"
-              body="The first three pilot clients who agree to a named case study and a testimonial get 90 days of included care instead of 30. The price is the same; the proof is what we are short of."
+              body="The first three pilot clients who agree to a case study and a testimonial get 90 days of included care instead of 30. The price is the same; the proof is what we are short of."
             />
           </div>
         </div>
@@ -228,6 +229,7 @@ export default function Pilot() {
                   name="autoresponse_message"
                   value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call within a business day to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
                 />
+                <SourceFields service="AI audit" />
                 {/* Honeypot for spam */}
                 <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 

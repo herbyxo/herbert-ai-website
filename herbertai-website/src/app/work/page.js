@@ -48,7 +48,7 @@ const systems = [
   {
     tag: 'Built',
     title: 'A marketing engine',
-    body: 'Google and Meta ads written, tested and paused by the system against real results, a landing page per ad group, and a daily audit that flags what is wasting money. The growth module that bolts onto an operations system.',
+    body: 'Google ads written, tested and paused by the system against real results, Meta campaigns drafted and held for approval, a landing page per ad group, and a daily audit that flags what is wasting money. The growth module that bolts onto an operations system.',
     href: null,
     image: null,
   },

@@ -39,7 +39,7 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
       const form = e.currentTarget
       const params = new URLSearchParams(window.location.search)
       const body = JSON.stringify({
-        name: form.name?.value || '',
+        name: form.elements.namedItem('name')?.value || '',
         business: form.business?.value || '',
         email: form.email?.value || '',
         phone: form.phone?.value || '',
