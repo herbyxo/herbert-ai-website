@@ -469,3 +469,15 @@ bottom, note and link baselines equal; no horizontal overflow at 1440, 1280,
 ## [ ] M4.2 Home, section by section
 ## [ ] M4.3 /pilot and /pricing
 ## [ ] M4.4 /work, /industries/*, /about
+
+## [~] Hero detail 4: the sub-line (options 7 Oct 2026)
+
+Board: `design-pass-site-2026-10-07-subline.png`, from
+`design-pass-site-2026-10-07-subline.py`, raw captures in `assets-2026-10-07/`.
+The words stay; only size, colour and position change. Since alignment 3 the
+text column has spare space, and the sub-line's position decides where it goes.
+Today: 19px #333 under the headline, space above the button. 1 quieter, 17px
+#666; 2 moved down to sit just above the button, the space moving between the
+headline and the sub-line (recommended); 3 bigger, 22px in ink. All four keep
+the button on the board's bottom edge (measured 0px).
+Will's pick: (pending)
