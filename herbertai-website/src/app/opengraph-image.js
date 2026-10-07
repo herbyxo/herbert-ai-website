@@ -1,11 +1,24 @@
+import { readFile } from 'node:fs/promises'
+import { join } from 'node:path'
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
-export const alt = 'Herbert AI — automation & growth for SMBs'
+export const alt =
+  'Herbert AI: custom software and AI for small businesses, built in Adelaide'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
+// The site's own faces, bundled so the card matches the page. Without them
+// ImageResponse falls back to its default sans and the serif emphasis is lost.
+const font = (file) => readFile(join(process.cwd(), 'assets/og', file))
+
 export default async function OG() {
+  const [geistSemi, geistBold, geistMono, serifItalic] = await Promise.all([
+    font('Geist-SemiBold.ttf'),
+    font('Geist-Bold.ttf'),
+    font('GeistMono-Regular.ttf'),
+    font('InstrumentSerif-Italic.ttf'),
+  ])
+
   return new ImageResponse(
     (
       <div
@@ -19,7 +32,7 @@ export default async function OG() {
           color: '#F5F0E5',
           padding: 80,
           position: 'relative',
-          fontFamily: 'sans-serif',
+          fontFamily: 'Geist',
         }}
       >
         <div
@@ -50,22 +63,32 @@ export default async function OG() {
           </div>
         </div>
 
-        <div style={{ display: 'flex' }}>
-          <div
-            style={{
-              fontSize: 92,
-              fontWeight: 700,
-              lineHeight: 1.02,
-              letterSpacing: -3,
-              maxWidth: 1000,
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 18,
-            }}
-          >
-            <span>Web design,</span>
-            <span>automation & growth for</span>
-            <span style={{ color: '#00FF88', fontStyle: 'italic' }}>SMBs.</span>
+        <div
+          style={{
+            fontSize: 84,
+            fontWeight: 700,
+            lineHeight: 1.04,
+            letterSpacing: -3,
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <span>Custom software and AI</span>
+          <span>for small businesses,</span>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 22 }}>
+            <span>built in</span>
+            <span
+              style={{
+                fontFamily: 'Instrument Serif',
+                fontStyle: 'italic',
+                fontWeight: 400,
+                fontSize: 100,
+                letterSpacing: -1,
+                color: '#00FF88',
+              }}
+            >
+              Adelaide.
+            </span>
           </div>
         </div>
 
@@ -78,7 +101,7 @@ export default async function OG() {
         >
           <div
             style={{
-              fontFamily: 'monospace',
+              fontFamily: 'Geist Mono',
               fontSize: 16,
               color: 'rgba(245,240,229,0.55)',
               letterSpacing: 4,
@@ -89,7 +112,7 @@ export default async function OG() {
           </div>
           <div
             style={{
-              fontFamily: 'monospace',
+              fontFamily: 'Geist Mono',
               fontSize: 16,
               color: 'rgba(245,240,229,0.55)',
               letterSpacing: 4,
@@ -101,6 +124,19 @@ export default async function OG() {
         </div>
       </div>
     ),
-    size
+    {
+      ...size,
+      fonts: [
+        { name: 'Geist', data: geistSemi, weight: 600, style: 'normal' },
+        { name: 'Geist', data: geistBold, weight: 700, style: 'normal' },
+        { name: 'Geist Mono', data: geistMono, weight: 400, style: 'normal' },
+        {
+          name: 'Instrument Serif',
+          data: serifItalic,
+          weight: 400,
+          style: 'italic',
+        },
+      ],
+    }
   )
 }
