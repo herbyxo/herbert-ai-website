@@ -138,6 +138,12 @@ export default function Pilot() {
               body="Your team starts using it the same day, with a walkthrough so everyone knows how, and a twelve month AI roadmap of the next jobs worth handing over."
             />
           </div>
+          <p className="mt-12 text-[15px] md:text-[16px] text-muted">
+            Want to see the written page before you book?{' '}
+            <a href="/pilot/sample-audit" className="text-ink font-medium hover:text-green-deep transition-colors">
+              Read a sample audit page &rarr;
+            </a>
+          </p>
         </div>
       </section>
 
