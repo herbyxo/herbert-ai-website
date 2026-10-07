@@ -218,7 +218,7 @@ export default function Pilot() {
                 <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
                 <input type="hidden" name="from_name" value="Herbert AI · Bottleneck Pilot" />
                 <input type="hidden" name="subject" value="New AI audit request · /pilot" />
-                <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/start/thanks" />
+                <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/pilot/thanks" />
                 <input
                   type="hidden"
                   name="autoresponse_subject"
