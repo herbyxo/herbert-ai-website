@@ -1,4 +1,5 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: { absolute: 'Google Ads Management Adelaide | AI-Optimised, Run by the Builder' },
@@ -10,7 +11,7 @@ export const metadata = {
     description:
       'AI-optimised Google Ads management for Adelaide small business. Free game plan in 48 hours, flat monthly, you own the account. Run by the person who builds them — not an agency.',
     url: '/google-ads-adelaide',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

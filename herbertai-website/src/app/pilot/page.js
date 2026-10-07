@@ -1,5 +1,6 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import SourceFields from '../components/SourceFields'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: { absolute: 'How it works: a free AI audit, then working software in 14 days | Herbert AI' },
@@ -11,7 +12,7 @@ export const metadata = {
     description:
       'Forty five minutes with Will, a written page on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
     url: '/pilot',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

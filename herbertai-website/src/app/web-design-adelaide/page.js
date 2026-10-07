@@ -1,6 +1,7 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import MockupLeadForm from '../components/MockupLeadForm'
 import MockupProof from '../components/MockupProof'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: { absolute: 'Web Design Adelaide | Free Homepage Mockup in 48 Hours' },
@@ -12,7 +13,7 @@ export const metadata = {
     description:
       'See your new website before you spend a cent — free homepage mockup in 48 hours, fixed quote, live in weeks.',
     url: '/web-design-adelaide',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

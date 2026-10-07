@@ -1,4 +1,5 @@
 import { Eyebrow, AuditButton } from '../../components/site/shared'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: { absolute: 'A sample AI audit page | Herbert AI' },
@@ -9,7 +10,7 @@ export const metadata = {
     title: 'A sample AI audit page · Herbert AI',
     description: 'The written page every free AI audit ends with, shown on a made-up accounting practice.',
     url: '/pilot/sample-audit',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { RUNGS, Eyebrow, AuditButton } from '../components/site/shared'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: 'About | Will Herbert, custom software and AI for small business',
@@ -11,7 +12,7 @@ export const metadata = {
     title: 'About Will Herbert · Herbert AI',
     description: 'Custom software and AI for small businesses, built in Adelaide by one person you deal with directly.',
     url: '/about',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

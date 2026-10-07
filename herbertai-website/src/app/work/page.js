@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { Eyebrow, AuditButton } from '../components/site/shared'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: 'The systems | What Herbert AI has built',
@@ -11,7 +12,7 @@ export const metadata = {
     title: 'The systems · Herbert AI',
     description: 'Click into the software rather than read about it.',
     url: '/work',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

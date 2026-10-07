@@ -6,6 +6,7 @@ import TrackBeacon from './components/TrackBeacon'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import LenisProvider from './components/motion/LenisProvider'
+import { OG_IMAGE } from './components/site/og'
 import './globals.css'
 
 // Only the weights the site actually uses. Every extra weight is another file
@@ -112,7 +113,7 @@ const jsonLd = {
     'Automation & growth for SMBs. Custom AI voice agents, chatbots, workflow automation, websites, and dashboards — built bespoke by Will Herbert in Adelaide.',
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
-  image: `${SITE_URL}/opengraph-image`,
+  image: `${SITE_URL}${OG_IMAGE}`,
   telephone: '+61448111840',
   email: 'hello@herbert-aisolutions.com',
   founder: { '@type': 'Person', name: 'Will Herbert', jobTitle: 'Founder' },

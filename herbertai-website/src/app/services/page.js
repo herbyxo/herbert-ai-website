@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { Eyebrow, AuditButton } from '../components/site/shared'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: 'What gets built | Custom software and AI for small business',
@@ -11,7 +12,7 @@ export const metadata = {
     title: 'What gets built · Herbert AI',
     description: 'AI employees, the system they run in, and what comes after. Every engagement starts with a free AI audit.',
     url: '/services',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

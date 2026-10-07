@@ -1,4 +1,5 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: { absolute: 'AI Receptionist for Australian Small Business | Herbert AI' },
@@ -10,7 +11,7 @@ export const metadata = {
     description:
       'An AI receptionist that answers every call 24/7, qualifies the job and books it in — built custom for your business.',
     url: '/ai-receptionist',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

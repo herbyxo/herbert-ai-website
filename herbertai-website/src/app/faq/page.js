@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: 'FAQ | pricing, timelines & process',
@@ -11,7 +12,7 @@ export const metadata = {
     description:
       'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI in Adelaide actually goes.',
     url: '/faq',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

@@ -1,3 +1,5 @@
+import { OG_IMAGE } from '@/app/components/site/og'
+
 export const metadata = {
   title: 'Web design, AI & automation | Adelaide',
   description:
@@ -8,7 +10,7 @@ export const metadata = {
     description:
       'Adelaide web design, development, AI voice agents, chatbots and workflow automation for SMBs. Grow, Automate, Build — custom systems quoted on scope.',
     url: '/services',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 
