@@ -497,3 +497,17 @@ The pill-shaped buttons on the other pages (`AuditButton` in
 `components/site/shared.js`) stay until their pages come up. Measured at 1440
 and 1280: button bottom 0px from the board's bottom, no overflow at 375, no
 console errors.
+
+## [~] Hero detail 6: the board's type and colours (options 7 Oct 2026)
+
+Board: `design-pass-site-2026-10-07-board-type.png`, from
+`design-pass-site-2026-10-07-board-type.py`. Each option changes one thing.
+Today: Geist Mono for the header and times, employee name in ink, job in #333,
+status words in green or amber. 1 no mono, the header and times in Geist;
+2 the job first, the job in ink medium and the employee name in grey; 3 colour
+only on the lamp, the status words grey and the dot carrying the state
+(recommended: closest to "colour means state"). Stills show the finished day,
+so every lamp is green; while the board runs, waiting rows show amber lamps
+the same way.
+Will's pick: (pending)
+
