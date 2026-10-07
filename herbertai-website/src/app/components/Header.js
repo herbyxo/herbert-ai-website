@@ -52,7 +52,7 @@ export default function Header() {
         <div className="hidden md:block">
           <Link
             href="/pilot#book"
-            className="bg-ink text-cream px-4 py-2 rounded-full text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
+            className="bg-ink text-cream px-4 py-2 rounded-[8px] text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
           >
             Free AI audit <span aria-hidden>→</span>
           </Link>
@@ -185,7 +185,7 @@ function MobileOverlay({ onClose }) {
         <Link
           href="/pilot#book"
           onClick={onClose}
-          className="bg-green text-ink px-6 py-3.5 rounded-full font-semibold text-[15px] inline-flex items-center gap-2"
+          className="bg-green text-ink px-6 py-3.5 rounded-[10px] font-semibold text-[15px] inline-flex items-center gap-2"
         >
           Free AI audit <span aria-hidden>→</span>
         </Link>

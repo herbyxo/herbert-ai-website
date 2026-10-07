@@ -6,8 +6,8 @@ import HeroBoard from './runs/HeroBoard'
 // (docs/design/CHARTER.md): the locked manifesto beside the product itself, an
 // example office's board with its jobs finishing. Picks from the design pass
 // (docs/design/design-pass-site-2026-09.md): option A the product window, board
-// size 1 wider, the demo link under the board, and alignment 3, both edges
-// (7 Oct 2026).
+// size 1 wider, the demo link under the board, alignment 3 both edges, and
+// button option 2, the arrow with corners matching the board's window (7 Oct 2026).
 //
 // Alignment, from xl (1280) up: a two-row grid. Row one holds the text and the
 // board, so they share a top and a bottom: the headline is pulled up 0.118em so
@@ -41,9 +41,9 @@ export default function Hero() {
           </p>
           <a
             href={AUDIT_HREF}
-            className="mt-auto self-start bg-[#111] text-white rounded-full px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors"
+            className="mt-auto self-start inline-flex items-center gap-2 bg-[#111] text-white rounded-[10px] px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors"
           >
-            Book a free AI audit
+            Book a free AI audit <span aria-hidden>&rarr;</span>
           </a>
         </div>
         <span className="order-2 mt-3 xl:mt-3.5 xl:self-baseline text-[15px] text-[#555] xl:col-start-1 xl:row-start-2">

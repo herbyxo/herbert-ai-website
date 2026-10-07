@@ -491,4 +491,9 @@ two buttons then match (recommended); 2 the arrow and squarer corners (10px)
 matching the board's window, the header button following; 3 the arrow, 18px
 and more padding. The note is unchanged in all three, and every option keeps
 the button's bottom on the board's bottom edge (measured 0px).
-Will's pick: (pending)
+Will's pick (7 Oct 2026): "2". Built: the hero button gets the arrow and 10px
+corners; the header button goes to 8px and the phone menu's button to 10px.
+The pill-shaped buttons on the other pages (`AuditButton` in
+`components/site/shared.js`) stay until their pages come up. Measured at 1440
+and 1280: button bottom 0px from the board's bottom, no overflow at 375, no
+console errors.
