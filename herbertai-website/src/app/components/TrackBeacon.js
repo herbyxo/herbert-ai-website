@@ -18,6 +18,12 @@ export default function TrackBeacon() {
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') return
     const device = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'desktop'
+    // Keep the ad and campaign parameters on the path so a hit can be credited
+    // to a lane. Everything else in the query string is dropped.
+    const kept = [...new URLSearchParams(window.location.search)]
+      .filter(([k]) => /^utm_/.test(k) || k === 'gclid')
+      .map(([k, v]) => `${k}=${v.slice(0, 100)}`)
+    const path = (pathname + (kept.length ? `?${kept.join('&')}` : '')).slice(0, 300)
     fetch(ENDPOINT, {
       method: 'POST',
       keepalive: true,
@@ -28,7 +34,7 @@ export default function TrackBeacon() {
         Prefer: 'return=minimal',
       },
       body: JSON.stringify({
-        path: pathname.slice(0, 300),
+        path,
         referrer: document.referrer ? document.referrer.slice(0, 500) : null,
         device,
       }),

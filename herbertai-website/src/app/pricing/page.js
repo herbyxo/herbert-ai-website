@@ -37,7 +37,7 @@ const rungs = [
       'One AI employee built for one job, live on your real data in 14 days. Live in 14 days or it is free.',
       'The full $3,500 comes off a bigger build signed within 60 days.',
       'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or take it onto your own accounts with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
-      'Founding clients: the first three pilots that agree to a named case study and a testimonial get 90 days of included care instead of 30.',
+      'Founding clients: the first three pilots that agree to a case study and a testimonial get 90 days of included care instead of 30.',
     ],
   },
   {

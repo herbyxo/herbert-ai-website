@@ -34,14 +34,24 @@ export async function POST(request) {
   // The engine's generic shape (lib/leadIntake normalizeGeneric). A gclid means
   // the visit came from a Google ad, and that attribution is the whole reason
   // this proxy exists: the revenue dashboard joins leads back to ad spend.
+  // Everything the form knew about where the visitor came from travels with
+  // the lead. The engine keeps the whole payload as `raw`, so these survive
+  // even though only the schema fields become columns.
+  const attribution = {}
+  for (const k of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'page', 'landing_page', 'first_referrer']) {
+    const v = str(body[k])
+    if (v) attribution[k] = v
+  }
+  const page = str(body.page)
   const payload = {
     client_id: HERBERT_TENANT_ID,
     name: str(body.name) || str(body.business) || 'Website enquiry',
     email: str(body.email),
     phone: str(body.phone),
-    service: 'Website design',
+    service: str(body.service) || (page.startsWith('/pilot') ? 'AI audit' : 'Website design'),
     city: 'Adelaide',
-    channel: str(body.gclid) ? 'google' : 'website',
+    channel: str(body.gclid) ? 'google' : str(body.utm_source) || 'website',
+    ...attribution,
   }
 
   try {
