@@ -43,12 +43,16 @@ export async function POST(request) {
     if (v) attribution[k] = v
   }
   const page = str(body.page)
+  const service = str(body.service) || (page.startsWith('/pilot') ? 'AI audit' : '')
   const payload = {
     client_id: HERBERT_TENANT_ID,
     name: str(body.name) || str(body.business) || 'Website enquiry',
     email: str(body.email),
     phone: str(body.phone),
-    service: str(body.service) || (page.startsWith('/pilot') ? 'AI audit' : 'Website design'),
+    // Each form names its own service. No guess for one that doesn't: left out,
+    // the engine keeps service null and sends its generic "Got your enquiry"
+    // reply, where a wrong label would thank them for something they never asked.
+    ...(service ? { service } : {}),
     city: 'Adelaide',
     channel: str(body.gclid) ? 'google' : str(body.utm_source) || 'website',
     ...attribution,

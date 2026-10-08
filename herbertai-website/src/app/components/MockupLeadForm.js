@@ -45,6 +45,8 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
         phone: form.phone?.value || '',
         current_website: form.website?.value || '',
         message: form.message?.value || '',
+        // Matches the service name in Herbert AI's tenant config on the engine.
+        service: 'Website design',
         gclid: params.get('gclid') || '',
         utm_campaign: params.get('utm_campaign') || '',
         page: window.location.pathname,
