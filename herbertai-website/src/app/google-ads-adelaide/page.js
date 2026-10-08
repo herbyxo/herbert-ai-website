@@ -4,12 +4,12 @@ import { OG_IMAGE } from '@/app/components/site/og'
 export const metadata = {
   title: { absolute: 'Google Ads Management Adelaide | AI-Optimised, Run by the Builder' },
   description:
-    'AI-optimised Google Ads management for Adelaide small business. Free game plan in 48 hours, flat monthly, you own the account. Run by the person who builds them — not an agency.',
+    'AI-optimised Google Ads management for Adelaide small business. Free game plan in 48 hours, flat monthly, you own the account. Run by the person who builds them, not an agency.',
   alternates: { canonical: '/google-ads-adelaide' },
   openGraph: {
     title: 'Google Ads Management Adelaide | AI-Optimised, Run by the Builder',
     description:
-      'AI-optimised Google Ads management for Adelaide small business. Free game plan in 48 hours, flat monthly, you own the account. Run by the person who builds them — not an agency.',
+      'AI-optimised Google Ads management for Adelaide small business. Free game plan in 48 hours, flat monthly, you own the account. Run by the person who builds them, not an agency.',
     url: '/google-ads-adelaide',
     images: [OG_IMAGE],
   },
@@ -18,19 +18,19 @@ export const metadata = {
 const faqs = [
   {
     q: 'What does management cost?',
-    a: 'A flat monthly fee on top of your ad spend — quoted on scope, no lock-in, cancel anytime. The game plan comes with the number, so you see exactly what it costs before you commit.',
+    a: 'A flat monthly fee on top of your ad spend, quoted on scope, no lock-in, cancel anytime. The game plan comes with the number, so you see exactly what it costs before you commit.',
   },
   {
     q: 'Do I need to be running ads already?',
-    a: 'No — the free plan works whether you’re starting from scratch or fixing a campaign that’s bleeding money. Either way you’ll get a clear picture of what to target and what it should cost.',
+    a: 'No. The free plan works whether you’re starting from scratch or fixing a campaign that’s bleeding money. Either way you’ll get a clear picture of what to target and what it should cost.',
   },
   {
     q: 'What makes it “AI-optimised”?',
-    a: 'I use AI to audit and tune the account continuously — finding wasted spend and opportunities daily, instead of the once-a-month glance most agencies do. The work happens while it still matters, not at the end of the month.',
+    a: 'I use AI to audit and tune the account continuously, finding wasted spend and opportunities daily, instead of the once-a-month glance most agencies do. The work happens while it still matters, not at the end of the month.',
   },
   {
     q: 'Do I own the account?',
-    a: 'Always — it’s your Google Ads account and your data. Leave any time and keep everything: campaigns, history, the lot. No hostage fees, no lock-in.',
+    a: 'Always. It’s your Google Ads account and your data. Leave any time and keep everything: campaigns, history, the lot. No hostage fees, no lock-in.',
   },
 ]
 
@@ -55,10 +55,10 @@ export default function GoogleAdsAdelaide() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
+      {/* ─── Hero, static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-40 md:pb-28">
-          <Eyebrow>Google Ads — Adelaide</Eyebrow>
+          <Eyebrow>Google Ads · Adelaide</Eyebrow>
           <h1
             className="font-display text-ink max-w-[15ch]"
             style={{
@@ -72,7 +72,7 @@ export default function GoogleAdsAdelaide() {
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
             You found this through one of my ads. That&apos;s the service. I build and run
-            AI-optimised Google Ads for Adelaide small business — tight, measured, and
+            AI-optimised Google Ads for Adelaide small business: tight, measured, and
             managed daily, not dressed up in an agency retainer. Tell me about your business
             and I&apos;ll send a free game plan in 48 hours.
           </p>
@@ -108,7 +108,7 @@ export default function GoogleAdsAdelaide() {
             <Step
               n="01"
               title="Tell me about your business"
-              body="Two minutes in the form below — what you sell, who your customers are, and whether you're running ads now."
+              body="Two minutes in the form below: what you sell, who your customers are, and whether you're running ads now."
             />
             <Step
               n="02"
@@ -118,7 +118,7 @@ export default function GoogleAdsAdelaide() {
             <Step
               n="03"
               title="Like it? Flat monthly, cancel anytime"
-              body="I build it, run it, and report what it's actually making you. No fat retainer, no lock-in — leave whenever you want."
+              body="I build it, run it, and report what it's actually making you. No fat retainer, no lock-in. Leave whenever you want."
             />
           </div>
         </div>
@@ -136,12 +136,12 @@ export default function GoogleAdsAdelaide() {
                 </h2>
                 <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[52ch]">
                   An agency charges a fat retainer to log in every few weeks, glance at a
-                  dashboard, and call it management. I point AI at your account continuously
-                  — it hunts wasted spend, kills junk searches, tightens the structure, and
+                  dashboard, and call it management. I point AI at your account continuously.
+                  It hunts wasted spend, kills junk searches, tightens the structure, and
                   surfaces what to change while it still matters.
                 </p>
                 <p className="mt-5 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[52ch]">
-                  Same work the expensive agencies bill for, done daily instead of monthly —
+                  Same work the expensive agencies bill for, done daily instead of monthly,
                   and you talk to the person actually doing it, not an account manager.
                 </p>
               </div>
@@ -150,7 +150,7 @@ export default function GoogleAdsAdelaide() {
               <div className="space-y-5 md:pt-4">
                 <ProofPoint
                   title="Built on a real playbook"
-                  body="Single-keyword ad groups, ruthless negative keywords, presence-only local targeting, search-only — the structure that wins, not the defaults Google nudges you toward."
+                  body="Single-keyword ad groups, ruthless negative keywords, presence-only local targeting, search-only. The structure that wins, not the defaults Google nudges you toward."
                 />
                 <ProofPoint
                   title="Measured to the dollar"
@@ -158,7 +158,7 @@ export default function GoogleAdsAdelaide() {
                 />
                 <ProofPoint
                   title="You own everything"
-                  body="Your Google Ads account, your data, your campaigns. No lock-in, no hostage fees — leave any time and keep the lot."
+                  body="Your Google Ads account, your data, your campaigns. No lock-in, no hostage fees. Leave any time and keep the lot."
                 />
               </div>
             </RevealOnScroll>
@@ -176,10 +176,10 @@ export default function GoogleAdsAdelaide() {
             Not once a month.
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-[1000px]">
-            <Inclusion title="Tight campaign structure" body="Single-keyword ad groups — your ad matches the exact search." />
+            <Inclusion title="Tight campaign structure" body="Single-keyword ad groups, so your ad matches the exact search." />
             <Inclusion title="Wasted-spend hunting" body="Negative keywords and junk-search removal, continuously." />
             <Inclusion title="Conversion tracking that works" body="Real leads tracked, not clicks." />
-            <Inclusion title="Weekly AI audit" body="What to pause, scale, fix — every week." />
+            <Inclusion title="Weekly AI audit" body="What to pause, scale and fix, every week." />
             <Inclusion title="Flat monthly, no lock-in" body="No fat retainer, cancel anytime." />
             <Inclusion title="Your account, always" body="You own it and keep it." />
           </div>
@@ -195,7 +195,7 @@ export default function GoogleAdsAdelaide() {
               Get your free Google Ads game plan.
             </h2>
             <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[46ch]">
-              Fill this in and I&apos;ll send a free plan within 48 hours — what to target,
+              Fill this in and I&apos;ll send a free plan within 48 hours: what to target,
               what it&apos;d cost, what a realistic month looks like. No obligation, no sales
               call.
             </p>
@@ -204,7 +204,7 @@ export default function GoogleAdsAdelaide() {
               <a href="tel:+61448111840" className="text-ink font-medium hover:text-green-deep transition-colors">
                 0448 111 840
               </a>{' '}
-              — Will, Adelaide.
+              (Will, Adelaide)
             </p>
           </div>
 
@@ -218,12 +218,12 @@ export default function GoogleAdsAdelaide() {
                 <input
                   type="hidden"
                   name="autoresponse_subject"
-                  value="Got it — your free Google Ads game plan is in the works"
+                  value="Got it, your free Google Ads game plan is in the works"
                 />
                 <input
                   type="hidden"
                   name="autoresponse_message"
-                  value={`Hi — Will here from Herbert AI.\n\nThanks for the details. I'm putting together your free Google Ads game plan now — what to target, roughly what it'd cost per click, and what a realistic month looks like. You'll have it in your inbox within 48 hours.\n\nIf you think of anything else worth including, just reply to this email.\n\n— Will Herbert\nHerbert AI · Adelaide`}
+                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'm putting together your free Google Ads game plan now: what to target, roughly what it'd cost per click, and what a realistic month looks like. You'll have it in your inbox within 48 hours.\n\nIf you think of anything else worth including, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
                 />
                 {/* Honeypot for spam */}
                 <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -243,7 +243,7 @@ export default function GoogleAdsAdelaide() {
                     required
                     rows={4}
                     className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted focus:border-ink transition-colors"
-                    placeholder="e.g. Mobile mechanic across the northern suburbs — not running ads yet, want more booked jobs."
+                    placeholder="e.g. Mobile mechanic across the northern suburbs. Not running ads yet, want more booked jobs."
                   />
                 </div>
 
@@ -251,7 +251,7 @@ export default function GoogleAdsAdelaide() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
                 >
-                  Send — get my free game plan <span aria-hidden>&rarr;</span>
+                  Send and get my free game plan <span aria-hidden>&rarr;</span>
                 </button>
                 <p className="text-[12px] text-muted text-center">
                   Free game plan, no obligation. Reply within a business day.
@@ -274,7 +274,7 @@ export default function GoogleAdsAdelaide() {
         </div>
       </section>
 
-      {/* ─── Final CTA — the one green-flood moment ─── */}
+      {/* ─── Final CTA: the one green-flood moment ─── */}
       <section className="bg-green">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 text-center">
           <h2 className="font-display text-ink mx-auto max-w-[18ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>

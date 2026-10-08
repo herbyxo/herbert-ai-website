@@ -4,12 +4,12 @@ import { OG_IMAGE } from '@/app/components/site/og'
 export const metadata = {
   title: { absolute: 'AI Receptionist for Australian Small Business | Herbert AI' },
   description:
-    'An AI receptionist that answers every call 24/7, qualifies the job and books it in — built custom for Australian small businesses. Hear a demo for free.',
+    'An AI receptionist that answers every call 24/7, qualifies the job and books it in, built custom for Australian small businesses. Hear a demo for free.',
   alternates: { canonical: '/ai-receptionist' },
   openGraph: {
     title: 'AI Receptionist · Herbert AI',
     description:
-      'An AI receptionist that answers every call 24/7, qualifies the job and books it in — built custom for your business.',
+      'An AI receptionist that answers every call 24/7, qualifies the job and books it in, built custom for your business.',
     url: '/ai-receptionist',
     images: [OG_IMAGE],
   },
@@ -18,19 +18,19 @@ export const metadata = {
 const faqs = [
   {
     q: 'How much does it cost?',
-    a: 'Quoted on your call volume and how much you want the agent to handle — a simple message-taker costs less than one that qualifies, books and texts. You get one fixed monthly price before anything goes live. No lock-in, cancel anytime.',
+    a: 'Quoted on your call volume and how much you want the agent to handle. A simple message-taker costs less than one that qualifies, books and texts. You get one fixed monthly price before anything goes live. No lock-in, cancel anytime.',
   },
   {
     q: "What if it can't answer something?",
-    a: "It takes a message and texts you immediately with the caller's details and what they wanted. Real emergencies ring straight through to you. Nothing gets lost — the worst case is a perfect message instead of a missed call.",
+    a: "It takes a message and texts you immediately with the caller's details and what they wanted. Real emergencies ring straight through to you. Nothing gets lost, and the worst case is a perfect message instead of a missed call.",
   },
   {
     q: 'Does it book into my calendar?',
-    a: 'Yes — your calendar or your job-management system, whichever you run. Every agent is built per business, so it books the way you already work and texts you a summary of every call.',
+    a: 'Yes, your calendar or your job-management system, whichever you run. Every agent is built per business, so it books the way you already work and texts you a summary of every call.',
   },
   {
     q: "Will customers know it's AI?",
-    a: "It doesn't pretend to be human — if a caller asks, it says so. In practice most callers just notice the phone got answered, their questions got handled, and the job got booked.",
+    a: "It doesn't pretend to be human. If a caller asks, it says so. In practice most callers just notice the phone got answered, their questions got handled, and the job got booked.",
   },
 ]
 
@@ -55,10 +55,10 @@ export default function AiReceptionist() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
+      {/* ─── Hero, static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-40 md:pb-28">
-          <Eyebrow>AI receptionist — Australia</Eyebrow>
+          <Eyebrow>AI receptionist · Australia</Eyebrow>
           <h1
             className="font-display text-ink max-w-[14ch]"
             style={{
@@ -73,7 +73,7 @@ export default function AiReceptionist() {
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
             Every missed call while you&apos;re on the tools is a job that went to whoever
             picked up. The agent answers 24/7, sounds human, qualifies the job, books it
-            in, and texts you the details — so the phone stops costing you work.
+            in, and texts you the details, so the phone stops costing you work.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -107,12 +107,12 @@ export default function AiReceptionist() {
             <Step
               n="01"
               title="Tell me about your business"
-              body="Two minutes in the form below — what you do, what the calls are usually about, what you'd want the agent to handle."
+              body="Two minutes in the form below: what you do, what the calls are usually about, what you'd want the agent to handle."
             />
             <Step
               n="02"
               title="I build a demo agent for your business"
-              body="A working agent that answers like it already works for you — your services, your questions, your area. You call it, you grill it, you try to break it. Free, no obligation."
+              body="A working agent that answers like it already works for you: your services, your questions, your area. You call it, you grill it, you try to break it. Free, no obligation."
             />
             <Step
               n="03"
@@ -134,7 +134,7 @@ export default function AiReceptionist() {
               </h2>
               <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[52ch]">
                 A demo build for a commercial refrigeration company. The customer reported
-                a refrigerant leak — the agent qualified the job, collected access
+                a refrigerant leak, and the agent qualified the job, collected access
                 details, and closed the call. Zero human involvement.
               </p>
             </div>
@@ -164,9 +164,9 @@ export default function AiReceptionist() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-[1000px]">
             <Inclusion title="Answers 24/7" body="Nights, weekends, while you're on the tools. The phone gets picked up every single time." />
             <Inclusion title="Sounds human" body="Australian voice, natural conversation. Callers talk to it like they'd talk to a good receptionist." />
-            <Inclusion title="Qualifies the job" body="Asks the questions you would — what's the problem, where, how urgent — so you only chase real work." />
+            <Inclusion title="Qualifies the job" body="Asks the questions you would (what's the problem, where, how urgent) so you only chase real work." />
             <Inclusion title="Books + texts" body="Books straight into your calendar or job system, then texts you a summary of every call." />
-            <Inclusion title="Escalates emergencies" body="Real emergencies don't get a voicemail — they ring through to you immediately." />
+            <Inclusion title="Escalates emergencies" body="Real emergencies don't get a voicemail. They ring through to you immediately." />
             <Inclusion title="Yours, no lock-in" body="Month-to-month, cancel anytime. If it's not earning its keep, you walk." />
           </div>
         </div>
@@ -182,14 +182,14 @@ export default function AiReceptionist() {
             </h2>
             <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[46ch]">
               Fill this in and I&apos;ll build a demo agent for your business within two
-              business days — free, no obligation. You call it, you grill it, you decide.
+              business days, free and with no obligation. You call it, you grill it, you decide.
             </p>
             <p className="mt-6 text-[14px] text-muted">
               Prefer to talk?{' '}
               <a href="tel:+61448111840" className="text-ink font-medium hover:text-green-deep transition-colors">
                 0448 111 840
               </a>{' '}
-              — Will, Adelaide.
+              (Will, Adelaide)
             </p>
           </div>
 
@@ -203,12 +203,12 @@ export default function AiReceptionist() {
                 <input
                   type="hidden"
                   name="autoresponse_subject"
-                  value="Got it — your demo agent is in the works"
+                  value="Got it, your demo agent is in the works"
                 />
                 <input
                   type="hidden"
                   name="autoresponse_message"
-                  value={`Hi — Will here from Herbert AI.\n\nThanks for the details. I'm building a demo agent for your business now — you'll have a number to call within 2 business days. Ring it, grill it, try to break it.\n\nIf you think of anything else the agent should handle, just reply to this email.\n\n— Will Herbert\nHerbert AI · Adelaide`}
+                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'm building a demo agent for your business now, and you'll have a number to call within 2 business days. Ring it, grill it, try to break it.\n\nIf you think of anything else the agent should handle, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
                 />
                 {/* Honeypot for spam */}
                 <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -228,7 +228,7 @@ export default function AiReceptionist() {
                     required
                     rows={4}
                     className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted focus:border-ink transition-colors"
-                    placeholder="e.g. Plumbing, mostly emergency callouts — want it to qualify the job, book it in, and text me the address."
+                    placeholder="e.g. Plumbing, mostly emergency callouts. Want it to qualify the job, book it in, and text me the address."
                   />
                 </div>
 
@@ -236,7 +236,7 @@ export default function AiReceptionist() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
                 >
-                  Send — get my custom demo <span aria-hidden>&rarr;</span>
+                  Send and get my custom demo <span aria-hidden>&rarr;</span>
                 </button>
                 <p className="text-[12px] text-muted text-center">
                   Free demo, no obligation. Reply within a business day.
@@ -259,7 +259,7 @@ export default function AiReceptionist() {
         </div>
       </section>
 
-      {/* ─── Final CTA — the one green-flood moment ─── */}
+      {/* ─── Final CTA: the one green-flood moment ─── */}
       <section className="bg-green">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 text-center">
           <h2 className="font-display text-ink mx-auto max-w-[18ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>

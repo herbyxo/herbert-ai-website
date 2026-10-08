@@ -152,7 +152,7 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
       <Field id="business" label="Business name" type="text" placeholder="Your business" required />
       <Field id="email" label="Email" type="email" placeholder="you@business.com" required />
       <Field id="phone" label="Phone (optional)" type="tel" placeholder="0400 000 000" />
-      <Field id="website" label="Current website (optional)" type="text" placeholder="yourbusiness.com.au — or 'none yet'" />
+      <Field id="website" label="Current website (optional)" type="text" placeholder="yourbusiness.com.au, or 'none yet'" />
 
       <div>
         <label htmlFor="message" className="block font-mono text-[10px] uppercase tracking-[0.18em] text-muted mb-2">
@@ -169,7 +169,7 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
           name="message"
           rows={4}
           className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted focus:border-ink transition-colors"
-          placeholder="e.g. Mobile dog grooming across the eastern suburbs — want online booking and a site that doesn't look like 2012."
+          placeholder="e.g. Mobile dog grooming across the eastern suburbs. Want online booking and a site that doesn't look like 2012."
         />
       </div>
 
