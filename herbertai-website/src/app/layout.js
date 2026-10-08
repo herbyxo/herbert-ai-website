@@ -45,8 +45,9 @@ const bricolage = Bricolage_Grotesque({
 
 const SITE_URL = 'https://herbert-aisolutions.com'
 const SITE_NAME = 'Herbert AI'
+// One description for the meta tag and the JSON-LD, so they can't drift apart.
 const SITE_DESC =
-  'Automation & growth for SMBs. Custom ads, websites, dashboards, voice agents, and workflow automation — built bespoke by Will Herbert in Adelaide.'
+  'Custom software and AI for small businesses, built in Adelaide by Will Herbert. A free AI audit finds the job that costs you most; the Bottleneck Pilot builds one AI employee for it, live in 14 days.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,8 +55,7 @@ export const metadata = {
     default: 'Custom Software & AI for Small Business | Herbert AI, Adelaide',
     template: '%s · Herbert AI',
   },
-  description:
-    'Custom software and AI for small businesses, built in Adelaide by Will Herbert. A free AI audit finds the job that costs you most; the Bottleneck Pilot builds one AI employee for it, live in 14 days.',
+  description: SITE_DESC,
   applicationName: SITE_NAME,
   authors: [{ name: 'Will Herbert', url: `${SITE_URL}/about` }],
   creator: 'Will Herbert',
@@ -108,9 +108,9 @@ const jsonLd = {
   '@type': ['ProfessionalService', 'LocalBusiness'],
   '@id': `${SITE_URL}/#business`,
   name: SITE_NAME,
-  alternateName: 'Herbert AI — web design & automation',
-  description:
-    'Automation & growth for SMBs. Custom AI voice agents, chatbots, workflow automation, websites, and dashboards — built bespoke by Will Herbert in Adelaide.',
+  alternateName: 'herbertai',
+  slogan: 'Custom software and AI for small businesses, built in Adelaide.',
+  description: SITE_DESC,
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
   image: `${SITE_URL}${OG_IMAGE}`,
@@ -131,16 +131,17 @@ const jsonLd = {
   ],
   serviceArea: { '@type': 'Country', name: 'Australia' },
   knowsAbout: [
+    'custom software for small business',
+    'AI employees',
+    'AI for small business',
+    'small business automation',
+    'workflow automation',
     'AI voice agents',
     'AI receptionist',
-    'workflow automation',
-    'n8n',
-    'small business automation',
-    'custom website development',
-    'CRM integration',
     'AI chatbot widget',
-    'Stripe integration',
-    'AroFlo integration',
+    'business dashboards',
+    'CRM integration',
+    'custom website development',
   ],
   priceRange: '$$',
   sameAs: ['https://github.com/herbyxo'],
