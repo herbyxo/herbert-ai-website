@@ -47,7 +47,7 @@ export default function Thanks() {
         </p>
 
         <p className="mt-6 max-w-[60ch] text-[15px] md:text-[16px] text-ink-soft leading-[1.6]">
-          I&rsquo;ve sent a confirmation to your email &mdash; if you remember anything you
+          I&rsquo;ve sent a confirmation to your email. If you remember anything you
           forgot to include, just reply to it.
         </p>
 

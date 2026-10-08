@@ -177,7 +177,7 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
         type="submit"
         className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
       >
-        Send &mdash; get my free mockup <span aria-hidden>&rarr;</span>
+        Send and get my free mockup <span aria-hidden>&rarr;</span>
       </button>
       <p className="text-[12px] text-muted text-center">
         Free mockup, no obligation. Reply within a business day.
