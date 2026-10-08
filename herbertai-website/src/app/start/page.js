@@ -4,11 +4,11 @@ import { OG_IMAGE } from '@/app/components/site/og'
 export const metadata = {
   title: 'Start a project',
   description:
-    'Tell Will about your business and what you want built. Free 30-minute scoping reply within a business day — fixed quote, real timeline, or a clear no.',
+    'Tell Will about your business and what you want built. A reply within a business day with the next step, or a clear no.',
   alternates: { canonical: '/start' },
   openGraph: {
     title: 'Start a project · Herbert AI',
-    description: 'Tell me about your business. Free scoping reply within a business day.',
+    description: 'Tell me about your business. A reply within a business day.',
     url: '/start',
     images: [OG_IMAGE],
   },
@@ -42,9 +42,9 @@ export default function Start() {
           </h1>
 
           <p className="mt-9 md:mt-12 max-w-[60ch] text-[17px] md:text-[19px] text-muted leading-[1.55]">
-            Fill this in, hit send. I&rsquo;ll come back within a business day with a fixed
-            quote and timeline — or a clear no if it&rsquo;s not worth building. No pitch
-            deck, no agency sales call, no obligation.
+            Fill this in and hit send. I&rsquo;ll come back within a business day with the next
+            step: usually the free AI audit, sometimes a straight price for a small job, or a
+            clear no if it&rsquo;s not worth building. No pitch deck, no sales call, no obligation.
           </p>
         </div>
       </section>
@@ -65,12 +65,12 @@ export default function Start() {
             <input
               type="hidden"
               name="autoresponse_subject"
-              value="Thanks — Herbert AI got your project brief"
+              value="Thanks, Herbert AI got your project brief"
             />
             <input
               type="hidden"
               name="autoresponse_message"
-              value={`Hi — Will here from Herbert AI.\n\nThanks for getting in touch. I've got your brief in front of me and I'll come back within a business day with one of three things: a fixed quote and timeline, a clarifying question or two, or a clear no.\n\nIn the meantime, if you remember anything you forgot to include, just reply to this email.\n\n— Will Herbert\nHerbert AI · Adelaide`}
+              value={`Hi, Will here from Herbert AI.\n\nThanks for getting in touch. I've got your brief in front of me and I'll come back within a business day with one of three things: the next step (usually the free AI audit), a clarifying question or two, or a clear no.\n\nIn the meantime, if you remember anything you forgot to include, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
             />
             {/* Honeypot for spam */}
             <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -87,7 +87,7 @@ export default function Start() {
                 label="What does the business actually do?"
                 type="textarea"
                 rows={3}
-                placeholder="One or two sentences — what you sell, who buys it."
+                placeholder="One or two sentences: what you sell, who buys it."
                 required
               />
               <RadioGroup
@@ -128,10 +128,10 @@ export default function Start() {
               />
               <Field
                 id="scope"
-                label="What would you want built — features, scope, anything?"
+                label="What would you want built? Features, scope, anything."
                 type="textarea"
                 rows={4}
-                placeholder="A custom website with online bookings. A voice agent on the office line. A dashboard for your team. Specific features. Don't worry about getting it right — rough is fine."
+                placeholder="Something that chases documents for you. A front desk that answers and books after hours. A dashboard for your team. Specific features. Don't worry about getting it right, rough is fine."
               />
               <RadioGroup
                 name="budget"
@@ -141,7 +141,7 @@ export default function Start() {
               <RadioGroup
                 name="timeline"
                 label="Timeline"
-                options={['ASAP', 'Next month', 'Next quarter', 'No rush — exploring']}
+                options={['ASAP', 'Next month', 'Next quarter', 'No rush, just exploring']}
               />
             </Fieldset>
 
@@ -165,9 +165,9 @@ export default function Start() {
       <section className="bg-cream">
         <div className="max-w-[820px] mx-auto px-6 lg:px-12 py-14 md:py-20 text-center">
           <p className="text-[15px] md:text-[16px] text-muted leading-[1.65]">
-            Prefer a call?{' '}
-            <Link href="/contact" className="text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-ink transition">
-              Email or grab a 30-minute slot directly
+            Prefer to talk it through first?{' '}
+            <Link href="/pilot" className="text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-ink transition">
+              Book the free AI audit
             </Link>
             .
           </p>
