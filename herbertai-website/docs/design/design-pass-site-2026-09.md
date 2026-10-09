@@ -511,7 +511,7 @@ so every lamp is green; while the board runs, waiting rows show amber lamps
 the same way.
 Will's pick (7 Oct 2026): "today". The board's type and colours stay.
 
-## [~] Hero detail 7: spacing (options 7 Oct 2026)
+## [x] Hero detail 7: spacing (options 7 Oct 2026, picked 10 Oct 2026)
 
 Board: `design-pass-site-2026-10-07-spacing.png`, from
 `design-pass-site-2026-10-07-spacing.py`, each option as the whole 1440x900
@@ -524,5 +524,9 @@ screen, the hero filling the space under the header with the content centred,
 the next section starting at the fold. Found while drawing: any column gap over
 48px narrows the text column enough that "More money." breaks onto two lines
 at 72px, so the gap can only shrink.
-Will's pick: (pending)
+Will's pick (10 Oct 2026): "select 3 out of the choices", option 3, exactly one
+screen. Built from xl up, where the text and the board sit side by side: the
+hero fills the screen under the header and centres its content, with 32px as
+the least padding above and below. Below xl the stacked hero is taller than a
+screen anyway, so it keeps today's padding.
 

@@ -7,7 +7,14 @@ import HeroBoard from './runs/HeroBoard'
 // example office's board with its jobs finishing. Picks from the design pass
 // (docs/design/design-pass-site-2026-09.md): option A the product window, board
 // size 1 wider, the demo link under the board, alignment 3 both edges, and
-// button option 2, the arrow with corners matching the board's window (7 Oct 2026).
+// button option 2, the arrow with corners matching the board's window (7 Oct 2026),
+// and spacing option 3, exactly one screen (10 Oct 2026).
+//
+// Spacing, from xl up: the hero fills the screen under the header (75.5px, its
+// py-5 plus the audit button; change both together) and centres its content, so
+// the next section starts at the fold. 32px is the least padding above and
+// below, for short screens where the content is taller than the space. Below xl
+// the stacked hero is taller than a screen anyway, so it keeps fixed padding.
 //
 // Alignment, from xl (1280) up: a two-row grid. Row one holds the text and the
 // board, so they share a top and a bottom: the headline is pulled up 0.118em so
@@ -23,8 +30,8 @@ import HeroBoard from './runs/HeroBoard'
 
 export default function Hero() {
   return (
-    <section className="bg-[#FAFAF8] text-[#111]">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 pb-20 md:pb-28 grid xl:grid-cols-[0.72fr_1.28fr] xl:gap-x-12">
+    <section className="bg-[#FAFAF8] text-[#111] xl:flex xl:flex-col xl:justify-center xl:min-h-[calc(100svh-75.5px)]">
+      <div className="w-full max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 xl:pt-8 pb-20 md:pb-28 xl:pb-8 grid xl:grid-cols-[0.72fr_1.28fr] xl:gap-x-12">
         <div className="order-1 flex flex-col xl:col-start-1 xl:row-start-1">
           <h1
             className="font-bold tracking-[-0.045em] leading-[0.95] xl:-mt-[0.118em]"

@@ -14,6 +14,8 @@ export default function Header() {
   return (
     // The homepage hero moved to the paper ground of the "Runs itself" rebuild
     // (6 Oct 2026); the header follows it there until the nav gets its own round.
+    // The hero fills the screen under this header from xl, so its 75.5px height
+    // is written into Hero.js; change both together.
     <header className={pathname === '/' ? 'bg-[#FAFAF8]' : 'bg-cream'}>
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
         <Link href="/" className="flex items-center gap-2.5 group">
