@@ -530,3 +530,18 @@ hero fills the screen under the header and centres its content, with 32px as
 the least padding above and below. Below xl the stacked hero is taller than a
 screen anyway, so it keeps today's padding.
 
+## [~] Hero detail 8: the header (options 10 Oct 2026)
+
+Board: `design-pass-site-2026-10-10-header.png`, from
+`design-pass-site-2026-10-10-header.py`, each option as the header at full size
+and the whole 1440x900 first screen. Today the nav is five 14px medium links in
+ink and the header button reads "Free AI audit" while the hero's reads "Book a
+free AI audit". The header does not follow on scroll and the hero now fills the
+rest of the first screen, so on the homepage the header button only ever shows
+beside the hero's. 1 match the hero, the header button reads "Book a free AI
+audit" in white, nav unchanged; 2 quieter nav, option 1's button with the nav in
+regular weight and #555, ink on hover (recommended); 3 no header button on the
+homepage, nav to the right edge, other pages keep it. Found while drawing: the
+header is 75.5px with the button and 69px without, so option 3 needs the header
+fixed at 75.5px to keep the hero ending on the fold.
+Will's pick: (pending)
