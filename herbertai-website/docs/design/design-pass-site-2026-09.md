@@ -530,7 +530,7 @@ hero fills the screen under the header and centres its content, with 32px as
 the least padding above and below. Below xl the stacked hero is taller than a
 screen anyway, so it keeps today's padding.
 
-## [~] Hero detail 8: the header (options 10 Oct 2026)
+## [x] Hero detail 8: the header (options 10 Oct 2026, picked 10 Oct 2026)
 
 Board: `design-pass-site-2026-10-10-header.png`, from
 `design-pass-site-2026-10-10-header.py`, each option as the header at full size
@@ -544,4 +544,10 @@ regular weight and #555, ink on hover (recommended); 3 no header button on the
 homepage, nav to the right edge, other pages keep it. Found while drawing: the
 header is 75.5px with the button and 69px without, so option 3 needs the header
 fixed at 75.5px to keep the hero ending on the fold.
-Will's pick: (pending)
+Will's pick (10 Oct 2026): "3". Built: the header button is left off the
+homepage only (every other page keeps it), and from md the header is fixed at
+76px, so it is the same height with or without the button and the hero's
+one-screen height in Hero.js reads 76px too. With the button gone the nav's
+right edge lands on the board's right edge (1312px at 1440), the way the logo's
+left edge lands on the headline's. Phones are unchanged; the button was never
+in the phone header. This was the last hero detail.

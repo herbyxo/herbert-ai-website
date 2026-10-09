@@ -14,10 +14,14 @@ export default function Header() {
   return (
     // The homepage hero moved to the paper ground of the "Runs itself" rebuild
     // (6 Oct 2026); the header follows it there until the nav gets its own round.
-    // The hero fills the screen under this header from xl, so its 75.5px height
-    // is written into Hero.js; change both together.
+    // The hero fills the screen under this header from xl, so the header's height
+    // is fixed at 76px from md and written into Hero.js; change both together.
+    // The audit button is left off the homepage (design pass detail 8, option 3,
+    // 10 Oct 2026): the hero fills the first screen with its own audit button and
+    // this header does not follow on scroll, so a second one only ever sat beside
+    // it. The fixed height keeps the header the same with or without the button.
     <header className={pathname === '/' ? 'bg-[#FAFAF8]' : 'bg-cream'}>
-      <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
+      <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5 md:py-0 md:h-[76px]">
         <Link href="/" className="flex items-center gap-2.5 group">
           <svg
             aria-hidden
@@ -51,14 +55,16 @@ export default function Header() {
           <NavLink href="/about">About</NavLink>
         </nav>
 
-        <div className="hidden md:block">
-          <Link
-            href="/pilot#book"
-            className="bg-ink text-cream px-4 py-2 rounded-[8px] text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
-          >
-            Free AI audit <span aria-hidden>→</span>
-          </Link>
-        </div>
+        {pathname !== '/' && (
+          <div className="hidden md:block">
+            <Link
+              href="/pilot#book"
+              className="bg-ink text-cream px-4 py-2 rounded-[8px] text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
+            >
+              Free AI audit <span aria-hidden>→</span>
+            </Link>
+          </div>
+        )}
 
         <button
           className="md:hidden text-ink"
