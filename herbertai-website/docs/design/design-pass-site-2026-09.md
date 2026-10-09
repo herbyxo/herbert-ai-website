@@ -482,7 +482,7 @@ headline and the sub-line (recommended); 3 bigger, 22px in ink. All four keep
 the button on the board's bottom edge (measured 0px).
 Will's pick (7 Oct 2026): "today". 19px #333 under the headline stays.
 
-## [~] Hero detail 5: the button (options 7 Oct 2026)
+## [x] Hero detail 5: the button (options 7 Oct 2026)
 
 Board: `design-pass-site-2026-10-07-button.png`, from
 `design-pass-site-2026-10-07-button.py`. Today: black pill, 16px, no arrow,
@@ -498,7 +498,7 @@ The pill-shaped buttons on the other pages (`AuditButton` in
 and 1280: button bottom 0px from the board's bottom, no overflow at 375, no
 console errors.
 
-## [~] Hero detail 6: the board's type and colours (options 7 Oct 2026)
+## [x] Hero detail 6: the board's type and colours (options 7 Oct 2026)
 
 Board: `design-pass-site-2026-10-07-board-type.png`, from
 `design-pass-site-2026-10-07-board-type.py`. Each option changes one thing.
