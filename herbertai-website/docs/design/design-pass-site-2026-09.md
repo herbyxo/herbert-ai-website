@@ -551,3 +551,23 @@ one-screen height in Hero.js reads 76px too. With the button gone the nav's
 right edge lands on the board's right edge (1312px at 1440), the way the logo's
 left edge lands on the headline's. Phones are unchanged; the button was never
 in the phone header. This was the last hero detail.
+
+## [~] Homepage section 2: How it works (options 10 Oct 2026)
+
+The hero is done (all eight details picked and built, 10 Oct 2026). Board:
+`design-pass-site-2026-10-10-how-it-works.png`, from
+`design-pass-site-2026-10-10-how-it-works.py`, each option drawn in place of
+today's section on the real homepage at 1440 and shown whole in its finished
+state. The options run at `/lab/how-it-works`
+(`src/app/components/lab/HowItWorksOptions.js`), each with a Run again. The
+heading, the audit button and the pricing link are the same in all three.
+Today: the May register, cream, Bricolage, three columns, 971px, 173 words of
+reading. A the first month as a board, one product window from the audit on day
+1 to the first AI employee live on day 18 with the system queued for month 2
+and the price beside each step, 924px, 21 words outside the window; B three
+steps set plain, today's words on paper and Geist, nothing moves, 884px, 176
+words; C each step shows what you get, the audit's written page, the first AI
+employee running and the whole office's board beside the three steps, 1705px,
+131 words of reading plus 156 inside the windows (recommended: it shows the
+product at every step, Will's test for the hero).
+Will's pick: (pending)
