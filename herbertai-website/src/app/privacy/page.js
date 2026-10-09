@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Privacy',
   description:
-    'How Herbert AI handles your information: what the forms collect, how analytics work, and how advertising cookies are used. Plain English, no legalese.',
+    'How Herbert AI handles your information: what the forms collect and who handles it, how analytics work, and how advertising cookies are used. Plain English, no legalese.',
   alternates: { canonical: '/privacy' },
 }
 
@@ -15,7 +15,7 @@ const sections = [
   {
     h: 'What we collect, and why',
     body: [
-      'Forms. If you send a message, a project brief or an audit request, you give us your name, contact details, and whatever you write about your business. Submissions are processed by Web3Forms (a form-delivery service) and arrive as email, and a copy of each enquiry is kept in Herbert AI’s own lead records. That information is used to reply to you and scope the work, nothing else. No marketing list, no newsletter, no reselling.',
+      'Forms. If you send a message, a project brief or an audit request, you give us your name, contact details, and whatever you write about your business. Submissions are delivered as email by Web3Forms (a form-delivery service), and a copy of each enquiry goes into Herbert AI’s own lead records, which are stored with Supabase. An AI model from Anthropic reads the enquiry to sort how urgent it is and what it is about, so the most pressing ones get answered first. A short personal reply is sent by email through Resend, and if you gave a mobile number you may also get a text through Twilio. Anthropic, Resend and Twilio are based in the United States, so those steps happen overseas. That information is used to reply to you and scope the work, nothing else. No marketing list, no newsletter, no reselling.',
       'Where you came from. If you arrive through a link with a campaign tag, say from an ad or an email, the site keeps that tag, the page you landed on and the site that referred you in your browser’s local storage, and sends them with any form you submit. That is how Will can tell which ads and emails lead to enquiries. Clearing this site’s data in your browser removes it.',
       'Email. Mail to hello@herbert-aisolutions.com is forwarded to a private inbox. Correspondence is kept like normal business email.',
       'Analytics. The site uses Vercel Web Analytics and Speed Insights to count visits, pages, and load performance, and keeps its own first-party count of page views (page path, referring site, and device type, nothing identifying). All of it is anonymised and cookieless, and none of it identifies you or follows you to other sites.',
