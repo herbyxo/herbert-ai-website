@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Privacy',
   description:
-    'How Herbert AI handles your information — what the forms collect, how analytics work, and how advertising cookies are used. Plain English, no legalese.',
+    'How Herbert AI handles your information: what the forms collect and who handles it, how analytics work, and how advertising cookies are used. Plain English, no legalese.',
   alternates: { canonical: '/privacy' },
 }
 
@@ -9,15 +9,16 @@ const sections = [
   {
     h: 'Who we are',
     body: [
-      'Herbert AI is an Adelaide-based web design & automation business run by Will Herbert. This page explains what information the site collects and what happens to it. Questions about any of it: hello@herbert-aisolutions.com.',
+      'Herbert AI is an Adelaide business that builds custom software and AI for small businesses, run by Will Herbert. This page explains what information the site collects and what happens to it. Questions about any of it: hello@herbert-aisolutions.com.',
     ],
   },
   {
     h: 'What we collect, and why',
     body: [
-      'Forms. If you send a message or a project brief, you give us your name, contact details, and whatever you write about your business. Submissions are processed by Web3Forms (a form-delivery service) and arrive as email. That information is used to reply to you and scope your project — nothing else. No marketing list, no newsletter, no reselling.',
+      'Forms. If you send a message, a project brief or an audit request, you give us your name, contact details, and whatever you write about your business. Submissions are delivered as email by Web3Forms (a form-delivery service), and a copy of each enquiry goes into Herbert AI’s own lead records, which are stored with Supabase. An AI model from Anthropic reads the enquiry to sort how urgent it is and what it is about, so the most pressing ones get answered first. A short personal reply is sent by email through Resend, and if you gave a mobile number you may also get a text through Twilio. Anthropic, Resend and Twilio are based in the United States, so those steps happen overseas. That information is used to reply to you and scope the work, nothing else. No marketing list, no newsletter, no reselling.',
+      'Where you came from. If you arrive through a link with a campaign tag, say from an ad or an email, the site keeps that tag, the page you landed on and the site that referred you in your browser’s local storage, and sends them with any form you submit. That is how Will can tell which ads and emails lead to enquiries. Clearing this site’s data in your browser removes it.',
       'Email. Mail to hello@herbert-aisolutions.com is forwarded to a private inbox. Correspondence is kept like normal business email.',
-      'Analytics. The site uses Vercel Web Analytics and Speed Insights to count visits, pages, and load performance, and keeps its own first-party count of page views (page path, referring site, and device type — nothing identifying). All of it is anonymised and cookieless — none of it identifies you or follows you to other sites.',
+      'Analytics. The site uses Vercel Web Analytics and Speed Insights to count visits, pages, and load performance, and keeps its own first-party count of page views (page path, referring site, and device type, nothing identifying). All of it is anonymised and cookieless, and none of it identifies you or follows you to other sites.',
       'Advertising. When we run Google Ads campaigns, Google’s conversion-tracking cookie may be set so we can tell whether an ad click led to an enquiry. We do not run remarketing. You can opt out of personalised ads at adssettings.google.com.',
     ],
   },
@@ -73,7 +74,7 @@ export default function Privacy() {
             </div>
           ))}
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted pt-4 border-t border-line">
-            Last updated June 2026
+            Last updated October 2026
           </p>
         </div>
       </section>

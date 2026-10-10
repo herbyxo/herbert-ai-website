@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { INDUSTRIES, Eyebrow, AuditButton } from '../components/site/shared'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: 'Industries | AI employees for accountants, allied health, trades and real estate',
@@ -11,7 +12,7 @@ export const metadata = {
     title: 'Industries · Herbert AI',
     description: 'Accountants, allied health, trades, real estate: the job that costs most and the AI employee that takes it.',
     url: '/industries',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

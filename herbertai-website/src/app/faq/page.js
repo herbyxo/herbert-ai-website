@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: 'FAQ | pricing, timelines & process',
@@ -9,64 +10,64 @@ export const metadata = {
   openGraph: {
     title: 'FAQ | Custom software and AI for small business · Herbert AI',
     description:
-      'Common questions about timelines, pricing, customisation, contracts, and how working with Herbert AI in Adelaide actually goes.',
+      'Common questions about the free AI audit, the pilot, pricing, ownership, and how working with Herbert AI in Adelaide goes.',
     url: '/faq',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 
 const faqs = [
   {
     q: 'What does Herbert AI do?',
-    a: 'Custom systems for small business across three areas — Grow (ads, SEO, landing pages, email + SMS), Automate (voice agents, chatbots, workflow automation, CRM), and Build (websites, dashboards, portals, booking systems). All bespoke, built solo by Will Herbert in Adelaide.',
+    a: 'Herbert AI builds custom software and AI for small businesses, from Adelaide. Most work starts as an AI employee, software that does one office job every day, like chasing documents, answering enquiries or confirming bookings, with someone on your team approving anything that goes out. Bigger builds put the whole operation in one system, with the AI employees working inside it. Will Herbert builds all of it, and you own what gets built.',
   },
   {
-    q: 'How long does a project take?',
-    a: 'A typical website runs 1–2 weeks; a voice agent or chatbot 3–5 days. Every quote comes with a fixed timeline up-front, and most full-stack builds (site + dashboard + automation) ship in 2–4 weeks.',
+    q: 'Who is it for?',
+    a: 'Owner-operated businesses with roughly 3 to 20 staff. Accountants and bookkeepers, allied health, trades with an office, and real estate and property management come first, but the audit works for any office with admin that repeats every week.',
   },
   {
     q: 'How do I get started?',
-    a: '30-minute call, no pitch. You explain the bottleneck, I scope what would actually fix it, then quote it. If it’s worth doing, we ship.',
+    a: 'With the free AI audit. It is 45 minutes with Will on how your business runs, then a written page within two business days that puts a yearly cost on the three jobs taking the most hours and says which one to hand over first. Book it from the how it works page.',
   },
   {
-    q: 'Does the AI voice sound robotic?',
-    a: 'No. The voice agents use natural, current-generation AI voices — conversational, and they adapt mid-call. Most callers don’t realise it’s an AI until you tell them.',
+    q: 'What does it cost?',
+    a: 'The audit is free. The Bottleneck Pilot, one AI employee for one job, is $3,500 fixed and live in 14 days or free. Full builds start from $25,000 and are scoped after the audit, and retainers start from $1,000 a month. If the audit shows the saving would not comfortably cover the price, you are told that instead.',
   },
   {
-    q: 'What if the AI can’t answer something?',
-    a: 'It takes a message politely with the caller’s details and lets them know you’ll get back to them. You can also configure it to transfer the call to your mobile for specific scenarios — emergencies, VIP customers, anything you want.',
+    q: 'How long does it take?',
+    a: 'The pilot is live 14 days after the kickoff chat, or you do not pay. A full build gets one fixed price and a timeline in its written scope, agreed after the audit.',
   },
   {
-    q: 'How does appointment booking work?',
-    a: 'The agent connects to your Google Calendar (or whatever you use). It checks availability in real time, offers suitable slots, books the appointment, and SMSs both sides a confirmation. Two-way sync — if you block out time in your calendar, the agent respects it.',
+    q: 'What is an AI employee?',
+    a: 'Software with one job in your business, say an AI document chaser or an AI front desk assistant. It runs on your real data every day and takes over the repetitive part of a job, not the person doing it. Anything it sends to a customer is approved by someone on your team first.',
   },
   {
-    q: 'How is everything customised to my business?',
-    a: 'I start with a scoping call — services, pricing, common questions, how you actually run things. The voice prompt, chatbot training, dashboard layout, and workflow logic are all tuned to your specifics. No templates.',
+    q: 'Will the AI talk to my customers on its own?',
+    a: 'Only as far as you decide. By default anything going out to a customer is approved by a person first. Where it does answer directly, say an AI receptionist taking calls after hours, it takes a message or passes the call to you when it cannot help, and you set what it is allowed to handle.',
+  },
+  {
+    q: 'Do I have to change my existing software?',
+    a: 'No. The work connects what you already use. Your calendar, inbox, job system and invoicing stay where they are, and the new workflow sits between them and does the repetitive part.',
   },
   {
     q: 'Are there contracts or lock-in?',
-    a: 'No. Builds are fixed-quote projects — you own the system when it’s live, no ongoing fees unless you want hosting or maintenance. Anything ongoing is month-to-month, cancel anytime.',
-  },
-  {
-    q: 'Can I start with one thing and add more later?',
-    a: 'Yes. Most clients start with the bottleneck that’s actually hurting — a voice agent for missed calls, a dashboard to stop the spreadsheet chaos — and add the rest as they see value.',
-  },
-  {
-    q: 'What if I need something that isn’t on the services page?',
-    a: 'That’s the whole point. Most real work is bespoke — n8n workflows wired through AroFlo, a custom intake system, an internal admin tool, an integration nobody’s built yet. Tell me the bottleneck, I’ll quote it.',
-  },
-  {
-    q: 'Do I need any technical knowledge?',
-    a: 'None. I handle everything technical — design, build, hosting, training the AI, ongoing tweaks. You tell me about your business and what’s slowing you down; I deal with the rest.',
+    a: 'No. The pilot includes its first 30 days of hosting and support, then you choose $200 a month care, a move onto your own accounts, or a bigger build. Full builds run on your own accounts, and retainers are month to month.',
   },
   {
     q: 'Who owns the code and data?',
-    a: 'You own the live system and all your data. I keep my own internal tooling and component library (so I can ship faster on the next build), but everything that runs your business is yours — you can take it elsewhere any time.',
+    a: 'You do. Builds run on your own accounts with a perpetual licence to the software, and your data and customer list stay yours, so nothing is held back if you leave. Will keeps his internal tools and component library, which is part of how each build ships faster.',
+  },
+  {
+    q: 'Do I need any technical knowledge?',
+    a: 'None. Will handles the build, the hosting and the AI setup, and walks your team through it when it goes live. You explain how the business runs and what is slowing it down.',
+  },
+  {
+    q: 'What if what I need is not on the site?',
+    a: 'Bring it to the audit. Most of the work is specific to one business anyway, say a custom intake form, an internal admin tool, or two systems that do not talk to each other. If it is worth building it gets a price, and if it is not you are told so.',
   },
   {
     q: 'Where are you based?',
-    a: 'Adelaide, South Australia. Solo. You always talk to me directly — no account manager, no junior dev relay.',
+    a: 'Adelaide, South Australia, working with businesses Australia-wide. You deal with Will directly from the audit to the day it goes live, with no account manager in between.',
   },
 ]
 
@@ -102,7 +103,7 @@ export default function FAQ() {
             Common questions. Straight answers.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[60ch]">
-            Everything you might want to know before working with Herbert AI &mdash; an
+            Everything you might want to know before working with Herbert AI,
             custom software and AI for small businesses, built in Adelaide. If you don&apos;t see
             your question answered below, just{' '}
             <Link href="/contact" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
@@ -138,21 +139,22 @@ export default function FAQ() {
                 className="font-display text-cream"
                 style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
               >
-                Book a 30-minute call.
+                Start with the
                 <br />
-                No pitch.
+                free AI audit.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                You explain the bottleneck. I scope what would actually fix it, then quote it.
-                If it&apos;s worth doing, we ship.
+                Forty five minutes on how your business runs, then a written page on what your
+                admin costs. If there&apos;s a job worth building on, you get a price. If there
+                isn&apos;t, you&apos;re told.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
-                href="/contact"
+                href="/pilot"
                 className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
               >
-                Talk to Will <span aria-hidden>&rarr;</span>
+                Book a free AI audit <span aria-hidden>&rarr;</span>
               </Link>
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
                 Adelaide · solo · no account manager

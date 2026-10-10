@@ -1,37 +1,38 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import MockupLeadForm from '../components/MockupLeadForm'
 import MockupProof from '../components/MockupProof'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: { absolute: 'Web Design Adelaide | Free Homepage Mockup in 48 Hours' },
   description:
-    'Adelaide web design for small business. See your new website before you spend a cent — free homepage mockup in 48 hours, fixed quote, live in weeks. Custom-coded, no templates, no agency retainers.',
+    'Adelaide web design for small business. See your new website before you spend a cent: free homepage mockup in 48 hours, fixed quote, live in weeks. Custom-coded, no templates, no agency retainers.',
   alternates: { canonical: '/web-design-adelaide' },
   openGraph: {
     title: 'Web Design Adelaide · Herbert AI',
     description:
-      'See your new website before you spend a cent — free homepage mockup in 48 hours, fixed quote, live in weeks.',
+      'See your new website before you spend a cent: free homepage mockup in 48 hours, fixed quote, live in weeks.',
     url: '/web-design-adelaide',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 
 const faqs = [
   {
     q: 'How much does a website cost?',
-    a: 'Every site is quoted on scope — a clean five-page site costs a lot less than one with bookings and payments. You’ll get one fixed price with your mockup. No hourly billing, no agency retainers, no surprises.',
+    a: 'Every site is quoted on scope. A clean five-page site costs a lot less than one with bookings and payments. You’ll get one fixed price with your mockup. No hourly billing, no agency retainers, no surprises.',
   },
   {
     q: 'Is the mockup really free?',
-    a: 'Yes. You get a real homepage design for your business within 48 hours, before any money changes hands. If you don’t go ahead, that’s completely fine — it costs you nothing.',
+    a: 'Yes. You get a real homepage design for your business within 48 hours, before any money changes hands. If you don’t go ahead, that’s completely fine, and it costs you nothing.',
   },
   {
     q: 'How long does the full build take?',
-    a: 'Most sites go live in two to four weeks from sign-off. Bigger builds with bookings or dashboards run longer — your quote comes with a real timeline.',
+    a: 'Most sites go live in two to four weeks from sign-off. Bigger builds with bookings or dashboards run longer, and your quote comes with a real timeline.',
   },
   {
     q: 'Who actually does the work?',
-    a: 'Will Herbert — Adelaide-based, solo. You talk directly to the person designing and building your site. No account managers, no handoffs, no offshore team.',
+    a: 'Will Herbert, Adelaide-based and solo. You talk directly to the person designing and building your site. No account managers, no handoffs, no offshore team.',
   },
 ]
 
@@ -56,10 +57,10 @@ export default function WebDesignAdelaide() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
+      {/* ─── Hero, static (above the fold, must paint on first load) ─ */}
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-40 md:pb-28">
-          <Eyebrow>Web design — Adelaide</Eyebrow>
+          <Eyebrow>Web design · Adelaide</Eyebrow>
           <h1
             className="font-display text-ink max-w-[14ch]"
             style={{
@@ -73,7 +74,7 @@ export default function WebDesignAdelaide() {
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
             See your new website before you spend a cent. Tell me about your business and
-            I&apos;ll design a free homepage mockup within 48 hours — your branding, your
+            I&apos;ll design a free homepage mockup within 48 hours: your branding, your
             services, a real design you can click. Like it? You get a fixed quote and a
             live site in weeks. No templates, no agency retainers.
           </p>
@@ -93,7 +94,7 @@ export default function WebDesignAdelaide() {
             <Stat n="48h" label="Mockup turnaround" />
             <Stat n="$0" label="To see your design" />
             <Stat n="2–4 wks" label="Typical build" />
-            <Stat n="100%" label="Yours — you own it" />
+            <Stat n="100%" label="Yours to own" />
           </div>
         </div>
       </section>
@@ -111,17 +112,17 @@ export default function WebDesignAdelaide() {
             <Step
               n="01"
               title="Tell me about your business"
-              body="Two minutes in the form below — what you do, who your customers are, a link to your current site if you have one."
+              body="Two minutes in the form below: what you do, who your customers are, a link to your current site if you have one."
             />
             <Step
               n="02"
               title="Free mockup in 48 hours"
-              body="I design your actual homepage — your name, your services, your branding. A real design you can look at, not a sales call. No payment, no obligation."
+              body="I design your actual homepage: your name, your services, your branding. A real design you can look at, not a sales call. No payment, no obligation."
             />
             <Step
               n="03"
               title="Like it? Fixed quote, live in weeks"
-              body="If you want it built, you get one fixed price and a real timeline. If not, no hard feelings — the mockup cost you nothing."
+              body="If you want it built, you get one fixed price and a real timeline. If not, no hard feelings, and the mockup cost you nothing."
             />
           </div>
         </div>
@@ -141,8 +142,8 @@ export default function WebDesignAdelaide() {
                 </h2>
                 <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[52ch]">
                   Anyone can show you a polished portfolio of someone else&apos;s business.
-                  I&apos;d rather show you yours. The mockup is real design work — your
-                  name, your services, your customers — so the thing you&apos;re judging is
+                  I&apos;d rather show you yours. The mockup is real design work with your
+                  name, your services and your customers, so the thing you&apos;re judging is
                   the actual thing you&apos;d be buying.
                 </p>
                 <p className="mt-5 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[52ch]">
@@ -155,7 +156,7 @@ export default function WebDesignAdelaide() {
               <div className="space-y-5 md:pt-4">
                 <ProofPoint
                   title="Real systems, not just pages"
-                  body="Recent work includes a full custom booking platform — online payments, owner dashboard, SMS reminders, automated review collection — built and shipped solo in weeks."
+                  body="Recent work includes a full custom booking platform with online payments, an owner dashboard, SMS reminders and automated review collection, built and shipped solo in weeks."
                 />
                 <ProofPoint
                   title="One person, start to finish"
@@ -181,12 +182,12 @@ export default function WebDesignAdelaide() {
             Not a template.
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-[1000px]">
-            <Inclusion title="Built custom, loads fast" body="Hand-coded on the same stack the big tech companies use — not Wix, not a WordPress theme. Fast on a phone in a car park." />
+            <Inclusion title="Built custom, loads fast" body="Hand-coded on the same stack the big tech companies use, not Wix, not a WordPress theme. Fast on a phone in a car park." />
             <Inclusion title="Designed to win customers" body="Clear offer, proof, and a way to contact you on every page. A website that earns its keep, not a brochure." />
-            <Inclusion title="Bookings & payments" body="Need appointments, online payments, or a quote form? Built in — full booking systems are part of the kit." />
-            <Inclusion title="Google-ready" body="SEO foundations done properly — titles, speed, structure, local keywords — so Adelaide customers can actually find you." />
+            <Inclusion title="Bookings & payments" body="Need appointments, online payments, or a quote form? Built in. Full booking systems are part of the kit." />
+            <Inclusion title="Google-ready" body="SEO foundations done properly (titles, speed, structure, local keywords) so Adelaide customers can actually find you." />
             <Inclusion title="Hosting & care" body="I host it, watch it, and fix it. You run your business; the site just works." />
-            <Inclusion title="You own everything" body="The site, the code, the domain, the content — yours. No lock-in, no hostage fees." />
+            <Inclusion title="You own everything" body="The site, the code, the domain and the content are all yours. No lock-in, no hostage fees." />
           </div>
         </div>
       </section>
@@ -201,7 +202,7 @@ export default function WebDesignAdelaide() {
             </h2>
             <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[46ch]">
               Fill this in and I&apos;ll personally design your homepage mockup within 48
-              hours — free, no obligation. You&apos;ll get it by email with a fixed quote
+              hours, free and with no obligation. You&apos;ll get it by email with a fixed quote
               if you want the full build.
             </p>
             <p className="mt-6 text-[14px] text-muted">
@@ -209,7 +210,7 @@ export default function WebDesignAdelaide() {
               <a href="tel:+61448111840" className="text-ink font-medium hover:text-green-deep transition-colors">
                 0448 111 840
               </a>{' '}
-              — Will, Adelaide.
+              (Will, Adelaide)
             </p>
           </div>
 
@@ -233,7 +234,7 @@ export default function WebDesignAdelaide() {
         </div>
       </section>
 
-      {/* ─── Final CTA — the one green-flood moment ─── */}
+      {/* ─── Final CTA: the one green-flood moment ─── */}
       <section className="bg-green">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 text-center">
           <h2 className="font-display text-ink mx-auto max-w-[18ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { Eyebrow, AuditButton } from '../components/site/shared'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: 'Pricing | Free AI audit, $3,500 pilot, builds from $25,000',
@@ -11,7 +12,7 @@ export const metadata = {
     title: 'Pricing · Herbert AI',
     description: 'The audit is free. The pilot is $3,500. Builds from $25,000. Retainers from $1,000 a month.',
     url: '/pricing',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 

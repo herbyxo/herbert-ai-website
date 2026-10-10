@@ -1,5 +1,6 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import SourceFields from '../components/SourceFields'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
   title: { absolute: 'How it works: a free AI audit, then working software in 14 days | Herbert AI' },
@@ -11,7 +12,7 @@ export const metadata = {
     description:
       'Forty five minutes with Will, a written page on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
     url: '/pilot',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 
@@ -138,6 +139,12 @@ export default function Pilot() {
               body="Your team starts using it the same day, with a walkthrough so everyone knows how, and a twelve month AI roadmap of the next jobs worth handing over."
             />
           </div>
+          <p className="mt-12 text-[15px] md:text-[16px] text-muted">
+            Want to see the written page before you book?{' '}
+            <a href="/pilot/sample-audit" className="text-ink font-medium hover:text-green-deep transition-colors">
+              Read a sample audit page &rarr;
+            </a>
+          </p>
         </div>
       </section>
 
@@ -199,8 +206,8 @@ export default function Pilot() {
               Book your free AI audit.
             </h2>
             <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[46ch]">
-              Tell us what a normal week looks like and Will calls you within a
-              business day to set a time. Forty five minutes, no preparation, no
+              Tell us what a normal week looks like and Will calls you the same
+              day to set a time. Forty five minutes, no preparation, no
               obligation. If software is not the answer for you, the audit says so.
             </p>
             <p className="mt-6 text-[14px] text-muted">
@@ -218,7 +225,7 @@ export default function Pilot() {
                 <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
                 <input type="hidden" name="from_name" value="Herbert AI · Bottleneck Pilot" />
                 <input type="hidden" name="subject" value="New AI audit request · /pilot" />
-                <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/start/thanks" />
+                <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/pilot/thanks" />
                 <input
                   type="hidden"
                   name="autoresponse_subject"
@@ -227,7 +234,7 @@ export default function Pilot() {
                 <input
                   type="hidden"
                   name="autoresponse_message"
-                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call within a business day to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
+                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call today to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
                 />
                 <SourceFields service="AI audit" />
                 {/* Honeypot for spam */}
@@ -259,7 +266,7 @@ export default function Pilot() {
                   Book my free AI audit <span aria-hidden>&rarr;</span>
                 </button>
                 <p className="text-[12px] text-muted text-center">
-                  No obligation. Reply within a business day.
+                  No obligation. Will calls you the same day.
                 </p>
               </form>
             </div>

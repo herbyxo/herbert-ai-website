@@ -1,17 +1,18 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
-  title: 'Contact | Adelaide Web Design & Automation',
+  title: 'Contact',
   description:
-    'Contact Herbert AI — Adelaide web design & automation. Book a free 30-minute scoping call, no pitch. Email, phone, or Calendly. Usually replies within a day.',
+    'Contact Herbert AI, custom software and AI for small businesses in Adelaide. Send a message, call, or book a free AI audit. Usually replies within a day.',
   alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Contact · Herbert AI',
     description:
-      'Book a free 30-minute scoping call with Herbert AI — Adelaide web design & automation. No pitch — a fixed quote and timeline if it’s worth building.',
+      'Send a message, call, or book a free AI audit with Will Herbert in Adelaide.',
     url: '/contact',
-    images: ['/opengraph-image'],
+    images: [OG_IMAGE],
   },
 }
 
@@ -30,8 +31,8 @@ export default function Contact() {
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
             Herbert AI is custom software and AI for small businesses, built in Adelaide. Send a
-            message or book a free 30-minute call, no pitch. If it&apos;s worth building, I&apos;ll
-            come back with a fixed quote and timeline.
+            message or call, and if you want to know what&apos;s worth building, book the free AI
+            audit: 45 minutes with Will and a written page back within two business days.
           </p>
         </div>
       </section>
@@ -54,12 +55,12 @@ export default function Contact() {
                 <input
                   type="hidden"
                   name="autoresponse_subject"
-                  value="Thanks — Herbert AI got your message"
+                  value="Thanks, Herbert AI got your message"
                 />
                 <input
                   type="hidden"
                   name="autoresponse_message"
-                  value={`Hi — Will here from Herbert AI.\n\nThanks for reaching out. I've got your message and I'll come back within a business day.\n\nIf you remember anything you forgot to include, just reply to this email.\n\n— Will Herbert\nHerbert AI · Adelaide`}
+                  value={`Hi, Will here from Herbert AI.\n\nThanks for reaching out. I've got your message and I'll come back within a business day.\n\nIf you remember anything you forgot to include, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
                 />
                 {/* Honeypot for spam */}
                 <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -105,9 +106,9 @@ export default function Contact() {
                   0448 111 840
                 </a>
               </InfoCard>
-              <InfoCard label="Book a call">
-                <Link href="https://calendly.com/herbert_aisolutions/30min" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-green text-ink px-5 py-2.5 rounded-full text-[14px] font-semibold hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300">
-                  30-min scoping call <span aria-hidden>&rarr;</span>
+              <InfoCard label="Free AI audit">
+                <Link href="/pilot" className="inline-flex items-center gap-2 bg-green text-ink px-5 py-2.5 rounded-full text-[14px] font-semibold hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300">
+                  Book a free AI audit <span aria-hidden>&rarr;</span>
                 </Link>
               </InfoCard>
               <InfoCard label="Based">

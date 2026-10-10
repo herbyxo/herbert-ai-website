@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import RevealOnScroll from '../../components/motion/RevealOnScroll'
 import { INDUSTRIES, RUNGS, Eyebrow, AuditButton } from '../../components/site/shared'
+import { OG_IMAGE } from '@/app/components/site/og'
 
 // One page per target industry: the job, the AI employee, the demo, the audit.
 // The content lives in components/site/shared.js so the home strip and the
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }) {
     title: `${ind.employee} for ${ind.name.toLowerCase()}`,
     description: `${ind.bottleneck} ${ind.employee} takes that job: ${ind.employeeDoes} Built in 14 days after a free AI audit.`,
     alternates: { canonical: `/industries/${ind.slug}` },
-    openGraph: { title: `${ind.employee} for ${ind.name.toLowerCase()} · Herbert AI`, url: `/industries/${ind.slug}`, images: ['/opengraph-image'] },
+    openGraph: { title: `${ind.employee} for ${ind.name.toLowerCase()} · Herbert AI`, url: `/industries/${ind.slug}`, images: [OG_IMAGE] },
   }
 }
 
