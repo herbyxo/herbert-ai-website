@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Hero from './components/Hero'
 import RevealOnScroll from './components/motion/RevealOnScroll'
-import { INDUSTRIES, RUNGS, Eyebrow, AuditButton } from './components/site/shared'
+import { INDUSTRIES, RUNGS, AUDIT_HREF, Eyebrow, AuditButton } from './components/site/shared'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
 // employee, the system it runs in). The three bucket chapters are retired from
@@ -24,41 +24,47 @@ export default function Home() {
   )
 }
 
+// How it works, rebuilt 10 Oct 2026 for the "Runs itself" charter: design pass
+// option B, the three steps set plain (Will: "B"). Today's steps and words on
+// the paper ground in Geist, columns ruled at the top, the audit button matching
+// the hero's. Nothing moves: on this site motion means a job finishing, and
+// this section has no jobs on it. Options A and C live in
+// components/lab/HowItWorksOptions.js until the lab is removed, then in git
+// history.
 function HowItWorks() {
   return (
-    <section className="bg-cream-alt">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-        <RevealOnScroll className="max-w-[44ch] mb-14">
-          <div>
-            <Eyebrow>How it works</Eyebrow>
-            <h2
-              className="font-display text-ink"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}
-            >
-              Start with the job that costs you most.
-            </h2>
-          </div>
-        </RevealOnScroll>
-        <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
-          {RUNGS.map((r) => (
-            <RevealOnScroll key={r.n}>
-              <div>
-                <div className="font-mono text-[12px] tracking-[0.18em] text-green-deep mb-4">{r.n}</div>
-                <h3 className="text-[22px] md:text-[24px] font-semibold tracking-[-0.01em] text-ink mb-3">{r.title}</h3>
-                <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{r.body}</p>
-                <div className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-ink">{r.price}</div>
-              </div>
-            </RevealOnScroll>
+    <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
+        <div className="mb-12 md:mb-16">
+          <p className="text-[15px] font-medium text-[#555] mb-4">How it works</p>
+          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+            Start with the job that costs you most.
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
+          {RUNGS.map((r, i) => (
+            <div key={r.n} className="border-t border-[#111]/15 pt-6">
+              <p className="text-[15px] font-medium text-[#777] mb-5">Step {i + 1}</p>
+              <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-3">{r.title}</h3>
+              <p className="text-[16px] leading-[1.55] text-[#444]">{r.body}</p>
+              <p className="mt-5 text-[14px] font-medium">{r.price}</p>
+            </div>
           ))}
         </div>
-        <RevealOnScroll className="mt-14 flex flex-wrap items-center gap-6">
-          <div className="flex flex-wrap items-center gap-6">
-            <AuditButton />
-            <Link href="/pricing" className="text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
-              See how it&apos;s priced
-            </Link>
-          </div>
-        </RevealOnScroll>
+        <div className="mt-12 md:mt-16 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a
+            href={AUDIT_HREF}
+            className="inline-flex items-center gap-2 bg-[#111] text-white rounded-[10px] px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors"
+          >
+            Book a free AI audit <span aria-hidden>&rarr;</span>
+          </a>
+          <Link
+            href="/pricing"
+            className="text-[15px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
+          >
+            See how it&apos;s priced
+          </Link>
+        </div>
       </div>
     </section>
   )

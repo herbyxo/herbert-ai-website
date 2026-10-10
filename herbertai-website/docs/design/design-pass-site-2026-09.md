@@ -552,7 +552,7 @@ right edge lands on the board's right edge (1312px at 1440), the way the logo's
 left edge lands on the headline's. Phones are unchanged; the button was never
 in the phone header. This was the last hero detail.
 
-## [~] Homepage section 2: How it works (options 10 Oct 2026)
+## [x] Homepage section 2: How it works (options and pick 10 Oct 2026)
 
 The hero is done (all eight details picked and built, 10 Oct 2026). Board:
 `design-pass-site-2026-10-10-how-it-works.png`, from
@@ -570,4 +570,9 @@ words; C each step shows what you get, the audit's written page, the first AI
 employee running and the whole office's board beside the three steps, 1705px,
 131 words of reading plus 156 inside the windows (recommended: it shows the
 product at every step, Will's test for the hero).
-Will's pick: (pending)
+Will's pick (10 Oct 2026): "B". Built in `src/app/page.js` as drawn: paper
+ground with a hairline under the hero, the heading in Geist bold (36 to 52px,
+left edge on the hero headline's at 128px), three columns ruled at the top with
+"Step 1" to "Step 3", today's words from `RUNGS`, the audit button matching the
+hero's, and no reveal animation. 884px tall at 1440; stacked at 375 with no
+overflow. Options A and C stay in the lab until it is removed.
