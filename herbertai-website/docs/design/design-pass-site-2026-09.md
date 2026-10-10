@@ -576,3 +576,19 @@ left edge on the hero headline's at 128px), three columns ruled at the top with
 "Step 1" to "Step 3", today's words from `RUNGS`, the audit button matching the
 hero's, and no reveal animation. 884px tall at 1440; stacked at 375 with no
 overflow. Options A and C stay in the lab until it is removed.
+
+## [~] Homepage section 3: The work (options 10 Oct 2026)
+
+Board: `design-pass-site-2026-10-10-the-work.png`, from
+`design-pass-site-2026-10-10-the-work.py`, each option drawn in place of today's
+section on the real homepage at 1440 and shown whole. Options at
+`/lab/the-work` (`src/app/components/lab/WorkOptions.js`); nothing moves. The
+two screens are the ones /work already uses (the property dashboard, live with
+example data, and the accountant demo); the brokerage hub is never a picture
+(de-branded only, gated on the client) and the marketing engine is internal, so
+both stay as words. Today: the May register, cream, Bricolage, four white
+cards with a green dot on every tag, 977px. A two screens, two lines, 1210px
+(recommended: the section's job is proving the boards above are real); B four
+systems set plain as a ruled list like How it works, 788px, no pictures; C the
+live dashboard large with the other three beside it, 1099px.
+Will's pick: (pending)

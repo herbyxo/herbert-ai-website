@@ -5,12 +5,14 @@ import NowHiring from '../../components/lab/NowHiring'
 import RunsItself from '../../components/lab/RunsItself'
 import RunsItselfHero from '../../components/lab/RunsItselfHero'
 import HowItWorksOptions from '../../components/lab/HowItWorksOptions'
+import WorkOptions from '../../components/lab/WorkOptions'
 
 const MAP = {
   'concept-now-hiring': NowHiring,
   'concept-runs-itself': RunsItself,
   'runs-itself-hero': RunsItselfHero,
   'how-it-works': HowItWorksOptions,
+  'the-work': WorkOptions,
 }
 
 export function generateStaticParams() {

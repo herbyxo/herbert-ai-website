@@ -9,6 +9,7 @@ export const REFS = [
   { slug: 'concept-runs-itself', name: 'Concept: Runs itself', url: 'from Herbert AI, not a reference' },
   { slug: 'runs-itself-hero', name: 'Runs itself: hero options', url: 'A, B and C, scroll down' },
   { slug: 'how-it-works', name: 'Runs itself: How it works options', url: 'A, B and C, scroll down' },
+  { slug: 'the-work', name: 'Runs itself: The work options', url: 'A, B and C, scroll down' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'
