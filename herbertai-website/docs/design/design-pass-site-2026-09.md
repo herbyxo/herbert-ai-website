@@ -625,11 +625,21 @@ about who builds it rather than a step: the founder note on home, /about, the
 FAQ answers on who builds and who you deal with, the reply previews on the
 forms, and "call Will" on the demo pages. 856px at 1440, no overflow at 375.
 
-## [~] How it works detail 2: the heading size (options 11 Oct 2026)
+## [x] How it works detail 2: the heading size (options and pick 11 Oct 2026)
 
 Board: `design-pass-site-2026-10-11-hiw-heading.png`, from
 `design-pass-site-2026-10-11-hiw-heading.py`, the whole section at 1440 with
 only the heading changed. Today 52px on two lines (the hero is 72px, the step
 titles 24px). 1 smaller, 40px on two lines, the hero staying the only big type
 (recommended); 2 bigger, 64px on two lines; 3 one line, 44px across the width.
+Will's pick (11 Oct 2026): "today". The heading stays at 52px on two lines;
+nothing to build.
+
+## [~] How it works detail 3: the step label and the price line (options 11 Oct 2026)
+
+Board: `design-pass-site-2026-10-11-hiw-label-price.png`, from
+`design-pass-site-2026-10-11-hiw-label-price.py`, the three steps close up at
+1440. Today "Step 1" in grey above each title and the price in ink under the
+facts. 1 price as the closing ruled line, a touch bolder, so each column is one
+list (recommended); 2 price under the title in grey; 3 no step label.
 Will's pick: (pending)
