@@ -591,4 +591,24 @@ cards with a green dot on every tag, 977px. A two screens, two lines, 1210px
 (recommended: the section's job is proving the boards above are real); B four
 systems set plain as a ruled list like How it works, 788px, no pictures; C the
 live dashboard large with the other three beside it, 1099px.
+Will's pick: (pending). Paused 11 Oct 2026: Will, "are we not going to go
+through the things in section 2 ?". The section-level pick is followed by the
+section's details, as in the hero round; this resumes after How it works'
+details.
+
+## How it works, details (from 11 Oct 2026)
+
+The details of the built option B, one board each, the way the hero went:
+1 the words, 2 the heading size, 3 the step label and price line, 4 the
+closing button and link, 5 the spacing.
+
+## [~] How it works detail 1: the words (options 11 Oct 2026)
+
+Board: `design-pass-site-2026-10-11-hiw-words.png`, from
+`design-pass-site-2026-10-11-hiw-words.py`, the three steps close up at 1440
+with only each paragraph changed. Today: the old site's words, 48, 32 and 40,
+120 in all. 1 trimmed, two short sentences each keeping what happens, how long
+and what they get, 71 words (recommended); 2 one line each, 32 words, losing the
+audit's "three jobs, in your own figures" and the pilot's approval line; 3 three
+facts each as short ruled lines, 55 words.
 Will's pick: (pending)
