@@ -602,7 +602,7 @@ The details of the built option B, one board each, the way the hero went:
 1 the words, 2 the heading size, 3 the step label and price line, 4 the
 closing button and link, 5 the spacing.
 
-## [~] How it works detail 1: the words (options 11 Oct 2026)
+## [x] How it works detail 1: the words (options and pick 11 Oct 2026)
 
 Board: `design-pass-site-2026-10-11-hiw-words.png`, from
 `design-pass-site-2026-10-11-hiw-words.py`, the three steps close up at 1440
@@ -611,4 +611,16 @@ with only each paragraph changed. Today: the old site's words, 48, 32 and 40,
 and what they get, 71 words (recommended); 2 one line each, 32 words, losing the
 audit's "three jobs, in your own figures" and the pilot's approval line; 3 three
 facts each as short ruled lines, 55 words.
-Will's pick: (pending)
+Will's pick (11 Oct 2026): "3 - i dont like the use of the language where it
+says 45 minutes with Will - id prefer the copy to be generalised across the
+board. so maybe something like 45 minutes spent auditing your business or
+something". Built: each step is three ruled facts from a `facts` field on
+`RUNGS` (components/site/shared.js); the audit's first fact reads "45 minutes
+auditing your business". Across the board: every "45 minutes with Will" or
+"Forty five minutes with Will" in site copy now says what happens instead (the
+`RUNGS` body, /contact, /faq, /pilot description and FAQ, /pricing twice, the
+industry pages and the demo pages), and the /pilot FAQ answer no longer has Will
+as the one who quotes ("you get a quote for the pilot"). Left as they are, being
+about who builds it rather than a step: the founder note on home, /about, the
+FAQ answers on who builds and who you deal with, the reply previews on the
+forms, and "call Will" on the demo pages. 856px at 1440, no overflow at 375.

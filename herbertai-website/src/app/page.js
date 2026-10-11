@@ -25,9 +25,12 @@ export default function Home() {
 }
 
 // How it works, rebuilt 10 Oct 2026 for the "Runs itself" charter: design pass
-// option B, the three steps set plain (Will: "B"). Today's steps and words on
-// the paper ground in Geist, columns ruled at the top, the audit button matching
-// the hero's. Nothing moves: on this site motion means a job finishing, and
+// option B, the three steps set plain (Will: "B"). The steps on the paper
+// ground in Geist, columns ruled at the top, the audit button matching the
+// hero's. Detail 1, the words (11 Oct 2026): three short facts per step instead
+// of a paragraph (Will: "3"), and the copy says what happens, never who does it
+// ("45 minutes auditing your business", not "45 minutes with Will").
+// Nothing moves: on this site motion means a job finishing, and
 // this section has no jobs on it. Options A and C live in
 // components/lab/HowItWorksOptions.js until the lab is removed, then in git
 // history.
@@ -46,7 +49,11 @@ function HowItWorks() {
             <div key={r.n} className="border-t border-[#111]/15 pt-6">
               <p className="text-[15px] font-medium text-[#777] mb-5">Step {i + 1}</p>
               <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-3">{r.title}</h3>
-              <p className="text-[16px] leading-[1.55] text-[#444]">{r.body}</p>
+              <ul>
+                {r.facts.map((f) => (
+                  <li key={f} className="text-[16px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
+                ))}
+              </ul>
               <p className="mt-5 text-[14px] font-medium">{r.price}</p>
             </div>
           ))}

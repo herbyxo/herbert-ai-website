@@ -25,7 +25,7 @@ const rungs = [
     title: 'Free AI audit',
     price: 'Free',
     lines: [
-      'Forty five minutes with Will on how your business runs.',
+      '45 minutes auditing how your business runs.',
       'A written page within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap.',
       'Yours to keep whether or not you go further.',
     ],
@@ -185,7 +185,7 @@ export default function Pricing() {
                 is costing you.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                Forty five minutes with Will, a written page back within two business days,
+                45 minutes auditing your business, a written page back within two business days,
                 and no obligation to build anything.
               </p>
             </div>

@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: 'Free AI audit · Herbert AI',
     description:
-      'Forty five minutes with Will, a written page on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
+      '45 minutes auditing your business, a written page on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
     url: '/pilot',
     images: [OG_IMAGE],
   },
@@ -19,7 +19,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is the AI audit, and why is it free?',
-    a: "Forty five minutes with Will on how your business runs, then a written page within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap. It's free because it's how Will finds out whether there's a job worth building on. If there is, he quotes the pilot. If there isn't, he says so, and the page is yours either way.",
+    a: "45 minutes auditing how your business runs, then a written page within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap. It's free because it shows whether there's a job worth building on. If there is, you get a quote for the pilot. If there isn't, you're told so, and the page is yours either way.",
   },
   {
     q: 'Do I have to buy the pilot after the audit?',

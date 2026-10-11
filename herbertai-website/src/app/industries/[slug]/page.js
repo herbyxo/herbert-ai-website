@@ -163,7 +163,7 @@ export default async function IndustryPage({ params }) {
                 Find out what it costs you.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                Forty five minutes with Will, a written page back within two business days, no
+                45 minutes auditing your business, a written page back within two business days, no
                 obligation.
               </p>
             </div>
