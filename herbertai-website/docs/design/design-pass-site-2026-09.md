@@ -662,7 +662,7 @@ it's priced" alone, the audit button removed (the hero's is one screen up and
 the page ends on one). "keep": the prices stay on all three steps, including
 "From $25,000" on the homepage. 828px at 1440, no overflow at 375.
 
-## [~] How it works detail 5: spacing (options 12 Oct 2026)
+## [x] How it works detail 5: spacing (options and pick 12 Oct 2026)
 
 Board: `design-pass-site-2026-10-12-hiw-spacing.png`, from
 `design-pass-site-2026-10-12-hiw-spacing.py`, the 1440x900 screen on scrolling
@@ -672,4 +672,10 @@ to link / below the link). Today 129 / 64 / 66 / 131px, 828px tall. 1 tighter,
 3 one screen like the hero, content centred, 900px at that screen
 (recommended). 2 and 3 look almost alike at 900px tall and differ on other
 screens.
-Will's pick: (pending)
+Will's pick (12 Oct 2026): "1 - i think the hero is the main, and then it tells
+a sort of story with the next few sections, so they all show a bit of the next
+section". Built: 96px above and below, 48px heading to steps and steps to link,
+at every width (the md overrides dropped). 732px at 1440; on scrolling to it,
+168px of the next section shows under it. Phones unchanged. How it works is
+done; The work resumes. The rule for the sections after it: sized so each
+shows a bit of the next, the hero alone filling one screen.

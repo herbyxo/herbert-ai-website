@@ -31,7 +31,10 @@ export default function Home() {
 // of a paragraph (Will: "3"), and the copy says what happens, never who does it
 // ("45 minutes auditing your business", not "45 minutes with Will"). Detail 4,
 // the close (12 Oct 2026): the pricing link alone (Will: "2"); the hero's audit
-// button is one screen up and the page ends on one.
+// button is one screen up and the page ends on one. Detail 5, spacing (12 Oct
+// 2026): tighter, 96px above and below and 48px inside (Will: "1 - i think the
+// hero is the main, and then it tells a sort of story with the next few
+// sections, so they all show a bit of the next section").
 // Nothing moves: on this site motion means a job finishing, and
 // this section has no jobs on it. Options A and C live in
 // components/lab/HowItWorksOptions.js until the lab is removed, then in git
@@ -39,8 +42,8 @@ export default function Home() {
 function HowItWorks() {
   return (
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="mb-12 md:mb-16">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
+        <div className="mb-12">
           <p className="text-[15px] font-medium text-[#555] mb-4">How it works</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
             Start with the job that costs you most.
@@ -60,7 +63,7 @@ function HowItWorks() {
             </div>
           ))}
         </div>
-        <div className="mt-12 md:mt-16">
+        <div className="mt-12">
           <Link
             href="/pricing"
             className="text-[15px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
