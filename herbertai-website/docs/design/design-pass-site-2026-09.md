@@ -661,3 +661,15 @@ Will's pick (12 Oct 2026): "2 and keep". Built: the section closes on "See how
 it's priced" alone, the audit button removed (the hero's is one screen up and
 the page ends on one). "keep": the prices stay on all three steps, including
 "From $25,000" on the homepage. 828px at 1440, no overflow at 375.
+
+## [~] How it works detail 5: spacing (options 12 Oct 2026)
+
+Board: `design-pass-site-2026-10-12-hiw-spacing.png`, from
+`design-pass-site-2026-10-12-hiw-spacing.py`, the 1440x900 screen on scrolling
+to the section, clean and measured (above the label / heading to steps / steps
+to link / below the link). Today 129 / 64 / 66 / 131px, 828px tall. 1 tighter,
+97 / 48 / 50 / 99px, 732px; 2 more air, 161 / 80 / 66 / 163px, 908px, fixed;
+3 one screen like the hero, content centred, 900px at that screen
+(recommended). 2 and 3 look almost alike at 900px tall and differ on other
+screens.
+Will's pick: (pending)
