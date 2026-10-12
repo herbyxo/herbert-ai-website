@@ -635,11 +635,26 @@ titles 24px). 1 smaller, 40px on two lines, the hero staying the only big type
 Will's pick (11 Oct 2026): "today". The heading stays at 52px on two lines;
 nothing to build.
 
-## [~] How it works detail 3: the step label and the price line (options 11 Oct 2026)
+## [x] How it works detail 3: the step label and the price line (options 11 Oct 2026, picked 12 Oct 2026)
 
 Board: `design-pass-site-2026-10-11-hiw-label-price.png`, from
 `design-pass-site-2026-10-11-hiw-label-price.py`, the three steps close up at
 1440. Today "Step 1" in grey above each title and the price in ink under the
 facts. 1 price as the closing ruled line, a touch bolder, so each column is one
 list (recommended); 2 price under the title in grey; 3 no step label.
+Will's pick (12 Oct 2026): "today - should the prices even be shown? is that
+good to do or not". Label and price stay as they are. On the question: the
+16 Sep decision (publish, small number first; `product/research/markdown/
+identity-2026-09-16/pricing-and-the-small-first-yes.md`) still stands, since
+its check (Harry's "Price" reason, reviewed after ten audits) has not run. The
+softer middle way offered: drop "$25,000" from the homepage's step 3 only and
+leave it on /pricing, where the "you will be told" sentence sits.
+
+## [~] How it works detail 4: the closing button and link (options 12 Oct 2026)
+
+Board: `design-pass-site-2026-10-12-hiw-close.png`, from
+`design-pass-site-2026-10-12-hiw-close.py`, the section from the steps down at
+1440. Today the black audit button with "See how it's priced" beside it
+(recommended: both next steps after the prices). 1 button only; 2 link only;
+3 both as links, the audit a bold underlined link.
 Will's pick: (pending)
