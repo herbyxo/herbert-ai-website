@@ -595,6 +595,26 @@ Will's pick: (pending). Paused 11 Oct 2026: Will, "are we not going to go
 through the things in section 2 ?". The section-level pick is followed by the
 section's details, as in the hero round; this resumes after How it works'
 details.
+Will's pick (13 Oct 2026): "C - i think we need to have a different visual, and
+what does clicking actually take you to". Clicked through: the dashboard opens
+dashboard.herbert-aisolutions.com in a new tab (Northbridge Property Co.,
+mock data, no login), whose Requests page shows an orange developer line
+("Running in mock data mode. Set CLIENT API env vars...") and requests dated
+late May; the demo opens /demo/accountants, playing; the hub and the marketing
+engine both open /work, where they are paragraphs with no picture.
+
+## [~] The work, option C's large visual (options 13 Oct 2026)
+
+Board: `design-pass-site-2026-10-13-work-visual.png`, from
+`design-pass-site-2026-10-13-work-visual.py`; running at `/lab/the-work-visual`
+(`src/app/components/lab/WorkVisualOptions.js`), C's layout with the tighter
+spacing. 1 the accountant demo playing in a frame, the dashboard moving into
+the list (recommended: on this site, so nothing goes stale, and it moves the
+way the hero does); 2 the dashboard's requests table as a still without the
+warning (needs the warning and dates fixed in the dashboard first); 3 the
+property office drawn as a board in the site's style, clicking to the real
+dashboard.
+Will's pick: (pending)
 
 ## How it works, details (from 11 Oct 2026)
 
