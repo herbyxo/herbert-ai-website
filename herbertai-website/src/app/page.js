@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Hero from './components/Hero'
 import RevealOnScroll from './components/motion/RevealOnScroll'
-import { INDUSTRIES, RUNGS, AUDIT_HREF, Eyebrow, AuditButton } from './components/site/shared'
+import { INDUSTRIES, RUNGS, Eyebrow, AuditButton } from './components/site/shared'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
 // employee, the system it runs in). The three bucket chapters are retired from
@@ -29,7 +29,9 @@ export default function Home() {
 // ground in Geist, columns ruled at the top, the audit button matching the
 // hero's. Detail 1, the words (11 Oct 2026): three short facts per step instead
 // of a paragraph (Will: "3"), and the copy says what happens, never who does it
-// ("45 minutes auditing your business", not "45 minutes with Will").
+// ("45 minutes auditing your business", not "45 minutes with Will"). Detail 4,
+// the close (12 Oct 2026): the pricing link alone (Will: "2"); the hero's audit
+// button is one screen up and the page ends on one.
 // Nothing moves: on this site motion means a job finishing, and
 // this section has no jobs on it. Options A and C live in
 // components/lab/HowItWorksOptions.js until the lab is removed, then in git
@@ -58,13 +60,7 @@ function HowItWorks() {
             </div>
           ))}
         </div>
-        <div className="mt-12 md:mt-16 flex flex-wrap items-center gap-x-6 gap-y-4">
-          <a
-            href={AUDIT_HREF}
-            className="inline-flex items-center gap-2 bg-[#111] text-white rounded-[10px] px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors"
-          >
-            Book a free AI audit <span aria-hidden>&rarr;</span>
-          </a>
+        <div className="mt-12 md:mt-16">
           <Link
             href="/pricing"
             className="text-[15px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"

@@ -650,11 +650,14 @@ its check (Harry's "Price" reason, reviewed after ten audits) has not run. The
 softer middle way offered: drop "$25,000" from the homepage's step 3 only and
 leave it on /pricing, where the "you will be told" sentence sits.
 
-## [~] How it works detail 4: the closing button and link (options 12 Oct 2026)
+## [x] How it works detail 4: the closing button and link (options and pick 12 Oct 2026)
 
 Board: `design-pass-site-2026-10-12-hiw-close.png`, from
 `design-pass-site-2026-10-12-hiw-close.py`, the section from the steps down at
 1440. Today the black audit button with "See how it's priced" beside it
 (recommended: both next steps after the prices). 1 button only; 2 link only;
 3 both as links, the audit a bold underlined link.
-Will's pick: (pending)
+Will's pick (12 Oct 2026): "2 and keep". Built: the section closes on "See how
+it's priced" alone, the audit button removed (the hero's is one screen up and
+the page ends on one). "keep": the prices stay on all three steps, including
+"From $25,000" on the homepage. 828px at 1440, no overflow at 375.
