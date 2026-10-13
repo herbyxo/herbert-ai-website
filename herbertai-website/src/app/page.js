@@ -46,7 +46,7 @@ function HowItWorks() {
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
         <div className="mb-12">
-          <p className="text-[15px] font-medium text-[#555] mb-4">How it works</p>
+          <p className="text-[15px] font-medium text-[#555] mb-4">How It Works</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
             Start with the job that costs you most.
           </h2>
@@ -136,7 +136,7 @@ function Proof() {
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
         <div className="mb-12">
-          <p className="text-[15px] font-medium text-[#555] mb-4">The work</p>
+          <p className="text-[15px] font-medium text-[#555] mb-4">The Work</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
             The systems, not the slides.
           </h2>

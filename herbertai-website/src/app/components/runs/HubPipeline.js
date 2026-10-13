@@ -96,9 +96,11 @@ function Card({ f }) {
   )
 }
 
-export default function HubPipeline() {
+// still: render the finished morning at once (see EngineDashboard).
+export default function HubPipeline({ still = false }) {
   const ref = useRef(null)
-  const n = useSteps(useInView(ref, 0.25), TOTAL)
+  const run = useSteps(useInView(ref, 0.25), TOTAL)
+  const n = still ? TOTAL : run
   const files = filesAt(n)
   const drafts = DRAFTS.filter((d) => n >= d.at).map((d) => ({ ...d, s: n < d.done ? 'waiting' : 'done' }))
   const waitingClients = files.filter((f) => f.col === 0).length

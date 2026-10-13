@@ -82,9 +82,12 @@ function Chart({ leads }) {
   )
 }
 
-export default function EngineDashboard() {
+// still: render the finished morning at once, for places where the page
+// stays calm until someone interacts (The work on the homepage).
+export default function EngineDashboard({ still = false }) {
   const ref = useRef(null)
-  const n = useSteps(useInView(ref, 0.25), TOTAL)
+  const run = useSteps(useInView(ref, 0.25), TOTAL)
+  const n = still ? TOTAL : run
   const stateOf = (f) => (n < f.at ? null : f.done && n < f.done ? 'waiting' : 'done')
   const feed = FEED.filter((f) => stateOf(f))
   const leadIn = n >= 8

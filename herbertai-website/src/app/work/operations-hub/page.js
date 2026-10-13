@@ -21,7 +21,7 @@ export default function OperationsHub() {
   if (!hubExampleShown()) notFound()
   return (
     <ExampleSystem
-      tag="The work · currently building"
+      tag="The Work · Currently Building"
       title="An operations hub for a finance brokerage"
       sub="Every client file on one board, with who is waiting on what. The chasing happens on its own, and nothing reaches a client until a person has approved it."
       facts={[

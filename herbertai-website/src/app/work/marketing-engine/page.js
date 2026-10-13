@@ -24,7 +24,7 @@ export const metadata = {
 export default function MarketingEngine() {
   return (
     <ExampleSystem
-      tag="The work · built"
+      tag="The Work · Built"
       title="A marketing engine"
       sub="Ads that run themselves against real results: written, tested and paused by the system, with anything new held for the owner to approve."
       facts={[
