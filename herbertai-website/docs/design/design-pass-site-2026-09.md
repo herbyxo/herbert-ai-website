@@ -826,3 +826,19 @@ has an API, four to six buildable AI employees, what the full system would look
 like, who already sells to them, and the most convincing visual. The Work,
 Industries and the AI employees roster are redrawn from the synthesis.
 
+## Ideation round (13 Oct 2026)
+
+Will, after the research: "i was thinking you would ideate or something as
+well, based off the research into the different industries, and then come up
+with ideas for different AI employees, as opposed to just doing what is already
+in the industry". Five ideators ran in parallel on the research, seven lenses
+each, 30 ideas kept, judged across industries in
+`product/research/markdown/industries-2026-10-13-ideas.md`. Top five: Gus ·
+Recoveries (property), Vic · Margins (trades), Fern · Scope (finance), Rita ·
+Rebookings (hospitality), Joy · Milestones (health); Ray · Promises works in
+every industry. Proposed homepage roster: those six, with the conventional leads
+(Hazel, Emma, Max, Clara, Nora) and the first six names on the industry pages.
+The visual pattern for every one: one line from a real record lighting up, one
+card with one approve, one counter moving.
+Will's pick on the roster: (pending)
+
