@@ -95,10 +95,19 @@ Each AI employee has a plain first name with its job always beside it, and a
 7x7 dot-grid avatar drawn from its job; the dots are ink at rest, light as it
 works, amber while it waits on a person and green when the job is done, so the
 avatar is also its status light. Will, 13 Oct 2026: "job names plus dot
-avatars - something like Steve - Front Desk"; names approved with "names are
-good. instead of Ruby can u do Emma". The roster: Steve · Front Desk, Penny ·
-Document Chaser, Max · Quote Follow-up, Emma · Maintenance, Archie · Invoice
-Chaser, Tess · Bookings. Clients name their own at kickoff.
+avatars - something like Steve - Front Desk". Clients name their own at
+kickoff.
+
+The homepage roster (Will, 14 Oct 2026, "yes, the names u have are good") is
+the original idea from each industry, judged in
+`product/research/markdown/industries-2026-10-13-ideas.md`: Gus · Recoveries
+(Property), Vic · Margins (Trades), Fern · Scope (Finance), Rita · Rebookings
+(Hospitality), Joy · Milestones (Health), and Ray · Promises, which works in
+every industry. The first roster (Steve · Front Desk, Penny · Document Chaser,
+Max · Quote Follow-up, Emma · Maintenance, Archie · Invoice Chaser, Tess ·
+Bookings) moves to the industry pages and inside the full systems; Tess
+retires. Every employee's visual has one shape: one line from a real record
+lighting up, one card with one thing to approve, one counter moving.
 
 ## Nothing is claimed, things happen
 

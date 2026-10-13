@@ -840,5 +840,6 @@ every industry. Proposed homepage roster: those six, with the conventional leads
 (Hazel, Emma, Max, Clara, Nora) and the first six names on the industry pages.
 The visual pattern for every one: one line from a real record lighting up, one
 card with one approve, one counter moving.
-Will's pick on the roster: (pending)
+Will's pick on the roster (14 Oct 2026): "yes, the names u have are good".
+Gus, Vic, Fern, Rita, Joy, Ray. He then asked for the homepage sections.
 
