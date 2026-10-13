@@ -735,3 +735,31 @@ and the homepage keeps the plain /work link (checked with a production build);
 preview and local show it. It goes live when the client has said a de-branded
 demo is fine (M2.1). Screens: `assets-2026-10-13/example-*.png`. Both pages get
 their own detail pass next.
+
+## Foundations round (13 Oct 2026)
+
+Will paused the section pass to settle the site's foundations: "the point of
+the page is to look visually appealing and grabs the eye, flashy and cool
+visuals ... lets discuss the foundations and skeleton of the website". Settled
+so far, all 13 Oct 2026:
+- Industries, named as industries: Health, Property, Trades, Hospitality,
+  Finance ("yes to the names"). Slugs follow, with redirects; /demo/* links
+  stay.
+- AI employees are the site's unit: a homepage roster and a page replacing
+  "What gets built" ("yes to AI employees").
+- Each AI employee has a plain first name beside its job and a dot-grid avatar
+  ("job names plus dot avatars - something like Steve - Front Desk"); the
+  avatar's dots light green when a job finishes and amber while it waits on a
+  person. Clients name their own at kickoff ("we can have clients name their
+  AI employee so it feels personal to them").
+- "Bottleneck Pilot" is renamed "your first AI employee" across the site,
+  skills and sales docs ("first AI employee"); contracts may still say pilot.
+- Motion: three levels built to judge by feel at `/lab/motion`
+  (`src/app/components/lab/MotionDemo.js`): 1 as the charter is now, 2 motion
+  shows the system working (cards play their job, counters run, Approve gets
+  pressed), 3 one scroll scene (the section holds and a tilted screen plays
+  each employee's job, a cursor pressing Approve). Recommended 2 everywhere
+  and 3 at most once a page.
+Will's pick on motion: (pending). Names Steve, Penny, Max, Ruby, Archie, Tess
+are placeholders for his approval.
+
