@@ -772,3 +772,16 @@ that each play their job once on view. Checked at 1440 (headless, through the
 scene), 600 (cards play through) and 375 (no overflow). Screen:
 `assets-2026-10-13/home-employees-scene.png`. Its details come next.
 
+## AI employees section: first round of tweaks (13 Oct 2026)
+
+Will: "yeah does feel a bit long, and i dont like how for each employee u have
+to keep scrolling for the jobs queue to keep going, maybe we can scroll through
+each employee, and the jobs queue automatically activates? i was thinking going
+from the hero to the next section having graphic animations again is a bit much
+as well? idk what do u think". Agreed and built: scrolling now only picks the
+employee and the active one's day plays by itself (650ms a step: the avatar
+works, three lines, the cursor presses Approve, green); the scroll is 33vh an
+employee, about two screens in all (1782px at 1440x900, down from 2340); and
+the section moves after How it works, so the page goes moving, calm, moving,
+calm (Hero, How it works, AI employees, The work).
+

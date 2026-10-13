@@ -3,12 +3,15 @@ import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useInView, useMotionValueEvent, useReducedMotion, useScroll } from 'framer-motion'
 import { Avatar, EMPLOYEES, StateLine } from './employees'
 
-// Homepage section 2, the AI employees roster (13 Oct 2026). Will picked motion
+// Homepage section 3, the AI employees roster (13 Oct 2026). Will picked motion
 // "2 across the site plus 3 on the homepage": this is the homepage's one scroll
 // scene (CHARTER.md, "Motion shows the system working"). On a laptop the
-// section holds while the visitor scrolls, and a large screen in slight depth
-// plays each employee's job in turn: the avatar's dots light as it works, the
-// day's lines arrive, a cursor presses Approve, the avatar goes green. On phones,
+// section holds while the visitor scrolls through the six employees, and a
+// large screen in slight depth plays the active one's job by itself: the
+// avatar's dots light as it works, the day's lines arrive, a cursor presses
+// Approve, the avatar goes green. It follows How it works, not the hero, so
+// two moving sections never sit back to back (Will: "going from the hero to
+// the next section having graphic animations again is a bit much"). On phones,
 // and with reduced motion, it is a grid of cards, each playing its job once
 // when it comes into view (level 2) or showing its finished day.
 
@@ -99,20 +102,34 @@ function Grid({ still }) {
 
 /* ─── the scroll scene (level 3), laptops and up ───────────── */
 
+// Scrolling only picks the employee (Will, 13 Oct 2026: "maybe we can scroll
+// through each employee, and the jobs queue automatically activates"). Once an
+// employee is on screen its day plays by itself: the avatar works, the three
+// lines arrive, the cursor presses Approve, the avatar goes green. Scrolling on
+// mid-way starts the next one.
+const STEP_MS = 650
+const STEPS = 7 // 1 scan, 2-4 the lines, 5 cursor, 6 pressed, 7 approved
+
 function Scene() {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] })
-  const [pos, setPos] = useState(0)
-  useMotionValueEvent(scrollYProgress, 'change', (v) => setPos(v))
-  const per = 1 / EMPLOYEES.length
-  const idx = Math.min(EMPLOYEES.length - 1, Math.floor(pos / per))
-  const sub = Math.min(1, (pos - idx * per) / per)
+  const [idx, setIdx] = useState(0)
+  const [step, setStep] = useState(0)
+  useMotionValueEvent(scrollYProgress, 'change', (v) => {
+    setIdx(Math.min(EMPLOYEES.length - 1, Math.floor(v * EMPLOYEES.length)))
+  })
+  useEffect(() => {
+    const t0 = setTimeout(() => setStep(0), 0)
+    const t = setInterval(() => setStep((v) => Math.min(v + 1, STEPS)), STEP_MS)
+    return () => { clearTimeout(t0); clearInterval(t) }
+  }, [idx])
   const e = EMPLOYEES[idx]
-  const shown = Math.min(3, Math.floor(sub * 4.2))
-  const approved = sub > 0.8
-  const mode = sub < 0.12 ? 'still' : shown < 2 ? 'scan' : approved ? 'done' : 'wait'
+  const shown = Math.max(0, Math.min(3, step - 1))
+  const approved = step >= STEPS
+  const sub = step >= 5 ? 1 : 0 // the cursor moves onto Approve
+  const mode = step === 0 ? 'still' : shown < 2 ? 'scan' : approved ? 'done' : 'wait'
   return (
-    <section ref={ref} className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10 relative" style={{ height: `${EMPLOYEES.length * 60}vh` }}>
+    <section ref={ref} className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10 relative" style={{ height: `calc(100vh + ${EMPLOYEES.length * 33}vh)` }}>
       <div className="sticky top-0 h-screen flex items-center">
         <div className="w-full max-w-[1280px] mx-auto px-12 grid grid-cols-[0.8fr_1.2fr] gap-12 items-center">
           <div>
@@ -155,17 +172,21 @@ function Scene() {
                         <StateLine s={s === 'wait' && !approved ? 'wait' : 'done'} then={s === 'wait' ? then : null} size={12} />
                       </div>
                       {s === 'wait' && !approved && (
-                        <span className="relative shrink-0 rounded-[8px] bg-[#111] text-white text-[12px] px-3 py-1.5">
+                        <motion.span
+                          animate={step === 6 ? { scale: [1, 0.9, 1] } : { scale: 1 }}
+                          transition={{ duration: 0.3 }}
+                          className="relative shrink-0 rounded-[8px] bg-[#111] text-white text-[12px] px-3 py-1.5"
+                        >
                           Approve
                           <motion.svg
                             width="18" height="18" viewBox="0 0 24 24" className="absolute" aria-hidden
                             initial={{ left: 70, top: 40, opacity: 0 }}
-                            animate={sub > 0.6 ? { left: 22, top: 12, opacity: 1 } : { left: 70, top: 40, opacity: 0 }}
+                            animate={sub ? { left: 22, top: 12, opacity: 1 } : { left: 70, top: 40, opacity: 0 }}
                             transition={{ duration: 0.5 }}
                           >
                             <path d="M4 2l15 9-7 1.5L9 20z" fill="#fff" stroke="#111" strokeWidth="1.5" strokeLinejoin="round" />
                           </motion.svg>
-                        </span>
+                        </motion.span>
                       )}
                     </motion.div>
                   ))}

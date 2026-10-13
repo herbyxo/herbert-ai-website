@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <EmployeesSection />
       <HowItWorks />
+      <EmployeesSection />
       <Proof />
       <IndustriesStrip />
       <FounderNote />
