@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import ExampleSystem from '../../components/runs/ExampleSystem'
+import HubPipeline from '../../components/runs/HubPipeline'
 import { hubExampleShown } from '../../components/site/shared'
 
 // Kept out of search until the client has cleared it (see hubExampleShown).
@@ -16,15 +17,6 @@ export const metadata = {
 // the client's yes (restructure PROJECT.md, M2.1). Rows are what the hub does:
 // files on one board with who is waiting on what, documents chased, client
 // emails drafted and approved by a person, checklists per file.
-const ROWS = [
-  { t: '08:30', who: 'Home loan, Nguyen', what: 'Payslips and bank statements requested', s: 'done' },
-  { t: '08:31', who: 'Refinance, Patel', what: 'Reminder drafted for the last two documents', s: 'waiting', wait: 'Waiting on Mia', then: 'Approved by Mia, sent' },
-  { t: '09:05', who: 'Equipment, Walsh', what: 'All six documents in, checklist complete', s: 'done' },
-  { t: '09:12', who: 'Home loan, Chen', what: 'Valuation booked and the client told', s: 'done' },
-  { t: '09:40', who: 'Business, Rossi', what: 'Update email to the client drafted', s: 'waiting', wait: 'Waiting on Ben', then: 'Approved by Ben, sent' },
-  { t: '10:15', who: 'Home loan, Okafor', what: 'File moved to submitted, lender notified', s: 'done' },
-]
-
 export default function OperationsHub() {
   if (!hubExampleShown()) notFound()
   return (
@@ -38,12 +30,7 @@ export default function OperationsHub() {
         'Every client email drafted, then approved by a person',
         'A checklist per file and the numbers on one screen',
       ]}
-      board={{
-        title: 'Client files · an example brokerage',
-        label: 'An operations hub’s morning at an example brokerage',
-        rows: ROWS,
-        whoWidth: 168,
-      }}
+      visual={<HubPipeline />}
       note="An example brokerage: the files, names and staff are made up."
     />
   )
