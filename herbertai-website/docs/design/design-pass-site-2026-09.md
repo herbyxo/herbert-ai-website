@@ -810,3 +810,19 @@ does. Opens on the dashboard still; clicking swaps the screen and plays it
 once. 865px at 1440x900 (35px of the next section shows); on phones the
 caption under the screen hides because the list repeats it.
 
+## Industries research before more sections (13 Oct 2026)
+
+Will: "for some of these demo systems, they are just the AI employee again, eg
+for the accountants document chaser. i think you should do some research into
+these industries, and then determine actual AI Employees that we can build, and
+then what an entirely built system would look like as well. and then the
+marketing engine thing isnt really industry specific ... maybe we can have it
+as Herbert AI products at the end of the entire page ... i feel as if it would
+only really work for a business that is doing consumer based business, such as
+trades". Five research briefs running in parallel (Health, Property, Trades,
+Hospitality, Finance), each to `product/research/markdown/industries-2026-10-13/`:
+the jobs that cost each business most, the software they run and whether it
+has an API, four to six buildable AI employees, what the full system would look
+like, who already sells to them, and the most convincing visual. The Work,
+Industries and the AI employees roster are redrawn from the synthesis.
+
