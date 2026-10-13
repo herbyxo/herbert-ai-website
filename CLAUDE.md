@@ -70,7 +70,7 @@ The app lives in `herbertai-website/` (repo root is a wrapper). Routes are groun
 ## Business Context (for content/copy decisions)
 - **Positioning:** custom software and AI for small businesses; the ladder (audit, AI employee pilot, the system it runs in, retainer) is the sales layer, not the identity. Grow / Automate / Build survive only as the capability list on `/services`. "AI automation agency" is never used. Voice agents are one AI employee among several.
 - **Pricing story (changed 16 Sep 2026):** the four rungs are priced on `/pricing`: audit free, pilot $3,500 fixed, builds from $25,000 scoped after the audit, retainers from $1,000/mo, with the line that the client is told if the saving would not cover the price. Never name specific clients in site copy; describe the class of work. Savings are ranges from the client's own figures, never invented.
-- **ICP:** owner-operated businesses with 3 to 20 staff; accountants and bookkeepers, allied health, trades with an office, real estate and property management first.
+- **ICP:** owner-operated businesses with 3 to 20 staff in five industries (13 Oct 2026): Health (allied health clinics), Property (property managers, real estate), Trades (trades with an office), Hospitality (venues), Finance (accountants and bookkeepers; brokers only once the Smith agreement allows). Industry pages move to /industries/health, /property, /trades, /hospitality, /finance with redirects from the old slugs; /demo/* links stay as they are.
 
 ---
 
