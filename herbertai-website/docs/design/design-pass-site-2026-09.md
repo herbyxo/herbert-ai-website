@@ -785,7 +785,7 @@ employee, about two screens in all (1782px at 1440x900, down from 2340); and
 the section moves after How it works, so the page goes moving, calm, moving,
 calm (Hero, How it works, AI employees, The work).
 
-## [~] The Work, done properly (options 13 Oct 2026)
+## [x] The Work, done properly (options and pick 13 Oct 2026)
 
 Will: "feels better, lets do the work section next properly", and "the title
 for each section should be capitalised" (section labels now title case, in
@@ -799,5 +799,14 @@ A option C with the list as switches, clicking swaps the big screen and plays
 it once, 853px (recommended); B four screens at once in a 2x2 grid, hover
 plays, 1342px; C tabs over a full-width stage, 1207px. The hub's visual stays
 off the live site until Rob clears it (words in its slot until then).
-Will's pick: (pending)
+Will's pick (13 Oct 2026): "i think A, but lets capitalise the wording, and
+instead of having currently building, live click in, etc, we have the industry
+name above it?". Built as `components/runs/WorkSection.js` on the homepage:
+titles in title case ("A Property Manager's Dashboard", "An Accountant's
+Document Chaser", "An Operations Hub for a Finance Brokerage", "A Marketing
+Engine"), each under its industry (Property, Finance, Finance, Trades; the
+engine's example is a plumbing business), the link words carrying what a click
+does. Opens on the dashboard still; clicking swaps the screen and plays it
+once. 865px at 1440x900 (35px of the next section shows); on phones the
+caption under the screen hides because the list repeats it.
 
