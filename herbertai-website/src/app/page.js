@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Hero from './components/Hero'
 import RevealOnScroll from './components/motion/RevealOnScroll'
-import { INDUSTRIES, RUNGS, Eyebrow, AuditButton } from './components/site/shared'
+import { INDUSTRIES, RUNGS, Eyebrow, AuditButton, hubExampleShown } from './components/site/shared'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
 // employee, the system it runs in). The three bucket chapters are retired from
@@ -102,19 +102,21 @@ const PROOF = [
     external: false,
     verb: 'See it run',
   },
+  // The hub's example page is held until the client clears it; until then
+  // the live site keeps the plain link to /work.
   {
     tag: 'Currently building',
     title: 'An operations hub for a finance brokerage',
-    href: '/work',
+    href: hubExampleShown() ? '/work/operations-hub' : '/work',
     external: false,
-    verb: 'Read about it',
+    verb: hubExampleShown() ? 'See an example' : 'Read about it',
   },
   {
     tag: 'Built',
     title: 'A marketing engine',
-    href: '/work',
+    href: '/work/marketing-engine',
     external: false,
-    verb: 'Read about it',
+    verb: 'See an example',
   },
 ]
 

@@ -17,6 +17,7 @@ export default function sitemap() {
     { path: '/google-ads-adelaide', priority: 0.85 },
     { path: '/pilot', priority: 0.95 },
     { path: '/work', priority: 0.85 },
+    { path: '/work/marketing-engine', priority: 0.6 },
     { path: '/industries/accountants', priority: 0.8 },
     { path: '/industries/allied-health', priority: 0.8 },
     { path: '/industries/trades', priority: 0.8 },

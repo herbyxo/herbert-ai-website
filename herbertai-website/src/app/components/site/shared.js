@@ -79,6 +79,15 @@ export const RUNGS = [
 
 export const AUDIT_HREF = '/pilot#book'
 
+// The brokerage hub's example page (/work/operations-hub) stays off the live
+// site until Will has confirmed with the client that a de-branded demo with
+// made-up data is fine under the agreement and the exclusivity question
+// (restructure PROJECT.md, M2.1). Preview and local builds show it so it can be
+// designed; production returns a 404 and the homepage keeps the plain /work
+// link. Set to true once the client has said yes.
+export const HUB_EXAMPLE_CLEARED = false
+export const hubExampleShown = () => HUB_EXAMPLE_CLEARED || process.env.VERCEL_ENV !== 'production'
+
 export function Eyebrow({ children, color = 'ink' }) {
   const isWhite = color === 'white'
   return (

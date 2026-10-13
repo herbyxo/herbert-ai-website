@@ -720,4 +720,18 @@ Board: `design-pass-site-2026-10-13-work-rows.png`, from
 marketing engine both say "Read about it" and open the top of /work. 1 each
 opens its own spot on /work, worded "Read its write-up"; 2 named, not linked
 (recommended); 3 only what can be opened, the two rows removed.
-Will's pick: (pending)
+Will's answer (13 Oct 2026), none of the three: "i was thinking maybe u can just
+generate what the other things would look like, and then the link goes to
+that? that way it looks very polished and we can edit how the generation
+looks". Agreed as coded pages rather than generated images (image models garble
+interface text and invent features; a coded page is exact, can move, and is
+edited like any section), each labelled an example with made-up data. Will:
+"go". Built: `/work/marketing-engine` and `/work/operations-hub` on
+`components/runs/ExampleSystem.js` (the system's morning as a running board
+beside what it does, then the audit). The homepage rows now say "See an
+example". The hub page is held: `HUB_EXAMPLE_CLEARED` in
+`components/site/shared.js` is false, so a production build returns 404 for it
+and the homepage keeps the plain /work link (checked with a production build);
+preview and local show it. It goes live when the client has said a de-branded
+demo is fine (M2.1). Screens: `assets-2026-10-13/example-*.png`. Both pages get
+their own detail pass next.
