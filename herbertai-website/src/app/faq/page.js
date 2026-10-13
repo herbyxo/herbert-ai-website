@@ -5,12 +5,12 @@ import { OG_IMAGE } from '@/app/components/site/og'
 export const metadata = {
   title: 'FAQ | pricing, timelines & process',
   description:
-    'Common questions about Herbert AI, custom software and AI for small businesses in Adelaide: what gets built, the free audit, the pilot, timelines, pricing, contracts, ownership, and getting started.',
+    'Common questions about Herbert AI, custom software and AI for small businesses in Adelaide: what gets built, the free audit, your first AI employee, timelines, pricing, contracts, ownership, and getting started.',
   alternates: { canonical: '/faq' },
   openGraph: {
     title: 'FAQ | Custom software and AI for small business · Herbert AI',
     description:
-      'Common questions about the free AI audit, the pilot, pricing, ownership, and how working with Herbert AI in Adelaide goes.',
+      'Common questions about the free AI audit, your first AI employee, pricing, ownership, and how working with Herbert AI in Adelaide goes.',
     url: '/faq',
     images: [OG_IMAGE],
   },
@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     q: 'What does it cost?',
-    a: 'The audit is free. The Bottleneck Pilot, one AI employee for one job, is $3,500 fixed and live in 14 days or free. Full builds start from $25,000 and are scoped after the audit, and retainers start from $1,000 a month. If the audit shows the saving would not comfortably cover the price, you are told that instead.',
+    a: 'The audit is free. Your first AI employee, built for one job, is $3,500 fixed and live in 14 days or free. Full builds start from $25,000 and are scoped after the audit, and retainers start from $1,000 a month. If the audit shows the saving would not comfortably cover the price, you are told that instead.',
   },
   {
     q: 'How long does it take?',
-    a: 'The pilot is live 14 days after the kickoff chat, or you do not pay. A full build gets one fixed price and a timeline in its written scope, agreed after the audit.',
+    a: 'Your first AI employee is live 14 days after the kickoff chat, or you do not pay. A full build gets one fixed price and a timeline in its written scope, agreed after the audit.',
   },
   {
     q: 'What is an AI employee?',
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: 'Are there contracts or lock-in?',
-    a: 'No. The pilot includes its first 30 days of hosting and support, then you choose $200 a month care, a move onto your own accounts, or a bigger build. Full builds run on your own accounts, and retainers are month to month.',
+    a: 'No. Your first AI employee includes its first 30 days of hosting and support, then you choose $200 a month care, a move onto your own accounts, or a bigger build. Full builds run on your own accounts, and retainers are month to month.',
   },
   {
     q: 'Who owns the code and data?',

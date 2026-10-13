@@ -5,7 +5,7 @@ import { OG_IMAGE } from '@/app/components/site/og'
 export const metadata = {
   title: { absolute: 'How it works: a free AI audit, then working software in 14 days | Herbert AI' },
   description:
-    'A free 45 minute AI audit puts a cost on every repetitive job in your business. Then the Bottleneck Pilot builds software on the worst one: live in 14 days, $3,500 fixed, or it is free.',
+    'A free 45 minute AI audit puts a cost on every repetitive job in your business. Then your first AI employee takes the worst one: live in 14 days, $3,500 fixed, or it is free.',
   alternates: { canonical: '/pilot' },
   openGraph: {
     title: 'Free AI audit · Herbert AI',
@@ -88,10 +88,10 @@ export default function Pilot() {
             Find the job that <em className="serif-em">costs you most.</em>
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            A free 45 minute AI audit with Will: where the hours go, what each
+            A free 45 minute AI audit: where the hours go, what each
             repetitive job costs you a year, and which one to hand to software
             first. Written up within two business days, yours to keep. If you
-            want the first one built, that&apos;s the Bottleneck Pilot: live in
+            want the first one built, that&apos;s your first AI employee: live in
             14 days, $3,500 fixed, or it&apos;s free.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -223,7 +223,7 @@ export default function Pilot() {
             <div className="bg-cream border border-line rounded-3xl p-8 md:p-10">
               <form action="https://api.web3forms.com/submit" method="POST" className="space-y-5">
                 <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
-                <input type="hidden" name="from_name" value="Herbert AI · Bottleneck Pilot" />
+                <input type="hidden" name="from_name" value="Herbert AI · AI audit" />
                 <input type="hidden" name="subject" value="New AI audit request · /pilot" />
                 <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/pilot/thanks" />
                 <input

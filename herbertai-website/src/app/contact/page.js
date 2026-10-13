@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: 'Contact · Herbert AI',
     description:
-      'Send a message, call, or book a free AI audit with Will Herbert in Adelaide.',
+      'Send a message, call, or book a free AI audit. Herbert AI, Adelaide.',
     url: '/contact',
     images: [OG_IMAGE],
   },

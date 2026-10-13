@@ -1,5 +1,5 @@
 'use client'
-// Bottleneck Pilot demo page, direction A (live app replay) with the client's
+// First AI employee demo page, direction A (live app replay) with the client's
 // email one tap away on each timeline event. Will's pick, 15 Sep 2026; ledger at
 // docs/design/design-pass-demo-pages.md.
 //

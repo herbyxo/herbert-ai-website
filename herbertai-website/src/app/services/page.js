@@ -23,7 +23,7 @@ const groups = [
     id: 'employees',
     label: 'AI employees',
     headline: 'One job each. A person approves what goes out.',
-    body: 'Each AI employee takes over one repetitive job and runs it every day. It reads what comes in, drafts what goes out, and hands the exceptions to your team. The pilot builds the first one.',
+    body: 'Each AI employee takes over one repetitive job and runs it every day. It reads what comes in, drafts what goes out, and hands the exceptions to your team. The first one is live in 14 days.',
     demo: 'voice',
     items: [
       { tag: 'Accounting', title: 'AI document chaser', body: 'Sends each client their checklist, chases only what is missing, matches files as they land, tells your team when a return is ready.' },
@@ -149,7 +149,7 @@ export default function Services() {
                   The audit is free. The rest is fixed.
                 </h2>
                 <p className="text-cream/70 text-[17px] leading-[1.6] max-w-[52ch]">
-                  The pilot is $3,500, live in 14 days or it&apos;s free. Builds start from
+                  Your first AI employee is $3,500, live in 14 days or it&apos;s free. Builds start from
                   $25,000 and are scoped after the audit. Retainers from $1,000 a month.
                 </p>
               </div>

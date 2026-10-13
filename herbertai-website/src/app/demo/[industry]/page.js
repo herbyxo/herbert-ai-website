@@ -1,4 +1,4 @@
-// Bottleneck Pilot demo, one route per industry: /demo/accountants?for=Firm+Name
+// First AI employee demo, one route per industry: /demo/accountants?for=Firm+Name
 //
 // The prospect's business name travels in the URL rather than in a lookup table,
 // so no list of prospects is ever committed to this public repo and a new

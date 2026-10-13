@@ -142,7 +142,7 @@ export default function Work() {
                 Yours would look like your business.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                The audit finds the job. The pilot builds the first AI employee for it, in 14
+                The audit finds the job. Your first AI employee takes it, live in 14
                 days, on your real data.
               </p>
             </div>

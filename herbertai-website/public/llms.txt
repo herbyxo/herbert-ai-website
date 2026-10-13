@@ -2,12 +2,12 @@
 
 > Custom software and AI for small businesses, built in Adelaide by Will Herbert. One builder, from a free AI audit to the system a business runs on. Every engagement starts with the free audit; the first build is one AI employee for one job, live in 14 days.
 
-Herbert AI sells one ladder, taken in order: a free 45 minute AI audit with a written page back within two business days; the Bottleneck Pilot, one AI employee for one job, $3,500 fixed, live in 14 days or free, credited in full to a bigger build within 60 days; a full operations build from $25,000, scoped after the audit; and a retainer from $1,000 a month with a monthly report. Clients are owner-operated businesses with roughly 3 to 20 staff, first in accounting, allied health, trades and real estate. Clients are not named publicly.
+Herbert AI sells one ladder, taken in order: a free 45 minute AI audit with a written page back within two business days; your first AI employee, built for one job, $3,500 fixed, live in 14 days or free, credited in full to a bigger build within 60 days; a full operations build from $25,000, scoped after the audit; and a retainer from $1,000 a month with a monthly report. Clients are owner-operated businesses with roughly 3 to 20 staff, in five industries: health, property, trades, hospitality and finance. Clients are not named publicly.
 
 ## Pages
 
 - [Home](https://herbert-aisolutions.com/): what Herbert AI is, the ladder, the systems, the four industries.
-- [How it works](https://herbert-aisolutions.com/pilot): the free AI audit, the Bottleneck Pilot, what comes after, and the booking form.
+- [How it works](https://herbert-aisolutions.com/pilot): the free AI audit, your first AI employee, what comes after, and the booking form.
 - [What gets built](https://herbert-aisolutions.com/services): AI employees (one job each, a person approves what goes out), the operations system they run in, and the growth modules that come after.
 - [The systems](https://herbert-aisolutions.com/work): a property manager's dashboard to click into, an accountant's document chaser demo, an operations hub for a finance brokerage, a marketing engine, a barbershop booking platform, a voice receptionist call.
 - [A marketing engine](https://herbert-aisolutions.com/work/marketing-engine): an example morning of the marketing engine, drawn with made-up data: wasted spend flagged, ads tested and paused, campaigns held for approval.

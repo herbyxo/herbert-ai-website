@@ -1,4 +1,4 @@
-// Bottleneck Pilot demo content, one entry per industry. Every name here is made
+// First AI employee demo content, one entry per industry. Every name here is made
 // up. The workflow pattern is the automated document chase from real builds, but
 // no client's branding, names or wording appears. The prospect's own business
 // name is dropped in at render time from the ?for= query.

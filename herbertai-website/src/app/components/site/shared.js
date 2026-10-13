@@ -64,15 +64,15 @@ export const RUNGS = [
   {
     n: '02',
     title: 'Your first AI employee',
-    body: 'The Bottleneck Pilot builds one AI employee for that job, live on your real data in 14 days. It does one job every day, and your team approves anything that goes out.',
+    body: 'One AI employee built for that job, live on your real data in 14 days. It does one job every day, and your team approves anything that goes out.',
     facts: ['One AI employee, one job', 'Live on your real data in 14 days', 'Your team approves what goes out'],
     price: '$3,500 fixed. Live in 14 days or it’s free.',
   },
   {
     n: '03',
     title: 'The system it runs in',
-    body: 'When one job runs itself, the next ones follow. A full build puts your files, comms and follow-ups on one system your team works out of every day, and your business owns it. The pilot’s $3,500 comes off the price.',
-    facts: ['Files, comms and follow-ups on one system', 'Your business owns it', 'The pilot’s $3,500 comes off'],
+    body: 'When one job runs itself, the next ones follow. A full build puts your files, comms and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
+    facts: ['Files, comms and follow-ups on one system', 'Your business owns it', 'The first employee’s $3,500 comes off'],
     price: 'From $25,000, scoped after the audit.',
   },
 ]

@@ -47,7 +47,7 @@ const SITE_URL = 'https://herbert-aisolutions.com'
 const SITE_NAME = 'Herbert AI'
 // One description for the meta tag and the JSON-LD, so they can't drift apart.
 const SITE_DESC =
-  'Custom software and AI for small businesses, built in Adelaide by Will Herbert. A free AI audit finds the job that costs you most; the Bottleneck Pilot builds one AI employee for it, live in 14 days.'
+  'Custom software and AI for small businesses, built in Adelaide by Will Herbert. A free AI audit finds the job that costs you most, then your first AI employee takes it, live in 14 days.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -81,7 +81,7 @@ export const metadata = {
     siteName: SITE_NAME,
     title: 'Custom Software & AI for Small Business | Herbert AI, Adelaide',
     description:
-      'A free AI audit finds the job that costs you most. The Bottleneck Pilot builds one AI employee for it, live in 14 days. Built in Adelaide by Will Herbert.',
+      'A free AI audit finds the job that costs you most. Your first AI employee takes it, live in 14 days. Built in Adelaide by Will Herbert.',
   },
   // No hardcoded twitter title/description — it overrode every page's own
   // values. Twitter falls back to per-page openGraph.

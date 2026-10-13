@@ -4,13 +4,13 @@ import { Eyebrow, AuditButton } from '../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
-  title: 'Pricing | Free AI audit, $3,500 pilot, builds from $25,000',
+  title: 'Pricing | Free AI audit, a $3,500 first AI employee, builds from $25,000',
   description:
-    'Four rungs, each priced before you climb it. A free AI audit, a $3,500 Bottleneck Pilot that is live in 14 days or free, full builds from $25,000 scoped after the audit, retainers from $1,000 a month.',
+    'Four rungs, each priced before you climb it. A free AI audit, your first AI employee at $3,500 and live in 14 days or free, full builds from $25,000 scoped after the audit, retainers from $1,000 a month.',
   alternates: { canonical: '/pricing' },
   openGraph: {
     title: 'Pricing · Herbert AI',
-    description: 'The audit is free. The pilot is $3,500. Builds from $25,000. Retainers from $1,000 a month.',
+    description: 'The audit is free. Your first AI employee is $3,500. Builds from $25,000. Retainers from $1,000 a month.',
     url: '/pricing',
     images: [OG_IMAGE],
   },
@@ -32,13 +32,13 @@ const rungs = [
   },
   {
     n: '02',
-    title: 'Bottleneck Pilot',
+    title: 'Your first AI employee',
     price: '$3,500, fixed',
     lines: [
       'One AI employee built for one job, live on your real data in 14 days. Live in 14 days or it is free.',
       'The full $3,500 comes off a bigger build signed within 60 days.',
       'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or take it onto your own accounts with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
-      'Founding clients: the first three pilots that agree to a case study and a testimonial get 90 days of included care instead of 30.',
+      'Founding clients: the first three clients who agree to a case study and a testimonial get 90 days of included care instead of 30.',
     ],
   },
   {
@@ -48,7 +48,7 @@ const rungs = [
     lines: [
       'The system your AI employees run in: files, comms, follow-ups and reporting on one platform your team works out of every day, and your business owns.',
       'Scoped and priced after the audit, as one fixed number with a written scope and a delivery date. Not a range, no hourly creep.',
-      'If the audit shows the saving would not comfortably cover the price, you will be told so, and the pilot is not the right next step.',
+      'If the audit shows the saving would not comfortably cover the price, you will be told so, and an AI employee is not the right next step.',
     ],
   },
   {
@@ -66,10 +66,10 @@ const rungs = [
 const faqs = [
   {
     q: 'Why is the audit free?',
-    a: 'Because it is how Will finds out whether there is a job worth building on. If there is, he quotes the pilot. If there is not, he says so, and the page is yours either way. Cutting the price would not make it more useful; keeping it to diagnosis does.',
+    a: 'Because it shows whether there is a job worth building on. If there is, you get a quote for your first AI employee. If there is not, you are told so, and the page is yours either way. Cutting the price would not make it more useful; keeping it to diagnosis does.',
   },
   {
-    q: 'Do I have to buy the pilot after the audit?',
+    q: 'Do I have to buy an AI employee after the audit?',
     a: 'No. The audit ends with a written page and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
   },
   {
@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: 'Why do builds start at $25,000?',
-    a: 'A full build is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts, not billed as it goes. The pilot exists so you never have to take that on trust.',
+    a: 'A full build is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts, not billed as it goes. Your first AI employee comes first so you never have to take that on trust.',
   },
   {
     q: 'What is in the retainer, and what is not?',
@@ -86,11 +86,11 @@ const faqs = [
   },
   {
     q: 'Deposits and payment?',
-    a: 'The pilot is paid on go-live. Builds take about a third on signing and the rest against demonstrated working software at each milestone, never against a status report. Retainers are billed monthly.',
+    a: 'Your first AI employee is paid on go-live. Builds take about a third on signing and the rest against demonstrated working software at each milestone, never against a status report. Retainers are billed monthly.',
   },
   {
     q: 'Any lock-in?',
-    a: 'None. You own what gets built, your data and your accounts. A full build runs on your own accounts from day one. A pilot runs on ours for speed and moves to yours whenever you want, with a written guide to how it works.',
+    a: 'None. You own what gets built, your data and your accounts. A full build runs on your own accounts from day one. Your first AI employee runs on ours for speed and moves to yours whenever you want, with a written guide to how it works.',
   },
 ]
 
