@@ -707,3 +707,17 @@ at every width (the md overrides dropped). 732px at 1440; on scrolling to it,
 168px of the next section shows under it. Phones unchanged. How it works is
 done; The work resumes. The rule for the sections after it: sized so each
 shows a bit of the next, the hero alone filling one screen.
+
+## The work, details (from 13 Oct 2026)
+
+1 the two rows that only open a paragraph, 2 the labels and link words. The
+heading and spacing follow How it works.
+
+## [~] The work detail 1: the two rows that only open a paragraph (options 13 Oct 2026)
+
+Board: `design-pass-site-2026-10-13-work-rows.png`, from
+`design-pass-site-2026-10-13-work-rows.py`. Today the brokerage hub and the
+marketing engine both say "Read about it" and open the top of /work. 1 each
+opens its own spot on /work, worded "Read its write-up"; 2 named, not linked
+(recommended); 3 only what can be opened, the two rows removed.
+Will's pick: (pending)
