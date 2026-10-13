@@ -785,3 +785,19 @@ employee, about two screens in all (1782px at 1440x900, down from 2340); and
 the section moves after How it works, so the page goes moving, calm, moving,
 calm (Hero, How it works, AI employees, The work).
 
+## [~] The Work, done properly (options 13 Oct 2026)
+
+Will: "feels better, lets do the work section next properly", and "the title
+for each section should be capitalised" (section labels now title case, in
+CHARTER.md). Option C was picked before the foundations round; the section is
+redrawn around what exists now (each system's own visual) and its place (after
+the AI employees scene, so calm until the visitor interacts). Board:
+`design-pass-site-2026-10-13-the-work-2.png`, from
+`design-pass-site-2026-10-13-the-work-2.py`; running at `/lab/the-work-2`
+(`src/app/components/lab/WorkSectionOptions.js`). Today C as built, 824px.
+A option C with the list as switches, clicking swaps the big screen and plays
+it once, 853px (recommended); B four screens at once in a 2x2 grid, hover
+plays, 1342px; C tabs over a full-width stage, 1207px. The hub's visual stays
+off the live site until Rob clears it (words in its slot until then).
+Will's pick: (pending)
+

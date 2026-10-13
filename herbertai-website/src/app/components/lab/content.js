@@ -12,6 +12,7 @@ export const REFS = [
   { slug: 'the-work', name: 'Runs itself: The work options', url: 'A, B and C, scroll down' },
   { slug: 'the-work-visual', name: 'Runs itself: The work, C visuals', url: '1, 2 and 3, scroll down' },
   { slug: 'motion', name: 'Motion levels: AI employees', url: '1, 2 and 3, scroll down' },
+  { slug: 'the-work-2', name: 'The Work, done properly', url: 'A, B and C, scroll down' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'
