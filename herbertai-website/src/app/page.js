@@ -76,79 +76,109 @@ function HowItWorks() {
   )
 }
 
+// The work, rebuilt 13 Oct 2026 for the "Runs itself" charter: design pass
+// option C, one system large and the rest listed beside it (Will: "C - i think
+// we need to have a different visual"), with visual 2, the property
+// dashboard's requests table as a still (Will: "fix the dashboard and 2"). The
+// dashboard itself was fixed the same day (its mock-mode warning removed, its
+// demo dates moving forward to today), and the still leaves out the Received
+// column, since a picture cannot keep its dates current the way the live page
+// does. Spacing matches How it works, and the still is cropped to the top of
+// the table with "All the systems" under the list, so on a 900px-tall laptop
+// the next section shows under this one (Will's rule). Options A and
+// B, and visuals 1 and 3, live in components/lab/ until the lab is removed.
 const PROOF = [
   {
     tag: 'Live, click in',
     title: 'A property manager’s dashboard',
     href: 'https://dashboard.herbert-aisolutions.com',
     external: true,
+    verb: 'Open it',
   },
   {
     tag: 'Demo, plays itself',
     title: 'An accountant’s document chaser',
     href: '/demo/accountants',
     external: false,
+    verb: 'See it run',
   },
   {
     tag: 'Currently building',
     title: 'An operations hub for a finance brokerage',
     href: '/work',
     external: false,
+    verb: 'Read about it',
   },
   {
     tag: 'Built',
     title: 'A marketing engine',
     href: '/work',
     external: false,
+    verb: 'Read about it',
   },
 ]
 
+function ProofLink({ p, className, children }) {
+  return p.external ? (
+    <a href={p.href} target="_blank" rel="noreferrer" className={className}>{children}</a>
+  ) : (
+    <Link href={p.href} className={className}>{children}</Link>
+  )
+}
+
 function Proof() {
+  const [live, ...rest] = PROOF
   return (
-    <section className="bg-cream">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-        <RevealOnScroll className="max-w-[44ch] mb-14">
-          <div>
-            <Eyebrow>The work</Eyebrow>
-            <h2
-              className="font-display text-ink"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}
-            >
-              The systems, not the slides.
-            </h2>
-          </div>
-        </RevealOnScroll>
-        <div className="grid md:grid-cols-2 gap-5">
-          {PROOF.map((p, i) => {
-            const inner = (
-              <>
-                <div className="flex items-center gap-2 mb-7">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
-                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{p.tag}</span>
-                </div>
-                <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-7 text-ink">{p.title}</h3>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
-                  {p.external ? 'Open it' : 'See it'} <span aria-hidden>&rarr;</span>
-                </span>
-              </>
-            )
-            const cls = 'bg-white border border-line rounded-3xl p-7 hover:border-ink/40 transition-colors flex flex-col h-full lift'
-            return (
-              <RevealOnScroll key={p.title} delay={(i % 2) * 0.08} className="h-full">
-                {p.external ? (
-                  <a href={p.href} target="_blank" rel="noreferrer" className={cls}>{inner}</a>
-                ) : (
-                  <Link href={p.href} className={cls}>{inner}</Link>
-                )}
-              </RevealOnScroll>
-            )
-          })}
+    <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
+        <div className="mb-12">
+          <p className="text-[15px] font-medium text-[#555] mb-4">The work</p>
+          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+            The systems, not the slides.
+          </h2>
         </div>
-        <RevealOnScroll className="mt-10">
-          <Link href="/work" className="text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
-            All the systems
-          </Link>
-        </RevealOnScroll>
+        <div className="grid lg:grid-cols-[1.28fr_0.72fr] gap-x-12 gap-y-10 items-start">
+          <ProofLink p={live} className="group block">
+            <div className="rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] overflow-hidden group-hover:border-[#111]/30 transition-colors">
+              <div className="px-5 py-3 border-b border-[#111]/10 text-[12px] font-mono text-[#555] truncate">
+                dashboard.herbert-aisolutions.com &middot; live, example data
+              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/work/property-dashboard-requests.png"
+                alt="The property dashboard's maintenance requests: each tenant's issue, its urgency and where it is up to"
+                width={2400}
+                height={1520}
+                loading="lazy"
+                className="w-full aspect-[1200/560] object-cover object-top"
+              />
+            </div>
+            <p className="mt-5 text-[15px] font-medium text-[#777]">{live.tag}</p>
+            <p className="mt-1 text-[22px] font-semibold tracking-[-0.02em]">{live.title}</p>
+            <p className="mt-2 text-[14px] font-medium underline underline-offset-4 decoration-[#111]/30 group-hover:decoration-[#111] transition-colors inline-block">
+              {live.verb} <span aria-hidden>&rarr;</span>
+            </p>
+          </ProofLink>
+          <div className="border-b border-[#111]/15">
+            {rest.map((p) => (
+              <ProofLink key={p.title} p={p} className="group block py-5 border-t border-[#111]/15">
+                <span className="block text-[15px] font-medium text-[#777]">{p.tag}</span>
+                <span className="block mt-1 text-[20px] font-semibold tracking-[-0.02em]">{p.title}</span>
+                <span className="inline-block mt-2 text-[14px] font-medium underline underline-offset-4 decoration-[#111]/30 group-hover:decoration-[#111] transition-colors">
+                  {p.verb} <span aria-hidden>&rarr;</span>
+                </span>
+              </ProofLink>
+            ))}
+            <div className="py-5 border-t border-[#111]/15">
+              <Link
+                href="/work"
+                className="text-[15px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
+              >
+                All the systems
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

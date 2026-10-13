@@ -603,7 +603,7 @@ mock data, no login), whose Requests page shows an orange developer line
 late May; the demo opens /demo/accountants, playing; the hub and the marketing
 engine both open /work, where they are paragraphs with no picture.
 
-## [~] The work, option C's large visual (options 13 Oct 2026)
+## [x] The work, option C's large visual (options and pick 13 Oct 2026)
 
 Board: `design-pass-site-2026-10-13-work-visual.png`, from
 `design-pass-site-2026-10-13-work-visual.py`; running at `/lab/the-work-visual`
@@ -614,7 +614,15 @@ way the hero does); 2 the dashboard's requests table as a still without the
 warning (needs the warning and dates fixed in the dashboard first); 3 the
 property office drawn as a board in the site's style, clicking to the real
 dashboard.
-Will's pick: (pending)
+Will's pick (13 Oct 2026): "fix the dashboard and 2". The dashboard (repo
+herbert-ai-dashboard, 85e4128, live the same day): the mock-mode warning is gone
+from the Requests page, and the demo's dates move forward by whole days so the
+newest request is always today or yesterday. The website: The work built as C
+in `src/app/page.js`, the large visual a fresh still of the live requests table
+(`public/work/property-dashboard-requests.png`, the Received column left out so
+the picture never shows a date), cropped to the top of the table, with "All the
+systems" under the list. 824px at 1440x900, so 76px of the next section shows;
+on a 1280x800 laptop it is 18px short of that.
 
 ## How it works, details (from 11 Oct 2026)
 
