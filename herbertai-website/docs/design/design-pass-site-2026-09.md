@@ -760,6 +760,15 @@ so far, all 13 Oct 2026:
   pressed), 3 one scroll scene (the section holds and a tilted screen plays
   each employee's job, a cursor pressing Approve). Recommended 2 everywhere
   and 3 at most once a page.
-Will's pick on motion: (pending). Names Steve, Penny, Max, Ruby, Archie, Tess
-are placeholders for his approval.
+Will's pick on motion (13 Oct 2026): "2 across the site plus 3 on the
+homepage, names are good. instead of Ruby can u do Emma". Written into
+CHARTER.md ("Motion shows the system working", "The AI employees"). The roster:
+Steve, Penny, Max, Emma, Archie, Tess. Built the same day: the roster is
+homepage section 2 (`components/runs/EmployeesSection.js`, data and avatar in
+`components/runs/employees.js`), right after the hero. From 1024px it is the
+scroll scene (six employees, 60vh of scroll each, the screen tilted in depth, a
+cursor pressing Approve); below that, and with reduced motion, a grid of cards
+that each play their job once on view. Checked at 1440 (headless, through the
+scene), 600 (cards play through) and 375 (no overflow). Screen:
+`assets-2026-10-13/home-employees-scene.png`. Its details come next.
 

@@ -59,12 +59,39 @@ and glow ("i like todays"). It is the brand, not a state. The exact values, and
 whether the May green survives as the "done" colour, are settled in the hero
 round.
 
-## Motion means a job finishing, and nothing else
+## Motion shows the system working
 
-Rows arrive, amber turns green when a person approves, counts go up. No reveal
-animations for their own sake, no parallax, no ambient loops, no custom cursor
-(removed 15 Sep 2026). With `prefers-reduced-motion` the board renders its
-finished state at once.
+Loosened 13 Oct 2026 from "a job finishing, and nothing else" after Will judged
+three levels on a running demo (`/lab/motion`): "2 across the site plus 3 on
+the homepage". He wants the site to "look visually appealing and grab the
+eye", and the eye-catching part comes from the product doing its work.
+
+- **Everywhere (level 2):** anything that shows an AI employee or a system at
+  work can move the way the work moves. Rows arrive, amber turns green when a
+  person approves, counts run up as they come into view, an avatar's dots light
+  as it works, Approve gets pressed, a card plays its job when it comes into
+  view and again on hover and lifts slightly under the pointer.
+- **Once, on the homepage (level 3):** one scroll scene, the AI employees
+  roster. The section holds while the visitor scrolls, and a large screen in
+  slight depth plays each employee's job in turn, with a cursor pressing
+  Approve. No other page gets a scroll scene unless Will picks one.
+- **Still out:** motion for decoration. Fade-ins on every block, parallax,
+  ambient loops, floating shapes, shifting gradients, a custom cursor (removed
+  15 Sep 2026).
+- With `prefers-reduced-motion` everything renders its finished state at once,
+  and the scroll scene becomes a still grid. On phones the scroll scene is the
+  grid of cards.
+
+## The AI employees
+
+Each AI employee has a plain first name with its job always beside it, and a
+7x7 dot-grid avatar drawn from its job; the dots are ink at rest, light as it
+works, amber while it waits on a person and green when the job is done, so the
+avatar is also its status light. Will, 13 Oct 2026: "job names plus dot
+avatars - something like Steve - Front Desk"; names approved with "names are
+good. instead of Ruby can u do Emma". The roster: Steve · Front Desk, Penny ·
+Document Chaser, Max · Quote Follow-up, Emma · Maintenance, Archie · Invoice
+Chaser, Tess · Bookings. Clients name their own at kickoff.
 
 ## Nothing is claimed, things happen
 

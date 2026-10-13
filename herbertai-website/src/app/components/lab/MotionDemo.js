@@ -37,7 +37,7 @@ const EMPLOYEES = [
     count: 19,
   },
   {
-    name: 'Ruby', job: 'Maintenance', what: 'Logs repair requests, gets approval, books the tradie', where: 'Property',
+    name: 'Emma', job: 'Maintenance', what: 'Logs repair requests, gets approval, books the tradie', where: 'Property',
     glyph: G(['...X...', '..X.X..', '.X...X.', 'XXXXXXX', '.X...X.', '.X.X.X.', '.XXXXX.']),
     feed: [['Plumbing request logged, Unit 5', 'done'], ['Landlord approval requested, $380 quote', 'wait', 'Approved, plumber booked'], ['Tenant told the plumber comes Tuesday', 'done']],
     count: 26,

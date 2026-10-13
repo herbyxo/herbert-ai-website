@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Hero from './components/Hero'
+import EmployeesSection from './components/runs/EmployeesSection'
 import RevealOnScroll from './components/motion/RevealOnScroll'
 import { INDUSTRIES, RUNGS, Eyebrow, AuditButton, hubExampleShown } from './components/site/shared'
 
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <EmployeesSection />
       <HowItWorks />
       <Proof />
       <IndustriesStrip />
