@@ -82,6 +82,13 @@ eye", and the eye-catching part comes from the product doing its work.
   and the scroll scene becomes a still grid. On phones the scroll scene is the
   grid of cards.
 
+## Section labels are title case
+
+The small label above each section heading is a title and is set in title
+case: "How It Works", "AI Employees", "The Work". The headings under them stay
+sentences. Will, 13 Oct 2026: "the title for each section should be
+capitalised".
+
 ## The AI employees
 
 Each AI employee has a plain first name with its job always beside it, and a
