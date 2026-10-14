@@ -871,3 +871,8 @@ in both motion modes, no errors, and at 600 wide. The per-employee scene
 treatment (one record line lighting up, one card, one approve, one counter) is
 the next three-option board.
 
+## Product name placeholder (14 Oct 2026)
+
+Will: "we'll come back to this, Herbert Reach as a placeholder for now". The
+Products section is drawn with "Herbert Reach"; the name is not final.
+

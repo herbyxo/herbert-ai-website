@@ -169,7 +169,7 @@ section shows a bit of the next.
 6. Products: Herbert AI's own products, each with its own name (the pattern is
    Wispr AI the company, Wispr Flow the product; Will, 14 Oct 2026: "i was
    thinking of doing a similar sort of strategy"). First the marketing engine
-   under its product name, shown as early access until its paywall opens; later
+   under its product name (placeholder "Herbert Reach", Will, 14 Oct 2026, not final), shown as early access until its paywall opens; later
    the industry systems once productised.
 7. Who Builds It: the founder, named.
 8. Book the Audit: the button and the three audit facts.
