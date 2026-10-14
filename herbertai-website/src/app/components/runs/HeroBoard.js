@@ -26,11 +26,11 @@ export default function HeroBoard() {
     <div
       ref={ref}
       role="group"
-      aria-label="An example office: its AI employees' jobs for today"
+      aria-label="Five example businesses: their AI employees' jobs for today"
       className="rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] overflow-hidden"
     >
       <div className="flex flex-wrap gap-3 items-center justify-between px-5 py-3 border-b border-[#111]/10 text-[12px] font-mono">
-        <span>Today &middot; an example office</span>
+        <span>Today &middot; five example businesses</span>
         <span className="flex items-center gap-5 tabular-nums">
           <span className="flex items-center gap-2"><Lamp s="done" /> done <b>{b.done}</b></span>
           <span className="flex items-center gap-2"><Lamp s="waiting" /> waiting on a person <b>{b.waiting}</b></span>
@@ -47,7 +47,7 @@ export default function HeroBoard() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
-              className="grid grid-cols-[48px_1fr] md:grid-cols-[52px_168px_minmax(0,1fr)_164px] items-center gap-x-3 gap-y-1 px-3 py-3 border-b border-[#111]/8 last:border-0 text-[15px]"
+              className="grid grid-cols-[48px_1fr] md:grid-cols-[52px_176px_minmax(0,1fr)_164px] items-center gap-x-3 gap-y-1 px-3 py-3 border-b border-[#111]/8 last:border-0 text-[15px]"
             >
               <span className="text-[12px] text-[#777] tabular-nums font-mono">{r.t}</span>
               <span className="font-medium">{r.who}</span>

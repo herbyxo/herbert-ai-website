@@ -4,48 +4,50 @@ import { STATE } from './board'
 
 // The AI employees (CHARTER.md, "The AI employees", 13 Oct 2026): a plain first
 // name with the job always beside it, a 7x7 dot-grid avatar drawn from the job,
-// and three lines of one example day each. Names approved by Will ("names are
-// good. instead of Ruby can u do Emma"). Clients name their own at kickoff;
-// these are the site's examples.
+// and three lines of one example day each. The six are the original idea from
+// each industry (product/research/markdown/industries-2026-10-13-ideas.md),
+// approved by Will on 14 Oct 2026 ("yes, the names u have are good"). Clients
+// name their own at kickoff; these are the site's examples, and every figure
+// on them is made up.
 
 const G = (rows) => rows.map((r) => [...r].map((c) => c === 'X'))
 
 export const EMPLOYEES = [
   {
-    name: 'Steve', job: 'Front Desk', what: 'Answers calls and enquiries, books appointments', where: 'Health · Trades · Hospitality',
-    glyph: G(['.XXXXX.', 'X.....X', 'X.X.X.X', 'X.....X', '.XXXXX.', '..X....', '.X.....']),
-    feed: [['Call answered, new patient enquiry', 'done'], ['Booked Tuesday 10:30 with the physio', 'done'], ['Reschedule request drafted for the clinic', 'wait', 'Approved, client told']],
-    count: 37,
+    name: 'Gus', job: 'Recoveries', what: 'Compares every signed agreement with what the ledger actually charged', where: 'Property',
+    glyph: G(['..XXX..', '.X.X.X.', '.X.X...', '..XXX..', '...X.X.', '.X.X.X.', '..XXX..']),
+    feed: [['Letting fee in the agreement, never charged: $1,100', 'done'], ['Water usage $214 not passed to the tenant', 'wait', 'Approved by Jess, invoiced'], ['Duplicate plumber invoice found, $380', 'done']],
+    count: 11620, countLabel: 'found this month',
   },
   {
-    name: 'Penny', job: 'Document Chaser', what: 'Chases the documents a file is missing', where: 'Finance',
-    glyph: G(['XXXXX..', 'X...XX.', 'X.....X', 'X.XXX.X', 'X.....X', 'X.XXX.X', 'XXXXXXX']),
-    feed: [['Checklists sent to 150 clients', 'done'], ['38 reminders drafted, only what is missing', 'wait', 'Approved, sent'], ['Bank statement matched to the Nguyen file', 'done']],
-    count: 212,
+    name: 'Vic', job: 'Margins', what: 'Tells the owner which kinds of jobs are priced wrong', where: 'Trades',
+    glyph: G(['.......', '.X.....', '.X...X.', '.X.X.X.', '.X.X.X.', '.X.X.X.', 'XXXXXXX']),
+    feed: [['Double-storey ducted: quoted 28%, made 16%', 'done'], ['Gas fitting quotes thin since the price rise', 'wait', 'Template reviewed by Dave'], ['Won 11 of 13 ducted jobs, price holds', 'done']],
+    count: 38, countLabel: 'quotes checked',
   },
   {
-    name: 'Max', job: 'Quote Follow-up', what: 'Follows up every quote until it is a yes or a no', where: 'Trades',
-    glyph: G(['..XXX..', '.X...X.', 'X.....X', 'X...XXX', 'X....X.', '.X.....', '..XXX..']),
-    feed: [['Quote 1042 followed up, second time', 'done'], ['Quote 1038 flagged: worth a call', 'done'], ['Follow-up drafted for a $4,800 install', 'wait', 'Approved, sent']],
-    count: 19,
+    name: 'Fern', job: 'Scope', what: 'Flags client requests outside the engagement letter before the work starts', where: 'Finance',
+    glyph: G(['.XXXXX.', '.X...X.', '.XXXXX.', '.X...X.', '.X...X.', '.X...X.', '.XXXXX.']),
+    feed: [['“Quick letter for the bank”: outside scope, usual fee $220', 'wait', 'Quoted by Sam'], ['BAS query: inside the engagement, no charge', 'done'], ['Free work this month down to $2,880', 'done']],
+    count: 3100, countLabel: 'free work caught',
   },
   {
-    name: 'Emma', job: 'Maintenance', what: 'Logs repair requests, gets approval, books the tradie', where: 'Property',
-    glyph: G(['...X...', '..X.X..', '.X...X.', 'XXXXXXX', '.X...X.', '.X.X.X.', '.XXXXX.']),
-    feed: [['Plumbing request logged, Unit 5', 'done'], ['Landlord approval requested, $380 quote', 'wait', 'Approved, plumber booked'], ['Tenant told the plumber comes Tuesday', 'done']],
-    count: 26,
+    name: 'Rita', job: 'Rebookings', what: 'Brings back every function when its date comes round again', where: 'Hospitality',
+    glyph: G(['..XXX..', '.X...X.', 'X.....X', 'X......', 'X...X.X', '.X...XX', '..XXXXX']),
+    feed: [['Last year’s Christmas party, 42 guests: back room held for 11 Dec', 'done'], ['Draft to Priya with last year’s menu', 'wait', 'Approved by Jess, sent'], ['Priya replied: yes, please hold it', 'done']],
+    count: 14, countLabel: 'dates held',
   },
   {
-    name: 'Archie', job: 'Invoice Chaser', what: 'Reminds overdue invoices, politely, on schedule', where: 'Finance · Trades',
-    glyph: G(['...X...', '.XXXXX.', 'X..X...', '.XXXXX.', '...X..X', '.XXXXX.', '...X...']),
-    feed: [['Invoice 2214 reminded, second time', 'done'], ['Invoice 2198 paid, reminder stopped', 'done'], ['Final notice drafted for 2187', 'wait', 'Approved, sent']],
-    count: 44,
+    name: 'Joy', job: 'Milestones', what: 'Remembers the goal each patient named and asks how it went', where: 'Health',
+    glyph: G(['.X.....', '.XXXXX.', '.XXXXX.', '.XXXX..', '.X.....', '.X.....', '.X.....']),
+    feed: [['Priya’s goal from 3 June: run the City-Bay', 'done'], ['City-Bay was yesterday: draft from Alex ready', 'wait', 'Approved by Alex, sent'], ['Priya replied, booked Wednesday', 'done']],
+    count: 23, countLabel: 'goals remembered',
   },
   {
-    name: 'Tess', job: 'Bookings', what: 'Confirms bookings and fills cancellations', where: 'Health · Hospitality',
-    glyph: G(['.X...X.', 'XXXXXXX', 'X.....X', 'X.X.X.X', 'X.....X', 'X.X.X.X', 'XXXXXXX']),
-    feed: [['Tomorrow’s 46 bookings confirmed', 'done'], ['Cancellation at 2:15, the waitlist took it', 'done'], ['Table for 12 needs a deposit', 'wait', 'Approved, deposit link sent']],
-    count: 61,
+    name: 'Ray', job: 'Promises', what: 'Keeps every promise made to a customer, or the customer hears first', where: 'Every industry',
+    glyph: G(['.......', '......X', '.....X.', 'X...X..', '.X.X...', '..X....', '.......']),
+    feed: [['Job note: “send price for 2nd split by Fri”', 'done'], ['Friday, not sent: update to Mrs Patel drafted', 'wait', 'Approved by Dave, sent'], ['Price sent Monday, promise kept', 'done']],
+    count: 52, countLabel: 'promises tracked',
   },
 ]
 

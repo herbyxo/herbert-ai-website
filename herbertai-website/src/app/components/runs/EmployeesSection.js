@@ -1,6 +1,6 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, useInView, useMotionValueEvent, useReducedMotion, useScroll } from 'framer-motion'
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { AnimatePresence, motion, useInView, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Avatar, EMPLOYEES, StateLine } from './employees'
 
 // Homepage section 3, the AI employees roster (13 Oct 2026). Will picked motion
@@ -68,8 +68,8 @@ function Card({ e, still }) {
           <p className="text-[12.5px] text-[#777] mt-1">{e.where}</p>
         </div>
         <div className="text-right">
-          <p className="text-[22px] font-semibold tabular-nums leading-none">{count}</p>
-          <p className="text-[11px] text-[#888] mt-1">jobs this week</p>
+          <p className="text-[22px] font-semibold tabular-nums leading-none">{e.countLabel.startsWith('found') || e.countLabel.startsWith('free') ? `$${count.toLocaleString('en-AU')}` : count}</p>
+          <p className="text-[11px] text-[#888] mt-1">{e.countLabel}</p>
         </div>
       </div>
       <p className="mt-3 text-[14px] text-[#444]">{e.what}</p>
@@ -200,13 +200,25 @@ function Scene() {
   )
 }
 
+// Reduced motion is read as an external store with a server snapshot of
+// false, so the server HTML and the first client render match (framer's
+// useReducedMotion is null on the server and mismatched, a hydration error)
+// and the still form applies right after hydration.
+const QUERY = '(prefers-reduced-motion: reduce)'
+const subscribe = (cb) => {
+  const m = window.matchMedia(QUERY)
+  m.addEventListener('change', cb)
+  return () => m.removeEventListener('change', cb)
+}
+const getStill = () => window.matchMedia(QUERY).matches
+const getServerStill = () => false
+
 export default function EmployeesSection() {
-  const still = useReducedMotion()
-  if (still) return <Grid still />
+  const still = useSyncExternalStore(subscribe, getStill, getServerStill)
   return (
     <>
-      <div className="hidden lg:block"><Scene /></div>
-      <div className="lg:hidden"><Grid /></div>
+      <div className="hidden lg:block">{still ? <Grid still /> : <Scene />}</div>
+      <div className="lg:hidden"><Grid still={still} /></div>
     </>
   )
 }

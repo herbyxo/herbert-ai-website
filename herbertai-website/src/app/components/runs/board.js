@@ -7,14 +7,18 @@ import { useEffect, useState } from 'react'
 
 export const STATE = { done: '#12B76A', waiting: '#F5A623', queued: '#BDBDBD' }
 
+// The rows are the homepage roster at work (CHARTER.md, "The AI employees"),
+// so the hero introduces the six the scroll scene then deepens. Five example
+// businesses, every figure made up. short and board are the departures-board
+// forms the lab still draws.
 export const ROWS = [
-  { t: '08:32', who: 'Document chaser', short: 'DOC CHASER', what: 'Checklists sent to 150 clients', board: 'CHECKLISTS TO 150 CLIENTS', s: 'done' },
-  { t: '08:40', who: 'Document chaser', short: 'DOC CHASER', what: '38 reminders drafted, only for what is missing', board: '38 REMINDERS DRAFTED', s: 'waiting', wait: 'Waiting on Sarah', waitB: 'WAITING: SARAH', then: 'Approved by Sarah, sent', thenB: 'APPROVED, SENT' },
-  { t: '08:47', who: 'Quote follow-up', short: 'QUOTE FOLLOW-UP', what: 'Quote 1042 followed up, second time', board: 'QUOTE 1042 FOLLOWED UP', s: 'done' },
-  { t: '08:51', who: 'Front desk assistant', short: 'FRONT DESK', what: 'Intake form sent to a new patient', board: 'INTAKE FORM SENT', s: 'done' },
-  { t: '08:55', who: 'Maintenance coordinator', short: 'MAINTENANCE', what: 'Landlord approval requested, Unit 4', board: 'LANDLORD APPROVAL, UNIT 4', s: 'waiting', wait: 'Waiting on the landlord', waitB: 'WAITING: LANDLORD', then: 'Approved, plumber booked for Tuesday', thenB: 'PLUMBER BOOKED TUE' },
-  { t: '09:02', who: 'Document chaser', short: 'DOC CHASER', what: 'Bank statement matched to the Nguyen file', board: 'STATEMENT MATCHED, NGUYEN', s: 'done' },
-  { t: '09:06', who: 'Quote follow-up', short: 'QUOTE FOLLOW-UP', what: 'Quote 1038 flagged: worth a call', board: 'QUOTE 1038: WORTH A CALL', s: 'done' },
+  { t: '08:32', who: 'Gus · Recoveries', short: 'GUS', what: 'Letting fee in the agreement, never charged: $1,100 found', board: 'LETTING FEE FOUND $1,100', s: 'done' },
+  { t: '08:40', who: 'Fern · Scope', short: 'FERN', what: '“Quick letter for the bank” tagged outside scope, usual fee $220', board: 'OUTSIDE SCOPE $220', s: 'waiting', wait: 'Waiting on Sam', waitB: 'WAITING: SAM', then: 'Quoted by Sam', thenB: 'QUOTED' },
+  { t: '08:47', who: 'Vic · Margins', short: 'VIC', what: 'Ducted jobs: quoted 28%, made 16%, template flagged', board: 'DUCTED QUOTED 28 MADE 16', s: 'done' },
+  { t: '08:51', who: 'Rita · Rebookings', short: 'RITA', what: 'Last year’s Christmas party: back room held for 11 Dec', board: 'XMAS PARTY REBOOKED', s: 'done' },
+  { t: '08:55', who: 'Ray · Promises', short: 'RAY', what: '“Price by Friday” due today, update to Mrs Patel drafted', board: 'PROMISE DUE TODAY', s: 'waiting', wait: 'Waiting on Dave', waitB: 'WAITING: DAVE', then: 'Approved by Dave, sent', thenB: 'APPROVED, SENT' },
+  { t: '09:02', who: 'Joy · Milestones', short: 'JOY', what: 'Priya ran the City-Bay yesterday, “how did it go?” drafted', board: 'CITY-BAY FOLLOW-UP', s: 'done', then: 'Sent by Alex' },
+  { t: '09:06', who: 'Gus · Recoveries', short: 'GUS', what: 'Duplicate plumber invoice found, $380 to refund', board: 'DUPLICATE INVOICE $380', s: 'done' },
 ]
 
 export function useInView(ref, threshold = 0.3) {
