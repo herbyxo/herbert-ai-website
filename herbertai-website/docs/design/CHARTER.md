@@ -152,6 +152,31 @@ product". So:
   metaphor for the product (a departures board, an andon board) where the
   product can be shown.
 
+## Settled: the homepage (14 Oct 2026)
+
+Will: "yes and products now". Eight sections, in this order, with the rhythm
+of a moving section then a calm one. Only the hero fills a screen; every other
+section shows a bit of the next.
+
+1. Hero: the manifesto beside the example office's board, whose rows are the
+   six AI employees doing their jobs.
+2. How It Works: audit, your first AI employee, the system it runs in. Calm.
+3. AI Employees: the one scroll scene; scrolling picks the employee, the day
+   plays by itself.
+4. Industries: the five industries listed beside one big screen showing that
+   industry's full system, calm until clicked.
+5. The Work: proof, small; the real builds a visitor can open.
+6. Products: Herbert AI's own products, each with its own name (the pattern is
+   Wispr AI the company, Wispr Flow the product; Will, 14 Oct 2026: "i was
+   thinking of doing a similar sort of strategy"). First the marketing engine
+   under its product name, shown as early access until its paywall opens; later
+   the industry systems once productised.
+7. Who Builds It: the founder, named.
+8. Book the Audit: the button and the three audit facts.
+
+The research behind the order and the motion rule:
+`research-order-and-motion-2026-10-14.md`.
+
 ## Anti-references
 
 - A copy of any single reference site. Will, 18 Sep 2026: "its just a copy of

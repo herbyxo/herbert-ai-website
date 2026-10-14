@@ -843,3 +843,13 @@ card with one approve, one counter moving.
 Will's pick on the roster (14 Oct 2026): "yes, the names u have are good".
 Gus, Vic, Fern, Rita, Joy, Ray. He then asked for the homepage sections.
 
+## Homepage sections settled (14 Oct 2026)
+
+Will: "yes and products now - i saw how there is Wispr Flow, a product of Wispr
+AI. i was thinking of doing a similar sort of strategy". The eight sections and
+the product-naming pattern are in CHARTER.md ("Settled: the homepage"). Build
+order: the roster swap and hero rows, then Industries (Property's system drawn
+three ways, the other four follow the pick), then The Work, Products, Who Builds
+It and Book the Audit, three options each. The marketing engine's product name
+is Will's call before Products is drawn.
+
