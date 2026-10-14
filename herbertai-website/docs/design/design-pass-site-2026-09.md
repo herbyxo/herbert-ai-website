@@ -876,3 +876,22 @@ the next three-option board.
 Will: "we'll come back to this, Herbert Reach as a placeholder for now". The
 Products section is drawn with "Herbert Reach"; the name is not final.
 
+## [~] Industries: Property's system three ways (options 14 Oct 2026)
+
+Homepage section 4 in layout A: the five industries listed beside one big
+screen showing the active industry's full system. Property first, three ways,
+from `industries-2026-10-13/property.md` sections 4 and 6; the other four follow
+the pick. Board: `design-pass-site-2026-10-14-industries-property.png`, from
+`design-pass-site-2026-10-14-industries-property.py`; running at
+`/lab/industries-property` (`src/app/components/lab/IndustryOptions.js`), each
+in place at 1440 then the screen close up. A the hub's morning, the approvals
+screen at 7am with three decisions from Emma · Maintenance, Kate · Renewals and
+Rose · Arrears approved one by one, the week's count and four boards beside;
+B one repair start to finish, the tenant's 11:42pm text, the overnight
+timeline and the property manager's single 7:05am approval on a split screen
+(the research's pick; recommended); C the maintenance board with a no-hot-water
+card moving New to Done overnight. Every name, address and figure is made up.
+Found while drawing: the screen frame was 720px with 450px of content, a third
+blank; now 520px.
+Will's pick: (pending)
+

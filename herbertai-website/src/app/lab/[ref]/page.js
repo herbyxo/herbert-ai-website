@@ -9,6 +9,7 @@ import WorkOptions from '../../components/lab/WorkOptions'
 import WorkVisualOptions from '../../components/lab/WorkVisualOptions'
 import MotionDemo from '../../components/lab/MotionDemo'
 import WorkSectionOptions from '../../components/lab/WorkSectionOptions'
+import IndustryOptions from '../../components/lab/IndustryOptions'
 
 const MAP = {
   'concept-now-hiring': NowHiring,
@@ -19,6 +20,7 @@ const MAP = {
   'the-work-visual': WorkVisualOptions,
   motion: MotionDemo,
   'the-work-2': WorkSectionOptions,
+  'industries-property': IndustryOptions,
 }
 
 export function generateStaticParams() {
