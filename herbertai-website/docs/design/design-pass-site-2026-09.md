@@ -853,3 +853,21 @@ three ways, the other four follow the pick), then The Work, Products, Who Builds
 It and Book the Audit, three options each. The marketing engine's product name
 is Will's call before Products is drawn.
 
+## [x] Roster swap and hero rows (14 Oct 2026)
+
+Built from the settled roster: `components/runs/employees.js` carries Gus ·
+Recoveries, Vic · Margins, Fern · Scope, Rita · Rebookings, Joy · Milestones
+and Ray · Promises, each with a new 7x7 glyph (a dollar sign, three bars, a
+page with one line lit, a return arrow, a flag, a tick), three lines of a day
+from the ideation demo moments, and a stat with its own label ("$11,620 found
+this month", "38 quotes checked"). The hero board's rows are the six at work
+across five example businesses, so the hero introduces what the scroll scene
+deepens; its header now reads "Today · five example businesses" (was "an
+example office", one office cannot hold five industries). Found and fixed on
+the way: a hydration error whenever reduced motion was on, because framer's
+useReducedMotion is null on the server; reduced motion is now read with
+useSyncExternalStore and a server snapshot of false. Checked headless at 1440
+in both motion modes, no errors, and at 600 wide. The per-employee scene
+treatment (one record line lighting up, one card, one approve, one counter) is
+the next three-option board.
+
