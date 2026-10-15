@@ -922,3 +922,21 @@ approval. Property as drawn; Trades, Health, Hospitality and Finance to follow
 in the same shape from each research file's "what the website should show". The recognition content (the industry's jobs, hours and
 software) belongs on the industry pages.
 
+## [x] Industries built: five stories (15 Oct 2026)
+
+Built from the B pick: `components/runs/IndustriesSection.js` (layout A, the
+five industries listed beside one big screen, calm until clicked, opens on
+Property), `components/runs/OneJob.js` (the one shape: the customer's message,
+what happened with timestamps, the one approval, the day's count) and
+`components/runs/industries.js` (the five stories, each the visual its research
+file recommended: Property one repair after hours with Emma; Trades one quote
+request answered in 52 seconds with Max · Sales Coordinator; Health one
+cancellation filled by 8:11am with Hazel · Waitlist; Hospitality one function
+enquiry answered in service with Clara · Functions; Finance one client's reply
+read against last year's return with Nora · Tax Intake and Penny). Sits after
+AI Employees and before The Work; the old cream industries strip is gone.
+Checked headless: all five play to their approval, no errors, no overflow at
+375; 94px of the next section shows at 1440x900, 6px at 1280x800. Sheet:
+`design-pass-site-2026-10-15-industries-built.png`. Will's tweaks next, then
+the section's details.
+
