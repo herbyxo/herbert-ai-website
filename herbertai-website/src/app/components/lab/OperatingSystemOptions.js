@@ -23,8 +23,8 @@ const W = 1184
 const H = 520
 const Q = '’'
 const G = (rows) => rows.map((r) => [...r].map((c) => c === 'X'))
-const LEO = G(['XX...XX', 'X.X.X.X', 'X..X..X', 'X.....X', 'X.....X', 'X.....X', 'X.....X'])
-const OWEN = G(['..XXX..', '.X...X.', 'X.....X', 'X..X..X', 'X.....X', '.X...X.', '..XXX..'])
+export const LEO = G(['XX...XX', 'X.X.X.X', 'X..X..X', 'X.....X', 'X.....X', 'X.....X', 'X.....X'])
+export const OWEN = G(['..XXX..', '.X...X.', 'X.....X', 'X..X..X', 'X.....X', '.X...X.', '..XXX..'])
 const GUS = EMPLOYEES[0].glyph
 const INK = '#111'
 
@@ -58,15 +58,15 @@ const TEAM = [
   ['Gus', 'Recoveries', GUS, () => 'still', ['Next run 9:00am']],
 ]
 
-function HubWhole() {
+export function HubWhole({ record = false }) {
   const ref = useRef(null)
   const n = useSteps(useInView(ref, 0.25), 5)
   const handled = 30 + Math.min(2, Math.max(0, n - 1))
   const left = QUEUE.filter((q) => n < q.at).length
   return (
     <div ref={ref}>
-      <Frame bar="Operations hub · an example property agency" right="Tuesday · 7:00am">
-        <div className="grid grid-cols-[172px_1fr_292px]" style={{ height: H - 42 }}>
+      <Frame bar="Operations hub · an example property agency" right={record ? 'Tuesday · 7:00am · reads and writes PropertyMe' : 'Tuesday · 7:00am'}>
+        <div className="grid grid-cols-[172px_1fr_292px]" style={{ height: H - 42 - (record ? 36 : 0) }}>
           <aside className="bg-[#F6F6F3] border-r border-[#111]/10 px-3 py-4 flex flex-col">
             <p className="px-2 text-[11px] text-[#999] mb-3">Example agency</p>
             <div className="grid gap-[1px]">
@@ -128,6 +128,12 @@ function HubWhole() {
             </div>
           </div>
         </div>
+        {record && (
+          <div className="h-[36px] border-t border-[#111]/10 bg-[#F6F6F3] px-5 flex items-center justify-between gap-6 text-[11.5px] text-[#555]">
+            <span className="whitespace-nowrap"><b className="font-medium text-[#111]">PropertyMe stays the trust ledger.</b> Read and written by the system, never replaced.</span>
+            <span className="whitespace-nowrap"><b className="font-medium text-[#111]">Gone:</b> the shared inbox as the work queue, the whiteboard, the maintenance spreadsheet.</span>
+          </div>
+        )}
       </Frame>
     </div>
   )
@@ -822,15 +828,16 @@ function FunctionsPipeline() {
 const BUILT = { property: 'https://dashboard.herbert-aisolutions.com' }
 const SLUG = { property: 'real-estate', trades: 'trades', health: 'allied-health', hospitality: 'hospitality', finance: 'accountants' }
 
-export function OSSection({ Visual, activeId = 'property' }) {
+export function OSSection({ Visual, activeId = 'property', heading = 'Built for the office you actually run.', lines = null, caption = null }) {
   const active = INDUSTRIES.find((x) => x.id === activeId)
+  const line = (x) => (lines ? lines[x.id] : x.system)
   return (
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-16 pb-20">
         <div className="mb-10">
           <p className="text-[15px] font-medium text-[#555] mb-4">Operating Systems</p>
-          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
-            Built for the office you actually run.
+          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[22ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+            {heading}
           </h2>
         </div>
         <div className="grid lg:grid-cols-[1.28fr_0.72fr] gap-x-12 gap-y-10 items-start">
@@ -839,7 +846,8 @@ export function OSSection({ Visual, activeId = 'property' }) {
             <div className="mt-4 flex items-baseline justify-between gap-6">
               <div>
                 <p className="text-[15px] font-medium text-[#777]">{active.name}</p>
-                <p className="mt-1 text-[22px] font-semibold tracking-[-0.02em]">{active.system}</p>
+                <p className="mt-1 text-[22px] font-semibold tracking-[-0.02em]">{line(active)}</p>
+                {caption && <p className="mt-1.5 text-[13.5px] text-[#777]">{caption}</p>}
               </div>
               {BUILT[active.id] ? (
                 <Link href={BUILT[active.id]} className="shrink-0 text-[14px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
@@ -858,7 +866,7 @@ export function OSSection({ Visual, activeId = 'property' }) {
               return (
                 <div key={x.id} role="tab" aria-selected={on} className={`py-4 pl-4 pr-3 border-t border-[#111]/15 border-l-2 ${on ? 'border-l-[#111] bg-white' : 'border-l-transparent'}`}>
                   <span className="flex items-center gap-2 text-[15px] font-medium text-[#777]">{x.name}{BUILT[x.id] && <span className="font-mono text-[10px] uppercase tracking-[0.12em] rounded-full border border-[#111]/15 px-2 py-[1px] text-[#555]">Built</span>}</span>
-                  <span className={`block mt-1 text-[20px] font-semibold tracking-[-0.02em] ${on ? '' : 'text-[#111]/70'}`}>{x.system}</span>
+                  <span className={`block mt-1 text-[20px] font-semibold tracking-[-0.02em] ${on ? '' : 'text-[#111]/70'}`}>{line(x)}</span>
                 </div>
               )
             })}

@@ -12,6 +12,7 @@ import WorkSectionOptions from '../../components/lab/WorkSectionOptions'
 import IndustryOptions from '../../components/lab/IndustryOptions'
 import IndustryRecognitionOptions from '../../components/lab/IndustryRecognitionOptions'
 import OperatingSystemOptions from '../../components/lab/OperatingSystemOptions'
+import DifferentiationOptions from '../../components/lab/DifferentiationOptions'
 
 const MAP = {
   'concept-now-hiring': NowHiring,
@@ -25,6 +26,7 @@ const MAP = {
   'industries-property': IndustryOptions,
   'industries-recognition': IndustryRecognitionOptions,
   'operating-systems': OperatingSystemOptions,
+  'operating-systems-abc': DifferentiationOptions,
 }
 
 export function generateStaticParams() {

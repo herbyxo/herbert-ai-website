@@ -1026,3 +1026,37 @@ appointment and job types are drawn as neutral tints, never the incumbents’
 colour-by-type. Every name and figure made up, each screen says so. Checked
 headless: all five play, no errors with motion on or off. Awaiting Will’s eye.
 
+## [~] Operating Systems: saying the difference, A B C (15 Oct 2026)
+
+Will on the second board: "i think these look good, but one thing i realised
+is that there is likely systems that already exist for each of these
+industries that are widely used. so im wondering how i can differentiate
+myself from that ... at the moment it just looks like im selling a product
+that these businesses already use?" and then "the idea that these systems
+already exist in a monopolised version by existing companies is really
+killing my ambition, but at the same time i am selling the automation layer
+that is specific to a business, not generalised". The answer is in the 13 Oct
+research, section 4 of each industry: the system of record is taken and cheap
+(PropertyMe, ServiceM8, Cliniko, the booking platform, Xero), and the work
+between the systems is open: the shared inbox as a work queue, the whiteboard,
+the spreadsheet, the person’s memory. The incumbents are workbenches a person
+operates; this is a workforce with one person deciding. The second board’s
+screens had been drawn in the incumbents’ idioms on purpose and overshot into
+"the product they already use". Board:
+`design-pass-site-2026-10-15-difference.png`, from
+`design-pass-site-2026-10-15-difference.py`; running at
+`/lab/operating-systems-abc` (`src/app/components/lab/DifferentiationOptions.js`).
+In all three the list names the gap beside the software (the work between
+PropertyMe and your inbox; the office in front of ServiceM8; beside Cliniko:
+the waitlist, recalls and funding; the functions office beside the booking
+system; the season board beside Xero). A say it on the screen: the hub as
+picked with the record named and kept in the frame and what is gone named,
+heading "You keep your software. This is where the work gets done."
+(recommended); B the motion is the difference: the manager’s own list for the
+day in her words, thirteen of fourteen struck through by named employees, one
+tap left for her, heading "Your software stays. The day runs itself."; C lead
+with what is replaced: the desk, PropertyMe kept, the inbox, the whiteboard and
+the spreadsheet going, one screen underneath, heading "Your software stays.
+The inbox, the whiteboard and the spreadsheet go." Named software is named in
+text only, never a logo. Awaiting Will’s pick.
+
