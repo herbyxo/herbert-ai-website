@@ -993,3 +993,36 @@ blank until the four boards’ numbers went in; 2’s Maintenance panel overflow
 at four lines, now three; 3’s afternoon pills ran into the count card, moved
 earlier and shortened.
 
+## [~] Operating Systems: one screen per industry (second board, 15 Oct 2026)
+
+Will on the first board: "i was thinking we could have a different looking
+dashboard for each industry. i assume this dashboard you have made is based
+off the smith build. are you able to look into what industry specific
+dashboards or software look like to get a general idea, or even just think of
+different looks/layouts and stuff for each industry dashboard. i like 1 though,
+maybe if we can have it read a bit cleaner/less cluttered so it is easier to
+follow?" (The Property screen was drawn from the property research, not the
+Smith build; the shape, an approvals queue, is the hub’s shape, so the point
+stood.) Five research agents looked at what each industry’s software opens to
+(product/research/markdown/dashboards-2026-10-15/<industry>.md, screenshots
+seen and named, what was not seen said so), and each screen is drawn in that
+idiom. Board: `design-pass-site-2026-10-15-operating-systems-2.png`, from
+`design-pass-site-2026-10-15-operating-systems-2.py`; running at
+`/lab/operating-systems`, one section per industry with that industry active in
+the list. Property: option 1 cleaned to three regions (the modules down the
+side, the three decisions one line each, the week and the team), the research
+confirming the idiom (a left rail of nouns, lists with who is on them, one
+amber panel for the decision). Trades: the dispatch board (technicians as
+rows, hours across, a now-line) over a pipeline strip with each AI employee
+under its column, the one reply waiting on the owner on the right. Health: the
+appointment book (time down the side, practitioners across), the cancelled
+2:15pm the only dashed block, the wait-list offers the one approval. Hospitality:
+the functions sales view (stages with counts and dollars, cards by stage, the
+40th moving across with its timeline, deposits and rebookings, the week along
+the bottom). Finance: the season board (five stages with count pills, the fat
+waiting-on-client column, the AI employee as each card’s last line, a reply read
+against last year’s checklist, one request approved). Colour stays state only:
+appointment and job types are drawn as neutral tints, never the incumbents’
+colour-by-type. Every name and figure made up, each screen says so. Checked
+headless: all five play, no errors with motion on or off. Awaiting Will’s eye.
+
