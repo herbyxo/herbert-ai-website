@@ -167,13 +167,18 @@ steps as being AI audit, AI employee, and then AI Operating System").
 3. AI Employees: the one scroll scene; scrolling picks the employee, the day
    plays by itself.
 4. Operating Systems: the five industries listed beside one big screen showing
-   that industry’s entirely built system, calm until clicked. The built ones
-   carry an open link and a Built tag. (Was Industries, with The Work as a
-   separate proof section; Will, 15 Oct 2026: "the industries page should
-   actually be about the entirely built system, so maybe we call that section
-   Operating Systems", and "yes fold it in". The list keeps each system’s
-   specific name: an operations hub, an office system, a patient board, a
-   functions office, a season board.)
+   that industry’s operating system from the owner’s chair, work already done
+   with one decision left, calm until clicked. Under the screen, the model’s
+   line for an example business, said to be example figures
+   (product/research/markdown/operating-systems-2026-10-15.md). No software
+   names (Will, 15 Oct 2026: naming the incumbents was "the wrong direction").
+   The built ones carry an open link and a Built tag; The Work is folded in.
+   Order: Property, Trades, Hospitality, Health, Finance. (Was Industries, with
+   The Work as a separate proof section; Will, 15 Oct 2026: "the industries
+   page should actually be about the entirely built system, so maybe we call
+   that section Operating Systems", and "yes fold it in". The list keeps each
+   system’s specific name: an operations hub, an office system, a functions
+   office, a patient board, a season board.)
 5. Products: Herbert AI’s own products, each with its own name (the pattern is
    Wispr AI the company, Wispr Flow the product; Will, 14 Oct 2026: "i was
    thinking of doing a similar sort of strategy"). First the marketing engine

@@ -1095,3 +1095,33 @@ under it, figures labelled example, no software names, no headcount; Property
 first, Trades second, Finance last. The second board’s drawings are the
 starting point, re-pointed. Awaiting Will’s read.
 
+## [x] Operating Systems built: the owner’s view, five industries (15 Oct 2026)
+
+Will: "go". Built from the model (operating-systems-2026-10-15.md, section 7
+of each file): `components/runs/OperatingSystemsSection.js` (layout A, the
+five industries listed beside one big screen, calm until clicked, then that
+screen plays once; the model’s line for an example business under the
+screen, said to be example figures; a built system carries its open link and
+a Built tag; `initial` and `autoplay` props for the lab) and
+`components/runs/os/` (shared frame, scaler, dots and roster glyphs; one file
+per screen, each taking `play`). Property: the owner’s Monday page, six tiles,
+the week as a job list with the employee on each row, one approval card, one
+grey line about hours. Trades: the dispatch board with the owner’s 7am figures
+under it, the one reply waiting on him, the morning’s feed. Hospitality: the
+functions board with the till strip above it and the 40th moving across.
+Health: the appointment book with the owner’s weekly page beside it. Finance:
+the season board with the on-time figure, every waiting card saying what is
+missing and since when, hours never dollars. No software names anywhere on
+the screens. Order Property, Trades, Hospitality, Health, Finance. On the
+homepage it replaces Industries and The Work (`page.js`); `IndustriesSection`,
+`OneJob` and `WorkSection` stay in the tree for the industry pages and /work.
+The lab page `/lab/operating-systems` now shows the real section five times;
+the named-incumbents page is gone. Found while building: the Finance and
+Hospitality card stacks were implicit-track grids that sized to the longest
+line and spilled over their columns; `grid-cols-1` on the stacks fixed it.
+Checked headless: lint clean; no errors or overflow at 1440, 1280 and 375 in
+both motion modes with every tab clicked; the section is 810px at 1440x900
+(90px of the next shows) and 798px at 1280x800. Sheet:
+`design-pass-site-2026-10-15-operating-systems-built.png`. Will’s eye next;
+then the details pass (the heading is still the Industries one).
+

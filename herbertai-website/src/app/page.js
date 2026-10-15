@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import Hero from './components/Hero'
 import EmployeesSection from './components/runs/EmployeesSection'
-import WorkSection from './components/runs/WorkSection'
-import IndustriesSection from './components/runs/IndustriesSection'
+import OperatingSystemsSection from './components/runs/OperatingSystemsSection'
 import RevealOnScroll from './components/motion/RevealOnScroll'
-import { RUNGS, Eyebrow, AuditButton, hubExampleShown } from './components/site/shared'
+import { RUNGS, Eyebrow, AuditButton } from './components/site/shared'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
 // employee, your AI operating system). The three bucket chapters are retired from
@@ -20,8 +19,7 @@ export default function Home() {
       <Hero />
       <HowItWorks />
       <EmployeesSection />
-      <IndustriesSection />
-      <WorkSection showHub={hubExampleShown()} />
+      <OperatingSystemsSection />
       <FounderNote />
       <FinalCTA />
     </>
@@ -80,8 +78,8 @@ function HowItWorks() {
   )
 }
 
-// The Work: components/runs/WorkSection.js (layout A, 13 Oct 2026). Earlier
-// layouts and visuals live in components/lab/ until the lab is removed.
+// Operating Systems: components/runs/OperatingSystemsSection.js (15 Oct 2026).
+// The Work is folded into it; WorkSection.js stays for the /work page.
 
 function FounderNote() {
   return (
