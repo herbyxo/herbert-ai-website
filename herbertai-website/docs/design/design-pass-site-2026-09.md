@@ -940,3 +940,10 @@ Checked headless: all five play to their approval, no errors, no overflow at
 `design-pass-site-2026-10-15-industries-built.png`. Will's tweaks next, then
 the section's details.
 
+## Not on Track (15 Oct 2026)
+
+The rebuild had a track.json for a day so the track mod could show it. Will:
+"track doesnt really fit into a website redesign though, so it doesnt make
+sense". Removed. This ledger is the rebuild's state; Track stays for builds
+with milestones and gates.
+
