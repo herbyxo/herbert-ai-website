@@ -913,5 +913,9 @@ the employees in it: the systems the agency runs as a row, the employees
 appearing between them with lines to what each reads and writes; 3 the team:
 the industry's AI employees as a team sheet. Hours are the research's estimates
 for an example agency and say so; shown as the size of the job, never a saving.
-Will's pick: (pending)
+Will (15 Oct 2026): "i think id rather go back to yesterdays". The recognition
+version is declined for the homepage; the Industries section shows each
+industry's system or one job through it, from the 14 Oct board (A, B or C,
+pick pending). The recognition content (the industry's jobs, hours and
+software) belongs on the industry pages.
 
