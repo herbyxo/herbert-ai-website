@@ -915,7 +915,10 @@ the industry's AI employees as a team sheet. Hours are the research's estimates
 for an example agency and say so; shown as the size of the job, never a saving.
 Will (15 Oct 2026): "i think id rather go back to yesterdays". The recognition
 version is declined for the homepage; the Industries section shows each
-industry's system or one job through it, from the 14 Oct board (A, B or C,
-pick pending). The recognition content (the industry's jobs, hours and
+industry's system or one job through it, from the 14 Oct board.
+Will's pick (15 Oct 2026): "ok B". One job start to finish through the system,
+on a split screen: the customer's message, the overnight timeline, the one
+approval. Property as drawn; Trades, Health, Hospitality and Finance to follow
+in the same shape from each research file's "what the website should show". The recognition content (the industry's jobs, hours and
 software) belongs on the industry pages.
 
