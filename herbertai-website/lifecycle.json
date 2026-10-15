@@ -1,0 +1,662 @@
+{
+  "build": "Herbert AI website rebuild",
+  "summary": "The organic website (herbert-aisolutions.com) rebuilt around the concept Runs itself: the site shows the running system instead of describing it. The homepage is being rebuilt section by section on the branch preview/runs-itself, each section drawn as three options on the real page and picked by Will, then its details the same way. Settled so far: the hero, How It Works, the AI employees roster (a scroll scene), Industries (one job start to finish per industry) and The Work. Still to come: Products, Who Builds It, Book the Audit, the industry pages and the merge to main. Nothing is live yet; the live site still shows the May 2026 design.",
+  "updated": "2026-10-15",
+  "about": "Design-led build. The method is the design-taste skill's design pass (docs/design/design-pass-site-2026-09.md is the ledger of every option and pick, in Will's words). The design language is docs/design/CHARTER.md. Research behind the structure: the September identity research and the October industries research in the files repo.",
+  "phases": [
+    {
+      "n": 0,
+      "name": "Discovery",
+      "status": "done",
+      "when": "16 Sep 2026",
+      "note": "identity research, five questions",
+      "story": "Research on what Herbert AI is and what its website should be: identity, the entry offer, what a high-ticket B2B site needs, the AI employee framing, search demand. Written up with sourced evidence.",
+      "left": [],
+      "docs": [
+        "../../../product/research/markdown/herbert-ai-identity-and-website-2026-09-16.md"
+      ]
+    },
+    {
+      "n": 1,
+      "name": "Requirements",
+      "status": "done",
+      "when": "16 Sep 2026, added to 14 Oct",
+      "note": "decisions file",
+      "story": "The decisions from the research, grilled with Will: the descriptor, the ladder and its published prices, pages and one action per page, no client names. Added 13 and 14 Oct: five industries named as industries, AI employees as the site's unit, the first AI employee replacing the Bottleneck Pilot, products on the Wispr Flow pattern.",
+      "left": [],
+      "docs": [
+        "../../../product/research/markdown/herbert-ai-identity-and-website-2026-09-16-decisions.md"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "UX",
+      "status": "current",
+      "when": "22 Sep 2026 onward",
+      "note": "concept picked, charter rewritten, design pass running",
+      "story": "The concept Runs itself was picked from two drawn live after four rounds of reference clones were rejected. The charter was rewritten around it. Since then every section is drawn three ways on the real page and Will picks; his picks and tweaks are the ledger. Runs per section, so it stays current until the last section is picked.",
+      "left": [
+        "Products, Who Builds It and Book the Audit still to draw",
+        "the details of AI Employees, Industries and The Work"
+      ],
+      "docs": [
+        "docs/design/CHARTER.md",
+        "docs/design/design-pass-site-2026-09.md",
+        "docs/design/research-order-and-motion-2026-10-14.md"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Technical design",
+      "status": "n/a",
+      "when": "",
+      "note": "same stack, no new systems",
+      "story": "The rebuild is page sections on the existing Next.js, Tailwind and framer-motion stack with no new data or services, so there is no technical design beyond each component's header comment. The one piece of logic worth a note is the hub example page's production gate (components/site/shared.js, HUB_EXAMPLE_CLEARED).",
+      "left": [],
+      "docs": []
+    },
+    {
+      "n": 4,
+      "name": "Plan",
+      "status": "done",
+      "when": "14 Oct 2026",
+      "note": "eight sections settled",
+      "story": "The homepage's eight sections and their order were settled with Will on 14 Oct, with the rhythm of a moving section then a calm one and the research on order and motion behind it. Each section is a milestone below; the pages after the homepage are the later ones.",
+      "left": [],
+      "docs": [
+        "docs/design/CHARTER.md"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "Build",
+      "status": "current",
+      "when": "6 Oct 2026 onward",
+      "note": "five of eight sections built on preview/runs-itself",
+      "story": "Built so far, each after its pick: the hero (6 to 10 Oct), How It Works (10 to 12 Oct), the AI employees scene (13 to 14 Oct), The Work (13 Oct) and Industries (15 Oct), plus the two example pages under /work and the copy rename across the site. Everything is on the preview branch and visible at its Vercel preview URL.",
+      "left": [
+        "Products",
+        "Who Builds It",
+        "Book the Audit",
+        "industry pages and slugs",
+        "nav label AI Employees",
+        "lab removal"
+      ],
+      "docs": [
+        "src/app/page.js",
+        "src/app/components/runs/"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "QA",
+      "status": "running",
+      "when": "per section",
+      "note": "headless checks per section",
+      "story": "Every built section is checked headless before commit: 1440 and 375 wide, both motion settings, no console errors, no horizontal overflow, the next section showing under it on a laptop. A hydration error with reduced motion was found this way on 14 Oct and fixed. No full-site walkthrough yet.",
+      "left": [
+        "a site-walkthrough pass before the merge",
+        "a blind critic round against the bar for the finished homepage"
+      ],
+      "docs": []
+    },
+    {
+      "n": 7,
+      "name": "Release",
+      "status": "not started",
+      "when": "",
+      "note": "merge to main when the homepage is done",
+      "story": "Nothing is live. The branch merges to main when the eight sections are built and signed off; until then the live site shows the May design, and main's own changes are merged into the branch as they land.",
+      "left": [
+        "merge preview/runs-itself to main",
+        "redirects for the renamed industry slugs"
+      ],
+      "docs": []
+    },
+    {
+      "n": 8,
+      "name": "Operate",
+      "status": "not started",
+      "when": "",
+      "note": "",
+      "story": "After the merge: audit bookings and scroll depth per section as the measure of the order, per the research note.",
+      "left": [
+        "wire scroll depth per section into the pipeline readout"
+      ],
+      "docs": []
+    }
+  ],
+  "milestones": [
+    {
+      "id": "M1",
+      "name": "Hero",
+      "phase": 7,
+      "status": "done",
+      "when": "6 to 10 Oct 2026",
+      "money": "",
+      "left": [],
+      "acceptance": {
+        "date": "2026-10-10",
+        "result": "eight details picked and built; one screen, capitals on the board's top, button on its bottom",
+        "record": "docs/design/design-pass-site-2026-09.md"
+      },
+      "phases": [
+        {
+          "n": 2,
+          "status": "done",
+          "note": "option A the product window, then eight detail boards"
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": "no technical design: a page section on the existing stack"
+        },
+        {
+          "n": 5,
+          "status": "done",
+          "note": "on preview/runs-itself"
+        },
+        {
+          "n": 6,
+          "status": "done",
+          "note": "headless at 1440 and 375, both motion modes"
+        },
+        {
+          "n": 7,
+          "status": "pending",
+          "note": "ships with the branch merge, M11"
+        }
+      ]
+    },
+    {
+      "id": "M2",
+      "name": "How It Works",
+      "phase": 7,
+      "status": "done",
+      "when": "10 to 12 Oct 2026",
+      "money": "",
+      "left": [],
+      "acceptance": {
+        "date": "2026-10-12",
+        "result": "option B plus five details; three facts per step, pricing link alone, tighter spacing",
+        "record": "docs/design/design-pass-site-2026-09.md"
+      },
+      "phases": [
+        {
+          "n": 2,
+          "status": "done",
+          "note": "option B set plain, then five detail boards"
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": "no technical design: a page section on the existing stack"
+        },
+        {
+          "n": 5,
+          "status": "done",
+          "note": "on preview/runs-itself"
+        },
+        {
+          "n": 6,
+          "status": "done",
+          "note": "headless at 1440 and 375, both motion modes"
+        },
+        {
+          "n": 7,
+          "status": "pending",
+          "note": "ships with the branch merge, M11"
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "name": "AI Employees",
+      "phase": 6,
+      "status": "build",
+      "when": "13 to 14 Oct 2026",
+      "money": "",
+      "left": [
+        "the per-employee scene treatment as a three-option board (one record line lighting up, one card, one approve, one counter)",
+        "Will's eye on pace after the roster swap"
+      ],
+      "acceptance": {
+        "date": "2026-10-14",
+        "result": "six new employees play on the scene and the cards; reduced motion hydration fixed",
+        "record": "docs/design/design-pass-site-2026-09.md"
+      },
+      "phases": [
+        {
+          "n": 2,
+          "status": "done",
+          "note": "motion levels demo, roster, names and avatars"
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "done",
+          "note": "scroll scene on laptops, cards on phones"
+        },
+        {
+          "n": 6,
+          "status": "done",
+          "note": "both motion modes, 1440 and 600 and 375"
+        },
+        {
+          "n": 7,
+          "status": "pending",
+          "note": "M11"
+        }
+      ]
+    },
+    {
+      "id": "M4",
+      "name": "Industries",
+      "phase": 6,
+      "status": "build",
+      "when": "14 to 15 Oct 2026",
+      "money": "",
+      "left": [
+        "Will's tweaks on the five stories",
+        "the section's details"
+      ],
+      "acceptance": {
+        "date": "2026-10-15",
+        "result": "five stories play to their approval; no errors; 94px of the next section shows at 1440",
+        "record": "docs/design/design-pass-site-2026-10-15-industries-built.png"
+      },
+      "phases": [
+        {
+          "n": 2,
+          "status": "done",
+          "note": "Property three ways, then recognition three ways (declined), B picked"
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "done",
+          "note": "OneJob, industries.js, IndustriesSection"
+        },
+        {
+          "n": 6,
+          "status": "done",
+          "note": "headless, five industries clicked"
+        },
+        {
+          "n": 7,
+          "status": "pending",
+          "note": "M11"
+        }
+      ]
+    },
+    {
+      "id": "M5",
+      "name": "The Work",
+      "phase": 6,
+      "status": "build",
+      "when": "13 Oct 2026",
+      "money": "",
+      "left": [
+        "the section's details",
+        "the hub's visual on the live site once the client clears it"
+      ],
+      "acceptance": {
+        "date": "2026-10-13",
+        "result": "layout A, four systems under their industry, each plays on click",
+        "record": "docs/design/design-pass-site-2026-09.md"
+      },
+      "phases": [
+        {
+          "n": 2,
+          "status": "done",
+          "note": "three layouts, A picked, industry labels"
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "done",
+          "note": ""
+        },
+        {
+          "n": 6,
+          "status": "done",
+          "note": ""
+        },
+        {
+          "n": 7,
+          "status": "pending",
+          "note": "M11"
+        }
+      ]
+    },
+    {
+      "id": "M6",
+      "name": "Products",
+      "phase": null,
+      "status": "not started",
+      "when": "",
+      "money": "",
+      "left": [
+        "the marketing engine's product name (placeholder Herbert Reach)",
+        "early access, not a paywall, until the engine has real numbers"
+      ],
+      "acceptance": null,
+      "phases": [
+        {
+          "n": 2,
+          "status": "not started",
+          "note": "three options to draw"
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 6,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 7,
+          "status": "not started",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "M7",
+      "name": "Who Builds It",
+      "phase": null,
+      "status": "not started",
+      "when": "",
+      "money": "",
+      "left": [
+        "founder photo, when there is one"
+      ],
+      "acceptance": null,
+      "phases": [
+        {
+          "n": 2,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 6,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 7,
+          "status": "not started",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "M8",
+      "name": "Book the Audit",
+      "phase": null,
+      "status": "not started",
+      "when": "",
+      "money": "",
+      "left": [],
+      "acceptance": null,
+      "phases": [
+        {
+          "n": 2,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 6,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 7,
+          "status": "not started",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "M9",
+      "name": "Industry pages",
+      "phase": null,
+      "status": "not started",
+      "when": "",
+      "money": "",
+      "left": [
+        "five pages on the new slugs with redirects from the old",
+        "each page: its system (the 14 Oct Property drawings move here), its roster, its jobs and software from the research"
+      ],
+      "acceptance": null,
+      "phases": [
+        {
+          "n": 2,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 6,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 7,
+          "status": "not started",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "M10",
+      "name": "AI Employees page and nav",
+      "phase": null,
+      "status": "not started",
+      "when": "",
+      "money": "",
+      "left": [
+        "replace What gets built with AI Employees",
+        "the full roster across industries"
+      ],
+      "acceptance": null,
+      "phases": [
+        {
+          "n": 2,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 3,
+          "status": "n/a",
+          "note": ""
+        },
+        {
+          "n": 5,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 6,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 7,
+          "status": "not started",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "M11",
+      "name": "Merge to main",
+      "phase": null,
+      "status": "not started",
+      "when": "",
+      "money": "",
+      "left": [
+        "site-walkthrough pass",
+        "remove /lab and components/lab",
+        "merge; the live site changes"
+      ],
+      "acceptance": null,
+      "phases": [
+        {
+          "n": 6,
+          "status": "not started",
+          "note": ""
+        },
+        {
+          "n": 7,
+          "status": "not started",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "owed": [
+    "Lawyer's hour on the privacy principles and the Spam Act before any of the 30 AI employee ideas is sold (industries-2026-10-13-ideas.md, checks section)",
+    "Tell Harry the offer is now your first AI employee, not the Bottleneck Pilot (14 Oct rename)",
+    "Rob's yes on a de-branded hub example before HUB_EXAMPLE_CLEARED is set (question 5 on the 16 Oct list)",
+    "The marketing engine's product name: Herbert Reach is a placeholder",
+    "Business-name and trademark check on the product name before it ships",
+    "The hero board's header changed to five example businesses; Will to confirm or revert"
+  ],
+  "lapses": [
+    "A hydration error whenever reduced motion was on sat in the AI employees scene from 13 to 14 Oct, found only when the roster swap was checked in that mode (fixed; check both motion modes on every section)",
+    "The Industries recognition round (15 Oct) was drawn before the section's point was settled; Will declined it and the earlier drawings stood (settle a section's job before drawing it)"
+  ],
+  "sections": [
+    {
+      "title": "The design pass (design-taste)",
+      "items": [
+        {
+          "label": "Concept before references",
+          "status": "done",
+          "note": "Runs itself, 22 Sep"
+        },
+        {
+          "label": "Three options per section, picked on the real page",
+          "status": "running",
+          "note": "every section so far"
+        },
+        {
+          "label": "Details per section after the pick",
+          "status": "running",
+          "note": "hero 8, How It Works 5; AI Employees, Industries and The Work pending"
+        },
+        {
+          "label": "Ledger in Will's words",
+          "status": "done",
+          "note": "docs/design/design-pass-site-2026-09.md"
+        },
+        {
+          "label": "Rules captured to the register",
+          "status": "done",
+          "note": "design-taste registers/marketing-site.md"
+        }
+      ]
+    },
+    {
+      "title": "Copy rules",
+      "items": [
+        {
+          "label": "No client names or proof numbers",
+          "status": "done",
+          "note": "example businesses, every figure labelled"
+        },
+        {
+          "label": "Steps say what happens, not who",
+          "status": "done",
+          "note": "45 minutes auditing your business"
+        },
+        {
+          "label": "First AI employee replaces Bottleneck Pilot",
+          "status": "done",
+          "note": "site, skills, sales docs, 14 Oct"
+        },
+        {
+          "label": "No em dashes, AU English",
+          "status": "done",
+          "note": "checked on every write"
+        }
+      ]
+    },
+    {
+      "title": "Will's gates (rule 8)",
+      "items": [
+        {
+          "label": "Prices on the homepage",
+          "status": "done",
+          "note": "keep, 12 Oct"
+        },
+        {
+          "label": "Products section now",
+          "status": "done",
+          "note": "yes, early access framing, 14 Oct"
+        },
+        {
+          "label": "Hub example live",
+          "status": "pending",
+          "note": "waits on Rob"
+        },
+        {
+          "label": "Merge to main",
+          "status": "pending",
+          "note": "M11"
+        }
+      ]
+    }
+  ],
+  "next": "M4 Industries: Will's tweaks on the five stories, then the section's details"
+}
