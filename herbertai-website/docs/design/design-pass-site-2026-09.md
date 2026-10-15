@@ -1060,3 +1060,38 @@ the spreadsheet going, one screen underneath, heading "Your software stays.
 The inbox, the whiteboard and the spreadsheet go." Named software is named in
 text only, never a logo. Awaiting Will’s pick.
 
+## Wrong direction: naming the incumbents (15 Oct 2026)
+
+Will on the third board: "i think this is going in the wrong direction", then
+"naming propertyme, cliniko, etc. i think we need to think of what these
+Operating Systems actually would be/look like. like how we found how we can
+ensure the AI Employees exceed their 3500 valuation to the business, we need
+to do the same sort of thing for the operating systems for each industry".
+So: no incumbent names on the page (the A, B, C board’s list lines are out,
+and the in-frame record bar with them); the section waits on a definition
+and value pass per industry (what the operating system is for a 3 to 20
+staff business, and how it clears its from-$25,000 price in that business’s
+figures, the way each AI employee was shown to clear $3,500). That pass runs
+under the quantify method in product/research/markdown. The five screens from
+the second board stay as drawings until the definitions say what each
+screen should show.
+
+## Operating Systems: the definition and value pass (15 Oct 2026)
+
+Done under the quantify method in the files repo:
+`product/research/markdown/operating-systems-2026-10-15.md` with five
+per-industry files. Each system is the roster on one board with the hand-offs,
+one queue and the owner’s view; each has a value case in the reference
+business’s figures (time at the staff rate, revenue after margin,
+subscriptions not rented) against $37,000 to $58,000 in year one, and a floor
+below which the owner is told no. Trades 1.3 to 3.8 times the price and
+Property 1.1 to 3.7 clear it with room; Hospitality (0.7 to 2.4 on money) and
+Health (0.6 to 2.1) clear it at the reference business; Finance (0.4 to 1.2)
+only in the strong case, so its line stays to hours. For the section: each
+screen becomes the owner’s view (Property’s Monday page, the trade
+owner’s phone at 7am, the clinic’s weekly page, the venue’s board with a
+till strip, the principal’s August Tuesday) with the model’s example line
+under it, figures labelled example, no software names, no headcount; Property
+first, Trades second, Finance last. The second board’s drawings are the
+starting point, re-pointed. Awaiting Will’s read.
+
