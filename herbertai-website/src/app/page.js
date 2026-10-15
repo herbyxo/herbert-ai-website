@@ -2,8 +2,9 @@ import Link from 'next/link'
 import Hero from './components/Hero'
 import EmployeesSection from './components/runs/EmployeesSection'
 import WorkSection from './components/runs/WorkSection'
+import IndustriesSection from './components/runs/IndustriesSection'
 import RevealOnScroll from './components/motion/RevealOnScroll'
-import { INDUSTRIES, RUNGS, Eyebrow, AuditButton, hubExampleShown } from './components/site/shared'
+import { RUNGS, Eyebrow, AuditButton, hubExampleShown } from './components/site/shared'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
 // employee, the system it runs in). The three bucket chapters are retired from
@@ -19,8 +20,8 @@ export default function Home() {
       <Hero />
       <HowItWorks />
       <EmployeesSection />
+      <IndustriesSection />
       <WorkSection showHub={hubExampleShown()} />
-      <IndustriesStrip />
       <FounderNote />
       <FinalCTA />
     </>
@@ -81,46 +82,6 @@ function HowItWorks() {
 
 // The Work: components/runs/WorkSection.js (layout A, 13 Oct 2026). Earlier
 // layouts and visuals live in components/lab/ until the lab is removed.
-
-function IndustriesStrip() {
-  return (
-    <section className="bg-cream-alt">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-        <RevealOnScroll className="max-w-[44ch] mb-14">
-          <div>
-            <Eyebrow>Industries</Eyebrow>
-            <h2
-              className="font-display text-ink"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}
-            >
-              Built for the office you actually run.
-            </h2>
-          </div>
-        </RevealOnScroll>
-        <div className="border-b border-line">
-          {INDUSTRIES.map((ind, i) => (
-            <RevealOnScroll key={ind.slug} delay={i * 0.05}>
-              <Link
-                href={`/industries/${ind.slug}`}
-                className="grid md:grid-cols-[1fr_auto] md:items-baseline gap-x-8 py-7 md:py-8 border-t border-line transition-[padding] duration-300 md:hover:pl-3 group"
-              >
-                <h3
-                  className="font-display text-ink leading-[1] tracking-[-0.03em]"
-                  style={{ fontSize: 'clamp(26px, 3.4vw, 34px)', fontWeight: 800 }}
-                >
-                  {ind.name}
-                </h3>
-                <span className="mt-3 md:mt-0 text-[13px] font-medium text-ink inline-flex items-center gap-1.5">
-                  {ind.employee} <span aria-hidden className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-                </span>
-              </Link>
-            </RevealOnScroll>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 function FounderNote() {
   return (
