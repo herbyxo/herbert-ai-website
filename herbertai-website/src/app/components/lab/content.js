@@ -14,6 +14,7 @@ export const REFS = [
   { slug: 'motion', name: 'Motion levels: AI employees', url: '1, 2 and 3, scroll down' },
   { slug: 'the-work-2', name: 'The Work, done properly', url: 'A, B and C, scroll down' },
   { slug: 'industries-property', name: 'Industries: Property three ways', url: 'A, B and C, scroll down' },
+  { slug: 'industries-recognition', name: 'Industries: recognition three ways', url: '1, 2 and 3, scroll down' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'

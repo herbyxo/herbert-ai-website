@@ -893,5 +893,25 @@ timeline and the property manager's single 7:05am approval on a split screen
 card moving New to Done overnight. Every name, address and figure is made up.
 Found while drawing: the screen frame was 720px with 450px of content, a third
 blank; now 520px.
+Will (15 Oct 2026): "hmmmm im not sure. what is the point of this section,
+we're showing demo dashboards, or how an employee might work". Answered: A and
+C are dashboards the page already shows (hero, The Work, the example pages),
+B is how an employee works (the scroll scene above it); the job nothing else
+does is recognition, the visitor's own industry in its own words. Will: "show
+me the recognition version". These three move to the Property industry page
+(B as its lead visual, per the research).
+
+## [~] Industries: the recognition version three ways (options 15 Oct 2026)
+
+Board: `design-pass-site-2026-10-15-industries-recognition.png`, from
+`design-pass-site-2026-10-15-industries-recognition.py`; running at
+`/lab/industries-recognition` (`src/app/components/lab/IndustryRecognitionOptions.js`),
+the same layout A with Property active. 1 the week: the admin jobs with the
+hours each takes at an example agency, an AI employee attaching to each job it
+would take, the software named underneath (recommended); 2 your software with
+the employees in it: the systems the agency runs as a row, the employees
+appearing between them with lines to what each reads and writes; 3 the team:
+the industry's AI employees as a team sheet. Hours are the research's estimates
+for an example agency and say so; shown as the size of the job, never a saving.
 Will's pick: (pending)
 

@@ -20,7 +20,7 @@ const W = 1184
 const H = 520
 const Q = '’'
 
-const INDUSTRIES = [
+export const INDUSTRIES = [
   { id: 'property', name: 'Property', system: 'An operations hub for a property agency' },
   { id: 'trades', name: 'Trades', system: 'An office system for a trade business' },
   { id: 'health', name: 'Health', system: 'A patient board for a clinic' },
@@ -29,11 +29,11 @@ const INDUSTRIES = [
 ]
 
 const G = (rows) => rows.map((r) => [...r].map((c) => c === 'X'))
-const EMMA = G(['...X...', '..X.X..', '.X...X.', 'XXXXXXX', '.X...X.', '.X.X.X.', '.XXXXX.'])
-const KATE = G(['XXXXXXX', 'X.....X', 'X.X.X.X', 'X.....X', 'X.XXX.X', 'X.....X', 'XXXXXXX'])
-const ROSE = G(['..XXX..', '.X...X.', 'X..X..X', 'X..XX.X', 'X.....X', '.X...X.', '..XXX..'])
+export const EMMA = G(['...X...', '..X.X..', '.X...X.', 'XXXXXXX', '.X...X.', '.X.X.X.', '.XXXXX.'])
+export const KATE = G(['XXXXXXX', 'X.....X', 'X.X.X.X', 'X.....X', 'X.XXX.X', 'X.....X', 'XXXXXXX'])
+export const ROSE = G(['..XXX..', '.X...X.', 'X..X..X', 'X..XX.X', 'X.....X', '.X...X.', '..XXX..'])
 
-function Lamp({ s, size = 8 }) {
+export function Lamp({ s, size = 8 }) {
   return (
     <span
       aria-hidden
@@ -43,7 +43,7 @@ function Lamp({ s, size = 8 }) {
   )
 }
 
-function Status({ s, children, size = 12 }) {
+export function Status({ s, children, size = 12 }) {
   return (
     <span className="inline-flex items-center gap-2 leading-[1.3] whitespace-nowrap" style={{ color: s === 'done' ? '#0E8F53' : s === 'waiting' ? '#9A6300' : '#777', fontSize: size }}>
       <Lamp s={s} />
@@ -52,7 +52,7 @@ function Status({ s, children, size = 12 }) {
   )
 }
 
-function Scaled({ children }) {
+export function Scaled({ children }) {
   const ref = useRef(null)
   const [k, setK] = useState(0.6)
   useEffect(() => {
@@ -70,7 +70,7 @@ function Scaled({ children }) {
   )
 }
 
-function Frame({ bar, right, children }) {
+export function Frame({ bar, right, children }) {
   return (
     <div className="rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] overflow-hidden" style={{ height: H }}>
       <div className="flex items-center justify-between px-5 py-3 border-b border-[#111]/10 text-[12px] font-mono text-[#555]">
@@ -298,7 +298,7 @@ function MaintenanceBoard() {
 
 /* ─── the section in layout A, Property active ──────────────── */
 
-function IndustriesSection({ Visual }) {
+export function IndustriesSection({ Visual }) {
   const active = INDUSTRIES[0]
   return (
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">

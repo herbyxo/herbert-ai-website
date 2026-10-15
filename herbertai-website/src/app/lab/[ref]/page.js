@@ -10,6 +10,7 @@ import WorkVisualOptions from '../../components/lab/WorkVisualOptions'
 import MotionDemo from '../../components/lab/MotionDemo'
 import WorkSectionOptions from '../../components/lab/WorkSectionOptions'
 import IndustryOptions from '../../components/lab/IndustryOptions'
+import IndustryRecognitionOptions from '../../components/lab/IndustryRecognitionOptions'
 
 const MAP = {
   'concept-now-hiring': NowHiring,
@@ -21,6 +22,7 @@ const MAP = {
   motion: MotionDemo,
   'the-work-2': WorkSectionOptions,
   'industries-property': IndustryOptions,
+  'industries-recognition': IndustryRecognitionOptions,
 }
 
 export function generateStaticParams() {
