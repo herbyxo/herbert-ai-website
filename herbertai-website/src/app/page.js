@@ -7,7 +7,7 @@ import RevealOnScroll from './components/motion/RevealOnScroll'
 import { RUNGS, Eyebrow, AuditButton, hubExampleShown } from './components/site/shared'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
-// employee, the system it runs in). The three bucket chapters are retired from
+// employee, your AI operating system). The three bucket chapters are retired from
 // home; their capability content lives on /services. Plan and decisions:
 // docs/restructure-2026-09/PROJECT.md.
 

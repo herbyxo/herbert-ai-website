@@ -947,3 +947,49 @@ The rebuild had a track.json for a day so the track mod could show it. Will:
 sense". Removed. This ledger is the rebuild's state; Track stays for builds
 with milestones and gates.
 
+## [x] The ladder named, the section renamed, The Work folded in (15 Oct 2026)
+
+Will: "i was thinking we have a different sort of graphic for each thing. and
+ive just realised for industries, it says what the graphic is meant to be, ie
+an operations hub for a property agency, an office system for a trade
+business, etc so the graphic doesnt actually reflect that. and im thinking the
+industries page should actually be about the entirely built system, so maybe
+we call that section Operating Systems or something. i think we define the
+steps as being AI audit, AI employee, and then AI Operating System". Agreed:
+the one-job split screen is the AI employee again, the right visual for the
+AI Employees section and the industry pages, the wrong one under a list that
+names a system. Asked two consequences: fold The Work into this section (the
+built screens were going to appear twice on one page) and do the vocabulary
+ripple in the same session. Will: "yes fold it in, AI Operating System is
+good". So: the ladder is AI Audit, AI Employee, AI Operating System (step 3
+on the site was "The system it runs in", now "Your AI operating system");
+section 4 is Operating Systems, each industry’s entirely built system on the
+screen, with the built ones carrying an open link and a Built tag; The Work is
+gone and the homepage runs at seven sections; the five one-job stories move to
+the industry pages. The list keeps the specific names (operations hub, office
+system, patient board, functions office, season board) rather than "AI
+operating system" five times.
+
+## [~] Operating Systems: Property three ways (options 15 Oct 2026)
+
+Board: `design-pass-site-2026-10-15-operating-systems.png`, from
+`design-pass-site-2026-10-15-operating-systems.py`; running at
+`/lab/operating-systems` (`src/app/components/lab/OperatingSystemOptions.js`),
+layout A with Property active, today’s section first for comparison. All from
+the Property research’s system section (section 4: the nine modules, the
+hand-offs, the PMS that stays the trust ledger). 1 the hub whole: the app
+shell, nine modules down the side with their counts, the approvals home screen
+at 7am with three decisions approved one by one, the four boards’ numbers and
+the six AI employees on the board underneath (recommended: the first version
+the research scopes, and the one a visitor can picture logging into); 2 the
+office map: one property’s record in the middle with its comms log and the
+PMS, the six modules around it each with its employee, a job travelling the
+wires and the employees handing work to each other (Owen’s inspection raises
+a tap with Emma, Kate checks open maintenance before recommending a rent); 3
+one day on the system: every module as a lane across a Tuesday with a now-line
+moving, the day’s count and the person’s minutes on the right. Every name,
+address and figure is made up. Found while drawing: 1 left its bottom third
+blank until the four boards’ numbers went in; 2’s Maintenance panel overflowed
+at four lines, now three; 3’s afternoon pills ran into the count card, moved
+earlier and shortened.
+

@@ -3,7 +3,7 @@
 # Herbert AI — Claude Code Context
 
 ## What this is
-Herbert AI is **custom software and AI for small businesses**, built in Adelaide (descriptor decided 16 Sep 2026; replaces "automation & growth studio"). It sells one ladder: a free AI audit, the $3,500 Bottleneck Pilot (one AI employee for one job, live in 14 days), full operations builds from $25,000, retainers from $1,000/mo. Target: owner-operated businesses with 3 to 20 staff, first in accounting, allied health, trades and real estate. Research and decisions: `product/research/markdown/herbert-ai-identity-and-website-2026-09-16*.md` in the files repo.
+Herbert AI is **custom software and AI for small businesses**, built in Adelaide (descriptor decided 16 Sep 2026; replaces "automation & growth studio"). It sells one ladder: a free AI audit, the $3,500 Bottleneck Pilot (one AI employee for one job, live in 14 days), an AI operating system from $25,000, retainers from $1,000/mo. Target: owner-operated businesses with 3 to 20 staff, first in accounting, allied health, trades and real estate. Research and decisions: `product/research/markdown/herbert-ai-identity-and-website-2026-09-16*.md` in the files repo.
 
 **Repo:** github.com/herbyxo/herbert-ai-website
 **Live site:** herbert-aisolutions.com
@@ -68,7 +68,7 @@ The app lives in `herbertai-website/` (repo root is a wrapper). Routes are groun
 ---
 
 ## Business Context (for content/copy decisions)
-- **Positioning:** custom software and AI for small businesses; the ladder (audit, AI employee pilot, the system it runs in, retainer) is the sales layer, not the identity. Grow / Automate / Build survive only as the capability list on `/services`. "AI automation agency" is never used. Voice agents are one AI employee among several.
+- **Positioning:** custom software and AI for small businesses; the ladder (AI audit, AI employee, AI operating system, retainer) is the sales layer, not the identity. Grow / Automate / Build survive only as the capability list on `/services`. "AI automation agency" is never used. Voice agents are one AI employee among several.
 - **Pricing story (changed 16 Sep 2026):** the four rungs are priced on `/pricing`: audit free, pilot $3,500 fixed, builds from $25,000 scoped after the audit, retainers from $1,000/mo, with the line that the client is told if the saving would not cover the price. Never name specific clients in site copy; describe the class of work. Savings are ranges from the client's own figures, never invented.
 - **ICP:** owner-operated businesses with 3 to 20 staff in five industries (13 Oct 2026): Health (allied health clinics), Property (property managers, real estate), Trades (trades with an office), Hospitality (venues), Finance (accountants and bookkeepers; brokers only once the Smith agreement allows). Industry pages move to /industries/health, /property, /trades, /hospitality, /finance with redirects from the old slugs; /demo/* links stay as they are.
 

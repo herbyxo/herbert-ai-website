@@ -180,8 +180,8 @@ export default function Pilot() {
           <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
             <Step
               n="04"
-              title="A full build"
-              body="When one job runs itself, the next ones follow. A full build puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns. Scoped after the audit, from $25,000, with the pilot's $3,500 taken off."
+              title="Your AI operating system"
+              body="When one job runs itself, the next ones follow. An AI operating system puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns. Scoped after the audit, from $25,000, with the pilot's $3,500 taken off."
             />
             <Step
               n="05"

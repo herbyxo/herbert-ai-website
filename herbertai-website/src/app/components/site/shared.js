@@ -70,8 +70,8 @@ export const RUNGS = [
   },
   {
     n: '03',
-    title: 'The system it runs in',
-    body: 'When one job runs itself, the next ones follow. A full build puts your files, comms and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
+    title: 'Your AI operating system',
+    body: 'When one job runs itself, the next ones follow. An AI operating system puts your files, comms and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
     facts: ['Files, comms and follow-ups on one system', 'Your business owns it', 'The first employee’s $3,500 comes off'],
     price: 'From $25,000, scoped after the audit.',
   },

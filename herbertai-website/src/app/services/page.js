@@ -17,7 +17,7 @@ export const metadata = {
 }
 
 // Capability inventory under the ladder. Grow is framed as what comes after
-// the operations build, not a front door. Decided 16 Sep 2026.
+// the AI operating system, not a front door. Decided 16 Sep 2026.
 const groups = [
   {
     id: 'employees',
@@ -38,9 +38,9 @@ const groups = [
   },
   {
     id: 'system',
-    label: 'The system they run in',
+    label: 'The AI operating system',
     headline: 'One place your whole office works out of.',
-    body: 'When a few AI employees are running, they need somewhere to live. The full build puts your files, comms, follow-ups and numbers on one system your business owns, built around how you already work.',
+    body: 'When a few AI employees are running, they need somewhere to live. The AI operating system puts your files, comms, follow-ups and numbers on one system your business owns, built around how you already work.',
     items: [
       { tag: 'Operations', title: 'Operations hub', body: 'Every client file or job on one board, with who is waiting on what, and the next action already drafted.' },
       { tag: 'Clients', title: 'Client and customer portals', body: 'Clients log in with an email link to upload documents, see their file and check where things are.' },

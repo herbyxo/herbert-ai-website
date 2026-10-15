@@ -21,7 +21,7 @@ const FOUNDER_PHOTO = null
 
 const work = [
   {
-    tag: 'Hospitality · Full build',
+    tag: 'Hospitality · AI operating system',
     name: 'A booking platform for a barbershop',
     body: 'Custom site, online bookings with deposits and tipping, an owner dashboard, SMS reminders and automated review collection. Built and run live for months by one person.',
     href: '/work',

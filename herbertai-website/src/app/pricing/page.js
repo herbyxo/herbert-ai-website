@@ -6,7 +6,7 @@ import { OG_IMAGE } from '@/app/components/site/og'
 export const metadata = {
   title: 'Pricing | Free AI audit, a $3,500 first AI employee, builds from $25,000',
   description:
-    'Four rungs, each priced before you climb it. A free AI audit, your first AI employee at $3,500 and live in 14 days or free, full builds from $25,000 scoped after the audit, retainers from $1,000 a month.',
+    'Four rungs, each priced before you climb it. A free AI audit, your first AI employee at $3,500 and live in 14 days or free, an AI operating system from $25,000 scoped after the audit, retainers from $1,000 a month.',
   alternates: { canonical: '/pricing' },
   openGraph: {
     title: 'Pricing · Herbert AI',
@@ -43,7 +43,7 @@ const rungs = [
   },
   {
     n: '03',
-    title: 'Full build',
+    title: 'AI operating system',
     price: 'From $25,000',
     lines: [
       'The system your AI employees run in: files, comms, follow-ups and reporting on one platform your team works out of every day, and your business owns.',
@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: 'Why do builds start at $25,000?',
-    a: 'A full build is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts, not billed as it goes. Your first AI employee comes first so you never have to take that on trust.',
+    a: 'An AI operating system is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts, not billed as it goes. Your first AI employee comes first so you never have to take that on trust.',
   },
   {
     q: 'What is in the retainer, and what is not?',
@@ -90,7 +90,7 @@ const faqs = [
   },
   {
     q: 'Any lock-in?',
-    a: 'None. You own what gets built, your data and your accounts. A full build runs on your own accounts from day one. Your first AI employee runs on ours for speed and moves to yours whenever you want, with a written guide to how it works.',
+    a: 'None. You own what gets built, your data and your accounts. An AI operating system runs on your own accounts from day one. Your first AI employee runs on ours for speed and moves to yours whenever you want, with a written guide to how it works.',
   },
 ]
 
