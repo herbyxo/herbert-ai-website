@@ -1389,3 +1389,18 @@ phone; the whole office is on the laptop" under it (recommended). 3: no screen
 on phones, the active row opening into its title and line. Awaiting Will’s
 pick.
 
+## [~] Operating Systems: the system’s name three ways (options 16 Oct 2026)
+
+Will on "Property OS": "idk about the name 'industry' OS though, but im stuck
+for a better idea". Board: `design-pass-site-2026-10-16-os-names.png`, from
+`design-pass-site-2026-10-16-os-names.py`, the title under the screen only,
+shown for Property. Today "Property OS" (short and owned; OS is jargon and
+makes it sound like a shelf product when the price line says built and
+scoped). 1 "Herbert for Property", the company’s name with the industry, a
+name not a description, no jargon, and the pattern scales to the plan where
+each system becomes a product beside Herbert Reach (recommended). 2 "The
+agency’s office", whose office, matching the heading, different for each
+(the trade one is the weakest). 3 "Your AI operating system", the rung said
+once under every screen, the industry label above doing the telling. Awaiting
+Will’s pick.
+
