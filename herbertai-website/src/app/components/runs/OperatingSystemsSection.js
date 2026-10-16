@@ -63,10 +63,10 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
                   role="tab"
                   aria-selected={on}
                   onClick={() => { setActive(x.id); setPlays((p) => p + 1) }}
-                  className={`w-full text-left py-4 pl-4 pr-3 border-t border-[#111]/15 border-l-2 transition-colors ${on ? 'border-l-[#111] bg-white' : 'border-l-transparent hover:bg-white/60'}`}
+                  className={`w-full text-left py-3 pl-4 pr-3 border-t border-[#111]/15 border-l-2 transition-colors ${on ? 'border-l-[#111] bg-white' : 'border-l-transparent hover:bg-white/60'}`}
                 >
-                  <span className="flex items-center gap-2 text-[15px] font-medium text-[#777]">{x.name}{x.built && <span className="font-mono text-[10px] uppercase tracking-[0.12em] rounded-full border border-[#111]/15 px-2 py-[1px] text-[#555]">Built</span>}</span>
-                  <span className={`block mt-1 text-[20px] font-semibold tracking-[-0.02em] ${on ? '' : 'text-[#111]/70'}`}>{x.system}</span>
+                  <span className={`flex items-center gap-2 text-[22px] font-semibold tracking-[-0.02em] ${on ? '' : 'text-[#111]/70'}`}>{x.name}{x.built && <span className="font-mono text-[10px] uppercase tracking-[0.12em] rounded-full border border-[#111]/15 px-2 py-[1px] text-[#555] font-normal">Built</span>}</span>
+                  <span className="block mt-0.5 text-[14px] text-[#777]">{x.jobs}</span>
                 </button>
               )
             })}

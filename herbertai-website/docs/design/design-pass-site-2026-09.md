@@ -1310,5 +1310,8 @@ request answered within a minute; $43,000 to $89,000 a year kept or won; 3 to
 line saying they are example figures (recommended: the list carries the value
 before a screen is clicked). 2: the jobs that run by themselves in place of the
 system’s name (repairs, late rent, renewals, enquiries). 3: the industry big
-and the system’s name small, tighter rows. Awaiting Will’s pick.
-
+and the system’s name small, tighter rows.
+Will’s pick (16 Oct 2026): "i like the industry first, with the what runs by
+itself underneath". Built: the industry at 22px with its Built tag, the jobs
+that run by themselves under it at 14px (`jobs` on each screen), rows at py-3;
+the system’s name stays under the screen.
