@@ -66,7 +66,7 @@ const INK = '#111'
 // freezes. scanKey restarts the scan.
 const AMBER = STATE.waiting
 const GREEN = STATE.done
-const PERIOD = 1.8 // seconds for the amber band to cross and come round again
+const PERIOD = 1.2 // seconds for the amber band to cross and come round again (1.8 until 16 Oct 2026; Will: faster, to see)
 const FRONT = 1.5 // seconds for the green front to cross
 const START = 0.72 // phase at which no dot is lit, so the band enters from the top-left corner
 const SPREAD = 0.45 // how much of a period the band spans across the grid
