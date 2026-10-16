@@ -1256,3 +1256,27 @@ card moving through the six, "n of 6 · swipe" at the right, the rung close
 under it. The six-card grid stays for laptops with reduced motion. Found while
 building: the strip overflowed 375 with the longer hint; tightened. With that
 the AI Employees section’s five details are done.
+
+## [~] Products: Herbert Reach three ways (options 16 Oct 2026)
+
+Will: "products". The section from the 14 Oct settlement: Herbert AI is the
+company and its software carries its own name (the Wispr AI and Wispr Flow
+pattern); first the marketing engine under the placeholder "Herbert Reach",
+early access rather than a paywall until it has numbers from Herbert AI’s own
+ads (code/marketing-engine/PROJECT.md, open decisions). Board:
+`design-pass-site-2026-10-16-products.png`, from
+`design-pass-site-2026-10-16-products.py`; running at `/lab/products`
+(`src/app/components/lab/ProductsOptions.js`). Today: no section, Operating
+Systems runs straight into the founder note. 1 its own band: the one dark
+section on the page, "by Herbert AI" over the product name as the heading, the
+engine’s line and three facts, the early-access pill and why, the dashboard
+playing beside it (recommended: the product reads as its own brand, and the
+band breaks the run of paper sections before the founder). 2 screen and words:
+layout A on paper under "Software we build once, and run ourselves first."
+3 the shelf: the engine as the one product on a shelf beside a dashed card
+saying the operating systems become products once each has run in three to
+five businesses. The dashboard is the one built for The Work on 13 Oct; the
+copy reuses the engine page’s lines and claims no results. The link goes to
+the engine’s example page for now. Found while drawing: on the dark band the
+dashboard inherited white text; it now sets its own ink. Awaiting Will’s pick.
+
