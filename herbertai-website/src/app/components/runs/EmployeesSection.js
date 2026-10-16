@@ -89,7 +89,7 @@ function Card({ e, still }) {
         </div>
       </div>
       <p className="mt-3 text-[14px] text-[#444]">{e.what}</p>
-      <div className="mt-3 h-[160px]">
+      <div className="mt-3 h-[192px]">
         <AnimatePresence initial={false}>
           {e.feed.slice(0, Math.min(n, 3)).map(([t, s, then], i) => (
             <motion.div key={i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} className="py-2 border-t border-[#111]/8">
