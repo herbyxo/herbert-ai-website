@@ -1206,3 +1206,16 @@ the third line landed; the feed is now a fixed 210px on the scene card and
 160px on the phone card (sampled: the scene card holds 408px through the
 play).
 
+## [~] AI Employees details, 3 of 5: the card (options 16 Oct 2026)
+
+Board: `design-pass-site-2026-10-16-emp-card.png`, from
+`design-pass-site-2026-10-16-emp-card.py` (the card’s markup edited in the
+page on the real scene with the heading and the scoreboard list in place).
+Today: the bar, the avatar, the name and the one-line job, three lines each
+with a state line, Approve on the one that needed a person. 1: each line
+carries its time at the right in mono, so the day reads as a day and the gap
+to the person’s yes is visible (recommended). 2: the scoreboard’s figure on
+the card at the top right, counting up as the lines land. 3: the wait line
+opens into the approval card the Operating Systems screens use (the feed
+would need to grow for it). Awaiting Will’s pick.
+
