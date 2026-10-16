@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import Link from 'next/link'
 import { AnimatePresence, motion, useInView, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Avatar, EMPLOYEES, StateLine } from './employees'
 
@@ -17,6 +18,18 @@ import { Avatar, EMPLOYEES, StateLine } from './employees'
 
 // The counter as the card and the list show it: dollars where the label says so.
 const countText = (e, v = e.count) => (e.countLabel.startsWith('found') || e.countLabel.startsWith('free') ? `$${v.toLocaleString('en-AU')}` : v)
+
+// The close (Will, 16 Oct 2026, detail 4 of 5: "1"): the section ends on the
+// ladder's second rung, the thing it sells, linking to the pilot page.
+function Close({ className = '' }) {
+  return (
+    <p className={`text-[15px] ${className}`}>
+      <Link href="/pilot" className="font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
+        Your first one is $3,500, live in 14 days <span aria-hidden>&rarr;</span>
+      </Link>
+    </p>
+  )
+}
 
 function Heading() {
   return (
@@ -98,6 +111,7 @@ function Grid({ still }) {
         <div className="mt-12 grid sm:grid-cols-2 gap-4">
           {EMPLOYEES.map((e) => <Card key={e.name} e={e} still={still} />)}
         </div>
+        <Close className="mt-8" />
       </div>
     </section>
   )
@@ -150,6 +164,7 @@ function Scene() {
                 </li>
               ))}
             </ul>
+            <Close className="mt-6" />
           </div>
           <div style={{ perspective: 1400 }}>
             <motion.div

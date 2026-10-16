@@ -1233,5 +1233,6 @@ to the pilot page (the rung this section sells; recommended). 2: a line under
 the list, "All six, and what each one does", to the AI Employees page that
 replaces What gets built in the nav (/services stands in until it exists).
 3: the card’s bar carries "See the Property page", so the close moves with
-the scroll and the list carries no link. Awaiting Will’s pick.
-
+the scroll and the list carries no link.
+Will’s pick (16 Oct 2026): "1". Built: the rung line under the list on the
+scene and under the cards on phones, to /pilot (`Close`).
