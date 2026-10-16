@@ -1280,3 +1280,20 @@ copy reuses the engine page’s lines and claims no results. The link goes to
 the engine’s example page for now. Found while drawing: on the dark band the
 dashboard inherited white text; it now sets its own ink. Awaiting Will’s pick.
 
+## [~] Operating Systems details, 1 of 5: the heading (options 16 Oct 2026)
+
+Will: "what about the operating systems section? have u skipped past that". It
+had: the section was built and approved on 15 Oct but its details pass never
+ran (the AI Employees details and then Products went first). Five details,
+each three ways on the real section: the heading, the list, the line under the
+screen, the close, the phone layout (at 375 the 1184-wide screen scales to
+about a quarter and is hard to read). Board:
+`design-pass-site-2026-10-16-os-heading.png`, from
+`design-pass-site-2026-10-16-os-heading.py` (the h2 swapped on the homepage at
+1440 with Property active). Today "Built for the office you actually run."
+(the Industries heading, kept); 1 "The whole office, on one screen." (what it
+is at this rung’s scale; recommended); 2 "Every job runs. You make the one
+call." (what each screen shows); 3 "Your software stays. The work between it
+runs itself." (the value model’s position, nothing named). Awaiting Will’s
+pick.
+
