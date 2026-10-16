@@ -20,7 +20,7 @@ function Heading() {
     <>
       <p className="text-[15px] font-medium text-[#555] mb-4">AI Employees</p>
       <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
-        One job each. A person approves what goes out.
+        They do the job. Your team says yes.
       </h2>
     </>
   )

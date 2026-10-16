@@ -1161,5 +1161,6 @@ the left list, the card, the close, the phone cards. Board:
 1440x900 with Gus’s day finished). Today "One job each. A person approves
 what goes out."; 1 "Named, one job each, live in 14 days." (ties the section
 to the ladder’s second rung; recommended); 2 "They do the job. Your team says
-yes."; 3 "Six AI employees, one job each, every day." Awaiting Will’s pick.
-
+yes."; 3 "Six AI employees, one job each, every day."
+Will’s pick (16 Oct 2026): "i think i like 2". The heading is "They do the job.
+Your team says yes."
