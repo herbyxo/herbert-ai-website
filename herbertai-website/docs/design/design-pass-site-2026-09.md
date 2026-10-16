@@ -1294,6 +1294,6 @@ about a quarter and is hard to read). Board:
 (the Industries heading, kept); 1 "The whole office, on one screen." (what it
 is at this rung’s scale; recommended); 2 "Every job runs. You make the one
 call." (what each screen shows); 3 "Your software stays. The work between it
-runs itself." (the value model’s position, nothing named). Awaiting Will’s
-pick.
-
+runs itself." (the value model’s position, nothing named).
+Will’s pick (16 Oct 2026): "1". The heading is "The whole office, on one
+screen."

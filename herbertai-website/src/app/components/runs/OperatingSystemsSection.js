@@ -28,7 +28,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
         <div className="mb-8">
           <p className="text-[15px] font-medium text-[#555] mb-4">Operating Systems</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
-            Built for the office you actually run.
+            The whole office, on one screen.
           </h2>
         </div>
         <div className="grid lg:grid-cols-[1.28fr_0.72fr] gap-x-12 gap-y-10 items-start">
