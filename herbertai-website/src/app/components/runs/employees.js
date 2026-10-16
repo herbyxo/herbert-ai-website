@@ -59,7 +59,7 @@ const INK = '#111'
 // every dot it reaches). Will, 16 Oct 2026: "the yellow colour ripples
 // through the symbol and then the green ripples through ... no the amber
 // shouldnt stay, only the green". scanKey restarts the scan.
-const WAVE = 0.05 // seconds between one diagonal of dots and the next
+const WAVE = 0.07 // seconds between one diagonal of dots and the next (Will, 16 Oct 2026: the green was a bit fast, the second amber pass a bit abrupt)
 export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
   const n = glyph.length
   const gap = size / n
@@ -80,9 +80,9 @@ export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
             mode === 'scan'
               ? { initial: { opacity: 0.15, fill: INK }, animate: { opacity: 1, fill: INK }, transition: { delay: i * 0.035, duration: 0.25 } }
               : mode === 'wait'
-                ? { initial: { opacity: 1, fill: INK }, animate: { opacity: 1, fill: [INK, STATE.waiting, STATE.waiting, INK] }, transition: { delay: w, duration: 0.8, repeat: Infinity, repeatDelay: 0.9, ease: 'easeInOut' } }
+                ? { initial: { opacity: 1, fill: INK }, animate: { opacity: 1, fill: [INK, STATE.waiting, STATE.waiting, INK] }, transition: { delay: w, duration: 1.3, times: [0, 0.4, 0.6, 1], repeat: Infinity, repeatDelay: 0.5, ease: 'easeInOut' } }
                 : mode === 'done'
-                  ? { initial: false, animate: { opacity: 1, fill: STATE.done }, transition: { delay: w, duration: 0.3 } }
+                  ? { initial: false, animate: { opacity: 1, fill: STATE.done }, transition: { delay: w, duration: 0.7, ease: 'easeOut' } }
                   : { initial: false, animate: { opacity: 1, fill: INK }, transition: { duration: 0.25 } }
           return <motion.circle key={`${x}-${y}-${scanKey}`} cx={cx} cy={cy} r={r} fill={rest} {...anim} />
         }),
