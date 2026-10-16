@@ -181,8 +181,9 @@ steps as being AI audit, AI employee, and then AI Operating System").
    Will, 16 Oct 2026). The figures are estimates for a stated reference
    business, never a result Herbert AI claims; "about" and the ranges stay. No software
    names (Will, 15 Oct 2026: naming the incumbents was "the wrong direction").
-   The title under the screen names the system (the name itself is open:
-   "Property OS" was picked on 16 Oct 2026 and doubted the same day); the list
+   The title under the screen is the product name with the industry: Herbert
+   OS for Property, Herbert OS for Trades, and so on (Will, 16 Oct 2026; the
+   test was "you now have a Herbert OS", and it is the rung’s own words); the list
    is the industry big with the jobs that run by themselves under it; the
    section closes on one line under the list, the rung and its price to the
    pricing page. No Built tag and no per-screen link (Will, 16 Oct 2026: one

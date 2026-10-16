@@ -1401,6 +1401,13 @@ name not a description, no jargon, and the pattern scales to the plan where
 each system becomes a product beside Herbert Reach (recommended). 2 "The
 agency’s office", whose office, matching the heading, different for each
 (the trade one is the weakest). 3 "Your AI operating system", the rung said
-once under every screen, the industry label above doing the telling. Awaiting
-Will’s pick.
-
+once under every screen, the industry label above doing the telling.
+Will (16 Oct 2026): "i think we need an actual product name", then on Herbert
+Run (the recommendation, paired with Reach): "would i say, 'you now have a
+Herbert Run', doesnt really sound great", then "Herbert OS ?". That is the
+name: a noun you can have, the rung’s own words, and a pair with Herbert
+Reach. Built: the title under each screen is "Herbert OS for Property" and so
+on. The .com domains checked unregistered for herbertrun, herbertboard,
+herbertkeep, herbertbase, herberthub, herbertdesk, herbertengine, herbertcore
+and herbertos; .com.au and the business-name and trademark registers are the
+pre-ship check, as for Reach.
