@@ -1164,3 +1164,31 @@ to the ladder’s second rung; recommended); 2 "They do the job. Your team says
 yes."; 3 "Six AI employees, one job each, every day."
 Will’s pick (16 Oct 2026): "i think i like 2". The heading is "They do the job.
 Your team says yes."
+
+## [~] AI Employees details, 2 of 5: the left list (options 16 Oct 2026)
+
+Board: `design-pass-site-2026-10-16-emp-list.png`, from
+`design-pass-site-2026-10-16-emp-list.py` (the six rows rewritten in the page
+on the real scene with the picked heading in place). Today: name and job
+(Gus · Recoveries). 1: name and job with the industry at the right in small
+mono type, so a visitor finds their industry in the list before the screen
+tells them (recommended). 2: name and job with the employee’s one-line job
+under it, taller rows, the list reads without the screen. 3: the scoreboard,
+each row ending in what that employee has done this month, the figure the
+card counts to. Awaiting Will’s pick.
+
+## [x] AI Employees detail: the avatar wave, made continuous (16 Oct 2026)
+
+Will on the first version: "the switch between the amber and the green, the
+final one appears a bit fast, and the second amber pass is a bit abrupt", then
+"the transitions isnt entirely smooth". The cause was structural: each dot ran
+its own keyframe loop with a rest between passes, so the band stopped and
+restarted and the whole grid flooded amber, and on approval each dot froze
+until its turn. Rewritten in `employees.js`: one phase value drives a single
+amber pulse that travels diagonally and never restarts (1.8s a crossing,
+entering from the top-left corner), and a second value moves the green front
+across in 1.2s while the band keeps moving underneath; every dot’s colour is a
+function of the two. Checked by sampling the scene avatar every 150ms: the
+amber mass rises and falls as a smooth curve with no jumps, and the green
+takes the dots over four samples while the amber fades. Lint clean.
+

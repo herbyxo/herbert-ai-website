@@ -1,5 +1,6 @@
 'use client'
-import { motion } from 'framer-motion'
+import { useEffect } from 'react'
+import { animate, motion, useMotionValue, useTransform } from 'framer-motion'
 import { STATE } from './board'
 
 // The AI employees (CHARTER.md, "The AI employees", 13 Oct 2026): a plain first
@@ -53,20 +54,68 @@ export const EMPLOYEES = [
 
 const INK = '#111'
 
-// mode: 'still' | 'scan' (dots light one by one: at work) | 'wait' (a wave
-// of amber passes through the dots and fades back to ink, looping while the
-// job waits on a person) | 'done' (green sweeps through once and stays on
-// every dot it reaches). Will, 16 Oct 2026: "the yellow colour ripples
-// through the symbol and then the green ripples through ... no the amber
-// shouldnt stay, only the green". scanKey restarts the scan.
-const WAVE = 0.07 // seconds between one diagonal of dots and the next (Will, 16 Oct 2026: the green was a bit fast, the second amber pass a bit abrupt)
+// mode: 'still' | 'scan' (dots light one by one: at work) | 'wait' (a band
+// of amber travels diagonally through the dots and fades behind itself,
+// continuously, while the job waits on a person) | 'done' (a green front
+// crosses the dots once and stays). Will, 16 Oct 2026: "the yellow colour
+// ripples through the symbol and then the green ripples through ... no the
+// amber shouldnt stay, only the green", then "the transitions isnt entirely
+// smooth". So one phase value drives the amber band and never restarts, and
+// the green front is a second value that crosses while the band keeps
+// moving; every dot's colour is a function of the two, so nothing jumps or
+// freezes. scanKey restarts the scan.
+const AMBER = STATE.waiting
+const GREEN = STATE.done
+const PERIOD = 1.8 // seconds for the amber band to cross and come round again
+const FRONT = 1.2 // seconds for the green front to cross
+const START = 0.72 // phase at which no dot is lit, so the band enters from the top-left corner
+const SPREAD = 0.45 // how much of a period the band spans across the grid
+const rgb = (hex) => { const h = hex.replace('#', ''); const f = h.length === 3 ? h.split('').map((c) => c + c).join('') : h; return [0, 2, 4].map((i) => parseInt(f.slice(i, i + 2), 16)) }
+const C = { ink: rgb(INK), amber: rgb(AMBER), green: rgb(GREEN) }
+const mix = (a, b, k) => a.map((v, i) => Math.round(v + (b[i] - v) * k))
+const clamp = (v) => Math.max(0, Math.min(1, v))
+
+function DotFill({ cx, cy, r, d, maxD, phase, front, wave, scanning, i, scanKey }) {
+  const fill = useTransform([phase, front], ([ph, fr]) => {
+    const band = wave ? Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph - (d / maxD) * SPREAD))), 2) : 0
+    const g = clamp((fr * (maxD + 2) - d) / 2)
+    const c = mix(mix(C.ink, C.amber, band), C.green, g)
+    return `rgb(${c[0]}, ${c[1]}, ${c[2]})`
+  })
+  return (
+    <motion.circle
+      key={scanKey}
+      cx={cx}
+      cy={cy}
+      r={r}
+      style={{ fill }}
+      initial={scanning ? { opacity: 0.15 } : false}
+      animate={{ opacity: 1 }}
+      transition={{ delay: scanning ? i * 0.035 : 0, duration: 0.25 }}
+    />
+  )
+}
+
 export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
   const n = glyph.length
   const gap = size / n
   const r = gap * 0.32
+  const maxD = (n - 1) * 2
+  const phase = useMotionValue(START)
+  const front = useMotionValue(mode === 'done' ? 1 : 0)
+  useEffect(() => {
+    if (mode === 'wait' || mode === 'done') {
+      // the band keeps travelling under the green front, so the hand-off reads as one motion
+      const loop = animate(phase, [phase.get() % 1, phase.get() % 1 + 1], { duration: PERIOD, ease: 'linear', repeat: Infinity })
+      const f = mode === 'done' ? animate(front, 1, { duration: FRONT, ease: [0.45, 0, 0.2, 1] }) : animate(front, 0, { duration: 0.4 })
+      return () => { loop.stop(); f.stop() }
+    }
+    const f = animate(front, 0, { duration: 0.4 })
+    phase.set(START)
+    return () => f.stop()
+  }, [mode, phase, front])
   const on = []
   glyph.forEach((row, y) => row.forEach((v, x) => v && on.push(`${x}-${y}`)))
-  const rest = mode === 'done' ? STATE.done : INK
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden className="shrink-0">
       {glyph.map((row, y) =>
@@ -75,16 +124,7 @@ export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
           const cy = y * gap + gap / 2
           if (!v) return <circle key={`${x}-${y}`} cx={cx} cy={cy} r={r * 0.55} fill={INK} opacity={0.1} />
           const i = on.indexOf(`${x}-${y}`)
-          const w = (x + y) * WAVE
-          const anim =
-            mode === 'scan'
-              ? { initial: { opacity: 0.15, fill: INK }, animate: { opacity: 1, fill: INK }, transition: { delay: i * 0.035, duration: 0.25 } }
-              : mode === 'wait'
-                ? { initial: { opacity: 1, fill: INK }, animate: { opacity: 1, fill: [INK, STATE.waiting, STATE.waiting, INK] }, transition: { delay: w, duration: 1.3, times: [0, 0.4, 0.6, 1], repeat: Infinity, repeatDelay: 0.5, ease: 'easeInOut' } }
-                : mode === 'done'
-                  ? { initial: false, animate: { opacity: 1, fill: STATE.done }, transition: { delay: w, duration: 0.7, ease: 'easeOut' } }
-                  : { initial: false, animate: { opacity: 1, fill: INK }, transition: { duration: 0.25 } }
-          return <motion.circle key={`${x}-${y}-${scanKey}`} cx={cx} cy={cy} r={r} fill={rest} {...anim} />
+          return <DotFill key={`${x}-${y}`} cx={cx} cy={cy} r={r} d={x + y} maxD={maxD} phase={phase} front={front} wave={mode === 'wait' || mode === 'done'} scanning={mode === 'scan'} i={i} scanKey={scanKey} />
         }),
       )}
     </svg>
