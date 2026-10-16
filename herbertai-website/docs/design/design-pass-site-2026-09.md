@@ -1175,7 +1175,9 @@ mono type, so a visitor finds their industry in the list before the screen
 tells them (recommended). 2: name and job with the employee’s one-line job
 under it, taller rows, the list reads without the screen. 3: the scoreboard,
 each row ending in what that employee has done this month, the figure the
-card counts to. Awaiting Will’s pick.
+card counts to.
+Will’s pick (16 Oct 2026): "3 for the list". Built: each row ends in the
+counter the card shows, dollars where the label says so (`countText`).
 
 ## [x] AI Employees detail: the avatar wave, made continuous (16 Oct 2026)
 
@@ -1191,4 +1193,16 @@ across in 1.2s while the band keeps moving underneath; every dot’s colour is a
 function of the two. Checked by sampling the scene avatar every 150ms: the
 amber mass rises and falls as a smooth curve with no jumps, and the green
 takes the dots over four samples while the amber fades. Lint clean.
+
+## [x] AI Employees: the pulse kept at 1.2s, two faults fixed (16 Oct 2026)
+
+Will: "keep" on the 1.2s amber pulse. Two faults he saw: "on the green pass,
+theres yellow towards the end", because the amber band kept travelling under
+the green front; now a third value, the band’s strength, fades to zero in
+0.45s as the front starts, so the pass is green only (sampled: amber 0 for the
+whole crossing). And "the card increasing in size takes away from the feel":
+the feed area was 190px against 202px for three rows, so the card grew 7px as
+the third line landed; the feed is now a fixed 210px on the scene card and
+160px on the phone card (sampled: the scene card holds 408px through the
+play).
 

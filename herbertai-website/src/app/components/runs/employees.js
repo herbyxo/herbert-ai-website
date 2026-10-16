@@ -75,9 +75,9 @@ const C = { ink: rgb(INK), amber: rgb(AMBER), green: rgb(GREEN) }
 const mix = (a, b, k) => a.map((v, i) => Math.round(v + (b[i] - v) * k))
 const clamp = (v) => Math.max(0, Math.min(1, v))
 
-function DotFill({ cx, cy, r, d, maxD, phase, front, wave, scanning, i, scanKey }) {
-  const fill = useTransform([phase, front], ([ph, fr]) => {
-    const band = wave ? Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph - (d / maxD) * SPREAD))), 2) : 0
+function DotFill({ cx, cy, r, d, maxD, phase, front, amp, scanning, i, scanKey }) {
+  const fill = useTransform([phase, front, amp], ([ph, fr, am]) => {
+    const band = am * Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph - (d / maxD) * SPREAD))), 2)
     const g = clamp((fr * (maxD + 2) - d) / 2)
     const c = mix(mix(C.ink, C.amber, band), C.green, g)
     return `rgb(${c[0]}, ${c[1]}, ${c[2]})`
@@ -103,17 +103,19 @@ export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
   const maxD = (n - 1) * 2
   const phase = useMotionValue(START)
   const front = useMotionValue(mode === 'done' ? 1 : 0)
+  const amp = useMotionValue(mode === 'wait' ? 1 : 0) // the amber band's strength: on while waiting, fading out as the green front starts (Will, 16 Oct 2026: "on the green pass, theres yellow towards the end")
   useEffect(() => {
     if (mode === 'wait' || mode === 'done') {
-      // the band keeps travelling under the green front, so the hand-off reads as one motion
       const loop = animate(phase, [phase.get() % 1, phase.get() % 1 + 1], { duration: PERIOD, ease: 'linear', repeat: Infinity })
       const f = mode === 'done' ? animate(front, 1, { duration: FRONT, ease: 'easeInOut' }) : animate(front, 0, { duration: 0.4 })
-      return () => { loop.stop(); f.stop() }
+      const a = mode === 'done' ? animate(amp, 0, { duration: 0.45, ease: 'easeOut' }) : animate(amp, 1, { duration: 0.3 })
+      return () => { loop.stop(); f.stop(); a.stop() }
     }
     const f = animate(front, 0, { duration: 0.4 })
+    const a = animate(amp, 0, { duration: 0.2 })
     phase.set(START)
-    return () => f.stop()
-  }, [mode, phase, front])
+    return () => { f.stop(); a.stop() }
+  }, [mode, phase, front, amp])
   const on = []
   glyph.forEach((row, y) => row.forEach((v, x) => v && on.push(`${x}-${y}`)))
   return (
@@ -124,7 +126,7 @@ export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
           const cy = y * gap + gap / 2
           if (!v) return <circle key={`${x}-${y}`} cx={cx} cy={cy} r={r * 0.55} fill={INK} opacity={0.1} />
           const i = on.indexOf(`${x}-${y}`)
-          return <DotFill key={`${x}-${y}`} cx={cx} cy={cy} r={r} d={x + y} maxD={maxD} phase={phase} front={front} wave={mode === 'wait' || mode === 'done'} scanning={mode === 'scan'} i={i} scanKey={scanKey} />
+          return <DotFill key={`${x}-${y}`} cx={cx} cy={cy} r={r} d={x + y} maxD={maxD} phase={phase} front={front} amp={amp} scanning={mode === 'scan'} i={i} scanKey={scanKey} />
         }),
       )}
     </svg>

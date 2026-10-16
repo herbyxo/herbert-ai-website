@@ -15,6 +15,9 @@ import { Avatar, EMPLOYEES, StateLine } from './employees'
 // and with reduced motion, it is a grid of cards, each playing its job once
 // when it comes into view (level 2) or showing its finished day.
 
+// The counter as the card and the list show it: dollars where the label says so.
+const countText = (e, v = e.count) => (e.countLabel.startsWith('found') || e.countLabel.startsWith('free') ? `$${v.toLocaleString('en-AU')}` : v)
+
 function Heading() {
   return (
     <>
@@ -68,12 +71,12 @@ function Card({ e, still }) {
           <p className="text-[12.5px] text-[#777] mt-1">{e.where}</p>
         </div>
         <div className="text-right">
-          <p className="text-[22px] font-semibold tabular-nums leading-none">{e.countLabel.startsWith('found') || e.countLabel.startsWith('free') ? `$${count.toLocaleString('en-AU')}` : count}</p>
+          <p className="text-[22px] font-semibold tabular-nums leading-none">{countText(e, count)}</p>
           <p className="text-[11px] text-[#888] mt-1">{e.countLabel}</p>
         </div>
       </div>
       <p className="mt-3 text-[14px] text-[#444]">{e.what}</p>
-      <div className="mt-3 min-h-[132px]">
+      <div className="mt-3 h-[160px]">
         <AnimatePresence initial={false}>
           {e.feed.slice(0, Math.min(n, 3)).map(([t, s, then], i) => (
             <motion.div key={i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} className="py-2 border-t border-[#111]/8">
@@ -140,6 +143,10 @@ function Scene() {
                   <Avatar glyph={x.glyph} size={26} mode={i < idx ? 'done' : 'still'} />
                   <span className="text-[16px] font-semibold">{x.name}</span>
                   <span className="text-[15px] text-[#777]">· {x.job}</span>
+                  <span className="ml-auto text-right leading-tight">
+                    <span className="block text-[15px] font-semibold tabular-nums">{countText(x)}</span>
+                    <span className="block text-[11px] text-[#999]">{x.countLabel}</span>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -164,7 +171,7 @@ function Scene() {
                     <p className="text-[15px] text-[#555]">{e.what}</p>
                   </div>
                 </div>
-                <div className="mt-6 min-h-[190px]">
+                <div className="mt-6 h-[210px]">
                   {e.feed.slice(0, shown).map(([t, s, then], i) => (
                     <motion.div key={`${idx}-${i}`} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} className="py-3 border-t border-[#111]/8 flex items-end justify-between gap-4">
                       <div>
