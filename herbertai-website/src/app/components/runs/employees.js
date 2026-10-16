@@ -67,7 +67,7 @@ const INK = '#111'
 const AMBER = STATE.waiting
 const GREEN = STATE.done
 const PERIOD = 1.8 // seconds for the amber band to cross and come round again
-const FRONT = 1.2 // seconds for the green front to cross
+const FRONT = 1.5 // seconds for the green front to cross
 const START = 0.72 // phase at which no dot is lit, so the band enters from the top-left corner
 const SPREAD = 0.45 // how much of a period the band spans across the grid
 const rgb = (hex) => { const h = hex.replace('#', ''); const f = h.length === 3 ? h.split('').map((c) => c + c).join('') : h; return [0, 2, 4].map((i) => parseInt(f.slice(i, i + 2), 16)) }
@@ -107,7 +107,7 @@ export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
     if (mode === 'wait' || mode === 'done') {
       // the band keeps travelling under the green front, so the hand-off reads as one motion
       const loop = animate(phase, [phase.get() % 1, phase.get() % 1 + 1], { duration: PERIOD, ease: 'linear', repeat: Infinity })
-      const f = mode === 'done' ? animate(front, 1, { duration: FRONT, ease: [0.45, 0, 0.2, 1] }) : animate(front, 0, { duration: 0.4 })
+      const f = mode === 'done' ? animate(front, 1, { duration: FRONT, ease: 'easeInOut' }) : animate(front, 0, { duration: 0.4 })
       return () => { loop.stop(); f.stop() }
     }
     const f = animate(front, 0, { duration: 0.4 })
