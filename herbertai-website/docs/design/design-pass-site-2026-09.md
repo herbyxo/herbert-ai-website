@@ -1141,3 +1141,25 @@ sampling the scene avatar’s dot colours every 400ms: amber rises to all 19
 lit dots and falls to none as the wave passes, then green takes over mid-sweep
 (11 amber, 8 green) and all 19 stay green. Lint clean, no errors.
 
+## [x] AI Employees: pacing (16 Oct 2026)
+
+Will: "ok these operating systems look good and those graphics look good. for
+the AI employees section, we didnt really go through it all properly did we.
+im thinking for the AI employee stuff as well, each item that appears should
+appear a bit slower, so the motion seems a bit more smoother". Done in
+`EmployeesSection.js`: the scene’s step 650ms to 850ms, every entrance 0.3s to
+0.6s on the site’s soft ease, the card interval 900ms to 1050ms, the employee
+switch and the cursor 0.5s to 0.65s. Lint clean, plays without errors.
+
+## [~] AI Employees details, 1 of 5: the heading (options 16 Oct 2026)
+
+The section had its motion level (13 Oct) and the scroll scene (14 Oct) but
+no details pass. Five details, each three ways on the real scene: the heading,
+the left list, the card, the close, the phone cards. Board:
+`design-pass-site-2026-10-16-emp-heading.png`, from
+`design-pass-site-2026-10-16-emp-heading.py` (the h2 swapped in the page at
+1440x900 with Gus’s day finished). Today "One job each. A person approves
+what goes out."; 1 "Named, one job each, live in 14 days." (ties the section
+to the ladder’s second rung; recommended); 2 "They do the job. Your team says
+yes."; 3 "Six AI employees, one job each, every day." Awaiting Will’s pick.
+
