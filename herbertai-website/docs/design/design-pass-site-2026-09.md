@@ -1326,5 +1326,17 @@ on the end. 1: the figure as the sentence, one line ("About 17 to 37 hours of
 office work a week back, for an agency of ten with 400 rentals. Example
 figures."; recommended). 2: three ruled facts the way How It Works does it.
 3: no line, the system’s name and the link only, since the list now says what
-runs by itself. Awaiting Will’s pick.
-
+runs by itself.
+Will’s pick (16 Oct 2026): "1 - and with those figures we have in the
+sentence, it seems as if we have teeth in the game as well? where does the
+example figures actually come from. we need to be weary of how we are selling
+ourselves as well, if we say something like example figures, then maybe
+someone may read that and then not be interested". Answered: the figures are
+the quantify model’s estimates for a stated reference business (the 13 Oct
+research’s hours, Seek and award rates, Easy Weddings, HBR and ATO data where
+it exists), not client results; the only measured figure in the model is the
+brokerage reader’s cost per document set. Built: `short` per screen, the
+headline figure as one sentence naming the business it is worked for, and the
+tag "Yours come out of the audit." in place of "Example figures for an example
+business." The named business and the audit line make it a worked example;
+"about" and the ranges stay; nothing reads as a result Herbert AI achieved.

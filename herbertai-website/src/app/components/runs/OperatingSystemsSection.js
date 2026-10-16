@@ -40,7 +40,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
               <div className="min-w-0">
                 <p className="flex items-center gap-2 text-[15px] font-medium text-[#777]">{s.name}{s.built && <span className="font-mono text-[10px] uppercase tracking-[0.12em] rounded-full border border-[#111]/15 px-2 py-[1px] text-[#555]">Built</span>}</p>
                 <p className="mt-1 text-[22px] font-semibold tracking-[-0.02em]">{s.system}</p>
-                <p className="mt-2 text-[15px] leading-[1.5] text-[#555] max-w-[66ch]">{s.line} <span className="text-[#999]">Example figures for an example business.</span></p>
+                <p className="mt-2 text-[15px] leading-[1.5] text-[#555] max-w-[66ch]">{s.short} <span className="text-[#999]">Yours come out of the audit.</span></p>
               </div>
               {s.built ? (
                 <Link href={s.built} className="shrink-0 text-[14px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] whitespace-nowrap">

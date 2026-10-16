@@ -175,8 +175,11 @@ steps as being AI audit, AI employee, and then AI Operating System").
 4. Operating Systems: the five industries listed beside one big screen showing
    that industry’s operating system from the owner’s chair, work already done
    with one decision left, calm until clicked. Under the screen, the model’s
-   line for an example business, said to be example figures
-   (product/research/markdown/operating-systems-2026-10-15.md). No software
+   headline figure as one sentence naming the example business it is worked
+   for, closed with "Yours come out of the audit." rather than an "example
+   figures" label (product/research/markdown/operating-systems-2026-10-15.md;
+   Will, 16 Oct 2026). The figures are estimates for a stated reference
+   business, never a result Herbert AI claims; "about" and the ranges stay. No software
    names (Will, 15 Oct 2026: naming the incumbents was "the wrong direction").
    The built ones carry an open link and a Built tag; The Work is folded in.
    Order: Property, Trades, Hospitality, Health, Finance. (Was Industries, with
