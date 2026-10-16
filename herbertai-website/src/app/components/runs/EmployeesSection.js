@@ -117,6 +117,47 @@ function Grid({ still }) {
   )
 }
 
+/* ─── phones: one at a time (Will, 16 Oct 2026, detail 5 of 5: "1") ── */
+
+// The six avatars in a strip with the active one lit, one card under them
+// playing its day; a tap on an avatar or a swipe on the card brings the next.
+function Phone({ still }) {
+  const [idx, setIdx] = useState(0)
+  const go = (d) => setIdx((i) => (i + d + EMPLOYEES.length) % EMPLOYEES.length)
+  const e = EMPLOYEES[idx]
+  return (
+    <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-20">
+        <Heading />
+        <div className="mt-8 flex items-center justify-between gap-3 min-w-0">
+          <div className="flex items-center gap-2 shrink-0" role="tablist" aria-label="AI employees">
+            {EMPLOYEES.map((x, i) => (
+              <button key={x.name} type="button" role="tab" aria-selected={i === idx} aria-label={`${x.name} · ${x.job}`} onClick={() => setIdx(i)} className="transition-opacity duration-300" style={{ opacity: i === idx ? 1 : 0.3 }}>
+                <Avatar glyph={x.glyph} size={28} mode="still" />
+              </button>
+            ))}
+          </div>
+          <p className="text-[12px] text-[#777] tabular-nums whitespace-nowrap">{idx + 1} of {EMPLOYEES.length} · swipe</p>
+        </div>
+        <motion.div
+          key={e.name}
+          drag={still ? false : 'x'}
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.15}
+          onDragEnd={(ev, info) => { if (info.offset.x < -40) go(1); else if (info.offset.x > 40) go(-1) }}
+          initial={still ? false : { opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-4 touch-pan-y"
+        >
+          <Card e={e} still={still} />
+        </motion.div>
+        <Close className="mt-8" />
+      </div>
+    </section>
+  )
+}
+
 /* ─── the scroll scene (level 3), laptops and up ───────────── */
 
 // Scrolling only picks the employee (Will, 13 Oct 2026: "maybe we can scroll
@@ -243,7 +284,7 @@ export default function EmployeesSection() {
   return (
     <>
       <div className="hidden lg:block">{still ? <Grid still /> : <Scene />}</div>
-      <div className="lg:hidden"><Grid still={still} /></div>
+      <div className="lg:hidden"><Phone still={still} /></div>
     </>
   )
 }

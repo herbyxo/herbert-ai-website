@@ -165,7 +165,13 @@ steps as being AI audit, AI employee, and then AI Operating System").
 2. How It Works: the free AI audit, your first AI employee, your AI operating
    system. Calm.
 3. AI Employees: the one scroll scene; scrolling picks the employee, the day
-   plays by itself.
+   plays by itself. Details settled 16 Oct 2026: heading "They do the job.
+   Your team says yes."; the list is a scoreboard, each row ending in what
+   that employee did this month; each line on the card carries its time; the
+   section closes on the rung ("Your first one is $3,500, live in 14 days",
+   to /pilot); on phones one card at a time under a strip of the six avatars,
+   tap or swipe. The avatar’s amber is a travelling pulse that never stays,
+   the green a sweep that does.
 4. Operating Systems: the five industries listed beside one big screen showing
    that industry’s operating system from the owner’s chair, work already done
    with one decision left, calm until clicked. Under the screen, the model’s

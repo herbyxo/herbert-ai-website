@@ -1248,6 +1248,11 @@ most of a screen each. 1: one at a time, the six avatars in a strip with the
 active one lit and one card under them, a tap or swipe bringing the next, a
 sixth of the height (recommended). 2: the scoreboard opened, the laptop
 list’s six rows with the first opened into its three lines. 3: a row of
-cards at most of the width with the next one’s edge showing. Awaiting
-Will’s pick.
-
+cards at most of the width with the next one’s edge showing.
+Will’s pick (16 Oct 2026): "1". Built as `Phone` in EmployeesSection.js: the
+six avatars in a strip (28px, the active one lit), one card under them keyed
+by employee so it plays on each switch, a tap on an avatar or a swipe on the
+card moving through the six, "n of 6 · swipe" at the right, the rung close
+under it. The six-card grid stays for laptops with reduced motion. Found while
+building: the strip overflowed 375 with the longer hint; tightened. With that
+the AI Employees section’s five details are done.
