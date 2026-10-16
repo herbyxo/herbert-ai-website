@@ -54,7 +54,7 @@ function Card({ e, still }) {
   useEffect(() => {
     if (!seen) return
     if (still) { const t = setTimeout(() => setN(5), 0); return () => clearTimeout(t) }
-    const t = setInterval(() => setN((v) => Math.min(v + 1, 5)), 900)
+    const t = setInterval(() => setN((v) => Math.min(v + 1, 5)), 1050)
     return () => clearInterval(t)
   }, [seen, still])
   const mode = n === 0 ? 'still' : n < 3 ? 'scan' : n === 3 ? 'wait' : 'done'
@@ -76,7 +76,7 @@ function Card({ e, still }) {
       <div className="mt-3 min-h-[132px]">
         <AnimatePresence initial={false}>
           {e.feed.slice(0, Math.min(n, 3)).map(([t, s, then], i) => (
-            <motion.div key={i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.35 }} className="py-2 border-t border-[#111]/8">
+            <motion.div key={i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} className="py-2 border-t border-[#111]/8">
               <p className="text-[13px] text-[#333]">{t}</p>
               <StateLine s={s === 'wait' && n < 5 ? 'wait' : 'done'} then={s === 'wait' ? then : null} />
             </motion.div>
@@ -107,7 +107,7 @@ function Grid({ still }) {
 // employee is on screen its day plays by itself: the avatar works, the three
 // lines arrive, the cursor presses Approve, the avatar goes green. Scrolling on
 // mid-way starts the next one.
-const STEP_MS = 650
+const STEP_MS = 850 // Will, 16 Oct 2026: each item a bit slower, so it reads smoother
 const STEPS = 7 // 1 scan, 2-4 the lines, 5 cursor, 6 pressed, 7 approved
 
 function Scene() {
@@ -149,7 +149,7 @@ function Scene() {
               key={e.name}
               initial={{ opacity: 0, rotateY: -8, y: 20 }}
               animate={{ opacity: 1, rotateY: -6, rotateX: 4, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
               className="rounded-2xl border border-[#111]/12 bg-white shadow-[0_50px_100px_-40px_rgba(0,0,0,.45)] overflow-hidden"
             >
               <div className="flex items-center justify-between px-5 py-3 border-b border-[#111]/10 text-[12px] font-mono">
@@ -166,7 +166,7 @@ function Scene() {
                 </div>
                 <div className="mt-6 min-h-[190px]">
                   {e.feed.slice(0, shown).map(([t, s, then], i) => (
-                    <motion.div key={`${idx}-${i}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className="py-3 border-t border-[#111]/8 flex items-end justify-between gap-4">
+                    <motion.div key={`${idx}-${i}`} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} className="py-3 border-t border-[#111]/8 flex items-end justify-between gap-4">
                       <div>
                         <p className="text-[15px] text-[#333]">{t}</p>
                         <StateLine s={s === 'wait' && !approved ? 'wait' : 'done'} then={s === 'wait' ? then : null} size={12} />
@@ -182,7 +182,7 @@ function Scene() {
                             width="18" height="18" viewBox="0 0 24 24" className="absolute" aria-hidden
                             initial={{ left: 70, top: 40, opacity: 0 }}
                             animate={sub ? { left: 22, top: 12, opacity: 1 } : { left: 70, top: 40, opacity: 0 }}
-                            transition={{ duration: 0.5 }}
+                            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
                           >
                             <path d="M4 2l15 9-7 1.5L9 20z" fill="#fff" stroke="#111" strokeWidth="1.5" strokeLinejoin="round" />
                           </motion.svg>
