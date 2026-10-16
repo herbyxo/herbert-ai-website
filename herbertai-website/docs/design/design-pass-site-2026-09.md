@@ -1340,3 +1340,28 @@ headline figure as one sentence naming the business it is worked for, and the
 tag "Yours come out of the audit." in place of "Example figures for an example
 business." The named business and the audit line make it a worked example;
 "about" and the ranges stay; nothing reads as a result Herbert AI achieved.
+
+## [~] Operating Systems details, 4 of 5: the close (options 16 Oct 2026)
+
+Board: `design-pass-site-2026-10-16-os-close.png`, from
+`design-pass-site-2026-10-16-os-close.py` (the links edited on the homepage
+with the heading, the industry-first list and the one-sentence line in
+place). Today: one link per screen beside its name (Built, open the dashboard;
+see the Trades page) and nothing for the section. 1: a line under the list,
+"Your AI operating system, from $25,000, scoped after the audit", to the
+pricing page, the per-screen links staying (recommended: says what this costs
+where AI Employees says what that costs). 2: the tag "Yours come out of the
+audit" becomes the link to the audit booking. 3: the rung line under the list
+and the per-screen links removed, one way out. Awaiting Will’s pick.
+
+## [~] Operating Systems: the title under the screen (options 16 Oct 2026)
+
+Will: "i dont like how the title for each industry of what that board is
+presents. eg 'An operations hub for a property agency' doesnt really present
+well". Board: `design-pass-site-2026-10-16-os-title.png`, from
+`design-pass-site-2026-10-16-os-title.py`. Today: the system described as a
+thing. 1: named like the rung, "Property OS" (the two words the long-run plan
+already uses; recommended). 2: what the screen is, "The agency’s Monday
+page". 3: no title, the industry label and the line carry it. Awaiting
+Will’s pick; whichever lands also changes the industry pages’ wording.
+
