@@ -1221,3 +1221,17 @@ would need to grow for it).
 Will’s pick (16 Oct 2026): "1 and the card feels good now". Built: each line
 carries its time at the right in mono on the scene card and the phone card
 (`times` on each employee).
+
+## [~] AI Employees details, 4 of 5: the close (options 16 Oct 2026)
+
+Every other section closes on a link; this one ends on the card. Board:
+`design-pass-site-2026-10-16-emp-close.png`, from
+`design-pass-site-2026-10-16-emp-close.py` (drawn on the scene with the
+heading, the scoreboard list and the timestamped card in place). Today: no
+close. 1: a line under the list, "Your first one is $3,500, live in 14 days",
+to the pilot page (the rung this section sells; recommended). 2: a line under
+the list, "All six, and what each one does", to the AI Employees page that
+replaces What gets built in the nav (/services stands in until it exists).
+3: the card’s bar carries "See the Property page", so the close moves with
+the scroll and the list carries no link. Awaiting Will’s pick.
+
