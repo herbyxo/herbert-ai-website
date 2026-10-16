@@ -53,15 +53,20 @@ export const EMPLOYEES = [
 
 const INK = '#111'
 
-// mode: 'still' | 'scan' (dots light one by one: at work) | 'done' (green) |
-// 'wait' (amber). scanKey restarts the scan.
+// mode: 'still' | 'scan' (dots light one by one: at work) | 'wait' (a wave
+// of amber passes through the dots and fades back to ink, looping while the
+// job waits on a person) | 'done' (green sweeps through once and stays on
+// every dot it reaches). Will, 16 Oct 2026: "the yellow colour ripples
+// through the symbol and then the green ripples through ... no the amber
+// shouldnt stay, only the green". scanKey restarts the scan.
+const WAVE = 0.05 // seconds between one diagonal of dots and the next
 export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
   const n = glyph.length
   const gap = size / n
   const r = gap * 0.32
   const on = []
   glyph.forEach((row, y) => row.forEach((v, x) => v && on.push(`${x}-${y}`)))
-  const colour = mode === 'done' ? STATE.done : mode === 'wait' ? STATE.waiting : INK
+  const rest = mode === 'done' ? STATE.done : INK
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden className="shrink-0">
       {glyph.map((row, y) =>
@@ -70,18 +75,16 @@ export function Avatar({ glyph, mode = 'still', size = 52, scanKey = 0 }) {
           const cy = y * gap + gap / 2
           if (!v) return <circle key={`${x}-${y}`} cx={cx} cy={cy} r={r * 0.55} fill={INK} opacity={0.1} />
           const i = on.indexOf(`${x}-${y}`)
-          return (
-            <motion.circle
-              key={`${x}-${y}-${scanKey}`}
-              cx={cx}
-              cy={cy}
-              r={r}
-              initial={mode === 'scan' ? { opacity: 0.15 } : false}
-              animate={{ opacity: 1, fill: colour }}
-              transition={{ delay: mode === 'scan' ? i * 0.035 : 0, duration: 0.25 }}
-              fill={colour}
-            />
-          )
+          const w = (x + y) * WAVE
+          const anim =
+            mode === 'scan'
+              ? { initial: { opacity: 0.15, fill: INK }, animate: { opacity: 1, fill: INK }, transition: { delay: i * 0.035, duration: 0.25 } }
+              : mode === 'wait'
+                ? { initial: { opacity: 1, fill: INK }, animate: { opacity: 1, fill: [INK, STATE.waiting, STATE.waiting, INK] }, transition: { delay: w, duration: 0.8, repeat: Infinity, repeatDelay: 0.9, ease: 'easeInOut' } }
+                : mode === 'done'
+                  ? { initial: false, animate: { opacity: 1, fill: STATE.done }, transition: { delay: w, duration: 0.3 } }
+                  : { initial: false, animate: { opacity: 1, fill: INK }, transition: { duration: 0.25 } }
+          return <motion.circle key={`${x}-${y}-${scanKey}`} cx={cx} cy={cy} r={r} fill={rest} {...anim} />
         }),
       )}
     </svg>

@@ -1125,3 +1125,19 @@ both motion modes with every tab clicked; the section is 810px at 1440x900
 `design-pass-site-2026-10-15-operating-systems-built.png`. Will’s eye next;
 then the details pass (the heading is still the Industries one).
 
+## [x] AI Employees detail: the avatar’s wait wave and green sweep (16 Oct 2026)
+
+Will: "when the things are yellow, i want the employee symbol to be sort of
+loading with the yellow ... the yellow colour ripples through the symbol and
+then the green ripples through", then "no the amber shouldnt stay, only the
+green". `components/runs/employees.js` Avatar: in wait mode a wave of amber
+passes diagonally through the lit dots (50ms a diagonal) and fades back to
+ink, looping every 1.7 seconds while the job waits on a person; in done mode
+green sweeps through once with the same timing and stays on every dot it
+reaches. Scan mode (dots lighting one by one at work) unchanged. The same
+avatar is used by the hero board, the one-job stories and the Operating
+Systems screens, so they all behave the same. Checked in the browser by
+sampling the scene avatar’s dot colours every 400ms: amber rises to all 19
+lit dots and falls to none as the wave passes, then green takes over mid-sweep
+(11 amber, 8 green) and all 19 stay green. Lint clean, no errors.
+
