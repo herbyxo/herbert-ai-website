@@ -45,6 +45,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
               </div>
             </div>
           </div>
+          <div>
           <div role="tablist" aria-label="Operating systems" className="border-b border-[#111]/15">
             {SCREENS.map((x) => {
               const on = x.id === active
@@ -63,11 +64,12 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
               )
             })}
           </div>
-          <p className="mt-6 text-[15px] lg:col-start-2">
+          <p className="mt-6 text-[15px]">
             <Link href="/pricing" className="font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
               Your AI operating system, from $25,000, scoped after the audit <span aria-hidden>&rarr;</span>
             </Link>
           </p>
+          </div>
         </div>
       </div>
     </section>

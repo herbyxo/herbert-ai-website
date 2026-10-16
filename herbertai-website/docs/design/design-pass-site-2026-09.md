@@ -1352,7 +1352,14 @@ see the Trades page) and nothing for the section. 1: a line under the list,
 pricing page, the per-screen links staying (recommended: says what this costs
 where AI Employees says what that costs). 2: the tag "Yours come out of the
 audit" becomes the link to the audit booking. 3: the rung line under the list
-and the per-screen links removed, one way out. Awaiting Will’s pick.
+and the per-screen links removed, one way out.
+Will’s pick (16 Oct 2026): "3 for the close. i dont think we should have the
+built thing for the industry as well, considering i havent actually built
+much, it indicates a weak position". Built: the rung line under the list to
+/pricing, inside the list column so it adds no height; the per-screen links
+gone; the Built tag gone from the list and the caption (the open link to the
+dashboard moves to the Property page). Section 770px at 1440x900, 758px at
+1280x800.
 
 ## [~] Operating Systems: the title under the screen (options 16 Oct 2026)
 
@@ -1363,5 +1370,22 @@ well". Board: `design-pass-site-2026-10-16-os-title.png`, from
 thing. 1: named like the rung, "Property OS" (the two words the long-run plan
 already uses; recommended). 2: what the screen is, "The agency’s Monday
 page". 3: no title, the industry label and the line carry it. Awaiting
-Will’s pick; whichever lands also changes the industry pages’ wording.
+Will’s pick (16 Oct 2026): "1 for the title", then "idk about the name
+'industry' OS though, but im stuck for a better idea". Built as Property OS,
+Trades OS, Hospitality OS, Health OS, Finance OS for now (`system`; the
+described system stays as `desc` for the industry pages); a names board
+follows.
+
+## [~] Operating Systems details, 5 of 5: the phone layout (options 16 Oct 2026)
+
+Board: `design-pass-site-2026-10-16-os-phone.png`, from
+`design-pass-site-2026-10-16-os-phone.py` (the section at 375 with everything
+as built, the markup edited per option). Today: the laptop layout stacked,
+the 1184-wide screen scaled to a quarter and unreadable. 1: the industries as
+a scrolling row of pills under the heading, the screen under them. 2: the
+pills, then the screen cropped to the owner’s one decision (the approval card
+and the team) at a readable size, with "the one decision on the owner’s
+phone; the whole office is on the laptop" under it (recommended). 3: no screen
+on phones, the active row opening into its title and line. Awaiting Will’s
+pick.
 
