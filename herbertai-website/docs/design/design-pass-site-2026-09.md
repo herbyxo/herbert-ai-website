@@ -1297,3 +1297,18 @@ call." (what each screen shows); 3 "Your software stays. The work between it
 runs itself." (the value model’s position, nothing named).
 Will’s pick (16 Oct 2026): "1". The heading is "The whole office, on one
 screen."
+
+## [~] Operating Systems details, 2 of 5: the list (options 16 Oct 2026)
+
+Board: `design-pass-site-2026-10-16-os-list.png`, from
+`design-pass-site-2026-10-16-os-list.py` (the five rows rewritten on the
+homepage with the picked heading in place). Today: the industry small, the
+system’s name big. 1: the same with the value model’s headline figure under
+each in small muted type (about 17 to 37 hours a week back; every quote
+request answered within a minute; $43,000 to $89,000 a year kept or won; 3 to
+5 cancelled slots filled a week; 420 to 580 staff hours a year) and one foot
+line saying they are example figures (recommended: the list carries the value
+before a screen is clicked). 2: the jobs that run by themselves in place of the
+system’s name (repairs, late rent, renewals, enquiries). 3: the industry big
+and the system’s name small, tighter rows. Awaiting Will’s pick.
+
