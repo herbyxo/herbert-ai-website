@@ -80,7 +80,7 @@ function Card({ e, still }) {
         <AnimatePresence initial={false}>
           {e.feed.slice(0, Math.min(n, 3)).map(([t, s, then], i) => (
             <motion.div key={i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} className="py-2 border-t border-[#111]/8">
-              <p className="text-[13px] text-[#333]">{t}</p>
+              <p className="flex items-baseline justify-between gap-3 text-[13px] text-[#333]"><span>{t}</span><span className="font-mono text-[10.5px] text-[#999] tabular-nums whitespace-nowrap">{e.times[i]}</span></p>
               <StateLine s={s === 'wait' && n < 5 ? 'wait' : 'done'} then={s === 'wait' ? then : null} />
             </motion.div>
           ))}
@@ -174,10 +174,11 @@ function Scene() {
                 <div className="mt-6 h-[210px]">
                   {e.feed.slice(0, shown).map(([t, s, then], i) => (
                     <motion.div key={`${idx}-${i}`} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} className="py-3 border-t border-[#111]/8 flex items-end justify-between gap-4">
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-[15px] text-[#333]">{t}</p>
                         <StateLine s={s === 'wait' && !approved ? 'wait' : 'done'} then={s === 'wait' ? then : null} size={12} />
                       </div>
+                      <div className="flex items-center gap-3 shrink-0 self-start pt-[2px]">
                       {s === 'wait' && !approved && (
                         <motion.span
                           animate={step === 6 ? { scale: [1, 0.9, 1] } : { scale: 1 }}
@@ -195,6 +196,8 @@ function Scene() {
                           </motion.svg>
                         </motion.span>
                       )}
+                      <span className="font-mono text-[11.5px] text-[#999] tabular-nums whitespace-nowrap">{e.times[i]}</span>
+                      </div>
                     </motion.div>
                   ))}
                 </div>

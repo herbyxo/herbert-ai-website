@@ -1217,5 +1217,7 @@ carries its time at the right in mono, so the day reads as a day and the gap
 to the person’s yes is visible (recommended). 2: the scoreboard’s figure on
 the card at the top right, counting up as the lines land. 3: the wait line
 opens into the approval card the Operating Systems screens use (the feed
-would need to grow for it). Awaiting Will’s pick.
-
+would need to grow for it).
+Will’s pick (16 Oct 2026): "1 and the card feels good now". Built: each line
+carries its time at the right in mono on the scene card and the phone card
+(`times` on each employee).

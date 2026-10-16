@@ -19,36 +19,42 @@ export const EMPLOYEES = [
     glyph: G(['..XXX..', '.X.X.X.', '.X.X...', '..XXX..', '...X.X.', '.X.X.X.', '..XXX..']),
     feed: [['Letting fee in the agreement, never charged: $1,100', 'done'], ['Water usage $214 not passed to the tenant', 'wait', 'Approved by Jess, invoiced'], ['Duplicate plumber invoice found, $380', 'done']],
     count: 11620, countLabel: 'found this month',
+    times: ['7:02am', '7:15am', '9:30am'], // when each line landed, shown at the right of the line (card detail 1, Will 16 Oct 2026)
   },
   {
     name: 'Vic', job: 'Margins', what: 'Tells the owner which kinds of jobs are priced wrong', where: 'Trades',
     glyph: G(['.......', '.X.....', '.X...X.', '.X.X.X.', '.X.X.X.', '.X.X.X.', 'XXXXXXX']),
     feed: [['Double-storey ducted: quoted 28%, made 16%', 'done'], ['Gas fitting quotes thin since the price rise', 'wait', 'Template reviewed by Dave'], ['Won 11 of 13 ducted jobs, price holds', 'done']],
     count: 38, countLabel: 'quotes checked',
+    times: ['6:50am', '6:52am', '7:10am'], // when each line landed, shown at the right of the line (card detail 1, Will 16 Oct 2026)
   },
   {
     name: 'Fern', job: 'Scope', what: 'Flags client requests outside the engagement letter before the work starts', where: 'Finance',
     glyph: G(['.XXXXX.', '.X...X.', '.XXXXX.', '.X...X.', '.X...X.', '.X...X.', '.XXXXX.']),
     feed: [['“Quick letter for the bank”: outside scope, usual fee $220', 'wait', 'Quoted by Sam'], ['BAS query: inside the engagement, no charge', 'done'], ['Free work this month down to $2,880', 'done']],
     count: 3100, countLabel: 'free work caught',
+    times: ['8:14am', '8:20am', '5:00pm'], // when each line landed, shown at the right of the line (card detail 1, Will 16 Oct 2026)
   },
   {
     name: 'Rita', job: 'Rebookings', what: 'Brings back every function when its date comes round again', where: 'Hospitality',
     glyph: G(['..XXX..', '.X...X.', 'X.....X', 'X......', 'X...X.X', '.X...XX', '..XXXXX']),
     feed: [['Last year’s Christmas party, 42 guests: back room held for 11 Dec', 'done'], ['Draft to Priya with last year’s menu', 'wait', 'Approved by Jess, sent'], ['Priya replied: yes, please hold it', 'done']],
     count: 14, countLabel: 'dates held',
+    times: ['9:00am', '9:02am', '11:40am'], // when each line landed, shown at the right of the line (card detail 1, Will 16 Oct 2026)
   },
   {
     name: 'Joy', job: 'Milestones', what: 'Remembers the goal each patient named and asks how it went', where: 'Health',
     glyph: G(['.X.....', '.XXXXX.', '.XXXXX.', '.XXXX..', '.X.....', '.X.....', '.X.....']),
     feed: [['Priya’s goal from 3 June: run the City-Bay', 'done'], ['City-Bay was yesterday: draft from Alex ready', 'wait', 'Approved by Alex, sent'], ['Priya replied, booked Wednesday', 'done']],
     count: 23, countLabel: 'goals remembered',
+    times: ['7:30am', '7:31am', '2:15pm'], // when each line landed, shown at the right of the line (card detail 1, Will 16 Oct 2026)
   },
   {
     name: 'Ray', job: 'Promises', what: 'Keeps every promise made to a customer, or the customer hears first', where: 'Every industry',
     glyph: G(['.......', '......X', '.....X.', 'X...X..', '.X.X...', '..X....', '.......']),
     feed: [['Job note: “send price for 2nd split by Fri”', 'done'], ['Friday, not sent: update to Mrs Patel drafted', 'wait', 'Approved by Dave, sent'], ['Price sent Monday, promise kept', 'done']],
     count: 52, countLabel: 'promises tracked',
+    times: ['Tue 4:10pm', 'Fri 5:05pm', 'Mon 9:12am'], // when each line landed, shown at the right of the line (card detail 1, Will 16 Oct 2026)
   },
 ]
 
