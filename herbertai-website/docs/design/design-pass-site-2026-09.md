@@ -1315,3 +1315,16 @@ Will’s pick (16 Oct 2026): "i like the industry first, with the what runs by
 itself underneath". Built: the industry at 22px with its Built tag, the jobs
 that run by themselves under it at 14px (`jobs` on each screen), rows at py-3;
 the system’s name stays under the screen.
+
+## [~] Operating Systems details, 3 of 5: the line under the screen (options 16 Oct 2026)
+
+Board: `design-pass-site-2026-10-16-os-line.png`, from
+`design-pass-site-2026-10-16-os-line.py` (the caption edited on the homepage
+with the heading and the industry-first list in place). Today: the value
+model’s full sentence, three lines, "Example figures for an example business."
+on the end. 1: the figure as the sentence, one line ("About 17 to 37 hours of
+office work a week back, for an agency of ten with 400 rentals. Example
+figures."; recommended). 2: three ruled facts the way How It Works does it.
+3: no line, the system’s name and the link only, since the list now says what
+runs by itself. Awaiting Will’s pick.
+
