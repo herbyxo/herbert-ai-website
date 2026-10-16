@@ -1236,3 +1236,18 @@ replaces What gets built in the nav (/services stands in until it exists).
 the scroll and the list carries no link.
 Will’s pick (16 Oct 2026): "1". Built: the rung line under the list on the
 scene and under the cards on phones, to /pilot (`Close`).
+
+## [~] AI Employees details, 5 of 5: the phone cards (options 16 Oct 2026)
+
+Board: `design-pass-site-2026-10-16-emp-phone.png`, from
+`design-pass-site-2026-10-16-emp-phone.py` (the phone layout at 375 with every
+card walked into view so each shows its finished day, then the markup edited
+per option). Today: six cards in one column, each the avatar, name, job and
+industry, the month’s figure, the one-line job and the three timed lines;
+most of a screen each. 1: one at a time, the six avatars in a strip with the
+active one lit and one card under them, a tap or swipe bringing the next, a
+sixth of the height (recommended). 2: the scoreboard opened, the laptop
+list’s six rows with the first opened into its three lines. 3: a row of
+cards at most of the width with the next one’s edge showing. Awaiting
+Will’s pick.
+
