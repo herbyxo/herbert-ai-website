@@ -1449,5 +1449,20 @@ changes; redrawn on the section as it now stands:
 `design-pass-site-2026-10-17-os-phone.png`. Today the laptop layout stacked;
 1 pills then the screen; 2 pills then the screen cropped to the owner’s one
 decision (recommended); 3 no screen, the active row opening into its title and
-line. Awaiting Will’s picks on both.
-
+line.
+Will (17 Oct 2026): "3, i like 2, but its cropped the employees", then "we
+should almost have like a mobile version of the OS an owner can use it from".
+Built: the close reads "What would your Herbert OS cost?" to /pricing. On
+phones the section shows the industries as pills and, under them, the phone
+version of that industry’s Herbert OS (`components/runs/os/mobile.js`): the
+day’s numbers, the one thing waiting on the owner, and what was done for them,
+the whole team visible, playing once on a tap (the approval goes amber to
+green and its outcome lands at the top), "Example figures" in its own small
+print. The laptop keeps the full screen and the industry list. Found while
+building: the section was missing a React import (a 500 on the homepage until
+fixed; lint does not check undefined names here), and the pill row widened the
+grid column at 375 until the column got `min-w-0`. Checked at 1440, 1280, 375
+and 320 in both motion modes with every tab played: no overflow, no errors.
+Sheet: `design-pass-site-2026-10-17-os-mobile.png`, which also carries an
+option: the phone version over the laptop screen’s corner
+(`phoneOnDesktop`, lab only). Awaiting Will’s call on that option.

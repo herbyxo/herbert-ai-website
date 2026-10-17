@@ -1,9 +1,10 @@
 'use client'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useInView } from './board'
 import { SCREENS } from './os'
 import { Scaled } from './os/shared'
+import MobileOS, { MW, MH } from './os/mobile'
 
 // Homepage section 4, Operating Systems (15 Oct 2026). Layout A: the five
 // industries listed beside one big screen; the screen is that industry's
@@ -15,7 +16,30 @@ import { Scaled } from './os/shared'
 // for an example business, said to be example figures. No software names.
 // `initial` and `autoplay` exist for the lab page, which shows all five.
 
-export default function OperatingSystemsSection({ initial = SCREENS[0].id, autoplay = false }) {
+// The phone version scaled to fit a phone's width (never above its drawn size).
+function PhoneScaled({ children, max = 1 }) {
+  const ref = useRef(null)
+  const [k, setK] = useState(max)
+  useEffect(() => {
+    const el = ref.current
+    const ro = new ResizeObserver(() => setK(Math.min(max, el.clientWidth / MW)))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [max])
+  return (
+    <div ref={ref} className="w-full">
+      <div className="mx-auto relative" style={{ width: MW * k, height: MH * k }}>
+        <div className="absolute top-0 left-0" style={{ width: MW, transform: `scale(${k})`, transformOrigin: 'top left' }}>{children}</div>
+      </div>
+    </div>
+  )
+}
+
+const pick = (setActive, setPlays, id) => { setActive(id); setPlays((p) => p + 1) }
+
+// `phoneOnDesktop` sets the phone version over the laptop screen's corner
+// (a lab option, 17 Oct 2026); off by default.
+export default function OperatingSystemsSection({ initial = SCREENS[0].id, autoplay = false, phoneOnDesktop = false }) {
   const [active, setActive] = useState(initial)
   const [plays, setPlays] = useState(0)
   const ref = useRef(null)
@@ -33,10 +57,32 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
           </h2>
         </div>
         <div className="grid lg:grid-cols-[1.28fr_0.72fr] gap-x-12 gap-y-10 items-start">
-          <div>
-            <Scaled>
-              <div key={`${active}-${plays}`}><Visual play={play} /></div>
-            </Scaled>
+          <div className="min-w-0">
+            <div className="hidden lg:block relative">
+              <Scaled>
+                <div key={`${active}-${plays}`}><Visual play={play} /></div>
+              </Scaled>
+              {phoneOnDesktop && (
+                <div className="absolute -right-8 -bottom-16 w-[190px]">
+                  <PhoneScaled max={190 / MW}><div key={`m-${active}-${plays}`}><MobileOS id={active} play={play} /></div></PhoneScaled>
+                </div>
+              )}
+            </div>
+            <div className="lg:hidden">
+              <div role="tablist" aria-label="Choose an industry" className="flex gap-2 overflow-x-auto pb-2 -mx-6 px-6">
+                {SCREENS.map((x) => {
+                  const on = x.id === active
+                  return (
+                    <button key={x.id} type="button" role="tab" aria-selected={on} onClick={() => pick(setActive, setPlays, x.id)} className={`shrink-0 rounded-full px-3.5 py-1.5 text-[14px] font-medium border transition-colors ${on ? 'bg-[#111] text-white border-[#111]' : 'border-[#111]/20 text-[#111]'}`}>
+                      {x.name}
+                    </button>
+                  )
+                })}
+              </div>
+              <div className="mt-6">
+                <PhoneScaled><div key={`p-${active}-${plays}`}><MobileOS id={active} play={play} /></div></PhoneScaled>
+              </div>
+            </div>
             <div className="mt-4">
               <div className="min-w-0">
                 <p className="text-[15px] font-medium text-[#777]">{s.name}</p>
@@ -46,7 +92,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
             </div>
           </div>
           <div>
-          <div role="tablist" aria-label="Operating systems" className="border-b border-[#111]/15">
+          <div role="tablist" aria-label="Operating systems" className="hidden lg:block border-b border-[#111]/15">
             {SCREENS.map((x) => {
               const on = x.id === active
               return (
@@ -55,7 +101,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
                   type="button"
                   role="tab"
                   aria-selected={on}
-                  onClick={() => { setActive(x.id); setPlays((p) => p + 1) }}
+                  onClick={() => pick(setActive, setPlays, x.id)}
                   className={`w-full text-left py-3 pl-4 pr-3 border-t border-[#111]/15 border-l-2 transition-colors ${on ? 'border-l-[#111] bg-white' : 'border-l-transparent hover:bg-white/60'}`}
                 >
                   <span className={`block text-[22px] font-semibold tracking-[-0.02em] ${on ? '' : 'text-[#111]/70'}`}>{x.name}</span>
@@ -64,9 +110,9 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
               )
             })}
           </div>
-          <p className="mt-6 text-[15px]">
+          <p className="lg:mt-6 text-[15px]">
             <Link href="/pricing" className="font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
-              Your AI operating system, from $25,000, scoped after the audit <span aria-hidden>&rarr;</span>
+              What would your Herbert OS cost? <span aria-hidden>&rarr;</span>
             </Link>
           </p>
           </div>

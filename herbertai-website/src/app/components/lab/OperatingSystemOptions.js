@@ -19,6 +19,13 @@ export default function OperatingSystemOptions() {
           <OperatingSystemsSection initial={s.id} autoplay />
         </div>
       ))}
+      <div data-opt="phone-desktop">
+        <div className="sticky top-0 z-10 bg-[#111] text-white px-6 py-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px]">
+          <b className="text-[15px]">Option · the phone version over the laptop screen</b>
+          <span className="opacity-70">The owner’s phone sits over the screen’s corner, so laptop visitors see they can run it from their phone too.</span>
+        </div>
+        <OperatingSystemsSection initial="property" autoplay phoneOnDesktop />
+      </div>
     </main>
   )
 }
