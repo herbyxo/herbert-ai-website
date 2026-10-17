@@ -84,7 +84,7 @@ function Chart({ leads }) {
 
 // still: render the finished morning at once, for places where the page
 // stays calm until someone interacts (The work on the homepage).
-export default function EngineDashboard({ still = false }) {
+export default function EngineDashboard({ still = false, name = 'Marketing engine' }) {
   const ref = useRef(null)
   const run = useSteps(useInView(ref, 0.25), TOTAL)
   const n = still ? TOTAL : run
@@ -114,7 +114,7 @@ export default function EngineDashboard({ still = false }) {
       className="rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] overflow-hidden"
     >
       <div className="flex flex-wrap gap-3 items-center justify-between px-5 py-3 border-b border-[#111]/10 text-[12px] font-mono">
-        <span>Marketing engine &middot; an example plumbing business</span>
+        <span>{name} &middot; an example plumbing business</span>
         <span className="text-[#555]">Last 30 days</span>
       </div>
 

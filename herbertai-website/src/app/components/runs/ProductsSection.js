@@ -68,7 +68,7 @@ export default function ProductsSection() {
           </p>
         </div>
         <div className="min-w-0">
-          <div className="hidden lg:block"><Scaled><EngineDashboard /></Scaled></div>
+          <div className="hidden lg:block"><Scaled><EngineDashboard name={NAME} /></Scaled></div>
           <div className="lg:hidden"><PhoneScaled><ReachMobile play={seen} /></PhoneScaled></div>
           <p className="mt-8 lg:hidden">
             <Link href="/work/marketing-engine" className="text-[15px] font-medium underline underline-offset-4 decoration-white/40 hover:decoration-white">

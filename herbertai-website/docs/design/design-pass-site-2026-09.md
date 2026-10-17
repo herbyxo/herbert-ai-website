@@ -1506,3 +1506,20 @@ no overflow, no errors; 200px of the next section shows at 1440x900, 167px at
 1280x800. Sheet: `design-pass-site-2026-10-17-products-built.png` (the band at
 laptop and phone, then the band in the page). Next: Who Builds It, still the
 May register.
+
+## [~] Products details, 1 of 5: the line under the name (options 17 Oct 2026)
+
+Will: "details pass ? why do u keep skipping that". The same skip as
+Operating Systems: "built" was treated as done. The method is pick, build,
+details pass, then the next section; saved as a standing rule in memory
+(site-rebuild-details-pass-every-section). Five details for the band: the
+line under the name, the facts, the early-access note, the close, the phone
+layout. Fixed directly as a bug, not a pick: the dashboard inside the band
+called itself "Marketing engine" under a "Herbert Reach" heading; it now takes
+the name (`EngineDashboard name=`), the /work example page unchanged. Board:
+`design-pass-site-2026-10-17-products-line.png`. Today the engine page’s
+sentence, three lines; 1 "Ads that run themselves. You approve anything new."
+(recommended); 2 "Your Google ads written, tested and paused against what they
+bring in."; 3 "The ad engine Herbert AI runs its own marketing on." Awaiting
+Will’s pick.
+
