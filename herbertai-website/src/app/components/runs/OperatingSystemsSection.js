@@ -1,10 +1,10 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { useInView } from './board'
 import { SCREENS } from './os'
 import { Scaled } from './os/shared'
-import MobileOS, { MW, MH } from './os/mobile'
+import MobileOS, { PhoneScaled } from './os/mobile'
 
 // Homepage section 4, Operating Systems (15 Oct 2026). Layout A: the five
 // industries listed beside one big screen; the screen is that industry's
@@ -15,25 +15,6 @@ import MobileOS, { MW, MH } from './os/mobile'
 // Will, 16 Oct 2026). Under the screen, the model's line
 // for an example business, said to be example figures. No software names.
 // `initial` and `autoplay` exist for the lab page, which shows all five.
-
-// The phone version scaled to fit a phone's width (never above its drawn size).
-function PhoneScaled({ children, max = 1 }) {
-  const ref = useRef(null)
-  const [k, setK] = useState(max)
-  useEffect(() => {
-    const el = ref.current
-    const ro = new ResizeObserver(() => setK(Math.min(max, el.clientWidth / MW)))
-    ro.observe(el)
-    return () => ro.disconnect()
-  }, [max])
-  return (
-    <div ref={ref} className="w-full">
-      <div className="mx-auto relative" style={{ width: MW * k, height: MH * k }}>
-        <div className="absolute top-0 left-0" style={{ width: MW, transform: `scale(${k})`, transformOrigin: 'top left' }}>{children}</div>
-      </div>
-    </div>
-  )
-}
 
 const pick = (setActive, setPlays, id) => { setActive(id); setPlays((p) => p + 1) }
 

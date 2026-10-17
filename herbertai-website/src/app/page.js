@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Hero from './components/Hero'
 import EmployeesSection from './components/runs/EmployeesSection'
 import OperatingSystemsSection from './components/runs/OperatingSystemsSection'
+import ProductsSection from './components/runs/ProductsSection'
 import RevealOnScroll from './components/motion/RevealOnScroll'
 import { RUNGS, Eyebrow, AuditButton } from './components/site/shared'
 
@@ -20,6 +21,7 @@ export default function Home() {
       <HowItWorks />
       <EmployeesSection />
       <OperatingSystemsSection />
+      <ProductsSection />
       <FounderNote />
       <FinalCTA />
     </>

@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { STATE } from '../board'
 import { useSteps } from '../steps'
@@ -56,6 +57,42 @@ const DATA = {
   },
 }
 
+// The phone body every phone version sits in (Herbert OS, Herbert Reach).
+// `onDark` adds a faint edge so the black frame reads on a dark section.
+export function PhoneFrame({ onDark = false, children }) {
+  return (
+    <div className={`rounded-[46px] bg-[#111] p-[10px] shadow-[0_40px_80px_-40px_rgba(0,0,0,.55)] ${onDark ? 'ring-1 ring-white/20' : ''}`} style={{ width: MW, height: MH }}>
+      <div className="relative h-full rounded-[36px] bg-[#FAFAF8] overflow-hidden flex flex-col text-[#111]">
+        <div className="flex items-center justify-between px-6 pt-3 pb-1 text-[12px] font-semibold">
+          <span className="tabular-nums">9:41</span>
+          <span className="absolute left-1/2 -translate-x-1/2 top-2 h-[22px] w-[92px] rounded-full bg-[#111]" />
+          <span className="flex items-center gap-1"><span className="inline-block w-4 h-2.5 rounded-[3px] border border-[#111]" /></span>
+        </div>
+        {children}
+      </div>
+    </div>
+  )
+}
+
+// A phone version scaled to fit the column's width, never above its drawn size.
+export function PhoneScaled({ children, max = 1 }) {
+  const ref = useRef(null)
+  const [k, setK] = useState(max)
+  useEffect(() => {
+    const el = ref.current
+    const ro = new ResizeObserver(() => setK(Math.min(max, el.clientWidth / MW)))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [max])
+  return (
+    <div ref={ref} className="w-full">
+      <div className="mx-auto relative" style={{ width: MW * k, height: MH * k }}>
+        <div className="absolute top-0 left-0" style={{ width: MW, transform: `scale(${k})`, transformOrigin: 'top left' }}>{children}</div>
+      </div>
+    </div>
+  )
+}
+
 export default function MobileOS({ id, play = false }) {
   const d = DATA[id]
   const run = useSteps(play, 3, 900)
@@ -64,13 +101,7 @@ export default function MobileOS({ id, play = false }) {
   const approved = n >= 2
   const rows = n >= 3 ? [d.after, ...d.feed.slice(0, 3)] : d.feed
   return (
-    <div className="rounded-[46px] bg-[#111] p-[10px] shadow-[0_40px_80px_-40px_rgba(0,0,0,.55)]" style={{ width: MW, height: MH }}>
-      <div className="relative h-full rounded-[36px] bg-[#FAFAF8] overflow-hidden flex flex-col text-[#111]">
-        <div className="flex items-center justify-between px-6 pt-3 pb-1 text-[12px] font-semibold">
-          <span className="tabular-nums">9:41</span>
-          <span className="absolute left-1/2 -translate-x-1/2 top-2 h-[22px] w-[92px] rounded-full bg-[#111]" />
-          <span className="flex items-center gap-1"><span className="inline-block w-4 h-2.5 rounded-[3px] border border-[#111]" /></span>
-        </div>
+    <PhoneFrame>
         <div className="px-5 pt-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#777]">Herbert OS · {d.industry}</p>
           <p className="mt-1 text-[22px] font-semibold tracking-[-0.02em] leading-tight">Morning, {d.owner}</p>
@@ -110,7 +141,6 @@ export default function MobileOS({ id, play = false }) {
         <div className="px-5 pb-5 pt-2 flex items-center text-[10.5px] text-[#999]">
           <span className="flex items-center gap-1.5"><Dot c={STATE.waiting} size={5} />A person approves what goes out</span>
         </div>
-      </div>
-    </div>
+    </PhoneFrame>
   )
 }

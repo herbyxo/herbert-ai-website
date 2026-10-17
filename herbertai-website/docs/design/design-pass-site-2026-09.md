@@ -1487,5 +1487,22 @@ the shelf now reads "The Herbert products." with Herbert Reach (early access)
 beside Herbert OS (from $25,000, its five industries, "What would your Herbert
 OS cost?"), in place of the dashed "later" card. Seen on the board: on phones
 the dashboard shrinks the way the Operating Systems screens did, so whichever
-option lands gets a phone treatment. Awaiting Will’s pick.
+option lands gets a phone treatment.
+Will’s pick (17 Oct 2026): "1 - the its own band looks cool, it gives a
+distinctive premium feel".
 
+## [x] Products built: its own band (17 Oct 2026)
+
+`components/runs/ProductsSection.js` on the homepage between Operating Systems
+and the founder note: the dark band from option 1, the marketing dashboard
+playing once in view on a laptop, and on a phone `components/runs/ReachMobile.js`,
+Herbert Reach as the owner runs it from their phone (the month’s numbers, the
+Meta campaign waiting on them, what the engine did; the approval goes amber to
+green and an enquiry lands at the top). The phone body and scaler are shared
+with Herbert OS (`PhoneFrame`, `PhoneScaled` in `os/mobile.js`); the frame gets a
+faint edge on the dark band. The link "See Herbert Reach" goes to the engine’s
+example page for now. Checked at 1440, 1280, 375 and 320 in both motion modes:
+no overflow, no errors; 200px of the next section shows at 1440x900, 167px at
+1280x800. Sheet: `design-pass-site-2026-10-17-products-built.png` (the band at
+laptop and phone, then the band in the page). Next: Who Builds It, still the
+May register.

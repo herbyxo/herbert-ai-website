@@ -201,11 +201,15 @@ steps as being AI audit, AI employee, and then AI Operating System").
    that section Operating Systems", and "yes fold it in". The list keeps each
    system’s specific name: an operations hub, an office system, a functions
    office, a patient board, a season board.)
-5. Products: Herbert AI’s own products, each with its own name (the pattern is
-   Wispr AI the company, Wispr Flow the product; Will, 14 Oct 2026: "i was
-   thinking of doing a similar sort of strategy"). First the marketing engine
-   under its product name (placeholder "Herbert Reach", Will, 14 Oct 2026, not final), shown as early access until its paywall opens; later
-   the industry systems once productised.
+5. Products: the one dark section on the page (Will, 17 Oct 2026: "1 - the
+   its own band looks cool, it gives a distinctive premium feel"). Herbert AI
+   is the company and its software carries its own name, the Wispr AI and
+   Wispr Flow pattern (14 Oct 2026): "by Herbert AI" over the product name as
+   the heading. First Herbert Reach, the marketing engine (placeholder name,
+   not final; business-name and trademark checks before it ships), shown as
+   early access while it runs Herbert AI’s own ads, never a paywall before it
+   has numbers. The marketing dashboard on a laptop; on a phone, Herbert Reach
+   as the owner runs it from their phone, by the same rule as Herbert OS.
 6. Who Builds It: the founder, named.
 7. Book the Audit: the button and the three audit facts.
 
