@@ -113,7 +113,7 @@ export default function HealthBoard({ play = false }) {
               {approved ? 'Approved by Alex · 8:03am' : 'Approve offers'}
             </motion.div>
           </motion.div>
-          <p className="mt-auto pt-3 border-t border-[#111]/10 text-[11px] text-[#777] leading-[1.4]">14 items waited for a person this week, the longest 40 minutes. Example figures for an example clinic.</p>
+          <p className="mt-auto pt-3 border-t border-[#111]/10 text-[11px] text-[#777] leading-[1.4]">14 items waited for a person this week, the longest 40 minutes.</p>
         </div>
       </div>
     </Frame>

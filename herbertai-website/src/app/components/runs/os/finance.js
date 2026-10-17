@@ -118,7 +118,7 @@ export default function FinanceBoard({ play = false }) {
               {n >= 5 ? 'Approved by Sam · 8:04am' : 'Approve and send'}
             </motion.div>
           </motion.div>
-          <p className="mt-auto text-[10.5px] text-[#999] leading-tight">Nora, Penny and Owen are AI employees. A person approves what goes out. Example figures.</p>
+          <p className="mt-auto text-[10.5px] text-[#999] leading-tight">Nora, Penny and Owen are AI employees. A person approves what goes out.</p>
         </div>
       </div>
     </Frame>

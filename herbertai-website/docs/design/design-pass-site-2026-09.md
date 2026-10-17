@@ -1465,4 +1465,14 @@ grid column at 375 until the column got `min-w-0`. Checked at 1440, 1280, 375
 and 320 in both motion modes with every tab played: no overflow, no errors.
 Sheet: `design-pass-site-2026-10-17-os-mobile.png`, which also carries an
 option: the phone version over the laptop screen’s corner
-(`phoneOnDesktop`, lab only). Awaiting Will’s call on that option.
+(`phoneOnDesktop`, lab only).
+Will (17 Oct 2026): "phones only, and get rid of the example figures thing".
+The laptop-phone option and its prop are removed; the phone version shows on
+phones only. Every "Example figures" label is gone: the phone version’s
+footer and the small print in all five laptop screens. What keeps the
+figures honest now: each screen’s bar names it an example business, each
+sentence under the screen names the business it is worked for, "about" and
+the ranges stay, and the value model is the grounds. Checked: no label found
+on any industry at 1440 or 375, no overflow, no errors. Sheet:
+`design-pass-site-2026-10-17-os-final.png`. With this the Operating Systems
+details are done.

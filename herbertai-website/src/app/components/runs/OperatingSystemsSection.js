@@ -37,9 +37,7 @@ function PhoneScaled({ children, max = 1 }) {
 
 const pick = (setActive, setPlays, id) => { setActive(id); setPlays((p) => p + 1) }
 
-// `phoneOnDesktop` sets the phone version over the laptop screen's corner
-// (a lab option, 17 Oct 2026); off by default.
-export default function OperatingSystemsSection({ initial = SCREENS[0].id, autoplay = false, phoneOnDesktop = false }) {
+export default function OperatingSystemsSection({ initial = SCREENS[0].id, autoplay = false }) {
   const [active, setActive] = useState(initial)
   const [plays, setPlays] = useState(0)
   const ref = useRef(null)
@@ -58,15 +56,10 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
         </div>
         <div className="grid lg:grid-cols-[1.28fr_0.72fr] gap-x-12 gap-y-10 items-start">
           <div className="min-w-0">
-            <div className="hidden lg:block relative">
+            <div className="hidden lg:block">
               <Scaled>
                 <div key={`${active}-${plays}`}><Visual play={play} /></div>
               </Scaled>
-              {phoneOnDesktop && (
-                <div className="absolute -right-8 -bottom-16 w-[190px]">
-                  <PhoneScaled max={190 / MW}><div key={`m-${active}-${plays}`}><MobileOS id={active} play={play} /></div></PhoneScaled>
-                </div>
-              )}
             </div>
             <div className="lg:hidden">
               <div role="tablist" aria-label="Choose an industry" className="flex gap-2 overflow-x-auto pb-2 -mx-6 px-6">

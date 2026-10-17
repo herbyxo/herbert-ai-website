@@ -70,7 +70,7 @@ export default function PropertyHub({ play = false }) {
               )
             })}
           </div>
-          <p className="mt-auto text-[12px] text-[#999]">{approved ? '26' : '25'} hours handled by employees this week, 3 by a person. Example figures.</p>
+          <p className="mt-auto text-[12px] text-[#999]">{approved ? '26' : '25'} hours handled by employees this week, 3 by a person.</p>
         </div>
         <div className="border-l border-[#111]/10 px-5 py-5 flex flex-col">
           <p className="text-[12px] text-[#777] mb-2">Waiting on you</p>

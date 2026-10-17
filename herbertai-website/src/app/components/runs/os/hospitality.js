@@ -123,7 +123,7 @@ export default function HospitalityOffice({ play = false }) {
               <p className="text-[11px] text-[#777] truncate">Last year{Q}s Christmas parties offered their date in August: 4 rebooked</p>
             </div>
           </div>
-          <p className="mt-auto flex items-center gap-2 text-[11px] text-[#777]"><Dot c={STATE.waiting} size={6} />Jess approves what goes out. Example figures.</p>
+          <p className="mt-auto flex items-center gap-2 text-[11px] text-[#777]"><Dot c={STATE.waiting} size={6} />Jess approves what goes out.</p>
         </div>
       </div>
     </Frame>

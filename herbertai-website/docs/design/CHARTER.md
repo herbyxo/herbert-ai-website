@@ -177,8 +177,9 @@ steps as being AI audit, AI employee, and then AI Operating System").
    with one decision left, calm until clicked. Under the screen, the model’s
    headline figure as one sentence naming the example business it is worked
    for, with no tag under it (Will, 17 Oct 2026: not "Yours come out of the
-   audit", and never an "example figures" label); each drawn screen says
-   "Example figures" in its own small print (product/research/markdown/operating-systems-2026-10-15.md;
+   audit", and no "example figures" label anywhere in the section, the
+   screens and the phone version included); each screen’s bar names it an
+   example business (product/research/markdown/operating-systems-2026-10-15.md;
    Will, 16 Oct 2026). The figures are estimates for a stated reference
    business, never a result Herbert AI claims; "about" and the ranges stay. No software
    names (Will, 15 Oct 2026: naming the incumbents was "the wrong direction").
@@ -192,7 +193,7 @@ steps as being AI audit, AI employee, and then AI Operating System").
    the homepage says nothing about what is built. The close reads "What would your
    Herbert OS cost?". On phones: the industries as pills, then the phone
    version of that industry’s Herbert OS (the owner’s day, the one
-   approval, what was done), never a laptop screen shrunk to fit (Will, 17
+   approval, what was done), never a laptop screen shrunk to fit, and on phones only (Will, 17
    Oct 2026). Order: Property, Trades,
    Hospitality, Health, Finance. (Was Industries, with
    The Work as a separate proof section; Will, 15 Oct 2026: "the industries

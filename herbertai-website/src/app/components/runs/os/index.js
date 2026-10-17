@@ -16,8 +16,9 @@ import FinanceBoard from './finance'
 // one sentence, naming the example business it is worked for (Will, 16 Oct
 // 2026: "1"). The figures are the quantify model's estimates for a stated
 // reference business, not client results, so the sentence names the business
-// and carries no tag (Will, 17 Oct 2026); each screen's own small print says
-// "Example figures". Nothing is a claim of what Herbert AI has achieved. `line` is the full sentence, kept for
+// and carries no tag or "example figures" label (Will, 17 Oct 2026); each
+// screen's bar names it an example business. Nothing is a claim of what
+// Herbert AI has achieved. `line` is the full sentence, kept for
 // the industry pages. Slugs are the industry pages' current slugs until the
 // rename lands. `system` is the title under the screen: the product name
 // (Will, 16 Oct 2026: "Herbert OS ?", after "would i say, 'you now have a

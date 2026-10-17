@@ -92,7 +92,7 @@ export default function TradesOffice({ play = false }) {
             </div>
           </div>
           <div className="mt-auto border-t border-[#111]/10 bg-[#F6F6F3] px-4 py-3">
-            <p className="text-[10.5px] text-[#777] mb-1.5">Since yesterday, in the owner{Q}s own figures. Example figures.</p>
+            <p className="text-[10.5px] text-[#777] mb-1.5">Since yesterday, in the owner{Q}s own figures.</p>
             <div className="grid grid-cols-7 gap-2">
               {tiles.map(([v, k]) => (
                 <div key={k} className="min-w-0">

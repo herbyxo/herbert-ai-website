@@ -9,10 +9,10 @@ import { Dot, GLYPH } from './shared'
 // should almost have like a mobile version of the OS an owner can use it
 // from"). It is what the owner runs the business from: the day's numbers,
 // the one thing waiting on them, and what the AI employees did. Shown in
-// place of the laptop screen on phones; on a laptop it can sit over the
-// screen's corner. Plays once: the approval waits, is approved, and the
-// outcome lands at the top of the list. Every name and figure is made up and
-// the screen says so.
+// place of the laptop screen, on phones only (Will, 17 Oct 2026: "phones
+// only"). Plays once: the approval waits, is approved, and the outcome lands
+// at the top of the list. Every name and figure is made up; no "example
+// figures" label (Will, 17 Oct 2026).
 
 export const MW = 340
 export const MH = 700
@@ -107,9 +107,8 @@ export default function MobileOS({ id, play = false }) {
             </motion.div>
           ))}
         </div>
-        <div className="px-5 pb-5 pt-2 flex items-center justify-between text-[10.5px] text-[#999]">
+        <div className="px-5 pb-5 pt-2 flex items-center text-[10.5px] text-[#999]">
           <span className="flex items-center gap-1.5"><Dot c={STATE.waiting} size={5} />A person approves what goes out</span>
-          <span>Example figures</span>
         </div>
       </div>
     </div>
