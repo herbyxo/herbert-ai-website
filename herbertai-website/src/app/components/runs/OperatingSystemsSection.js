@@ -41,7 +41,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
               <div className="min-w-0">
                 <p className="text-[15px] font-medium text-[#777]">{s.name}</p>
                 <p className="mt-1 text-[22px] font-semibold tracking-[-0.02em]">{s.system}</p>
-                <p className="mt-2 text-[15px] leading-[1.5] text-[#555] max-w-[66ch]">{s.short} <span className="text-[#999]">Yours come out of the audit.</span></p>
+                <p className="mt-2 text-[15px] leading-[1.5] text-[#555] max-w-[66ch]">{s.short}</p>
               </div>
             </div>
           </div>

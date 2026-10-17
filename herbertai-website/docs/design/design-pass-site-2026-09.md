@@ -1424,3 +1424,30 @@ section as built is captured whole, every industry clicked, in
 `design-pass-site-2026-10-17-operating-systems-built.png` (from the script of
 the same name). The phone-layout pick is still open.
 
+## [x] Operating Systems: the audit tag off the line (17 Oct 2026)
+
+Will: "for the operating systems i dont think i want the 'yours come out of
+the audit' to be shown". Removed. The line under the screen is the figure as
+one sentence naming the business it is worked for, with nothing after it.
+The disclosure stays on the page: every drawn screen already says "Example
+figures" in its own small print (Property, Trades, Hospitality, Health,
+Finance).
+
+## [~] Operating Systems: the close’s wording, and the phone layout redrawn (options 17 Oct 2026)
+
+Will: "for the link i think i want it to say 'Your Herbert OS' or something
+like that, idk lets ideate for that". Board:
+`design-pass-site-2026-10-17-os-close-words.png`, from the script of the same
+name, the link’s words only. Today "Your AI operating system, from $25,000,
+scoped after the audit" to /pricing. 1 "Your Herbert OS, from $25,000" to
+/pricing, the name and the price, the same shape as the AI Employees close
+(recommended). 2 "Build your Herbert OS" to the audit booking. 3 "What would
+your Herbert OS cost?" to /pricing.
+Will also: "u havent shown me the phone layout options". The 16 Oct board had
+gone out bundled with the names board and was drawn before the title and line
+changes; redrawn on the section as it now stands:
+`design-pass-site-2026-10-17-os-phone.png`. Today the laptop layout stacked;
+1 pills then the screen; 2 pills then the screen cropped to the owner’s one
+decision (recommended); 3 no screen, the active row opening into its title and
+line. Awaiting Will’s picks on both.
+

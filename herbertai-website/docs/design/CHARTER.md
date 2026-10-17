@@ -176,8 +176,9 @@ steps as being AI audit, AI employee, and then AI Operating System").
    that industry’s operating system from the owner’s chair, work already done
    with one decision left, calm until clicked. Under the screen, the model’s
    headline figure as one sentence naming the example business it is worked
-   for, closed with "Yours come out of the audit." rather than an "example
-   figures" label (product/research/markdown/operating-systems-2026-10-15.md;
+   for, with no tag under it (Will, 17 Oct 2026: not "Yours come out of the
+   audit", and never an "example figures" label); each drawn screen says
+   "Example figures" in its own small print (product/research/markdown/operating-systems-2026-10-15.md;
    Will, 16 Oct 2026). The figures are estimates for a stated reference
    business, never a result Herbert AI claims; "about" and the ranges stay. No software
    names (Will, 15 Oct 2026: naming the incumbents was "the wrong direction").
