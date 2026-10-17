@@ -189,7 +189,11 @@ steps as being AI audit, AI employee, and then AI Operating System").
    section closes on one line under the list, the rung and its price to the
    pricing page. No Built tag and no per-screen link (Will, 16 Oct 2026: one
    built out of five "indicates a weak position"); The Work is folded in, but
-   the homepage says nothing about what is built. Order: Property, Trades,
+   the homepage says nothing about what is built. The close reads "What would your
+   Herbert OS cost?". On phones: the industries as pills, then the phone
+   version of that industry’s Herbert OS (the owner’s day, the one
+   approval, what was done), never a laptop screen shrunk to fit (Will, 17
+   Oct 2026). Order: Property, Trades,
    Hospitality, Health, Finance. (Was Industries, with
    The Work as a separate proof section; Will, 15 Oct 2026: "the industries
    page should actually be about the entirely built system, so maybe we call
