@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products, details pass, detail 1 of 5 open; two sections to go |
+| 3. Sections | [~] | Products: defining Herbert Reach before its details pass; two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" and "Herbert OS" need the business-name and trademark checks; "See Herbert Reach" goes to the example page |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | n/a | [x] | [x] | [x] | [~] | Detail 1 of 5, the line under the name, waiting on Will (then the facts, the early-access note, the close, the phone layout) |
+| 5. Products | [~] | [x] | [x] | [x] | [~] | Facts reopened 17 Oct (Will: define Herbert Reach first); the details pass waits on the definition |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1553,4 +1553,37 @@ sentence, three lines; 1 "Ads that run themselves. You approve anything new."
 (recommended); 2 "Your Google ads written, tested and paused against what they
 bring in."; 3 "The ad engine Herbert AI runs its own marketing on." Awaiting
 Will’s pick.
+
+## [~] Products, facts first: what Herbert Reach is (17 Oct 2026)
+
+Will, on the line board: "i think we need to start with defining what your
+idea of Herbert Reach is first". The roadmap’s step 1, skipped: the band was
+drawn and its copy drafted with no settled definition. Draft definition, from
+code/marketing-engine/PROJECT.md, BUILD-PLAN.md and the other session’s
+research of 16 and 17 Oct (marketing-tools-2026-10-16.md,
+cpl-strategies-2026-10-17.md and its actual-setup note), awaiting Will:
+
+- One line: Herbert Reach turns a local service business’s ad budget into
+  booked jobs. It sets up and runs the Google and Meta ads, answers every lead
+  within a minute, and shows spend against booked jobs, with the owner
+  approving anything new.
+- For: owner-operated local service businesses, 3 to 20 staff, A$700 to A$3k
+  a month on ads, no marketer and no agency (PROJECT.md says trades first).
+- Three parts: ads (four questions in, campaigns built in the cheapest-lead
+  setup, every ad approved, a weekly optimiser within guardrails); leads (a
+  reply within a minute by text, email or call, a follow-up that stops on a
+  reply, missed-call text-back, the booking written in); proof (spend, leads,
+  booked jobs and revenue per campaign).
+- Why it holds up: the platforms now own targeting and bidding and give ad
+  generation away; what stays worth paying for is the lead side and the proof.
+- Sold as: early access until it has real numbers from Herbert AI’s own ads,
+  then a tiered subscription positioned against agencies (unpriced until the
+  M1 pricing gate).
+- Today: the machinery is built; nothing is serving (Meta v2 waits on the
+  founder photo, Google paused since 18 Sep), so there are no numbers yet.
+
+What it changes for the band: the facts list covers only the ads part; the
+lead half and the proof, the parts the research says hold their value, are
+missing. And "it runs Herbert AI’s own ads first" is only true once the Meta
+campaign is live.
 
