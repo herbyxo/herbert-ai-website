@@ -1476,3 +1476,16 @@ the ranges stay, and the value model is the grounds. Checked: no label found
 on any industry at 1440 or 375, no overflow, no errors. Sheet:
 `design-pass-site-2026-10-17-os-final.png`. With this the Operating Systems
 details are done.
+
+## [~] Products, redrawn (options 17 Oct 2026)
+
+Will: "show me the options". The 16 Oct board predated the Herbert OS name, so
+redrawn on the current page: `design-pass-site-2026-10-17-products.png`, from
+the script of the same name, today and each option at 1440 with the phone
+beside it. 1 its own band (recommended) and 2 screen and words unchanged. 3
+the shelf now reads "The Herbert products." with Herbert Reach (early access)
+beside Herbert OS (from $25,000, its five industries, "What would your Herbert
+OS cost?"), in place of the dashed "later" card. Seen on the board: on phones
+the dashboard shrinks the way the Operating Systems screens did, so whichever
+option lands gets a phone treatment. Awaiting Will’s pick.
+

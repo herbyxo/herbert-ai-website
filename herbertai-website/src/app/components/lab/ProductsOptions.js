@@ -10,8 +10,9 @@ import EngineDashboard from '../runs/EngineDashboard'
 // paywall, until it has numbers from running Herbert AI's own ads
 // (code/marketing-engine/PROJECT.md, open decisions). Three ways: 1 its own
 // band, the one dark section on the page, so the product reads as its own
-// brand; 2 screen and words in the site's layout A; 3 the shelf, the engine
-// beside the operating systems that become products later. The dashboard is
+// brand; 2 screen and words in the site's layout A; 3 the shelf, the Herbert
+// products side by side, Herbert Reach and Herbert OS (redrawn 17 Oct 2026
+// once Herbert OS had its name). The dashboard is
 // the one built for The Work on 13 Oct. Copy reuses the engine page's approved
 // lines; no results claimed. Goes with the lab.
 
@@ -51,9 +52,9 @@ function Facts({ dark = false }) {
   )
 }
 
-function Go({ dark = false, children = `See ${NAME}` }) {
+function Go({ dark = false, href = HREF, children = `See ${NAME}` }) {
   return (
-    <Link href={HREF} className={`text-[15px] font-medium underline underline-offset-4 ${dark ? 'decoration-white/40 hover:decoration-white' : 'decoration-[#111]/30 hover:decoration-[#111]'}`}>
+    <Link href={href} className={`text-[15px] font-medium underline underline-offset-4 ${dark ? 'decoration-white/40 hover:decoration-white' : 'decoration-[#111]/30 hover:decoration-[#111]'}`}>
       {children} <span aria-hidden>&rarr;</span>
     </Link>
   )
@@ -120,11 +121,11 @@ function Shelf() {
         <div className="mb-10">
           <p className="text-[15px] font-medium text-[#555] mb-4">Products</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[20ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
-            Built once, then used by many.
+            The Herbert products.
           </h2>
         </div>
         <div className="grid lg:grid-cols-[1.45fr_0.55fr] gap-5 items-stretch">
-          <div className="rounded-2xl border border-[#111]/12 bg-white p-6 grid grid-cols-[1.25fr_0.75fr] gap-6 items-center">
+          <div className="rounded-2xl border border-[#111]/12 bg-white p-6 grid lg:grid-cols-[1.25fr_0.75fr] gap-6 items-center">
             <Scaled><EngineDashboard /></Scaled>
             <div>
               <span className="rounded-full border border-[#111]/20 px-2 py-[1px] font-mono text-[10px] uppercase tracking-[0.12em] text-[#555]">Early access</span>
@@ -134,15 +135,16 @@ function Shelf() {
               <div className="mt-5"><Go /></div>
             </div>
           </div>
-          <div className="rounded-2xl border border-dashed border-[#111]/20 p-6 flex flex-col">
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[#777]">Next</p>
-            <p className="mt-3 text-[20px] font-semibold tracking-[-0.02em] leading-tight">The operating systems, as products</p>
-            <p className="mt-2 text-[14px] leading-[1.5] text-[#666]">Each one becomes a product once it has run in three to five businesses in its industry.</p>
-            <ul className="mt-5 border-b border-[#111]/10">
+          <div className="rounded-2xl border border-[#111]/12 bg-white p-6 flex flex-col">
+            <span className="self-start rounded-full border border-[#111]/20 px-2 py-[1px] font-mono text-[10px] uppercase tracking-[0.12em] text-[#555]">From $25,000</span>
+            <p className="mt-3 text-[26px] font-semibold tracking-[-0.02em] leading-tight">Herbert OS</p>
+            <p className="mt-2 text-[15px] leading-[1.5] text-[#444]">The whole office on one screen: the AI employees working together, one decision left for you.</p>
+            <ul className="mt-4 border-b border-[#111]/10">
               {['Property', 'Trades', 'Hospitality', 'Health', 'Finance'].map((x) => (
-                <li key={x} className="py-2.5 border-t border-[#111]/10 text-[15px] text-[#111]/45">{x}</li>
+                <li key={x} className="py-2 border-t border-[#111]/10 text-[14.5px] text-[#111]">{x}</li>
               ))}
             </ul>
+            <div className="mt-5"><Go href="/pricing">What would your Herbert OS cost?</Go></div>
           </div>
         </div>
       </div>
@@ -153,7 +155,7 @@ function Shelf() {
 const OPTIONS = [
   ['1', '1. Its own band', 'The one dark section on the page, the product name as the heading, so it reads as its own brand under Herbert AI.', Band],
   ['2', '2. Screen and words', 'The site’s layout A: the dashboard big on the left, the product on the right, a heading about software built once and run first.', ScreenWords],
-  ['3', '3. The shelf', 'The engine as the one product on the shelf, beside a dashed card for the operating systems that become products later.', Shelf],
+  ['3', '3. The shelf', 'The Herbert products side by side: Herbert Reach in early access, Herbert OS from $25,000.', Shelf],
 ]
 
 export default function ProductsOptions() {
