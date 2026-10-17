@@ -13,6 +13,37 @@ and /pricing, then /work, /industries/*, /about. Nothing is built before Will
 picks. No marketing-site register exists in design-taste yet; it gets written
 from this pass's decisions at capture.
 
+## Roadmap (the design pass roadmap, design-taste loop/roadmap.md)
+
+Added 17 Oct 2026 (Will: "lets have a segmented phased approach/roadmap when
+doing a design pass of a build"). The state of this pass at a glance; the
+entries below it are the history. `[ ]` not started, `[~]` under way, `[x]`
+done. Updated in the same commit as the work.
+
+| Phase | State | Where it stands |
+|---|---|---|
+| 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
+| 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
+| 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
+| 3. Sections | [~] | Products, details pass, detail 1 of 5 open; two sections to go |
+| 4. Whole page | [ ] | |
+| 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
+| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" and "Herbert OS" need the business-name and trademark checks; "See Herbert Reach" goes to the example page |
+| 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
+| 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
+
+Phase 3, section by section (facts, options, pick, build, details):
+
+| Section | Facts | Options | Pick | Build | Details | Where it stands |
+|---|---|---|---|---|---|---|
+| 1. Hero | n/a | [x] | [x] | [x] | [x] | Spacing and header details, 10 Oct |
+| 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
+| 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
+| 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
+| 5. Products | n/a | [x] | [x] | [x] | [~] | Detail 1 of 5, the line under the name, waiting on Will (then the facts, the early-access note, the close, the phone layout) |
+| 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
+| 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
+
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
 
 ### Scout
