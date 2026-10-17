@@ -1587,3 +1587,19 @@ lead half and the proof, the parts the research says hold their value, are
 missing. And "it runs Herbert AI’s own ads first" is only true once the Meta
 campaign is live.
 
+Will (17 Oct 2026): "ok im editing what Herbert Reach is in another session.
+but pretty much, its for any and all industries, and its meant to serve as the
+one stop shop for digital marketing for a business, where the premise is they
+enter their business name, and then there is an AI agent that gathers all the
+information about their business and industry, and then it is an optimised
+intelligent digital marketing analytics dashboard, where all the actual
+marketing and completely automated and optimised by a digital marketing agent
+on the backend that determines and does the best practices on ensuring that
+business has the best marketing they can get, while also being the cheapest
+possible. i assume theres multiple agents on the backend that interact with
+eachother or something, and theres different types of information each agent
+uses to do its job". So the draft above is superseded by his definition, which
+the other session is writing up. The band’s line, facts and visual wait for
+that write-up; the visual should show the arc he describes (a business name
+in, the research, the marketing running, the dashboard).
+
