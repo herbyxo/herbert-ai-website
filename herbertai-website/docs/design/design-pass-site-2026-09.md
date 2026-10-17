@@ -1411,3 +1411,16 @@ on. The .com domains checked unregistered for herbertrun, herbertboard,
 herbertkeep, herbertbase, herberthub, herbertdesk, herbertengine, herbertcore
 and herbertos; .com.au and the business-name and trademark registers are the
 pre-ship check, as for Reach.
+
+## [x] Operating Systems: the title stays as the product plus the industry (17 Oct 2026)
+
+Will on "Herbert OS for Property": "but then theres nothing that really
+differentiates the industry type?", shown the title alone beside the title
+with the industry’s description under it as an edition line; "keep". So the
+title is the product and the industry, nothing under it; each version differs
+by its screen, the jobs line in the list and the figure under the screen.
+Will also: "ur meant to show me all the things in a screenshot", so the
+section as built is captured whole, every industry clicked, in
+`design-pass-site-2026-10-17-operating-systems-built.png` (from the script of
+the same name). The phone-layout pick is still open.
+
