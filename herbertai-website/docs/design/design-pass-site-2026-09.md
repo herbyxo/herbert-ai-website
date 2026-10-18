@@ -25,10 +25,10 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products: defining Herbert Reach before its details pass; two sections to go |
+| 3. Sections | [~] | Products details pass, detail 1 of 6; two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
-| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" and "Herbert OS" need the business-name and trademark checks; "See Herbert Reach" goes to the example page |
+| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
 | 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
 
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [~] | [x] | [x] | [x] | [~] | Facts reopened 17 Oct (Will: define Herbert Reach first); the details pass waits on the definition |
+| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted, detail 1 of 6, the line |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1602,4 +1602,32 @@ uses to do its job". So the draft above is superseded by his definition, which
 the other session is writing up. The band’s line, facts and visual wait for
 that write-up; the visual should show the arc he describes (a business name
 in, the research, the marketing running, the dashboard).
+
+## [x] Products, facts: Herbert Reach defined (19 Oct 2026)
+
+Will: "reach is defined". The definition is
+`code/marketing-engine/docs/REACH-DEFINITION.md` (settled 17 Oct 2026): a small
+business’s whole marketing department; the owner types the business name, AI
+employees (researcher, strategist, creative, one per channel, lead, analyst)
+research the business, decide and run the marketing on every channel it should
+run on, answer every lead until it is a booked job, optimise cost per booked
+job, and show it on one screen; any industry, 3 to 20 staff; the owner approves
+two things only, a new ad or post and any spend increase; early access until
+Herbert AI’s own ads have numbers. The name is settled (registers clear; use
+"Herbert Reach" in full). What it changes in the band: the line, the facts and
+the visual all describe an ad tool; they get redrawn. Details, now six: the
+line, the facts, the visual (the arc from a business name to the dashboard),
+the early-access note, the close, the phone layout.
+
+## [~] Products details, 1 of 6: the line, from the definition (options 19 Oct 2026)
+
+Board: `design-pass-site-2026-10-19-products-line.png`, from the script of the
+same name, the band at 1440 with the top of the phone layout beside it. Today
+"Ads that run themselves against real results: written, tested and paused by
+the system, with anything new held for you to approve." (an ad tool, written
+before the definition). 1 "Your whole marketing department. You approve what
+goes out." (the definition’s one line in two halves; recommended). 2 "Type in
+your business name. Herbert Reach does the marketing." 3 "A marketing
+department of AI employees, on one screen." Awaiting Will’s pick. The facts
+and the dashboard are still the ads-only ones; details 2 and 3.
 
