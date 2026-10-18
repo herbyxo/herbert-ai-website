@@ -1628,6 +1628,21 @@ the system, with anything new held for you to approve." (an ad tool, written
 before the definition). 1 "Your whole marketing department. You approve what
 goes out." (the definition’s one line in two halves; recommended). 2 "Type in
 your business name. Herbert Reach does the marketing." 3 "A marketing
-department of AI employees, on one screen." Awaiting Will’s pick. The facts
+department of AI employees, on one screen."
+Will (19 Oct 2026): "maybe, 'Your whole marketing department at the click of a
+button'". Built as the line. It drops the approval rule, so the rule moves into
+the facts (detail 2). The facts
 and the dashboard are still the ads-only ones; details 2 and 3.
+
+## [~] Products details, 2 of 6: the facts (options 19 Oct 2026)
+
+Board: `design-pass-site-2026-10-19-products-facts.png`, with Will’s line in
+place, laptop and the top of the phone. Today the three ads-only facts. 1 What
+it does: "Learns your business from its name", "Runs your ads and posts, and
+answers every lead within a minute", "Shows what you spent against the jobs it
+booked", "You approve every new ad and any increase in spend" (recommended;
+carries the approval rule the line dropped). 2 The team: Researcher,
+Strategist, Creative, Lead employee, Analyst, one line each, the approval left
+to the early-access note. 3 The first ten minutes: the account walkthrough as
+four numbered steps. Awaiting Will’s pick.
 

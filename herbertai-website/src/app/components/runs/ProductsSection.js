@@ -9,11 +9,12 @@ import { PhoneScaled } from './os/mobile'
 // Homepage section 5, Products (Will, 17 Oct 2026: "1 - the its own band looks
 // cool, it gives a distinctive premium feel"). The one dark section on the
 // page: Herbert AI is the company and its own software carries its own name,
-// the Wispr AI and Wispr Flow pattern (14 Oct 2026). First the marketing
-// engine under the placeholder name "Herbert Reach" (not final; the
-// business-name and trademark checks come before it ships), shown as early
-// access, not a paywall, while it runs Herbert AI's own ads
-// (code/marketing-engine/PROJECT.md, open decisions). On a laptop the
+// the Wispr AI and Wispr Flow pattern (14 Oct 2026). Herbert Reach, a small
+// business's whole marketing department, as defined in
+// code/marketing-engine/docs/REACH-DEFINITION.md (17 Oct 2026); the name is
+// settled and always written in full (bare REACH is someone else's live
+// mark). Shown as early access, not a paywall, until Herbert AI's own ads
+// have numbers. The line is Will's (19 Oct 2026). On a laptop the
 // marketing dashboard plays once in view; on a phone, Herbert Reach as the
 // owner would run it from their phone. Copy reuses the engine page's lines and
 // claims no results.
@@ -51,7 +52,7 @@ export default function ProductsSection() {
           <p className="text-[15px] font-medium text-white/60 mb-4">Products</p>
           <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-white/50">by Herbert AI</p>
           <h2 className="mt-2 font-bold tracking-[-0.04em] leading-[0.95]" style={{ fontSize: 'clamp(40px, 4.4vw, 64px)' }}>{NAME}</h2>
-          <p className="mt-5 text-[17px] leading-[1.5] text-white/75 max-w-[40ch]">Ads that run themselves against real results: written, tested and paused by the system, with anything new held for you to approve.</p>
+          <p className="mt-5 text-[17px] leading-[1.5] text-white/75 max-w-[40ch]">Your whole marketing department at the click of a button.</p>
           <ul className="mt-6 border-b border-white/15">
             {FACTS.map((f) => (
               <li key={f} className="py-3 border-t border-white/15 text-[15px] text-white/80">{f}</li>
