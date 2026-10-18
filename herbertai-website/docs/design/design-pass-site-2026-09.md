@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products details pass, detail 1 of 6; two sections to go |
+| 3. Sections | [~] | Products details pass, detail 2 of 6 (the facts, round 2); two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted, detail 1 of 6, the line |
+| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; detail 1 of 6 (the line) applied, detail 2 of 6 (the facts) on round 2 |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1644,5 +1644,25 @@ booked", "You approve every new ad and any increase in spend" (recommended;
 carries the approval rule the line dropped). 2 The team: Researcher,
 Strategist, Creative, Lead employee, Analyst, one line each, the approval left
 to the early-access note. 3 The first ten minutes: the account walkthrough as
-four numbered steps. Awaiting Will’s pick.
+four numbered steps. Will (19 Oct 2026): "uhh idk about any of these, they dont read that catchy. i
+was thinking spruce up the energy/catchiness of the words". None picked.
 
+## [~] Products details, 2 of 6, round 2: the facts with more energy (options 19 Oct 2026)
+
+Board: `design-pass-site-2026-10-19-products-facts-r2.png`, from the script of
+the same name, same band and line, only the ruled list changed. Every claim
+kept inside the definition: landing pages dropped (not built yet), no results
+promised, the approval rule in every option. 1 Five verbs, the verb in bold:
+"Learns your business from its name", "Runs your ads and posts, and keeps
+testing new ones", "Answers every lead inside a minute", "Shows every dollar
+against the jobs it booked", "Asks you before any new ad or extra spend"
+(recommended). 2 The department, a roster with the role in mono: Researcher
+"Knows your business from its name", Strategist "Puts the budget where jobs are
+cheapest", Creative "Makes ads that don’t look like everyone else’s", Lead
+employee "Answers every enquiry inside a minute", Analyst "Cuts what wastes
+money, backs what books jobs", You "Say yes to every new ad and any extra
+spend". 3 Short lines, five sentences with full stops: "Type your business
+name. Meet your marketing team.", "Ads and posts made, run and tested for
+you.", "Every lead answered inside a minute.", "Every dollar tracked against
+the jobs it books.", "Nothing new goes live without your yes." Awaiting
+Will’s pick.
