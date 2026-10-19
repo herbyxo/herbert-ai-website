@@ -205,10 +205,10 @@ steps as being AI audit, AI employee, and then AI Operating System").
    its own band looks cool, it gives a distinctive premium feel"). Herbert AI
    is the company and its software carries its own name, the Wispr AI and
    Wispr Flow pattern (14 Oct 2026): "by Herbert AI" over the product name as
-   the heading. First Herbert Reach, the marketing engine (placeholder name,
-   not final; business-name and trademark checks before it ships), shown as
-   early access while it runs Herbert AI’s own ads, never a paywall before it
-   has numbers. The marketing dashboard on a laptop; on a phone, Herbert Reach
+   the heading. First Herbert Reach, a small business’s whole marketing
+   department (name settled 17 Oct 2026, always written in full), sold as the
+   full product it is defined to be and marked In development, with no link
+   out until it opens (19 Oct 2026); never a paywall before it has numbers. The marketing dashboard on a laptop; on a phone, Herbert Reach
    as the owner runs it from their phone, by the same rule as Herbert OS.
    Under the name, Will’s line, "Your whole marketing department at the
    click of a button.", and the product as a story in five numbered steps:

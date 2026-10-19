@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
 import { useInView } from './board'
 import ReachDashboard from './ReachDashboard'
 import ReachMobile from './ReachMobile'
@@ -13,8 +12,10 @@ import { PhoneScaled } from './os/mobile'
 // business's whole marketing department, as defined in
 // code/marketing-engine/docs/REACH-DEFINITION.md (17 Oct 2026); the name is
 // settled and always written in full (bare REACH is someone else's live
-// mark). Shown as early access, not a paywall, until Herbert AI's own ads
-// have numbers. The line is Will's (19 Oct 2026), and so are the facts: the
+// mark). Marked In development, with no link out until it opens (Will, 19 Oct
+// 2026: "i think we just remove that, and the early access note. and instead
+// of the see Herbert Reach, we have a still in development, or in alpha phase,
+// or something"). The line is Will's (19 Oct 2026), and so are the facts: the
 // product as a story in five steps, name in, booked jobs out (Will, 19 Oct
 // 2026: "sort of telling a story of what the product does", then "i think i
 // like 1"). On a laptop the
@@ -25,6 +26,7 @@ import { PhoneScaled } from './os/mobile'
 const W = 1184
 const H = 740
 const NAME = 'Herbert Reach'
+const STATUS = 'In development'
 const STORY = ['Type your name.', 'Writes ads.', 'Runs ads.', 'Answers leads.', 'Books jobs.']
 
 function Scaled({ children }) {
@@ -64,24 +66,14 @@ export default function ProductsSection() {
               </li>
             ))}
           </ol>
-          <p className="mt-5 flex items-start gap-2.5 text-[13.5px] leading-[1.45] text-white/60">
-            <span className="mt-[2px] shrink-0 rounded-full border border-white/30 px-2 py-[1px] font-mono text-[10px] uppercase tracking-[0.12em] text-white/80">Early access</span>
-            <span>It runs Herbert AI’s own ads first, and opens up once it has the numbers to show for it.</span>
-          </p>
-          <p className="mt-6 hidden lg:block">
-            <Link href="/work/marketing-engine" className="text-[15px] font-medium underline underline-offset-4 decoration-white/40 hover:decoration-white">
-              See {NAME} <span aria-hidden>&rarr;</span>
-            </Link>
+          <p className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/25 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-white/80">
+            <span aria-hidden className="inline-block w-1.5 h-1.5 rounded-full bg-[#BDBDBD]" />
+            {STATUS}
           </p>
         </div>
         <div className="min-w-0">
           <div className="hidden lg:block"><Scaled><ReachDashboard name={NAME} /></Scaled></div>
           <div className="lg:hidden"><PhoneScaled><ReachMobile play={seen} /></PhoneScaled></div>
-          <p className="mt-8 lg:hidden">
-            <Link href="/work/marketing-engine" className="text-[15px] font-medium underline underline-offset-4 decoration-white/40 hover:decoration-white">
-              See {NAME} <span aria-hidden>&rarr;</span>
-            </Link>
-          </p>
         </div>
       </div>
     </section>

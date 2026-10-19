@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products details pass, detail 4 of 6 (the early-access note); two sections to go |
+| 3. Sections | [~] | Products details pass, detail 6 of 6 (the phone layout); two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; details 1 to 3 of 6 (the line, the facts, the visual) applied, detail 4 of 6 (the early-access note) next |
+| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; details 1 to 5 of 6 applied (the line, the facts, the visual, no note, In development in place of the link), detail 6 of 6 (the phone layout) next |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1790,4 +1790,21 @@ yours." (recommended: the skin in the game Will named on the Operating Systems
 figures, as a mirror) 2 "Herbert AI hired it first." 3 "Herbert AI is customer
 one. Ask to be next.", the last three words a link to the audit (overlaps the
 close, detail 5). Awaiting Will’s pick.
+Will (19 Oct 2026), asking what the line is about, then: "i think we just
+remove that, and the early access note. and instead of the see Herbert Reach,
+we have a still in development, or in alpha phase, or something".
+
+## [x] Products details, 4 and 5 of 6: no note, no link, a status label (19 Oct 2026)
+
+Built: the early-access note and both "See Herbert Reach" links are gone from
+`ProductsSection.js`; in their place, under the story, a mono pill with a grey
+dot (grey is not live yet on this site) reading "In development" (`STATUS`).
+Board: `design-pass-site-2026-10-19-products-status.png`, the built label beside
+"Alpha" (software talk a plumber may not read) and "Coming soon" (promises
+timing nobody has set), each swapped in the page. Verified at 1440, 1280, 375
+and 320, motion on and off: no links or note left in the band, no overflow, no
+errors; the band is 754px at 1440x900 and 687px at 1280x800. Charter section
+5 updated (the name settled, sold as the full product, In development, no link
+out until it opens). The band has no way out now; the page’s one action stays
+the audit. Next: detail 6 of 6, the phone layout.
 
