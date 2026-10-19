@@ -2101,3 +2101,35 @@ charter is updated. No overflow, no errors. Screens:
 Will (20 Oct 2026): "signed off". Phase 4 closes: the whole homepage signed off
 on the preview.
 
+## Critique against the best-regarded sites (20 Oct 2026)
+
+Will: "can u go through the entire page and tell me what u think of it
+compared to good website design with examples and stuff. one thing i would
+have to say is the home page feels a bit small ? im not too sure though".
+
+Measured live at 1440x900: the homepage and ten sites selling software to
+businesses (Linear, Stripe, Ramp, Attio, Granola, Mercury, Raycast, Lindy,
+Sierra, Vercel). Data `assets-2026-10-20/bench/bench.json`, first screens
+`design-pass-site-2026-10-20-bench.png`.
+
+| | Herbert AI | The ten |
+|---|---|---|
+| Hero headline size | 72px | 48 to 86px, median 64 |
+| Hero headline width | 409px, three lines | 444 to 1282px |
+| Body text | 15px | 12 to 24px, most 14 to 16 |
+| Widest text block | 727px | 1024 to 1436px |
+| Product shown on the first screen | the board, 727px | Linear, Attio, Lindy, Ramp: 1100 to 1300px of real UI |
+| Operating Systems and Herbert Reach screens | scaled to 61%, text 7.4 to 8px | (no equivalent) |
+| Proof near the top | none | logos (Stripe, Vercel), a rating (Lindy), a live counter (Ramp) |
+
+Scores, 0 to 5, Claude’s judgement against the ten (5 = as good as the best
+of them on that point): first screen says what it sells 4; the product as the
+biggest thing on the page 2; type scale 4; proof 1; one clear action 5;
+motion with a purpose 4; rhythm and consistency 4. 24 of 35.
+
+The "small" feeling is real and measurable, and it is not the type: the
+product is drawn small. The hero headline sits in a narrow column and the
+board beside it at 727px, and the two system screens below render their text
+at 7 to 8px, under any readable floor, where the best sites run their product
+UI across most of the screen at its real size.
+

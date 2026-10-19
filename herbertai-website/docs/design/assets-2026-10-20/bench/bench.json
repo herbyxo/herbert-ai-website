@@ -1,0 +1,178 @@
+{
+ "herbert": {
+  "h1": {
+   "size": 72,
+   "weight": "700",
+   "lh": 0.95,
+   "ls": "-3.24px",
+   "width": 409,
+   "text": "Less admin.More money.Built to run itself."
+  },
+  "h2_median": 51.84,
+  "h2_max": 66.24,
+  "body_median": 15,
+  "content_width": 727,
+  "page_height": 7521,
+  "font": "Geist"
+ },
+ "linear": {
+  "h1": {
+   "size": 64,
+   "weight": "510",
+   "lh": 1,
+   "ls": "-1.408px",
+   "width": 1282,
+   "text": "The product development system for teams and agentsThe product develop"
+  },
+  "h2_median": 48,
+  "h2_max": 72,
+  "body_median": 15,
+  "content_width": 1436,
+  "page_height": 9960,
+  "font": "\"Inter Variable\""
+ },
+ "stripe": {
+  "h1": {
+   "size": 48,
+   "weight": "300",
+   "lh": 1.15,
+   "ls": "-0.96px",
+   "width": 959,
+   "text": "Financial infrastructure to grow your revenue. Accept payments, offer "
+  },
+  "h2_median": 32,
+  "h2_max": 56,
+  "body_median": 18,
+  "content_width": 1266,
+  "page_height": 14584,
+  "font": "sohne-var"
+ },
+ "ramp": {
+  "h1": {
+   "size": 64,
+   "weight": "400",
+   "lh": 1,
+   "ls": "-0.01px",
+   "width": 1050,
+   "text": "Time is money. Save both."
+  },
+  "h2_median": 28,
+  "h2_max": 48,
+  "body_median": 14,
+  "content_width": 1312,
+  "page_height": 14552,
+  "font": "Lausanne"
+ },
+ "attio": {
+  "h1": {
+   "size": 64,
+   "weight": "600",
+   "lh": 0.95,
+   "ls": "-1.28px",
+   "width": 805,
+   "text": "Welcome to agentic revenue."
+  },
+  "h2_median": 40,
+  "h2_max": 56,
+  "body_median": 14,
+  "content_width": 1392,
+  "page_height": 17599,
+  "font": "inter"
+ },
+ "granola": {
+  "h1": {
+   "size": 86.4,
+   "weight": "400",
+   "lh": 0.93,
+   "ls": "-1.728px",
+   "width": 562,
+   "text": "The AI notepad for back-to-back meetings"
+  },
+  "h2_median": 88,
+  "h2_max": 160,
+  "body_median": 13,
+  "content_width": 1280,
+  "page_height": 14310,
+  "font": "melange"
+ },
+ "mercury": {
+  "h1": {
+   "size": 49.3472,
+   "weight": "480",
+   "lh": 1.1,
+   "ls": "normal",
+   "width": 672,
+   "text": "Radically different banking"
+  },
+  "h2_median": 28,
+  "h2_max": 42,
+  "body_median": 12,
+  "content_width": 1024,
+  "page_height": 12440,
+  "font": "arcadia"
+ },
+ "raycast": {
+  "h1": {
+   "size": 64,
+   "weight": "600",
+   "lh": 1.1,
+   "ls": "normal",
+   "width": 540,
+   "text": "Your shortcut to everything."
+  },
+  "h2_median": 20,
+  "h2_max": 32,
+  "body_median": 16,
+  "content_width": 1204,
+  "page_height": 15983,
+  "font": "Inter"
+ },
+ "lindy": {
+  "h1": {
+   "size": 72,
+   "weight": "700",
+   "lh": 1.05,
+   "ls": "-1.44px",
+   "width": 1184,
+   "text": "Hire Lindy, get it done."
+  },
+  "h2_median": 56,
+  "h2_max": 72,
+  "body_median": 16,
+  "content_width": 1184,
+  "page_height": 11726,
+  "font": "Manrope"
+ },
+ "sierra": {
+  "h1": {
+   "size": 65,
+   "weight": "400",
+   "lh": 1.11,
+   "ls": "-1.3px",
+   "width": 800,
+   "text": "Better outcomes.Built on Sierra."
+  },
+  "h2_median": 44,
+  "h2_max": 44,
+  "body_median": 16,
+  "content_width": 1160,
+  "page_height": 8616,
+  "font": "gtAmerica"
+ },
+ "vercel": {
+  "h1": {
+   "size": 64,
+   "weight": "400",
+   "lh": 1,
+   "ls": "-3.84px",
+   "width": 444,
+   "text": "Agentic Infrastructure"
+  },
+  "h2_median": 56,
+  "h2_max": 56,
+  "body_median": 24,
+  "content_width": 1392,
+  "page_height": 5930,
+  "font": "GeistSans"
+ }
+}
