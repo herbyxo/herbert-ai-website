@@ -3,7 +3,8 @@ import Hero from './components/Hero'
 import EmployeesSection from './components/runs/EmployeesSection'
 import OperatingSystemsSection from './components/runs/OperatingSystemsSection'
 import ProductsSection from './components/runs/ProductsSection'
-import { RUNGS, AuditButton } from './components/site/shared'
+import { RUNGS } from './components/site/shared'
+import AuditForm from './components/site/AuditForm'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
 // employee, your AI operating system). The three bucket chapters are retired from
@@ -108,32 +109,39 @@ function FounderNote() {
   )
 }
 
+// Book the Audit, rebuilt 20 Oct 2026 for the "Runs itself" charter: option 3,
+// the form right here (Will: "3"). The ink band; the heading and the audit's
+// three facts as numbered rows on the left (the same form as the Products
+// story), the booking form on the right, so someone who read the whole page
+// books without loading /pilot. The form is the shared AuditForm, the same one
+// /pilot#book uses. Options 1 and 2 are drawn in
+// docs/design/design-pass-site-2026-10-19-audit.png.
 function FinalCTA() {
+  const facts = RUNGS[0].facts.map((f) => `${f}.`)
   return (
-    <section className="bg-ink text-cream relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-40 md:py-52">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-          <div className="lg:col-span-7">
-            <h2
-              className="font-display text-cream"
-              style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
-            >
-              Got a job everyone
-              <br />
-              hates doing?
-            </h2>
-            <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[54ch]">
-              Forty five minutes, free, a written page back.
-            </p>
+    <section className="bg-[#111] text-white">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-28 grid lg:grid-cols-2 gap-x-16 gap-y-12 items-end">
+        <div className="min-w-0">
+          <p className="text-[15px] font-medium text-white/60 mb-4">Book the Audit</p>
+          <h2 className="font-bold tracking-[-0.04em] leading-[0.98] max-w-[14ch]" style={{ fontSize: 'clamp(40px, 4.6vw, 68px)' }}>
+            Got a job everyone hates doing?
+          </h2>
+          <ol className="mt-8 border-b border-white/15">
+            {facts.map((f, i) => (
+              <li key={f} className="flex items-baseline gap-4 py-3 border-t border-white/15">
+                <span aria-hidden className="w-5 shrink-0 font-mono text-[11px] tracking-[0.12em] text-white/40">{String(i + 1).padStart(2, '0')}</span>
+                <span className="text-[19px] font-semibold tracking-[-0.015em]">{f}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className="min-w-0">
+          <div className="rounded-2xl bg-[#FAFAF8] text-[#111] p-6 sm:p-7">
+            <AuditForm source="home" look="paper" message={false} />
           </div>
-          <div className="lg:col-span-5 flex flex-col gap-6 lg:items-end">
-            <AuditButton dark />
-            <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
-              Will Herbert &middot; Adelaide
-              <br />
-              hello@herbert-aisolutions.com
-            </div>
-          </div>
+          <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-white/40">
+            Will Herbert &middot; Adelaide &middot; hello@herbert-aisolutions.com
+          </p>
         </div>
       </div>
     </section>

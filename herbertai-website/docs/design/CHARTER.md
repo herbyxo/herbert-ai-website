@@ -216,7 +216,8 @@ steps as being AI audit, AI employee, and then AI Operating System").
    2026).
 6. Who Builds It: the founder, named, said flat in the third person under the
    label Founder, no photo (19 Oct 2026).
-7. Book the Audit: the button and the three audit facts.
+7. Book the Audit: the three audit facts and the booking form itself, the
+   shared AuditForm that /pilot#book also uses (20 Oct 2026).
 
 The research behind the order and the motion rule:
 `research-order-and-motion-2026-10-14.md`.

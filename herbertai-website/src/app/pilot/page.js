@@ -1,5 +1,5 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
-import SourceFields from '../components/SourceFields'
+import AuditForm from '../components/site/AuditForm'
 import { OG_IMAGE } from '@/app/components/site/og'
 
 export const metadata = {
@@ -221,54 +221,7 @@ export default function Pilot() {
 
           <RevealOnScroll>
             <div className="bg-cream border border-line rounded-3xl p-8 md:p-10">
-              <form action="https://api.web3forms.com/submit" method="POST" className="space-y-5">
-                <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
-                <input type="hidden" name="from_name" value="Herbert AI · AI audit" />
-                <input type="hidden" name="subject" value="New AI audit request · /pilot" />
-                <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/pilot/thanks" />
-                <input
-                  type="hidden"
-                  name="autoresponse_subject"
-                  value="Got it, let's book your AI audit"
-                />
-                <input
-                  type="hidden"
-                  name="autoresponse_message"
-                  value={`Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call today to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`}
-                />
-                <SourceFields service="AI audit" />
-                {/* Honeypot for spam */}
-                <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
-
-                <Field id="name" label="Your name" type="text" placeholder="Your name" required />
-                <Field id="business" label="Business name" type="text" placeholder="Your business" required />
-                <Field id="email" label="Email" type="email" placeholder="you@business.com" required />
-                <Field id="phone" label="Phone" type="tel" placeholder="0400 000 000" required />
-
-                <div>
-                  <label htmlFor="message" className="block font-mono text-[10px] uppercase tracking-[0.18em] text-muted mb-2">
-                    What&apos;s the job in your office everyone hates doing?
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted focus:border-ink transition-colors"
-                    placeholder="e.g. Chasing clients for documents, then copying the details into our system, then emailing everyone an update."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
-                >
-                  Book my free AI audit <span aria-hidden>&rarr;</span>
-                </button>
-                <p className="text-[12px] text-muted text-center">
-                  No obligation. Will calls you the same day.
-                </p>
-              </form>
+              <AuditForm source="/pilot" />
             </div>
           </RevealOnScroll>
         </div>
@@ -341,24 +294,6 @@ function Faq({ q, a }) {
     <div>
       <h3 className="text-[18px] font-semibold tracking-[-0.01em] text-ink mb-3">{q}</h3>
       <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{a}</p>
-    </div>
-  )
-}
-
-function Field({ id, label, type, placeholder, required }) {
-  return (
-    <div>
-      <label htmlFor={id} className="block font-mono text-[10px] uppercase tracking-[0.18em] text-muted mb-2">
-        {label}
-      </label>
-      <input
-        id={id}
-        name={id}
-        type={type}
-        required={required}
-        placeholder={placeholder}
-        className="w-full px-4 py-3 bg-cream border border-line rounded-2xl text-[15px] text-ink placeholder:text-muted focus:border-ink transition-colors"
-      />
     </div>
   )
 }
