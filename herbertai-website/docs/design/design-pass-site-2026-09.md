@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products details pass, detail 2 of 6 (the facts, round 4, the story); two sections to go |
+| 3. Sections | [~] | Products details pass, detail 3 of 6 (the visual); two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; detail 1 of 6 (the line) applied, detail 2 of 6 (the facts) on round 4, the story |
+| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; details 1 and 2 of 6 (the line, the facts) applied, detail 3 of 6 (the visual) next |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1713,4 +1713,18 @@ the same name, each row its own line with a mono step number. 1 Will’s story:
 jobs." 2 the same with "You approve." after "Writes ads.", the owner’s two
 steps a shade softer (recommended: the band otherwise carries no approval
 rule, and the site promises a person approves what goes out). 3 round 3’s
-one-liners for comparison. Awaiting Will’s pick.
+one-liners for comparison. Will (19 Oct 2026): "i think i like 1".
+
+## [x] Products details, 2 of 6: the facts are Will’s story (19 Oct 2026)
+
+Built: `STORY` in `components/runs/ProductsSection.js`, an ordered list of
+five rows, each a mono step number (hidden from screen readers, the list is an
+`ol`) and the step at 20px semibold white: "Type your name.", "Writes ads.",
+"Runs ads.", "Answers leads.", "Books jobs." The approval rule is no longer on
+the band (the phone version keeps "You approve every new ad"); Will chose the
+story without it. Verified at 1440, 1280, 375 and 320, motion on and off: no
+row wraps, no horizontal overflow, no console or page errors; the band is
+807px at 1440x900 and 740px at 1280x800, so the next section still shows.
+As built: `assets-2026-10-19/products-story-built-1440.png` and `-375.png`.
+Claim to clear in phase 6: "Type your name." is true once the researcher is
+built. Next: detail 3 of 6, the visual.

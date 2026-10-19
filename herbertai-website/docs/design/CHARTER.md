@@ -210,6 +210,10 @@ steps as being AI audit, AI employee, and then AI Operating System").
    early access while it runs Herbert AI’s own ads, never a paywall before it
    has numbers. The marketing dashboard on a laptop; on a phone, Herbert Reach
    as the owner runs it from their phone, by the same rule as Herbert OS.
+   Under the name, Will’s line, "Your whole marketing department at the
+   click of a button.", and the product as a story in five numbered steps:
+   Type your name, Writes ads, Runs ads, Answers leads, Books jobs (19 Oct
+   2026).
 6. Who Builds It: the founder, named.
 7. Book the Audit: the button and the three audit facts.
 

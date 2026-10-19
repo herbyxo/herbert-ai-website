@@ -14,15 +14,18 @@ import { PhoneScaled } from './os/mobile'
 // code/marketing-engine/docs/REACH-DEFINITION.md (17 Oct 2026); the name is
 // settled and always written in full (bare REACH is someone else's live
 // mark). Shown as early access, not a paywall, until Herbert AI's own ads
-// have numbers. The line is Will's (19 Oct 2026). On a laptop the
+// have numbers. The line is Will's (19 Oct 2026), and so are the facts: the
+// product as a story in five steps, name in, booked jobs out (Will, 19 Oct
+// 2026: "sort of telling a story of what the product does", then "i think i
+// like 1"). On a laptop the
 // marketing dashboard plays once in view; on a phone, Herbert Reach as the
-// owner would run it from their phone. Copy reuses the engine page's lines and
+// owner would run it from their phone. The dashboard reuses the engine page's lines and
 // claims no results.
 
 const W = 1184
 const H = 740
 const NAME = 'Herbert Reach'
-const FACTS = ['Google ads written, tested and paused against results', 'A landing page for every ad group', 'A daily audit that flags what is wasting money']
+const STORY = ['Type your name.', 'Writes ads.', 'Runs ads.', 'Answers leads.', 'Books jobs.']
 
 function Scaled({ children }) {
   const ref = useRef(null)
@@ -53,11 +56,14 @@ export default function ProductsSection() {
           <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-white/50">by Herbert AI</p>
           <h2 className="mt-2 font-bold tracking-[-0.04em] leading-[0.95]" style={{ fontSize: 'clamp(40px, 4.4vw, 64px)' }}>{NAME}</h2>
           <p className="mt-5 text-[17px] leading-[1.5] text-white/75 max-w-[40ch]">Your whole marketing department at the click of a button.</p>
-          <ul className="mt-6 border-b border-white/15">
-            {FACTS.map((f) => (
-              <li key={f} className="py-3 border-t border-white/15 text-[15px] text-white/80">{f}</li>
+          <ol className="mt-6 border-b border-white/15">
+            {STORY.map((f, i) => (
+              <li key={f} className="flex items-baseline gap-4 py-3 border-t border-white/15">
+                <span aria-hidden className="w-5 shrink-0 font-mono text-[11px] tracking-[0.12em] text-white/40">{String(i + 1).padStart(2, '0')}</span>
+                <span className="text-[20px] font-semibold tracking-[-0.015em] text-white">{f}</span>
+              </li>
             ))}
-          </ul>
+          </ol>
           <p className="mt-5 flex items-start gap-2.5 text-[13.5px] leading-[1.45] text-white/60">
             <span className="mt-[2px] shrink-0 rounded-full border border-white/30 px-2 py-[1px] font-mono text-[10px] uppercase tracking-[0.12em] text-white/80">Early access</span>
             <span>It runs Herbert AI’s own ads first, and opens up once it has the numbers to show for it.</span>
