@@ -1898,3 +1898,12 @@ and off: no overflow, no errors, the link to /about. Charter section 6 updated.
 Lesson for the Lines register: "deal with" reads as a chore even when the
 promise is good; check verbs for the feeling they carry, not only the fact.
 
+## [~] Who Builds It details, 2 and 3 of 3: the close and the phone (options 19 Oct 2026)
+
+One board, batched: `design-pass-site-2026-10-19-founder-close.png`. The close:
+today "More about Will" to /about (recommended: keep, it fits the Founder label
+and About holds the photo and the longer story); 2 "Book an audit with Will",
+which asks twice in a row with the audit section next; 3 no link. The phone
+layout as built at 375 and 320: one column, the line at 26px, nothing cut off,
+no overflow (recommended: keep). Awaiting Will’s word on both.
+
