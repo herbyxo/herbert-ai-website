@@ -28,7 +28,7 @@ done. Updated in the same commit as the work.
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
 | 4. Whole page | [~] | 20 Oct: Founder at the bottom, the two lines dropped, motion kept, the footer onto the charter; awaiting Will’s sign-off |
 | 5. Phones | [~] | AI Employees, Operating Systems, Products, Who Builds It and Book the Audit signed off as phone designs (to 20 Oct); Hero and How It Works unchecked |
-| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct) |
+| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct); "One builder" still in /about’s meta description and llms.txt |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
 | 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
 
@@ -2076,4 +2076,8 @@ the way the header does, until phase 7. Verified on the homepage at 1440, 1280,
 errors. As built: `assets-2026-10-20/home-end-fixed-1440.png`. Open: the footer’s
 sentence still says "One builder", the kind of line Will took out of the
 founder note; Will’s sign-off on the whole page closes phase 4.
+Will (20 Oct 2026): "fix the footer line". The footer reads "Custom software
+and AI for small businesses, built in Adelaide. You own what gets built."
+For phase 6, words and claims: "One builder" is still in the /about page’s
+meta description and in public/llms.txt.
 
