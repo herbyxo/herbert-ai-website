@@ -1984,3 +1984,13 @@ motion on and off: no overflow, no errors; the section is 569px at 1440. As
 built: `assets-2026-10-19/audit-built-1440.png` and `-375.png`. Next: details
 3 and 4, the form’s words and the phone layout.
 
+## [~] Book the Audit details, 3 and 4 of 4: the form’s words and the phone (options 20 Oct 2026)
+
+One board, batched: `design-pass-site-2026-10-20-audit-form.png`. The button
+and small print: today "Book my free audit" and "Free. You get a call to set a
+time."; 1 "Book a free AI audit", the hero’s words, so the one action reads the
+same at the top and bottom of the page (recommended); 2 "Book my audit" with
+"Free. You get a call the same day."; 3 today’s button with "Free and no
+obligation. You get a call the same day." The phone layout as built at 375 and
+320: nothing cut off, no overflow (recommended: keep). Awaiting Will’s word.
+
