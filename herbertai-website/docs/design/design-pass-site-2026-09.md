@@ -1869,4 +1869,17 @@ only the line changed, the name on its own line. Today the 24-word line. 1
 three-verb story shape Will picked for Products, ending on accountability) 2
 "I’m Will Herbert. You talk to the person who builds it." 3 "I’m Will Herbert.
 The one who builds it is the one you call." Awaiting Will’s pick.
+Will (19 Oct 2026): "i feel like the who builds it is a bit cheesey? idk".
+Assessed: the label is plain, the cheese is the first-person pitch in a page
+where Herbert AI speaks in the third person, made worse by the slogan devices
+in the three options. Offered 1 keep the fact and drop the pitch, or 2 cut the
+section from home. Will: "1".
+
+## [~] Who Builds It details, 1 of 3, round 2: said flat (options 19 Oct 2026)
+
+Board: `design-pass-site-2026-10-19-founder-flat.png`. The label becomes
+"Founder" and the line a plain third-person fact: "Herbert AI is Will Herbert,
+in Adelaide. He builds every system, and you deal with him from the audit to
+the day it goes live." Today; 1 at today’s size (recommended); 2 quieter, at
+body size in grey. Awaiting Will’s pick.
 

@@ -1,0 +1,35 @@
+{
+ "intro": "Who Builds It, detail 1 of 3, round 2. The label becomes Founder and the line a plain fact in the third person, the way Herbert AI speaks everywhere else on the page. The link stays.",
+ "lists": [
+  {
+   "key": "today",
+   "name": "Today",
+   "kind": null,
+   "rows": [
+    "I’m Will Herbert. I build every system myself, in Adelaide, and you deal with me from the audit to the day it goes live.",
+    null
+   ],
+   "note": "First person under “Who Builds It”: reads like a sales intro."
+  },
+  {
+   "key": "1",
+   "name": "1. Said flat, at today’s size",
+   "kind": null,
+   "rows": [
+    "Herbert AI is Will Herbert, in Adelaide. He builds every system, and you deal with him from the audit to the day it goes live.",
+    "Founder"
+   ],
+   "note": "The same fact, third person, the label Founder. Large, so it still carries the section on its own. Recommended."
+  },
+  {
+   "key": "2",
+   "name": "2. Said flat, quieter",
+   "kind": "quiet",
+   "rows": [
+    "Herbert AI is Will Herbert, in Adelaide. He builds every system, and you deal with him from the audit to the day it goes live.",
+    "Founder"
+   ],
+   "note": "The same words at body size in grey, like a note at the foot of a page. Calmest; the section reads as a credit more than a statement."
+  }
+ ]
+}
