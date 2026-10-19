@@ -1695,7 +1695,7 @@ that don’t pay.", "Asks before it spends a cent more.", each with one plain
 sentence under it. 3 Two beats, the shape of Will's own picks: "Type your
 name. Meet your marketing team.", "Busy? It’s already called them back.", "Bad
 ads benched. Good ones fed.", "Every dollar spent, next to every job
-booked.", "New ads, more spend? It asks first." Claims to clear in phase 6:
+booked.", "New ads wait for your yes. So does more spend." (a question row swapped out after the memorability studies leaned against questions as rows; "Busy?" stays, flagged, to test Will’s taste against them). Claims to clear in phase 6:
 the start rows are true once the researcher is built (third in the build
 order), and the optimiser benches on cost per enquiry until booked-job
 feedback is built. Awaiting Will’s marks and pick.

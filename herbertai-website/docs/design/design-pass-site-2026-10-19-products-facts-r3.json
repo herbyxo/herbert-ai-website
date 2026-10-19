@@ -1,5 +1,5 @@
 {
- "intro": "Detail 2 of 6, round 3. Written by the catchy-copy method: about 35 lines drafted, the ones below scored, the best drawn as three lists on the band. Your line stays. Every list keeps the approval rule, names no ad platform (Meta is still waiting on app review) and promises no results.",
+ "intro": "Detail 2 of 6, round 3. Written by the catchy-copy method: about 35 lines drafted, 31 survived the gates, the ones below scored, the best drawn as three lists on the band. Your line stays. Every list keeps the approval rule, names no ad platform (Meta is still waiting on app review) and promises no results.",
  "lists": [
   {
    "key": "a",
@@ -35,14 +35,14 @@
     "Busy? It’s already called them back.",
     "Bad ads benched. Good ones fed.",
     "Every dollar spent, next to every job booked.",
-    "New ads, more spend? It asks first."
+    "New ads wait for your yes. So does more spend."
    ],
    "note": "Every row in two halves, the shape of the lines you picked: “They do the job. Your team says yes.” and “Less admin. More money.” Most rhythm, least proof."
   }
  ],
  "test": {
   "intro": "Every candidate that passed the gates (true today or flagged, no promised result, no ad platform named), scored and sorted. Mark the numbers that grab you, and the ones that do not; each pick teaches the next round more than another three options would.",
-  "key": "Scale: 0 to 5, one point each, half for partly. Picture, Prove and Only us are Harry Dry’s three questions (can I picture it, could it be proved wrong, could nobody else say it), which Hopkins, Ogilvy and Julian Shapiro back. Device: one structural move (a pair, a three, a twisted phrase, a mirror, a kicker), from the swipe file, where praised lines stack two moves and flat feature rows carry one or none. Your shape: short, one claim, no qualifier tail, from the lines you picked in the ledger over my recommendations.",
+  "key": "Scale: 0 to 5, one point each, half for partly. Picture, Prove and Only us are Harry Dry’s three questions (can I picture it, could it be proved wrong, could nobody else say it), which Hopkins, Ogilvy and Julian Shapiro back. Device: one structural move (a pair, a three, a twisted phrase, a mirror, a kicker), from the swipe file, where praised lines stack two moves and flat feature rows carry one or none. Your shape: short, one claim, no qualifier tail, from the lines you picked in the ledger over my recommendations. Gates from the memorability studies too: a word you can picture, the first two words carry the row, no hype words, and the line still reads plainly if the pun is missed.",
   "cols": [
    "Picture",
    "Prove",
@@ -115,7 +115,7 @@
      1,
      1
     ],
-    "why": "The owner’s moment, then the kicker. The call goes out inside a minute."
+    "why": "The owner’s moment, then the kicker. The call goes out inside a minute. A question as a row: the studies lean against it, so it is here to see whether your taste disagrees."
    },
    {
     "line": "Like an agency, minus the monthly meeting.",
@@ -215,6 +215,17 @@
      0.5
     ],
     "why": "A three with numbers; a summary row, long for one line."
+   },
+   {
+    "line": "New ads wait for your yes. So does more spend.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "The approval rule as a fact and a two-word kicker, the Apple shape. No question."
    },
    {
     "line": "Writes ads. Runs ads. Answers leads. Books jobs.",
