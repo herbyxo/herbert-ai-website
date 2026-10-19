@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products done 19 Oct 2026; Who Builds It and Book the Audit to go |
+| 3. Sections | [~] | Who Builds It built 19 Oct, details pass under way; Book the Audit to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs (Products signed off 19 Oct); the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -41,7 +41,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
-| 6. Who Builds It | [x] | [~] | [ ] | [ ] | [ ] | Facts: photo on About only by the charter, none on file; three options drawn 19 Oct |
+| 6. Who Builds It | [x] | [x] | [x] | [x] | [~] | Built 19 Oct: the note set plain, no photo; details 1 of 3 (the words) next |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
@@ -1844,4 +1844,17 @@ slot beside the line, the 16 Sep decision, needing a real photo. 3 A signed
 note: a heading (“One person builds it.”), the line as a paragraph with one more
 sentence, and a sign-off (name, Founder, Adelaide, the email). Awaiting Will’s
 pick.
+Will (19 Oct 2026): "1".
+
+## [x] Who Builds It built: the note, set plain (19 Oct 2026)
+
+`FounderNote` in `src/app/page.js` rebuilt for the charter: the paper ground,
+the label "Who Builds It", Will’s first-person line at clamp(26px, 3vw, 42px)
+semibold, and "More about Will" to /about. No photo (the charter keeps it to
+About), so `FOUNDER_PHOTO` and the "W" tile are gone, with the now unused
+RevealOnScroll and Eyebrow imports. No motion. Verified at 1440, 1280, 375 and
+320, motion on and off: no overflow, no errors; the section is 441px at
+1440x900 and 428px at 1280x800, so the closing section shows under it. As
+built: `assets-2026-10-19/founder-built-1440.png` and `-375.png`. Details:
+1 the words, 2 the close, 3 the phone layout.
 
