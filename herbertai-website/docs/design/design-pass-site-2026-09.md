@@ -26,7 +26,7 @@ done. Updated in the same commit as the work.
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
-| 4. Whole page | [~] | Findings 20 Oct: spacing holds; the Founder strip between two dark bands; one repeated line; three moving sections in a row; the footer still May |
+| 4. Whole page | [~] | 20 Oct: Founder moved to the bottom; open: the contact line beside the founder note, the repeated line, the motion run, the May footer |
 | 5. Phones | [~] | AI Employees, Operating Systems, Products, Who Builds It and Book the Audit signed off as phone designs (to 20 Oct); Hero and How It Works unchecked |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct) |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
@@ -2046,4 +2046,18 @@ Finding 2 drawn: `design-pass-site-2026-10-20-page-order.png`, the whole page
 at 1440 three ways: today; 1 Founder moved up between Operating Systems and
 Products, light then dark (recommended); 2 Founder turned ink, three dark bands
 to the end. Awaiting Will’s word on findings 2 to 5.
+Will (20 Oct 2026): "i think we have founder at the bottom".
+
+## [x] Phase 4, finding 2: the founder note at the bottom (20 Oct 2026)
+
+Built: the homepage order is Hero, How It Works, AI Employees, Operating
+Systems, Products, Book the Audit, Founder. Products and Book the Audit run
+dark together with a hairline between them (`border-white/10` on the booking
+section), and the founder note closes the page above the footer. Verified at
+1440, 1280, 375 and 320, motion on and off: no overflow, no errors. Charter’s
+section list renumbered. As built: `assets-2026-10-20/home-end-1440.png` and
+`home-whole-1440.png`. New, from the move: the contact line under the form
+("Will Herbert · Adelaide · email") now sits straight above the founder note,
+which says the same. Findings 3, 4 and 5 (the repeated line, the motion run,
+the May footer) still open.
 

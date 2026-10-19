@@ -19,8 +19,8 @@ export default function Home() {
       <EmployeesSection />
       <OperatingSystemsSection />
       <ProductsSection />
-      <FounderNote />
       <FinalCTA />
+      <FounderNote />
     </>
   )
 }
@@ -80,6 +80,9 @@ function HowItWorks() {
 // Operating Systems: components/runs/OperatingSystemsSection.js (15 Oct 2026).
 // The Work is folded into it; WorkSection.js stays for the /work page.
 
+// The founder note is the last section, under the booking form (Will, 20 Oct
+// 2026, phase 4: "i think we have founder at the bottom"), so Products and Book
+// the Audit run dark together, split by a hairline.
 // Who Builds It, rebuilt 19 Oct 2026 for the "Runs itself" charter: option 1,
 // the note set plain (Will: "1"). Will's first-person line large on the paper
 // ground, the label and a link to About; no photo, since the charter keeps the
@@ -118,7 +121,7 @@ function FounderNote() {
 // docs/design/design-pass-site-2026-10-19-audit.png.
 function FinalCTA() {
   return (
-    <section className="bg-[#111] text-white">
+    <section className="bg-[#111] text-white border-t border-white/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-28 grid lg:grid-cols-2 gap-x-16 gap-y-12 items-end">
         <div className="min-w-0">
           <p className="text-[15px] font-medium text-white/60 mb-4">Book the Audit</p>

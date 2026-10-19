@@ -214,10 +214,11 @@ steps as being AI audit, AI employee, and then AI Operating System").
    click of a button.", and the product as a story in five numbered steps:
    Type your name, Writes ads, Runs ads, Answers leads, Books jobs (19 Oct
    2026).
-6. Who Builds It: the founder, named, said flat in the third person under the
-   label Founder, no photo (19 Oct 2026).
-7. Book the Audit: the three audit facts and the booking form itself, the
-   shared AuditForm that /pilot#book also uses (20 Oct 2026).
+6. Book the Audit: one line and the booking form itself, the shared AuditForm
+   that /pilot#book also uses (20 Oct 2026).
+7. Who Builds It: the founder, named, said flat in the third person under the
+   label Founder, no photo (19 Oct 2026); the last section, under the booking
+   form (20 Oct 2026, phase 4).
 
 The research behind the order and the motion rule:
 `research-order-and-motion-2026-10-14.md`.
