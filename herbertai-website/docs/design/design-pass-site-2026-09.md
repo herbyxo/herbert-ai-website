@@ -25,8 +25,8 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Book the Audit built 20 Oct, details pass under way; then phase 3 is done |
-| 4. Whole page | [ ] | |
+| 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
+| 4. Whole page | [ ] | Next: rhythm, spacing, transitions, repeated words, motion level |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs (Products signed off 19 Oct); the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
@@ -42,7 +42,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
 | 6. Who Builds It | [x] | [x] | [x] | [x] | [x] | Three details, 19 Oct 2026: said flat under Founder, no photo; the link to About and the phone layout kept |
-| 7. Book the Audit | [x] | [x] | [x] | [x] | [~] | Built 20 Oct: the form on the homepage, shared with /pilot; details 1 and 2 of 4 applied (Will’s heading, one line in place of the facts), 3 and 4 (the form’s words, the phone) next |
+| 7. Book the Audit | [x] | [x] | [x] | [x] | [x] | Four details, 20 Oct 2026: Will’s heading, one line for the facts, the hero’s button words and no small print, the phone kept |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
 
@@ -1993,4 +1993,16 @@ same at the top and bottom of the page (recommended); 2 "Book my audit" with
 "Free. You get a call the same day."; 3 today’s button with "Free and no
 obligation. You get a call the same day." The phone layout as built at 375 and
 320: nothing cut off, no overflow (recommended: keep). Awaiting Will’s word.
+Will (20 Oct 2026): "1, remove the 'free, you get a call to set a time'".
+
+## [x] Book the Audit details, 3 and 4 of 4 (20 Oct 2026)
+
+Built: the homepage form’s button reads "Book a free AI audit", the hero’s
+words, and carries no small print (`AuditForm` look "paper"; /pilot keeps its
+own button and note, checked). The phone layout kept as built. Verified at
+1440, 1280, 375 and 320, motion on and off: no overflow, no errors; the
+section is 535px at 1440. Book the Audit is done, and with it phase 3: all
+seven homepage sections have been picked, built and through their details
+pass. Next: phase 4, the whole page (rhythm, spacing, transitions, repeated
+words, motion level).
 

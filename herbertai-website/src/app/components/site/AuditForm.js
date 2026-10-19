@@ -10,6 +10,8 @@ import SourceFields from '../SourceFields'
 // page has its own design pass; look="paper" is the "Runs itself" charter card
 // on the homepage. `message` adds the required "job everyone hates doing" box
 // (/pilot asks it; the homepage keeps to four fields).
+// The homepage button uses the hero's words and carries no small print (Will,
+// 20 Oct 2026: "1, remove the 'free, you get a call to set a time'").
 
 const AUTO_REPLY = `Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call today to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`
 
@@ -31,8 +33,8 @@ const LOOKS = {
     input: 'w-full px-3.5 py-3 bg-white border border-[#111]/15 rounded-[10px] text-[15px] text-[#111] placeholder:text-[#999] focus:border-[#111] focus:outline-none transition-colors',
     button: 'mt-5 inline-flex items-center gap-2 bg-[#111] text-white rounded-[10px] px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors',
     note: 'mt-3.5 text-[13px] text-[#777]',
-    cta: 'Book my free audit',
-    small: 'Free. You get a call to set a time.',
+    cta: 'Book a free AI audit',
+    small: null,
   },
 }
 
@@ -85,7 +87,7 @@ export default function AuditForm({ source = '/pilot', look = 'pilot', message =
       <button type="submit" className={L.button}>
         {L.cta} <span aria-hidden>&rarr;</span>
       </button>
-      <p className={L.note}>{L.small}</p>
+      {L.small && <p className={L.note}>{L.small}</p>}
     </form>
   )
 }
