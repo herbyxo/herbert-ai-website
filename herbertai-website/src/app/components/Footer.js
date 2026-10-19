@@ -9,6 +9,10 @@ const ownerUrl = process.env.NEXT_PUBLIC_OWNER_CONSOLE_URL
 // stay live for search but not in the nav (Also): the receptionist, web design
 // and Google Ads pages sit on demand that exists and keep their ranking equity
 // out of the spine. Decided 16 Sep 2026, docs/restructure-2026-09/PROJECT.md.
+// Phase 4 of the site design pass (20 Oct 2026, Will: "fix footer"): the
+// header's mark and Geist name in place of the display-font wordmark and its
+// glowing dot, and the ground follows the header (paper on the homepage, cream
+// on pages still in the May register until phase 7 redoes them).
 const NAV_COLS = [
   {
     label: 'Work',
@@ -46,23 +50,19 @@ export default function Footer() {
   if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/') || pathname?.startsWith('/demo/') || pathname?.startsWith('/lab')) return null
 
   return (
-    <footer className="bg-cream border-t border-line">
+    <footer className={pathname === '/' ? 'bg-[#FAFAF8] border-t border-[#111]/10' : 'bg-cream border-t border-line'}>
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-10">
 
         <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 lg:gap-12">
           {/* Identity */}
           <div className="max-w-[36ch]">
-            <Link href="/" aria-label="Herbert AI, home" className="inline-flex items-baseline gap-2 group mb-6">
-              <span
-                className="font-display text-ink leading-[0.9] tracking-[-0.03em] font-bold"
-                style={{ fontSize: '32px' }}
-              >
-                Herbert AI
-              </span>
-              <span
-                className="rounded-full bg-green shrink-0"
-                style={{ width: '0.4em', height: '0.4em', boxShadow: '0 0 16px var(--green-glow)' }}
-              />
+            <Link href="/" aria-label="Herbert AI, home" className="inline-flex items-center gap-2.5 mb-5">
+              <svg aria-hidden viewBox="0 0 32 32" className="w-6 h-6 shrink-0">
+                <rect width="32" height="32" rx="7" fill="#0A0A0A" />
+                <text x="50%" y="24" fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" fontWeight="700" fontSize="22" letterSpacing="-1" fill="#F5F0E5" textAnchor="middle">h</text>
+                <circle cx="24.5" cy="8.5" r="2.4" fill="#00FF88" />
+              </svg>
+              <span className="text-[17px] font-semibold tracking-[-0.02em] text-ink">Herbert AI</span>
             </Link>
             <p className="text-muted text-[14px] leading-[1.6] max-w-md">
               Custom software and AI for small businesses, built in Adelaide.

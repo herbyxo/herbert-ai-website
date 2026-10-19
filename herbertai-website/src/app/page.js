@@ -115,7 +115,10 @@ function FounderNote() {
 // Book the Audit, rebuilt 20 Oct 2026 for the "Runs itself" charter: option 3,
 // the form right here (Will: "3"). The ink band; the heading and one line on
 // the left (detail 2, Will: "3", no list, since How It Works already gives
-// the audit's facts; the heading is Will's own, 20 Oct 2026), the booking form on the right, so someone who read the
+// the audit's facts; the heading is Will's own, 20 Oct 2026). Phase 4 (20 Oct
+// 2026, Will: "drop the line, remove the 45 minutes line"): no line under the
+// heading (the hero carries it) and no contact line under the form (the
+// founder note follows and the footer has the email), the booking form on the right, so someone who read the
 // whole page books without loading /pilot. The form is the shared AuditForm, the same one
 // /pilot#book uses. Options 1 and 2 are drawn in
 // docs/design/design-pass-site-2026-10-19-audit.png.
@@ -128,15 +131,11 @@ function FinalCTA() {
           <h2 className="font-bold tracking-[-0.04em] leading-[0.98] max-w-[14ch]" style={{ fontSize: 'clamp(40px, 4.6vw, 68px)' }}>
             Got a job eating your time and money?
           </h2>
-          <p className="mt-6 text-[19px] leading-[1.45] text-white/70">45 minutes, a written page back.</p>
         </div>
         <div className="min-w-0">
           <div className="rounded-2xl bg-[#FAFAF8] text-[#111] p-6 sm:p-7">
             <AuditForm source="home" look="paper" message={false} />
           </div>
-          <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-white/40">
-            Will Herbert &middot; Adelaide &middot; hello@herbert-aisolutions.com
-          </p>
         </div>
       </div>
     </section>

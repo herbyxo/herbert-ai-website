@@ -26,7 +26,7 @@ done. Updated in the same commit as the work.
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
-| 4. Whole page | [~] | 20 Oct: Founder moved to the bottom; open: the contact line beside the founder note, the repeated line, the motion run, the May footer |
+| 4. Whole page | [~] | 20 Oct: Founder at the bottom, the two lines dropped, motion kept, the footer onto the charter; awaiting Will’s sign-off |
 | 5. Phones | [~] | AI Employees, Operating Systems, Products, Who Builds It and Book the Audit signed off as phone designs (to 20 Oct); Hero and How It Works unchecked |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct) |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
@@ -2060,4 +2060,20 @@ section list renumbered. As built: `assets-2026-10-20/home-end-1440.png` and
 ("Will Herbert · Adelaide · email") now sits straight above the founder note,
 which says the same. Findings 3, 4 and 5 (the repeated line, the motion run,
 the May footer) still open.
+Will (20 Oct 2026): "drop the line, remove the 45 minutes line, keep, fix
+footer".
+
+## [~] Phase 4, findings applied (20 Oct 2026)
+
+Built: the contact line under the form is gone (the founder note follows and
+the footer has the email); the "45 minutes, a written page back." line under
+the booking heading is gone (the hero keeps its own, set on 10 Oct); the motion
+run is kept; the footer (`components/Footer.js`) takes the header’s mark and
+Geist name in place of the display-font wordmark and its glowing dot, on the
+paper ground on the homepage and cream on pages still in the May register,
+the way the header does, until phase 7. Verified on the homepage at 1440, 1280,
+375 and 320, motion on and off, and on /pilot and /about: no overflow, no
+errors. As built: `assets-2026-10-20/home-end-fixed-1440.png`. Open: the footer’s
+sentence still says "One builder", the kind of line Will took out of the
+founder note; Will’s sign-off on the whole page closes phase 4.
 
