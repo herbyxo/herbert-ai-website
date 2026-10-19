@@ -1946,3 +1946,14 @@ Charter section 7 updated. As built: `assets-2026-10-19/audit-built-1440.png`
 and `-375.png`. Details: 1 the heading, 2 the facts, 3 the form’s words, 4 the
 phone layout.
 
+## [~] Book the Audit details, 1 of 4: the heading (options 20 Oct 2026)
+
+By the Lines register. Line test: `design-pass-site-2026-10-20-audit-heading-test.png`,
+14 lines that passed the gates (true of the audit as /pilot describes it, no
+result promised, a question allowed as a single close). Options:
+`design-pass-site-2026-10-20-audit-heading.png`, only the h2 changed. Today
+"Got a job everyone hates doing?" 1 "Your worst jobs, on one page." (recommended:
+the written page with the three costliest jobs, made physical) 2 "Book the
+audit. Keep the page." 3 "Which job would you hand over first?" Awaiting
+Will’s pick.
+

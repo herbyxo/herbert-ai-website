@@ -1,0 +1,208 @@
+{
+ "intro": "Book the Audit, detail 1 of 4. Only the heading changes. 14 lines that passed the gates (true of the audit as /pilot describes it, no result promised; a question allowed as a single close), scored on the second sheet, the best three beside today.",
+ "lists": [
+  {
+   "key": "today",
+   "name": "Today",
+   "kind": null,
+   "rows": [
+    "Got a job everyone hates doing?"
+   ],
+   "note": "The owner’s words, a question that makes them think of one job. Says nothing about what they get."
+  },
+  {
+   "key": "1",
+   "name": "1. The page",
+   "kind": null,
+   "rows": [
+    "Your worst jobs, on one page."
+   ],
+   "note": "What they walk away with, made physical: the written page with the three jobs costing them most. Recommended."
+  },
+  {
+   "key": "2",
+   "name": "2. Book it, keep it",
+   "kind": null,
+   "rows": [
+    "Book the audit. Keep the page."
+   ],
+   "note": "Two beats; the second is the reassurance that the page is theirs either way."
+  },
+  {
+   "key": "3",
+   "name": "3. The hand-over",
+   "kind": null,
+   "rows": [
+    "Which job would you hand over first?"
+   ],
+   "note": "The audit’s own question, so the owner names a job before booking."
+  }
+ ],
+ "test": {
+  "intro": "Every line that passed the gates, scored and sorted. Mark the numbers that grab you and any that put you off.",
+  "key": "Scale: 0 to 5, one point each, half for partly. Picture, Prove and Only us are Harry Dry’s three questions; Device is one structural move; Your shape is short, one claim, no tail, from your picks (writing-style references/lines.md).",
+  "cols": [
+   "Picture",
+   "Prove",
+   "Only us",
+   "Device",
+   "Your shape"
+  ],
+  "rows": [
+   {
+    "line": "Your worst jobs, on one page.",
+    "scores": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "What the owner walks away with, made physical: the written page with the three jobs costing them most. True, and only an audit like this one gives it."
+   },
+   {
+    "line": "Book the audit. Keep the page.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "Two beats, the second the reassurance (the page is yours either way)."
+   },
+   {
+    "line": "Your worst job has a price. Find it.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "why": "Surprise then a command; a beat long."
+   },
+   {
+    "line": "Which job would you hand over first?",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     0.5,
+     1
+    ],
+    "why": "A question that is the audit’s own question; makes the owner name one."
+   },
+   {
+    "line": "Got a job everyone hates doing?",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Today. The owner’s words and a question that makes them think of one; says nothing about what they get."
+   },
+   {
+    "line": "Forty five minutes. One page. Your worst jobs, priced.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     0
+    ],
+    "why": "A three with the facts in it; repeats the list under it."
+   },
+   {
+    "line": "The job everyone hates, priced in your figures.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     0.5
+    ],
+    "why": "The audit’s result in the owner’s money; long."
+   },
+   {
+    "line": "Hand over the job everyone hates.",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "An order; jumps to the pilot before the audit."
+   },
+   {
+    "line": "Free to find out. Yours to keep.",
+    "scores": [
+     0,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Two beats about the terms; nothing to picture."
+   },
+   {
+    "line": "One job. Forty five minutes. A page back.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     1,
+     0.5
+    ],
+    "why": "A three; “one job” undersells the three jobs the page names."
+   },
+   {
+    "line": "What’s eating your week?",
+    "scores": [
+     1,
+     0,
+     0,
+     1,
+     1
+    ],
+    "why": "A picture (eating) and a question; any consultant could ask it."
+   },
+   {
+    "line": "Which job is costing you most?",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    "why": "Plain question; less of a picture than the hand-over one."
+   },
+   {
+    "line": "Start with the job that costs you most.",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     0,
+     1
+    ],
+    "why": "How It Works’s heading, so the page repeats itself."
+   },
+   {
+    "line": "Less admin starts here.",
+    "scores": [
+     0,
+     0,
+     0,
+     0.5,
+     1
+    ],
+    "why": "Echoes the hero; “starts here” is a stock phrase."
+   }
+  ]
+ }
+}
