@@ -1807,4 +1807,22 @@ errors; the band is 754px at 1440x900 and 687px at 1280x800. Charter section
 5 updated (the name settled, sold as the full product, In development, no link
 out until it opens). The band has no way out now; the page’s one action stays
 the audit. Next: detail 6 of 6, the phone layout.
+Will (19 Oct 2026): "keep".
+
+## [~] Products details, 6 of 6: the phone layout (options 19 Oct 2026)
+
+The phone version of Herbert Reach (`components/runs/ReachMobile.js`) was the
+ads-only one (cost per enquiry, a Meta campaign card, a daily audit feed). It
+is rebuilt as the full product to match `ReachDashboard`: spend across every
+channel, jobs booked, cost per job; the Creative’s new ad and landing page
+waiting on the owner, then approved; a hot water enquiry called back in 48
+seconds and booked landing at the top, over the Analyst, Social and Reviews.
+Committed with the board because options 1 and 3 both use it and the old
+content was wrong for the full product. Board:
+`design-pass-site-2026-10-19-products-phone.png`, the whole band at 375. Today
+(captured before the rebuild). 1 the story then the rebuilt phone version
+(recommended). 2 no phone version, the story alone (712px against 1385px). 3 the
+phone version straight under the line, the story after it. All three checked at
+375 and 320: nothing clipped inside the phone, no overflow, no errors. Awaiting
+Will’s pick.
 

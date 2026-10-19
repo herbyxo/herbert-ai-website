@@ -5,20 +5,21 @@ import { useSteps } from './steps'
 import { Dot } from './os/shared'
 import { PhoneFrame } from './os/mobile'
 
-// Herbert Reach on the owner's phone (17 Oct 2026), the phone version shown in
-// the Products band on phones in place of the marketing dashboard, by the same
-// rule as Herbert OS: never a laptop screen shrunk to fit. The same example
-// plumbing business as the dashboard: the month's numbers, the one campaign
-// waiting on the owner, and what the engine did. Plays once: the Meta draft
-// waits, is approved and goes live, and an enquiry lands at the top.
+// Herbert Reach on the owner's phone, shown in the Products band on phones in
+// place of the laptop dashboard, by the same rule as Herbert OS: never a laptop
+// screen shrunk to fit. The full product, matching ReachDashboard (19 Oct
+// 2026: the band sells Herbert Reach as defined): the month across every
+// channel judged by cost per job, the one new ad waiting on the owner, and
+// what the AI employees did. Plays once: the ad waits, is approved and goes
+// live, and a booked enquiry lands at the top.
 
 const FEED = [
-  ['Daily audit', 'Gas fitting paused: $76 an enquiry'],
-  ['Google ads', 'New headline written to test against the winner'],
-  ['Landing pages', 'Page built for the blocked drains ad group'],
-  ['Google ads', 'Hot water ad paused: lowest result in its group'],
+  ['Analyst', 'Moved $10 a day to Meta, where a job costs $91'],
+  ['Social', 'Before and after post goes out at 6pm'],
+  ['Reviews', 'Review request sent after yesterday’s job'],
+  ['Researcher', 'New competitor ad nearby: $99 hot water'],
 ]
-const AFTER = ['Leads', 'Enquiry from the hot water ad, logged with its source']
+const AFTER = ['Leads', 'Hot water enquiry called back in 48 seconds, booked Thu 8:30am']
 
 export default function ReachMobile({ play = false }) {
   const run = useSteps(play, 3, 900)
@@ -34,7 +35,7 @@ export default function ReachMobile({ play = false }) {
         <p className="text-[12.5px] text-[#777]">The last 30 days, and what ran overnight.</p>
       </div>
       <div className="px-5 mt-4 grid grid-cols-3 gap-2">
-        {[['$1,842', 'ad spend, of $2,000'], ['46', 'enquiries'], ['$40', 'per enquiry, was $51']].map(([v, k]) => (
+        {[['$1,730', 'spent, every channel'], ['23', 'jobs booked'], ['$75', 'per job, was $112']].map(([v, k]) => (
           <div key={k} className="rounded-xl border border-[#111]/10 bg-white px-2.5 py-2">
             <p className="text-[17px] font-semibold tracking-[-0.02em] tabular-nums leading-none">{v}</p>
             <p className="mt-1 text-[10px] text-[#777] leading-tight">{k}</p>
@@ -46,10 +47,10 @@ export default function ReachMobile({ play = false }) {
         <motion.div animate={approved ? { borderColor: STATE.done } : waiting ? { borderColor: STATE.waiting } : {}} className="rounded-2xl border border-[#111]/10 bg-white p-3.5">
           <div className="flex items-center gap-2.5">
             <Dot c={approved ? STATE.done : waiting ? STATE.waiting : '#111'} size={8} />
-            <p className="text-[12.5px]"><b>Meta</b> <span className="text-[#777]">· new campaign</span></p>
-            <span className="ml-auto text-[10.5px] text-[#999]">6:20am</span>
+            <p className="text-[12.5px]"><b>Creative</b> <span className="text-[#777]">· new ad</span></p>
+            <span className="ml-auto text-[10.5px] text-[#999]">6:05am</span>
           </div>
-          <p className="mt-2 text-[13px] leading-[1.4] text-[#333]">Winter heating campaign drafted at $15 a day, with three ads and a landing page. It goes live when you say yes.</p>
+          <p className="mt-2 text-[13px] leading-[1.4] text-[#333]">Winter heating ad and its landing page, drafted at $15 a day. It goes live when you say yes.</p>
           <motion.div animate={approved && play ? { scale: [1, 0.96, 1] } : {}} className={`mt-3 rounded-xl text-center text-[13px] font-medium py-2.5 ${approved ? 'bg-[#E8F7EE] text-[#0E8F53]' : 'bg-[#111] text-white'}`}>
             {approved ? 'Approved · now live' : 'Approve'}
           </motion.div>
