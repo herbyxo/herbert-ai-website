@@ -1,0 +1,45 @@
+{
+ "intro": "Detail 2 of 6, round 4. Your story, then the same story with the owner’s approval as one more beat, then round 3’s one-liners to compare. Each row is its own line with a step number so it reads as a sequence. In 2 the two steps the owner does are set a shade softer, so the eye reads what you do against what it does.",
+ "lists": [
+  {
+   "key": "story",
+   "name": "1. Your story",
+   "kind": null,
+   "rows": [
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">01</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Type your name.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">02</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Writes ads.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">03</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Runs ads.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">04</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Answers leads.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">05</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Books jobs.</span></span>"
+   ],
+   "note": "Your five beats: the name goes in, booked jobs come out. Reads in two seconds and ends on what an owner wants. Nothing on the band says the owner stays in charge."
+  },
+  {
+   "key": "story-yes",
+   "name": "2. Your story, with the approval",
+   "kind": null,
+   "rows": [
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">01</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:rgba(255,255,255,.6)\">Type your name.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">02</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Writes ads.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">03</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:rgba(255,255,255,.6)\">You approve.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">04</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Runs ads.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">05</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Answers leads.</span></span>",
+    "<span style=\"display:flex;align-items:baseline;gap:16px\"><span style=\"font-family:var(--font-geist-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);width:20px;flex-shrink:0\">06</span><span style=\"font-size:20px;font-weight:600;letter-spacing:-0.015em;color:#fff\">Books jobs.</span></span>"
+   ],
+   "note": "One more two-word beat after “Writes ads.” The owner shows up at the two points they actually touch, and the site’s promise that a person approves what goes out stays on the band. Recommended."
+  },
+  {
+   "key": "oneliners",
+   "name": "3. Round 3’s one-liners",
+   "kind": "big",
+   "rows": [
+    "Type your name. Meet your marketing team.",
+    "Marketing that picks up the phone.",
+    "Benches the ads that don’t book jobs.",
+    "See what each job cost to win.",
+    "Asks before it spends a cent more."
+   ],
+   "note": "My earlier pick: one line per job, more character in each line, no sequence."
+  }
+ ]
+}

@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products details pass, detail 2 of 6 (the facts, round 3, with the line test); two sections to go |
+| 3. Sections | [~] | Products details pass, detail 2 of 6 (the facts, round 4, the story); two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; detail 1 of 6 (the line) applied, detail 2 of 6 (the facts) on round 3 |
+| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; detail 1 of 6 (the line) applied, detail 2 of 6 (the facts) on round 4, the story |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1698,4 +1698,19 @@ ads benched. Good ones fed.", "Every dollar spent, next to every job
 booked.", "New ads wait for your yes. So does more spend." (a question row swapped out after the memorability studies leaned against questions as rows; "Busy?" stays, flagged, to test Will’s taste against them). Claims to clear in phase 6:
 the start rows are true once the researcher is built (third in the build
 order), and the optimiser benches on cost per enquiry until booked-job
-feedback is built. Awaiting Will’s marks and pick.
+feedback is built. Will (19 Oct 2026), after asking for a recommendation that does not repeat
+itself: "i like the writes ads, runs ads, answers leads, books jobs, each as
+its own line? and we could have a type your name at the start as well? sort
+of telling a story of what the product does", then "what do u think of that?
+maybe can u show me what that story looks like, and then what ur
+recommendation looks like".
+
+## [~] Products details, 2 of 6, round 4: the story (options 19 Oct 2026)
+
+Board: `design-pass-site-2026-10-19-products-facts-r4.png`, from the script of
+the same name, each row its own line with a mono step number. 1 Will’s story:
+"Type your name.", "Writes ads.", "Runs ads.", "Answers leads.", "Books
+jobs." 2 the same with "You approve." after "Writes ads.", the owner’s two
+steps a shade softer (recommended: the band otherwise carries no approval
+rule, and the site promises a person approves what goes out). 3 round 3’s
+one-liners for comparison. Awaiting Will’s pick.
