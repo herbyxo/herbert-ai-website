@@ -26,9 +26,9 @@ done. Updated in the same commit as the work.
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
-| 4. Whole page | [ ] | Next: rhythm, spacing, transitions, repeated words, motion level |
-| 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs (Products signed off 19 Oct); the rest unchecked as phone designs |
-| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
+| 4. Whole page | [~] | Findings 20 Oct: spacing holds; the light Founder strip between two dark bands; one repeated line; three moving sections in a row |
+| 5. Phones | [~] | AI Employees, Operating Systems, Products, Who Builds It and Book the Audit signed off as phone designs (to 20 Oct); Hero and How It Works unchecked |
+| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct) |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
 | 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
 
@@ -2005,4 +2005,37 @@ section is 535px at 1440. Book the Audit is done, and with it phase 3: all
 seven homepage sections have been picked, built and through their details
 pass. Next: phase 4, the whole page (rhythm, spacing, transitions, repeated
 words, motion level).
+
+## [~] Phase 4, the whole page: findings (20 Oct 2026)
+
+As built: `assets-2026-10-20/home-whole-1440.png` and `home-whole-375.png`
+(reduced motion, every section scrolled through first). Measured at 1440x900:
+
+| Section | Ground | Height | Moves |
+|---|---|---|---|
+| Hero | paper | 824 (+76 header, fills the screen) | yes, the board |
+| How It Works | paper | 732 | no |
+| AI Employees | paper | 1533 (the scroll scene) | yes |
+| Operating Systems | paper | 748 | yes, the screen plays |
+| Products | ink | 754 | yes, the dashboard plays |
+| Founder | paper | 441 | no |
+| Book the Audit | ink | 535 | no |
+
+Findings:
+1. Spacing holds: only the hero fills a screen; every other section shows a
+   bit of the next (the AI Employees scene is long by design).
+2. The ending flickers: four paper sections, then ink, a 441px paper strip,
+   and ink again. The short Founder band between two dark bands reads as a
+   stripe. Recommended: move Founder up, between Operating Systems and
+   Products, so the page runs light then dark: five paper sections, then the
+   two ink bands (Products, Book the Audit) to the end, split by a hairline.
+   That changes the settled order, so it is Will’s call.
+3. "45 minutes, a written page back" appears word for word under the hero’s
+   button and again in Book the Audit. Recommended: keep, as a bookend (the
+   same promise at the first button and beside the form).
+4. Motion: three sections in a row play (AI Employees, Operating Systems,
+   Products), then the page goes calm. Each plays once in view and they are
+   different kinds of motion. Recommended: keep.
+Repeated words counted on the page: "audit" 7, "free" 7, "45 minutes" 3,
+"written page" 3, "Adelaide" 3; none read as padding beyond finding 3.
 
