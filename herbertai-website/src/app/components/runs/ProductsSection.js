@@ -50,9 +50,12 @@ function Scaled({ children }) {
 export default function ProductsSection() {
   const ref = useRef(null)
   const seen = useInView(ref, 0.3)
+  // Fills the screen on laptops, like Operating Systems (Will, 20 Oct 2026: "can we
+  // have the OS section take up the entire screen", "same as the Herbert Reach
+  // section"); on phones it is taller than a screen anyway.
   return (
-    <section ref={ref} className="bg-[#111] text-white">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-16 pb-20 grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
+    <section ref={ref} className="bg-[#111] text-white lg:min-h-[100svh] lg:flex lg:flex-col lg:justify-center">
+      <div className="w-full max-w-[1280px] mx-auto px-6 lg:px-12 pt-16 pb-20 grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
         <div className="min-w-0">
           <p className="text-[15px] font-medium text-white/60 mb-4">Products</p>
           <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-white/50">by Herbert AI</p>

@@ -26,9 +26,12 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
   const s = SCREENS.find((x) => x.id === active)
   const Visual = s.Visual
   const play = autoplay ? seen : plays > 0
+  // Fills the screen on laptops, like Herbert Reach (Will, 20 Oct 2026: "can we
+  // have the OS section take up the entire screen", "same as the Herbert Reach
+  // section"); on phones it is taller than a screen anyway.
   return (
-    <section ref={ref} className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-14 pb-16">
+    <section ref={ref} className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10 lg:min-h-[100svh] lg:flex lg:flex-col lg:justify-center">
+      <div className="w-full max-w-[1280px] mx-auto px-6 lg:px-12 pt-14 pb-16">
         <div className="mb-8">
           <p className="text-[15px] font-medium text-[#555] mb-4">Operating Systems</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>

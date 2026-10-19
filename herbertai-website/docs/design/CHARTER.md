@@ -155,8 +155,9 @@ product". So:
 ## Settled: the homepage (14 Oct 2026, seven sections from 15 Oct 2026)
 
 Will: "yes and products now". Sections in this order, with the rhythm of a
-moving section then a calm one. Only the hero fills a screen; every other
-section shows a bit of the next. The ladder the page walks is AI Audit, AI
+moving section then a calm one. The hero, Operating Systems and Products fill
+a screen on laptops (Will, 20 Oct 2026, phase 4); every other section shows a
+bit of the next. The ladder the page walks is AI Audit, AI
 Employee, AI Operating System (Will, 15 Oct 2026: "i think we define the
 steps as being AI audit, AI employee, and then AI Operating System").
 

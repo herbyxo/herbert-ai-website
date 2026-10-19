@@ -2080,4 +2080,22 @@ Will (20 Oct 2026): "fix the footer line". The footer reads "Custom software
 and AI for small businesses, built in Adelaide. You own what gets built."
 For phase 6, words and claims: "One builder" is still in the /about page’s
 meta description and in public/llms.txt.
+Will (20 Oct 2026), on the preview: "ok first thing is i dont like the hero
+graphic increasing in size when theres items added, it makes the page motion
+read off", then "and can we have the OS section take up the entire screen",
+"same as the Herbert Reach section".
+
+## [x] Phase 4: the hero board holds its height; Operating Systems and Products fill the screen (20 Oct 2026)
+
+The hero board’s body had a 392px minimum but its seven finished rows ran
+taller, so each job that landed pushed the page down. `HeroBoard.js` now
+renders the finished rows invisibly to hold the height and plays the live rows
+over them (`Row`); sampled every half second for 13 seconds at 1440, 1280, 375
+and 320, motion on and off, the board and the next section never moved (519px
+at 1440). Operating Systems and Products take `lg:min-h-[100svh]` with their
+content centred: 900px each at 1440x900, 800px at 1280x800; on phones they
+are taller than a screen anyway and are unchanged. This overrides the charter’s
+"only the hero fills a screen" for these two sections, at Will’s word; the
+charter is updated. No overflow, no errors. Screens:
+`assets-2026-10-20/fullscreen-os-1440.png`, `fullscreen-products-1440.png`.
 
