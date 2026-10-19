@@ -2132,4 +2132,23 @@ product is drawn small. The hero headline sits in a narrow column and the
 board beside it at 727px, and the two system screens below render their text
 at 7 to 8px, under any readable floor, where the best sites run their product
 UI across most of the screen at its real size.
+Will (20 Oct 2026): "1 and 4".
+
+## [~] Critique fixes 1 and 4: the screens at full size, the body text (options 20 Oct 2026)
+
+Fix 1, drawn by moving each section’s own elements in the page at 1440x900:
+`design-pass-site-2026-10-20-fullsize-os.png` and `-fullsize-reach.png`.
+Operating Systems: today (61%, text 7.4px); 1 the industries as tabs above and
+the screen full width at real size, text 12 to 13px (recommended); 2 the screen
+full width with the industries in a row under it; 3 two columns with a wider
+screen (78%, about 9px). Herbert Reach: today (61%, 8px); 1 the name and line
+left, the story right, the dashboard full width under them (recommended); 2 the
+story as a five-step row above the full-width dashboard; 3 two columns with a
+wider dashboard (73%, about 9px). At real size the two sections run past one
+screen (Operating Systems about 1075px, Herbert Reach about 1255px at 1440x900).
+
+Fix 4: `design-pass-site-2026-10-20-bodytext.png`, How It Works and Operating
+Systems with the homepage’s own 14, 15 and 16px text lifted, product screens
+untouched. Today; 1 up 1px, body at 16 (recommended); 2 up 2px, body at 17.
+Awaiting Will’s picks.
 
