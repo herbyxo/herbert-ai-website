@@ -42,7 +42,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
 | 6. Who Builds It | [x] | [x] | [x] | [x] | [x] | Three details, 19 Oct 2026: said flat under Founder, no photo; the link to About and the phone layout kept |
-| 7. Book the Audit | [x] | [x] | [x] | [x] | [~] | Built 20 Oct: the form on the homepage, shared with /pilot; details 1 of 4 (the heading) next |
+| 7. Book the Audit | [x] | [x] | [x] | [x] | [~] | Built 20 Oct: the form on the homepage, shared with /pilot; detail 1 of 4 kept (the heading), 2 of 4 (the facts) next |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
 
@@ -1956,4 +1956,19 @@ result promised, a question allowed as a single close). Options:
 the written page with the three costliest jobs, made physical) 2 "Book the
 audit. Keep the page." 3 "Which job would you hand over first?" Awaiting
 Will’s pick.
+Will (20 Oct 2026): "i think i like today". The heading stays "Got a job
+everyone hates doing?"; logged in writing-style `references/lines.md` (the
+owner’s own question beat the deliverable made physical).
+
+## [~] Book the Audit details, 2 of 4: the facts (options 20 Oct 2026)
+
+Board: `design-pass-site-2026-10-20-audit-facts.png`, the rows replaced in the
+page. Today the three facts of How It Works’ step 1, word for word, a screen
+up the same page. 1 What happens next: "You get a call to set a time.", "45
+minutes on how your business runs.", "A written page in two business days.",
+"Yours to keep, either way." (recommended; the form’s small print would drop
+to "Free." so the call is not said twice). 2 What is on the page: "The three
+jobs eating the most hours.", "What each one costs you a year.", "Which one to
+hand over first." 3 No list: one line, "45 minutes, a written page back."
+Awaiting Will’s pick.
 
