@@ -26,7 +26,7 @@ done. Updated in the same commit as the work.
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
-| 4. Whole page | [~] | 20 Oct: Founder at the bottom, the two lines dropped, motion kept, the footer onto the charter; awaiting Will’s sign-off |
+| 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [~] | AI Employees, Operating Systems, Products, Who Builds It and Book the Audit signed off as phone designs (to 20 Oct); Hero and How It Works unchecked |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct); "One builder" still in /about’s meta description and llms.txt |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
@@ -2098,4 +2098,6 @@ are taller than a screen anyway and are unchanged. This overrides the charter’
 "only the hero fills a screen" for these two sections, at Will’s word; the
 charter is updated. No overflow, no errors. Screens:
 `assets-2026-10-20/fullscreen-os-1440.png`, `fullscreen-products-1440.png`.
+Will (20 Oct 2026): "signed off". Phase 4 closes: the whole homepage signed off
+on the preview.
 
