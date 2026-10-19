@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Who Builds It built 19 Oct, details pass under way; Book the Audit to go |
+| 3. Sections | [~] | Who Builds It done 19 Oct; Book the Audit, the last section, next |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs (Products signed off 19 Oct); the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -41,7 +41,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
-| 6. Who Builds It | [x] | [x] | [x] | [x] | [~] | Built 19 Oct, no photo; detail 1 of 3 (the words, said flat under Founder) applied, details 2 and 3 (the close, the phone) next |
+| 6. Who Builds It | [x] | [x] | [x] | [x] | [x] | Three details, 19 Oct 2026: said flat under Founder, no photo; the link to About and the phone layout kept |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
@@ -1906,4 +1906,6 @@ and About holds the photo and the longer story); 2 "Book an audit with Will",
 which asks twice in a row with the audit section next; 3 no link. The phone
 layout as built at 375 and 320: one column, the line at 26px, nothing cut off,
 no overflow (recommended: keep). Awaiting Will’s word on both.
+Will (19 Oct 2026): "keep both". Who Builds It is done: built as the note set
+plain, the words said flat under Founder, the close and the phone kept.
 
