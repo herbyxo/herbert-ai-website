@@ -26,7 +26,7 @@ done. Updated in the same commit as the work.
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
-| 4. Whole page | [~] | Findings 20 Oct: spacing holds; the light Founder strip between two dark bands; one repeated line; three moving sections in a row |
+| 4. Whole page | [~] | Findings 20 Oct: spacing holds; the Founder strip between two dark bands; one repeated line; three moving sections in a row; the footer still May |
 | 5. Phones | [~] | AI Employees, Operating Systems, Products, Who Builds It and Book the Audit signed off as phone designs (to 20 Oct); Hero and How It Works unchecked |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct) |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
@@ -2038,4 +2038,12 @@ Findings:
    different kinds of motion. Recommended: keep.
 Repeated words counted on the page: "audit" 7, "free" 7, "45 minutes" 3,
 "written page" 3, "Adelaide" 3; none read as padding beyond finding 3.
+5. The footer is still the May register (cream, the old type), the last of it
+   under the homepage, and it sits on every page. Recommended: bring it onto
+   the paper ground in Geist, the same columns, as a phase 4 fix.
+
+Finding 2 drawn: `design-pass-site-2026-10-20-page-order.png`, the whole page
+at 1440 three ways: today; 1 Founder moved up between Operating Systems and
+Products, light then dark (recommended); 2 Founder turned ink, three dark bands
+to the end. Awaiting Will’s word on findings 2 to 5.
 
