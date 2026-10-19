@@ -25,9 +25,9 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products details pass, detail 6 of 6 (the phone layout); two sections to go |
+| 3. Sections | [~] | Products done 19 Oct 2026; Who Builds It and Book the Audit to go |
 | 4. Whole page | [ ] | |
-| 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
+| 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs (Products signed off 19 Oct); the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
 | 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; details 1 to 5 of 6 applied (the line, the facts, the visual, no note, In development in place of the link), detail 6 of 6 (the phone layout) next |
+| 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1825,4 +1825,7 @@ content was wrong for the full product. Board:
 phone version straight under the line, the story after it. All three checked at
 375 and 320: nothing clipped inside the phone, no overflow, no errors. Awaiting
 Will’s pick.
+Will (19 Oct 2026): "1". Already built (bc3eb75): the story, then the
+full-product phone version. Products is done: line, facts, visual, the note
+and the link (In development in their place) and the phone layout.
 
