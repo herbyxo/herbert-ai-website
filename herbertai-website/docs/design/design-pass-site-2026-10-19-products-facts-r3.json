@@ -1,0 +1,386 @@
+{
+ "intro": "Detail 2 of 6, round 3. Written by the catchy-copy method: about 35 lines drafted, the ones below scored, the best drawn as three lists on the band. Your line stays. Every list keeps the approval rule, names no ad platform (Meta is still waiting on app review) and promises no results.",
+ "lists": [
+  {
+   "key": "a",
+   "name": "1. One-liners",
+   "kind": "big",
+   "rows": [
+    "Type your name. Meet your marketing team.",
+    "Marketing that picks up the phone.",
+    "Benches the ads that don’t book jobs.",
+    "See what each job cost to win.",
+    "Asks before it spends a cent more."
+   ],
+   "note": "The five best-scoring lines that each say a different thing, one device each, set bigger and white so each row reads as a line, not a fact. The dashboard beside them is the proof. Recommended."
+  },
+  {
+   "key": "b",
+   "name": "2. Heading and proof",
+   "kind": null,
+   "rows": [
+    "<b style=\"display:block;font-weight:600;color:#fff;font-size:17px;letter-spacing:-0.01em\">One name to start.</b><span style=\"display:block;margin-top:2px;color:rgba(255,255,255,.6);font-size:14px;line-height:1.4\">Type your business name and it drafts your services, area, offer and voice.</span>",
+    "<b style=\"display:block;font-weight:600;color:#fff;font-size:17px;letter-spacing:-0.01em\">Marketing that picks up the phone.</b><span style=\"display:block;margin-top:2px;color:rgba(255,255,255,.6);font-size:14px;line-height:1.4\">Every enquiry gets a call inside a minute, and the job goes in your calendar.</span>",
+    "<b style=\"display:block;font-weight:600;color:#fff;font-size:17px;letter-spacing:-0.01em\">Benches the ads that don’t pay.</b><span style=\"display:block;margin-top:2px;color:rgba(255,255,255,.6);font-size:14px;line-height:1.4\">The budget moves to whatever brings in work for the least.</span>",
+    "<b style=\"display:block;font-weight:600;color:#fff;font-size:17px;letter-spacing:-0.01em\">Asks before it spends a cent more.</b><span style=\"display:block;margin-top:2px;color:rgba(255,255,255,.6);font-size:14px;line-height:1.4\">You approve new ads and any increase. Nothing else needs you.</span>"
+   ],
+   "note": "The shape the best product lists use (Raycast, Granola, Lindy): a short heading carries the hook, one plain sentence carries the proof. Most convincing, tallest."
+  },
+  {
+   "key": "c",
+   "name": "3. Two beats",
+   "kind": "big",
+   "rows": [
+    "Type your name. Meet your marketing team.",
+    "Busy? It’s already called them back.",
+    "Bad ads benched. Good ones fed.",
+    "Every dollar spent, next to every job booked.",
+    "New ads, more spend? It asks first."
+   ],
+   "note": "Every row in two halves, the shape of the lines you picked: “They do the job. Your team says yes.” and “Less admin. More money.” Most rhythm, least proof."
+  }
+ ],
+ "test": {
+  "intro": "Every candidate that passed the gates (true today or flagged, no promised result, no ad platform named), scored and sorted. Mark the numbers that grab you, and the ones that do not; each pick teaches the next round more than another three options would.",
+  "key": "Scale: 0 to 5, one point each, half for partly. Picture, Prove and Only us are Harry Dry’s three questions (can I picture it, could it be proved wrong, could nobody else say it), which Hopkins, Ogilvy and Julian Shapiro back. Device: one structural move (a pair, a three, a twisted phrase, a mirror, a kicker), from the swipe file, where praised lines stack two moves and flat feature rows carry one or none. Your shape: short, one claim, no qualifier tail, from the lines you picked in the ledger over my recommendations.",
+  "cols": [
+   "Picture",
+   "Prove",
+   "Only us",
+   "Device",
+   "Your shape"
+  ],
+  "rows": [
+   {
+    "line": "Marketing that picks up the phone.",
+    "scores": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "Surprise: marketing does not usually pick up the phone. It calls every new lead inside a minute, which ad tools do not do. Five words."
+   },
+   {
+    "line": "Type your name. Meet your marketing team.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Two beats, a physical first step, pays off your line. True once the researcher is built (it is third in the build order)."
+   },
+   {
+    "line": "Benches the ads that don’t book jobs.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "A sports verb you can picture; the product as a coach. Today it benches on cost per enquiry, booked jobs come next."
+   },
+   {
+    "line": "See what each job cost to win.",
+    "scores": [
+     1,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Cost per booked job, said the way an owner thinks about a quote they won. Nobody reporting clicks can say it."
+   },
+   {
+    "line": "Never leaves a lead on read.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Twists “left on read”, the phone screen everyone has seen."
+   },
+   {
+    "line": "Busy? It’s already called them back.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "The owner’s moment, then the kicker. The call goes out inside a minute."
+   },
+   {
+    "line": "Like an agency, minus the monthly meeting.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "The paradox shape (“like a ___, minus ___”), names the thing owners sit through."
+   },
+   {
+    "line": "One name to start. Two things to approve.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "Parallel numbers, both checkable. True once the researcher is built."
+   },
+   {
+    "line": "The whole department fits on one screen.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "The “1,000 songs in your pocket” move: something big made small."
+   },
+   {
+    "line": "Asks before it spends a cent more.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "The approval rule as a character trait: a marketer that does not push spend."
+   },
+   {
+    "line": "Every dollar spent, next to every job booked.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     0.5
+    ],
+    "why": "A mirrored pair (dollar spent, job booked); a beat longer than your picks run."
+   },
+   {
+    "line": "Follows the jobs, not the clicks.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Twists “follow the money”; the budget goes where booked jobs are cheapest."
+   },
+   {
+    "line": "Answers leads while you’re on the job.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     0.5,
+     1
+    ],
+    "why": "The owner’s day as the picture; plain."
+   },
+   {
+    "line": "Bad ads benched. Good ones fed.",
+    "scores": [
+     1,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Parallel halves, two verbs you can see. Says less about what “good” means."
+   },
+   {
+    "line": "Two approvals. One screen. Every enquiry answered.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "why": "A three with numbers; a summary row, long for one line."
+   },
+   {
+    "line": "Writes ads. Runs ads. Answers leads. Books jobs.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     1,
+     0.5
+    ],
+    "why": "Four verbs in a beat; the whole product, but four claims in one row."
+   },
+   {
+    "line": "Judged on booked jobs, not clicks.",
+    "scores": [
+     0,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Enemy and contrast; hard to picture."
+   },
+   {
+    "line": "Nothing new goes live without your yes.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0.5,
+     1
+    ],
+    "why": "The approval rule, plain."
+   },
+   {
+    "line": "Knows your business by name.",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Twists “knows you by name”. Vague about what it knows."
+   },
+   {
+    "line": "Ads in your voice, not a template’s.",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Contrast; true for ads, not for the follow-up messages."
+   },
+   {
+    "line": "Leaves no lead behind.",
+    "scores": [
+     0.5,
+     1,
+     0,
+     1,
+     1
+    ],
+    "why": "Twisted phrase, but any lead tool could sign it."
+   },
+   {
+    "line": "You approve two things: new ads, more spend.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     0.5
+    ],
+    "why": "Exact and unique, reads like terms and conditions."
+   },
+   {
+    "line": "Every enquiry answered inside a minute.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0,
+     1
+    ],
+    "why": "True and checkable, no device: the row every speed-to-lead tool writes."
+   },
+   {
+    "line": "Your budget follows the cheapest booked job.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0,
+     0.5
+    ],
+    "why": "The mechanism, plainly; no energy."
+   },
+   {
+    "line": "It does the work. You say yes.",
+    "scores": [
+     0.5,
+     0.5,
+     0,
+     1,
+     1
+    ],
+    "why": "Your AI Employees heading’s shape, so it repeats the page."
+   },
+   {
+    "line": "Spends like it’s your money. Because it is.",
+    "scores": [
+     0.5,
+     0,
+     0.5,
+     1,
+     1
+    ],
+    "why": "An Apple-style kicker; a character claim nobody can check."
+   },
+   {
+    "line": "Stop boosting posts and hoping.",
+    "scores": [
+     1,
+     0,
+     0,
+     1,
+     1
+    ],
+    "why": "Names the owner’s habit; a command, and no proof."
+   },
+   {
+    "line": "Learns your business from its name.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0,
+     0.5
+    ],
+    "why": "Round 1. Clear, no device, the qualifier tail flattens it."
+   },
+   {
+    "line": "Shows what you spent against the jobs it booked.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0,
+     0
+    ],
+    "why": "Round 1. Accurate and long; the energy is gone."
+   },
+   {
+    "line": "Runs your ads and posts, and keeps testing new ones.",
+    "scores": [
+     0.5,
+     0.5,
+     0,
+     0,
+     0
+    ],
+    "why": "Round 2. A list joined by commas; anyone could write it."
+   }
+  ]
+ }
+}

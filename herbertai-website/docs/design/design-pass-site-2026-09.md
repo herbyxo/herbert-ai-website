@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products details pass, detail 2 of 6 (the facts, round 2); two sections to go |
+| 3. Sections | [~] | Products details pass, detail 2 of 6 (the facts, round 3, with the line test); two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; detail 1 of 6 (the line) applied, detail 2 of 6 (the facts) on round 2 |
+| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; detail 1 of 6 (the line) applied, detail 2 of 6 (the facts) on round 3 |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1664,5 +1664,38 @@ money, backs what books jobs", You "Say yes to every new ad and any extra
 spend". 3 Short lines, five sentences with full stops: "Type your business
 name. Meet your marketing team.", "Ads and posts made, run and tested for
 you.", "Every lead answered inside a minute.", "Every dollar tracked against
-the jobs it books.", "Nothing new goes live without your yes." Awaiting
-Will’s pick.
+the jobs it books.", "Nothing new goes live without your yes." Will (19 Oct
+2026): "none of these are grabbing my attention still. u need to figure out
+how u can learn what is catchy ad copy". None picked.
+
+## [~] Products details, 2 of 6, round 3: the facts by the catchy-copy method (options 19 Oct 2026)
+
+Before drawing again, the method: research in the files repo,
+`product/research/markdown/catchy-copy-2026-10-19/` (craft.md, the copywriting
+sources; swipe.md, 250 real lines from 39 product sites and 28 award-winning
+ad lines; science.md, the memorability studies; method.md, the method). The
+causes it found: the writing-style Marketing rules were made for paragraphs
+and rule out the devices short lines run on; Claude’s recommendations have
+favoured precision where Will picks rhythm and one claim (the AI Employees
+heading, the Operating Systems close, the Products line); and round 2's verb
+plus noun rows are the commonest and least memorable feature-row shape.
+
+Two sheets. `design-pass-site-2026-10-19-products-line-test.png`: 30 lines
+that passed the gates (true today or flagged, no result promised, no ad
+platform named, since Meta still waits on app review), scored out of 5 on
+picture, prove, only us (Harry Dry's three questions), device, and Will's
+shape, for Will to mark. `design-pass-site-2026-10-19-products-facts-r3.png`:
+three lists on the band. 1 One-liners, set bigger and white: "Type your name.
+Meet your marketing team.", "Marketing that picks up the phone.", "Benches
+the ads that don’t book jobs.", "See what each job cost to win.", "Asks before it
+spends a cent more." (recommended, the best scorers that each say a
+different thing). 2 Heading and proof, the shape the best product lists use:
+"One name to start.", "Marketing that picks up the phone.", "Benches the ads
+that don’t pay.", "Asks before it spends a cent more.", each with one plain
+sentence under it. 3 Two beats, the shape of Will's own picks: "Type your
+name. Meet your marketing team.", "Busy? It’s already called them back.", "Bad
+ads benched. Good ones fed.", "Every dollar spent, next to every job
+booked.", "New ads, more spend? It asks first." Claims to clear in phase 6:
+the start rows are true once the researcher is built (third in the build
+order), and the optimiser benches on cost per enquiry until booked-job
+feedback is built. Awaiting Will’s marks and pick.
