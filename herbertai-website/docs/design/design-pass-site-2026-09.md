@@ -42,7 +42,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
 | 6. Who Builds It | [x] | [x] | [x] | [x] | [x] | Three details, 19 Oct 2026: said flat under Founder, no photo; the link to About and the phone layout kept |
-| 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
+| 7. Book the Audit | [x] | [~] | [ ] | [ ] | [ ] | Three options drawn 19 Oct |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
 
@@ -1908,4 +1908,22 @@ layout as built at 375 and 320: one column, the line at 26px, nothing cut off,
 no overflow (recommended: keep). Awaiting Will’s word on both.
 Will (19 Oct 2026): "keep both". Who Builds It is done: built as the note set
 plain, the words said flat under Founder, the close and the phone kept.
+
+## [~] Book the Audit, facts and options (19 Oct 2026)
+
+Facts: the one action is the free AI audit (`AUDIT_HREF`, /pilot#book, a form
+of name, business, email and phone that sends to Web3Forms, with an
+auto-reply promising a call that day to set a time); the audit facts are
+`RUNGS[0]`; a sample audit page exists at /pilot/sample-audit. Today is the May
+register (the display font, the neon green button), the last of it on the
+page. Board: `design-pass-site-2026-10-19-audit.png`, the section replaced in
+the page at 1440 and 375, today’s heading kept in all three (its words are a
+detail after the pick). 1 The facts as steps: the ink band, the heading left,
+the three audit facts as numbered rows right (the Products story form), the
+button and a link to the sample audit. 2 One line and the button, on the paper
+ground. 3 The form, right here: the heading and the facts left, the booking
+form right (recommended: someone who read the whole page books without loading
+another; building it moves the /pilot form into one shared component). The
+form line says “You get a call to set a time”, what happens, not who (11 Oct
+rule). Awaiting Will’s pick.
 
