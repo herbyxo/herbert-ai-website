@@ -1774,4 +1774,20 @@ row carries its status on its time row so the whole dashboard fits the frame
 at 1440, 1280, 375 and 320, motion on and off: no overflow, no errors. Held back
 at first at Will’s word, then committed on his "commit" (19 Oct 2026).
 Screens: `assets-2026-10-19/products-reach-dash-1440.png` and `-mid-1440.png`.
+Checked on the Vercel preview after the push: the band serves the story and
+the full-product dashboard.
+
+## [~] Products details, 4 of 6: the early-access note (options 19 Oct 2026)
+
+By the Lines register (writing-style `references/lines.md`). Line test:
+`design-pass-site-2026-10-19-products-note-test.png`, 24 lines that passed the
+gates (true of Herbert Reach as defined, no result promised, no scarcity the
+plan does not have), scored out of 5. Options:
+`design-pass-site-2026-10-19-products-note.png`, the pill kept and only its
+sentence changed. Today "It runs Herbert AI’s own ads first, and opens up once it
+has the numbers to show for it." 1 "It spends Herbert AI’s money before it spends
+yours." (recommended: the skin in the game Will named on the Operating Systems
+figures, as a mirror) 2 "Herbert AI hired it first." 3 "Herbert AI is customer
+one. Ask to be next.", the last three words a link to the audit (overlaps the
+close, detail 5). Awaiting Will’s pick.
 

@@ -1,0 +1,318 @@
+{
+ "intro": "Detail 4 of 6. The pill stays; only its sentence changes. By the Lines register: 24 lines drafted that passed the gates (true of Herbert Reach as defined, no result promised, no scarcity the plan does not have), scored on the second sheet, the best three drawn on the band beside today’s.",
+ "lists": [
+  {
+   "key": "today",
+   "name": "Today",
+   "kind": null,
+   "rows": [
+    "It runs Herbert AI’s own ads first, and opens up once it has the numbers to show for it."
+   ],
+   "note": "Accurate and eighteen words long, with nothing to catch the eye."
+  },
+  {
+   "key": "1",
+   "name": "1. The money",
+   "kind": null,
+   "rows": [
+    "It spends Herbert AI’s money before it spends yours."
+   ],
+   "note": "Skin in the game, said as a fact: Herbert AI’s own ad spend goes through it first. A mirror, so it sticks. Recommended."
+  },
+  {
+   "key": "2",
+   "name": "2. The hire",
+   "kind": null,
+   "rows": [
+    "Herbert AI hired it first."
+   ],
+   "note": "Four words; the product as an employee, which fits the marketing department line above it. Says less about why early access is a good sign."
+  },
+  {
+   "key": "3",
+   "name": "3. Customer one",
+   "kind": null,
+   "rows": [
+    "Herbert AI is customer one. <a href=\"#\" style=\"color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.4)\">Ask to be next.</a>"
+   ],
+   "note": "Ends on something to do, with “Ask to be next” linking to the free audit. That makes the note a second way out, which is detail 5’s job."
+  }
+ ],
+ "test": {
+  "intro": "Every line that passed the gates, scored and sorted. Mark the numbers that grab you and any that put you off.",
+  "key": "Scale: 0 to 5, one point each, half for partly. Picture, Prove and Only us are Harry Dry’s three questions; Device is one structural move (a mirror, a pair, a twisted phrase, the product as a person); Your shape is short, one claim, no tail, from your picks (writing-style references/lines.md).",
+  "cols": [
+   "Picture",
+   "Prove",
+   "Only us",
+   "Device",
+   "Your shape"
+  ],
+  "rows": [
+   {
+    "line": "It spends Herbert AI’s money before it spends yours.",
+    "scores": [
+     1,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "why": "A mirror (spends ... spends), and the money is real: Herbert AI’s own ad spend runs through it first. Your “teeth in the game” point, said as a fact."
+   },
+   {
+    "line": "Herbert AI hired it first.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "The product as an employee, which fits “marketing department” above it. Four words."
+   },
+   {
+    "line": "Herbert AI is customer one. Ask to be next.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "A story in two beats that ends on what to do. “Ask to be next” would link to the audit, so it overlaps the close."
+   },
+   {
+    "line": "Herbert AI’s ads go first. Yours go next.",
+    "scores": [
+     1,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Parallel halves, the reader as the second beat."
+   },
+   {
+    "line": "Herbert AI trusts it with its own money first.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "Trust and money in one line; a beat softer than the mirror."
+   },
+   {
+    "line": "Herbert AI hired it first. You’re next in line.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "why": "The hire line with a kicker; the kicker adds length more than meaning."
+   },
+   {
+    "line": "It works for Herbert AI first. Then for you.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "The employee idea as a sequence."
+   },
+   {
+    "line": "It’s on Herbert AI’s books first.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Twists “on the books” (employed); missed by some readers."
+   },
+   {
+    "line": "First it markets Herbert AI. Then it markets you.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Repetition and order; “markets you” reads oddly."
+   },
+   {
+    "line": "It earns its keep on Herbert AI first.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Idiom for proving its worth; vaguer than the money line."
+   },
+   {
+    "line": "Its first customer is Herbert AI.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Plain and true; no second beat."
+   },
+   {
+    "line": "Herbert AI’s money goes in first.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "The money idea, shortest form; loses the mirror."
+   },
+   {
+    "line": "Proven on our ads before it touches yours.",
+    "scores": [
+     1,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Vivid verb; “proven” overstates until the numbers exist."
+   },
+   {
+    "line": "We’re customer one. You could be two.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Opens on “We”, which the headline data counts against, and the hedge softens it."
+   },
+   {
+    "line": "Tested on Herbert AI’s own ads before anyone else’s.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     0.5
+    ],
+    "why": "Clear; long and flat."
+   },
+   {
+    "line": "Herbert AI’s own marketing runs on it first.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0,
+     1
+    ],
+    "why": "True, no device."
+   },
+   {
+    "line": "Ask about it in your free audit.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0,
+     1
+    ],
+    "why": "Plain CTA; says nothing about why it is early access."
+   },
+   {
+    "line": "Herbert AI first. Then you.",
+    "scores": [
+     0,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Very short; nothing to picture."
+   },
+   {
+    "line": "Ours first. Yours next.",
+    "scores": [
+     0,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "The pair at its barest; unclear alone."
+   },
+   {
+    "line": "No numbers, no launch. Herbert AI’s come first.",
+    "scores": [
+     0,
+     1,
+     0.5,
+     1,
+     0.5
+    ],
+    "why": "A rule then a reason; reads stern."
+   },
+   {
+    "line": "Herbert AI goes first, so you don’t go in blind.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     0.5,
+     0.5
+    ],
+    "why": "Reassuring; a beat long."
+   },
+   {
+    "line": "Opens once it has numbers to show.",
+    "scores": [
+     0,
+     1,
+     0.5,
+     0,
+     1
+    ],
+    "why": "Today’s idea, cut down; still no device."
+   },
+   {
+    "line": "Proof first. Then it’s yours.",
+    "scores": [
+     0,
+     0.5,
+     0,
+     1,
+     1
+    ],
+    "why": "Any product could say it."
+   },
+   {
+    "line": "It runs Herbert AI’s own ads first, and opens up once it has the numbers to show for it.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0,
+     0
+    ],
+    "why": "Today. Accurate, eighteen words, no device."
+   }
+  ]
+ }
+}
