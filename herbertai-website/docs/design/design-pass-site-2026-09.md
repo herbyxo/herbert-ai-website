@@ -1858,3 +1858,15 @@ RevealOnScroll and Eyebrow imports. No motion. Verified at 1440, 1280, 375 and
 built: `assets-2026-10-19/founder-built-1440.png` and `-375.png`. Details:
 1 the words, 2 the close, 3 the phone layout.
 
+## [~] Who Builds It details, 1 of 3: the words (options 19 Oct 2026)
+
+By the Lines register. Line test: `design-pass-site-2026-10-19-founder-words-test.png`,
+16 lines that passed the gates (true, Will’s name kept, nothing that makes one
+person read small, the weak position Will flagged on the Operating Systems
+tags), scored out of 5. Options: `design-pass-site-2026-10-19-founder-words.png`,
+only the line changed, the name on its own line. Today the 24-word line. 1
+"I’m Will Herbert. I audit it. I build it. I answer for it." (recommended: the
+three-verb story shape Will picked for Products, ending on accountability) 2
+"I’m Will Herbert. You talk to the person who builds it." 3 "I’m Will Herbert.
+The one who builds it is the one you call." Awaiting Will’s pick.
+

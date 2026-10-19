@@ -1,0 +1,230 @@
+{
+ "intro": "Who Builds It, detail 1 of 3. Only the line changes; the label and the link stay. 16 lines that passed the gates (true, your name kept, nothing that makes one person read small), scored on the second sheet, the best three on the page.",
+ "lists": [
+  {
+   "key": "today",
+   "name": "Today",
+   "kind": null,
+   "rows": [
+    "I’m Will Herbert. I build every system myself, in Adelaide, and you deal with me from the audit to the day it goes live."
+   ],
+   "note": "Clear and true, 24 words, no device."
+  },
+  {
+   "key": "1",
+   "name": "1. Three verbs",
+   "kind": null,
+   "rows": [
+    "I’m Will Herbert.<br>I audit it. I build it. I answer for it."
+   ],
+   "note": "Your name, then three verbs in order, the shape of your Products story, ending on being accountable for it. Recommended."
+  },
+  {
+   "key": "2",
+   "name": "2. The builder on the call",
+   "kind": null,
+   "rows": [
+    "I’m Will Herbert.<br>You talk to the person who builds it."
+   ],
+   "note": "The plain version of what agencies cannot say: the person you speak to is the one who builds it."
+  },
+  {
+   "key": "3",
+   "name": "3. The one you call",
+   "kind": null,
+   "rows": [
+    "I’m Will Herbert.<br>The one who builds it is the one you call."
+   ],
+   "note": "A mirror with a picture in it, the phone call. A beat longer."
+  }
+ ],
+ "test": {
+  "intro": "Every line that passed the gates, scored and sorted. Mark the numbers that grab you and any that put you off.",
+  "key": "Scale: 0 to 5, one point each, half for partly. Picture, Prove and Only us are Harry Dry’s three questions; Device is one structural move; Your shape is short, one claim, no tail, from your picks (writing-style references/lines.md).",
+  "cols": [
+   "Picture",
+   "Prove",
+   "Only us",
+   "Device",
+   "Your shape"
+  ],
+  "rows": [
+   {
+    "line": "I’m Will Herbert. You talk to the person who builds it.",
+    "scores": [
+     1,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Says the thing agencies cannot: the person on the call is the builder. Plain."
+   },
+   {
+    "line": "The person who audits your business is the person who builds it.",
+    "scores": [
+     1,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "why": "A mirror; drops your name from the line itself."
+   },
+   {
+    "line": "I’m Will Herbert. The one who builds it is the one you call.",
+    "scores": [
+     1,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "why": "A mirror you can picture (the phone call); a beat long."
+   },
+   {
+    "line": "I’m Will Herbert. You meet the builder on day one.",
+    "scores": [
+     1,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "A moment you can picture; says less about after day one."
+   },
+   {
+    "line": "I’m Will Herbert. I audit it. I build it. I answer for it.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Three verbs in order, the shape of your Products story, ending on “answer for it”: you are accountable, not just the builder."
+   },
+   {
+    "line": "I’m Will Herbert. The builder, not a salesperson.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Contrast against the enemy; a fragment."
+   },
+   {
+    "line": "I’m Will Herbert. One builder, from the audit to the day it goes live.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Today’s idea, cut to one claim."
+   },
+   {
+    "line": "I’m Will Herbert. No account managers. You get the builder.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "why": "Names the thing owners dislike about agencies; “no account managers” could read as small."
+   },
+   {
+    "line": "I’m Will Herbert. I build it, and I pick up when you call.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     0.5,
+     1
+    ],
+    "why": "The phone as the picture; warm, a little casual."
+   },
+   {
+    "line": "Built in Adelaide, by the person you talk to.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Place and person; no name."
+   },
+   {
+    "line": "I’m Will Herbert. Every system here, I built.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0.5,
+     1
+    ],
+    "why": "Short and proud; “every system here” is a claim to clear."
+   },
+   {
+    "line": "I’m Will Herbert. Your audit, your build, your calls: all me.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     1,
+     0.5
+    ],
+    "why": "A three; “all me” reads small."
+   },
+   {
+    "line": "No sales team. No hand-offs. Just me.",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Punchy, but “just me” is the weak position you flagged on the OS tags."
+   },
+   {
+    "line": "I’m Will Herbert. I build every system myself, in Adelaide.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0,
+     1
+    ],
+    "why": "Today with the tail cut. True and plain."
+   },
+   {
+    "line": "I’m Will Herbert. Same person, audit to go-live.",
+    "scores": [
+     0,
+     1,
+     0.5,
+     0.5,
+     1
+    ],
+    "why": "Clipped; reads like a spec."
+   },
+   {
+    "line": "I’m Will Herbert. I build every system myself, in Adelaide, and you deal with me from the audit to the day it goes live.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0,
+     0
+    ],
+    "why": "Today. Clear and true, 24 words, no device."
+   }
+  ]
+ }
+}
