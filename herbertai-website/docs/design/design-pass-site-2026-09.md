@@ -41,7 +41,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
-| 6. Who Builds It | [x] | [x] | [x] | [x] | [~] | Built 19 Oct: the note set plain, no photo; details 1 of 3 (the words) next |
+| 6. Who Builds It | [x] | [x] | [x] | [x] | [~] | Built 19 Oct, no photo; detail 1 of 3 (the words, said flat under Founder) applied, details 2 and 3 (the close, the phone) next |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
@@ -1882,4 +1882,19 @@ Board: `design-pass-site-2026-10-19-founder-flat.png`. The label becomes
 in Adelaide. He builds every system, and you deal with him from the audit to
 the day it goes live." Today; 1 at today’s size (recommended); 2 quieter, at
 body size in grey. Awaiting Will’s pick.
+Will (19 Oct 2026): "1 - i think we do Herbert AI was founded by Will Herbert,
+based in Adelaide. idk if we need the 'he builds every system' part, what do u
+think". Recommended dropping "builds every system" (reads small, goes stale
+with a first hire) and keeping the no hand-off promise. Will: "you deal with
+him from the audit to the day it goes live reads as if its a pain point".
+Offered "works with you", "is with you", or the first sentence alone. Will: "1".
+
+## [x] Who Builds It details, 1 of 3: the words (19 Oct 2026)
+
+Built: the label "Founder" and the line "Herbert AI was founded by Will
+Herbert, based in Adelaide. He works with you from the audit to the day it
+goes live." at today’s size. Verified at 1440, 1280, 375 and 320, motion on
+and off: no overflow, no errors, the link to /about. Charter section 6 updated.
+Lesson for the Lines register: "deal with" reads as a chore even when the
+promise is good; check verbs for the feeling they carry, not only the fact.
 

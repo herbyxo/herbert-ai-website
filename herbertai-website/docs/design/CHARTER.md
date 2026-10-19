@@ -214,7 +214,8 @@ steps as being AI audit, AI employee, and then AI Operating System").
    click of a button.", and the product as a story in five numbered steps:
    Type your name, Writes ads, Runs ads, Answers leads, Books jobs (19 Oct
    2026).
-6. Who Builds It: the founder, named.
+6. Who Builds It: the founder, named, said flat in the third person under the
+   label Founder, no photo (19 Oct 2026).
 7. Book the Audit: the button and the three audit facts.
 
 The research behind the order and the motion rule:

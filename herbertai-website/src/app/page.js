@@ -85,14 +85,18 @@ function HowItWorks() {
 // founder photo to About ("A founder photo on About only", 22 Sep 2026). Nothing
 // moves: no job finishes here. Options 2 (name and photo) and 3 (a signed note)
 // are drawn in docs/design/design-pass-site-2026-10-19-founder.png.
+// Detail 1, the words (19 Oct 2026): said flat, in the third person, under the
+// label Founder (Will: "i feel like the who builds it is a bit cheesey", then
+// his first sentence, and "works with you" over "deal with", which "reads as if
+// its a pain point").
 function FounderNote() {
   return (
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
-        <p className="text-[15px] font-medium text-[#555] mb-4">Who Builds It</p>
+        <p className="text-[15px] font-medium text-[#555] mb-4">Founder</p>
         <p className="font-semibold tracking-[-0.025em] leading-[1.25] max-w-[28ch]" style={{ fontSize: 'clamp(26px, 3vw, 42px)' }}>
-          I&apos;m Will Herbert. I build every system myself, in Adelaide, and you deal
-          with me from the audit to the day it goes live.
+          Herbert AI was founded by Will Herbert, based in Adelaide. He works with you
+          from the audit to the day it goes live.
         </p>
         <p className="mt-7">
           <Link href="/about" className="text-[15px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
