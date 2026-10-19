@@ -1728,3 +1728,22 @@ row wraps, no horizontal overflow, no console or page errors; the band is
 As built: `assets-2026-10-19/products-story-built-1440.png` and `-375.png`.
 Claim to clear in phase 6: "Type your name." is true once the researcher is
 built. Next: detail 3 of 6, the visual.
+
+## [~] Products details, 3 of 6: the visual (options 19 Oct 2026)
+
+Board: `design-pass-site-2026-10-19-products-visual.png`, from the script of
+the same name, static mock-ups swapped into the band’s laptop frame at 1440
+with the story’s matching row lit. Today: the ads-only dashboard, which shows
+step 3 and part of 4 and nothing of 1, 2 or 5. 1 The story plays: one screen
+per step, the list row lighting with it (the name and what the researcher
+found; the first ads with one waiting on the owner in amber; the ads running
+with a budget move; an enquiry called back and booked; the week of booked
+jobs with cost per job), drawn on step 4 with all five in a strip
+(recommended: every step visible, and the approval kept on screen in step 2).
+2 One dashboard matched to the story: a tile per step from 2 to 5 and a
+leads table, the lit row’s tile outlined. 3 The day’s feed: one day in story
+order with the day’s numbers, closest to the Herbert OS screens above it.
+Every figure belongs to Dave’s Plumbing, an example business; Google is the
+only platform shown while Meta waits on app review. The phone version is
+detail 6. Awaiting Will’s pick.
+
