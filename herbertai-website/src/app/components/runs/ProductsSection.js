@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useInView } from './board'
-import EngineDashboard from './EngineDashboard'
+import ReachDashboard from './ReachDashboard'
 import ReachMobile from './ReachMobile'
 import { PhoneScaled } from './os/mobile'
 
@@ -19,8 +19,8 @@ import { PhoneScaled } from './os/mobile'
 // 2026: "sort of telling a story of what the product does", then "i think i
 // like 1"). On a laptop the
 // marketing dashboard plays once in view; on a phone, Herbert Reach as the
-// owner would run it from their phone. The dashboard reuses the engine page's lines and
-// claims no results.
+// owner would run it from their phone. The dashboard is the full product, every
+// channel judged by cost per booked job (ReachDashboard), and claims no results.
 
 const W = 1184
 const H = 740
@@ -75,7 +75,7 @@ export default function ProductsSection() {
           </p>
         </div>
         <div className="min-w-0">
-          <div className="hidden lg:block"><Scaled><EngineDashboard name={NAME} /></Scaled></div>
+          <div className="hidden lg:block"><Scaled><ReachDashboard name={NAME} /></Scaled></div>
           <div className="lg:hidden"><PhoneScaled><ReachMobile play={seen} /></PhoneScaled></div>
           <p className="mt-8 lg:hidden">
             <Link href="/work/marketing-engine" className="text-[15px] font-medium underline underline-offset-4 decoration-white/40 hover:decoration-white">

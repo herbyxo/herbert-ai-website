@@ -25,7 +25,7 @@ done. Updated in the same commit as the work.
 | 0. Charter | [x] | `CHARTER.md`, rewritten 22 Sep 2026 around "Runs itself" |
 | 1. Concept | [x] | "Runs itself" picked over "Now hiring", 22 Sep 2026 |
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
-| 3. Sections | [~] | Products details pass, detail 3 of 6 (the visual); two sections to go |
+| 3. Sections | [~] | Products details pass, detail 4 of 6 (the early-access note); two sections to go |
 | 4. Whole page | [ ] | |
 | 5. Phones | [~] | AI Employees, Operating Systems and Products have phone designs; the rest unchecked as phone designs |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; "See Herbert Reach" goes to the example page |
@@ -40,7 +40,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 2. How It Works | n/a | [x] | [x] | [x] | [x] | Five details, 11 and 12 Oct |
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
-| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; details 1 and 2 of 6 (the line, the facts) applied, detail 3 of 6 (the visual) next |
+| 5. Products | [x] | [x] | [x] | [x] | [~] | Definition settled (marketing-engine docs/REACH-DEFINITION.md); details pass restarted; details 1 to 3 of 6 (the line, the facts, the visual) applied, detail 4 of 6 (the early-access note) next |
 | 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
@@ -1746,4 +1746,32 @@ order with the day’s numbers, closest to the Herbert OS screens above it.
 Every figure belongs to Dave’s Plumbing, an example business; Google is the
 only platform shown while Meta waits on app review. The phone version is
 detail 6. Awaiting Will’s pick.
+
+Will (19 Oct 2026), on the board: "i like todays visual i think, what do u
+think". Recommended keeping it with three fixes (the landing page entry, the
+Meta rows, cost per enquiry), then Will: "why doesnt Herbert Reach build
+landing pages yet. we arent selling what we have built yet, we're selling the
+full product. and we dont have to commit this products page yet, but lets
+build it up".
+
+## [x] Products details, 3 of 6: the visual is today’s layout, built up to the full product (19 Oct 2026)
+
+Decision: the Products band sells Herbert Reach as defined
+(code/marketing-engine/docs/REACH-DEFINITION.md), not only what is built; the
+early-access note covers the gap and no result is promised. So landing pages
+and Meta stay, and the claims flagged earlier against the build ("Type your
+name.", benching on booked jobs) are clear. Built:
+`components/runs/ReachDashboard.js`, today’s layout carrying the whole
+department: tiles for spend across every channel, enquiries (every one called
+back), jobs booked and cost per job; a chart of spend and booked jobs; a
+channels table (Google ads, Meta ads, Google Business Profile, social posts,
+email to past customers) with enquiries, jobs and cost per job; and the
+morning as the AI employees (Researcher, Analyst, Creative with the new ad and
+landing page held for the owner then approved, Social, Reviews, Leads with an
+enquiry called back in 48 seconds and booked). Plays once in view; each feed
+row carries its status on its time row so the whole dashboard fits the frame
+(690px of 740). `EngineDashboard` stays for the /work example page. Verified
+at 1440, 1280, 375 and 320, motion on and off: no overflow, no errors. Held back
+at first at Will’s word, then committed on his "commit" (19 Oct 2026).
+Screens: `assets-2026-10-19/products-reach-dash-1440.png` and `-mid-1440.png`.
 
