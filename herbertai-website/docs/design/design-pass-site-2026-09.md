@@ -41,7 +41,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 3. AI Employees | [x] | [x] | [x] | [x] | [x] | Five details and the avatar motion, 16 Oct |
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
-| 6. Who Builds It | [ ] | [ ] | [ ] | [ ] | [ ] | Still the May register; a founder photo changes the options |
+| 6. Who Builds It | [x] | [~] | [ ] | [ ] | [ ] | Facts: photo on About only by the charter, none on file; three options drawn 19 Oct |
 | 7. Book the Audit | [ ] | [ ] | [ ] | [ ] | [ ] | |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
@@ -1828,4 +1828,20 @@ Will’s pick.
 Will (19 Oct 2026): "1". Already built (bc3eb75): the story, then the
 full-product phone version. Products is done: line, facts, visual, the note
 and the link (In development in their place) and the phone layout.
+
+## [~] Who Builds It, facts and options (19 Oct 2026)
+
+Facts first. The 16 Sep decisions (`product/research/markdown/herbert-ai-identity-and-website-2026-09-16-decisions.md`)
+put name, photo and first-person voice on the home founder note; the charter,
+written after it on 22 Sep, says “A founder photo on About only”; no photo of
+Will is on file (`FOUNDER_PHOTO` is null in page.js, a “W” tile stands in). The
+section is the last one still in the May register (cream, the old display
+font). Board: `design-pass-site-2026-10-19-founder.png`, the section replaced
+in the page at 1440 and 375, Will’s first-person line kept as it stands. Today.
+1 The note, set plain: the line large on the paper ground, the label and a link
+to About, no photo, by the charter (recommended). 2 Name and photo: a portrait
+slot beside the line, the 16 Sep decision, needing a real photo. 3 A signed
+note: a heading (“One person builds it.”), the line as a paragraph with one more
+sentence, and a sign-off (name, Founder, Adelaide, the email). Awaiting Will’s
+pick.
 
