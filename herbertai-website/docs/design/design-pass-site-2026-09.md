@@ -42,7 +42,7 @@ Phase 3, section by section (facts, options, pick, build, details):
 | 4. Operating Systems | [x] | [x] | [x] | [x] | [x] | Value model 15 Oct; details 16 and 17 Oct; phone version on phones |
 | 5. Products | [x] | [x] | [x] | [x] | [x] | Six details, 19 Oct 2026: Will’s line, his story as the facts, the full-product dashboard, In development in place of the note and link, the full-product phone version |
 | 6. Who Builds It | [x] | [x] | [x] | [x] | [x] | Three details, 19 Oct 2026: said flat under Founder, no photo; the link to About and the phone layout kept |
-| 7. Book the Audit | [x] | [x] | [x] | [x] | [~] | Built 20 Oct: the form on the homepage, shared with /pilot; detail 1 of 4 kept (the heading), 2 of 4 (the facts) next |
+| 7. Book the Audit | [x] | [x] | [x] | [x] | [~] | Built 20 Oct: the form on the homepage, shared with /pilot; details 1 and 2 of 4 applied (Will’s heading, one line in place of the facts), 3 and 4 (the form’s words, the phone) next |
 
 ## [~] M4.1 Whole-site decisions (options shown 16 Sep 2026)
 
@@ -1971,4 +1971,16 @@ to "Free." so the call is not said twice). 2 What is on the page: "The three
 jobs eating the most hours.", "What each one costs you a year.", "Which one to
 hand over first." 3 No list: one line, "45 minutes, a written page back."
 Awaiting Will’s pick.
+Will (20 Oct 2026): "3", then, mid-build: "i think maybe we do 'Got a job
+eating your time and money?' instead".
+
+## [x] Book the Audit details, 1 and 2 of 4: the heading and the facts (20 Oct 2026)
+
+Built: the heading is Will’s own, "Got a job eating your time and money?" (the
+question shape he kept, with "eating" from the line test’s fifth line), and
+the fact rows are gone for one line, "45 minutes, a written page back." (How It
+Works already gives the audit’s facts). Verified at 1440, 1280, 375 and 320,
+motion on and off: no overflow, no errors; the section is 569px at 1440. As
+built: `assets-2026-10-19/audit-built-1440.png` and `-375.png`. Next: details
+3 and 4, the form’s words and the phone layout.
 

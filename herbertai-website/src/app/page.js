@@ -110,30 +110,22 @@ function FounderNote() {
 }
 
 // Book the Audit, rebuilt 20 Oct 2026 for the "Runs itself" charter: option 3,
-// the form right here (Will: "3"). The ink band; the heading and the audit's
-// three facts as numbered rows on the left (the same form as the Products
-// story), the booking form on the right, so someone who read the whole page
-// books without loading /pilot. The form is the shared AuditForm, the same one
+// the form right here (Will: "3"). The ink band; the heading and one line on
+// the left (detail 2, Will: "3", no list, since How It Works already gives
+// the audit's facts; the heading is Will's own, 20 Oct 2026), the booking form on the right, so someone who read the
+// whole page books without loading /pilot. The form is the shared AuditForm, the same one
 // /pilot#book uses. Options 1 and 2 are drawn in
 // docs/design/design-pass-site-2026-10-19-audit.png.
 function FinalCTA() {
-  const facts = RUNGS[0].facts.map((f) => `${f}.`)
   return (
     <section className="bg-[#111] text-white">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-28 grid lg:grid-cols-2 gap-x-16 gap-y-12 items-end">
         <div className="min-w-0">
           <p className="text-[15px] font-medium text-white/60 mb-4">Book the Audit</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[0.98] max-w-[14ch]" style={{ fontSize: 'clamp(40px, 4.6vw, 68px)' }}>
-            Got a job everyone hates doing?
+            Got a job eating your time and money?
           </h2>
-          <ol className="mt-8 border-b border-white/15">
-            {facts.map((f, i) => (
-              <li key={f} className="flex items-baseline gap-4 py-3 border-t border-white/15">
-                <span aria-hidden className="w-5 shrink-0 font-mono text-[11px] tracking-[0.12em] text-white/40">{String(i + 1).padStart(2, '0')}</span>
-                <span className="text-[19px] font-semibold tracking-[-0.015em]">{f}</span>
-              </li>
-            ))}
-          </ol>
+          <p className="mt-6 text-[19px] leading-[1.45] text-white/70">45 minutes, a written page back.</p>
         </div>
         <div className="min-w-0">
           <div className="rounded-2xl bg-[#FAFAF8] text-[#111] p-6 sm:p-7">
