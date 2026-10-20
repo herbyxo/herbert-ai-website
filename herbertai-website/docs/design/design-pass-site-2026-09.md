@@ -2324,4 +2324,6 @@ page on what your admin costs." 1 "This is the page you get back."
 written down." 3 "The audit, written up." Noted: the sample image shows
 /pilot/sample-audit in the May register; it gets retaken when that page is
 redesigned. Awaiting Will’s pick.
+Will (20 Oct 2026): "2". Built: the written page heading is "What your admin
+costs, written down."
 

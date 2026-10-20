@@ -169,7 +169,7 @@ export default function Pilot() {
         <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
           <div className="min-w-0">
             <Label>What you get back</Label>
-            <H2>A written page on what your admin costs.</H2>
+            <H2>What your admin costs, written down.</H2>
             <p className="mt-5 text-[17px] leading-[1.5] text-[#555] max-w-[40ch]">
               This one is a sample, for a made-up four person accounting practice: the jobs, the
               hours, what each costs a year, and the first one to hand over.
