@@ -2341,3 +2341,27 @@ clock starting at the kickoff; built with a wider measure so "go." does not sit
 alone) 2 today’s heading with the prices 3 "How your first job gets handed
 over." Awaiting Will’s pick.
 
+## /pilot, section by section (restructured 20 Oct 2026)
+
+Will (20 Oct 2026): "are we doing the details pass per section? did we do that
+on the hero?", then "i thought i added the details pass into this design loop
+thing, why did u not pick up on this". He had: the roadmap’s phase 7 runs
+phases 2 to 6 per page, and phase 3 is one section at a time through five
+steps. Claude treated skeleton B’s drawing as every section’s options, built the
+whole page and ran a page-wide word list. The roadmap now says a skeleton
+drawing is not a section’s options (design-taste `loop/roadmap.md`), and the
+memory records the third slip. From here /pilot runs section by section:
+
+| Section | Facts | Options | Pick | Build | Details | Where it stands |
+|---|---|---|---|---|---|---|
+| 1. Hero with the form | [x] | [x] | [x] | [x] | [~] | Skeleton B’s point; heading, label, intro and terms done; left: the form side, spacing, the phone layout |
+| 2. The written page | [x] | [ ] | [ ] | [x] | [~] | Heading done (What your admin costs, written down.); the layout itself never drawn three ways |
+| 3. How it works | [x] | [ ] | [ ] | [x] | [~] | Heading options out (detail 4); the layout never drawn three ways |
+| 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+
+Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
+layout; then section 2’s options.
+
