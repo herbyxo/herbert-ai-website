@@ -2,6 +2,11 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+
+// Pages rebuilt for the "Runs itself" charter: the paper ground, and no header
+// audit button, since each carries its own (the homepage's hero button, /pilot's
+// form in its first section). Pages still in the May register keep cream.
+export const PAPER = ['/', '/pilot']
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Header() {
@@ -20,7 +25,7 @@ export default function Header() {
     // 10 Oct 2026): the hero fills the first screen with its own audit button and
     // this header does not follow on scroll, so a second one only ever sat beside
     // it. The fixed height keeps the header the same with or without the button.
-    <header className={pathname === '/' ? 'bg-[#FAFAF8]' : 'bg-cream'}>
+    <header className={PAPER.includes(pathname) ? 'bg-[#FAFAF8]' : 'bg-cream'}>
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5 md:py-0 md:h-[76px]">
         <Link href="/" className="flex items-center gap-2.5 group">
           <svg
@@ -55,7 +60,7 @@ export default function Header() {
           <NavLink href="/about">About</NavLink>
         </nav>
 
-        {pathname !== '/' && (
+        {!PAPER.includes(pathname) && (
           <div className="hidden md:block">
             <Link
               href="/pilot#book"

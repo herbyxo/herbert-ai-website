@@ -152,6 +152,15 @@ product". So:
   metaphor for the product (a departures board, an andon board) where the
   product can be shown.
 
+## Settled: /pilot (20 Oct 2026)
+
+Will: "B". The audit page every audit button lands on, in this order: 1 the
+offer and the booking form together, #book on that section; 2 the written
+page the audit gives back, shown at size from the real sample; 3 how it works;
+4 what it fixes; 5 after the pilot; 6 the questions; 7 a link back up to the
+form. Paper ground throughout, no header audit button (the form is in the
+first section), nothing moves.
+
 ## Settled: the homepage (14 Oct 2026, seven sections from 15 Oct 2026)
 
 Will: "yes and products now". Sections in this order, with the rhythm of a

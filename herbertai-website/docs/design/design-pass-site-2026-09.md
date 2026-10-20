@@ -2263,4 +2263,23 @@ whole pages in the new register, each replacing /pilot’s main on the dev serve
 written page), with numbered section tags: `design-pass-site-2026-10-20-pilot-skeleton.png`,
 first screens and whole pages, and `assets-2026-10-20/pilot/skeleton-B-fold.png`.
 Awaiting Will’s pick.
+Will (20 Oct 2026): "B".
+
+## [x] Phase 7, /pilot: skeleton B built (20 Oct 2026)
+
+`src/app/pilot/page.js` rebuilt for the charter in skeleton B’s order, today’s
+copy carried over (step 2 retitled "Your first AI employee, built", the 11 Oct
+rule): the offer and the form (`#book` moved onto it), the written page with
+an image of the real sample (`public/pilot/sample-audit-page.jpg`, linking to
+it), how it works, what it fixes, after the pilot, the eight questions with
+their answers, and a link back up. The green-flood close and the May helpers
+are gone. `AuditForm` keeps one look now (the paper card, a 3-row message box
+on /pilot). Header and footer read a shared `PAPER` list (`/`, `/pilot`): paper
+ground, and no header audit button on those pages. Verified at 1440, 1280,
+1024, 375 and 320, motion on and off: no overflow, no errors; /pilot#book
+lands with the form in view; the /pilot form sends five fields with subject
+"· /pilot", the homepage form four. Charter: "Settled: /pilot". As built:
+`assets-2026-10-20/pilot/pilot-built-1440.png`, `-375.png`, folds. Next: the
+details pass, section by section, from the hero’s heading (it repeats the
+homepage’s How It Works line).
 

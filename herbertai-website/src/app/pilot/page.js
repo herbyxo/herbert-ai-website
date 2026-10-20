@@ -1,4 +1,4 @@
-import RevealOnScroll from '../components/motion/RevealOnScroll'
+import Image from 'next/image'
 import AuditForm from '../components/site/AuditForm'
 import { OG_IMAGE } from '@/app/components/site/og'
 
@@ -64,6 +64,62 @@ const faqJsonLd = {
   })),
 }
 
+// /pilot, rebuilt 20 Oct 2026 for the "Runs itself" charter, skeleton B (Will:
+// "B"): the offer and the booking form together on the first screen, since every
+// "Book a free AI audit" button lands here at #book; then the written page the
+// audit gives back, shown at size from the real sample; how it works; what it
+// fixes; after the pilot; the questions; and a link back up to the form. The
+// skeletons are in docs/design/design-pass-site-2026-10-20-pilot-skeleton.png.
+// Words are the details pass, section by section.
+
+const TERMS = [
+  ['Free', '45 minute audit, written up'],
+  ['$3,500', 'Your first AI employee, fixed'],
+  ['14 days', 'Live, or it’s free'],
+  ['100%', 'Credited to a bigger build'],
+]
+
+const STEPS = [
+  { n: 'Step 1', title: 'The free AI audit', facts: ['45 minutes auditing your business', 'A written page in two business days', 'The three jobs costing you most, in your figures'] },
+  { n: 'Step 2', title: 'Your first AI employee, built', facts: ['Built around the tools you already use', 'One job and a name, say an AI document chaser', 'A progress update, not a project plan'] },
+  { n: 'Step 3', title: 'Live on day 14', facts: ['Your team uses it the same day', 'A walkthrough so everyone knows how', 'A twelve month roadmap of the next jobs'] },
+]
+
+const FIXES = [
+  ['Chasing', 'Documents, invoices, approvals. The follow-up goes out on time, every time, without anyone writing it.'],
+  ['Re-typing', 'The same details keyed into three systems. Entered once, synced everywhere.'],
+  ['The same emails', 'Quotes, confirmations, updates: drafted for you, checked by you, sent in seconds.'],
+  ['Booking admin', 'Confirmations, reschedules and reminders handled without touching the calendar.'],
+  ['Handovers', 'Job details that live in one person’s head or inbox, put on one screen the whole team can see.'],
+  ['The Monday report', 'The numbers you compile by hand every week, compiled for you.'],
+]
+
+const AFTER = [
+  ['Your AI operating system', 'When one job runs itself, the next ones follow. An AI operating system puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns. Scoped after the audit, from $25,000, with the pilot’s $3,500 taken off.'],
+  ['Keep it running', 'A retainer from $1,000 a month covers hosting, fixes, a set number of small changes, and a monthly report on what the system handled and one improvement shipped. Month to month, and nothing switches off without being handed over to you first.'],
+  ['The first three', 'The first three pilot clients who agree to a case study and a testimonial get 90 days of included care instead of 30. The price is the same; the proof is what we are short of.'],
+]
+
+function Label({ children, dark = false }) {
+  return <p className={`text-[16px] font-medium mb-4 ${dark ? 'text-white/60' : 'text-[#555]'}`}>{children}</p>
+}
+
+function H2({ children }) {
+  return (
+    <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+      {children}
+    </h2>
+  )
+}
+
+function Section({ children, first = false }) {
+  return (
+    <section className={`bg-[#FAFAF8] text-[#111] ${first ? '' : 'border-t border-[#111]/10'}`}>
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">{children}</div>
+    </section>
+  )
+}
+
 export default function Pilot() {
   return (
     <>
@@ -72,237 +128,137 @@ export default function Pilot() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* ─── Hero: static (above the fold, must paint on first load) ─ */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-40 md:pb-28">
-          <Eyebrow>Free AI audit</Eyebrow>
-          <h1
-            className="font-display text-ink max-w-[16ch]"
-            style={{
-              fontSize: 'var(--text-display-lg)',
-              lineHeight: 0.92,
-              letterSpacing: '-0.04em',
-              fontWeight: 800,
-            }}
-          >
-            Find the job that <em className="serif-em">costs you most.</em>
-          </h1>
-          <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
-            A free 45 minute AI audit: where the hours go, what each
-            repetitive job costs you a year, and which one to hand to software
-            first. Written up within two business days, yours to keep. If you
-            want the first one built, that&apos;s your first AI employee: live in
-            14 days, $3,500 fixed, or it&apos;s free.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#book"
-              className="inline-flex items-center gap-2 bg-green text-ink px-7 py-3.5 rounded-full font-semibold text-[15px] hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
-            >
-              Book my free AI audit <span aria-hidden>&rarr;</span>
-            </a>
-          </div>
-
-          {/* Terms strip */}
-          <div className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[820px]">
-            <Stat n="Free" label="45 minute audit, written up" />
-            <Stat n="$3,500" label="Pilot. Fixed, no hourly billing" />
-            <Stat n="14 days" label="Live, or it's free" />
-            <Stat n="100%" label="Credited to a bigger build" />
-          </div>
-        </div>
-      </section>
-
-      {/* ─── How it works ─── */}
-      <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <Eyebrow>How it works</Eyebrow>
-          <h2 className="font-display text-ink mb-14" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-            Audit first.
-            <br />
-            Then fourteen days.
-          </h2>
-          <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
-            <Step
-              n="01"
-              title="The free AI audit"
-              body="Forty five minutes on how the business runs and where the time goes. Within two business days you get a written page: the three jobs eating the most hours, what each costs you a year, and which one to hand over first. No obligation."
-            />
-            <Step
-              n="02"
-              title="Will builds your first AI employee"
-              body="Two weeks, built around the tools you already use. It gets one job and a name, say an AI document chaser. You get a progress update, not a project plan, and nothing changes for your team until it's ready."
-            />
-            <Step
-              n="03"
-              title="Live on day 14"
-              body="Your team starts using it the same day, with a walkthrough so everyone knows how, and a twelve month AI roadmap of the next jobs worth handing over."
-            />
-          </div>
-          <p className="mt-12 text-[15px] md:text-[16px] text-muted">
-            Want to see the written page before you book?{' '}
-            <a href="/pilot/sample-audit" className="text-ink font-medium hover:text-green-deep transition-colors">
-              Read a sample audit page &rarr;
-            </a>
-          </p>
-        </div>
-      </section>
-
-      {/* ─── What it fixes ─── */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <Eyebrow>What it fixes</Eyebrow>
-          <h2 className="font-display text-ink mb-14" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-            The job everyone
-            <br />
-            hates doing.
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-[1000px]">
-            <Inclusion title="Chasing" body="Documents, invoices, approvals. The follow-up goes out on time, every time, without anyone writing it." />
-            <Inclusion title="Re-typing" body="The same details keyed into three systems. Entered once, synced everywhere." />
-            <Inclusion title="The same emails" body="Quotes, confirmations, updates: drafted for you, checked by you, sent in seconds." />
-            <Inclusion title="Booking admin" body="Confirmations, reschedules and reminders handled without touching the calendar." />
-            <Inclusion title="Handovers" body="Job details that live in one person's head or inbox, put on one screen the whole team can see." />
-            <Inclusion title="The Monday report" body="The numbers you compile by hand every week, compiled for you." />
-          </div>
-        </div>
-      </section>
-
-      {/* ─── After the pilot: the rungs above it ─── */}
-      <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <Eyebrow>After the pilot</Eyebrow>
-          <h2 className="font-display text-ink mb-14" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-            One job first.
-            <br />
-            Then the system.
-          </h2>
-          <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
-            <Step
-              n="04"
-              title="Your AI operating system"
-              body="When one job runs itself, the next ones follow. An AI operating system puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns. Scoped after the audit, from $25,000, with the pilot's $3,500 taken off."
-            />
-            <Step
-              n="05"
-              title="Keep it running"
-              body="A retainer from $1,000 a month covers hosting, fixes, a set number of small changes, and a monthly report on what the system handled and one improvement shipped. Month to month, and nothing switches off without being handed over to you first."
-            />
-            <Step
-              n="06"
-              title="The first three"
-              body="The first three pilot clients who agree to a case study and a testimonial get 90 days of included care instead of 30. The price is the same; the proof is what we are short of."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Form ─── */}
-      <section id="book" className="bg-cream-alt scroll-mt-24">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid md:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
-          <div>
-            <Eyebrow>Start here</Eyebrow>
-            <h2 className="font-display text-ink" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-              Book your free AI audit.
-            </h2>
-            <p className="mt-6 text-[16px] md:text-[17px] text-muted leading-[1.55] max-w-[46ch]">
-              Tell us what a normal week looks like and Will calls you the same
-              day to set a time. Forty five minutes, no preparation, no
-              obligation. If software is not the answer for you, the audit says so.
+      {/* 1. The offer and the form. #book is here: every audit button lands on it. */}
+      <section id="book" className="bg-[#FAFAF8] text-[#111] scroll-mt-4">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-16 pb-20 md:pb-24 grid lg:grid-cols-[0.95fr_1.05fr] gap-x-14 gap-y-12 items-center">
+          <div className="min-w-0">
+            <Label>Free AI audit</Label>
+            <h1 className="font-bold tracking-[-0.045em] leading-[0.95] max-w-[14ch]" style={{ fontSize: 'clamp(44px, 4.4vw, 64px)' }}>
+              Find the job that costs you most.
+            </h1>
+            <p className="mt-6 text-[19px] leading-[1.45] text-[#333] max-w-[40ch]">
+              A free 45 minute AI audit: where the hours go, what each repetitive job costs you a
+              year, and which one to hand to software first. Written up within two business days,
+              yours to keep.
             </p>
-            <p className="mt-6 text-[14px] text-muted">
-              Prefer to talk now?{' '}
-              <a href="tel:+61448111840" className="text-ink font-medium hover:text-green-deep transition-colors">
-                0448 111 840
-              </a>{' '}
-              (Will, Adelaide).
-            </p>
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-[760px]">
+              {TERMS.map(([n, l]) => (
+                <div key={n} className="border-t border-[#111]/12 pt-3">
+                  <div className="text-[26px] font-semibold tracking-[-0.02em]">{n}</div>
+                  <div className="mt-1 text-[14px] leading-[1.35] text-[#777]">{l}</div>
+                </div>
+              ))}
+            </div>
           </div>
-
-          <RevealOnScroll>
-            <div className="bg-cream border border-line rounded-3xl p-8 md:p-10">
+          <div className="min-w-0">
+            <div className="rounded-2xl border border-[#111]/10 bg-[#FAFAF8] p-6 sm:p-7">
               <AuditForm source="/pilot" />
             </div>
-          </RevealOnScroll>
-        </div>
-      </section>
-
-      {/* ─── FAQ ─── */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <Eyebrow>Common questions</Eyebrow>
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 max-w-[1000px]">
-            {faqs.map((f) => (
-              <Faq key={f.q} q={f.q} a={f.a} />
-            ))}
+            <p className="mt-4 text-[15px] text-[#555]">
+              Prefer to talk now? <a href="tel:+61448111840" className="font-medium text-[#111] underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">0448 111 840</a>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ─── Final CTA: the one green-flood moment ─── */}
-      <section className="bg-green">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 text-center">
-          <h2 className="font-display text-ink mx-auto max-w-[18ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-            Fourteen days from now, it&apos;s done.
-          </h2>
-          <a
-            href="#book"
-            className="mt-10 inline-flex items-center gap-2 bg-ink text-cream px-8 py-4 rounded-full font-semibold text-[16px] hover:bg-ink-soft transition-colors"
-          >
-            Book my free AI audit <span aria-hidden>&rarr;</span>
+      {/* 2. The written page the audit gives back, shown at size. */}
+      <Section>
+        <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
+          <div className="min-w-0">
+            <Label>What you get back</Label>
+            <H2>A written page on what your admin costs.</H2>
+            <p className="mt-5 text-[17px] leading-[1.5] text-[#555] max-w-[40ch]">
+              This one is a sample, for a made-up four person accounting practice: the jobs, the
+              hours, what each costs a year, and the first one to hand over.
+            </p>
+            <p className="mt-6">
+              <a href="/pilot/sample-audit" className="text-[16px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
+                Read the whole sample <span aria-hidden>&rarr;</span>
+              </a>
+            </p>
+          </div>
+          <a href="/pilot/sample-audit" className="block min-w-0 rounded-xl overflow-hidden border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)]">
+            <Image
+              src="/pilot/sample-audit-page.jpg"
+              alt="The top of the sample audit page: the jobs eating the time at a four person accounting practice, with the hours and what each costs a year"
+              width={2496}
+              height={2040}
+              sizes="(min-width: 1024px) 740px, 100vw"
+              className="w-full h-auto block"
+            />
           </a>
+        </div>
+      </Section>
+
+      {/* 3. How it works. */}
+      <Section>
+        <Label>How it works</Label>
+        <H2>Audit first. Then fourteen days.</H2>
+        <div className="mt-12 grid md:grid-cols-3 gap-10 lg:gap-12">
+          {STEPS.map((st) => (
+            <div key={st.n} className="border-t border-[#111]/15 pt-6">
+              <p className="text-[16px] font-medium text-[#777] mb-5">{st.n}</p>
+              <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-3">{st.title}</h3>
+              <ul>
+                {st.facts.map((f) => (
+                  <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* 4. What it fixes. */}
+      <Section>
+        <Label>What it fixes</Label>
+        <H2>The job everyone hates doing.</H2>
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+          {FIXES.map(([t, b]) => (
+            <div key={t} className="border-t border-[#111]/15 pt-4">
+              <h3 className="text-[20px] font-semibold tracking-[-0.015em]">{t}</h3>
+              <p className="mt-1.5 text-[16px] leading-[1.5] text-[#555]">{b}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* 5. After the pilot. */}
+      <Section>
+        <Label>After the pilot</Label>
+        <H2>One job first. Then the system.</H2>
+        <div className="mt-12 grid md:grid-cols-3 gap-x-12 gap-y-8">
+          {AFTER.map(([t, b]) => (
+            <div key={t} className="border-t border-[#111]/15 pt-4">
+              <h3 className="text-[20px] font-semibold tracking-[-0.015em]">{t}</h3>
+              <p className="mt-1.5 text-[16px] leading-[1.5] text-[#555]">{b}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* 6. The questions. */}
+      <Section>
+        <Label>Questions</Label>
+        <H2>Before you book.</H2>
+        <div className="mt-10 grid md:grid-cols-2 gap-x-12">
+          {faqs.map((f) => (
+            <div key={f.q} className="border-t border-[#111]/12 py-5">
+              <h3 className="text-[18px] font-semibold tracking-[-0.01em]">{f.q}</h3>
+              <p className="mt-2 text-[16px] leading-[1.55] text-[#555]">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* 7. Back up to the form. */}
+      <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-14 pb-20">
+          <p className="text-[20px] font-semibold tracking-[-0.01em]">
+            Ready? <a href="#book" className="underline underline-offset-[5px] decoration-[#111]/30 hover:decoration-[#111]">Book your free AI audit <span aria-hidden>&uarr;</span></a>
+          </p>
         </div>
       </section>
     </>
-  )
-}
-
-/* ─── helpers ──────────────────────────────────────────────────── */
-
-function Stat({ n, label }) {
-  return (
-    <div>
-      <div className="font-display text-ink text-[28px] md:text-[34px] font-bold tracking-[-0.02em]">{n}</div>
-      <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">{label}</div>
-    </div>
-  )
-}
-
-function Step({ n, title, body }) {
-  return (
-    <RevealOnScroll>
-      <div>
-        <div className="font-mono text-[12px] tracking-[0.18em] text-green-deep mb-4">{n}</div>
-        <h3 className="text-[20px] md:text-[22px] font-semibold tracking-[-0.01em] text-ink mb-3">{title}</h3>
-        <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{body}</p>
-      </div>
-    </RevealOnScroll>
-  )
-}
-
-function Inclusion({ title, body }) {
-  return (
-    <div>
-      <h3 className="text-[17px] font-semibold tracking-[-0.01em] text-ink mb-2">{title}</h3>
-      <p className="text-[15px] text-muted leading-[1.55]">{body}</p>
-    </div>
-  )
-}
-
-function Faq({ q, a }) {
-  return (
-    <div>
-      <h3 className="text-[18px] font-semibold tracking-[-0.01em] text-ink mb-3">{q}</h3>
-      <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{a}</p>
-    </div>
-  )
-}
-
-function Eyebrow({ children }) {
-  return (
-    <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-      <span className="w-8 h-px bg-ink" />
-      {children}
-    </div>
   )
 }

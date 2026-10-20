@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { PAPER } from './Header'
 
 const managerUrl = process.env.NEXT_PUBLIC_MANAGER_DASHBOARD_URL
 const ownerUrl = process.env.NEXT_PUBLIC_OWNER_CONSOLE_URL
@@ -45,7 +46,7 @@ export default function Footer() {
   if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/') || pathname?.startsWith('/demo/') || pathname?.startsWith('/lab')) return null
 
   return (
-    <footer className={pathname === '/' ? 'bg-[#FAFAF8] border-t border-[#111]/10' : 'bg-cream border-t border-line'}>
+    <footer className={PAPER.includes(pathname) ? 'bg-[#FAFAF8] border-t border-[#111]/10' : 'bg-cream border-t border-line'}>
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-10">
 
         <div className="grid lg:grid-cols-[2fr_1fr_1fr] gap-10 lg:gap-12">
@@ -95,7 +96,7 @@ export default function Footer() {
           )}
         </div>
 
-        <div className={`mt-16 pt-6 border-t ${pathname === '/' ? 'border-[#111]/10' : 'border-line'} flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
+        <div className={`mt-16 pt-6 border-t ${PAPER.includes(pathname) ? 'border-[#111]/10' : 'border-line'} flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
           <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <span className="whitespace-nowrap">© {new Date().getFullYear()} Herbert AI</span>
             {/* The search pages, kept as real links in the quiet row (Will, 20 Oct

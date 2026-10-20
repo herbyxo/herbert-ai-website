@@ -134,7 +134,7 @@ function FinalCTA() {
         </div>
         <div className="min-w-0">
           <div className="rounded-2xl bg-[#FAFAF8] text-[#111] p-6 sm:p-7">
-            <AuditForm source="home" look="paper" message={false} />
+            <AuditForm source="home" message={false} />
           </div>
         </div>
       </div>
