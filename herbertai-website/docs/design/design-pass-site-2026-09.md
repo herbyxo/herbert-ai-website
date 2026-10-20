@@ -2315,3 +2315,13 @@ no term wraps. Carried to the How it works detail: the pilot’s $3,500 and its
 14-day guarantee left the hero, so How it works gets price lines per step like
 the homepage’s.
 
+## [~] /pilot details, 3 of 9: the written page heading (options 20 Oct 2026)
+
+Board: `design-pass-site-2026-10-20-pilot-page.png`, line test
+`-pilot-page-test.png`, plain statements only (no couplets). Today "A written
+page on what your admin costs." 1 "This is the page you get back."
+(recommended: the sample beside it does the showing) 2 "What your admin costs,
+written down." 3 "The audit, written up." Noted: the sample image shows
+/pilot/sample-audit in the May register; it gets retaken when that page is
+redesigned. Awaiting Will’s pick.
+

@@ -1,0 +1,131 @@
+{
+ "intro": "/pilot details, 3 of 9. Only the heading beside the sample changes. Plain statements only, by your rule against slogan couplets.",
+ "lists": [
+  {
+   "key": "today",
+   "name": "Today",
+   "kind": null,
+   "rows": [
+    "A written page on what your admin costs."
+   ],
+   "note": "Clear, a beat long."
+  },
+  {
+   "key": "1",
+   "name": "1. Point at it",
+   "kind": null,
+   "rows": [
+    "This is the page you get back."
+   ],
+   "note": "Plain, and the sample beside it does the showing. Recommended."
+  },
+  {
+   "key": "2",
+   "name": "2. What it holds",
+   "kind": null,
+   "rows": [
+    "What your admin costs, written down."
+   ],
+   "note": "Says what the page holds, in the owner’s word."
+  },
+  {
+   "key": "3",
+   "name": "3. The plainest",
+   "kind": null,
+   "rows": [
+    "The audit, written up."
+   ],
+   "note": "Four words; says least."
+  }
+ ],
+ "test": {
+  "intro": "Every line that passed the gates, scored and sorted.",
+  "key": "Scale: 0 to 5, one point each, half for partly: Picture, Prove, Only us (Harry Dry’s questions), Device, Your shape (writing-style references/lines.md, slogan couplets score 0).",
+  "cols": [
+   "Picture",
+   "Prove",
+   "Only us",
+   "Device",
+   "Your shape"
+  ],
+  "rows": [
+   {
+    "line": "This is the page you get back.",
+    "scores": [
+     1,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Plain, and it points at the sample beside it, so the picture does the work."
+   },
+   {
+    "line": "What your admin costs, written down.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Says what the page holds, in the owner’s word."
+   },
+   {
+    "line": "What it looks like on paper.",
+    "scores": [
+     1,
+     0.5,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Bends “on paper”; reads a touch clever."
+   },
+   {
+    "line": "Your week, priced, on one page.",
+    "scores": [
+     1,
+     1,
+     1,
+     0.5,
+     0.5
+    ],
+    "why": "Three pieces in one line; busy."
+   },
+   {
+    "line": "The audit, written up.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0,
+     1
+    ],
+    "why": "Plainest; says least."
+   },
+   {
+    "line": "A written page on what your admin costs.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0,
+     0.5
+    ],
+    "why": "Today. Clear, a beat long."
+   },
+   {
+    "line": "Every job, what it costs you a year.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0,
+     0.5
+    ],
+    "why": "Exact; reads like a table heading."
+   }
+  ]
+ }
+}
