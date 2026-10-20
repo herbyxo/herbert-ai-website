@@ -2365,3 +2365,13 @@ memory records the third slip. From here /pilot runs section by section:
 Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
 layout; then section 2’s options.
 
+## [~] /pilot section 1, the hero: remaining detail 1 of 3, the form side (options 20 Oct 2026)
+
+Board: `design-pass-site-2026-10-20-pilot-formside.png`, the first screen at
+1440 and the whole hero on a phone. Today the card and a loose "Prefer to talk
+now? 0448 111 840" under it. 1 the number inside the card under the button,
+"Or call 0448 111 840" (recommended) 2 the form alone, the number left to the
+footer 3 the number on the left under the terms. Awaiting Will’s pick. Then
+detail 2, spacing, and 3, the phone layout (on a phone the form starts below
+the first screen today).
+
