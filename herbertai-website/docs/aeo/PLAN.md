@@ -12,7 +12,8 @@ Herbert AI gets named when an Australian owner of a small business asks a search
 - Perplexity left it out of category answers and described it from a snapshot older than September ("web design and automation").
 - Google indexed the site but it was not on page 1 for "AI consultant for small business Adelaide".
 - Bing had none of the site's pages indexed. A `site:` search returned an unrelated site, and the only result for the domain was Will's LinkedIn profile. Bing's index feeds Copilot and much of ChatGPT search, so this is the largest single gap.
-- Google Maps showed no listing for "Herbert AI Adelaide" (it returned Heubert Technologies and others), so the Business Profile is unverified, hidden or missing.
+- Google Maps showed no listing for "Herbert AI Adelaide" (it returned Heubert Technologies and others). The Business Profile exists (Herbert AI, Adelaide SA) but its status is "Verification required", so it shows nowhere.
+- Brave, which Claude's web search uses, had only the homepage indexed.
 - The LinkedIn company page exists (linkedin.com/company/herbert-ai, created 9 Oct 2026, rebranded 15 Oct) but was not linked from the site. Will's own profile is linkedin.com/in/will-herbert-founder.
 - The name collides with Herbert Digital, Herbert Retail and other Herbert businesses, so every profile has to pair "Herbert AI" with Adelaide and the domain.
 
@@ -58,7 +59,7 @@ What follows from it: for AI services the contest is being named in AI answers a
 - [ ] Search Console access from a session: `marketing/seo/gsc.py auth` (one Allow click), then `gsc.py submit` and the first query report.
 - [ ] Bing Webmaster Tools: sign in, import the site from Search Console, submit the sitemap, turn on the AI Performance report (Copilot citations). Bing feeds Copilot and most of ChatGPT search: 87% of SearchGPT citations matched Bing's top results in one study.
 - [ ] Brave recrawl request (search.brave.com/help/brave-search-crawler): Claude's web search runs on Brave.
-- [ ] Google Business Profile: find out why it does not show, then verify it as a service-area business (Adelaide, no shopfront), category, description, services with prices, the website.
+- [ ] Google Business Profile: verify it (business.google.com/locations, "Get verified", usually a short phone video), as a service-area business in Adelaide with the address hidden, then category, description, services with prices and the website.
 - [ ] Bing Places (imports from the Business Profile) and Apple Business Connect.
 
 ### M3. Mentioned by others
