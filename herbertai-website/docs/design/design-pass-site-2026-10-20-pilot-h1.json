@@ -1,0 +1,186 @@
+{
+ "intro": "/pilot details, 1 of 9. Only the hero heading changes. 12 lines that passed the gates, scored on the second sheet, the best three beside today.",
+ "lists": [
+  {
+   "key": "today",
+   "name": "Today",
+   "kind": null,
+   "rows": [
+    "Find the job that costs you most."
+   ],
+   "note": "Nearly the homepage’s How It Works heading, word for word."
+  },
+  {
+   "key": "1",
+   "name": "1. The homepage’s question, answered",
+   "kind": null,
+   "rows": [
+    "Find the job eating your time and money."
+   ],
+   "note": "Someone who clicked “Got a job eating your time and money?” lands on the same words, the message match every ad playbook asks for. Your phrase. Recommended."
+  },
+  {
+   "key": "2",
+   "name": "2. The price",
+   "kind": null,
+   "rows": [
+    "Put a price on your busywork."
+   ],
+   "note": "What the audit does, in the owner’s word for the work."
+  },
+  {
+   "key": "3",
+   "name": "3. The week",
+   "kind": null,
+   "rows": [
+    "Where your week goes, in dollars."
+   ],
+   "note": "A picture and a turn; the quietest of the three."
+  }
+ ],
+ "test": {
+  "intro": "Every line that passed the gates, scored and sorted. Mark the numbers that grab you and any that put you off.",
+  "key": "Scale: 0 to 5, one point each, half for partly. Picture, Prove and Only us are Harry Dry’s three questions; Device is one structural move; Your shape is short, one claim, no tail, and the owner’s own words (writing-style references/lines.md).",
+  "cols": [
+   "Picture",
+   "Prove",
+   "Only us",
+   "Device",
+   "Your shape"
+  ],
+  "rows": [
+   {
+    "line": "Find the job eating your time and money.",
+    "scores": [
+     1,
+     0.5,
+     1,
+     1,
+     1
+    ],
+    "why": "Answers the homepage’s last question in the same words (“Got a job eating your time and money?”), so the page someone lands on keeps the promise they clicked. Your own phrase."
+   },
+   {
+    "line": "Where your week goes, in dollars.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "A picture (the week) and the turn (in dollars); quiet."
+   },
+   {
+    "line": "Book the audit. Keep the page.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "why": "Two beats; better as a close than a hero."
+   },
+   {
+    "line": "Put a price on your busywork.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Says what the audit does in five words; “busywork” is the owner’s own word."
+   },
+   {
+    "line": "Your admin, priced.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "why": "Three words, the deliverable; reads like a label."
+   },
+   {
+    "line": "The job eating your week, priced.",
+    "scores": [
+     1,
+     1,
+     0.5,
+     1,
+     0.5
+    ],
+    "why": "Your “eating” with the deliverable; a beat long."
+   },
+   {
+    "line": "Find the job worth handing over.",
+    "scores": [
+     0.5,
+     0.5,
+     1,
+     0.5,
+     1
+    ],
+    "why": "Points at the pilot, not the audit."
+   },
+   {
+    "line": "See what your admin costs you.",
+    "scores": [
+     0.5,
+     1,
+     0.5,
+     0,
+     1
+    ],
+    "why": "Plain and true, no device."
+   },
+   {
+    "line": "Find the job that costs you most.",
+    "scores": [
+     0.5,
+     0.5,
+     0.5,
+     0,
+     1
+    ],
+    "why": "Today. Nearly the homepage’s How It Works heading word for word."
+   },
+   {
+    "line": "What is your busywork costing you?",
+    "scores": [
+     0.5,
+     0.5,
+     0,
+     0.5,
+     1
+    ],
+    "why": "A question any consultant could ask."
+   },
+   {
+    "line": "Every repetitive job, priced in your own figures.",
+    "scores": [
+     0.5,
+     1,
+     1,
+     0,
+     0
+    ],
+    "why": "Exact and long."
+   },
+   {
+    "line": "Your free AI audit.",
+    "scores": [
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "why": "A label; says nothing the label above it does not."
+   }
+  ]
+ }
+}

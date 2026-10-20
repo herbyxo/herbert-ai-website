@@ -2283,3 +2283,15 @@ lands with the form in view; the /pilot form sends five fields with subject
 details pass, section by section, from the hero’s heading (it repeats the
 homepage’s How It Works line).
 
+## [~] /pilot details, 1 of 9: the hero heading (options 20 Oct 2026)
+
+The nine: the hero heading; the hero intro and terms; the written page’s words;
+the headings of How it works, What it fixes, After the pilot and Questions;
+the link back up; the phone layout. Line test: `design-pass-site-2026-10-20-pilot-h1-test.png`
+(12 lines). Options: `design-pass-site-2026-10-20-pilot-h1.png`. Today
+"Find the job that costs you most." (nearly the homepage’s How It Works
+heading). 1 "Find the job eating your time and money." (recommended: answers
+the homepage’s last question in Will’s own words, the message match an ad
+playbook asks for) 2 "Put a price on your busywork." 3 "Where your week goes,
+in dollars." Awaiting Will’s pick.
+
