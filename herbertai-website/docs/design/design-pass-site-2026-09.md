@@ -2177,4 +2177,7 @@ story as a list and the phone version, unchanged. Verified at 1440, 1280,
 `assets-2026-10-20/reach-row-built-1440.png` and `-375.png`. With Operating
 Systems at 78% and the body text up 1px, the three critique fixes Will picked
 are built.
+Will (20 Oct 2026): "get rid of the 'you own what gets built' at the footer".
+The footer line is now "Custom software and AI for small businesses, built in
+Adelaide." alone.
 

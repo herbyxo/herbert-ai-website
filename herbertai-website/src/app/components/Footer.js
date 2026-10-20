@@ -66,7 +66,6 @@ export default function Footer() {
             </Link>
             <p className="text-muted text-[14px] leading-[1.6] max-w-md">
               Custom software and AI for small businesses, built in Adelaide.
-              You own what gets built.
             </p>
           </div>
 
