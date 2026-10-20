@@ -2257,4 +2257,10 @@ Three skeletons:
 - C. The homepage’s shape: hero, what it fixes, how it works, the written page,
   after the pilot, questions, and the form as the last section.
 Awaiting Will’s pick.
+Will (20 Oct 2026): "show me A B and C so i know what im looking at". Drawn as
+whole pages in the new register, each replacing /pilot’s main on the dev server
+(real header, footer and fonts, today’s copy, the real sample audit page as the
+written page), with numbered section tags: `design-pass-site-2026-10-20-pilot-skeleton.png`,
+first screens and whole pages, and `assets-2026-10-20/pilot/skeleton-B-fold.png`.
+Awaiting Will’s pick.
 
