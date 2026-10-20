@@ -28,8 +28,8 @@ done. Updated in the same commit as the work.
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
-| 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct); "One builder" still in /about’s meta description and llms.txt |
-| 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
+| 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; Herbert OS name clear with conditions; /about’s "Why one builder" heading left for phase 7 |
+| 7. Other pages | [ ] | Next: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pilot, /pricing, /about (incl. "Why one builder") |
 | 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -2226,4 +2226,10 @@ Checked on the homepage and the site-wide text it shares:
 | 8 | “Herbert OS” as a product name | Operating Systems | clear with conditions (`product/research/markdown/herbert-os-name-check-2026-10-20.md`): no mark, business name or domain holds it; always in full with the industry after it, never PropertyOS, HealthOS, brokeros, Trade OS or Clinic OS, never bare OS; the site already complies (16 uses, all in full) | none |
 | 9 | “One builder” | /about’s meta description, public/llms.txt | the wording Will took off the founder note and footer | drop the phrase in both |
 | 10 | Herbert Reach sold as defined, marked In development | Products | clear (decision of 19 Oct) | none |
+Will (20 Oct 2026): "keep 1, keep 2, keep 3, drop". Items 5, 6 and 7 stay as
+written at Will’s word (the 60-day condition and the licence terms are
+spelled out on /pilot and /pricing, and the 14-day guarantee is his to honour);
+item 9 done: "One builder" is gone from /about’s meta description and from
+public/llms.txt. Left for phase 7: the /about section headed "Why one builder".
+The homepage claims list is cleared; phase 6 is done for the homepage.
 

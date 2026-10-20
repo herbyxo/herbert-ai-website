@@ -6,7 +6,7 @@ import { OG_IMAGE } from '@/app/components/site/og'
 export const metadata = {
   title: 'About | Will Herbert, custom software and AI for small business',
   description:
-    'Will Herbert builds custom software and AI systems for small businesses in Adelaide. One builder, no account managers, and you own what gets built. Every engagement starts with a free AI audit.',
+    'Will Herbert builds custom software and AI systems for small businesses in Adelaide. No account managers, and you own what gets built. Every engagement starts with a free AI audit.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Will Herbert · Herbert AI',
