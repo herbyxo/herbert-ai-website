@@ -72,12 +72,15 @@ const faqJsonLd = {
 // skeletons are in docs/design/design-pass-site-2026-10-20-pilot-skeleton.png.
 // Words are the details pass, section by section. Detail 1 (Will, 20 Oct 2026,
 // "1"): the heading answers the homepage's last question in the same words.
+// Detail 2 (Will, 20 Oct 2026, "1, can u change the heading from Free AI Audit
+// to AI Audit"): a one-sentence intro and the audit's own terms; the pilot's
+// terms are explained in How it works and the questions.
 
 const TERMS = [
-  ['Free', '45 minute audit, written up'],
-  ['$3,500', 'Your first AI employee, fixed'],
-  ['14 days', 'Live, or it’s free'],
-  ['100%', 'Credited to a bigger build'],
+  ['Free', 'No obligation'],
+  ['45 min', 'On how the business runs'],
+  ['2 days', 'Business days to your written page'],
+  ['Yours', 'To keep, either way'],
 ]
 
 const STEPS = [
@@ -133,14 +136,13 @@ export default function Pilot() {
       <section id="book" className="bg-[#FAFAF8] text-[#111] scroll-mt-4">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-16 pb-20 md:pb-24 grid lg:grid-cols-[0.95fr_1.05fr] gap-x-14 gap-y-12 items-center">
           <div className="min-w-0">
-            <Label>Free AI audit</Label>
+            <Label>AI Audit</Label>
             <h1 className="font-bold tracking-[-0.045em] leading-[0.95] max-w-[14ch]" style={{ fontSize: 'clamp(44px, 4.4vw, 64px)' }}>
               Find the job eating your time and money.
             </h1>
             <p className="mt-6 text-[19px] leading-[1.45] text-[#333] max-w-[40ch]">
-              A free 45 minute AI audit: where the hours go, what each repetitive job costs you a
-              year, and which one to hand to software first. Written up within two business days,
-              yours to keep.
+              45 minutes on how your business runs: where the hours go, what each repetitive job
+              costs you a year, and which one to hand over first.
             </p>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-[760px]">
               {TERMS.map(([n, l]) => (

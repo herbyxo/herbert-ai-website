@@ -2307,4 +2307,11 @@ terms (recommended): a one-sentence intro and Free / 45 min / 2 days / Yours,
 the pilot’s terms left to How it works and the questions. 2 no terms. 3 the
 short intro and the audit’s terms as one line of small print. Awaiting
 Will’s pick.
+Will (20 Oct 2026): "1, can u change the heading from Free AI Audit to AI
+Audit". Built: the label "AI Audit", the one-sentence intro, and the terms
+Free (No obligation), 45 min (On how the business runs), 2 days (Business days
+to your written page), Yours (To keep, either way). Verified at five widths,
+no term wraps. Carried to the How it works detail: the pilot’s $3,500 and its
+14-day guarantee left the hero, so How it works gets price lines per step like
+the homepage’s.
 
