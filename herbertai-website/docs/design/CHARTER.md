@@ -186,7 +186,9 @@ steps as being AI audit, AI employee, and then AI Operating System").
    names (Will, 15 Oct 2026: naming the incumbents was "the wrong direction").
    The title under the screen is the product name with the industry: Herbert
    OS for Property, Herbert OS for Trades, and so on (Will, 16 Oct 2026; the
-   test was "you now have a Herbert OS", and it is the rung’s own words); the list
+   test was "you now have a Herbert OS", and it is the rung’s own words; name
+   check 20 Oct 2026: always in full with the industry after it, never the
+   joined forms like PropertyOS, which are other people’s marks); the list
    is the industry big with the jobs that run by themselves under it; the
    section closes on one line under the list, the rung and its price to the
    pricing page. No Built tag and no per-screen link (Will, 16 Oct 2026: one

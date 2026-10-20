@@ -2223,7 +2223,7 @@ Checked on the homepage and the site-wide text it shares:
 | 5 | “The first employee’s $3,500 comes off” | How It Works step 3 | overstates: /pilot and /pricing say only for a bigger build signed within 60 days | “The first employee’s $3,500 comes off within 60 days” |
 | 6 | “Your business owns it” | How It Works step 3 | overstates: the engagement terms give the client a perpetual licence to the code and ownership of their data, accounts and deployment, and Herbert AI keeps the code IP | “It runs on your own accounts” (the sales brief’s own answer) |
 | 7 | “$3,500 fixed. Live in 14 days or it’s free.” | How It Works step 2 | a guarantee; the 16 Sep decisions say it is honoured as written, with a lawyer’s read on the pilot agreement still to come | Will’s call: keep, if it will be honoured |
-| 8 | “Herbert OS” as a product name | Operating Systems | name check running (trade marks, business names, domains) | from the check |
+| 8 | “Herbert OS” as a product name | Operating Systems | clear with conditions (`product/research/markdown/herbert-os-name-check-2026-10-20.md`): no mark, business name or domain holds it; always in full with the industry after it, never PropertyOS, HealthOS, brokeros, Trade OS or Clinic OS, never bare OS; the site already complies (16 uses, all in full) | none |
 | 9 | “One builder” | /about’s meta description, public/llms.txt | the wording Will took off the founder note and footer | drop the phrase in both |
 | 10 | Herbert Reach sold as defined, marked In development | Products | clear (decision of 19 Oct) | none |
 
