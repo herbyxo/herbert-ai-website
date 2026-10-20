@@ -2233,3 +2233,28 @@ item 9 done: "One builder" is gone from /about’s meta description and from
 public/llms.txt. Left for phase 7: the /about section headed "Why one builder".
 The homepage claims list is cleared; phase 6 is done for the homepage.
 
+## [~] Phase 7, /pilot: the skeleton (20 Oct 2026)
+
+Will (20 Oct 2026): "start with pilot". Facts: /pilot is where every "Book a
+free AI audit" button lands (at #book, the form) and where the nav’s "How it
+works" goes (the top). Today, all in the May register: 1 hero, "Find the job
+that costs you most.", with a four-term strip (Free, $3,500, 14 days, 100%
+credited); 2 How it works, three steps and a link to the sample audit page; 3
+What it fixes, six jobs; 4 After the pilot, the operating system, the retainer
+and the first-three offer; 5 the form; 6 eight questions; 7 a green-flood
+close. To fix whatever the order: step 2 is titled "Will builds your first AI
+employee" (breaks the 11 Oct rule, say what happens, not who), and the hero
+line nearly repeats the homepage’s How It Works heading.
+
+Three skeletons:
+- A. Today’s order in the new register: hero, how it works, what it fixes,
+  after the pilot, form, questions, a closing line.
+- B. The form first (recommended): the hero carries the offer and the form
+  together, so the page’s one job is on its first screen; then the written page
+  itself shown at size (the sample audit, the product of the audit, by the
+  "show the product" rule); how it works; what it fixes; after the pilot; the
+  questions; the page ends on a link back to the form.
+- C. The homepage’s shape: hero, what it fixes, how it works, the written page,
+  after the pilot, questions, and the form as the last section.
+Awaiting Will’s pick.
+
