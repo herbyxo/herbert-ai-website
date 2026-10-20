@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs } from '@/app/components/site/schema'
 
 export const metadata = {
   title: 'FAQ | pricing, timelines & process',
@@ -87,6 +88,7 @@ const faqJsonLd = {
 export default function FAQ() {
   return (
     <>
+      <JsonLd data={breadcrumbs([['FAQ', '/faq']])} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

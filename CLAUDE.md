@@ -52,7 +52,9 @@ Sub-line (changed 16 Sep 2026): *"Custom software and AI for small businesses, b
 
 ## Project Structure
 
-The app lives in `herbertai-website/` (repo root is a wrapper). Routes are ground truth — enumerate with `find src/app -name page.js` rather than trusting any list written here. When adding or retiring a route, update all of: page metadata + `alternates.canonical`, `src/app/sitemap.js` (hand-maintained array), `public/llms.txt`, `Header.js` nav, and a `next.config.mjs` redirect if retiring a URL.
+The app lives in `herbertai-website/` (repo root is a wrapper). Routes are ground truth — enumerate with `find src/app -name page.js` rather than trusting any list written here. When adding or retiring a route, update all of: page metadata + `alternates.canonical`, `src/app/seo-routes.json` (the sitemap's route list), `public/llms.txt`, `Header.js` nav, and a `next.config.mjs` redirect if retiring a URL.
+
+**Search and AI search (AEO plan, `herbertai-website/docs/aeo/PLAN.md`, 20 Oct 2026).** Structured data lives in one module, `src/app/components/site/schema.js`: the business, Will and the website are defined once in the layout's graph and pages point at them by `@id` (breadcrumbs, `service()`, profile). The ladder's prices are in it too and must match `/pricing`. When a page changes, run `npm run seo:dates` and commit `src/app/seo-dates.json` so the sitemap's lastmod is true. After a deploy to main reaches production, run `npm run seo:ping` (IndexNow, read by Bing and so by ChatGPT search and Copilot).
 
 **Conventions:** plain JS server components by default, Tailwind v4 utilities only, no CSS modules, no styled-components, no TypeScript, no new colours outside CHARTER.md tokens.
 

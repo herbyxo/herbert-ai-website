@@ -1,31 +1,16 @@
+import ROUTES from './seo-routes.json'
+import DATES from './seo-dates.json'
+
 const BASE = 'https://herbert-aisolutions.com'
 
+// The organic pages, from seo-routes.json (one list for this sitemap and for
+// scripts/seo-dates.mjs). lastModified is the date the page last changed in
+// git, written to seo-dates.json by `npm run seo:dates`, not the build time:
+// a lastmod that moves on every deploy teaches engines to ignore it.
 export default function sitemap() {
-  const lastModified = new Date()
-  const routes = [
-    { path: '', priority: 1.0 },
-    { path: '/services', priority: 0.9 },
-    { path: '/industries', priority: 0.9 },
-    { path: '/pricing', priority: 0.9 },
-    { path: '/about', priority: 0.8 },
-    { path: '/start', priority: 0.95 },
-    { path: '/contact', priority: 0.8 },
-    { path: '/faq', priority: 0.7 },
-    { path: '/privacy', priority: 0.3 },
-    { path: '/web-design-adelaide', priority: 0.85 },
-    { path: '/ai-receptionist', priority: 0.85 },
-    { path: '/google-ads-adelaide', priority: 0.85 },
-    { path: '/pilot', priority: 0.95 },
-    { path: '/work', priority: 0.85 },
-    { path: '/work/marketing-engine', priority: 0.6 },
-    { path: '/industries/accountants', priority: 0.8 },
-    { path: '/industries/allied-health', priority: 0.8 },
-    { path: '/industries/trades', priority: 0.8 },
-    { path: '/industries/real-estate', priority: 0.8 },
-  ]
-  return routes.map((r) => ({
+  return ROUTES.map((r) => ({
     url: `${BASE}${r.path}`,
-    lastModified,
+    lastModified: DATES[r.path || '/'] || undefined,
     changeFrequency: 'monthly',
     priority: r.priority,
   }))

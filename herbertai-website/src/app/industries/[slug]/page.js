@@ -3,11 +3,23 @@ import { notFound } from 'next/navigation'
 import RevealOnScroll from '../../components/motion/RevealOnScroll'
 import { INDUSTRIES, RUNGS, Eyebrow, AuditButton } from '../../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
 
 // One page per target industry: the job, the AI employee, the demo, the audit.
 // The content lives in components/site/shared.js so the home strip and the
 // index say the same thing. These are the seed of the per-industry product
 // pages the long-run plan needs (docs/restructure-2026-09/PROJECT.md, M3).
+
+// The words people search, from the Google Ads keyword planner (Australia,
+// 20 Oct 2026): "ai for accountants" about 1,000 a month, "ai for real estate"
+// about 480, "ai for tradies" about 70. The title leads with them; the page's
+// own heading keeps the AI employee (docs/aeo/PLAN.md).
+const SEARCH = {
+  accountants: 'AI for accountants',
+  'allied-health': 'AI for allied health',
+  trades: 'AI for tradies',
+  'real-estate': 'AI for real estate',
+}
 
 export function generateStaticParams() {
   return INDUSTRIES.map((i) => ({ slug: i.slug }))
@@ -18,7 +30,7 @@ export async function generateMetadata({ params }) {
   const ind = INDUSTRIES.find((i) => i.slug === slug)
   if (!ind) return {}
   return {
-    title: `${ind.employee} for ${ind.name.toLowerCase()}`,
+    title: `${SEARCH[ind.slug] || `AI for ${ind.name.toLowerCase()}`}: ${ind.employee.replace(/^An /, 'an ')}`,
     description: `${ind.bottleneck} ${ind.employee} takes that job: ${ind.employeeDoes} Built in 14 days after a free AI audit.`,
     alternates: { canonical: `/industries/${ind.slug}` },
     openGraph: { title: `${ind.employee} for ${ind.name.toLowerCase()} · Herbert AI`, url: `/industries/${ind.slug}`, images: [OG_IMAGE] },
@@ -33,6 +45,19 @@ export default async function IndustryPage({ params }) {
 
   return (
     <>
+      <JsonLd
+        data={[
+          service({
+            name: `${ind.employee} for ${ind.short.toLowerCase()}`,
+            description: `${ind.bottleneck} ${ind.employee} takes that job: ${ind.employeeDoes}`,
+            path: `/industries/${ind.slug}`,
+            serviceType: 'AI employee',
+            audience: ind.name,
+            offers: LADDER[1],
+          }),
+          breadcrumbs([['Industries', '/industries'], [ind.short, `/industries/${ind.slug}`]]),
+        ]}
+      />
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
           <Eyebrow>{ind.name}</Eyebrow>

@@ -2,6 +2,7 @@ import RevealOnScroll from '../components/motion/RevealOnScroll'
 import MockupLeadForm from '../components/MockupLeadForm'
 import MockupProof from '../components/MockupProof'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs, service } from '@/app/components/site/schema'
 
 export const metadata = {
   title: { absolute: 'Web Design Adelaide | Free Homepage Mockup in 48 Hours' },
@@ -52,6 +53,7 @@ const faqJsonLd = {
 export default function WebDesignAdelaide() {
   return (
     <>
+      <JsonLd data={[service({ name: 'Web design in Adelaide', description: metadata.description, path: '/web-design-adelaide', serviceType: 'Web design', area: 'Adelaide' }), breadcrumbs([['Web design Adelaide', '/web-design-adelaide']])]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

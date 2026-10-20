@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import LenisProvider from './components/motion/LenisProvider'
 import { OG_IMAGE } from './components/site/og'
+import { JsonLd, siteGraph } from './components/site/schema'
 import './globals.css'
 
 // Only the weights the site actually uses. Every extra weight is another file
@@ -101,50 +102,6 @@ export const metadata = {
   category: 'technology',
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': ['ProfessionalService', 'LocalBusiness'],
-  '@id': `${SITE_URL}/#business`,
-  name: SITE_NAME,
-  alternateName: 'herbertai',
-  slogan: 'Custom software and AI for small businesses, built in Adelaide.',
-  description: SITE_DESC,
-  url: SITE_URL,
-  logo: `${SITE_URL}/icon.svg`,
-  image: `${SITE_URL}${OG_IMAGE}`,
-  telephone: '+61448111840',
-  email: 'hello@herbert-aisolutions.com',
-  founder: { '@type': 'Person', name: 'Will Herbert', jobTitle: 'Founder' },
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Adelaide',
-    addressRegion: 'SA',
-    addressCountry: 'AU',
-  },
-  geo: { '@type': 'GeoCoordinates', latitude: -34.9285, longitude: 138.6007 },
-  areaServed: [
-    { '@type': 'City', name: 'Adelaide' },
-    { '@type': 'AdministrativeArea', name: 'South Australia' },
-    { '@type': 'Country', name: 'Australia' },
-  ],
-  serviceArea: { '@type': 'Country', name: 'Australia' },
-  knowsAbout: [
-    'custom software for small business',
-    'AI employees',
-    'AI for small business',
-    'small business automation',
-    'workflow automation',
-    'AI voice agents',
-    'AI receptionist',
-    'AI chatbot widget',
-    'business dashboards',
-    'CRM integration',
-    'custom website development',
-  ],
-  priceRange: '$$',
-  sameAs: ['https://github.com/herbyxo'],
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} ${bricolage.variable}`}>
@@ -162,10 +119,7 @@ export default function RootLayout({ children }) {
           <main id="main" className="flex-grow">{children}</main>
           <Footer />
         </LenisProvider>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={siteGraph(SITE_DESC)} />
         <Analytics />
         <SpeedInsights />
         <TrackBeacon />

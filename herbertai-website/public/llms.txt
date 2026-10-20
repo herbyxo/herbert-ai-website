@@ -1,29 +1,64 @@
 # Herbert AI
 
-> Custom software and AI for small businesses, built in Adelaide by Will Herbert. Every engagement starts with the free audit; the first build is one AI employee for one job, live in 14 days.
+> Herbert AI builds custom software and AI for small businesses. It is based in Adelaide, South Australia, and was founded by Will Herbert. Every engagement starts with a free AI audit, and the first build is one AI employee for one job, live in 14 days for $3,500 fixed.
 
-Herbert AI sells one ladder, taken in order: a free 45 minute AI audit with a written page back within two business days; your first AI employee, built for one job, $3,500 fixed, live in 14 days or free, credited in full to a bigger build within 60 days; a full operations build from $25,000, scoped after the audit; and a retainer from $1,000 a month with a monthly report. Clients are owner-operated businesses with roughly 3 to 20 staff, in five industries: health, property, trades, hospitality and finance. Clients are not named publicly.
+Herbert AI works with owner-operated businesses of roughly 3 to 20 staff, in five industries: health (allied health clinics), property (property managers and real estate agencies), trades (trades businesses with an office), hospitality (venues, restaurants and cafes) and finance (accountants and bookkeepers). It is based in Adelaide and works with businesses across Australia. Clients are not named publicly.
+
+## What it sells
+
+Herbert AI sells one ladder, taken in order.
+
+1. A free AI audit: 45 minutes on how the business runs, then a written page within two business days that puts a yearly cost on each repetitive job, in the business's own figures, and names the one to hand over first.
+2. Your first AI employee: one AI employee for one job, $3,500 fixed, live on the business's real data in 14 days or it is free. The first 30 days of hosting and support are included, then $200 a month care, a handover to the business's own accounts, or a bigger build. The $3,500 is credited in full to a bigger build started within 60 days.
+3. An AI operating system: the full build, from $25,000, scoped after the audit and quoted as one fixed number. Files, communications and follow-ups run on one system, and the business owns it.
+4. A retainer from $1,000 a month, month to month, with a monthly report.
+
+If the audit shows the saving would not comfortably cover the price, the business is told so.
+
+## What an AI employee is
+
+An AI employee is software that does one job in the office, end to end, on the business's real systems, with a person approving anything that goes out to a customer. Each one carries a first name and its job, say "Emma · Maintenance" for a property manager's maintenance requests or "Gus · Recoveries", which compares every signed agreement with what was actually charged. The business names its own AI employee when the build starts. It is not sold as a replacement for staff.
+
+Examples by industry:
+- Property: a maintenance coordinator that logs a tenant's request, books a tradie inside the landlord's limit and keeps everyone told.
+- Finance: a document chaser that chases clients for their documents at tax time and files them into the practice software.
+- Health: a front desk assistant for intake forms, referral letters, recalls and no-show follow-ups.
+- Trades: a quote follow-up that chases every quote that went out and never heard back.
+- Hospitality: replies to function and event enquiries drafted for a person to approve, site visits booked, proposals sent and deposits chased.
+
+## Herbert OS
+
+The AI operating system for each industry is named Herbert OS, with the industry after it: Herbert OS for Property, Herbert OS for Trades, Herbert OS for Health, Herbert OS for Hospitality and Herbert OS for Finance. It puts the whole office on one screen: what the AI employees handled overnight, what is waiting on a person, and what each job is worth. For an example property agency of ten staff with 400 rentals, the site estimates about 17 to 37 hours of office work a week handed to AI employees.
+
+## Herbert Reach (in development)
+
+Herbert Reach is a product by Herbert AI, in development: a marketing department for local service businesses. The owner types the business name, and Herbert Reach writes ads, runs ads, answers leads and books jobs, with every channel judged by its cost per booked job.
 
 ## Pages
 
-- [Home](https://herbert-aisolutions.com/): what Herbert AI is, the ladder, the systems, the four industries.
-- [How it works](https://herbert-aisolutions.com/pilot): the free AI audit, your first AI employee, what comes after, and the booking form.
-- [What gets built](https://herbert-aisolutions.com/services): AI employees (one job each, a person approves what goes out), the operations system they run in, and the growth modules that come after.
-- [The systems](https://herbert-aisolutions.com/work): a property manager's dashboard to click into, an accountant's document chaser demo, an operations hub for a finance brokerage, a marketing engine, a barbershop booking platform, a voice receptionist call.
-- [A marketing engine](https://herbert-aisolutions.com/work/marketing-engine): an example morning of the marketing engine, drawn with made-up data: wasted spend flagged, ads tested and paused, campaigns held for approval.
-- [Industries](https://herbert-aisolutions.com/industries): accountants and bookkeepers, allied health, trades with an office, real estate and property management, each with its own page.
+- [Home](https://herbert-aisolutions.com/): how it works, the AI employees, Herbert OS by industry, Herbert Reach, and the audit booking form.
+- [Free AI audit](https://herbert-aisolutions.com/pilot): what the audit covers, a sample of the written page, how the first AI employee is built, questions and answers, and the booking form.
 - [Pricing](https://herbert-aisolutions.com/pricing): the four rungs and what each costs.
-- [About](https://herbert-aisolutions.com/about): Will Herbert and how working with him goes.
-- [FAQ](https://herbert-aisolutions.com/faq): common questions.
+- [What gets built](https://herbert-aisolutions.com/services): AI employees, the system they run in, and what comes after.
+- [Industries](https://herbert-aisolutions.com/industries), with pages for [accountants and bookkeepers](https://herbert-aisolutions.com/industries/accountants), [allied health](https://herbert-aisolutions.com/industries/allied-health), [trades](https://herbert-aisolutions.com/industries/trades) and [real estate and property management](https://herbert-aisolutions.com/industries/real-estate).
+- [The systems](https://herbert-aisolutions.com/work): working examples, including a property manager's dashboard to click into and an example marketing engine.
+- [About](https://herbert-aisolutions.com/about): Will Herbert and how an engagement runs.
+- [FAQ](https://herbert-aisolutions.com/faq): common questions on pricing, timelines and process.
 - [Contact](https://herbert-aisolutions.com/contact): email and phone.
-- Also: [AI receptionist](https://herbert-aisolutions.com/ai-receptionist), [Web design Adelaide](https://herbert-aisolutions.com/web-design-adelaide), [Google Ads Adelaide](https://herbert-aisolutions.com/google-ads-adelaide).
+- Also: [AI receptionist](https://herbert-aisolutions.com/ai-receptionist), [web design in Adelaide](https://herbert-aisolutions.com/web-design-adelaide), [Google Ads management in Adelaide](https://herbert-aisolutions.com/google-ads-adelaide).
 
-## Pricing
+## Common questions
 
-Audit free. Pilot $3,500 fixed, live in 14 days or free, first 30 days of hosting and support included, then $200 a month care, handover to the client's own accounts, or a build. Builds from $25,000 as one fixed number with a written scope. Retainers from $1,000 a month, month to month. If the audit shows the saving would not comfortably cover the price, the client is told so.
+- How much does an AI employee cost? Herbert AI's first AI employee is $3,500 fixed, live in 14 days or free, with the first 30 days of hosting and support included.
+- How much does a full AI system cost? From $25,000, quoted as one fixed number after the free audit.
+- Is the audit really free? Yes. It is 45 minutes plus a written page within two business days, and the business keeps the page whether or not it goes ahead.
+- Who owns what gets built? The business does. Builds run on the business's own accounts.
+- Does it replace staff? No. Each AI employee does one job, and a person on the team approves what goes out.
+- Where is Herbert AI? Adelaide, South Australia. It works with businesses across Australia.
 
-## Owner
+## Contact
 
-Will Herbert, Adelaide, South Australia.
+Will Herbert, founder, Herbert AI, Adelaide, South Australia.
 Email: hello@herbert-aisolutions.com
 Phone: +61 448 111 840
+Book the free AI audit: https://herbert-aisolutions.com/pilot#book
