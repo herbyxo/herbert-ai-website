@@ -2180,4 +2180,9 @@ are built.
 Will (20 Oct 2026): "get rid of the 'you own what gets built' at the footer".
 The footer line is now "Custom software and AI for small businesses, built in
 Adelaide." alone.
+Will (20 Oct 2026): "and get rid of the also sectioln". The footer’s Also
+column (AI receptionist, Web design Adelaide, Google Ads Adelaide) is gone; the
+three pages stay live and in the sitemap but no page links to them now, which
+likely costs them a little search equity. The divider above the copyright line
+takes the paper border on the homepage.
 
