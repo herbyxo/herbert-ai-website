@@ -154,10 +154,10 @@ export default function ReachDashboard({ name = 'Herbert Reach' }) {
                     <tr key={c.name} className="border-t border-[#111]/8">
                       <td className="px-4 py-2.5 font-medium">{c.name}</td>
                       <td className="px-3 py-2.5"><Status s="done">{c.st}</Status></td>
-                      <td className="px-3 py-2.5 text-right tabular-nums">{c.spend ? money(c.spend) : '–'}</td>
+                      <td className="px-3 py-2.5 text-right tabular-nums">{money(c.spend)}</td>
                       <td className="px-3 py-2.5 text-right tabular-nums">{c.enq}</td>
                       <td className="px-3 py-2.5 text-right tabular-nums">{c.jobs}</td>
-                      <td className="px-4 py-2.5 text-right tabular-nums">{c.spend ? money(c.spend / c.jobs) : '–'}</td>
+                      <td className="px-4 py-2.5 text-right tabular-nums">{money(c.spend / c.jobs)}</td>
                     </tr>
                   ))}
                 </tbody>
