@@ -2326,4 +2326,18 @@ written down." 3 "The audit, written up." Noted: the sample image shows
 redesigned. Awaiting Will’s pick.
 Will (20 Oct 2026): "2". Built: the written page heading is "What your admin
 costs, written down."
+Will (20 Oct 2026, in the forked session): picked 2 for the written page
+heading; applied there as 885f9e6 ("What your admin costs, written down."),
+with origin/main merged in (48b704f). The fork runs an AEO pass on its own
+branch and worktree (preview/aeo, code/Website-aeo).
+
+## [~] /pilot details, 4 of 9: How it works (options 20 Oct 2026)
+
+Board: `design-pass-site-2026-10-20-pilot-how.png`. Every option adds the price
+lines the hero gave up (Free; $3,500 fixed; Live in 14 days, or it’s free).
+Today "Audit first. Then fourteen days." (itself a two-beat couplet, no prices).
+1 "Live 14 days after you say go." (recommended: plain, true to the terms, the
+clock starting at the kickoff; built with a wider measure so "go." does not sit
+alone) 2 today’s heading with the prices 3 "How your first job gets handed
+over." Awaiting Will’s pick.
 
