@@ -18,7 +18,7 @@ export const IDS = {
 // Profiles that are the same business or person, for entity matching (the
 // name collides with other "Herbert" companies). Add each one as it exists:
 // Google Business Profile, LinkedIn, Clutch and so on.
-const BUSINESS_SAME_AS = ['https://github.com/herbyxo']
+const BUSINESS_SAME_AS = ['https://www.linkedin.com/company/herbert-ai', 'https://github.com/herbyxo']
 const WILL_SAME_AS = ['https://www.linkedin.com/in/will-herbert-founder', 'https://github.com/herbyxo']
 
 const AUD = (price, extra = {}) => ({ '@type': 'PriceSpecification', priceCurrency: 'AUD', price, ...extra })

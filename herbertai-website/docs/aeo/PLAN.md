@@ -13,7 +13,7 @@ Herbert AI gets named when an Australian owner of a small business asks a search
 - Google indexed the site but it was not on page 1 for "AI consultant for small business Adelaide".
 - Bing had none of the site's pages indexed. A `site:` search returned an unrelated site, and the only result for the domain was Will's LinkedIn profile. Bing's index feeds Copilot and much of ChatGPT search, so this is the largest single gap.
 - Google Maps showed no listing for "Herbert AI Adelaide" (it returned Heubert Technologies and others), so the Business Profile is unverified, hidden or missing.
-- No LinkedIn company page exists (Mind, 7 Oct 2026). Will's own profile is linkedin.com/in/will-herbert-founder.
+- The LinkedIn company page exists (linkedin.com/company/herbert-ai, created 9 Oct 2026, rebranded 15 Oct) but was not linked from the site. Will's own profile is linkedin.com/in/will-herbert-founder.
 - The name collides with Herbert Digital, Herbert Retail and other Herbert businesses, so every profile has to pair "Herbert AI" with Adelaide and the domain.
 
 ## What people search (Google Ads keyword planner, 20 Oct 2026)
@@ -51,21 +51,28 @@ What follows from it: for AI services the contest is being named in AI answers a
 - [x] Sitemap dates come from git (`npm run seo:dates`) instead of the build time.
 - [x] IndexNow key and `npm run seo:ping`; all 19 URLs submitted on 20 Oct 2026 (202 Accepted).
 - [x] llms.txt rewritten to the live site: the ladder with prices, what an AI employee is, Herbert OS by industry, Herbert Reach in development, the pages, and direct answers to common questions.
-- [x] Will's LinkedIn added to his schema profile.
+- [x] Will's LinkedIn on his schema profile, the company page on the business's.
 
 ### M2. Indexed and verified everywhere (needs Will's accounts)
 
 - [ ] Search Console access from a session: `marketing/seo/gsc.py auth` (one Allow click), then `gsc.py submit` and the first query report.
-- [ ] Bing Webmaster Tools: sign in, import the site from Search Console, submit the sitemap.
+- [ ] Bing Webmaster Tools: sign in, import the site from Search Console, submit the sitemap, turn on the AI Performance report (Copilot citations). Bing feeds Copilot and most of ChatGPT search: 87% of SearchGPT citations matched Bing's top results in one study.
+- [ ] Brave recrawl request (search.brave.com/help/brave-search-crawler): Claude's web search runs on Brave.
 - [ ] Google Business Profile: find out why it does not show, then verify it as a service-area business (Adelaide, no shopfront), category, description, services with prices, the website.
 - [ ] Bing Places (imports from the Business Profile) and Apple Business Connect.
-- [ ] LinkedIn company page "Herbert AI", linked from Will's role, then added to `sameAs`.
 
 ### M3. Mentioned by others
 
-- [ ] The directory and review profiles from the research, free first, each with the same name, description, Adelaide and the domain, added to `sameAs` as they go live.
-- [ ] Reviews: Google reviews from clients who are happy to give one (asked the same way every time, never gated).
-- [ ] Listicles that AI answers cite for "best AI consultants Adelaide" and similar: ask to be included where the list is editorial and free.
+Mentions on other sites track AI visibility more closely than links do (0.664 against 0.218 across about 75,000 brands), and directories carry 37% of citations for local services. Every profile uses the same name, the descriptor line, Adelaide and the domain, and goes into `sameAs` once live. Free first, in this order:
+
+- [ ] Clutch (also creates The Manifest profile), with three verified client reviews. Reviews there show the reviewer's role and industry; whether a client is named is the client's choice and the Smith agreement's.
+- [ ] Google Business Profile reviews, asked for the same way after every job, never gated.
+- [ ] GoodFirms, TechBehemoths, DesignRush (free application), the National AI Centre's AI Directory, Crunchbase.
+- [ ] Apple Business Connect; Yellow Pages, True Local, Hotfrog and StartLocal for consistent name, phone and site.
+- [ ] The "best AI consultants Adelaide" lists that AI answers cite (GoodFirms Adelaide AI, TechBehemoths Adelaide), and pitching their authors where a list is editorial and free.
+- [ ] Earned mentions: client sites crediting Herbert AI, Adelaide business press (InDaily, The Lead SA), podcasts, SA Government business events.
+- [ ] Will's build write-ups on his personal LinkedIn (member posts are cited more than company pages).
+- Paid, deferred until a lead is traced to a directory or an AI answer: Clutch Verified ($499 a year), DesignRush sponsorship, Otterly ($29 a month).
 
 ### M4. Content for the demand (with the design pass, phase 7)
 
@@ -75,9 +82,13 @@ What follows from it: for AI services the contest is being named in AI answers a
 
 ### M5. Measure
 
-- [ ] A fixed set of prompts run monthly across ChatGPT, Perplexity, Google AI Mode, Gemini, Copilot and Claude, recording whether Herbert AI is named, where, and what each one cites.
-- [ ] Search Console and Bing Webmaster figures monthly: impressions, clicks and position for the target searches.
+- [ ] About 20 fixed prompts (category, industry, brand, comparison) run monthly, logged out, three runs each, across ChatGPT, Perplexity, Google AI Mode, Gemini, Copilot and Claude, recording whether Herbert AI is named, where, whether the description is current, what each one cites and which competitors it names. Three runs because named businesses change from run to run.
+- [ ] Search Console (`marketing/seo/gsc.py queries`) and Bing Webmaster figures monthly: impressions, clicks and position for the target searches, and Bing's AI Performance report.
 
 ## How the two sessions share the site
 
 The design pass runs on `preview/runs-itself`; this plan's work runs on `preview/aeo`, fast-forwarded to main as each piece is verified. Page metadata and schema lines sit at the top of each page and merge cleanly with redesigns. When the design pass next merges to main, it merges main in first and runs `npm run seo:dates`.
+
+## What the research says not to do
+
+Keyword stuffing (it cut visibility 9% in the GEO benchmark), hidden text or instructions aimed at AI (Google's spam policy covers "attempting to manipulate generative AI responses"), fake or undisclosed incentivised reviews (unlawful under the Australian Consumer Law), undisclosed paid spots in "best" lists, and city by industry grids of near-identical pages (scaled content abuse). llms.txt and schema are kept for identity, not as citation levers: neither has a measured citation effect.
