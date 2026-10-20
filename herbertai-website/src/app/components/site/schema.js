@@ -84,6 +84,9 @@ export function siteGraph(description) {
         telephone: '+61448111840',
         email: 'hello@herbert-aisolutions.com',
         founder: { '@id': IDS.will },
+        // The ABN, public on ABN Lookup; Google lists taxID as a way to tell
+        // one organisation from others with a similar name (Will, 20 Oct 2026).
+        taxID: '83 880 085 162',
         foundingLocation: { '@type': 'Place', name: 'Adelaide, South Australia' },
         address: {
           '@type': 'PostalAddress',
