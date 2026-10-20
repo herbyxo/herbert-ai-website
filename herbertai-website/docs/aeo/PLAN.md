@@ -56,11 +56,17 @@ What follows from it: for AI services the contest is being named in AI answers a
 
 ### M2. Indexed and verified everywhere (needs Will's accounts)
 
-- [ ] Search Console access from a session: `marketing/seo/gsc.py auth` (one Allow click), then `gsc.py submit` and the first query report.
-- [ ] Bing Webmaster Tools: sign in, import the site from Search Console, submit the sitemap, turn on the AI Performance report (Copilot citations). Bing feeds Copilot and most of ChatGPT search: 87% of SearchGPT citations matched Bing's top results in one study.
-- [ ] Brave recrawl request (search.brave.com/help/brave-search-crawler): Claude's web search runs on Brave.
-- [ ] Google Business Profile: verify it (business.google.com/locations, "Get verified", usually a short phone video), as a service-area business in Adelaide with the address hidden, then category, description, services with prices and the website.
-- [ ] Bing Places (imports from the Business Profile) and Apple Business Connect.
+Found 20 Oct 2026 in Search Console (property `https://herbert-aisolutions.com/`, under william.herbert2711@gmail.com): 4 pages indexed and 17 not, 15 of them "Discovered, currently not indexed" (known but not yet crawled) and /pricing unknown to Google; 69 web clicks in three months; "Herbert AI" searches put the site at position 1.9. Google's snippets still carried the old identity ("web design & automation business").
+
+- [x] Search Console API enabled on the Herbert AI Ads Cloud project (20 Oct 2026).
+- [x] Sitemap resubmitted in Search Console (20 Oct 2026).
+- [x] Indexing requested for /pilot, /pricing, /industries/accountants and the homepage (20 Oct 2026). The tool then hit its limit.
+- [ ] Indexing requests for the rest, about ten a day: /about, /industries/trades, /industries/allied-health, /ai-receptionist, /faq, /privacy, /work, /industries, /contact.
+- [ ] `marketing/seo/gsc.py`: the token saved on 20 Oct was granted by a Google account with no Search Console properties. Re-run `gsc.py auth` and pick william.herbert2711@gmail.com, then `gsc.py queries` and `gsc.py pages` work.
+- [ ] Bing Webmaster Tools: sign in (it creates a Bing account, so Will does it), import the site from Search Console, submit the sitemap, turn on the AI Performance report (Copilot citations). Bing feeds Copilot and most of ChatGPT search: 87% of SearchGPT citations matched Bing's top results in one study.
+- [ ] Google Business Profile: disabled on 6 Jul 2026 ("Business Profile doesn't exist"), eligible for a one-time appeal. Fix the category and description first, then appeal with the ABN record. Pack: `Herbert AI/marketing/seo/markdown/gbp-appeal.md`.
+- [ ] Bing Places (imports from the Business Profile once it is live) and Apple Business Connect.
+- [x] LinkedIn company page in the business's `sameAs`; ABN as `taxID` (20 Oct 2026).
 
 ### M3. Mentioned by others
 
