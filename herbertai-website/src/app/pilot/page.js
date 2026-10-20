@@ -70,7 +70,8 @@ const faqJsonLd = {
 // audit gives back, shown at size from the real sample; how it works; what it
 // fixes; after the pilot; the questions; and a link back up to the form. The
 // skeletons are in docs/design/design-pass-site-2026-10-20-pilot-skeleton.png.
-// Words are the details pass, section by section.
+// Words are the details pass, section by section. Detail 1 (Will, 20 Oct 2026,
+// "1"): the heading answers the homepage's last question in the same words.
 
 const TERMS = [
   ['Free', '45 minute audit, written up'],
@@ -134,7 +135,7 @@ export default function Pilot() {
           <div className="min-w-0">
             <Label>Free AI audit</Label>
             <h1 className="font-bold tracking-[-0.045em] leading-[0.95] max-w-[14ch]" style={{ fontSize: 'clamp(44px, 4.4vw, 64px)' }}>
-              Find the job that costs you most.
+              Find the job eating your time and money.
             </h1>
             <p className="mt-6 text-[19px] leading-[1.45] text-[#333] max-w-[40ch]">
               A free 45 minute AI audit: where the hours go, what each repetitive job costs you a

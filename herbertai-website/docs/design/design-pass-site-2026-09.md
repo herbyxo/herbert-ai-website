@@ -2294,4 +2294,8 @@ heading). 1 "Find the job eating your time and money." (recommended: answers
 the homepage’s last question in Will’s own words, the message match an ad
 playbook asks for) 2 "Put a price on your busywork." 3 "Where your week goes,
 in dollars." Awaiting Will’s pick.
+Will (20 Oct 2026): "1 - lines such as 'Book the audit. Keep the page' read
+really cheesey and cliche". Built: the /pilot heading is "Find the job eating
+your time and money." The couplet note went into writing-style
+`references/lines.md` as a rule (no cute slogan couplets).
 
