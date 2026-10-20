@@ -27,7 +27,7 @@ done. Updated in the same commit as the work.
 | 2. Skeleton | [x] | Settled 14 Oct 2026; seven sections from 15 Oct (The Work folded into Operating Systems) |
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
-| 5. Phones | [~] | AI Employees, Operating Systems, Products, Who Builds It and Book the Audit signed off as phone designs (to 20 Oct); Hero and How It Works unchecked |
+| 5. Phones | [~] | Phone sheet 20 Oct 2026: every section works as a phone design; awaiting Will’s sign-off |
 | 6. Words and claims | [~] | Figures framed as worked examples with no labels; "Herbert Reach" settled 17 Oct (registers clear; always in full, since bare REACH is a live mark); "Herbert OS" still needs its checks; Herbert Reach sold as defined, marked In development, no link out (19 Oct); "One builder" still in /about’s meta description and llms.txt |
 | 7. Other pages | [ ] | Industry pages on the new slugs, the AI Employees page, a Herbert Reach page, pricing, about |
 | 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
@@ -2196,4 +2196,16 @@ bottom row, in its small mono capitals, as "AI receptionist", "Web design",
 line, which also fixes the phone wrap of "Adelaide · South Australia" and the
 phone number. Verified at 1440, 375 and 320: no overflow, no errors.
 Screens: `assets-2026-10-20/footer-quiet-1440.png`, `footer-bar-375.png`.
+
+## [~] Phase 5, phones (20 Oct 2026)
+
+Will (20 Oct 2026): "ok looks good" to the critique fixes. Phone sheet:
+`design-pass-site-2026-10-20-phones.png`, every section at 375 in page order
+(also checked at 320: no sideways scroll). The two never checked as phone
+designs: the hero (1491px; the audit button inside the first screen, the
+board’s rows reflowed to two columns at their full 15px) and How It Works
+(1444px; the three steps stacked, the facts at 17px) both work as phone
+designs and need no change. The other five sections were signed off as phone
+designs during their details passes. Awaiting Will’s sign-off, ideally on his
+own phone.
 
