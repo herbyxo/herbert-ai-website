@@ -2162,4 +2162,19 @@ links 16, How It Works facts 17, prices and the employee list 15, the form’s
 fields 16), product visuals and buttons unchanged. Not yet built: Herbert
 Reach option 2, the story as a five-step row above the full-width dashboard
 (drawn in `design-pass-site-2026-10-20-fullsize-reach.png`).
+Will (20 Oct 2026): "build the herbert reach row".
+
+## [x] Critique fix 1, Herbert Reach: the story as a row, the dashboard at real size (20 Oct 2026)
+
+Built in `ProductsSection.js`: on laptops the section is one column, the five
+steps run as a row (`lg:grid-cols-5`, a 2px rule over each), the In
+development pill under them, and the dashboard spans the full width at scale 1
+(1184 by 690 at 1440 and 1280, text at its own 12 to 13px; 78% at 1024). The
+frame height came down from 740 to 700 to fit the dashboard. Phones keep the
+story as a list and the phone version, unchanged. Verified at 1440, 1280,
+1024, 375 and 320, motion on and off: no overflow, no errors. The section is
+1221px at 1440x900, past one screen, as drawn. As built:
+`assets-2026-10-20/reach-row-built-1440.png` and `-375.png`. With Operating
+Systems at 78% and the body text up 1px, the three critique fixes Will picked
+are built.
 
