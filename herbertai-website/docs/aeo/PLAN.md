@@ -62,7 +62,9 @@ Found 20 Oct 2026 in Search Console (property `https://herbert-aisolutions.com/`
 - [x] Sitemap resubmitted in Search Console (20 Oct 2026).
 - [x] Indexing requested for /pilot, /pricing, /industries/accountants and the homepage (20 Oct 2026). The tool then hit its limit.
 - [ ] Indexing requests for the rest, about ten a day: /about, /industries/trades, /industries/allied-health, /ai-receptionist, /faq, /privacy, /work, /industries, /contact.
-- [ ] `marketing/seo/gsc.py`: the token saved on 20 Oct was granted by a Google account with no Search Console properties. Re-run `gsc.py auth` and pick william.herbert2711@gmail.com, then `gsc.py queries` and `gsc.py pages` work.
+- [x] `marketing/seo/gsc.py` reads Search Console from a session (owner access, 20 Oct 2026).
+
+Search Console, 90 days to 18 Oct 2026: nearly every click is a brand search ("herbert ai" 38 clicks at position 1.9, "herber ai" 6). The one non-brand search with real impressions is "business automation adelaide" (52 impressions, position 14.9), with "business automation services adelaide" (37) and "workflow optimisation services adelaide" (34) near it, all reached through the old /automation-adelaide page that now redirects to /pilot. /web-design-adelaide and /google-ads-adelaide had no impressions at all, so their Adelaide volume is not being captured; they stay up but get no indexing requests.
 - [ ] Bing Webmaster Tools: sign in (it creates a Bing account, so Will does it), import the site from Search Console, submit the sitemap, turn on the AI Performance report (Copilot citations). Bing feeds Copilot and most of ChatGPT search: 87% of SearchGPT citations matched Bing's top results in one study.
 - [ ] Google Business Profile: disabled on 6 Jul 2026 ("Business Profile doesn't exist"), eligible for a one-time appeal. Fix the category and description first, then appeal with the ABN record. Pack: `Herbert AI/marketing/seo/markdown/gbp-appeal.md`.
 - [ ] Bing Places (imports from the Business Profile once it is live) and Apple Business Connect.
@@ -82,6 +84,8 @@ Mentions on other sites track AI visibility more closely than links do (0.664 ag
 - Paid, deferred until a lead is traced to a directory or an AI answer: Clutch Verified ($499 a year), DesignRush sponsorship, Otterly ($29 a month).
 
 ### M4. Content for the demand (with the design pass, phase 7)
+
+- [ ] An Adelaide automation page or /pilot section for "business automation Adelaide", the one non-brand search Google already shows Herbert AI for (page 2).
 
 - [ ] Industry pages built around the searched words: "AI for accountants" (about 1,000 a month), "AI for real estate" (480), "AI for tradies" (70), with the AI employee as the answer and a hospitality page added.
 - [ ] Answer-shaped sections: each page opens with a one-sentence direct answer, figures carry their source, questions as headings where the page answers a question people ask.
