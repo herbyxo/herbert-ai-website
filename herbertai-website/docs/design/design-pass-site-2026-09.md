@@ -2299,3 +2299,12 @@ really cheesey and cliche". Built: the /pilot heading is "Find the job eating
 your time and money." The couplet note went into writing-style
 `references/lines.md` as a rule (no cute slogan couplets).
 
+## [~] /pilot details, 2 of 9: the hero intro and terms (options 20 Oct 2026)
+
+Board: `design-pass-site-2026-10-20-pilot-intro.png`. Today the intro and four
+terms, three of them the pilot’s ($3,500, 14 days, 100%). 1 the audit’s own
+terms (recommended): a one-sentence intro and Free / 45 min / 2 days / Yours,
+the pilot’s terms left to How it works and the questions. 2 no terms. 3 the
+short intro and the audit’s terms as one line of small print. Awaiting
+Will’s pick.
+
