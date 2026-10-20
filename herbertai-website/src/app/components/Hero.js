@@ -53,7 +53,7 @@ export default function Hero() {
             Book a free AI audit <span aria-hidden>&rarr;</span>
           </a>
         </div>
-        <span className="order-2 mt-3 xl:mt-3.5 xl:self-baseline text-[15px] text-[#555] xl:col-start-1 xl:row-start-2">
+        <span className="order-2 mt-3 xl:mt-3.5 xl:self-baseline text-[16px] text-[#555] xl:col-start-1 xl:row-start-2">
           45 minutes, a written page back
         </span>
         <div className="order-3 mt-12 xl:mt-0 xl:col-start-2 xl:row-start-1 xl:[&>*]:h-full">
@@ -64,7 +64,7 @@ export default function Hero() {
         <div className="order-4 mt-3.5 xl:self-baseline text-right xl:col-start-2 xl:row-start-2">
           <Link
             href="/demo/accountants"
-            className="text-[14px] font-medium text-[#111] underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
+            className="text-[15px] font-medium text-[#111] underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
           >
             See it run for an accounting firm <span aria-hidden>&rarr;</span>
           </Link>

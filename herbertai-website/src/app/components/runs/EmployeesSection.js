@@ -23,7 +23,7 @@ const countText = (e, v = e.count) => (e.countLabel.startsWith('found') || e.cou
 // ladder's second rung, the thing it sells, linking to the pilot page.
 function Close({ className = '' }) {
   return (
-    <p className={`text-[15px] ${className}`}>
+    <p className={`text-[16px] ${className}`}>
       <Link href="/pilot" className="font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
         Your first one is $3,500, live in 14 days <span aria-hidden>&rarr;</span>
       </Link>
@@ -34,7 +34,7 @@ function Close({ className = '' }) {
 function Heading() {
   return (
     <>
-      <p className="text-[15px] font-medium text-[#555] mb-4">AI Employees</p>
+      <p className="text-[16px] font-medium text-[#555] mb-4">AI Employees</p>
       <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
         They do the job. Your team says yes.
       </h2>
@@ -80,7 +80,7 @@ function Card({ e, still }) {
         <Avatar glyph={e.glyph} mode={mode} scanKey={n < 3 ? n : 0} />
         <div className="flex-1 min-w-0">
           <p className="text-[17px] font-semibold tracking-[-0.01em] leading-tight">{e.name}</p>
-          <p className="text-[14px] text-[#555] leading-tight mt-0.5">{e.job}</p>
+          <p className="text-[15px] text-[#555] leading-tight mt-0.5">{e.job}</p>
           <p className="text-[12.5px] text-[#777] mt-1">{e.where}</p>
         </div>
         <div className="text-right">
@@ -88,7 +88,7 @@ function Card({ e, still }) {
           <p className="text-[11px] text-[#888] mt-1">{e.countLabel}</p>
         </div>
       </div>
-      <p className="mt-3 text-[14px] text-[#444]">{e.what}</p>
+      <p className="mt-3 text-[15px] text-[#444]">{e.what}</p>
       <div className="mt-3 h-[204px]">
         <AnimatePresence initial={false}>
           {e.feed.slice(0, Math.min(n, 3)).map(([t, s, then], i) => (

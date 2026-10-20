@@ -30,7 +30,7 @@ const LOOKS = {
     form: '',
     grid: 'grid sm:grid-cols-2 gap-4',
     label: 'block text-[12.5px] text-[#666] mb-1.5',
-    input: 'w-full px-3.5 py-3 bg-white border border-[#111]/15 rounded-[10px] text-[15px] text-[#111] placeholder:text-[#999] focus:border-[#111] focus:outline-none transition-colors',
+    input: 'w-full px-3.5 py-3 bg-white border border-[#111]/15 rounded-[10px] text-[16px] text-[#111] placeholder:text-[#999] focus:border-[#111] focus:outline-none transition-colors',
     button: 'mt-5 inline-flex items-center gap-2 bg-[#111] text-white rounded-[10px] px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors',
     note: 'mt-3.5 text-[13px] text-[#777]',
     cta: 'Book a free AI audit',

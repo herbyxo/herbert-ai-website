@@ -45,7 +45,7 @@ function HowItWorks() {
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
         <div className="mb-12">
-          <p className="text-[15px] font-medium text-[#555] mb-4">How It Works</p>
+          <p className="text-[16px] font-medium text-[#555] mb-4">How It Works</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
             Start with the job that costs you most.
           </h2>
@@ -53,21 +53,21 @@ function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
           {RUNGS.map((r, i) => (
             <div key={r.n} className="border-t border-[#111]/15 pt-6">
-              <p className="text-[15px] font-medium text-[#777] mb-5">Step {i + 1}</p>
+              <p className="text-[16px] font-medium text-[#777] mb-5">Step {i + 1}</p>
               <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-3">{r.title}</h3>
               <ul>
                 {r.facts.map((f) => (
-                  <li key={f} className="text-[16px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
+                  <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
                 ))}
               </ul>
-              <p className="mt-5 text-[14px] font-medium">{r.price}</p>
+              <p className="mt-5 text-[15px] font-medium">{r.price}</p>
             </div>
           ))}
         </div>
         <div className="mt-12">
           <Link
             href="/pricing"
-            className="text-[15px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
+            className="text-[16px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111] transition-colors"
           >
             See how it&apos;s priced
           </Link>
@@ -97,13 +97,13 @@ function FounderNote() {
   return (
     <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
-        <p className="text-[15px] font-medium text-[#555] mb-4">Founder</p>
+        <p className="text-[16px] font-medium text-[#555] mb-4">Founder</p>
         <p className="font-semibold tracking-[-0.025em] leading-[1.25] max-w-[28ch]" style={{ fontSize: 'clamp(26px, 3vw, 42px)' }}>
           Herbert AI was founded by Will Herbert, based in Adelaide. He works with you
           from the audit to the day it goes live.
         </p>
         <p className="mt-7">
-          <Link href="/about" className="text-[15px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
+          <Link href="/about" className="text-[16px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
             More about Will <span aria-hidden>&rarr;</span>
           </Link>
         </p>
@@ -127,7 +127,7 @@ function FinalCTA() {
     <section className="bg-[#111] text-white border-t border-white/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-28 grid lg:grid-cols-2 gap-x-16 gap-y-12 items-end">
         <div className="min-w-0">
-          <p className="text-[15px] font-medium text-white/60 mb-4">Book the Audit</p>
+          <p className="text-[16px] font-medium text-white/60 mb-4">Book the Audit</p>
           <h2 className="font-bold tracking-[-0.04em] leading-[0.98] max-w-[14ch]" style={{ fontSize: 'clamp(40px, 4.6vw, 68px)' }}>
             Got a job eating your time and money?
           </h2>

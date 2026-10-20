@@ -2151,4 +2151,15 @@ Fix 4: `design-pass-site-2026-10-20-bodytext.png`, How It Works and Operating
 Systems with the homepage’s own 14, 15 and 16px text lifted, product screens
 untouched. Today; 1 up 1px, body at 16 (recommended); 2 up 2px, body at 17.
 Awaiting Will’s picks.
+Will (20 Oct 2026): "3, 2, 1".
+
+## [~] Critique fixes: Operating Systems and body text built; Herbert Reach open (20 Oct 2026)
+
+Built: Operating Systems option 3, two columns at 1.62fr and 0.38fr, the list
+names only at 18px, so the screen scales to about 78% and the section still
+fills one screen; body text up 1px across the homepage’s own copy (labels and
+links 16, How It Works facts 17, prices and the employee list 15, the form’s
+fields 16), product visuals and buttons unchanged. Not yet built: Herbert
+Reach option 2, the story as a five-step row above the full-width dashboard
+(drawn in `design-pass-site-2026-10-20-fullsize-reach.png`).
 

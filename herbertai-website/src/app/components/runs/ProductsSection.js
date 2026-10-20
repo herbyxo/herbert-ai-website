@@ -57,7 +57,7 @@ export default function ProductsSection() {
     <section ref={ref} className="bg-[#111] text-white lg:min-h-[100svh] lg:flex lg:flex-col lg:justify-center">
       <div className="w-full max-w-[1280px] mx-auto px-6 lg:px-12 pt-16 pb-20 grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
         <div className="min-w-0">
-          <p className="text-[15px] font-medium text-white/60 mb-4">Products</p>
+          <p className="text-[16px] font-medium text-white/60 mb-4">Products</p>
           <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-white/50">by Herbert AI</p>
           <h2 className="mt-2 font-bold tracking-[-0.04em] leading-[0.95]" style={{ fontSize: 'clamp(40px, 4.4vw, 64px)' }}>{NAME}</h2>
           <p className="mt-5 text-[17px] leading-[1.5] text-white/75 max-w-[40ch]">Your whole marketing department at the click of a button.</p>
