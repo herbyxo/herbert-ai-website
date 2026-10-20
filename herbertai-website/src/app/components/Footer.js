@@ -10,7 +10,8 @@ const ownerUrl = process.env.NEXT_PUBLIC_OWNER_CONSOLE_URL
 // and Google Ads pages sit on demand that exists and keep their ranking equity
 // out of the spine. Decided 16 Sep 2026, docs/restructure-2026-09/PROJECT.md.
 // The Also column was removed on 20 Oct 2026 (Will: "get rid of the also
-// section"); those three pages stay live and in the sitemap without a footer link.
+// section"); its three search pages moved to the bottom row as quiet links so
+// they keep a link from every page.
 // Phase 4 of the site design pass (20 Oct 2026, Will: "fix footer"): the
 // header's mark and Geist name in place of the display-font wordmark and its
 // glowing dot, and the ground follows the header (paper on the homepage, cream
@@ -95,11 +96,19 @@ export default function Footer() {
         </div>
 
         <div className={`mt-16 pt-6 border-t ${pathname === '/' ? 'border-[#111]/10' : 'border-line'} flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
-          <span>© {new Date().getFullYear()} Herbert AI</span>
-          <span className="flex items-center gap-5">
-            <Link href="/privacy" className="hover:text-ink transition-colors">Privacy</Link>
-            <span>Adelaide &middot; South Australia</span>
-            <a href="tel:+61448111840" className="hover:text-ink transition-colors">0448 111 840</a>
+          <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <span className="whitespace-nowrap">© {new Date().getFullYear()} Herbert AI</span>
+            {/* The search pages, kept as real links in the quiet row (Will, 20 Oct
+                2026: the Also column "ruins the aesthetic", but keep them if
+                removing them hurts their ranking). */}
+            <Link href="/ai-receptionist" className="whitespace-nowrap hover:text-ink transition-colors">AI receptionist</Link>
+            <Link href="/web-design-adelaide" className="whitespace-nowrap hover:text-ink transition-colors">Web design</Link>
+            <Link href="/google-ads-adelaide" className="whitespace-nowrap hover:text-ink transition-colors">Google Ads</Link>
+          </span>
+          <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link href="/privacy" className="whitespace-nowrap hover:text-ink transition-colors">Privacy</Link>
+            <span className="whitespace-nowrap">Adelaide &middot; South Australia</span>
+            <a href="tel:+61448111840" className="whitespace-nowrap hover:text-ink transition-colors">0448 111 840</a>
           </span>
         </div>
       </div>

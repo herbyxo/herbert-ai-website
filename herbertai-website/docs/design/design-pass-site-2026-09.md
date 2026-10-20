@@ -2185,4 +2185,15 @@ column (AI receptionist, Web design Adelaide, Google Ads Adelaide) is gone; the
 three pages stay live and in the sitemap but no page links to them now, which
 likely costs them a little search equity. The divider above the copyright line
 takes the paper border on the homepage.
+Will (20 Oct 2026): "ok leave them if it hurts their search ranking - or can u
+put them in the metadata or something. having them there ruins the aesthetic
+of the page, maybe we can edit what they say or something?" Answered:
+metadata and the sitemap help discovery but pass no ranking weight, and hidden
+links count as hidden text; /ai-receptionist had no other link on the site
+(/services links the other two). Built: the three links in the footer’s quiet
+bottom row, in its small mono capitals, as "AI receptionist", "Web design",
+"Google Ads", after the copyright; every item in that row now keeps to one
+line, which also fixes the phone wrap of "Adelaide · South Australia" and the
+phone number. Verified at 1440, 375 and 320: no overflow, no errors.
+Screens: `assets-2026-10-20/footer-quiet-1440.png`, `footer-bar-375.png`.
 
