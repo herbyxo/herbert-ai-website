@@ -238,7 +238,7 @@ export default function SampleAudit() {
               the admin person has sent, and the document list for two or three recent jobs. If the answer is
               no, this report is still yours to use.
             </p>
-            <p className="mt-6 text-[15px] text-muted">Will Herbert · will@herbert-aisolutions.com · 0448 111 840</p>
+            <p className="mt-6 text-[15px] text-muted">Will Herbert · will@herbert-aisolutions.com</p>
           </div>
         </div>
       </section>

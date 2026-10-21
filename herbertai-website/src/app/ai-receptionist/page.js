@@ -186,13 +186,6 @@ export default function AiReceptionist() {
               Fill this in and I&apos;ll build a demo agent for your business within two
               business days, free and with no obligation. You call it, you grill it, you decide.
             </p>
-            <p className="mt-6 text-[14px] text-muted">
-              Prefer to talk?{' '}
-              <a href="tel:+61448111840" className="text-ink font-medium hover:text-green-deep transition-colors">
-                0448 111 840
-              </a>{' '}
-              (Will, Adelaide)
-            </p>
           </div>
 
           <RevealOnScroll>

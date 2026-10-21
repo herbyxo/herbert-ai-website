@@ -103,11 +103,6 @@ export default function Contact() {
                   hello@herbert-aisolutions.com
                 </a>
               </InfoCard>
-              <InfoCard label="Phone">
-                <a href="tel:+61448111840" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors">
-                  0448 111 840
-                </a>
-              </InfoCard>
               <InfoCard label="Free AI audit">
                 <Link href="/pilot" className="inline-flex items-center gap-2 bg-green text-ink px-5 py-2.5 rounded-full text-[14px] font-semibold hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300">
                   Book a free AI audit <span aria-hidden>&rarr;</span>

@@ -17,8 +17,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 const TONE = { done: '#16A34A', wait: '#D97706', idle: '#9CA3AF' }
 const KIND = { sent: '#4F46E5', reply: '#16A34A', done: '#16A34A' }
 const STEP_MS = 1300
-const PHONE_HREF = 'tel:+61448111840'
-const PHONE = '0448 111 840'
 
 function dateLabel(start, day) {
   const d = new Date(`${start}T00:00:00`)
@@ -190,9 +188,6 @@ export default function DemoPage({ industry, firm }) {
           <p className="text-center text-[13px] text-[#6B7280] mt-3">
             45 minutes auditing your business and a written page on what your {industry.bottleneck} costs. No obligation.
             If you want it built: live in 14 days, $3,500 fixed, or it&apos;s free.
-          </p>
-          <p className="text-center text-[13px] text-[#6B7280] mt-1">
-            Or call Will on <a href={PHONE_HREF} className="text-[#111827] font-medium">{PHONE}</a>
           </p>
         </section>
 
