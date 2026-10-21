@@ -198,7 +198,7 @@ function MobileOverlay({ onClose }) {
         <Link
           href="/pilot#book"
           onClick={onClose}
-          className="bg-green text-ink px-6 py-3.5 rounded-[10px] font-semibold text-[15px] inline-flex items-center gap-2"
+          className="bg-ink text-cream px-6 py-3.5 rounded-[10px] font-semibold text-[15px] inline-flex items-center gap-2"
         >
           Free AI audit <span aria-hidden>→</span>
         </Link>

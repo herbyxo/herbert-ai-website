@@ -154,7 +154,7 @@ export default function FAQ() {
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <Link
                 href="/pilot"
-                className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+                className="bg-cream text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:bg-white transition-colors"
               >
                 Book a free AI audit <span aria-hidden>&rarr;</span>
               </Link>
@@ -174,7 +174,7 @@ function Eyebrow({ children, color = 'ink' }) {
   const isWhite = color === 'white'
   return (
     <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
-      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
+      <span className={`w-8 h-px ${isWhite ? 'bg-cream/40' : 'bg-ink'}`} />
       {children}
     </div>
   )

@@ -99,12 +99,12 @@ export default function Contact() {
           <RevealOnScroll delay={0.08} className="space-y-5">
             <div className="space-y-5">
               <InfoCard label="Email">
-                <a href="mailto:hello@herbert-aisolutions.com" className="text-[16px] text-ink font-medium hover:text-green-deep transition-colors break-words">
+                <a href="mailto:hello@herbert-aisolutions.com" className="text-[16px] text-ink font-medium hover:text-muted transition-colors break-words">
                   hello@herbert-aisolutions.com
                 </a>
               </InfoCard>
               <InfoCard label="Free AI audit">
-                <Link href="/pilot" className="inline-flex items-center gap-2 bg-green text-ink px-5 py-2.5 rounded-full text-[14px] font-semibold hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300">
+                <Link href="/pilot" className="inline-flex items-center gap-2 bg-ink text-cream px-5 py-2.5 rounded-full text-[14px] font-semibold hover:bg-ink-soft transition-colors">
                   Book a free AI audit <span aria-hidden>&rarr;</span>
                 </Link>
               </InfoCard>
@@ -154,7 +154,7 @@ function Eyebrow({ children, color = 'ink' }) {
   const isWhite = color === 'white'
   return (
     <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
-      <span className={`w-8 h-px ${isWhite ? 'bg-green' : 'bg-ink'}`} />
+      <span className={`w-8 h-px ${isWhite ? 'bg-cream/40' : 'bg-ink'}`} />
       {children}
     </div>
   )

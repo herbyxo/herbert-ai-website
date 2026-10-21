@@ -81,7 +81,7 @@ export default function GoogleAdsAdelaide() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#audit"
-              className="inline-flex items-center gap-2 bg-green text-ink px-7 py-3.5 rounded-full font-semibold text-[15px] hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-ink text-cream px-7 py-3.5 rounded-full font-semibold text-[15px] hover:bg-ink-soft transition-colors"
             >
               Get my free game plan <span aria-hidden>&rarr;</span>
             </a>
@@ -269,8 +269,8 @@ export default function GoogleAdsAdelaide() {
         </div>
       </section>
 
-      {/* ─── Final CTA: the one green-flood moment ─── */}
-      <section className="bg-green">
+      {/* ─── Final CTA ─── */}
+      <section className="bg-cream-alt border-t border-line">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 text-center">
           <h2 className="font-display text-ink mx-auto max-w-[18ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
             Stop guessing. Start measuring.
@@ -302,7 +302,7 @@ function Step({ n, title, body }) {
   return (
     <RevealOnScroll>
       <div>
-        <div className="font-mono text-[12px] tracking-[0.18em] text-green-deep mb-4">{n}</div>
+        <div className="font-mono text-[12px] tracking-[0.18em] text-muted mb-4">{n}</div>
         <h3 className="text-[20px] md:text-[22px] font-semibold tracking-[-0.01em] text-ink mb-3">{title}</h3>
         <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{body}</p>
       </div>

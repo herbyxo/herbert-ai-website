@@ -165,7 +165,7 @@ export default async function IndustryPage({ params }) {
             {RUNGS.map((r) => (
               <RevealOnScroll key={r.n}>
                 <div>
-                  <div className="font-mono text-[12px] tracking-[0.18em] text-green-deep mb-4">{r.n}</div>
+                  <div className="font-mono text-[12px] tracking-[0.18em] text-muted mb-4">{r.n}</div>
                   <h3 className="text-[20px] md:text-[22px] font-semibold tracking-[-0.01em] text-ink mb-3">{r.title}</h3>
                   <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{r.body}</p>
                   <div className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-ink">{r.price}</div>

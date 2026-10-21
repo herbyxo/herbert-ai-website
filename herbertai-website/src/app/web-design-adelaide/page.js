@@ -229,8 +229,8 @@ export default function WebDesignAdelaide() {
         </div>
       </section>
 
-      {/* ─── Final CTA: the one green-flood moment ─── */}
-      <section className="bg-green">
+      {/* ─── Final CTA ─── */}
+      <section className="bg-cream-alt border-t border-line">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32 text-center">
           <h2 className="font-display text-ink mx-auto max-w-[18ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
             Your new website, designed by Thursday.
@@ -263,7 +263,7 @@ function Step({ n, title, body }) {
   return (
     <RevealOnScroll>
       <div>
-        <div className="font-mono text-[12px] tracking-[0.18em] text-green-deep mb-4">{n}</div>
+        <div className="font-mono text-[12px] tracking-[0.18em] text-muted mb-4">{n}</div>
         <h3 className="text-[20px] md:text-[22px] font-semibold tracking-[-0.01em] text-ink mb-3">{title}</h3>
         <p className="text-[15px] md:text-[16px] text-muted leading-[1.55]">{body}</p>
       </div>
