@@ -109,7 +109,6 @@ export default function Footer() {
           <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link href="/privacy" className="whitespace-nowrap hover:text-ink transition-colors">Privacy</Link>
             <span className="whitespace-nowrap">Adelaide &middot; South Australia</span>
-            <a href="tel:+61448111840" className="whitespace-nowrap hover:text-ink transition-colors">0448 111 840</a>
           </span>
         </div>
       </div>
