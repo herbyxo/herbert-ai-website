@@ -81,7 +81,6 @@ export function siteGraph(description) {
         url: SITE_URL,
         logo: `${SITE_URL}/icon.svg`,
         image: `${SITE_URL}${OG_IMAGE}`,
-        telephone: '+61448111840',
         email: 'hello@herbert-aisolutions.com',
         founder: { '@id': IDS.will },
         // The ABN, public on ABN Lookup; Google lists taxID as a way to tell
