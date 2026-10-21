@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import AuditForm from '../components/site/AuditForm'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
 
 export const metadata = {
-  title: { absolute: 'How it works: a free AI audit, then working software in 14 days | Herbert AI' },
+  title: { absolute: 'Free AI audit for small business | Herbert AI, Adelaide' },
   description:
     'A free 45 minute AI audit puts a cost on every repetitive job in your business. Then your first AI employee takes the worst one: live in 14 days, $3,500 fixed, or it is free.',
   alternates: { canonical: '/pilot' },
@@ -127,6 +128,7 @@ function Section({ children, first = false }) {
 export default function Pilot() {
   return (
     <>
+      <JsonLd data={[service({ name: 'Free AI audit', description: metadata.description, path: '/pilot', serviceType: 'AI audit', audience: 'Owner-operated businesses with 3 to 20 staff', offers: LADDER[0] }), breadcrumbs([['How it works', '/pilot']])]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { Eyebrow, AuditButton } from '../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs } from '@/app/components/site/schema'
 
 export const metadata = {
   title: 'Pricing | Free AI audit, a $3,500 first AI employee, builds from $25,000',
@@ -97,6 +98,7 @@ const faqs = [
 export default function Pricing() {
   return (
     <>
+      <JsonLd data={breadcrumbs([['Pricing', '/pricing']])} />
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
           <Eyebrow>Pricing</Eyebrow>

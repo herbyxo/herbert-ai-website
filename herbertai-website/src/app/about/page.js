@@ -2,6 +2,7 @@ import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { RUNGS, Eyebrow, AuditButton } from '../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs, IDS, SITE_URL } from '@/app/components/site/schema'
 
 export const metadata = {
   title: 'About | Will Herbert, custom software and AI for small business',
@@ -37,6 +38,7 @@ const work = [
 export default function About() {
   return (
     <>
+      <JsonLd data={[{ '@context': 'https://schema.org', '@type': 'ProfilePage', url: `${SITE_URL}/about`, mainEntity: { '@id': IDS.will } }, breadcrumbs([['About', '/about']])]} />
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32 grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-start">
           <div>

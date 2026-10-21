@@ -1,5 +1,6 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs, service } from '@/app/components/site/schema'
 
 export const metadata = {
   title: { absolute: 'AI Receptionist for Australian Small Business | Herbert AI' },
@@ -50,6 +51,7 @@ const faqJsonLd = {
 export default function AiReceptionist() {
   return (
     <>
+      <JsonLd data={[service({ name: 'AI receptionist', description: metadata.description, path: '/ai-receptionist', serviceType: 'AI receptionist' }), breadcrumbs([['AI receptionist', '/ai-receptionist']])]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

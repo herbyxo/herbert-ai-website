@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo:dates": "node scripts/seo-dates.mjs",
+    "seo:ping": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",

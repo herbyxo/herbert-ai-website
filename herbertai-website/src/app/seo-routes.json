@@ -1,0 +1,102 @@
+[
+  {
+    "path": "",
+    "priority": 1.0,
+    "also": [
+      "src/app/components/runs",
+      "src/app/components/Hero.js",
+      "src/app/components/site/AuditForm.js"
+    ]
+  },
+  {
+    "path": "/pilot",
+    "priority": 0.95,
+    "also": [
+      "src/app/components/site/AuditForm.js",
+      "public/pilot"
+    ]
+  },
+  {
+    "path": "/pricing",
+    "priority": 0.9
+  },
+  {
+    "path": "/services",
+    "priority": 0.9
+  },
+  {
+    "path": "/industries",
+    "priority": 0.9,
+    "also": [
+      "src/app/components/site/shared.js"
+    ]
+  },
+  {
+    "path": "/industries/accountants",
+    "priority": 0.8,
+    "also": [
+      "src/app/components/site/shared.js"
+    ]
+  },
+  {
+    "path": "/industries/allied-health",
+    "priority": 0.8,
+    "also": [
+      "src/app/components/site/shared.js"
+    ]
+  },
+  {
+    "path": "/industries/trades",
+    "priority": 0.8,
+    "also": [
+      "src/app/components/site/shared.js"
+    ]
+  },
+  {
+    "path": "/industries/real-estate",
+    "priority": 0.8,
+    "also": [
+      "src/app/components/site/shared.js"
+    ]
+  },
+  {
+    "path": "/work",
+    "priority": 0.85
+  },
+  {
+    "path": "/work/marketing-engine",
+    "priority": 0.6
+  },
+  {
+    "path": "/about",
+    "priority": 0.8
+  },
+  {
+    "path": "/faq",
+    "priority": 0.7
+  },
+  {
+    "path": "/start",
+    "priority": 0.6
+  },
+  {
+    "path": "/contact",
+    "priority": 0.7
+  },
+  {
+    "path": "/ai-receptionist",
+    "priority": 0.85
+  },
+  {
+    "path": "/web-design-adelaide",
+    "priority": 0.85
+  },
+  {
+    "path": "/google-ads-adelaide",
+    "priority": 0.85
+  },
+  {
+    "path": "/privacy",
+    "priority": 0.3
+  }
+]

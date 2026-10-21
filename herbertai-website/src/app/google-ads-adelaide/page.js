@@ -1,5 +1,6 @@
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { JsonLd, breadcrumbs, service } from '@/app/components/site/schema'
 
 export const metadata = {
   title: { absolute: 'Google Ads Management Adelaide | AI-Optimised, Run by the Builder' },
@@ -50,6 +51,7 @@ const faqJsonLd = {
 export default function GoogleAdsAdelaide() {
   return (
     <>
+      <JsonLd data={[service({ name: 'Google Ads management in Adelaide', description: metadata.description, path: '/google-ads-adelaide', serviceType: 'Google Ads management', area: 'Adelaide' }), breadcrumbs([['Google Ads Adelaide', '/google-ads-adelaide']])]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
