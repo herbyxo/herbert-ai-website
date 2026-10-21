@@ -65,7 +65,7 @@ Found 20 Oct 2026 in Search Console (property `https://herbert-aisolutions.com/`
 - [x] `marketing/seo/gsc.py` reads Search Console from a session (owner access, 20 Oct 2026).
 
 Search Console, 90 days to 18 Oct 2026: nearly every click is a brand search ("herbert ai" 38 clicks at position 1.9, "herber ai" 6). The one non-brand search with real impressions is "business automation adelaide" (52 impressions, position 14.9), with "business automation services adelaide" (37) and "workflow optimisation services adelaide" (34) near it, all reached through the old /automation-adelaide page that now redirects to /pilot. /web-design-adelaide and /google-ads-adelaide had no impressions at all, so their Adelaide volume is not being captured; they stay up but get no indexing requests.
-- [ ] Bing Webmaster Tools: sign in (it creates a Bing account, so Will does it), import the site from Search Console, submit the sitemap, turn on the AI Performance report (Copilot citations). Bing feeds Copilot and most of ChatGPT search: 87% of SearchGPT citations matched Bing's top results in one study.
+- [x] Bing Webmaster Tools: Will signed in and imported the site from Search Console (21 Oct 2026); the sitemap was read the same day with all 19 URLs. Data, including the AI Performance report (Copilot citations), arrives within about 48 hours.
 - [ ] Google Business Profile: disabled on 6 Jul 2026 ("Business Profile doesn't exist"), eligible for a one-time appeal. Fix the category and description first, then appeal with the ABN record. Pack: `Herbert AI/marketing/seo/markdown/gbp-appeal.md`.
 - [ ] Bing Places (imports from the Business Profile once it is live) and Apple Business Connect.
 - [x] LinkedIn company page in the business's `sameAs`; ABN as `taxID` (20 Oct 2026).
