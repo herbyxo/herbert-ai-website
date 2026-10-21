@@ -2410,3 +2410,15 @@ in MockupProof. Board: `design-pass-site-2026-10-21-colours.html`, 20 pages at
 1440 and 375; a computed-style check finds no element left on the May palette,
 no overflow except /ai-receptionist at 375 (4px, already on production, left
 for that page’s redesign), no console errors.
+
+## [~] /pilot section 1, the hero: remaining detail 2 of 3, spacing (options 21 Oct 2026)
+
+With the call line gone the left column ends on the four terms. Measured at
+1440x900: the hero ends at 697px, so the top 105px of the sample page shows
+under it (25px at 1280x800), and the card and text are centred against each
+other, so the card starts 10px below the label at 1440 and 27px above it at
+1280. The homepage hero fills the first screen and ends at the fold. Board:
+`design-pass-site-2026-10-21-pilot-spacing.html`, the first screen at 1440 and
+1280. 1 fill the first screen, tops level (recommended) 2 fill the first screen,
+the card level with the heading 3 today’s height, tops level. Awaiting Will’s
+pick. Then detail 3, the phone layout.
