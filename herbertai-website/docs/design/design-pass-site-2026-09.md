@@ -2374,4 +2374,7 @@ now? 0448 111 840" under it. 1 the number inside the card under the button,
 footer 3 the number on the left under the terms. Awaiting Will’s pick. Then
 detail 2, spacing, and 3, the phone layout (on a phone the form starts below
 the first screen today).
+Will (21 Oct 2026): "3". Built: "Prefer to talk now? 0448 111 840" sits on the
+left under the four terms; the card stands alone. Verified at 1440, 1280, 375
+and 320: no overflow, no errors. Next: hero detail 2, spacing.
 
