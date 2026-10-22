@@ -76,7 +76,8 @@ Mentions on other sites track AI visibility more closely than links do (0.664 ag
 
 - [ ] Clutch (also creates The Manifest profile), with three verified client reviews. Reviews there show the reviewer's role and industry; whether a client is named is the client's choice and the Smith agreement's.
 - [ ] Google Business Profile reviews, asked for the same way after every job, never gated.
-- [ ] GoodFirms, TechBehemoths, DesignRush (free application), the National AI Centre's AI Directory, Crunchbase.
+- [x] National AI Centre AI Directory: nomination submitted 22 Oct 2026 (review takes several weeks).
+- [ ] GoodFirms, TechBehemoths, DesignRush (free application), Crunchbase. Copy for all of them: `Herbert AI/marketing/seo/markdown/directory-pack.md`.
 - [ ] Apple Business Connect; Yellow Pages, True Local, Hotfrog and StartLocal for consistent name, phone and site.
 - [ ] The "best AI consultants Adelaide" lists that AI answers cite (GoodFirms Adelaide AI, TechBehemoths Adelaide), and pitching their authors where a list is editorial and free.
 - [ ] Earned mentions: client sites crediting Herbert AI, Adelaide business press (InDaily, The Lead SA), podcasts, SA Government business events.
