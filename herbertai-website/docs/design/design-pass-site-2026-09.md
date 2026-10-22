@@ -2429,3 +2429,14 @@ level with the heading. Measured: hero ends at the fold at 1440x900, 1280x800,
 1024x768 and 1440x720; card top equals heading top at each (287, 237, 221,
 197). Phones unchanged (that is detail 3). No overflow, no console errors,
 motion on and off. Next: hero detail 3, the phone layout.
+
+## [~] /pilot section 1, the hero: remaining detail 3 of 3, the phone layout (options 22 Oct 2026)
+
+Measured at 375x812: the four terms take 208px as a 2x2 grid, the form card
+starts at 709px so the first screen ends at its top edge, and the book button
+is at 1265px. Board: `design-pass-site-2026-10-22-pilot-phone.png`, the first
+screen and the whole hero for each. 1 the form after the intro, the terms under
+it (recommended; the first input at 495px, all four contact fields in the first
+screen) 2 the terms as one row of four (first input at 615px) 3 a button under
+the intro that jumps to the form, order unchanged. The laptop layout is the
+same in every option. Awaiting Will’s pick.
