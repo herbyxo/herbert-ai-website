@@ -2506,3 +2506,12 @@ to build and a plan for the next twelve months." 2 "Yours comes back like this
 within two business days, from your own figures. This one is for a made-up
 practice." (recommended) 3 "A sample, for a made-up practice. Every figure on
 it is illustrative." Awaiting Will’s pick.
+Will (22 Oct 2026): "none of those options are that great". The three had
+been drafted straight, skipping the line test the Lines register requires for
+word details. Line test run: `design-pass-site-2026-10-22-pilot-written-linetest.png`,
+32 lines numbered and scored out of 5 (three out at the gates), and in every
+option the made-up note moves into the sheet’s label ("Sample audit page · a
+made-up practice"). A no line (recommended: the sheet shows what the line used
+to list, and Will has dropped explaining lines three times on this page) B line
+17, "Back in two business days, and yours to keep." (4 of 5) C line 6, "Worked
+out from your own hourly rates, not guesses." (3.5 of 5). Awaiting Will’s pick.
