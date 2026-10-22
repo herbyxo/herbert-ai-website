@@ -2491,3 +2491,18 @@ Will (22 Oct 2026): "i liked the centred". Today’s alignment stays (the text
 centred against the sheet); nothing to build. Recorded in design-taste’s
 herbert-ai overlay: alignment is judged per section, not copied from the hero.
 Next: details 2, the line under the heading.
+
+## [~] /pilot section 2, the written page: details 2, the line under the heading (options 22 Oct 2026)
+
+Facts: today’s line, "This one is a sample, for a made-up four person
+accounting practice: the jobs, the hours, what each costs a year, and the first
+one to hand over.", repeats the practice the sheet’s title names and lists what
+the sheet shows. The whole sample goes on to "Start here" (the first AI
+employee to build) and "The next twelve months"; the hero’s terms promise the
+written page within two business days. Board:
+`design-pass-site-2026-10-22-pilot-written-line.png`, 1440 and 375. 1 "A
+sample, for a made-up practice. The whole page goes on to the first AI employee
+to build and a plan for the next twelve months." 2 "Yours comes back like this
+within two business days, from your own figures. This one is for a made-up
+practice." (recommended) 3 "A sample, for a made-up practice. Every figure on
+it is illustrative." Awaiting Will’s pick.
