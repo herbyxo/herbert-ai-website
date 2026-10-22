@@ -2487,3 +2487,7 @@ sheet, so neither tops nor bottoms line up. Board:
 `design-pass-site-2026-10-22-pilot-written-align.png`, 1440 and 1024. 1 tops
 level 2 the sheet level with the heading, the label alone above (recommended,
 the hero’s rule) 3 bottoms level. Phones unchanged. Awaiting Will’s pick.
+Will (22 Oct 2026): "i liked the centred". Today’s alignment stays (the text
+centred against the sheet); nothing to build. Recorded in design-taste’s
+herbert-ai overlay: alignment is judged per section, not copied from the hero.
+Next: details 2, the line under the heading.
