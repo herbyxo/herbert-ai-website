@@ -2515,3 +2515,9 @@ made-up practice"). A no line (recommended: the sheet shows what the line used
 to list, and Will has dropped explaining lines three times on this page) B line
 17, "Back in two business days, and yours to keep." (4 of 5) C line 6, "Worked
 out from your own hourly rates, not guesses." (3.5 of 5). Awaiting Will’s pick.
+Will (22 Oct 2026): A, no line. Built: the line under the heading is gone and
+the sheet’s label reads "Sample audit page · a made-up practice". Verified at
+1440, 1280, 1024, 768, 375 and 320, motion on and off: no overflow, no console
+errors. Will then questioned the label ("idk if i like the 'what you get back'
+as the heading"), so the label gets its own line test next, then details 3,
+the phone order.

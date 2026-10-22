@@ -136,7 +136,7 @@ const SHEET_CELL = 'py-3 pr-4 border-t border-[#111]/10 text-[14px] leading-[1.4
 function WrittenSheet() {
   return (
     <div className="min-w-0 rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] px-5 py-6 sm:px-9 sm:py-8 text-[#111]">
-      <p className={SHEET_LABEL}>Sample audit page</p>
+      <p className={SHEET_LABEL}>Sample audit page · a made-up practice</p>
       <p className="mt-2.5 font-bold tracking-[-0.03em] leading-[1.02] max-w-[22ch]" style={{ fontSize: 'clamp(24px, 2.1vw, 30px)' }}>
         {SAMPLE_TITLE}
       </p>
@@ -233,10 +233,9 @@ export default function Pilot() {
           <div className="min-w-0">
             <Label>What you get back</Label>
             <H2>What your admin costs, written down.</H2>
-            <p className="mt-5 text-[17px] leading-[1.5] text-[#555] max-w-[40ch]">
-              This one is a sample, for a made-up four person accounting practice: the jobs, the
-              hours, what each costs a year, and the first one to hand over.
-            </p>
+            {/* No line under the heading: the sheet shows what it used to list,
+                and the made-up note sits in the sheet's label (Will, 22 Oct 2026,
+                line test option A). */}
             <p className="mt-6">
               <a href="/pilot/sample-audit" className="text-[16px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
                 Read the whole sample <span aria-hidden>&rarr;</span>
