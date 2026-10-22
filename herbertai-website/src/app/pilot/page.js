@@ -151,6 +151,15 @@ export default function Pilot() {
               45 minutes on how your business runs: where the hours go, what each repetitive job
               costs you a year, and which one to hand over first.
             </p>
+            {/* Wherever the form sits below the text (phones, tablets), its
+                button comes up under the intro and jumps down to it (Will,
+                22 Oct 2026, phone layout "3"). */}
+            <a
+              href="#form"
+              className="lg:hidden mt-6 inline-flex items-center gap-2 bg-[#111] text-white rounded-[10px] px-6 py-3.5 text-[16px] font-medium hover:bg-[#2a2a2a] transition-colors"
+            >
+              Book a free AI audit <span aria-hidden>&darr;</span>
+            </a>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-[760px]">
               {TERMS.map(([n, l]) => (
                 <div key={n} className="border-t border-[#111]/12 pt-3">
@@ -160,7 +169,7 @@ export default function Pilot() {
               ))}
             </div>
           </div>
-          <div className="min-w-0 mt-12 lg:mt-0 lg:col-start-2 lg:row-start-2">
+          <div id="form" className="min-w-0 mt-12 lg:mt-0 lg:col-start-2 lg:row-start-2 scroll-mt-6">
             <div className="rounded-2xl border border-[#111]/10 bg-[#FAFAF8] p-6 sm:p-7">
               <AuditForm source="/pilot" />
             </div>

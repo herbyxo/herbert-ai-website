@@ -2354,7 +2354,7 @@ memory records the third slip. From here /pilot runs section by section:
 
 | Section | Facts | Options | Pick | Build | Details | Where it stands |
 |---|---|---|---|---|---|---|
-| 1. Hero with the form | [x] | [x] | [x] | [x] | [~] | Skeleton B’s point; heading, label, intro and terms done; left: the form side, spacing, the phone layout |
+| 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [ ] | [ ] | [x] | [~] | Heading done (What your admin costs, written down.); the layout itself never drawn three ways |
 | 3. How it works | [x] | [ ] | [ ] | [x] | [~] | Heading options out (detail 4); the layout never drawn three ways |
 | 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2440,3 +2440,11 @@ it (recommended; the first input at 495px, all four contact fields in the first
 screen) 2 the terms as one row of four (first input at 615px) 3 a button under
 the intro that jumps to the form, order unchanged. The laptop layout is the
 same in every option. Awaiting Will’s pick.
+Will (22 Oct 2026): "3". Built: under the intro, wherever the form sits below
+the text (below 1024px), the form's own button, "Book a free AI audit ↓",
+jumps to the card (`#form`, 24px from the top). Verified at 375, 390, 320 and
+768 with motion on and off: the jump lands on the card each time; the button
+is hidden at 1024 and 1440; no overflow, no console errors. Checked again in a
+real 375x812 viewport (the in-app browser): the tap lands with the whole form
+and its button on one screen. Section 1, the hero, is done. Next: section 2,
+the written page, three layouts.
