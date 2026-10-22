@@ -2477,3 +2477,13 @@ motion on and off: no overflow inside the sheet or on the page, smallest text
 14px in the table and 10.5px for the labels on a phone, no console errors; the
 title, the three costs and the total match the sample page. Next: section 2’s
 details pass.
+
+## [~] /pilot section 2, the written page: details 1, the text against the sheet (options 22 Oct 2026)
+
+Section 2’s details: 1 how the text sits against the sheet, 2 the line under
+the heading now the sheet shows the table, 3 the phone order (the link comes
+before the sheet). Detail 1 facts: the text column is centred against the
+sheet, so neither tops nor bottoms line up. Board:
+`design-pass-site-2026-10-22-pilot-written-align.png`, 1440 and 1024. 1 tops
+level 2 the sheet level with the heading, the label alone above (recommended,
+the hero’s rule) 3 bottoms level. Phones unchanged. Awaiting Will’s pick.
