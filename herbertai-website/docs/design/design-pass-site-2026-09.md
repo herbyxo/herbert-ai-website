@@ -2549,3 +2549,18 @@ from 1024px and under it below that). Verified at 1440, 1024, 768, 375 and 320,
 motion on and off: one visible link at each width, 21px under the sheet on
 phones, no overflow, no console errors. Section 2 is done. Next: section 3,
 How it works, its layout three ways.
+
+## [~] /pilot section 3, How it works: three layouts (options 22 Oct 2026)
+
+Facts: the section is three columns (step, title, three facts), the same layout
+as the homepage’s How It Works, which covers the ladder where this covers the
+pilot; nothing in it shows the fourteen days its heading promises. Board:
+`design-pass-site-2026-10-22-pilot-how.png`, 1440 and 375. 1 the fourteen days
+as a timeline: one line from the audit to day 14, the build segment marked in
+fourteen ticks, four stops (the audit, your written page within two business
+days, the build from your go, live on day 14), vertical on a phone
+(recommended) 2 the steps as rows, title left and facts right 3 the steps as
+three white cards with large numbers. Facts are today’s STEPS and the hero’s
+terms; the audit’s fact is the hero intro’s "how your business runs and where
+the hours go". The pending 20 Oct heading options (details 4 of 9) wait for
+this section’s details pass. Awaiting Will’s pick.
