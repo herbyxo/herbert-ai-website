@@ -1,5 +1,6 @@
 import { Eyebrow, AuditButton } from '../../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '@/app/components/site/sample-audit'
 
 export const metadata = {
   title: { absolute: 'A sample AI audit page | Herbert AI' },
@@ -18,26 +19,6 @@ export const metadata = {
 // Every figure is illustrative and the page says so twice, because this is
 // the proof we can publish without naming a client.
 
-const jobs = [
-  {
-    job: 'Chasing clients for documents: bank statements, receipts, signed declarations, the questionnaire that never comes back',
-    who: 'Admin',
-    hours: '8',
-    cost: '$19,760',
-  },
-  {
-    job: 'Writing the same emails by hand: lodgement reminders, "your return is ready to sign", "we need one more thing"',
-    who: 'Senior accountant',
-    hours: '4',
-    cost: '$13,000',
-  },
-  {
-    job: 'Retyping a new client’s details from the engagement form into the practice software, the tax agent portal and the engagement letter',
-    who: 'Admin',
-    hours: '3',
-    cost: '$7,410',
-  },
-]
 
 const phases = [
   {
@@ -78,7 +59,7 @@ export default function SampleAudit() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 md:pt-36 pb-16 md:pb-20">
           <Eyebrow>Sample audit page</Eyebrow>
           <h1 className="font-display text-ink max-w-[16ch]" style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}>
-            AI audit: a four person accounting practice.
+            {SAMPLE_TITLE}
           </h1>
           <div className="mt-10 max-w-[70ch] bg-cream-alt border border-line rounded-3xl p-6 md:p-8">
             <p className="text-[15px] md:text-[16px] text-ink leading-[1.6]">
@@ -102,11 +83,11 @@ export default function SampleAudit() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pb-20 md:pb-24">
           <Eyebrow>Where the time goes</Eyebrow>
           <ul className="md:hidden divide-y divide-line border-y border-line">
-            {jobs.map(j => (
+            {SAMPLE_JOBS.map(j => (
               <li key={j.who + j.hours} className="py-5">
                 <p className="text-[15px] text-ink-soft leading-[1.5]">{j.job}</p>
                 <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                  {j.who} · {j.hours} hours a week · <span className="text-ink">{j.cost} a year</span>
+                  {j.who} · <span className="whitespace-nowrap">{j.hours} hours a week</span> · <span className="whitespace-nowrap text-ink">{j.cost} a year</span>
                 </p>
               </li>
             ))}
@@ -122,7 +103,7 @@ export default function SampleAudit() {
                 </tr>
               </thead>
               <tbody>
-                {jobs.map(j => (
+                {SAMPLE_JOBS.map(j => (
                   <tr key={j.who + j.hours}>
                     <td className={`${td} max-w-[48ch]`}>{j.job}</td>
                     <td className={td}>{j.who}</td>
@@ -134,7 +115,7 @@ export default function SampleAudit() {
             </table>
           </div>
           <p className="mt-8 max-w-[70ch] text-[17px] md:text-[19px] text-ink leading-[1.5]">
-            Together about $40,000 a year, and about half of it is one job.
+            {SAMPLE_TOTAL}
           </p>
           <p className="mt-5 max-w-[70ch] text-[15px] text-muted leading-[1.6]">
             Hourly cost used: $47.50 loaded for the admin role, from the $38 an hour you told us plus about

@@ -2355,7 +2355,7 @@ memory records the third slip. From here /pilot runs section by section:
 | Section | Facts | Options | Pick | Build | Details | Where it stands |
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
-| 2. The written page | [x] | [ ] | [ ] | [x] | [~] | Heading done (What your admin costs, written down.); the layout itself never drawn three ways |
+| 2. The written page | [x] | [x] | [x] | [x] | [ ] | Live sheet built 22 Oct 2026 (option 3); next its details pass |
 | 3. How it works | [x] | [ ] | [ ] | [x] | [~] | Heading options out (detail 4); the layout never drawn three ways |
 | 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2465,3 +2465,15 @@ with a live sheet built from the sample page’s own `jobs` list: title, the thr
 jobs, who, hours, cost a year, the total; real text, reads on a phone, cannot
 drift (recommended). Words kept; they are this section’s details pass.
 Awaiting Will’s pick.
+Will (22 Oct 2026): "3". Built: the picture is gone (and
+`public/pilot/sample-audit-page.jpg` with it); a white sheet holds the sample’s
+title, its time table and the total as real text. The figures moved to
+`components/site/sample-audit.js` (SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL),
+which /pilot/sample-audit now reads too, so the two cannot drift. Table from
+768px up, a stacked list below; figures and their units never split (also
+applied to the sample page’s own list). The sheet is not a link; "Read the
+whole sample" beside it is. Verified at 1440, 1280, 1024, 768, 375 and 320,
+motion on and off: no overflow inside the sheet or on the page, smallest text
+14px in the table and 10.5px for the labels on a phone, no console errors; the
+title, the three costs and the total match the sample page. Next: section 2’s
+details pass.

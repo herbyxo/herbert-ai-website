@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import AuditForm from '../components/site/AuditForm'
+import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '../components/site/sample-audit'
 import { OG_IMAGE } from '@/app/components/site/og'
 import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
 
@@ -125,6 +125,56 @@ function Section({ children, first = false }) {
   )
 }
 
+// Section 2's sheet: the sample audit's time table as real text, from the
+// same figures as /pilot/sample-audit, so it reads on a phone and never drifts
+// from the sample (Will, 22 Oct 2026, "3"). White is the software's colour on
+// the paper ground (CHARTER.md). Not a link itself: "Read the whole sample"
+// beside it is, so a screen reader does not hear the table as link text.
+const SHEET_LABEL = 'font-mono text-[10px] uppercase tracking-[0.18em] text-[#666]'
+const SHEET_CELL = 'py-3 pr-4 border-t border-[#111]/10 text-[14px] leading-[1.45] text-[#333] align-top'
+
+function WrittenSheet() {
+  return (
+    <div className="min-w-0 rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] px-5 py-6 sm:px-9 sm:py-8 text-[#111]">
+      <p className={SHEET_LABEL}>Sample audit page</p>
+      <p className="mt-2.5 font-bold tracking-[-0.03em] leading-[1.02] max-w-[22ch]" style={{ fontSize: 'clamp(24px, 2.1vw, 30px)' }}>
+        {SAMPLE_TITLE}
+      </p>
+      <p className={`${SHEET_LABEL} mt-6 mb-2`}>Where the time goes</p>
+      <ul className="md:hidden border-b border-[#111]/10">
+        {SAMPLE_JOBS.map((j) => (
+          <li key={j.job} className="py-3.5 border-t border-[#111]/10">
+            <p className="text-[14px] leading-[1.45] text-[#333]">{j.job}</p>
+            <p className="mt-2 font-mono text-[10.5px] uppercase tracking-[0.12em] text-[#666]">
+              {j.who} · <span className="whitespace-nowrap">{j.hours} hours a week</span> · <span className="whitespace-nowrap text-[#111]">{j.cost} a year</span>
+            </p>
+          </li>
+        ))}
+      </ul>
+      <table className="hidden md:table w-full border-collapse">
+        <thead>
+          <tr>
+            {['Job', 'Who does it', 'Hours a week', 'Cost a year'].map((h) => (
+              <th key={h} className={`${SHEET_LABEL} text-left font-normal pb-2.5 pr-4 align-bottom`}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {SAMPLE_JOBS.map((j) => (
+            <tr key={j.job}>
+              <td className={SHEET_CELL}>{j.job}</td>
+              <td className={SHEET_CELL}>{j.who}</td>
+              <td className={SHEET_CELL}>{j.hours}</td>
+              <td className={`${SHEET_CELL} font-semibold text-[#111]`}>{j.cost}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="mt-5 text-[16px] md:text-[17px] leading-[1.45]">{SAMPLE_TOTAL}</p>
+    </div>
+  )
+}
+
 export default function Pilot() {
   return (
     <>
@@ -177,7 +227,7 @@ export default function Pilot() {
         </div>
       </section>
 
-      {/* 2. The written page the audit gives back, shown at size. */}
+      {/* 2. The written page the audit gives back: its time table as a live sheet. */}
       <Section>
         <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
           <div className="min-w-0">
@@ -193,16 +243,7 @@ export default function Pilot() {
               </a>
             </p>
           </div>
-          <a href="/pilot/sample-audit" className="block min-w-0 rounded-xl overflow-hidden border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)]">
-            <Image
-              src="/pilot/sample-audit-page.jpg"
-              alt="The top of the sample audit page: the jobs eating the time at a four person accounting practice, with the hours and what each costs a year"
-              width={2496}
-              height={2040}
-              sizes="(min-width: 1024px) 740px, 100vw"
-              className="w-full h-auto block"
-            />
-          </a>
+          <WrittenSheet />
         </div>
       </Section>
 
