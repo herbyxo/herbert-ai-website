@@ -2571,3 +2571,15 @@ line stops at the last stop. Verified at 1440, 1280, 1024, 768, 375 and 320,
 motion on and off: the segments meet end to end at each width, 14 ticks on
 laptops and none on phones, no overflow, no console errors. Next: section 3’s
 details pass (the heading options from 20 Oct among them).
+
+## [~] /pilot section 3, How it works: details 1, the pilot’s price (options 22 Oct 2026)
+
+Facts: the page states the pilot’s price only in an FAQ question ("What do I
+actually get for $3,500?") and in After the pilot; the timeline’s build stop
+does not say what it costs. The homepage’s RUNGS[1].price says "$3,500 fixed.
+Live in 14 days or it’s free." Board:
+`design-pass-site-2026-10-22-pilot-how-price.png`. 1 on the stops: "Free" under
+the audit, the homepage’s price line under the build (recommended) 2 one line
+under the timeline, "The audit is free. The build is $3,500 fixed, live in 14
+days or it’s free." 3 in the grey when lines ("45 minutes · free", "14 days
+from your go · $3,500 fixed"), dropping the promise. Awaiting Will’s pick.
