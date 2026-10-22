@@ -2422,3 +2422,10 @@ other, so the card starts 10px below the label at 1440 and 27px above it at
 1280. 1 fill the first screen, tops level (recommended) 2 fill the first screen,
 the card level with the heading 3 today’s height, tops level. Awaiting Will’s
 pick. Then detail 3, the phone layout.
+Will (22 Oct 2026): "2 - it looks more square and uniform". Built: on a laptop
+the hero fills the first screen (lg:min-h, calc(100svh minus the 76px header),
+the block centred) and the label sits in its own grid row, so the card starts
+level with the heading. Measured: hero ends at the fold at 1440x900, 1280x800,
+1024x768 and 1440x720; card top equals heading top at each (287, 237, 221,
+197). Phones unchanged (that is detail 3). No overflow, no console errors,
+motion on and off. Next: hero detail 3, the phone layout.

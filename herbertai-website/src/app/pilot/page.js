@@ -134,11 +134,16 @@ export default function Pilot() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* 1. The offer and the form. #book is here: every audit button lands on it. */}
-      <section id="book" className="bg-[#FAFAF8] text-[#111] scroll-mt-4">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-16 pb-20 md:pb-24 grid lg:grid-cols-[0.95fr_1.05fr] gap-x-14 gap-y-12 items-center">
-          <div className="min-w-0">
+      {/* 1. The offer and the form. #book is here: every audit button lands on it.
+          On a laptop the hero fills the first screen like the homepage's, and the
+          card starts level with the heading, the label alone above both (Will,
+          22 Oct 2026, spacing "2": "it looks more square and uniform"). */}
+      <section id="book" className="bg-[#FAFAF8] text-[#111] scroll-mt-4 lg:flex lg:flex-col lg:justify-center lg:min-h-[calc(100svh-76px)]">
+        <div className="w-full max-w-[1280px] mx-auto px-6 lg:px-12 pt-12 md:pt-16 lg:pt-8 pb-20 md:pb-24 lg:pb-8 grid lg:grid-cols-[0.95fr_1.05fr] gap-x-14 items-start">
+          <div className="lg:col-start-1">
             <Label>AI Audit</Label>
+          </div>
+          <div className="min-w-0 lg:col-start-1 lg:row-start-2">
             <h1 className="font-bold tracking-[-0.045em] leading-[0.95] max-w-[14ch]" style={{ fontSize: 'clamp(44px, 4.4vw, 64px)' }}>
               Find the job eating your time and money.
             </h1>
@@ -155,7 +160,7 @@ export default function Pilot() {
               ))}
             </div>
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 mt-12 lg:mt-0 lg:col-start-2 lg:row-start-2">
             <div className="rounded-2xl border border-[#111]/10 bg-[#FAFAF8] p-6 sm:p-7">
               <AuditForm source="/pilot" />
             </div>
