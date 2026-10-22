@@ -2355,7 +2355,7 @@ memory records the third slip. From here /pilot runs section by section:
 | Section | Facts | Options | Pick | Build | Details | Where it stands |
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
-| 2. The written page | [x] | [x] | [x] | [x] | [ ] | Live sheet built 22 Oct 2026 (option 3); next its details pass |
+| 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [ ] | [ ] | [x] | [~] | Heading options out (detail 4); the layout never drawn three ways |
 | 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2543,3 +2543,9 @@ seen. Board: `design-pass-site-2026-10-22-pilot-written-phone.png`. 1 the link
 under the sheet on phones, laptops unchanged (recommended: the offer after the
 proof) 2 the link as the sheet’s last line at every width 3 as 1, as a
 full-width outlined button. Awaiting Will’s pick.
+Will (22 Oct 2026): "1". Built: on phones and tablets the "Read the whole
+sample" link sits under the sheet (one `ReadSample` link, shown beside the sheet
+from 1024px and under it below that). Verified at 1440, 1024, 768, 375 and 320,
+motion on and off: one visible link at each width, 21px under the sheet on
+phones, no overflow, no console errors. Section 2 is done. Next: section 3,
+How it works, its layout three ways.

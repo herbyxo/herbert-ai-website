@@ -133,6 +133,14 @@ function Section({ children, first = false }) {
 const SHEET_LABEL = 'font-mono text-[10px] uppercase tracking-[0.18em] text-[#666]'
 const SHEET_CELL = 'py-3 pr-4 border-t border-[#111]/10 text-[14px] leading-[1.45] text-[#333] align-top'
 
+function ReadSample() {
+  return (
+    <a href="/pilot/sample-audit" className="text-[16px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
+      Read the whole sample <span aria-hidden>&rarr;</span>
+    </a>
+  )
+}
+
 function WrittenSheet() {
   return (
     <div className="min-w-0 rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] px-5 py-6 sm:px-9 sm:py-8 text-[#111]">
@@ -236,13 +244,18 @@ export default function Pilot() {
             {/* No line under the heading: the sheet shows what it used to list,
                 and the made-up note sits in the sheet's label (Will, 22 Oct 2026,
                 line test option A). */}
-            <p className="mt-6">
-              <a href="/pilot/sample-audit" className="text-[16px] font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
-                Read the whole sample <span aria-hidden>&rarr;</span>
-              </a>
+            <p className="mt-6 hidden lg:block">
+              <ReadSample />
             </p>
           </div>
-          <WrittenSheet />
+          {/* On a phone the link comes after the sheet, the offer after the
+              proof (Will, 22 Oct 2026, phone order "1"); laptops keep it beside. */}
+          <div className="min-w-0">
+            <WrittenSheet />
+            <p className="mt-5 lg:hidden">
+              <ReadSample />
+            </p>
+          </div>
         </div>
       </Section>
 
