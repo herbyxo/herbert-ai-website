@@ -84,10 +84,14 @@ const TERMS = [
   ['Yours', 'To keep, either way'],
 ]
 
+// How it works as a timeline: one line from the audit to day 14, the build
+// marked in fourteen ticks (Will, 22 Oct 2026, layout "1"). Facts are the old
+// three steps' and the hero's terms; the audit's is the hero intro's.
 const STEPS = [
-  { n: 'Step 1', title: 'The free AI audit', facts: ['45 minutes auditing your business', 'A written page in two business days', 'The three jobs costing you most, in your figures'] },
-  { n: 'Step 2', title: 'Your first AI employee, built', facts: ['Built around the tools you already use', 'One job and a name, say an AI document chaser', 'A progress update, not a project plan'] },
-  { n: 'Step 3', title: 'Live on day 14', facts: ['Your team uses it the same day', 'A walkthrough so everyone knows how', 'A twelve month roadmap of the next jobs'] },
+  { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'] },
+  { when: 'Within two business days', title: 'Your written page', facts: ['The three jobs costing you most, in your figures', 'Yours to keep either way'] },
+  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Built around the tools you already use', 'One job and a name, say an AI document chaser', 'A progress update, not a project plan'], build: true },
+  { when: 'Day 14', title: 'Live', facts: ['Your team uses it the same day', 'A walkthrough so everyone knows how', 'A twelve month roadmap of the next jobs'] },
 ]
 
 const FIXES = [
@@ -132,6 +136,35 @@ function Section({ children, first = false }) {
 // beside it is, so a screen reader does not hear the table as link text.
 const SHEET_LABEL = 'font-mono text-[10px] uppercase tracking-[0.18em] text-[#666]'
 const SHEET_CELL = 'py-3 pr-4 border-t border-[#111]/10 text-[14px] leading-[1.45] text-[#333] align-top'
+
+// Vertical on phones and tablets (the line down the left), across the section
+// from 1024px (the line along the top). The line stops at the last stop.
+function Timeline() {
+  return (
+    <ol className="mt-12 lg:mt-14 grid lg:grid-cols-[0.8fr_1fr_1.6fr_1fr]">
+      {STEPS.map((st) => (
+        <li key={st.title} className="group relative min-w-0 pl-9 pb-9 last:pb-0 lg:pl-0 lg:pb-0 lg:pt-[22px] lg:pr-7">
+          <span aria-hidden className="absolute left-[5px] top-2 bottom-0 w-[2px] bg-[#111] group-last:hidden lg:left-0 lg:right-0 lg:top-0 lg:bottom-auto lg:w-auto lg:h-[2px]" />
+          <span aria-hidden className="absolute left-0 top-[3px] w-3 h-3 rounded-full bg-[#111] lg:top-[-5px]" />
+          {st.build && (
+            <span aria-hidden className="hidden lg:flex absolute left-0 right-0 -top-[13px] h-3 items-end">
+              {Array.from({ length: 14 }, (_, d) => (
+                <span key={d} className={`flex-1 border-l ${d === 0 || d === 13 ? 'h-3 border-[#111]/50' : 'h-[7px] border-[#111]/20'}`} />
+              ))}
+            </span>
+          )}
+          <p className="text-[16px] font-medium text-[#777] leading-[1.2] mb-2 lg:mb-3.5">{st.when}</p>
+          <h3 className="text-[22px] lg:text-[24px] font-semibold tracking-[-0.02em] mb-2.5">{st.title}</h3>
+          <ul>
+            {st.facts.map((f) => (
+              <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ol>
+  )
+}
 
 function ReadSample() {
   return (
@@ -263,19 +296,7 @@ export default function Pilot() {
       <Section>
         <Label>How it works</Label>
         <H2>Audit first. Then fourteen days.</H2>
-        <div className="mt-12 grid md:grid-cols-3 gap-10 lg:gap-12">
-          {STEPS.map((st) => (
-            <div key={st.n} className="border-t border-[#111]/15 pt-6">
-              <p className="text-[16px] font-medium text-[#777] mb-5">{st.n}</p>
-              <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-3">{st.title}</h3>
-              <ul>
-                {st.facts.map((f) => (
-                  <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <Timeline />
       </Section>
 
       {/* 4. What it fixes. */}

@@ -2356,7 +2356,7 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [ ] | [ ] | [x] | [~] | Heading options out (detail 4); the layout never drawn three ways |
+| 3. How it works | [x] | [x] | [x] | [x] | [ ] | Timeline built 22 Oct 2026 (layout 1); next its details pass |
 | 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2564,3 +2564,10 @@ three white cards with large numbers. Facts are today’s STEPS and the hero’s
 terms; the audit’s fact is the hero intro’s "how your business runs and where
 the hours go". The pending 20 Oct heading options (details 4 of 9) wait for
 this section’s details pass. Awaiting Will’s pick.
+Will (22 Oct 2026): "1". Built: `Timeline` in pilot/page.js, an ordered list
+of four stops from the new STEPS (when, title, facts), the line along the top
+from 1024px with fourteen ticks over the build, down the left below that; the
+line stops at the last stop. Verified at 1440, 1280, 1024, 768, 375 and 320,
+motion on and off: the segments meet end to end at each width, 14 ticks on
+laptops and none on phones, no overflow, no console errors. Next: section 3’s
+details pass (the heading options from 20 Oct among them).
