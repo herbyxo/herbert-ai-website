@@ -2448,3 +2448,20 @@ is hidden at 1024 and 1440; no overflow, no console errors. Checked again in a
 real 375x812 viewport (the in-app browser): the tap lands with the whole form
 and its button on one screen. Section 1, the hero, is done. Next: section 2,
 the written page, three layouts.
+
+## [~] /pilot section 2, the written page: three layouts (options 22 Oct 2026)
+
+Facts: the section shows `/pilot/sample-audit-page.jpg`, captured before the
+21 Oct colour pass, so it still shows the old cream and no longer matches the
+sample page; it is shown at 29% of its size on a laptop and 13% on a phone, so
+the table of jobs, hours and costs cannot be read. The sample page’s data is
+the `jobs` list in `sample-audit/page.js` plus the line "Together about
+$40,000 a year, and about half of it is one job." Board:
+`design-pass-site-2026-10-22-pilot-written.png`, 1440 and 375. 1 today’s
+layout with a fresh capture (smallest change, still unreadable, stale again
+when the sample changes) 2 the heading and line on top, a capture of the
+sample’s title and time table full width near real size 3 today’s two columns
+with a live sheet built from the sample page’s own `jobs` list: title, the three
+jobs, who, hours, cost a year, the total; real text, reads on a phone, cannot
+drift (recommended). Words kept; they are this section’s details pass.
+Awaiting Will’s pick.
