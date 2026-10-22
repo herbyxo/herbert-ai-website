@@ -2534,3 +2534,12 @@ order.
 Will (22 Oct 2026), after seeing every section’s label and heading listed:
 "ok the section names are fine". "What you get back" stays; nothing to build.
 Next: details 3, the phone order.
+
+## [~] /pilot section 2, the written page: details 3, the phone order (options 22 Oct 2026)
+
+Facts: on a phone the section stacks label, heading, the "Read the whole
+sample" link, then the sheet, so the link offers the rest before any of it is
+seen. Board: `design-pass-site-2026-10-22-pilot-written-phone.png`. 1 the link
+under the sheet on phones, laptops unchanged (recommended: the offer after the
+proof) 2 the link as the sheet’s last line at every width 3 as 1, as a
+full-width outlined button. Awaiting Will’s pick.
