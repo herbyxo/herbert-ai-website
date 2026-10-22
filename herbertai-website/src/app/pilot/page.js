@@ -1,6 +1,7 @@
 import AuditForm from '../components/site/AuditForm'
 import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '../components/site/sample-audit'
 import { OG_IMAGE } from '@/app/components/site/og'
+import { RUNGS } from '@/app/components/site/shared'
 import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
 
 export const metadata = {
@@ -86,11 +87,14 @@ const TERMS = [
 
 // How it works as a timeline: one line from the audit to day 14, the build
 // marked in fourteen ticks (Will, 22 Oct 2026, layout "1"). Facts are the old
-// three steps' and the hero's terms; the audit's is the hero intro's.
+// three steps' and the hero's terms; the audit's is the hero intro's. The
+// prices are the homepage's own (RUNGS), and on laptops they sit on one level
+// at the foot of their stops (Will, 22 Oct 2026, price "1", "all the prices
+// being on different levels i dont like").
 const STEPS = [
-  { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'] },
+  { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'], price: RUNGS[0].price },
   { when: 'Within two business days', title: 'Your written page', facts: ['The three jobs costing you most, in your figures', 'Yours to keep either way'] },
-  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Built around the tools you already use', 'One job and a name, say an AI document chaser', 'A progress update, not a project plan'], build: true },
+  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Built around the tools you already use', 'One job and a name, say an AI document chaser', 'A progress update, not a project plan'], build: true, price: RUNGS[1].price },
   { when: 'Day 14', title: 'Live', facts: ['Your team uses it the same day', 'A walkthrough so everyone knows how', 'A twelve month roadmap of the next jobs'] },
 ]
 
@@ -143,7 +147,7 @@ function Timeline() {
   return (
     <ol className="mt-12 lg:mt-14 grid lg:grid-cols-[0.8fr_1fr_1.6fr_1fr]">
       {STEPS.map((st) => (
-        <li key={st.title} className="group relative min-w-0 pl-9 pb-9 last:pb-0 lg:pl-0 lg:pb-0 lg:pt-[22px] lg:pr-7">
+        <li key={st.title} className="group relative min-w-0 pl-9 pb-9 last:pb-0 lg:pl-0 lg:pb-0 lg:pt-[22px] lg:pr-7 lg:flex lg:flex-col">
           <span aria-hidden className="absolute left-[5px] top-2 bottom-0 w-[2px] bg-[#111] group-last:hidden lg:left-0 lg:right-0 lg:top-0 lg:bottom-auto lg:w-auto lg:h-[2px]" />
           <span aria-hidden className="absolute left-0 top-[3px] w-3 h-3 rounded-full bg-[#111] lg:top-[-5px]" />
           {st.build && (
@@ -160,6 +164,7 @@ function Timeline() {
               <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
             ))}
           </ul>
+          {st.price && <p className="mt-4 lg:mt-auto lg:pt-6 text-[15px] font-medium text-[#111]">{st.price}</p>}
         </li>
       ))}
     </ol>

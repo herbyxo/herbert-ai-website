@@ -2583,3 +2583,10 @@ the audit, the homepage’s price line under the build (recommended) 2 one line
 under the timeline, "The audit is free. The build is $3,500 fixed, live in 14
 days or it’s free." 3 in the grey when lines ("45 minutes · free", "14 days
 from your go · $3,500 fixed"), dropping the promise. Awaiting Will’s pick.
+Will (22 Oct 2026): "i like 1, but all the prices being on different levels i
+dont like". Built: "Free" on the audit and the homepage’s "$3,500 fixed. Live
+in 14 days or it’s free." on the build, both read from RUNGS so the pages
+cannot drift; on laptops each stop is a column and its price sits at the foot,
+so the two share one line (653px at 1440, 599 at 1280, 585 at 1024). On phones
+each price follows its own stop. No overflow, no console errors, motion on and
+off. Next: section 3’s other details.
