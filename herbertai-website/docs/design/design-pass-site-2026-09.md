@@ -2590,3 +2590,12 @@ cannot drift; on laptops each stop is a column and its price sits at the foot,
 so the two share one line (653px at 1440, 599 at 1280, 585 at 1024). On phones
 each price follows its own stop. No overflow, no console errors, motion on and
 off. Next: section 3’s other details.
+Will (23 Oct 2026): "yeah idk about the gap, but idk alternatives. i also dont
+like the yours to keep either way". At the foot of the stops the prices are
+level only by sitting under the tallest stop, so the gap is built in. Board:
+`design-pass-site-2026-10-23-pilot-how-price2.png`, 1440, 1024 and 375; every
+option drops "Yours to keep either way" from the written page stop. 1 the
+prices above the line over their stops, level by construction, no gap; under
+the title on a phone (recommended) 2 under the titles, level only while every
+title fits one line (at 1024 the audit’s title wraps and its price drops) 3 at
+the foot, as built. Awaiting Will’s pick.
