@@ -74,7 +74,8 @@ Search Console, 90 days to 18 Oct 2026: nearly every click is a brand search ("h
 
 Mentions on other sites track AI visibility more closely than links do (0.664 against 0.218 across about 75,000 brands), and directories carry 37% of citations for local services. Every profile uses the same name, the descriptor line, Adelaide and the domain, and goes into `sameAs` once live. Free first, in this order:
 
-- [ ] Clutch (also creates The Manifest profile), with three verified client reviews. Reviews there show the reviewer's role and industry; whether a client is named is the client's choice and the Smith agreement's.
+- [x] Clutch profile created 22 Oct 2026 (clutch.co/profile/herbert-ai, under Clutch's review; goes into `sameAs` once published).
+- [ ] Clutch reviews: three verified client reviews. Reviews there show the reviewer's role and industry; whether a client is named is the client's choice and the Smith agreement's.
 - [ ] Google Business Profile reviews, asked for the same way after every job, never gated.
 - [x] National AI Centre AI Directory: nomination submitted 22 Oct 2026 (review takes several weeks).
 - [ ] GoodFirms, TechBehemoths, DesignRush (free application), Crunchbase. Copy for all of them: `Herbert AI/marketing/seo/markdown/directory-pack.md`.
