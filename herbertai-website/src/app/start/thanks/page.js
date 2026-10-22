@@ -22,7 +22,7 @@ export default function Thanks() {
       </Script>
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 min-h-[80vh] flex flex-col justify-center py-20 md:py-28">
         <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-          <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+          <span className="w-1.5 h-1.5 rounded-full bg-ink" />
           <span>Brief received</span>
         </div>
 
@@ -60,7 +60,7 @@ export default function Thanks() {
           </Link>
           <Link
             href="/services"
-            className="text-[14px] font-medium text-ink hover:text-green-deep transition"
+            className="text-[14px] font-medium text-ink hover:text-muted transition"
           >
             See what I build &rarr;
           </Link>

@@ -99,7 +99,7 @@ export default function Work() {
               <div className="bg-white border border-line rounded-3xl overflow-hidden grid lg:grid-cols-[1.1fr_1fr]">
                 <div className="p-8 md:p-10 flex flex-col">
                   <div className="flex items-center gap-2 mb-6">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-ink" />
                     <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{s.tag}</span>
                   </div>
                   <h2 className="text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-ink mb-4 leading-[1.2]">{s.title}</h2>

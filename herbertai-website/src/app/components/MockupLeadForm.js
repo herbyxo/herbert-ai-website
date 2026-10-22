@@ -24,7 +24,7 @@
 // the thanks redirect cannot drift apart.
 export default function MockupLeadForm({ variant = 'full', onGreen = false, source = 'Web Design Adelaide', compactField = 'business', look = 'pill' }) {
   const compact = variant === 'compact'
-  // `look`: 'pill' is the organic page (cream, rounded-full, the site's green).
+  // `look`: 'pill' is the organic page (paper, rounded-full, an ink button).
   // 'direct' is the paid landing pages (BUILD-PLAN G-C12 field test, Will's pick
   // A2/S3 on 2026-09-11): stacked square fields, deep green button, white text.
   // Same hidden fields, same endpoint, same redirect, so the two cannot drift.
@@ -138,7 +138,7 @@ export default function MockupLeadForm({ variant = 'full', onGreen = false, sour
               className={`shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-[15px] transition-all duration-300 ${
                 onGreen
                   ? 'bg-ink text-cream hover:bg-ink-soft'
-                  : 'bg-green text-ink hover:shadow-[0_0_28px_var(--green-glow)] hover:-translate-y-px'
+                  : 'bg-ink text-cream hover:bg-ink-soft'
               }`}
             >
               Get my free mockup <span aria-hidden>&rarr;</span>

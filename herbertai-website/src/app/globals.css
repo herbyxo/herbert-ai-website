@@ -2,12 +2,12 @@
 
 @theme {
   /* ─── palette ─────────────────────────────────────────────────── */
-  --color-cream: #F5F0E5;
-  --color-cream-alt: #EFE9DC;
-  --color-ink: #0A0A0A;
-  --color-ink-soft: #1A1A1A;
-  --color-muted: #6B6660;
-  --color-line: #E2DBCB;
+  --color-cream: #FAFAF8;
+  --color-cream-alt: #F2F2EF;
+  --color-ink: #111111;
+  --color-ink-soft: #2A2A2A;
+  --color-muted: #666666;
+  --color-line: #E4E4E1;
   --color-green: #00FF88;
   --color-green-deep: #00D924;
 
@@ -43,8 +43,8 @@
 * { -webkit-font-smoothing: antialiased; }
 
 body {
-  background: #F5F0E5;
-  color: #0A0A0A;
+  background: #FAFAF8;
+  color: #111111;
   font-family: var(--font-geist), -apple-system, sans-serif;
 }
 
@@ -118,10 +118,10 @@ body {
   outline-offset: 3px;
   border-radius: 6px;
 }
-/* On dark surfaces, switch to green ring for visibility */
+/* On dark surfaces, switch to a paper ring for visibility */
 .bg-ink :focus-visible,
 .bg-ink-soft :focus-visible {
-  outline-color: var(--color-green);
+  outline-color: var(--color-cream);
 }
 /* Skip-link — hidden until focused */
 .skip-link {
@@ -139,7 +139,7 @@ body {
 }
 .skip-link:focus-visible {
   top: 1rem;
-  outline-color: var(--color-green);
+  outline-color: var(--color-ink);
 }
 
 /* Drop cap for editorial body copy */
@@ -151,7 +151,7 @@ body {
   font-size: 4.4em;
   line-height: 0.85;
   margin: 0.05em 0.12em 0 -0.02em;
-  color: var(--color-green-deep);
+  color: var(--color-ink);
 }
 
 /* ─── prefers-reduced-motion: kill all motion-driven decoration ────────── */

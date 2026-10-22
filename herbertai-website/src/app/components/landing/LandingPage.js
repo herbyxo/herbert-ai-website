@@ -32,8 +32,6 @@ const archivo = Archivo({
   display: 'swap',
 })
 
-const PHONE_HREF = 'tel:+61448111840'
-const PHONE = '0448 111 840'
 
 export default function LandingPage({ eyebrow, h1, sub, checks, steps, faqs, flood, source, compactField = 'business' }) {
   const faqJsonLd = {
@@ -50,7 +48,7 @@ export default function LandingPage({ eyebrow, h1, sub, checks, steps, faqs, flo
     <div className={`${archivo.variable} font-[family-name:var(--font-archivo)] bg-white text-[#1F2125]`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Top bar: the mark and a phone button. Not a nav. */}
+      {/* Top bar: the mark only. Not a nav. */}
       <div className="border-b border-[#E5E7E5]">
         <div className="max-w-[1100px] mx-auto flex items-center justify-between px-5 md:px-8 py-3.5">
           <div className="flex items-center gap-2.5">
@@ -61,10 +59,6 @@ export default function LandingPage({ eyebrow, h1, sub, checks, steps, faqs, flo
             </svg>
             <span className="text-[17px] font-semibold tracking-[-0.01em]">herbert ai</span>
           </div>
-          <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-[#0B7A3E] hover:bg-[#09612F] text-white font-bold text-[14px] px-3.5 py-2.5 rounded-[4px] transition-colors">
-            <PhoneIcon />
-            {PHONE}
-          </a>
         </div>
       </div>
 
@@ -147,11 +141,6 @@ export default function LandingPage({ eyebrow, h1, sub, checks, steps, faqs, flo
               </div>
             ))}
           </div>
-          <p className="mt-8 text-[14px] text-[#62666C]">
-            Prefer to talk?{' '}
-            <a href={PHONE_HREF} className="text-[#1F2125] font-semibold hover:text-[#0B7A3E] transition-colors">{PHONE}</a>
-            {' '}Will, Adelaide.
-          </p>
         </div>
       </section>
 
@@ -167,30 +156,14 @@ export default function LandingPage({ eyebrow, h1, sub, checks, steps, faqs, flo
 
       {/* Slim footer: who this is, where, and the one link the policy needs. */}
       <footer className="border-t border-[#E5E7E5]">
-        <div className="max-w-[1100px] mx-auto px-5 md:px-8 py-5 pb-20 md:pb-5 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-[11px] uppercase tracking-[0.12em] text-[#62666C]">
+        <div className="max-w-[1100px] mx-auto px-5 md:px-8 py-5 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-[11px] uppercase tracking-[0.12em] text-[#62666C]">
           <span>Herbert AI. ABN 83 880 085 162. Adelaide, SA.</span>
           <span className="flex gap-6">
-            <a href={PHONE_HREF} className="hover:text-[#1F2125] transition-colors">{PHONE}</a>
             <a href="/privacy" className="hover:text-[#1F2125] transition-colors">Privacy</a>
           </span>
         </div>
       </footer>
-
-      {/* Sticky call bar, phones only. The footer carries extra bottom padding
-          on phones so the bar never covers it. */}
-      <a href={PHONE_HREF} className="md:hidden fixed bottom-0 inset-x-0 z-40 flex items-center justify-center gap-2 bg-[#0B7A3E] text-white font-bold text-[15px] py-3.5">
-        <PhoneIcon />
-        Call Will: {PHONE}
-      </a>
     </div>
-  )
-}
-
-function PhoneIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden>
-      <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
-    </svg>
   )
 }
 

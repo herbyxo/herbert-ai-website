@@ -2326,4 +2326,87 @@ written down." 3 "The audit, written up." Noted: the sample image shows
 redesigned. Awaiting Will’s pick.
 Will (20 Oct 2026): "2". Built: the written page heading is "What your admin
 costs, written down."
+Will (20 Oct 2026, in the forked session): picked 2 for the written page
+heading; applied there as 885f9e6 ("What your admin costs, written down."),
+with origin/main merged in (48b704f). The fork runs an AEO pass on its own
+branch and worktree (preview/aeo, code/Website-aeo).
 
+## [~] /pilot details, 4 of 9: How it works (options 20 Oct 2026)
+
+Board: `design-pass-site-2026-10-20-pilot-how.png`. Every option adds the price
+lines the hero gave up (Free; $3,500 fixed; Live in 14 days, or it’s free).
+Today "Audit first. Then fourteen days." (itself a two-beat couplet, no prices).
+1 "Live 14 days after you say go." (recommended: plain, true to the terms, the
+clock starting at the kickoff; built with a wider measure so "go." does not sit
+alone) 2 today’s heading with the prices 3 "How your first job gets handed
+over." Awaiting Will’s pick.
+
+## /pilot, section by section (restructured 20 Oct 2026)
+
+Will (20 Oct 2026): "are we doing the details pass per section? did we do that
+on the hero?", then "i thought i added the details pass into this design loop
+thing, why did u not pick up on this". He had: the roadmap’s phase 7 runs
+phases 2 to 6 per page, and phase 3 is one section at a time through five
+steps. Claude treated skeleton B’s drawing as every section’s options, built the
+whole page and ran a page-wide word list. The roadmap now says a skeleton
+drawing is not a section’s options (design-taste `loop/roadmap.md`), and the
+memory records the third slip. From here /pilot runs section by section:
+
+| Section | Facts | Options | Pick | Build | Details | Where it stands |
+|---|---|---|---|---|---|---|
+| 1. Hero with the form | [x] | [x] | [x] | [x] | [~] | Skeleton B’s point; heading, label, intro and terms done; left: the form side, spacing, the phone layout |
+| 2. The written page | [x] | [ ] | [ ] | [x] | [~] | Heading done (What your admin costs, written down.); the layout itself never drawn three ways |
+| 3. How it works | [x] | [ ] | [ ] | [x] | [~] | Heading options out (detail 4); the layout never drawn three ways |
+| 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+
+Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
+layout; then section 2’s options.
+
+## [~] /pilot section 1, the hero: remaining detail 1 of 3, the form side (options 20 Oct 2026)
+
+Board: `design-pass-site-2026-10-20-pilot-formside.png`, the first screen at
+1440 and the whole hero on a phone. Today the card and a loose "Prefer to talk
+now? 0448 111 840" under it. 1 the number inside the card under the button,
+"Or call 0448 111 840" (recommended) 2 the form alone, the number left to the
+footer 3 the number on the left under the terms. Awaiting Will’s pick. Then
+detail 2, spacing, and 3, the phone layout (on a phone the form starts below
+the first screen today).
+Will (21 Oct 2026): "3". Built: "Prefer to talk now? 0448 111 840" sits on the
+left under the four terms; the card stands alone. Verified at 1440, 1280, 375
+and 320: no overflow, no errors. Next: hero detail 2, spacing.
+
+
+## [x] The personal number off the site (21 Oct 2026)
+
+Will: "can u remove the personal number from the website". 0448 111 840 is
+gone from every page and file: the /pilot hero line under the terms (so the
+hero’s left column ends on the four terms again), the contact card, the footer,
+the three SEO pages’ "Prefer to talk?" lines, the demo pages, the /lp pages
+(header button, "Prefer to talk?" line, footer and the phone-only sticky call
+bar), the sample audit, llms.txt, the business schema and the Google Ads call
+conversion, which swapped that number for ad visitors (ads paused since 18
+Sep). Preview: 207674c. The live site needs the same on main: branch
+`fix/remove-phone` (the AEO session took the schema and llms.txt in fbb8968),
+waiting on Will’s push, since the classifier blocks pushes to main. No number
+on the site until a business line exists (Twilio 08 number, deferred by Will).
+
+## [x] Stopgap: every page on the paper and ink palette (21 Oct 2026)
+
+Will: "go through all my pages and just make them the same colour theme so at
+least it all matches for now while im still redesigning the pages". Colours
+only; fonts, layouts and words unchanged. The tokens in `globals.css` move to
+the charter: cream #FAFAF8 (paper), cream-alt #F2F2EF, ink #111, ink-soft
+#2A2A2A, muted #666, line #E4E4E1, so every older page follows without edits.
+Neon green goes: buttons become ink on light grounds and paper on ink grounds,
+the three SEO pages’ green closing bands become the paper-alt band, step
+numbers and link hovers go to grey, bullet dots to ink, the dark eyebrow rule
+to paper. The voice demo’s live dot uses the charter’s done green. Left alone:
+the logo mark, the icons and share image, the /lp pages (their own palette,
+Will’s 11 Sep pick), the demo pages (WhatsApp look) and the example client site
+in MockupProof. Board: `design-pass-site-2026-10-21-colours.html`, 20 pages at
+1440 and 375; a computed-style check finds no element left on the May palette,
+no overflow except /ai-receptionist at 375 (4px, already on production, left
+for that page’s redesign), no console errors.

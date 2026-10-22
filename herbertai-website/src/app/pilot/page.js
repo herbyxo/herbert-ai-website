@@ -159,9 +159,6 @@ export default function Pilot() {
             <div className="rounded-2xl border border-[#111]/10 bg-[#FAFAF8] p-6 sm:p-7">
               <AuditForm source="/pilot" />
             </div>
-            <p className="mt-4 text-[15px] text-[#555]">
-              Prefer to talk now? <a href="tel:+61448111840" className="font-medium text-[#111] underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">0448 111 840</a>
-            </p>
           </div>
         </div>
       </section>

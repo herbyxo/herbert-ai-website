@@ -184,7 +184,7 @@ export default function SampleAudit() {
           <ul className="md:hidden divide-y divide-line border-y border-line">
             {phases.map(p => (
               <li key={p.when} className="py-5">
-                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-green-deep">{p.when}</p>
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted">{p.when}</p>
                 <p className="mt-2 text-[16px] font-semibold text-ink leading-[1.4]">{p.what}</p>
                 <p className="mt-2 text-[15px] text-muted leading-[1.5]">{p.why}</p>
                 <p className="mt-2 text-[13px] text-muted">Rough cost: {p.cost}</p>
@@ -238,7 +238,7 @@ export default function SampleAudit() {
               the admin person has sent, and the document list for two or three recent jobs. If the answer is
               no, this report is still yours to use.
             </p>
-            <p className="mt-6 text-[15px] text-muted">Will Herbert · will@herbert-aisolutions.com · 0448 111 840</p>
+            <p className="mt-6 text-[15px] text-muted">Will Herbert · will@herbert-aisolutions.com</p>
           </div>
         </div>
       </section>

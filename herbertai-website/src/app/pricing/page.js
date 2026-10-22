@@ -131,7 +131,7 @@ export default function Pricing() {
               <RevealOnScroll key={r.n} delay={i * 0.05}>
                 <div className="grid lg:grid-cols-[1fr_1.6fr] gap-x-12 gap-y-4 py-10 md:py-12 border-t border-line">
                   <div>
-                    <div className="font-mono text-[12px] tracking-[0.18em] text-green-deep mb-3">{r.n}</div>
+                    <div className="font-mono text-[12px] tracking-[0.18em] text-muted mb-3">{r.n}</div>
                     <h2
                       className="font-display text-ink leading-[1] tracking-[-0.03em] mb-3"
                       style={{ fontSize: 'clamp(30px, 4vw, 44px)', fontWeight: 800 }}

@@ -113,7 +113,7 @@ export default function Services() {
                 {g.items.map((s) => (
                   <div key={s.title} className="bg-white border border-line rounded-3xl p-7 min-h-[200px] flex flex-col lift">
                     <div className="flex items-center gap-2 mb-5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-deep shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-ink shrink-0" />
                       <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{s.tag}</span>
                     </div>
                     <h3 className="text-[20px] font-medium tracking-[-0.01em] text-ink mb-3 leading-[1.25]">{s.title}</h3>
@@ -158,7 +158,7 @@ export default function Services() {
               <div className="flex flex-col gap-3">
                 <Link
                   href="/pricing"
-                  className="bg-green text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:shadow-[0_0_32px_var(--green-glow)] hover:-translate-y-px transition-all duration-300"
+                  className="bg-cream text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center justify-between gap-2 hover:bg-white transition-colors"
                 >
                   See the pricing <span aria-hidden>&rarr;</span>
                 </Link>
@@ -187,7 +187,7 @@ function VoiceDemo() {
       </div>
       <div className="bg-ink rounded-2xl p-6">
         <div className="flex items-center gap-2 mb-4">
-          <span className="w-2 h-2 rounded-full bg-green hi-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#12B76A] hi-pulse" />
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-cream/55">Inbound call · unedited</span>
         </div>
         <audio controls preload="metadata" className="w-full" style={{ filter: 'invert(0.85)' }}>

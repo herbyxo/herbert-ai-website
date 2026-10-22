@@ -184,7 +184,7 @@ function Fieldset({ n, label, children }) {
     <fieldset className="space-y-5">
       <legend className="mb-3 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
         <span>{n}</span>
-        <span className="w-1 h-1 rounded-full bg-green-deep" />
+        <span className="w-1 h-1 rounded-full bg-ink" />
         <span>{label}</span>
       </legend>
       {children}

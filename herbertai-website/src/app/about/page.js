@@ -162,7 +162,7 @@ export default function About() {
               <RevealOnScroll key={r.name} delay={i * 0.08} className="h-full">
                 <Link href={r.href} className="bg-white border border-line rounded-3xl p-7 hover:border-ink/40 transition-colors block lift h-full">
                   <div className="flex items-center gap-2 mb-7">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-deep" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-ink" />
                     <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{r.tag}</span>
                   </div>
                   <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-3 text-ink">{r.name}</h3>
