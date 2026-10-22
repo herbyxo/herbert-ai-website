@@ -2521,3 +2521,13 @@ the sheet’s label reads "Sample audit page · a made-up practice". Verified at
 errors. Will then questioned the label ("idk if i like the 'what you get back'
 as the heading"), so the label gets its own line test next, then details 3,
 the phone order.
+
+## [~] /pilot section 2, the written page: the label (options 22 Oct 2026)
+
+Will: "idk if i like the 'what you get back' as the heading" (the grey label
+above the heading). Line test: `design-pass-site-2026-10-22-pilot-written-label.png`,
+31 labels numbered and scored out of 5, six out at the gates. A line 2, "The
+written page", the hero’s own name for it (recommended, 3.5 of 5) B line 4,
+"The page you keep" (top score, 4 of 5) C line 11, "Two days later" (3.5 of 5).
+The heading under it stays. Awaiting Will’s pick; then details 3, the phone
+order.
