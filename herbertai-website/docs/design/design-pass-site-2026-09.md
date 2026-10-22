@@ -2531,3 +2531,6 @@ written page", the hero’s own name for it (recommended, 3.5 of 5) B line 4,
 "The page you keep" (top score, 4 of 5) C line 11, "Two days later" (3.5 of 5).
 The heading under it stays. Awaiting Will’s pick; then details 3, the phone
 order.
+Will (22 Oct 2026), after seeing every section’s label and heading listed:
+"ok the section names are fine". "What you get back" stays; nothing to build.
+Next: details 3, the phone order.
