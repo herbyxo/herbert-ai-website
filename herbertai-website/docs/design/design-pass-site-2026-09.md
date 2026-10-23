@@ -2356,7 +2356,7 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [x] | [x] | [x] | [ ] | Timeline built 22 Oct 2026 (layout 1); next its details pass |
+| 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 23 Oct 2026: the timeline, settled on the design canvas, times above the line, prices level at the foot, Yours to keep gone |
 | 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2615,3 +2615,14 @@ https://claude.ai/artifact/QGdGVfpAm5PRZPNRBEeCkb ("Pilot page: How it works"),
 two artboards, laptop (1440, a page) and phone (390), both as built minus
 "Yours to keep either way". When he says he is done, the session reads his
 edited artboards and builds them into pilot/page.js.
+Will (23 Oct 2026), on the canvas: "actually im happy with how it is now, but
+have the times above the timeline". The canvas was read back unchanged, then
+built: phones keep the line down the left; from 1024px each stop’s time sits
+above the line, the line runs across, the stop sits under it, the rows shared
+through CSS subgrid so the line stays straight however a time wraps; the
+fourteen ticks sit over the build; "Free" and the pilot’s price share one
+level at the foot; "Yours to keep either way" is gone. Verified at 1440, 1280,
+1024, 768, 375 and 320, motion on and off: every segment ends at the next dot,
+the times end at the line, the prices level, no overflow, no console errors.
+Section 3 is done. Next: section 4, What it fixes. Open question for Will: the
+hero’s fourth term, "Yours: To keep, either way", says the same thing.
