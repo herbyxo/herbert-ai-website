@@ -2599,3 +2599,11 @@ prices above the line over their stops, level by construction, no gap; under
 the title on a phone (recommended) 2 under the titles, level only while every
 title fits one line (at 1024 the audit’s title wraps and its price drops) 3 at
 the foot, as built. Awaiting Will’s pick.
+Will (23 Oct 2026): "maybe we move the timeline to be at the bottom?" Drawn
+three ways, `design-pass-site-2026-10-23-pilot-how-bottom.png`, 1440 and 1024;
+the line is its own row so it runs straight under every stop. 1 the line as an
+axis: titles and facts above starting level, each stop’s when and price under
+the line, level by construction (recommended) 2 everything sits on the line,
+ragged tops 3 today’s order with the line moved under and the prices sitting
+on it. Phones keep the line down the left, each price under its title. All drop
+"Yours to keep either way". Awaiting Will’s pick.
