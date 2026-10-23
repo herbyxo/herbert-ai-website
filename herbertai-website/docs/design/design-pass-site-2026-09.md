@@ -2607,3 +2607,11 @@ the line, level by construction (recommended) 2 everything sits on the line,
 ragged tops 3 today’s order with the line moved under and the prices sitting
 on it. Phones keep the line down the left, each price under its title. All drop
 "Yours to keep either way". Awaiting Will’s pick.
+Will (23 Oct 2026): "i dont like any of these. is there something where i can
+actually edit the page - claude design?" Claude Design now lives in Claude as
+the Design canvas (the standalone claude.ai/design closes by 14 Dec 2026). The
+section went onto a canvas for him to edit by hand:
+https://claude.ai/artifact/QGdGVfpAm5PRZPNRBEeCkb ("Pilot page: How it works"),
+two artboards, laptop (1440, a page) and phone (390), both as built minus
+"Yours to keep either way". When he says he is done, the session reads his
+edited artboards and builds them into pilot/page.js.
