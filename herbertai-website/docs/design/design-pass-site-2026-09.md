@@ -2356,7 +2356,7 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 23 Oct 2026: the timeline, settled on the design canvas, times above the line, prices level at the foot, Yours to keep gone |
+| 3. How it works | [x] | [x] | [x] | [x] | [~] | Layout settled on the design canvas 23 Oct 2026 (times above the line, prices level, Yours to keep gone); details left: the heading (line test out), then the stops' wording |
 | 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2626,3 +2626,15 @@ level at the foot; "Yours to keep either way" is gone. Verified at 1440, 1280,
 the times end at the line, the prices level, no overflow, no console errors.
 Section 3 is done. Next: section 4, What it fixes. Open question for Will: the
 hero’s fourth term, "Yours: To keep, either way", says the same thing.
+
+## [~] /pilot section 3, How it works: the heading (line test 23 Oct 2026)
+
+Correction: section 3 was marked done above after the canvas, but its details
+pass is not finished; the stops’ wording (times, titles, facts) has had no line
+test. Will (23 Oct 2026): "i dont like the title for section 3". Today’s "Audit
+first. Then fourteen days." is a two-beat slogan couplet (scores 0 on his
+shape). Line test: `design-pass-site-2026-10-23-pilot-how-heading.png`, 30
+lines numbered, six out at the gates. A line 3, "The job eating your time,
+handed over in 14 days." (4 of 5, picks up his hero line; recommended) B line 2,
+"One job off your plate in 14 days." (4 of 5) C line 6, "Live in 14 days, or
+it’s free." (3.5 of 5). Awaiting Will’s pick; then the stops’ wording.
