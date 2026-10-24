@@ -2356,7 +2356,7 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [x] | [x] | [x] | [~] | Layout settled on the design canvas 23 Oct 2026 (times above the line, prices level, Yours to keep gone); details left: the heading (line test out), then the stops' wording |
+| 3. How it works | [x] | [x] | [x] | [x] | [~] | Layout settled on the design canvas 23 Oct 2026; heading and the stops' wording parked 24 Oct (Will: "park it"), today's heading stays |
 | 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2638,3 +2638,10 @@ lines numbered, six out at the gates. A line 3, "The job eating your time,
 handed over in 14 days." (4 of 5, picks up his hero line; recommended) B line 2,
 "One job off your plate in 14 days." (4 of 5) C line 6, "Live in 14 days, or
 it’s free." (3.5 of 5). Awaiting Will’s pick; then the stops’ wording.
+Will (24 Oct 2026): "idk about any of these, im struggling with this
+section", then "park it". The section’s first two stops repeat what the hero
+and section 2 already say, so every heading summarises four stops when only the
+14 days and the price are new; the way back in is Will’s own answer to "what
+happens after the audit?". Today’s heading stays; the heading and the stops’
+wording come back together. Next: section 4, What it fixes, straight to its
+details pass (Will: "no lets just do the details pass").
