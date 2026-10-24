@@ -2645,3 +2645,16 @@ and section 2 already say, so every heading summarises four stops when only the
 happens after the audit?". Today’s heading stays; the heading and the stops’
 wording come back together. Next: section 4, What it fixes, straight to its
 details pass (Will: "no lets just do the details pass").
+
+## [~] /pilot section 4, What it fixes: the details pass (options 24 Oct 2026)
+
+Will: "no lets just do the details pass" (no layout options). Three details on
+one board, `design-pass-site-2026-10-24-pilot-fixes.png`. 1 the heading names
+one job above a grid of six: "The jobs everyone hates doing." (recommended),
+"Got a job everyone hates doing?", "Which job does everyone hate doing?" 2 the
+six descriptions carry slogan beats ("Entered once, synced everywhere.",
+"drafted for you, checked by you, sent in seconds.", "on time, every time"):
+plain sentences (recommended), the names only, or the names with one line for
+all six 3 headings that leave one word alone ("doing.", and "days." in How it
+works): text-wrap balance on every heading (recommended). Awaiting Will’s
+picks.
