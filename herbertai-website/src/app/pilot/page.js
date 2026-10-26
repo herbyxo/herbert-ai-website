@@ -98,13 +98,16 @@ const STEPS = [
   { when: 'Day 14', title: 'Live', facts: ['Your team uses it the same day', 'A walkthrough so everyone knows how', 'A twelve month roadmap of the next jobs'] },
 ]
 
+// What it fixes: plain sentences, no slogan beats (Will, 24 Oct 2026,
+// descriptions "1"); the heading names the six ("The jobs"), and every
+// heading on the page balances its lines (wraps "1").
 const FIXES = [
-  ['Chasing', 'Documents, invoices, approvals. The follow-up goes out on time, every time, without anyone writing it.'],
-  ['Re-typing', 'The same details keyed into three systems. Entered once, synced everywhere.'],
-  ['The same emails', 'Quotes, confirmations, updates: drafted for you, checked by you, sent in seconds.'],
-  ['Booking admin', 'Confirmations, reschedules and reminders handled without touching the calendar.'],
-  ['Handovers', 'Job details that live in one person’s head or inbox, put on one screen the whole team can see.'],
-  ['The Monday report', 'The numbers you compile by hand every week, compiled for you.'],
+  ['Chasing', 'Follow-ups for documents, invoices and approvals go out on time without anyone writing them.'],
+  ['Re-typing', 'Details entered once reach every system that needs them, instead of being keyed in three times.'],
+  ['The same emails', 'Quotes, confirmations and updates are drafted for you to check and send.'],
+  ['Booking admin', 'Confirmations, reschedules and reminders are handled without anyone touching the calendar.'],
+  ['Handovers', 'Job details that live in one person’s head or inbox go on one screen the whole team can see.'],
+  ['The Monday report', 'The numbers someone compiles by hand every week are compiled for you.'],
 ]
 
 const AFTER = [
@@ -119,7 +122,7 @@ function Label({ children, dark = false }) {
 
 function H2({ children }) {
   return (
-    <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+    <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch] text-balance" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
       {children}
     </h2>
   )
@@ -267,7 +270,7 @@ export default function Pilot() {
             <Label>AI Audit</Label>
           </div>
           <div className="min-w-0 lg:col-start-1 lg:row-start-2">
-            <h1 className="font-bold tracking-[-0.045em] leading-[0.95] max-w-[14ch]" style={{ fontSize: 'clamp(44px, 4.4vw, 64px)' }}>
+            <h1 className="font-bold tracking-[-0.045em] leading-[0.95] max-w-[14ch] text-balance" style={{ fontSize: 'clamp(44px, 4.4vw, 64px)' }}>
               Find the job eating your time and money.
             </h1>
             <p className="mt-6 text-[19px] leading-[1.45] text-[#333] max-w-[40ch]">
@@ -334,7 +337,7 @@ export default function Pilot() {
       {/* 4. What it fixes. */}
       <Section>
         <Label>What it fixes</Label>
-        <H2>The job everyone hates doing.</H2>
+        <H2>The jobs everyone hates doing.</H2>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
           {FIXES.map(([t, b]) => (
             <div key={t} className="border-t border-[#111]/15 pt-4">

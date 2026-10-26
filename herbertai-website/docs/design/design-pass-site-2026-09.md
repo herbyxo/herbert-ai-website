@@ -2357,7 +2357,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [~] | Layout settled on the design canvas 23 Oct 2026; heading and the stops' wording parked 24 Oct (Will: "park it"), today's heading stays |
-| 4. What it fixes | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Done 27 Oct 2026 (details only, on Will's word): "The jobs everyone hates doing.", plain sentences, balanced headings |
 | 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2658,3 +2658,10 @@ plain sentences (recommended), the names only, or the names with one line for
 all six 3 headings that leave one word alone ("doing.", and "days." in How it
 works): text-wrap balance on every heading (recommended). Awaiting Will’s
 picks.
+Will (27 Oct 2026): "1,1,1". Built: the heading is "The jobs everyone hates
+doing."; the six descriptions are plain sentences; every heading on /pilot
+balances its lines (`text-balance` on the hero h1 and the H2 component).
+Verified at 1440, 1280, 1024, 375 and 320, motion on and off: the hero still
+ends at the fold with the card level with the heading, no heading leaves one
+word alone at 1440, no overflow, no console errors. Section 4 is done. Next:
+section 5, After the pilot.
