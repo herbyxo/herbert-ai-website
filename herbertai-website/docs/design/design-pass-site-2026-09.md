@@ -2687,3 +2687,13 @@ business runs, 2 days / To your written page (recommended) 2 the same three in
 one or two words (One call, Your written page) 3 four terms, Yours as "The
 page, whatever you decide". Three terms sit three across on a phone too.
 Awaiting Will’s pick.
+Will (27 Oct 2026): "1, instead of 2 days, do 48 hours, and i want somethign
+else underneath it, idk what though". 48 hours is a tighter promise than two
+business days (a Friday audit is due Sunday), and two business days is written
+in about 18 places on the site (the timeline, FAQs, pricing, industry pages,
+thanks page, llms.txt, schema), the booking auto-reply and the run sheet and
+onboarding docs; asked whether the promise itself becomes 48 hours. Label line
+test: `design-pass-site-2026-10-27-pilot-terms-label.png`, 23 labels, four out
+at the gates. A "Your costs, on one page" (4 of 5, recommended) B "The job to
+hand over first" (3.5) C "What each job costs you" (3). On a phone "48 hours"
+wraps in its column; the build sets the figures smaller there. Awaiting Will.
