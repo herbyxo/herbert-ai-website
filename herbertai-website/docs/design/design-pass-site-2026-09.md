@@ -2665,3 +2665,13 @@ Verified at 1440, 1280, 1024, 375 and 320, motion on and off: the hero still
 ends at the fold with the card level with the heading, no heading leaves one
 word alone at 1440, no overflow, no console errors. Section 4 is done. Next:
 section 5, After the pilot.
+
+## [x] /pilot section 1, the hero: the intro sentence removed (27 Oct 2026)
+
+Will: "ok on section 1, i think we remove the sentences under the 'Find the job
+eating your....'". Built: the heading goes straight to the four terms (and on
+phones to the jump button). Verified at 1440x900, 1280, 1024, 1440x720, 375 and
+320, motion on and off: the hero still ends at the fold with the card level
+with the heading; the text column now ends about 125px above the card’s foot at
+1440; on a phone the form starts 135px higher (650 against 785 at 375); no
+overflow, no console errors.

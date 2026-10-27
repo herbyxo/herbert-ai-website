@@ -273,10 +273,9 @@ export default function Pilot() {
             <h1 className="font-bold tracking-[-0.045em] leading-[0.95] max-w-[14ch] text-balance" style={{ fontSize: 'clamp(44px, 4.4vw, 64px)' }}>
               Find the job eating your time and money.
             </h1>
-            <p className="mt-6 text-[19px] leading-[1.45] text-[#333] max-w-[40ch]">
-              45 minutes on how your business runs: where the hours go, what each repetitive job
-              costs you a year, and which one to hand over first.
-            </p>
+            {/* No intro under the heading: the terms below carry it (Will, 27 Oct
+                2026, "i think we remove the sentences under the 'Find the job
+                eating your...'"). */}
             {/* Wherever the form sits below the text (phones, tablets), its
                 button comes up under the intro and jumps down to it (Will,
                 22 Oct 2026, phone layout "3"). */}
