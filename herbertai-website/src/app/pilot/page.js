@@ -139,9 +139,9 @@ function Section({ children, first = false }) {
   )
 }
 
-// The label says what the sheet shows (the format of the report) and a small
-// note keeps it honest that the figures are an example (Will, 27 Oct 2026,
-// sheet "1": "it kills our proof if we say its made up").
+// No label over the sheet (Will, 27 Oct 2026: "we dont need the 'what your
+// report looks like'"); a small note at its foot keeps it honest that the
+// figures are an example ("it kills our proof if we say its made up").
 // Section 2's sheet: the sample audit's time table as real text, from the
 // same figures as /pilot/sample-audit, so it reads on a phone and never drifts
 // from the sample (Will, 22 Oct 2026, "3"). White is the software's colour on
@@ -218,8 +218,7 @@ function ReadSample() {
 function WrittenSheet() {
   return (
     <div className="min-w-0 rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] px-5 py-6 sm:px-9 sm:py-8 text-[#111]">
-      <p className={SHEET_LABEL}>What your report looks like</p>
-      <p className="mt-2.5 font-bold tracking-[-0.03em] leading-[1.02] max-w-[22ch]" style={{ fontSize: 'clamp(24px, 2.1vw, 30px)' }}>
+      <p className="font-bold tracking-[-0.03em] leading-[1.02] max-w-[22ch]" style={{ fontSize: 'clamp(24px, 2.1vw, 30px)' }}>
         {SAMPLE_TITLE}
       </p>
       <p className={`${SHEET_LABEL} mt-6 mb-2`}>Where the time goes</p>

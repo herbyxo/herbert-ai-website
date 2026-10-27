@@ -2751,3 +2751,7 @@ a small "Figures are illustrative." at its foot, table and total unchanged.
 Verified at 1440, 1024, 375 and 320: hero ends at the fold with the card level
 with the heading, no overflow, no console errors. The run sheet and
 onboarding docs move to "report" in the files repo.
+Will (27 Oct 2026): "we dont need the 'what your report looks like' on the
+report". Built: the sheet opens on its title; the small "Figures are
+illustrative." stays at its foot. Verified at 1440, 375 and 320: no overflow,
+no console errors.
