@@ -2745,3 +2745,9 @@ the hero label under 2 days (1 "Your costs, in a written report", recommended;
 2 of the real report as sent, recommended). Not touched here: the sales run
 sheet and the onboarding docs ("one page audit", "a written page"), including
 the pack Liam received on 27 Oct; another session worked on those today.
+Will (27 Oct 2026): "2, 1 and update". Built: the hero’s third term is "2 days
+/ Your written report"; the sheet’s label is "What your report looks like" with
+a small "Figures are illustrative." at its foot, table and total unchanged.
+Verified at 1440, 1024, 375 and 320: hero ends at the fold with the card level
+with the heading, no overflow, no console errors. The run sheet and
+onboarding docs move to "report" in the files repo.

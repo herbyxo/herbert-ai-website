@@ -78,13 +78,14 @@ const faqJsonLd = {
 // to AI Audit"): a one-sentence intro and the audit's own terms; the pilot's
 // terms are explained in How it works and the questions.
 
-// The hero's terms (Will, 27 Oct 2026: "1", "2 days then", label "A"). The
+// The hero's terms (Will, 27 Oct 2026: "1", "2 days then", then "Your written
+// report" once the audit became a report, not a page). The
 // 45 minutes is the audit call; the promise stays two business days, spelled
 // out on the timeline below.
 const TERMS = [
   ['Free', 'No obligation'],
   ['45 min', 'One call on how your business runs'],
-  ['2 days', 'Your costs, on one page'],
+  ['2 days', 'Your written report'],
 ]
 
 // How it works as a timeline: one line from the audit to day 14, the build
@@ -138,6 +139,9 @@ function Section({ children, first = false }) {
   )
 }
 
+// The label says what the sheet shows (the format of the report) and a small
+// note keeps it honest that the figures are an example (Will, 27 Oct 2026,
+// sheet "1": "it kills our proof if we say its made up").
 // Section 2's sheet: the sample audit's time table as real text, from the
 // same figures as /pilot/sample-audit, so it reads on a phone and never drifts
 // from the sample (Will, 22 Oct 2026, "3"). White is the software's colour on
@@ -214,7 +218,7 @@ function ReadSample() {
 function WrittenSheet() {
   return (
     <div className="min-w-0 rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] px-5 py-6 sm:px-9 sm:py-8 text-[#111]">
-      <p className={SHEET_LABEL}>Sample audit page · a made-up practice</p>
+      <p className={SHEET_LABEL}>What your report looks like</p>
       <p className="mt-2.5 font-bold tracking-[-0.03em] leading-[1.02] max-w-[22ch]" style={{ fontSize: 'clamp(24px, 2.1vw, 30px)' }}>
         {SAMPLE_TITLE}
       </p>
@@ -249,6 +253,7 @@ function WrittenSheet() {
         </tbody>
       </table>
       <p className="mt-5 text-[16px] md:text-[17px] leading-[1.45]">{SAMPLE_TOTAL}</p>
+      <p className="mt-4 text-[12.5px] text-[#777]">Figures are illustrative.</p>
     </div>
   )
 }
