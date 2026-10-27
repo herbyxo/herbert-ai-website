@@ -27,7 +27,7 @@ const rungs = [
     price: 'Free',
     lines: [
       '45 minutes auditing how your business runs.',
-      'A written page within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap.',
+      'A written report within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap.',
       'Yours to keep whether or not you go further.',
     ],
   },
@@ -67,11 +67,11 @@ const rungs = [
 const faqs = [
   {
     q: 'Why is the audit free?',
-    a: 'Because it shows whether there is a job worth building on. If there is, you get a quote for your first AI employee. If there is not, you are told so, and the page is yours either way. Cutting the price would not make it more useful; keeping it to diagnosis does.',
+    a: 'Because it shows whether there is a job worth building on. If there is, you get a quote for your first AI employee. If there is not, you are told so, and the report is yours either way. Cutting the price would not make it more useful; keeping it to diagnosis does.',
   },
   {
     q: 'Do I have to buy an AI employee after the audit?',
-    a: 'No. The audit ends with a written page and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
+    a: 'No. The audit ends with a written report and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
   },
   {
     q: 'What does $3,500 actually get me?',
@@ -187,7 +187,7 @@ export default function Pricing() {
                 is costing you.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                45 minutes auditing your business, a written page back within two business days,
+                45 minutes auditing your business, a written report back within two business days,
                 and no obligation to build anything.
               </p>
             </div>

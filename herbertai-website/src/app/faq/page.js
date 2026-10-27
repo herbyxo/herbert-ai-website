@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'How do I get started?',
-    a: 'With the free AI audit. It is 45 minutes auditing how your business runs, then a written page within two business days that puts a yearly cost on the three jobs taking the most hours and says which one to hand over first. Book it from the how it works page.',
+    a: 'With the free AI audit. It is 45 minutes auditing how your business runs, then a written report within two business days that puts a yearly cost on the three jobs taking the most hours and says which one to hand over first. Book it from the how it works page.',
   },
   {
     q: 'What does it cost?',
@@ -146,7 +146,7 @@ export default function FAQ() {
                 free AI audit.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                Forty five minutes on how your business runs, then a written page on what your
+                Forty five minutes on how your business runs, then a written report on what your
                 admin costs. If there&apos;s a job worth building on, you get a price. If there
                 isn&apos;t, you&apos;re told.
               </p>

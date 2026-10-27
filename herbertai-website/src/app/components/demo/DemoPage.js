@@ -186,7 +186,7 @@ export default function DemoPage({ industry, firm }) {
             Book a free AI audit
           </a>
           <p className="text-center text-[13px] text-[#6B7280] mt-3">
-            45 minutes auditing your business and a written page on what your {industry.bottleneck} costs. No obligation.
+            45 minutes auditing your business and a written report on what your {industry.bottleneck} costs. No obligation.
             If you want it built: live in 14 days, $3,500 fixed, or it&apos;s free.
           </p>
         </section>

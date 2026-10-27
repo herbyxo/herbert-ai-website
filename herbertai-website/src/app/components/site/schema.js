@@ -32,7 +32,7 @@ export const LADDER = [
     '@type': 'Offer',
     name: 'Free AI audit',
     description:
-      '45 minutes on how the business runs, then a written page within two business days: what each repetitive job costs a year, and which one to hand to an AI employee first.',
+      '45 minutes on how the business runs, then a written report within two business days: what each repetitive job costs a year, and which one to hand to an AI employee first.',
     price: 0,
     priceCurrency: 'AUD',
     url: `${SITE_URL}/pilot`,

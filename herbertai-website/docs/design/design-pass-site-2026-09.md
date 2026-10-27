@@ -2733,3 +2733,15 @@ the first table only, in the website’s type. Side by side:
 `design-pass-site-2026-10-27-pilot-report-vs-sheet.png`. It also exposes a
 wording problem: the site promises "a written page" and "Your costs, on one
 page", and the run sheet a "one page audit", but the report is three pages.
+Will (27 Oct 2026): "2": the report stays three pages and the site stops
+promising one page. Built: "written page" reads "written report" across the
+site (the homepage hero line, FAQs, pricing, contact, industry and demo pages,
+the thanks page, the sample page and its metadata, the booking auto-reply,
+llms.txt, the search schema, the /pilot timeline’s "Your written report").
+Two details drawn for his pick, `design-pass-site-2026-10-27-pilot-report-wording.png`:
+the hero label under 2 days (1 "Your costs, in a written report", recommended;
+2 "Your written report"; 3 "Your costs, written up") and the sheet (1 label
+"What your report looks like" and a small note; 2 as 1 with Start here; 3 page
+2 of the real report as sent, recommended). Not touched here: the sales run
+sheet and the onboarding docs ("one page audit", "a written page"), including
+the pack Liam received on 27 Oct; another session worked on those today.

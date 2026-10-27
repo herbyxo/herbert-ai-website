@@ -34,7 +34,7 @@ export default function Contact() {
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
             Herbert AI is custom software and AI for small businesses, built in Adelaide. Send a
             message or call, and if you want to know what&apos;s worth building, book the free AI
-            audit: 45 minutes auditing your business and a written page back within two business days.
+            audit: 45 minutes auditing your business and a written report back within two business days.
           </p>
         </div>
       </section>

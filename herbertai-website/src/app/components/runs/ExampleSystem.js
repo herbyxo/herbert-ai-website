@@ -46,7 +46,7 @@ export default function ExampleSystem({ tag, title, sub, facts, visual, note }) 
             Find the job in your business it would take first.
           </h2>
           <p className="mt-5 text-[17px] leading-[1.5] text-[#444] max-w-[48ch]">
-            45 minutes auditing your business, and a written page back within two business days with the three jobs costing you most.
+            45 minutes auditing your business, and a written report back within two business days with the three jobs costing you most.
           </p>
           <a
             href={AUDIT_HREF}

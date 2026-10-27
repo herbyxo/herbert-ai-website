@@ -11,7 +11,7 @@ import SourceFields from '../SourceFields'
 // hates doing" box (/pilot asks it; the homepage keeps to four fields). The
 // button uses the hero's words and carries no small print (Will, 20 Oct 2026).
 
-const AUTO_REPLY = `Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call today to set a time for your audit. Forty five minutes, no preparation needed, and the written page follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`
+const AUTO_REPLY = `Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call today to set a time for your audit. Forty five minutes, no preparation needed, and the written report follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`
 
 const L = {
   grid: 'grid sm:grid-cols-2 gap-4',

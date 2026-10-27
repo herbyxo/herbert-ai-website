@@ -3,13 +3,13 @@ import { OG_IMAGE } from '@/app/components/site/og'
 import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '@/app/components/site/sample-audit'
 
 export const metadata = {
-  title: { absolute: 'A sample AI audit page | Herbert AI' },
+  title: { absolute: 'A sample AI audit report | Herbert AI' },
   description:
-    'What the written page from a free AI audit looks like, filled in for a made-up four person accounting practice. Three jobs costed, the first AI employee to build, a twelve month roadmap.',
+    'What the written report from a free AI audit looks like, filled in for a made-up four person accounting practice. Three jobs costed, the first AI employee to build, a twelve month roadmap.',
   alternates: { canonical: '/pilot/sample-audit' },
   openGraph: {
-    title: 'A sample AI audit page · Herbert AI',
-    description: 'The written page every free AI audit ends with, shown on a made-up accounting practice.',
+    title: 'A sample AI audit report · Herbert AI',
+    description: 'The written report every free AI audit ends with, shown on a made-up accounting practice.',
     url: '/pilot/sample-audit',
     images: [OG_IMAGE],
   },
@@ -57,13 +57,13 @@ export default function SampleAudit() {
     <>
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 md:pt-36 pb-16 md:pb-20">
-          <Eyebrow>Sample audit page</Eyebrow>
+          <Eyebrow>Sample audit report</Eyebrow>
           <h1 className="font-display text-ink max-w-[16ch]" style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}>
             {SAMPLE_TITLE}
           </h1>
           <div className="mt-10 max-w-[70ch] bg-cream-alt border border-line rounded-3xl p-6 md:p-8">
             <p className="text-[15px] md:text-[16px] text-ink leading-[1.6]">
-              <strong>This is a sample.</strong> It shows what the written page from a free AI audit looks
+              <strong>This is a sample.</strong> It shows what the written report from a free AI audit looks
               like, filled in for a made-up business: an accounting and bookkeeping practice in Adelaide
               with an owner, two accountants and one admin person. Every figure is illustrative. The first
               job&rsquo;s numbers are the worked example from the audit run sheet (8 hours a week at $38 an
@@ -226,12 +226,12 @@ export default function SampleAudit() {
 
       <section className="bg-ink">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <Eyebrow color="white">Your page</Eyebrow>
+          <Eyebrow color="white">Your report</Eyebrow>
           <h2 className="font-display text-cream max-w-[18ch]" style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.96, letterSpacing: '-0.035em', fontWeight: 800 }}>
-            Forty five minutes, then a page like this on your business.
+            Forty five minutes, then a report like this on your business.
           </h2>
           <p className="mt-6 max-w-[56ch] text-[16px] md:text-[17px] text-cream/70 leading-[1.55]">
-            Free, no preparation, no obligation. If software is not the answer for you, the page says so.
+            Free, no preparation, no obligation. If software is not the answer for you, the report says so.
           </p>
           <div className="mt-10">
             <AuditButton dark label="Book my free AI audit" />

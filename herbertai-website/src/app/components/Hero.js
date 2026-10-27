@@ -54,7 +54,7 @@ export default function Hero() {
           </a>
         </div>
         <span className="order-2 mt-3 xl:mt-3.5 xl:self-baseline text-[16px] text-[#555] xl:col-start-1 xl:row-start-2">
-          45 minutes, a written page back
+          45 minutes, a written report back
         </span>
         <div className="order-3 mt-12 xl:mt-0 xl:col-start-2 xl:row-start-1 xl:[&>*]:h-full">
           <HeroBoard />

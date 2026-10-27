@@ -57,8 +57,8 @@ export const RUNGS = [
   {
     n: '01',
     title: 'A free AI audit',
-    body: '45 minutes auditing how your business runs. Within two business days you get a written page: the three jobs eating the most hours, what each costs you a year in your own figures, and which one to hand over first. Yours to keep either way.',
-    facts: ['45 minutes auditing your business', 'A written page in two business days', 'The three jobs costing you most, in your figures'],
+    body: '45 minutes auditing how your business runs. Within two business days you get a written report: the three jobs eating the most hours, what each costs you a year in your own figures, and which one to hand over first. Yours to keep either way.',
+    facts: ['45 minutes auditing your business', 'A written report in two business days', 'The three jobs costing you most, in your figures'],
     price: 'Free',
   },
   {

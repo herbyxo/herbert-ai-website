@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: 'Free AI audit · Herbert AI',
     description:
-      '45 minutes auditing your business, a written page on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
+      '45 minutes auditing your business, a written report on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
     url: '/pilot',
     images: [OG_IMAGE],
   },
@@ -21,11 +21,11 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is the AI audit, and why is it free?',
-    a: "45 minutes auditing how your business runs, then a written page within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap. It's free because it shows whether there's a job worth building on. If there is, you get a quote for the pilot. If there isn't, you're told so, and the page is yours either way.",
+    a: "45 minutes auditing how your business runs, then a written report within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap. It's free because it shows whether there's a job worth building on. If there is, you get a quote for the pilot. If there isn't, you're told so, and the report is yours either way.",
   },
   {
     q: 'Do I have to buy the pilot after the audit?',
-    a: 'No. The audit ends with a written page and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
+    a: 'No. The audit ends with a written report and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
   },
   {
     q: 'What counts as a bottleneck?',
@@ -68,7 +68,7 @@ const faqJsonLd = {
 
 // /pilot, rebuilt 20 Oct 2026 for the "Runs itself" charter, skeleton B (Will:
 // "B"): the offer and the booking form together on the first screen, since every
-// "Book a free AI audit" button lands here at #book; then the written page the
+// "Book a free AI audit" button lands here at #book; then the written report the
 // audit gives back, shown at size from the real sample; how it works; what it
 // fixes; after the pilot; the questions; and a link back up to the form. The
 // skeletons are in docs/design/design-pass-site-2026-10-20-pilot-skeleton.png.
@@ -95,7 +95,7 @@ const TERMS = [
 // being on different levels i dont like").
 const STEPS = [
   { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'], price: RUNGS[0].price },
-  { when: 'Within two business days', title: 'Your written page', facts: ['The three jobs costing you most, in your figures'] },
+  { when: 'Within two business days', title: 'Your written report', facts: ['The three jobs costing you most, in your figures'] },
   { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Built around the tools you already use', 'One job and a name, say an AI document chaser', 'A progress update, not a project plan'], build: true, price: RUNGS[1].price },
   { when: 'Day 14', title: 'Live', facts: ['Your team uses it the same day', 'A walkthrough so everyone knows how', 'A twelve month roadmap of the next jobs'] },
 ]
@@ -304,7 +304,7 @@ export default function Pilot() {
         </div>
       </section>
 
-      {/* 2. The written page the audit gives back: its time table as a live sheet. */}
+      {/* 2. The written report the audit gives back: its time table as a live sheet. */}
       <Section>
         <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
           <div className="min-w-0">

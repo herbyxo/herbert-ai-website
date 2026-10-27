@@ -42,7 +42,7 @@ export default function PilotThanks() {
 
         <p className="mt-9 md:mt-12 max-w-[60ch] text-[17px] md:text-[19px] text-muted leading-[1.55]">
           Your details landed. I&rsquo;ll call you the same day to set a time for the
-          audit: forty five minutes, no preparation. The written page follows within
+          audit: forty five minutes, no preparation. The written report follows within
           two business days.
         </p>
 
