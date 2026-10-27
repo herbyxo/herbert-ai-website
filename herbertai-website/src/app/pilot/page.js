@@ -78,11 +78,13 @@ const faqJsonLd = {
 // to AI Audit"): a one-sentence intro and the audit's own terms; the pilot's
 // terms are explained in How it works and the questions.
 
+// The hero's terms (Will, 27 Oct 2026: "1", "2 days then", label "A"). The
+// 45 minutes is the audit call; the promise stays two business days, spelled
+// out on the timeline below.
 const TERMS = [
   ['Free', 'No obligation'],
-  ['45 min', 'On how the business runs'],
-  ['2 days', 'Business days to your written page'],
-  ['Yours', 'To keep, either way'],
+  ['45 min', 'One call on how your business runs'],
+  ['2 days', 'Your costs, on one page'],
 ]
 
 // How it works as a timeline: one line from the audit to day 14, the build
@@ -285,10 +287,10 @@ export default function Pilot() {
             >
               Book a free AI audit <span aria-hidden>&darr;</span>
             </a>
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-[760px]">
+            <div className="mt-10 grid grid-cols-3 gap-5 max-w-[620px]">
               {TERMS.map(([n, l]) => (
                 <div key={n} className="border-t border-[#111]/12 pt-3">
-                  <div className="text-[26px] font-semibold tracking-[-0.02em]">{n}</div>
+                  <div className="text-[21px] min-[360px]:text-[26px] font-semibold tracking-[-0.02em] whitespace-nowrap">{n}</div>
                   <div className="mt-1 text-[14px] leading-[1.35] text-[#777]">{l}</div>
                 </div>
               ))}

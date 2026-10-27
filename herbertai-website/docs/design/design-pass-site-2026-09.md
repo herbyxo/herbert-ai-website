@@ -2697,3 +2697,11 @@ test: `design-pass-site-2026-10-27-pilot-terms-label.png`, 23 labels, four out
 at the gates. A "Your costs, on one page" (4 of 5, recommended) B "The job to
 hand over first" (3.5) C "What each job costs you" (3). On a phone "48 hours"
 wraps in its column; the build sets the figures smaller there. Awaiting Will.
+Will (27 Oct 2026): "ok 2 days then", then "A". Built: three terms, three across
+at every width: Free / No obligation, 45 min / One call on how your business
+runs, 2 days / Your costs, on one page. The promise stays two business days
+everywhere; the timeline below spells it out. The figures drop to 21px under
+360px wide so "45 min" and "2 days" stay on one line. Verified at 1440, 1280,
+1024, 768, 375, 360 and 320, motion on and off: the hero still ends at the fold
+with the card level with the heading, no overflow, no console errors. Section 1
+is done again.
