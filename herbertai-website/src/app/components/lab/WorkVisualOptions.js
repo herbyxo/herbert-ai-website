@@ -13,7 +13,7 @@ import { STATE, useBoard, useInView } from '../runs/board'
 // through to the real dashboard. Spacing is the tighter one Will picked for
 // How it works. Goes with the lab when the pass ends.
 
-const DASH = 'https://dashboard.herbert-aisolutions.com'
+const DASH = 'https://demo.herbert-aisolutions.com'
 
 const ITEMS = {
   dash: { tag: 'Live, click in', title: 'A property manager’s dashboard', href: DASH, external: true, verb: 'Open it' },
@@ -88,7 +88,7 @@ function DemoFrame() {
 
 function DashStill() {
   return (
-    <Frame bar="dashboard.herbert-aisolutions.com · live, example data">
+    <Frame bar="demo.herbert-aisolutions.com · live, example data">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/lab/dashboard-requests.png" alt="The property dashboard's maintenance requests" className="w-full aspect-[1200/760] object-cover object-top" />
     </Frame>
