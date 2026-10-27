@@ -2675,3 +2675,15 @@ phones to the jump button). Verified at 1440x900, 1280, 1024, 1440x720, 375 and
 with the heading; the text column now ends about 125px above the card’s foot at
 1440; on a phone the form starts 135px higher (650 against 785 at 375); no
 overflow, no console errors.
+
+## [~] /pilot section 1, the hero: the terms (options 27 Oct 2026)
+
+Will: "what is the 45 min? and the to keep, either way under yours is a bit
+cringey?" The 45 minutes is the audit call (sales/ai-audit.md, "The call,
+forty five minutes"); with the intro gone, "On how the business runs" no longer
+says so. Board: `design-pass-site-2026-10-27-pilot-terms.png`, 1440 and 375.
+1 three terms, Yours gone: Free / No obligation, 45 min / One call on how your
+business runs, 2 days / To your written page (recommended) 2 the same three in
+one or two words (One call, Your written page) 3 four terms, Yours as "The
+page, whatever you decide". Three terms sit three across on a phone too.
+Awaiting Will’s pick.
