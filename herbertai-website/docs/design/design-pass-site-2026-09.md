@@ -2705,3 +2705,23 @@ everywhere; the timeline below spells it out. The figures drop to 21px under
 1024, 768, 375, 360 and 320, motion on and off: the hero still ends at the fold
 with the card level with the heading, no overflow, no console errors. Section 1
 is done again.
+
+## [~] /pilot section 2, the written page: the sheet as proof (options 27 Oct 2026)
+
+Will: "it kills our proof if we say its made up and a sample... we dont have to
+say its made up". Removing every sign it is an example would present invented
+figures as a real client’s result (Australian Consumer Law, and the site’s own
+rule that savings come from a client’s own figures); so the label changes what
+it claims, and a small note stays. Then: "does that image of the audit
+actually represent what an actual audit would look like": the sheet is the
+real template’s first section (`business/sales/audit-report-template.md`); the
+template goes on to Start here (the first AI employee, saving, payback,
+price); the total line is the sample page’s only. Then: "show me images of
+your examples. why are u forgetting to do that" (options must be drawn, never
+only described). Board: `design-pass-site-2026-10-27-pilot-sheet-proof.png`.
+1 label "What your page looks like", a small "Figures are illustrative." 2 as
+1 with Start here (the document chaser: about $13,800 a year saved, payback
+about three months, $3,500 fixed) and no total line, as the template
+(recommended) 3 as 2 keeping the total line. Open for Will too: the report
+template’s footer still carries his mobile. Memory to write once the
+info-review marker clears: draw options, never only describe them.
