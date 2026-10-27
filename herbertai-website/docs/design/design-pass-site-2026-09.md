@@ -2755,3 +2755,19 @@ Will (27 Oct 2026): "we dont need the 'what your report looks like' on the
 report". Built: the sheet opens on its title; the small "Figures are
 illustrative." stays at its foot. Verified at 1440, 375 and 320: no overflow,
 no console errors.
+
+## [~] The site’s tone of wording (options 28 Oct 2026)
+
+Will (28 Oct 2026), on How it works: "idk about the 'one job and a name, say an
+AI document chaser' and the 'a progress update, not a project plan' i think the
+problem we have been having is that we did not establish a tone of wording
+across the site". The lines were set section by section with no shared voice.
+Three tones, each applied to the same eight timeline lines and drawn on the
+page, facts from the pilot run sheet ("What the client sees"): board
+`design-pass-site-2026-10-28-tone.png`. A plain facts: what happens, short
+statements a buyer could check, the same grammar on every line, no asides,
+slogans or not-this-but-that (recommended: how the lines he kept already read)
+B the owner’s voice: you-statements, contractions, conversational C spec
+sheet: terse noun phrases. The pick becomes the rule for every line on the
+site (written into writing-style’s Marketing register when the info-review
+marker allows), then /pilot is rewritten to it.
