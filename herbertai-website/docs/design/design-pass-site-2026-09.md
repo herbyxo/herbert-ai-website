@@ -2725,3 +2725,11 @@ about three months, $3,500 fixed) and no total line, as the template
 (recommended) 3 as 2 keeping the total line. Open for Will too: the report
 template’s footer still carries his mobile. Memory to write once the
 info-review marker clears: draw options, never only describe them.
+Will (27 Oct 2026): "but is the sheets format what the actual format would look
+like?" No. The real report, the template filled with the same example and
+rendered through the Word brand template, is three pages: a cover, then two of
+content (serif type, a grey-headed table, the Herbert AI header). The sheet is
+the first table only, in the website’s type. Side by side:
+`design-pass-site-2026-10-27-pilot-report-vs-sheet.png`. It also exposes a
+wording problem: the site promises "a written page" and "Your costs, on one
+page", and the run sheet a "one page audit", but the report is three pages.
