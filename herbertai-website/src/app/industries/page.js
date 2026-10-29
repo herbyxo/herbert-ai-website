@@ -32,8 +32,8 @@ export default function Industries() {
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
             Four kinds of office, each with a job that eats more hours than it should and an
-            AI employee built to take it. Not on the list? The audit works the same way for any
-            business with 3 to 20 staff and a job everyone hates doing.
+            AI employee built to take it. The audit works the same way for any business with
+            3 to 20 staff and a job everyone hates doing.
           </p>
         </div>
       </section>

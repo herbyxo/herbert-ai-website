@@ -116,6 +116,54 @@ missing payslips"), not what Herbert AI is ("smart", "powerful"). Every figure
 on a board is an example office and says so. No client names and no results
 figures in public copy. The employee takes the job, never replaces the person.
 
+## The wording: plain facts (Will, 29 Oct 2026: "A")
+
+Every line on the site was written section by section with no shared voice, so
+an aside ("One job and a name, say an AI document chaser") and a slogan ("A
+progress update, not a project plan") sat beside plain facts on How it works.
+Will, 28 Oct 2026: "the problem we have been having is that we did not
+establish a tone of wording across the site". Three tones were drawn on the
+same eight lines (`design-pass-site-2026-10-28-tone.png`) and Will picked A,
+plain facts, on 29 Oct 2026. The site has three layers of wording and this rule
+is the middle one:
+
+- Headings keep their own register: one or two beats, a plain statement of who
+  does what ("They do the job. Your team says yes."), never a slogan couplet.
+  That is the Lines register’s "Will’s shape" in the writing-style skill.
+- Body copy and short lines (list rows, timeline facts, terms, card bodies, FAQ
+  answers, form text) are plain facts, by the rule below.
+- The boards speak as the system, in log rows in the office’s words ("Approved
+  by Mia, sent", "Waiting on the owner"); the section above governs them.
+
+The rule for body copy and short lines:
+
+1. Each line says what happens or what the reader gets, in words a buyer could
+   check against the run sheet or the report: "Built inside the tools you
+   already use", "A twelve month roadmap of the next jobs".
+2. A list keeps one grammar on every row. The timeline’s facts are noun
+   phrases with the thing first; a card’s rows are sentences; never mixed
+   inside one list.
+3. No asides. An example is a fact of its own, or sits in the proof beside the
+   line, never a "say an AI document chaser" tail on a line.
+4. No slogans: no not-this-but-that ("A progress update, not a project plan",
+   "Software, not a report"), no mirrored pair, no closing kicker, no aphorism
+   as an opener ("When one job runs itself, the next ones follow").
+5. The business speaks, in the third person. "You" and "your" name the reader;
+   "we" and "I" do not appear in site copy, and steps say what happens, not who
+   does it.
+6. Contractions stay in sentences where they read naturally; a noun-phrase line
+   has none.
+7. No claim about what other people do or feel ("Most people read it and decide
+   from there"), and no figure that is not the reader’s own, a published price,
+   or an example office’s that says so (the section above).
+
+The eight How it works lines as built to it: How your business runs and where
+the hours go / The three jobs costing you most, in your figures / Its job, in
+plain English, confirmed with you on day one / Built inside the tools you
+already use / Its drafts checked by your team before it goes live / Running on
+your real data, your team approving what goes out / A walkthrough with your
+team / A twelve month roadmap of the next jobs.
+
 ## Pictures are the instruments
 
 The real software: the property dashboard, the demos, a pilot's own screens.

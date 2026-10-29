@@ -2771,3 +2771,45 @@ B the owner’s voice: you-statements, contractions, conversational C spec
 sheet: terse noun phrases. The pick becomes the rule for every line on the
 site (written into writing-style’s Marketing register when the info-review
 marker allows), then /pilot is rewritten to it.
+Will (29 Oct 2026): "A". Asked what tone the site had: four registers that
+accrued pass by pass, the headings as two-beat statements ("Audit first. Then
+fourteen days."), the body paragraphs as facts with an owner’s warmth ("Then
+it’s free. The clock starts when..."), the short lines in whichever mood the
+pass was in, and the boards in the system’s own voice ("Approved by Mia,
+sent"); the friction on How it works was a short line borrowing the headings’
+rhythm. Built: the rule in CHARTER.md ("The wording: plain facts": the three
+layers, seven checkable points, the eight rows as built) and in writing-style
+(the Marketing register’s "Site copy is plain facts", a Will’s shape bullet
+and a calibration entry in lines.md; claude-skills 7098084). The eight rows as
+drawn in A. The body lines that broke the rule, rewritten: on /pilot the FAQ
+aside "say an AI document chaser" and "Software, not a report.", "we’ve had
+the kickoff chat", "Most people read it", "If your team groans about it, it
+qualifies", the OS card’s opener "When one job runs itself, the next ones
+follow" (now the 29 Oct fact: each employee after the first is a card in the
+same dashboard, and the dashboard grown to run the office is the AI operating
+system) and "the proof is what we are short of"; the same OS opener in the
+shared ladder body (/about and the industry pages); on /services "they need
+somewhere to live", three "rather than" contrasts and "The spreadsheet that
+became a system"; on /industries "Not on the list?"; on the industry pages "It
+is not one big task. It is the same small one" and "rather than replacing it";
+on /pricing "Not a range, no hourly creep", "Cutting the price would not make
+it more useful", "Most people", "Software, not a report", "not billed as it
+goes", "never against a status report" and "runs on ours"; on /faq three "say"
+asides and "kickoff chat". The accountants’ ask ("Most firms your size lose
+days... Is that you?") became a plain question like the other three. Not
+changed: every heading, the boards, the hero, and the home page, whose ladder
+rows already read as A. Open: /about, /contact and /start speak in Will’s
+first person, against the 19 Oct rule that founder copy names him in the third
+person; "The systems, not the slides." on /work is a contrast heading; /pilot
+still says "pilot" in its labels and questions after the 13 Oct naming
+decision. Board of the three /pilot sections as built:
+`design-pass-site-2026-10-29-tone-a.png`.
+Verified at 1440 and 375 on the Windows PC: no overflow on /pilot, /services,
+/pricing, /faq, /industries, /industries/accountants or /about; eslint clean. The
+dev server here had to run on webpack (Turbopack panics on this machine,
+"Next.js package not found", likely the space in the repo path); a cold run
+logged seven "Invalid or unexpected token" page errors while pages were still
+compiling, and a fresh load of /pilot afterwards had no page errors, no failed
+requests and no console errors. A second full run timed out while eslint ran
+beside it and was not repeated (usage limit). Not yet checked: the Vercel
+preview build of this push.

@@ -95,9 +95,9 @@ export default async function IndustryPage({ params }) {
             <div className="space-y-5">
               <p>{ind.bottleneck}</p>
               <p>
-                It is not one big task. It is the same small one, done again every day by someone
-                who was hired to do something else. The audit puts a number on it: hours a week,
-                who does them, what they cost a year, in your own figures.
+                The same small task, done again every day by someone who was hired to do
+                something else. The audit puts a number on it: hours a week, who does them, what
+                they cost a year, in your own figures.
               </p>
             </div>
           </RevealOnScroll>
@@ -124,8 +124,8 @@ export default async function IndustryPage({ params }) {
               <p>{ind.employeeDoes}</p>
               <p>
                 It does that one job, every day, on your real data, and it connects to the
-                software you already use rather than replacing it. Your team approves anything
-                that goes out. It is live in 14 days, and if it is not, it is free.
+                software you already use. Your team approves anything that goes out. It is live
+                in 14 days, and if it is not, it is free.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 {ind.demoLive ? (

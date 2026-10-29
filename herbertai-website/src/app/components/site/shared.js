@@ -11,7 +11,7 @@ export const INDUSTRIES = [
     name: 'Accountants and bookkeepers',
     short: 'Accountants',
     bottleneck: 'Chasing clients for documents at tax time, then re-typing the details into the practice software.',
-    ask: 'Most firms your size lose days chasing client documents at tax time. Is that you?',
+    ask: 'How many days go on chasing client documents at tax time?',
     employee: 'An AI document chaser',
     employeeDoes: 'Sends each client their own checklist, reminds them about only what is still missing, matches what comes back to the file, and tells your team when a return is ready to start.',
     demo: '/demo/accountants',
@@ -71,7 +71,7 @@ export const RUNGS = [
   {
     n: '03',
     title: 'Your AI operating system',
-    body: 'When one job runs itself, the next ones follow. An AI operating system puts your files, comms and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
+    body: 'Each AI employee after the first is added to the same dashboard, and the dashboard grown to run the whole office is the AI operating system. It puts your files, comms and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
     facts: ['Files, comms and follow-ups on one system', 'Your business owns it', 'The first employee’s $3,500 comes off'],
     price: 'From $25,000, scoped after the audit.',
   },

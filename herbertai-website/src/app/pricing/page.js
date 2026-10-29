@@ -48,7 +48,7 @@ const rungs = [
     price: 'From $25,000',
     lines: [
       'The system your AI employees run in: files, comms, follow-ups and reporting on one platform your team works out of every day, and your business owns.',
-      'Scoped and priced after the audit, as one fixed number with a written scope and a delivery date. Not a range, no hourly creep.',
+      'Scoped and priced after the audit, as one fixed number with a written scope and a delivery date.',
       'If the audit shows the saving would not comfortably cover the price, you will be told so, and an AI employee is not the right next step.',
     ],
   },
@@ -67,19 +67,19 @@ const rungs = [
 const faqs = [
   {
     q: 'Why is the audit free?',
-    a: 'Because it shows whether there is a job worth building on. If there is, you get a quote for your first AI employee. If there is not, you are told so, and the report is yours either way. Cutting the price would not make it more useful; keeping it to diagnosis does.',
+    a: 'Because it shows whether there is a job worth building on. If there is, you get a quote for your first AI employee. If there is not, you are told so, and the report is yours either way.',
   },
   {
     q: 'Do I have to buy an AI employee after the audit?',
-    a: 'No. The audit ends with a written report and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
+    a: 'No. The audit ends with a written report and a price, with the payback figure on it, and the decision is yours from there. There is no follow-up sequence and no pressure call.',
   },
   {
     q: 'What does $3,500 actually get me?',
-    a: 'One AI employee, built for one job in your business, running on your real data by day 14, with your team approving anything that goes out. Plus a walkthrough with your team and a twelve month roadmap of the next jobs worth handing over. Software, not a report.',
+    a: 'One AI employee, built for one job in your business, running on your real data by day 14, with your team approving anything that goes out. Plus a walkthrough with your team and a twelve month roadmap of the next jobs worth handing over.',
   },
   {
     q: 'Why do builds start at $25,000?',
-    a: 'An AI operating system is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts, not billed as it goes. Your first AI employee comes first so you never have to take that on trust.',
+    a: 'An AI operating system is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts. Your first AI employee comes first so you never have to take that on trust.',
   },
   {
     q: 'What is in the retainer, and what is not?',
@@ -87,11 +87,11 @@ const faqs = [
   },
   {
     q: 'Deposits and payment?',
-    a: 'Your first AI employee is paid on go-live. Builds take about a third on signing and the rest against demonstrated working software at each milestone, never against a status report. Retainers are billed monthly.',
+    a: 'Your first AI employee is paid on go-live. Builds take about a third on signing and the rest against working software demonstrated at each milestone. Retainers are billed monthly.',
   },
   {
     q: 'Any lock-in?',
-    a: 'None. You own what gets built, your data and your accounts. An AI operating system runs on your own accounts from day one. Your first AI employee runs on ours for speed and moves to yours whenever you want, with a written guide to how it works.',
+    a: 'None. You own what gets built, your data and your accounts. An AI operating system runs on your own accounts from day one. Your first AI employee runs on Herbert AI’s accounts for speed and moves to yours whenever you want, with a written guide to how it works.',
   },
 ]
 

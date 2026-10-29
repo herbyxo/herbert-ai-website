@@ -25,15 +25,15 @@ const faqs = [
   },
   {
     q: 'Do I have to buy the pilot after the audit?',
-    a: 'No. The audit ends with a written report and a price. Most people read it, look at the payback figure, and decide from there. There is no follow-up sequence and no pressure call.',
+    a: 'No. The audit ends with a written report and a price, with the payback figure on it, and the decision is yours from there. There is no follow-up sequence and no pressure call.',
   },
   {
     q: 'What counts as a bottleneck?',
-    a: 'Any office job someone does over and over that follows the same steps every time. Chasing documents or invoices, re-typing details between systems, writing the same emails, confirming bookings by hand. If your team groans about it, it qualifies.',
+    a: 'Any office job someone does over and over that follows the same steps every time: chasing documents or invoices, re-typing details between systems, writing the same emails, confirming bookings by hand.',
   },
   {
     q: 'What do I actually get for $3,500?',
-    a: 'One AI employee, built for one job in your business and running on your real data by day 14. It has a role, say an AI document chaser or an AI front desk assistant, it does that job every day, and your team approves anything that goes out. Plus a walkthrough with your team and a twelve month AI roadmap of the next jobs worth handing over. Software, not a report.',
+    a: 'One AI employee, built for one job in your business and running on your real data by day 14. It does one job every day, chasing documents or answering the front desk for example, and your team approves anything that goes out. Plus a walkthrough with your team and a twelve month roadmap of the next jobs worth handing over.',
   },
   {
     q: 'What does "credited in full" mean?',
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: 'What if it is not live in 14 days?',
-    a: "Then it's free. The clock starts when you've given access to the tools involved and we've had the kickoff chat. Fourteen days later it's running or you don't pay.",
+    a: "Then it's free. The clock starts at the kickoff call, once access to the tools involved has been given. Fourteen days later it's running or you don't pay.",
   },
   {
     q: 'Do I have to change my existing software?',
@@ -93,12 +93,13 @@ const TERMS = [
 // three steps' and the hero's terms; the audit's is the hero intro's. The
 // prices are the homepage's own (RUNGS), and on laptops they sit on one level
 // at the foot of their stops (Will, 22 Oct 2026, price "1", "all the prices
-// being on different levels i dont like").
+// being on different levels i dont like"). The facts are plain facts, the
+// site's tone of wording (CHARTER.md, Will, 29 Oct 2026: "A").
 const STEPS = [
   { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'], price: RUNGS[0].price },
   { when: 'Within two business days', title: 'Your written report', facts: ['The three jobs costing you most, in your figures'] },
-  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Built around the tools you already use', 'One job and a name, say an AI document chaser', 'A progress update, not a project plan'], build: true, price: RUNGS[1].price },
-  { when: 'Day 14', title: 'Live', facts: ['Your team uses it the same day', 'A walkthrough so everyone knows how', 'A twelve month roadmap of the next jobs'] },
+  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Its job, in plain English, confirmed with you on day one', 'Built inside the tools you already use', 'Its drafts checked by your team before it goes live'], build: true, price: RUNGS[1].price },
+  { when: 'Day 14', title: 'Live', facts: ['Running on your real data, your team approving what goes out', 'A walkthrough with your team', 'A twelve month roadmap of the next jobs'] },
 ]
 
 // What it fixes: plain sentences, no slogan beats (Will, 24 Oct 2026,
@@ -114,9 +115,9 @@ const FIXES = [
 ]
 
 const AFTER = [
-  ['Your AI operating system', 'When one job runs itself, the next ones follow. An AI operating system puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns. Scoped after the audit, from $25,000, with the pilot’s $3,500 taken off.'],
+  ['Your AI operating system', 'Each AI employee after the first is added to the same dashboard, and the dashboard grown to run the whole office is the AI operating system. It puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns it. Scoped after the audit, from $25,000, with the pilot’s $3,500 taken off.'],
   ['Keep it running', 'A retainer from $1,000 a month covers hosting, fixes, a set number of small changes, and a monthly report on what the system handled and one improvement shipped. Month to month, and nothing switches off without being handed over to you first.'],
-  ['The first three', 'The first three pilot clients who agree to a case study and a testimonial get 90 days of included care instead of 30. The price is the same; the proof is what we are short of.'],
+  ['The first three', 'The first three pilot clients who agree to a case study and a testimonial get 90 days of included care instead of 30, at the same price.'],
 ]
 
 function Label({ children, dark = false }) {

@@ -36,15 +36,15 @@ const faqs = [
   },
   {
     q: 'How long does it take?',
-    a: 'Your first AI employee is live 14 days after the kickoff chat, or you do not pay. An AI operating system gets one fixed price and a timeline in its written scope, agreed after the audit.',
+    a: 'Your first AI employee is live 14 days after the kickoff call, or you do not pay. An AI operating system gets one fixed price and a timeline in its written scope, agreed after the audit.',
   },
   {
     q: 'What is an AI employee?',
-    a: 'Software with one job in your business, say an AI document chaser or an AI front desk assistant. It runs on your real data every day and takes over the repetitive part of a job, not the person doing it. Anything it sends to a customer is approved by someone on your team first.',
+    a: 'Software with one job in your business, chasing documents or answering the front desk for example. It runs on your real data every day and takes over the repetitive part of a job, not the person doing it. Anything it sends to a customer is approved by someone on your team first.',
   },
   {
     q: 'Will the AI talk to my customers on its own?',
-    a: 'Only as far as you decide. By default anything going out to a customer is approved by a person first. Where it does answer directly, say an AI receptionist taking calls after hours, it takes a message or passes the call to you when it cannot help, and you set what it is allowed to handle.',
+    a: 'Only as far as you decide. By default anything going out to a customer is approved by a person first. Where it does answer directly, an AI receptionist taking calls after hours for example, it takes a message or passes the call to you when it cannot help, and you set what it is allowed to handle.',
   },
   {
     q: 'Do I have to change my existing software?',
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: 'What if what I need is not on the site?',
-    a: 'Bring it to the audit. Most of the work is specific to one business anyway, say a custom intake form, an internal admin tool, or two systems that do not talk to each other. If it is worth building it gets a price, and if it is not you are told so.',
+    a: 'Bring it to the audit. Most of the work is specific to one business anyway: a custom intake form, an internal admin tool, or two systems that do not talk to each other. If it is worth building it gets a price, and if it is not you are told so.',
   },
   {
     q: 'Where are you based?',
