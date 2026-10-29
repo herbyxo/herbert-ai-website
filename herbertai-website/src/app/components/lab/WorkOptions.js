@@ -10,7 +10,7 @@ import Link from 'next/link'
 // picked one moves into page.js and this file goes with the lab.
 
 const SYSTEMS = [
-  { tag: 'Live, click in', title: 'A property manager’s dashboard', href: 'https://dashboard.herbert-aisolutions.com', external: true, image: '/work/property-dashboard.png', bar: 'dashboard.herbert-aisolutions.com · live, example data' },
+  { tag: 'Live, click in', title: 'A property manager’s dashboard', href: 'https://demo.herbert-aisolutions.com', external: true, image: '/work/property-dashboard.png', bar: 'demo.herbert-aisolutions.com · live, example data' },
   { tag: 'Demo, plays itself', title: 'An accountant’s document chaser', href: '/demo/accountants', external: false, image: '/work/accountants-demo.png', bar: 'Demo · an example accounting firm' },
   { tag: 'Currently building', title: 'An operations hub for a finance brokerage', href: '/work', external: false },
   { tag: 'Built', title: 'A marketing engine', href: '/work', external: false },

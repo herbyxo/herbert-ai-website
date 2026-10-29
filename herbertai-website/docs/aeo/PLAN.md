@@ -80,6 +80,7 @@ Mentions on other sites track AI visibility more closely than links do (0.664 ag
 - [x] National AI Centre AI Directory: nomination submitted 22 Oct 2026 (review takes several weeks).
 - [x] Crunchbase live 22 Oct 2026 (crunchbase.com/organization/herbert-ai), in `sameAs`. No logo yet.
 - [x] GoodFirms and TechBehemoths submitted 22 Oct 2026, both under the site's review; into `sameAs` once published.
+- [ ] TechBehemoths went live straight away but removes a profile whose head office is unconfirmed after 30 days (about 21 Nov 2026). Its only free confirmation is a public Google Maps listing, so it lapses unless the Business Profile appeal is made and succeeds by then; the paid plan is not worth it.
 - [ ] DesignRush: draft saved; it will not proceed without three named featured clients, which the no-client-names rule rules out. Parked.
 - [ ] Apple Business Connect; Yellow Pages, True Local, Hotfrog and StartLocal for consistent name, phone and site.
 - [ ] The "best AI consultants Adelaide" lists that AI answers cite (GoodFirms Adelaide AI, TechBehemoths Adelaide), and pitching their authors where a list is editorial and free.

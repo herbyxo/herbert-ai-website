@@ -49,7 +49,7 @@ export const INDUSTRIES = [
     employeeDoes: 'Logs the request from the tenant, gets the landlord’s approval, dispatches the tradie, and keeps everyone updated, with the property manager approving anything over their limit.',
     demo: '/demo/real-estate',
     demoLive: false,
-    liveProof: { href: 'https://dashboard.herbert-aisolutions.com', label: 'See a property manager’s dashboard' },
+    liveProof: { href: 'https://demo.herbert-aisolutions.com', label: 'See a property manager’s dashboard' },
   },
 ]
 

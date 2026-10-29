@@ -15,12 +15,12 @@ import HubPipeline from '../runs/HubPipeline'
 // brokerage hub's visual is held off the live site until the client clears it;
 // on production its slot shows words only. Goes with the lab.
 
-const DASH = 'https://dashboard.herbert-aisolutions.com'
+const DASH = 'https://demo.herbert-aisolutions.com'
 const W = 1184 // the width every visual is drawn at, then scaled to its slot
 const H = 720
 
 const SYSTEMS = [
-  { id: 'dash', tag: 'Live, click in', title: 'A property manager’s dashboard', href: DASH, external: true, verb: 'Open it', bar: 'dashboard.herbert-aisolutions.com · live, example data' },
+  { id: 'dash', tag: 'Live, click in', title: 'A property manager’s dashboard', href: DASH, external: true, verb: 'Open it', bar: 'demo.herbert-aisolutions.com · live, example data' },
   { id: 'demo', tag: 'Demo, plays itself', title: 'An accountant’s document chaser', href: '/demo/accountants', verb: 'See it run', bar: 'Demo · an example accounting firm' },
   { id: 'hub', tag: 'Currently building', title: 'An operations hub for a finance brokerage', href: '/work/operations-hub', verb: 'See an example' },
   { id: 'engine', tag: 'Built', title: 'A marketing engine', href: '/work/marketing-engine', verb: 'See an example' },
@@ -90,7 +90,7 @@ function DemoFrame() {
 function Visual({ id, play, showHub }) {
   if (id === 'dash') {
     return (
-      <Frame bar="dashboard.herbert-aisolutions.com · live, example data">
+      <Frame bar="demo.herbert-aisolutions.com · live, example data">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/work/property-dashboard-requests.png" alt="The property dashboard's maintenance requests" className="w-full aspect-[1200/640] object-cover object-top" />
       </Frame>

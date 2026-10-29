@@ -64,7 +64,9 @@ export default function AiReceptionist() {
           <h1
             className="font-display text-ink max-w-[14ch]"
             style={{
-              fontSize: 'var(--text-display-lg)',
+              // 'receptionist' is wider than a phone at the 64px floor of display-lg, so
+              // below 427px the size follows the screen (48px at 320, 56px at 375).
+              fontSize: 'clamp(min(64px, 15vw), 8vw, 160px)',
               lineHeight: 0.92,
               letterSpacing: '-0.04em',
               fontWeight: 800,

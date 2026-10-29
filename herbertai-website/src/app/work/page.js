@@ -26,7 +26,7 @@ const systems = [
     tag: 'Live · click in',
     title: 'A property manager’s dashboard',
     body: 'A tenant logs a maintenance request. The system logs it, the manager approves it, a tradie is dispatched and everyone is kept updated. Open it and click around; the data is made up and nothing you do touches anyone real.',
-    href: 'https://dashboard.herbert-aisolutions.com',
+    href: 'https://demo.herbert-aisolutions.com',
     label: 'Open the dashboard',
     external: true,
     image: '/work/property-dashboard.png',
