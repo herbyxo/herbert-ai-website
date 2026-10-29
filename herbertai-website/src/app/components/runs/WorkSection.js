@@ -19,7 +19,7 @@ const H = 740
 
 function systems(showHub) {
   return [
-    { id: 'dash', industry: 'Property', title: 'A Property Manager’s Dashboard', href: 'https://dashboard.herbert-aisolutions.com', external: true, verb: 'Open it' },
+    { id: 'dash', industry: 'Property', title: 'A Property Manager’s Dashboard', href: 'https://demo.herbert-aisolutions.com', external: true, verb: 'Open it' },
     { id: 'demo', industry: 'Finance', title: 'An Accountant’s Document Chaser', href: '/demo/accountants', verb: 'See it run' },
     { id: 'hub', industry: 'Finance', title: 'An Operations Hub for a Finance Brokerage', href: showHub ? '/work/operations-hub' : '/work', verb: showHub ? 'See an example' : 'Read about it' },
     { id: 'engine', industry: 'Trades', title: 'A Marketing Engine', href: '/work/marketing-engine', verb: 'See an example' },
@@ -89,7 +89,7 @@ function DemoFrame() {
 function Visual({ id, play, showHub }) {
   if (id === 'dash') {
     return (
-      <Frame bar="dashboard.herbert-aisolutions.com · live, example data">
+      <Frame bar="demo.herbert-aisolutions.com · live, example data">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/work/property-dashboard-requests.png"

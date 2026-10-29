@@ -30,7 +30,7 @@ import FinanceBoard from './finance'
 
 export const SCREENS = [
   {
-    id: 'property', name: 'Property', system: 'Herbert OS for Property', desc: 'An operations hub for a property agency', jobs: 'Repairs, late rent, renewals, enquiries', slug: 'real-estate', built: 'https://dashboard.herbert-aisolutions.com',
+    id: 'property', name: 'Property', system: 'Herbert OS for Property', desc: 'An operations hub for a property agency', jobs: 'Repairs, late rent, renewals, enquiries', slug: 'real-estate', built: 'https://demo.herbert-aisolutions.com',
     short: 'About 17 to 37 hours of office work a week back, for an agency of ten with 400 rentals.',
     line: 'For an agency of ten with 400 rentals, the system hands back about 17 to 37 hours of office work a week across repairs, late rent, renewals and enquiries, keeps the landlords who would otherwise drift away, and asks a person before anything with money or a notice in it goes out.',
     Visual: PropertyHub,
