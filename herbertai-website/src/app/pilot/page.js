@@ -99,7 +99,7 @@ const TERMS = [
 const STEPS = [
   { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'], price: RUNGS[0].price },
   { when: 'Within two business days', title: 'Your written report', facts: ['The three jobs costing you most, in your figures'] },
-  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Its job, in plain English, confirmed with you on day one', 'Built inside the tools you already use', 'Its drafts checked by your team before it goes live'], build: true, price: RUNGS[1].price },
+  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Its job, confirmed with you on day one', 'Built inside the tools you already use', 'Its drafts checked by your team before it goes live'], build: true, price: RUNGS[1].price },
   { when: 'Day 14', title: 'Live', facts: ['Running on your real data, your team approving what goes out', 'A walkthrough with your team', 'A twelve month roadmap of the next jobs'] },
 ]
 
