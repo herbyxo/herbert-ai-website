@@ -2756,7 +2756,7 @@ report". Built: the sheet opens on its title; the small "Figures are
 illustrative." stays at its foot. Verified at 1440, 375 and 320: no overflow,
 no console errors.
 
-## [~] The site’s tone of wording (options 28 Oct 2026)
+## [x] The site’s tone of wording (options 28 Oct 2026)
 
 Will (28 Oct 2026), on How it works: "idk about the 'one job and a name, say an
 AI document chaser' and the 'a progress update, not a project plan' i think the
@@ -2816,7 +2816,7 @@ it writes its screenshots into docs/design, because the dev watcher rebuilds
 on the writes. The same script with its output outside the tree logs none, so
 the errors are the watcher, not the pages.
 
-## [~] /about, /contact and /start in the third person (30 Oct 2026)
+## [x] /about, /contact and /start in the third person (30 Oct 2026)
 
 The tone pass left three pages in Will’s first person ("Hi, I’m Will
 Herbert. I build...", "Tell me what’s slow...", "Tell me about your
@@ -2837,3 +2837,4 @@ your business." and "A reply comes back within a business day". The auto-reply
 emails stay in Will’s first person: they are emails from him, the Email
 register. Board: `design-pass-site-2026-10-30-third-person.png`. Verified at
 1440 and 375: no overflow, no page errors, no console errors; eslint clean.
+Will (30 Oct 2026): "Merge". The branch merged to main with the tone pass and the third-person pass on it.
