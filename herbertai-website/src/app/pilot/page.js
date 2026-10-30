@@ -90,17 +90,17 @@ const TERMS = [
 ]
 
 // How it works as a timeline: one line from the audit to day 14, the build
-// marked in fourteen ticks (Will, 22 Oct 2026, layout "1"). Facts are the old
-// three steps' and the hero's terms; the audit's is the hero intro's. The
-// prices are the homepage's own (RUNGS), and on laptops they sit on one level
-// at the foot of their stops (Will, 22 Oct 2026, price "1", "all the prices
-// being on different levels i dont like"). The facts are plain facts, the
-// site's tone of wording (CHARTER.md, Will, 29 Oct 2026: "A").
+// marked in fourteen ticks (Will, 22 Oct 2026, layout "1"). Each stop is its
+// time and its title; the prices are the homepage's own (RUNGS) and on laptops
+// sit on one level at the foot of their stops (Will, 22 Oct 2026, price "1").
+// The rows under the stops went on 30 Oct 2026 (Will: "i think we remove the
+// lines under the timeline headings altogether"), with the heading "Your first
+// AI employee in four steps." from that day's line test.
 const STEPS = [
-  { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'], price: RUNGS[0].price },
-  { when: 'Within two business days', title: 'Your written report', facts: ['The three jobs costing you most, in your figures'] },
-  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Software that does one office job every day', 'Its job, confirmed with you on day one', 'Built inside the tools you already use', 'Tested on your real work before it sends anything'], build: true, price: RUNGS[1].price },
-  { when: 'Day 14', title: 'Live', facts: ['Working on your actual clients, your team okaying every message before it is sent', 'A walkthrough with your team', 'The next jobs worth handing over, in order'] },
+  { when: '45 minutes', title: 'The free AI audit', price: RUNGS[0].price },
+  { when: 'Within two business days', title: 'Your written report' },
+  { when: '14 days from your go', title: 'Your first AI employee, built', build: true, price: RUNGS[1].price },
+  { when: 'Day 14', title: 'Live' },
 ]
 
 // What it fixes: plain sentences, no slogan beats (Will, 24 Oct 2026,
@@ -151,16 +151,6 @@ const SHEET_CELL = 'py-3 pr-4 border-t border-[#111]/10 text-[14px] leading-[1.4
 // under it (Will, 23 Oct 2026, edited on the design canvas: "have the times
 // above the timeline"). The laptop rows are shared (subgrid), so the line stays
 // straight however the times wrap and the prices sit on one level.
-function Facts({ facts }) {
-  return (
-    <ul>
-      {facts.map((f) => (
-        <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
-      ))}
-    </ul>
-  )
-}
-
 function Timeline() {
   return (
     <>
@@ -171,7 +161,6 @@ function Timeline() {
             <span aria-hidden className="absolute left-0 top-[3px] w-3 h-3 rounded-full bg-[#111]" />
             <p className="text-[16px] font-medium text-[#777] leading-[1.2] mb-2">{st.when}</p>
             <h3 className="text-[22px] font-semibold tracking-[-0.02em] mb-2.5">{st.title}</h3>
-            <Facts facts={st.facts} />
             {st.price && <p className="mt-4 text-[15px] font-medium text-[#111]">{st.price}</p>}
           </li>
         ))}
@@ -193,8 +182,7 @@ function Timeline() {
             </div>
             <div className="min-w-0 flex flex-col pt-4 pr-7">
               <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-2.5">{st.title}</h3>
-              <Facts facts={st.facts} />
-              {st.price && <p className="mt-auto pt-6 text-[15px] font-medium text-[#111]">{st.price}</p>}
+                {st.price && <p className="mt-auto pt-6 text-[15px] font-medium text-[#111]">{st.price}</p>}
             </div>
           </li>
         ))}
@@ -331,7 +319,7 @@ export default function Pilot() {
       {/* 3. How it works. */}
       <Section>
         <Label>How it works</Label>
-        <H2>Audit first. Then fourteen days.</H2>
+        <H2>Your first AI employee in four steps.</H2>
         <Timeline />
       </Section>
 

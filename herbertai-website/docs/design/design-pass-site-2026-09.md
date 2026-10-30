@@ -2356,7 +2356,7 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [x] | [x] | [x] | [~] | Layout settled 23 Oct 2026; the heading and the rows under Live reopened 30 Oct 2026 (Will: "idk about the heading", "idk about any of the wording under live"), line test and three ways each drawn, awaiting his picks |
+| 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: heading "Your first AI employee in four steps." and no rows under the stops (Will: "remove the lines under the timeline headings altogether"); times, titles and the two prices remain |
 | 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Details pass 27 Oct 2026 ("1,1,1") on Will’s word with no options step; not signed off (Will, 30 Oct 2026: "section 4 isnt done"); what is missing is his to say |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2991,3 +2991,15 @@ to (4) C the run sheet’s own list with the log, the next jobs left to the
 questions (4.5). Today scores 3. Section 4 reopened in the roadmap: its
 details pass ran 27 Oct on his word with no options step, and he has not
 signed it off; what is missing is his to say. Awaiting Will’s picks.
+Will (30 Oct 2026): "i think we remove the lines under the timeline headings
+altogether. and have your first ai employee in four steps". Heading A, and no
+rows under any of the four stops.
+Built: the heading, and each stop is its time and its title, the two prices
+level at the foot; the Facts rows and their component are gone from the page.
+The rows’ facts live on in the questions (what the $3,500 gets, the audit)
+and in section 5. One consequence for the charter’s rule 8: with the row
+"Software that does one office job every day" gone, /pilot’s first use of
+"AI employee" is this heading, bare; the definition now sits in section 5 and
+the questions. Verified at 1440, 1280, 1024, 375 and 320, motion on and off: no
+overflow, no page or console errors; eslint clean. As-built sheet:
+`design-pass-site-2026-10-30-pilot-how-built.png`. Section 3 is done.

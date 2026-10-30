@@ -231,10 +231,10 @@ moves. As built, 30 Oct 2026, numbered on the page in
 2. What you get back: "What your admin costs, written down." and the written
    report at size, an example practice’s three jobs with hours and cost,
    "Read the whole sample". Done 22 and 27 Oct.
-3. How it works: "Audit first. Then fourteen days." and the timeline, 45
-   minutes, within two business days, 14 days from your go, day 14, with the
-   rows under each stop and the two prices level at the foot. Layout 23 Oct;
-   the heading and the rows under Live reopened 30 Oct, options drawn.
+3. How it works: "Your first AI employee in four steps." and the timeline, 45
+   minutes, within two business days, 14 days from your go, day 14, each stop
+   its time and its title, the two prices level at the foot, no rows (Will, 30
+   Oct). Layout 23 Oct, words 30 Oct.
 4. What it fixes: "The jobs everyone hates doing." and six jobs with a sentence
    each. Details pass 27 Oct with no options step; not signed off (Will, 30
    Oct: "section 4 isnt done").
