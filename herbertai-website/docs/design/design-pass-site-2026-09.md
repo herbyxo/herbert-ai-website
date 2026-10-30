@@ -2805,11 +2805,13 @@ still says "pilot" in its labels and questions after the 13 Oct naming
 decision. Board of the three /pilot sections as built:
 `design-pass-site-2026-10-29-tone-a.png`.
 Verified at 1440 and 375 on the Windows PC: no overflow on /pilot, /services,
-/pricing, /faq, /industries, /industries/accountants or /about; eslint clean. The
-dev server here had to run on webpack (Turbopack panics on this machine,
-"Next.js package not found", likely the space in the repo path); a cold run
-logged seven "Invalid or unexpected token" page errors while pages were still
-compiling, and a fresh load of /pilot afterwards had no page errors, no failed
-requests and no console errors. A second full run timed out while eslint ran
-beside it and was not repeated (usage limit). Not yet checked: the Vercel
-preview build of this push.
+/pricing, /faq, /industries, /industries/accountants or /about, no page errors,
+no failed requests, no console errors; eslint clean; the Vercel preview build
+of the push succeeded. Two things about the tooling on this machine, so the
+next pass does not chase them: Turbopack panics here ("Next.js package not
+found", likely the space in the repo path), so the dev server runs on webpack
+(`next dev --webpack`, the untracked root `.claude/launch.json`); and under
+webpack the board script logs "Invalid or unexpected token" page errors when
+it writes its screenshots into docs/design, because the dev watcher rebuilds
+on the writes. The same script with its output outside the tree logs none, so
+the errors are the watcher, not the pages.
