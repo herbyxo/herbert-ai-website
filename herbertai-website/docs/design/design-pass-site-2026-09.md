@@ -2965,3 +2965,4 @@ line test if wanted), and the unused WorkSection. Verified at 1440 and 375 on
 all eleven organic pages: no overflow, no page or console errors; eslint
 clean. Board of the thirteen changed sections:
 `design-pass-site-2026-10-30-cold-read-built.png`.
+Will (30 Oct 2026): "Merge". main fast-forwarded to 1262853; production carried the new lines 45 seconds later, read back on /, /pilot and /work.
