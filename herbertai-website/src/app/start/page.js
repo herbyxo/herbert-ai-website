@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: '/start' },
   openGraph: {
     title: 'Start a project · Herbert AI',
-    description: 'Tell me about your business. A reply within a business day.',
+    description: 'Tell Herbert AI about your business. A reply within a business day.',
     url: '/start',
     images: [OG_IMAGE],
   },
@@ -36,13 +36,13 @@ export default function Start() {
               fontWeight: 800,
             }}
           >
-            Tell me about
+            Tell Herbert AI about
             <br />
             your business.
           </h1>
 
           <p className="mt-9 md:mt-12 max-w-[60ch] text-[17px] md:text-[19px] text-muted leading-[1.55]">
-            Fill this in and hit send. I&rsquo;ll come back within a business day with the next
+            Fill this in and hit send. A reply comes back within a business day with the next
             step: usually the free AI audit, sometimes a straight price for a small job, or a
             clear no if it&rsquo;s not worth building. No pitch deck, no sales call, no obligation.
           </p>

@@ -47,21 +47,21 @@ export default function About() {
               className="font-display text-ink max-w-[18ch]"
               style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
             >
-              Hi, I&apos;m Will Herbert. I build the software small businesses run on.
+              Will Herbert builds the software small businesses run on.
             </h1>
             <div className="mt-9 max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.55]">
               <p>
-                Herbert AI is custom software and AI for small businesses, built in Adelaide.
-                I build the systems an office runs on: the AI employee that chases documents or
-                follows up quotes, and the platform a whole team works out of once a few of
-                those are running. You deal with me from the first audit to the day it goes
-                live, and you own what gets built.
+                Herbert AI is custom software and AI for small businesses, built in Adelaide by
+                Will Herbert. He builds the systems an office runs on: the AI employee that
+                chases documents or follows up quotes, and the platform a whole team works out
+                of once a few of those are running. You deal with him from the first audit to
+                the day it goes live, and you own what gets built.
               </p>
               <p>
                 It started with AI receptionists for tradies, which is where the phone demo on
                 the services page comes from. The same patterns turned out to fit a barbershop,
                 a finance brokerage and anywhere else a repetitive job is eating someone&apos;s
-                week, so that is what I build now.
+                week, so that is what he builds now.
               </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function About() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
           <div>
             <RevealOnScroll>
-              <Eyebrow>How working with me goes</Eyebrow>
+              <Eyebrow>How working with Herbert AI goes</Eyebrow>
             </RevealOnScroll>
             <RevealOnScroll delay={0.08}>
               <h2
@@ -126,9 +126,9 @@ export default function About() {
           <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
             <div className="space-y-5">
               <p>
-                You talk to the person building it. Not a sales rep, not an account manager,
-                not a junior who escalates to a senior. The audit is with me, the build is by
-                me, and the walkthrough with your team is me.
+                You talk to the person building it. There is no sales rep, no account manager
+                and no junior who escalates to a senior. Will runs the audit, does the build
+                and gives the walkthrough with your team.
               </p>
               <p>
                 No template either. Your business does not run like the last one, so the
@@ -189,8 +189,9 @@ export default function About() {
                 Forty five minutes. No pitch.
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                Tell me how your week runs and I&apos;ll tell you what the repetitive parts are
-                costing you, in writing, whether or not you build anything.
+                The audit goes through how your week runs, and what the repetitive parts are
+                costing you comes back in writing within two business days, whether or not you
+                build anything.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">

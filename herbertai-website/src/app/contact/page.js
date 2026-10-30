@@ -6,12 +6,12 @@ import { JsonLd, breadcrumbs } from '@/app/components/site/schema'
 export const metadata = {
   title: 'Contact',
   description:
-    'Contact Herbert AI, custom software and AI for small businesses in Adelaide. Send a message, call, or book a free AI audit. Usually replies within a day.',
+    'Contact Herbert AI, custom software and AI for small businesses in Adelaide. Send a message or book a free AI audit. Usually replies within a day.',
   alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Contact · Herbert AI',
     description:
-      'Send a message, call, or book a free AI audit. Herbert AI, Adelaide.',
+      'Send a message or book a free AI audit. Herbert AI, Adelaide.',
     url: '/contact',
     images: [OG_IMAGE],
   },
@@ -29,12 +29,12 @@ export default function Contact() {
             className="font-display text-ink max-w-[16ch]"
             style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
           >
-            Tell me what&apos;s slow, what&apos;s broken, or what doesn&apos;t exist yet.
+            Say what&apos;s slow, what&apos;s broken, or what doesn&apos;t exist yet.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[58ch]">
             Herbert AI is custom software and AI for small businesses, built in Adelaide. Send a
-            message or call, and if you want to know what&apos;s worth building, book the free AI
-            audit: 45 minutes auditing your business and a written report back within two business days.
+            message, and if you want to know what&apos;s worth building, book the free AI audit:
+            45 minutes auditing your business and a written report back within two business days.
           </p>
         </div>
       </section>

@@ -2815,3 +2815,25 @@ webpack the board script logs "Invalid or unexpected token" page errors when
 it writes its screenshots into docs/design, because the dev watcher rebuilds
 on the writes. The same script with its output outside the tree logs none, so
 the errors are the watcher, not the pages.
+
+## [~] /about, /contact and /start in the third person (30 Oct 2026)
+
+The tone pass left three pages in Will’s first person ("Hi, I’m Will
+Herbert. I build...", "Tell me what’s slow...", "Tell me about your
+business"), against the 19 Oct 2026 rule that founder copy names him in the
+third person and the brand speaks. Asked, Will (30 Oct 2026): "Yes, do it
+here". Built: /about opens "Will Herbert builds the software small businesses
+run on.", the intro is "built in Adelaide by Will Herbert. He builds...", "You
+deal with him", "so that is what he builds now", the label "How working with
+Herbert AI goes", Why one builder reads "There is no sales rep, no account
+manager and no junior who escalates to a senior. Will runs the audit, does the
+build and gives the walkthrough with your team.", and the close "The audit goes
+through how your week runs, and what the repetitive parts are costing you comes
+back in writing within two business days, whether or not you build anything."
+/contact opens "Say what’s slow, what’s broken, or what doesn’t exist
+yet." and no longer says "or call" (there is no phone number on the page or
+the site; the metadata lost "call" too). /start opens "Tell Herbert AI about
+your business." and "A reply comes back within a business day". The auto-reply
+emails stay in Will’s first person: they are emails from him, the Email
+register. Board: `design-pass-site-2026-10-30-third-person.png`. Verified at
+1440 and 375: no overflow, no page errors, no console errors; eslint clean.
