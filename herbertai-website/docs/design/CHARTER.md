@@ -137,9 +137,16 @@ is the middle one:
 
 The rule for body copy and short lines:
 
-1. Each line says what happens or what the reader gets, in words a buyer could
-   check against the run sheet or the report: "Built inside the tools you
-   already use", "A twelve month roadmap of the next jobs".
+1. Each line says what happens or what the reader gets, in words a stranger
+   could picture with no knowledge of the business: "Built inside the tools
+   you already use", "Tested on your real work before it sends anything". The
+   check is a cold read, never the run sheet. Until 30 Oct 2026 this rule said
+   "words a buyer could check against the run sheet", and that is a truth test,
+   not a comprehension test: "Its drafts checked by your team before it goes
+   live" passed it and meant nothing to Liam, the first reader who had not read
+   the run sheet (Will, 30 Oct 2026: "if i was someone who had no idea about
+   the business, some of the points are hard to get an idea of what it actually
+   is"). Cold read: `design-pass-site-2026-10-30-cold-read.md`.
 2. A list keeps one grammar on every row. The timeline’s facts are noun
    phrases with the thing first; a card’s rows are sentences; never mixed
    inside one list.
@@ -156,6 +163,16 @@ The rule for body copy and short lines:
 7. No claim about what other people do or feel ("Most people read it and decide
    from there"), and no figure that is not the reader’s own, a published price,
    or an example office’s that says so (the section above).
+8. A term the business coined (AI audit, AI employee, AI operating system,
+   Herbert OS, the first three) is said in plain words the first time it
+   appears on a page ("an AI employee, software that does one office job every
+   day"), and never stands bare where a stranger meets it first.
+9. No trade words where an owner’s word exists: scoped (priced), comms
+   (messages), incidents (fixes), shipped (made), go-live (when it goes live),
+   milestone (stage), rungs (steps), engagement (work), exceptions (anything
+   unusual), module, platform, funnel, ad group, accounts for hosting (hosted
+   by Herbert AI, on your own systems), live and real data for working on your
+   actual clients and files.
 
 The eight How it works lines as built to it: How your business runs and where
 the hours go / The three jobs costing you most, in your figures / Its job, in

@@ -28,7 +28,7 @@ done. Updated in the same commit as the work.
 | 3. Sections | [x] | All seven sections picked, built and detailed; Book the Audit done 20 Oct 2026 |
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
-| 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; Herbert OS name clear with conditions; /about’s "Why one builder" heading left for phase 7 |
+| 6. Words and claims | [~] | Homepage claims list cleared 20 Oct 2026; reopened 30 Oct 2026 for the whole site: the cold read (`design-pass-site-2026-10-30-cold-read.md`, 69 rows) after Liam’s onboarding showed the site reads as true to the run sheet but not understandable without it; awaiting Will’s marks |
 | 7. Other pages | [~] | Under way on /pilot: sections 1 to 4 done, section 5 facts set and options drawn 30 Oct 2026, then sections 6 and 7 and /pilot’s phases 4 to 6. Still to come: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pricing, /about (incl. "Why one builder") |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
@@ -2925,3 +2925,28 @@ component, option 1 of each as built. Board:
    the drawing shows; a line test only if Will asks.
 
 Awaiting Will’s picks.
+
+## [~] The cold read: every line as a stranger (30 Oct 2026)
+
+Will (30 Oct 2026), after onboarding Liam: "i realise that a lot of the
+information on the site doesnt really make sense? if i was someone who had no
+idea about the business, some of the points are hard to get an idea of what it
+actually is". On section 3 he had already cut "in plain English" (3d189b6),
+asked what "Its drafts checked by your team" means, and doubted the twelve
+month roadmap row. The cause: the tone rule’s test was "words a buyer could
+check against the run sheet", a truth test, so a row true to the run sheet and
+meaningless without it passed. The charter’s rule 1 now reads "words a
+stranger could picture with no knowledge of the business", checked by a cold
+read, never the run sheet; rule 8 says a coined term (AI audit, AI employee, AI
+operating system, Herbert OS, the first three) is said in plain words the first
+time it appears on a page; rule 9 lists the trade words and the owner’s word
+for each. Then every organic page read as an owner who has never heard of the
+business: `design-pass-site-2026-10-30-cold-read.md`, 69 rows, 12 of them the
+terms that recur (fixing those fixes most of the rest), each with what a
+stranger meets and a plain version, numbered so Will can mark by row. The
+largest: "AI audit" reads as an audit of your AI, and the recommendation is to
+keep the name (booking page, call script, sales documents) and let the line
+under every audit button define it. The plain definitions already exist, in
+/faq’s first answer and /services’ second section, at the bottom of the
+funnel. Nothing built. Awaiting Will’s marks; Liam’s own marks on the live
+site would be the better list.
