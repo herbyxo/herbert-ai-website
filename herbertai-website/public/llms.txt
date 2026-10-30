@@ -9,15 +9,15 @@ Herbert AI works with owner-operated businesses of roughly 3 to 20 staff, in fiv
 Herbert AI sells one ladder, taken in order.
 
 1. A free AI audit: 45 minutes on how the business runs, then a written report within two business days that puts a yearly cost on each repetitive job, in the business's own figures, and names the one to hand over first.
-2. Your first AI employee: one AI employee for one job, $3,500 fixed, live on the business's real data in 14 days or it is free. The first 30 days of hosting and support are included, then $200 a month care, a handover to the business's own accounts, or a bigger build. The $3,500 is credited in full to a bigger build started within 60 days.
-3. An AI operating system: the full build, from $25,000, scoped after the audit and quoted as one fixed number. Files, communications and follow-ups run on one system, and the business owns it.
+2. Your first AI employee: one AI employee for one job, $3,500 fixed, working on the business's actual clients in 14 days or it is free. The first 30 days of hosting and support are included, then $200 a month care, a handover to the business's own accounts, or a bigger build. The $3,500 is credited in full to a bigger build started within 60 days.
+3. An AI operating system: the full build, from $25,000, priced after the audit and quoted as one fixed number. Files, communications and follow-ups run on one system, and the business owns it.
 4. A retainer from $1,000 a month, month to month, with a monthly report.
 
 If the audit shows the saving would not comfortably cover the price, the business is told so.
 
 ## What an AI employee is
 
-An AI employee is software that does one job in the office, end to end, on the business's real systems, with a person approving anything that goes out to a customer. Each one carries a first name and its job, say "Emma · Maintenance" for a property manager's maintenance requests or "Gus · Recoveries", which compares every signed agreement with what was actually charged. The business names its own AI employee when the build starts. It is not sold as a replacement for staff.
+An AI employee is software that does one job in the office, end to end, on the business's real systems, with a person okaying every message before it is sent to a customer. Each one carries a first name and its job, say "Emma · Maintenance" for a property manager's maintenance requests or "Gus · Recoveries", which compares every signed agreement with what was actually charged. The business names its own AI employee when the build starts. It is not sold as a replacement for staff.
 
 Examples by industry:
 - Property: a maintenance coordinator that logs a tenant's request, books a tradie inside the landlord's limit and keeps everyone told.
@@ -38,10 +38,10 @@ Herbert Reach is a product by Herbert AI, in development: a marketing department
 
 - [Home](https://herbert-aisolutions.com/): how it works, the AI employees, Herbert OS by industry, Herbert Reach, and the audit booking form.
 - [Free AI audit](https://herbert-aisolutions.com/pilot): what the audit covers, a sample of the written report, how the first AI employee is built, questions and answers, and the booking form.
-- [Pricing](https://herbert-aisolutions.com/pricing): the four rungs and what each costs.
+- [Pricing](https://herbert-aisolutions.com/pricing): the four steps and what each costs.
 - [What gets built](https://herbert-aisolutions.com/services): AI employees, the system they run in, and what comes after.
 - [Industries](https://herbert-aisolutions.com/industries), with pages for [accountants and bookkeepers](https://herbert-aisolutions.com/industries/accountants), [allied health](https://herbert-aisolutions.com/industries/allied-health), [trades](https://herbert-aisolutions.com/industries/trades) and [real estate and property management](https://herbert-aisolutions.com/industries/real-estate).
-- [The systems](https://herbert-aisolutions.com/work): working examples, including a property manager's dashboard to click into and an example marketing engine.
+- [The work](https://herbert-aisolutions.com/work): working examples, including a property manager's dashboard to click into and an example marketing engine.
 - [About](https://herbert-aisolutions.com/about): Will Herbert and how an engagement runs.
 - [FAQ](https://herbert-aisolutions.com/faq): common questions on pricing, timelines and process.
 - [Contact](https://herbert-aisolutions.com/contact): email and phone.
@@ -52,8 +52,8 @@ Herbert Reach is a product by Herbert AI, in development: a marketing department
 - How much does an AI employee cost? Herbert AI's first AI employee is $3,500 fixed, live in 14 days or free, with the first 30 days of hosting and support included.
 - How much does a full AI system cost? From $25,000, quoted as one fixed number after the free audit.
 - Is the audit really free? Yes. It is 45 minutes plus a written report within two business days, and the business keeps the report whether or not it goes ahead.
-- Who owns what gets built? The business does. Builds run on the business's own accounts.
-- Does it replace staff? No. Each AI employee does one job, and a person on the team approves what goes out.
+- Who owns what gets built? The business does. Builds run on the business's own systems.
+- Does it replace staff? No. Each AI employee does one job, and a person on the team okays every message before it is sent.
 - Where is Herbert AI? Adelaide, South Australia. It works with businesses across Australia.
 
 ## Contact

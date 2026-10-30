@@ -20,7 +20,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'What does Herbert AI do?',
-    a: 'Herbert AI builds custom software and AI for small businesses, from Adelaide. Most work starts as an AI employee, software that does one office job every day, like chasing documents, answering enquiries or confirming bookings, with someone on your team approving anything that goes out. Bigger builds put the whole operation in one system, with the AI employees working inside it. Will Herbert builds all of it, and you own what gets built.',
+    a: 'Herbert AI builds custom software and AI for small businesses, from Adelaide. Most work starts as an AI employee, software that does one office job every day, like chasing documents, answering enquiries or confirming bookings, with someone on your team okaying every message before it is sent. Bigger builds put the whole operation in one system, with the AI employees working inside it. Will Herbert builds all of it, and you own what gets built.',
   },
   {
     q: 'Who is it for?',
@@ -32,15 +32,15 @@ const faqs = [
   },
   {
     q: 'What does it cost?',
-    a: 'The audit is free. Your first AI employee, built for one job, is $3,500 fixed and live in 14 days or free. An AI operating system starts from $25,000 and is scoped after the audit, and retainers start from $1,000 a month. If the audit shows the saving would not comfortably cover the price, you are told that instead.',
+    a: 'The audit is free. Your first AI employee, built for one job, is $3,500 fixed and live in 14 days or free. An AI operating system starts from $25,000 and is priced after the audit, and retainers start from $1,000 a month. If the audit shows the saving would not comfortably cover the price, you are told that instead.',
   },
   {
     q: 'How long does it take?',
-    a: 'Your first AI employee is live 14 days after the kickoff call, or you do not pay. An AI operating system gets one fixed price and a timeline in its written scope, agreed after the audit.',
+    a: 'Your first AI employee is working 14 days after the kickoff call, or you do not pay. An AI operating system gets one fixed price and a delivery date in writing, agreed after the audit.',
   },
   {
     q: 'What is an AI employee?',
-    a: 'Software with one job in your business, chasing documents or answering the front desk for example. It runs on your real data every day and takes over the repetitive part of a job, not the person doing it. Anything it sends to a customer is approved by someone on your team first.',
+    a: 'Software with one job in your business, chasing documents or answering the front desk for example. It works on your actual clients every day and takes over the repetitive part of a job, not the person doing it. Anything it sends to a customer is approved by someone on your team first.',
   },
   {
     q: 'Will the AI talk to my customers on its own?',
@@ -52,11 +52,11 @@ const faqs = [
   },
   {
     q: 'Are there contracts or lock-in?',
-    a: 'No. Your first AI employee includes its first 30 days of hosting and support, then you choose $200 a month care, a move onto your own accounts, or an AI operating system. Those run on your own accounts, and retainers are month to month.',
+    a: 'No. Your first AI employee includes its first 30 days of hosting and support, then you choose $200 a month support, a move onto your own systems, or an AI operating system. Those run on your own systems, and retainers are month to month.',
   },
   {
     q: 'Who owns the code and data?',
-    a: 'You do. Builds run on your own accounts with a perpetual licence to the software, and your data and customer list stay yours, so nothing is held back if you leave. Will keeps his internal tools and component library, which is part of how each build ships faster.',
+    a: 'You do. Builds run on your own systems, with a licence to the software that never expires, and your data and customer list stay yours, so nothing is held back if you leave. Will keeps his internal tools and component library, which is part of how each build ships faster.',
   },
   {
     q: 'Do I need any technical knowledge?',

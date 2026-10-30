@@ -23,7 +23,7 @@ const NAV_COLS = [
     links: [
       ['/pilot', 'How it works'],
       ['/services', 'What gets built'],
-      ['/work', 'The systems'],
+      ['/work', 'The work'],
       ['/industries', 'Industries'],
       ['/pricing', 'Pricing'],
       ['/about', 'About'],

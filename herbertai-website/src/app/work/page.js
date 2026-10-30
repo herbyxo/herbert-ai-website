@@ -5,12 +5,12 @@ import { OG_IMAGE } from '@/app/components/site/og'
 import { JsonLd, breadcrumbs } from '@/app/components/site/schema'
 
 export const metadata = {
-  title: 'The systems | What Herbert AI has built',
+  title: 'The work | What Herbert AI has built',
   description:
-    'The systems, not the slides: a property manager’s dashboard you can click into, an accountant’s document chaser that plays itself, an operations hub for a finance brokerage, a marketing engine. No client names, made-up data, real software.',
+    'Real software, running: a property manager’s dashboard you can click into, an accountant’s document chaser that plays itself, an operations hub for a finance brokerage, a marketing engine. No client names, made-up data, real software.',
   alternates: { canonical: '/work' },
   openGraph: {
-    title: 'The systems · Herbert AI',
+    title: 'The work · Herbert AI',
     description: 'Click into the software rather than read about it.',
     url: '/work',
     images: [OG_IMAGE],
@@ -43,14 +43,14 @@ const systems = [
   {
     tag: 'Currently building',
     title: 'An operations hub for a finance brokerage',
-    body: 'Every client file on one board, with who is waiting on what. Documents chased automatically, every email to a client drafted by the system and approved by a person before it goes. Checklists per file, a command palette, and the numbers on one screen. A demo with made-up data is coming once the build is live.',
+    body: 'Every client file on one board, with who is waiting on what. Documents chased automatically, every email to a client drafted by the system and approved by a person before it goes. Checklists per file and the numbers on one screen. A demo with made-up data is coming once the build is live.',
     href: null,
     image: null,
   },
   {
     tag: 'Built',
     title: 'A marketing engine',
-    body: 'Google ads written, tested and paused by the system against real results, Meta campaigns drafted and held for approval, a landing page per ad group, and a daily audit that flags what is wasting money. The growth module that bolts onto an operations system.',
+    body: 'Google ads written, tested and paused by the system against real results, Meta campaigns drafted and held for approval, a page built for each ad, and a daily check that flags what is wasting money. The marketing that is added once the office runs itself.',
     href: null,
     image: null,
   },
@@ -75,7 +75,7 @@ const systems = [
 export default function Work() {
   return (
     <>
-      <JsonLd data={breadcrumbs([['The systems', '/work']])} />
+      <JsonLd data={breadcrumbs([['The work', '/work']])} />
       <section className="bg-cream">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
           <Eyebrow>The work</Eyebrow>
@@ -83,7 +83,7 @@ export default function Work() {
             className="font-display text-ink max-w-[16ch]"
             style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
           >
-            The systems, not the slides.
+            Real software, running.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[60ch]">
             Clients are not named here and the numbers in the demos are made up. What is real
@@ -145,7 +145,7 @@ export default function Work() {
               </h2>
               <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
                 The audit finds the job. Your first AI employee takes it, live in 14
-                days, on your real data.
+                days, on your actual clients.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">

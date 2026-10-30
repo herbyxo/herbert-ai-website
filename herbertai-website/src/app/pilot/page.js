@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: 'Free AI audit · Herbert AI',
     description:
-      '45 minutes auditing your business, a written report on what your admin costs, then working software on the worst job in 14 days. Fixed price, credited in full if you go ahead with a bigger build.',
+      '45 minutes auditing your business, a written report on what your admin costs, then working software on the worst job in 14 days. Fixed price, the $3,500 taken off if you go ahead with a bigger build.',
     url: '/pilot',
     images: [OG_IMAGE],
   },
@@ -22,27 +22,27 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is the AI audit, and why is it free?',
-    a: "45 minutes auditing how your business runs, then a written report within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap. It's free because it shows whether there's a job worth building on. If there is, you get a quote for the pilot. If there isn't, you're told so, and the report is yours either way.",
+    a: "45 minutes auditing how your business runs, then a written report within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and the next jobs worth handing over, in order. It's free because it shows whether there's a job worth building on. If there is, you get a quote for your first AI employee. If there isn't, you're told so, and the report is yours either way.",
   },
   {
-    q: 'Do I have to buy the pilot after the audit?',
+    q: 'Do I have to buy an AI employee after the audit?',
     a: 'No. The audit ends with a written report and a price, with the payback figure on it, and the decision is yours from there. There is no follow-up sequence and no pressure call.',
   },
   {
-    q: 'What counts as a bottleneck?',
+    q: 'What counts as a job worth handing over?',
     a: 'Any office job someone does over and over that follows the same steps every time: chasing documents or invoices, re-typing details between systems, writing the same emails, confirming bookings by hand.',
   },
   {
     q: 'What do I actually get for $3,500?',
-    a: 'One AI employee, built for one job in your business and running on your real data by day 14. It does one job every day, chasing documents or answering the front desk for example, and your team approves anything that goes out. Plus a walkthrough with your team and a twelve month roadmap of the next jobs worth handing over.',
+    a: 'One AI employee, built for one job in your business and working on your actual clients by day 14. It does one job every day, chasing documents or answering the front desk for example, and your team okays every message before it is sent. Plus a walkthrough with your team and a list of the next jobs worth handing over, in order.',
   },
   {
-    q: 'What does "credited in full" mean?',
-    a: 'If you go ahead with a bigger build within 60 days, the whole $3,500 comes off that price. The pilot ends up costing you nothing. If you stop at the pilot, you keep the working system either way.',
+    q: 'What does "the $3,500 taken off" mean?',
+    a: 'If you go ahead with a bigger build within 60 days, the whole $3,500 comes off that price. The first AI employee ends up costing you nothing. If you stop there, you keep the working system either way.',
   },
   {
-    q: 'Are there ongoing costs after the pilot?',
-    a: "The first 30 days of hosting, support and AI running costs are included. After that you choose: keep it running for $200 a month, which covers hosting, fixes and normal AI usage, or have it moved onto your own accounts with a written guide to how it works, or roll it into a bigger build. You get a reminder a week before. If no choice is made by day 30, it's paused and your data is sent to you, and it can still be moved onto your own accounts whenever you're ready.",
+    q: 'Are there ongoing costs after the first 30 days?',
+    a: "The first 30 days of hosting, support and AI running costs are included. After that you choose: keep it running for $200 a month, which covers hosting, fixes and normal AI usage, or have it moved onto your own systems with a written guide to how it works, or roll it into a bigger build. You get a reminder a week before. If no choice is made by day 30, it's paused and your data is sent to you, and it can still be moved onto your own systems whenever you're ready.",
   },
   {
     q: 'What if it is not live in 14 days?',
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: 'Do I have to change my existing software?',
-    a: 'No. The pilot connects what you already use. Your calendar, inbox, job system and invoicing stay where they are; the new workflow sits between them and does the repetitive part.',
+    a: 'No. Your first AI employee connects to what you already use. Your calendar, inbox, job system and invoicing stay where they are; the new workflow sits between them and does the repetitive part.',
   },
 ]
 
@@ -99,8 +99,8 @@ const TERMS = [
 const STEPS = [
   { when: '45 minutes', title: 'The free AI audit', facts: ['How your business runs and where the hours go'], price: RUNGS[0].price },
   { when: 'Within two business days', title: 'Your written report', facts: ['The three jobs costing you most, in your figures'] },
-  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Its job, confirmed with you on day one', 'Built inside the tools you already use', 'Its drafts checked by your team before it goes live'], build: true, price: RUNGS[1].price },
-  { when: 'Day 14', title: 'Live', facts: ['Running on your real data, your team approving what goes out', 'A walkthrough with your team', 'A twelve month roadmap of the next jobs'] },
+  { when: '14 days from your go', title: 'Your first AI employee, built', facts: ['Software that does one office job every day', 'Its job, confirmed with you on day one', 'Built inside the tools you already use', 'Tested on your real work before it sends anything'], build: true, price: RUNGS[1].price },
+  { when: 'Day 14', title: 'Live', facts: ['Working on your actual clients, your team okaying every message before it is sent', 'A walkthrough with your team', 'The next jobs worth handing over, in order'] },
 ]
 
 // What it fixes: plain sentences, no slogan beats (Will, 24 Oct 2026,
@@ -349,9 +349,9 @@ export default function Pilot() {
         </div>
       </Section>
 
-      {/* 5. After the pilot. */}
+      {/* 5. What comes next. */}
       <Section>
-        <Label>After the pilot</Label>
+        <Label>What comes next</Label>
         <H2>One job first. Then the system.</H2>
         {/* The stages beside the dashboard they grow (Will, 30 Oct 2026, "B, dashboard"). */}
         <AfterPilot />

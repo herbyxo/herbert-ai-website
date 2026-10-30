@@ -123,9 +123,9 @@ export default async function IndustryPage({ params }) {
             <div className="space-y-5">
               <p>{ind.employeeDoes}</p>
               <p>
-                It does that one job, every day, on your real data, and it connects to the
-                software you already use. Your team approves anything that goes out. It is live
-                in 14 days, and if it is not, it is free.
+                It does that one job every day on your actual clients, and it connects to the
+                software you already use. Your team okays every message before it is sent. It is
+                working in 14 days, and if it is not, it is free.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 {ind.demoLive ? (

@@ -64,16 +64,16 @@ export const RUNGS = [
   {
     n: '02',
     title: 'Your first AI employee',
-    body: 'One AI employee built for that job, live on your real data in 14 days. It does one job every day, and your team approves anything that goes out.',
-    facts: ['One AI employee, one job', 'Live on your real data in 14 days', 'Your team approves what goes out'],
+    body: 'One AI employee built for that job, working on your actual clients in 14 days. It does one job every day, and your team okays every message before it is sent.',
+    facts: ['Software that does one office job every day', 'Working on your actual clients in 14 days', 'Your team okays every message before it is sent'],
     price: '$3,500 fixed. Live in 14 days or it’s free.',
   },
   {
     n: '03',
     title: 'Your AI operating system',
-    body: 'Each AI employee after the first is added to the same dashboard, and the dashboard grown to run the whole office is the AI operating system. It puts your files, comms and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
-    facts: ['Files, comms and follow-ups on one system', 'Your business owns it', 'The first employee’s $3,500 comes off'],
-    price: 'From $25,000, scoped after the audit.',
+    body: 'Each AI employee after the first is added to the same dashboard, and the dashboard grown to run the whole office is the AI operating system. It puts your files, messages and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
+    facts: ['Files, messages and follow-ups on one system', 'Your business owns it', 'The first employee’s $3,500 comes off'],
+    price: 'From $25,000, priced after the audit.',
   },
 ]
 

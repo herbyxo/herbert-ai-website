@@ -7,7 +7,7 @@ import { JsonLd, breadcrumbs } from '@/app/components/site/schema'
 export const metadata = {
   title: 'Pricing | Free AI audit, a $3,500 first AI employee, builds from $25,000',
   description:
-    'Four rungs, each priced before you climb it. A free AI audit, your first AI employee at $3,500 and live in 14 days or free, an AI operating system from $25,000 scoped after the audit, retainers from $1,000 a month.',
+    'Four steps, each priced before you take it. A free AI audit, your first AI employee at $3,500 and live in 14 days or free, an AI operating system from $25,000 priced after the audit, retainers from $1,000 a month.',
   alternates: { canonical: '/pricing' },
   openGraph: {
     title: 'Pricing · Herbert AI',
@@ -27,7 +27,7 @@ const rungs = [
     price: 'Free',
     lines: [
       '45 minutes auditing how your business runs.',
-      'A written report within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and a twelve month roadmap.',
+      'A written report within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and the next jobs worth handing over, in order.',
       'Yours to keep whether or not you go further.',
     ],
   },
@@ -36,10 +36,10 @@ const rungs = [
     title: 'Your first AI employee',
     price: '$3,500, fixed',
     lines: [
-      'One AI employee built for one job, live on your real data in 14 days. Live in 14 days or it is free.',
+      'One AI employee built for one job, working on your actual clients in 14 days, or it is free.',
       'The full $3,500 comes off a bigger build signed within 60 days.',
-      'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or take it onto your own accounts with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
-      'Founding clients: the first three clients who agree to a case study and a testimonial get 90 days of included care instead of 30.',
+      'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or have it moved onto your own systems with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
+      'Founding clients: the first three clients who agree to a case study and a testimonial get 90 days of included support instead of 30.',
     ],
   },
   {
@@ -47,8 +47,8 @@ const rungs = [
     title: 'AI operating system',
     price: 'From $25,000',
     lines: [
-      'The system your AI employees run in: files, comms, follow-ups and reporting on one platform your team works out of every day, and your business owns.',
-      'Scoped and priced after the audit, as one fixed number with a written scope and a delivery date.',
+      'The system your AI employees work in: files, messages, follow-ups and reports in one place your team works out of every day, and your business owns.',
+      'Priced after the audit, as one fixed number with a written list of what is included and a delivery date.',
       'If the audit shows the saving would not comfortably cover the price, you will be told so, and an AI employee is not the right next step.',
     ],
   },
@@ -57,8 +57,8 @@ const rungs = [
     title: 'Retainer',
     price: 'From $1,000 a month',
     lines: [
-      'Hosting, incidents, a set number of small changes a month, and a usage cap.',
-      'Every month you get a short report: what the system handled, hours it saved, anything it got wrong, one improvement shipped and one proposed for next month.',
+      'Hosting, fixes when something breaks, a set number of small changes a month, and a limit on AI usage.',
+      'Every month you get a short report: what the system handled, hours it saved, anything it got wrong, one improvement made and one proposed for next month.',
       'Month to month. Nothing switches off without being handed over to you first.',
     ],
   },
@@ -75,11 +75,11 @@ const faqs = [
   },
   {
     q: 'What does $3,500 actually get me?',
-    a: 'One AI employee, built for one job in your business, running on your real data by day 14, with your team approving anything that goes out. Plus a walkthrough with your team and a twelve month roadmap of the next jobs worth handing over.',
+    a: 'One AI employee, built for one job in your business, working on your actual clients by day 14, with your team okaying every message before it is sent. Plus a walkthrough with your team and a list of the next jobs worth handing over, in order.',
   },
   {
     q: 'Why do builds start at $25,000?',
-    a: 'An AI operating system is a multi-user system your office runs on: a board of every file, automated communications with a person approving them, connections into the software you already use, and reporting. That is 150 to 300 hours of work, and the price is set before it starts. Your first AI employee comes first so you never have to take that on trust.',
+    a: 'An AI operating system is one system your whole team logs into: every client file on one board, messages drafted for a person to approve, connections into the software you already use, and reports. That is 150 to 300 hours of work, and the price is set before it starts. Your first AI employee comes first so you never have to take that on trust.',
   },
   {
     q: 'What is in the retainer, and what is not?',
@@ -87,11 +87,11 @@ const faqs = [
   },
   {
     q: 'Deposits and payment?',
-    a: 'Your first AI employee is paid on go-live. Builds take about a third on signing and the rest against working software demonstrated at each milestone. Retainers are billed monthly.',
+    a: 'Your first AI employee is paid when it goes live. Builds take about a third on signing and the rest as working software is shown at each stage. Retainers are billed monthly.',
   },
   {
     q: 'Any lock-in?',
-    a: 'None. You own what gets built, your data and your accounts. An AI operating system runs on your own accounts from day one. Your first AI employee runs on Herbert AI’s accounts for speed and moves to yours whenever you want, with a written guide to how it works.',
+    a: 'None. You own what gets built, your data and every login. An AI operating system runs on your own systems from day one. Your first AI employee is hosted by Herbert AI for speed and moves onto your own systems whenever you want, with a written guide to how it works.',
   },
 ]
 
@@ -111,7 +111,7 @@ export default function Pricing() {
             The rest is fixed.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[56ch]">
-            Four rungs, taken in order, each priced before you climb it. No hourly billing,
+            Four steps, taken in order, each priced before you take it. No hourly billing,
             no ranges that turn into invoices, and nothing you pay for before you have seen
             what it would save you.
           </p>

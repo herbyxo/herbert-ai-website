@@ -7,11 +7,11 @@ import { JsonLd, breadcrumbs } from '@/app/components/site/schema'
 export const metadata = {
   title: 'What gets built | Custom software and AI for small business',
   description:
-    'AI employees for one job each, the operations system they run in, and the growth modules that come after. Custom built in Adelaide, owned by you. Every engagement starts with a free AI audit.',
+    'AI employees for one job each, the system they run in, and the marketing that comes after. Custom built in Adelaide, owned by you. Every client starts with a free AI audit.',
   alternates: { canonical: '/services' },
   openGraph: {
     title: 'What gets built · Herbert AI',
-    description: 'AI employees, the system they run in, and what comes after. Every engagement starts with a free AI audit.',
+    description: 'AI employees, the system they run in, and what comes after. Every client starts with a free AI audit.',
     url: '/services',
     images: [OG_IMAGE],
   },
@@ -24,7 +24,7 @@ const groups = [
     id: 'employees',
     label: 'AI employees',
     headline: 'One job each. A person approves what goes out.',
-    body: 'Each AI employee takes over one repetitive job and runs it every day. It reads what comes in, drafts what goes out, and hands the exceptions to your team. The first one is live in 14 days.',
+    body: 'Each AI employee takes over one repetitive job and runs it every day. It reads what comes in, drafts the reply, and passes anything unusual to your team. The first one is live in 14 days.',
     demo: 'voice',
     items: [
       { tag: 'Accounting', title: 'AI document chaser', body: 'Sends each client their checklist, chases only what is missing, matches files as they land, tells your team when a return is ready.' },
@@ -41,7 +41,7 @@ const groups = [
     id: 'system',
     label: 'The AI operating system',
     headline: 'One place your whole office works out of.',
-    body: 'Once a few AI employees are running, they work inside the AI operating system: your files, comms, follow-ups and numbers on one system your business owns, built around how you already work.',
+    body: 'Once a few AI employees are running, they work inside one system your whole office works out of: your files, messages, follow-ups and numbers in one place your business owns, built around how you already work.',
     items: [
       { tag: 'Operations', title: 'Operations hub', body: 'Every client file or job on one board, with who is waiting on what, and the next action already drafted.' },
       { tag: 'Clients', title: 'Client and customer portals', body: 'Clients log in with an email link to upload documents, see their file and check where things are.' },
@@ -55,12 +55,12 @@ const groups = [
     id: 'grow',
     label: 'What comes after',
     headline: 'Growth, once the office runs itself.',
-    body: 'Growth modules bolt onto the operations system, so new customers land in a business that can handle them.',
+    body: 'Marketing is added once the office runs itself, so new customers land in a business that can handle them.',
     items: [
-      { tag: 'Ads', title: 'Google and Meta ads', body: 'Written, tested and paused by a marketing engine, with a landing page per ad group and the numbers on one screen.' },
-      { tag: 'Search', title: 'SEO', body: 'Technical and local search, so the people already looking for what you do can find you.' },
-      { tag: 'Email and SMS', title: 'Lifecycle messaging', body: 'Automated sequences to the customers you already have: review requests and reminders.' },
-      { tag: 'Pages', title: 'Landing pages and funnels', body: 'Pages built for one ad group or one offer, measured on what they convert.' },
+      { tag: 'Ads', title: 'Google and Meta ads', body: 'Written, tested and paused by the system against real results, with a page built for each ad and the numbers on one screen.' },
+      { tag: 'Search', title: 'Google search', body: 'So the people already searching for what you do can find you.' },
+      { tag: 'Email and SMS', title: 'Follow-up emails and texts', body: 'Review requests and reminders to the customers you already have, sent for you.' },
+      { tag: 'Pages', title: 'Landing pages', body: 'A page built for one ad or one offer, measured on the enquiries it brings in.' },
     ],
     links: [
       ['/google-ads-adelaide', 'Google Ads, run by the builder'],
@@ -83,9 +83,9 @@ export default function Services() {
             One AI employee first. Then the system.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
-            Every engagement starts with a free AI audit and one AI employee on the job that
-            costs you most. This is what the system your business runs on can include after
-            that, built to order in Adelaide and owned by you.
+            Every client starts with a free AI audit and one AI employee, software that does one
+            office job every day, on the job that costs most. This is what can be built after
+            that, to order, in Adelaide, and you own it.
           </p>
           <div className="mt-10">
             <AuditButton />
@@ -152,7 +152,7 @@ export default function Services() {
                 </h2>
                 <p className="text-cream/70 text-[17px] leading-[1.6] max-w-[52ch]">
                   Your first AI employee is $3,500, live in 14 days or it&apos;s free. Builds start from
-                  $25,000 and are scoped after the audit. Retainers from $1,000 a month.
+                  $25,000 and are priced after the audit. Retainers from $1,000 a month.
                 </p>
               </div>
               <div className="flex flex-col gap-3">

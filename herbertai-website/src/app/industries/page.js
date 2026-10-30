@@ -31,9 +31,9 @@ export default function Industries() {
             Built for the office you actually run.
           </h1>
           <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[62ch]">
-            Four kinds of office, each with a job that eats more hours than it should and an
-            AI employee built to take it. The audit works the same way for any business with
-            3 to 20 staff and a job everyone hates doing.
+            Four kinds of office, each with a job that eats more hours than it should, and the
+            AI employee built to take it: software that does that one job every day. The audit
+            works the same way for any business with 3 to 20 staff and a job everyone hates doing.
           </p>
         </div>
       </section>

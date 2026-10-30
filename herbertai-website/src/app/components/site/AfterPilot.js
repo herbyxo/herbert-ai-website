@@ -16,9 +16,9 @@ import { GLYPH, Status } from '../runs/os/shared'
 const Q = '’'
 
 export const STAGE = {
-  day14: ['Day 14', 'Your first AI employee', 'One card in your dashboard, live on your real data.', '$3,500 fixed'],
-  day30: ['Day 30', 'Keep it running, or take it with you', `Kept on Herbert AI${Q}s accounts, or moved onto yours with a written guide.`, '$200 a month to keep it running'],
-  os: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, on your own accounts, scoped after the audit.', 'From $25,000, with the $3,500 taken off'],
+  day14: ['Day 14', 'Your first AI employee', 'One card in your dashboard, working on your actual clients.', '$3,500 fixed'],
+  day30: ['Day 30', 'Keep it running, or take it with you', 'Hosted by Herbert AI, or moved onto your own systems with a written guide.', '$200 a month to keep it running'],
+  os: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, on your own systems, priced after the audit.', 'From $25,000, with the $3,500 taken off'],
   care: ['After the build', 'Kept running', 'Hosting, fixes, a set number of small changes and a monthly report.', 'From $1,000 a month'],
 }
 
@@ -30,7 +30,7 @@ export const QUEUED = [
   [glyphOf('Ray'), 'Ray', 'Promises', EMPLOYEES.find((e) => e.name === 'Ray').what],
 ]
 
-export const FOOT = 'Support after the full build is from $1,000 a month. The first three clients who agree to a case study and a testimonial get 90 days of included care instead of 30.'
+export const FOOT = 'Support after the full build is from $1,000 a month. The first three clients who agree to a case study and a testimonial get 90 days of included support instead of 30.'
 
 function Stages({ items }) {
   return items.map(([w, t, b, p]) => (

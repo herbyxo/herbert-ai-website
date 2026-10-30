@@ -41,7 +41,7 @@ export const LADDER = [
     '@type': 'Offer',
     name: 'Your first AI employee',
     description:
-      'One AI employee for one job, built and live in 14 days or it is free. $3,500 fixed, credited in full to a bigger build within 60 days.',
+      'One AI employee for one job, built and live in 14 days or it is free. $3,500 fixed, taken off a bigger build signed within 60 days.',
     price: 3500,
     priceCurrency: 'AUD',
     url: `${SITE_URL}/pricing`,
@@ -50,14 +50,14 @@ export const LADDER = [
     '@type': 'Offer',
     name: 'AI operating system',
     description:
-      'The full build: the AI employees and the system they run in, scoped after the audit and quoted as one fixed number.',
+      'The full build: the AI employees and the system they run in, priced after the audit and quoted as one fixed number.',
     priceSpecification: AUD(25000, { minPrice: 25000 }),
     url: `${SITE_URL}/pricing`,
   },
   {
     '@type': 'Offer',
     name: 'Retainer',
-    description: 'Ongoing care and improvement with a monthly report, month to month.',
+    description: 'Ongoing support and improvement with a monthly report, month to month.',
     priceSpecification: {
       '@type': 'UnitPriceSpecification',
       priceCurrency: 'AUD',
