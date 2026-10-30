@@ -219,12 +219,34 @@ product". So:
 
 ## Settled: /pilot (20 Oct 2026)
 
-Will: "B". The audit page every audit button lands on, in this order: 1 the
-offer and the booking form together, #book on that section; 2 the written
-page the audit gives back, shown at size from the real sample; 3 how it works;
-4 what it fixes; 5 after the pilot; 6 the questions; 7 a link back up to the
-form. Paper ground throughout, no header audit button (the form is in the
-first section), nothing moves.
+Will: "B". The audit page every audit button lands on. Paper ground
+throughout, no header audit button (the form is in the first section), nothing
+moves. As built, 30 Oct 2026, numbered on the page in
+`assets-2026-10-30/pilot-map-1440.png`:
+
+1. AI Audit: the offer and the booking form. "Find the job eating your time
+   and money.", three terms (Free / No obligation, 45 min / One call on how
+   your business runs, 2 days / Your written report), the form beside them;
+   #book is here. Done 22 Oct, terms 27 Oct.
+2. What you get back: "What your admin costs, written down." and the written
+   report at size, an example practice’s three jobs with hours and cost,
+   "Read the whole sample". Done 22 and 27 Oct.
+3. How it works: "Audit first. Then fourteen days." and the timeline, 45
+   minutes, within two business days, 14 days from your go, day 14, with the
+   rows under each stop and the two prices level at the foot. Layout 23 Oct,
+   words 29 and 30 Oct.
+4. What it fixes: "The jobs everyone hates doing." and six jobs with a sentence
+   each. Done 27 Oct.
+5. What comes next (was After the pilot): "One job first. Then the system."
+   and the three stages after the first AI employee (Day 14, Day 30, within
+   60 days) with their prices, beside the dashboard that employee ships in,
+   the next ones queued in it. Built 30 Oct (Will: "B, dashboard"); its four
+   details are drawn and wait on his picks.
+6. Questions: "Before you book." and eight questions. Built from the skeleton;
+   words settled by the tone pass and the cold read; its own options and
+   details pass not yet run.
+7. Back up to the form: "Ready? Book your free AI audit". Built from the
+   skeleton; details pass not yet run.
 
 ## Settled: the homepage (14 Oct 2026, seven sections from 15 Oct 2026)
 
