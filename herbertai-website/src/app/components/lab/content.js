@@ -17,6 +17,7 @@ export const REFS = [
   { slug: 'industries-recognition', name: 'Industries: recognition three ways', url: '1, 2 and 3, scroll down' },
   { slug: 'operating-systems', name: 'Operating Systems: one screen per industry', url: 'Property to Finance, scroll down' },
   { slug: 'products', name: 'Products: Herbert Reach three ways', url: '1, 2 and 3, scroll down' },
+  { slug: 'pilot-after', name: '/pilot, After the pilot: today and three ways', url: 'Today, A, B and C, scroll down' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'

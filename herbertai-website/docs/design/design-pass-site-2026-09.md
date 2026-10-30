@@ -29,8 +29,8 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; Herbert OS name clear with conditions; /about’s "Why one builder" heading left for phase 7 |
-| 7. Other pages | [ ] | Next: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pilot, /pricing, /about (incl. "Why one builder") |
-| 8. Walkthrough and ship | [ ] | Lab removed, preview/runs-itself merged, production checked |
+| 7. Other pages | [~] | Under way on /pilot: sections 1 to 4 done, section 5 facts set and options drawn 30 Oct 2026, then sections 6 and 7 and /pilot’s phases 4 to 6. Still to come: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pricing, /about (incl. "Why one builder") |
+| 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
 
@@ -2356,9 +2356,9 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [x] | [x] | [x] | [~] | Layout settled on the design canvas 23 Oct 2026; heading and the stops' wording parked 24 Oct (Will: "park it"), today's heading stays |
+| 3. How it works | [x] | [x] | [x] | [x] | [x] | Layout settled on the design canvas 23 Oct 2026; the stops’ wording settled by the site’s tone pass, 29 Oct 2026 (Will: "A"); today’s heading stays |
 | 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Done 27 Oct 2026 (details only, on Will's word): "The jobs everyone hates doing.", plain sentences, balanced headings |
-| 5. After the pilot | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 5. After the pilot | [x] | [~] | [ ] | [x] | [ ] | Facts set and today plus three options drawn, 30 Oct 2026; awaiting Will’s pick |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 
@@ -2838,3 +2838,51 @@ emails stay in Will’s first person: they are emails from him, the Email
 register. Board: `design-pass-site-2026-10-30-third-person.png`. Verified at
 1440 and 375: no overflow, no page errors, no console errors; eslint clean.
 Will (30 Oct 2026): "Merge". The branch merged to main with the tone pass and the third-person pass on it.
+
+## [~] /pilot section 5, After the pilot: facts and options (30 Oct 2026)
+
+Will (30 Oct 2026): "ok lets continue on the rebuild". The roadmap’s next step
+was /pilot section 5, built from the skeleton only on 20 Oct.
+
+Facts, from the pilot run sheet ("Days 14 to 30"), the engagement process
+("After 30 days the client picks one") and the one-pager prospects see
+("After day 14", "After the first one"):
+
+1. The first 30 days after go-live are included. At day 30 the client picks
+   one of three: keep it running for $200 a month (hosting, fixes, normal AI
+   usage, heavier usage at cost with notice first), take it with them onto
+   their own accounts with a written guide, or go ahead with the full build.
+2. A reminder goes out a week before day 30. With no choice made it is paused
+   and the data is sent to the client; the move onto their accounts stays
+   available.
+3. The full build is the AI operating system: the next AI employees and the
+   dashboard they work in, on the client’s own accounts, from $25,000,
+   scoped after the audit. The $3,500 comes off a build signed within 60 days.
+4. Every AI employee works inside one dashboard; a second employee is a second
+   card in it, and the dashboard that grows is the AI operating system (Will,
+   29 Oct 2026).
+5. Support after the full build is from $1,000 a month.
+6. The first three pilot clients who agree to a named case study and a
+   testimonial get 90 days of included care instead of 30 (16 Sep 2026
+   identity decisions).
+
+What this shows about today: the middle card, "Keep it running", gives a
+retainer from $1,000 a month straight after the pilot, where keeping the pilot
+running is $200 a month, and the day 30 choice, taking it with you included,
+is only in the questions. Not found in any document: a price for the handover
+("take it with you"), so no option states one; and a price for a second AI
+employee on its own, so no option prices one.
+
+Options, drawn from `/lab/pilot-after` at 1440 and 375, heading kept as today
+in every one (a detail for after the pick). Board:
+`design-pass-site-2026-10-30-pilot-after.png`. Today: the three cards. A, day
+30’s three choices: keep it running at $200 a month, take it with you, or the
+full build from $25,000 with the $3,500 taken off within 60 days; the pause and
+the first three in a line under; text only. B, the dashboard grows
+(recommended): the three stages with their prices beside the dashboard the
+first AI employee ships in, Penny live on one card with a request waiting, and
+Nora, Fern and Ray queued in the same dashboard as "On the roadmap", the
+example practice labelled. C, the line goes on: section 3’s timeline carried
+on past day 14, day 30, the AI operating system within 60 days, then kept
+running from $1,000 a month. Verified: no overflow at either width, no page or
+console errors. Awaiting Will’s pick.
