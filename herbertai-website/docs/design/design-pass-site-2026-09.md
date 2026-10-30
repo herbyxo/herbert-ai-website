@@ -2356,8 +2356,8 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [x] | [x] | [x] | [x] | Layout settled on the design canvas 23 Oct 2026; the stops’ wording settled by the site’s tone pass, 29 Oct 2026 (Will: "A"); today’s heading stays |
-| 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Done 27 Oct 2026 (details only, on Will's word): "The jobs everyone hates doing.", plain sentences, balanced headings |
+| 3. How it works | [x] | [x] | [x] | [x] | [~] | Layout settled 23 Oct 2026; the heading and the rows under Live reopened 30 Oct 2026 (Will: "idk about the heading", "idk about any of the wording under live"), line test and three ways each drawn, awaiting his picks |
+| 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Details pass 27 Oct 2026 ("1,1,1") on Will’s word with no options step; not signed off (Will, 30 Oct 2026: "section 4 isnt done"); what is missing is his to say |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -2966,3 +2966,28 @@ all eleven organic pages: no overflow, no page or console errors; eslint
 clean. Board of the thirteen changed sections:
 `design-pass-site-2026-10-30-cold-read-built.png`.
 Will (30 Oct 2026): "Merge". main fast-forwarded to 1262853; production carried the new lines 45 seconds later, read back on /, /pilot and /work.
+
+## [~] /pilot section 3, How it works: the heading and the rows under Live (line test 30 Oct 2026)
+
+Will (30 Oct 2026): "for section 3, idk about the heading for that 'audit
+first, then fourteen days' and idk about any of the wording under live", and
+"section 4 isnt done". The 23 Oct test had found that a heading summarising
+all four stops fails because the first two repeat the hero, and that the way in
+is his own answer to "what happens after the audit?". Line test:
+`design-pass-site-2026-10-30-pilot-how-lines.png`, 30 headings scored out of 5
+(Picture, Prove, Only us, Device, Will’s shape), six out at the gates, and the
+Live rows scored as four sets. Drawn on the live section at 1440 and 375:
+`design-pass-site-2026-10-30-pilot-how-words.png`. Heading: A "Your first AI
+employee in four steps." (4.5, recommended: top score with his shape, the four
+stops named for what they make) B "From the audit to day 14." (4) C "What
+happens after you book." (3.5, the owner’s question as a statement). Today
+scores 3, shape 0 as a couplet. "How your first AI employee gets built." also
+scores 4.5 but doubles the label above it. Rows under Live: A "Doing the job on
+your actual clients" / "Nothing sent until your team says yes" / "A
+walkthrough with your team" / "The next jobs to hand over, in order" (5,
+recommended: one fact a row, and "your team says yes" is his own heading’s
+phrase) B the owner’s day, with the two pre-tone-pass rows he never objected
+to (4) C the run sheet’s own list with the log, the next jobs left to the
+questions (4.5). Today scores 3. Section 4 reopened in the roadmap: its
+details pass ran 27 Oct on his word with no options step, and he has not
+signed it off; what is missing is his to say. Awaiting Will’s picks.

@@ -233,10 +233,11 @@ moves. As built, 30 Oct 2026, numbered on the page in
    "Read the whole sample". Done 22 and 27 Oct.
 3. How it works: "Audit first. Then fourteen days." and the timeline, 45
    minutes, within two business days, 14 days from your go, day 14, with the
-   rows under each stop and the two prices level at the foot. Layout 23 Oct,
-   words 29 and 30 Oct.
+   rows under each stop and the two prices level at the foot. Layout 23 Oct;
+   the heading and the rows under Live reopened 30 Oct, options drawn.
 4. What it fixes: "The jobs everyone hates doing." and six jobs with a sentence
-   each. Done 27 Oct.
+   each. Details pass 27 Oct with no options step; not signed off (Will, 30
+   Oct: "section 4 isnt done").
 5. What comes next (was After the pilot): "One job first. Then the system."
    and the three stages after the first AI employee (Day 14, Day 30, within
    60 days) with their prices, beside the dashboard that employee ships in,
