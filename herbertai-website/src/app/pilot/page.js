@@ -2,7 +2,6 @@ import AuditForm from '../components/site/AuditForm'
 import AfterPilot from '../components/site/AfterPilot'
 import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '../components/site/sample-audit'
 import { OG_IMAGE } from '@/app/components/site/og'
-import { RUNGS } from '@/app/components/site/shared'
 import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
 
 export const metadata = {
@@ -91,15 +90,14 @@ const TERMS = [
 
 // How it works as a timeline: one line from the audit to day 14, the build
 // marked in fourteen ticks (Will, 22 Oct 2026, layout "1"). Each stop is its
-// time and its title; the prices are the homepage's own (RUNGS) and on laptops
-// sit on one level at the foot of their stops (Will, 22 Oct 2026, price "1").
-// The rows under the stops went on 30 Oct 2026 (Will: "i think we remove the
-// lines under the timeline headings altogether"), with the heading "Your first
-// AI employee in four steps." from that day's line test.
+// time and its title and nothing else: the rows under the stops went on 30 Oct
+// 2026 (Will: "i think we remove the lines under the timeline headings
+// altogether") and the two prices with them ("i think we remove the free and
+// the 3500 fixed as well"); the prices stay in section 5 and the questions.
 const STEPS = [
-  { when: '45 minutes', title: 'The free AI audit', price: RUNGS[0].price },
-  { when: 'Within two business days', title: 'Your written report' },
-  { when: '14 days from your go', title: 'Your first AI employee, built', build: true, price: RUNGS[1].price },
+  { when: '45 minutes', title: 'The free AI audit' },
+  { when: 'Two business days', title: 'Your written report' },
+  { when: '14 days from your go', title: 'Your first AI employee, built', build: true },
   { when: 'Day 14', title: 'Live' },
 ]
 
@@ -161,7 +159,6 @@ function Timeline() {
             <span aria-hidden className="absolute left-0 top-[3px] w-3 h-3 rounded-full bg-[#111]" />
             <p className="text-[16px] font-medium text-[#777] leading-[1.2] mb-2">{st.when}</p>
             <h3 className="text-[22px] font-semibold tracking-[-0.02em] mb-2.5">{st.title}</h3>
-            {st.price && <p className="mt-4 text-[15px] font-medium text-[#111]">{st.price}</p>}
           </li>
         ))}
       </ol>
@@ -182,8 +179,7 @@ function Timeline() {
             </div>
             <div className="min-w-0 flex flex-col pt-4 pr-7">
               <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-2.5">{st.title}</h3>
-                {st.price && <p className="mt-auto pt-6 text-[15px] font-medium text-[#111]">{st.price}</p>}
-            </div>
+              </div>
           </li>
         ))}
       </ol>

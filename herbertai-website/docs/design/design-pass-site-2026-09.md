@@ -2356,7 +2356,7 @@ memory records the third slip. From here /pilot runs section by section:
 |---|---|---|---|---|---|---|
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
-| 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: heading "Your first AI employee in four steps." and no rows under the stops (Will: "remove the lines under the timeline headings altogether"); times, titles and the two prices remain |
+| 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
 | 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Details pass 27 Oct 2026 ("1,1,1") on Will’s word with no options step; not signed off (Will, 30 Oct 2026: "section 4 isnt done"); what is missing is his to say |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -3003,3 +3003,11 @@ and in section 5. One consequence for the charter’s rule 8: with the row
 the questions. Verified at 1440, 1280, 1024, 375 and 320, motion on and off: no
 overflow, no page or console errors; eslint clean. As-built sheet:
 `design-pass-site-2026-10-30-pilot-how-built.png`. Section 3 is done.
+Will (30 Oct 2026): "i think we remove the free and the 3500 fixed as well". The two prices go from the stops too; each stop is its time and its title.
+Will (30 Oct 2026): "and have two business days instead of within". The second stop reads "Two business days".
+Built: the two prices gone from the stops (the 22 Oct detail about prices on
+one level is moot), the second stop’s time "Two business days", the page’s
+ladder import dropped as unused. The timeline is four times and four titles.
+Verified at 1440, 1280, 1024, 375 and 320, motion on and off: no overflow, no
+page or console errors; eslint clean. Sheet refreshed:
+`design-pass-site-2026-10-30-pilot-how-built.png`.
