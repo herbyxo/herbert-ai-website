@@ -14,6 +14,7 @@ import IndustryRecognitionOptions from '../../components/lab/IndustryRecognition
 import OperatingSystemOptions from '../../components/lab/OperatingSystemOptions'
 import ProductsOptions from '../../components/lab/ProductsOptions'
 import PilotAfterOptions from '../../components/lab/PilotAfterOptions'
+import PilotAfterDetails from '../../components/lab/PilotAfterDetails'
 
 const MAP = {
   'concept-now-hiring': NowHiring,
@@ -29,6 +30,7 @@ const MAP = {
   'operating-systems': OperatingSystemOptions,
   products: ProductsOptions,
   'pilot-after': PilotAfterOptions,
+  'pilot-after-details': PilotAfterDetails,
 }
 
 export function generateStaticParams() {

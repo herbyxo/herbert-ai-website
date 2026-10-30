@@ -2358,7 +2358,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Layout settled on the design canvas 23 Oct 2026; the stops’ wording settled by the site’s tone pass, 29 Oct 2026 (Will: "A"); today’s heading stays |
 | 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Done 27 Oct 2026 (details only, on Will's word): "The jobs everyone hates doing.", plain sentences, balanced headings |
-| 5. After the pilot | [x] | [~] | [ ] | [x] | [ ] | Facts set and today plus three options drawn, 30 Oct 2026; awaiting Will’s pick |
+| 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 
@@ -2886,3 +2886,42 @@ example practice labelled. C, the line goes on: section 3’s timeline carried
 on past day 14, day 30, the AI operating system within 60 days, then kept
 running from $1,000 a month. Verified: no overflow at either width, no page or
 console errors. Awaiting Will’s pick.
+Will (30 Oct 2026): "B, dashboard".
+
+## [~] /pilot section 5, After the pilot: B built, details 1 to 5 (30 Oct 2026)
+
+Built from Will’s pick: `components/site/AfterPilot.js`, a client component
+(the avatar glyphs live in client modules, and /pilot is a server page), in
+place of the three cards and the AFTER list. The stages (Day 14, Day 30,
+within 60 days) sit beside the dashboard, Penny live with Mrs Nguyen’s request
+and Nora, Fern and Ray queued as "On the roadmap", the example practice
+labelled in the bar; the line under carries support from $1,000 a month and
+the first three. Phone fixes made while verifying, at 320: the bar drops "Day
+14" below 640px so "An example accounting practice" shows whole, each queued
+card puts "On the roadmap" under its name, the buttons tighten. Verified at
+1440, 1280, 1024, 375 and 320, motion on and off: no overflow, no page or
+console errors; eslint clean. As-built sheet:
+`design-pass-site-2026-10-30-pilot-after-built.png`.
+
+Details, drawn from `/lab/pilot-after-details` with the section’s own
+component, option 1 of each as built. Board:
+`design-pass-site-2026-10-30-pilot-after-details.png`.
+
+1. The stages: 1 as built, three (recommended: day 30’s $200 is the fact the
+   section was missing, and it stays a stage) 2 four, support after the build
+   as a stage, the first three alone under 3 two, day 30’s choice in the line
+   under.
+2. The dashboard: 1 as built 2 each queued card says its job in a line from
+   the homepage roster (recommended: "On the roadmap" reads as names until it
+   says what they would do) 3 Penny and Nora both live, Fern and Ray queued.
+3. The line under: 1 as built, support and the first three 2 support in the
+   third stage’s price, the first three alone under (recommended: each price
+   sits with its stage, as the timeline does) 3 no line, the first three left
+   to /pricing.
+4. The phone order: 1 as built, stages then dashboard 2 the dashboard first 3
+   the dashboard after Day 14 (recommended: the picture lands where the line
+   names it).
+5. The heading, "One job first. Then the system.": kept, since it says what
+   the drawing shows; a line test only if Will asks.
+
+Awaiting Will’s picks.

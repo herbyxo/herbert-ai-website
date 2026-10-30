@@ -1,4 +1,5 @@
 import AuditForm from '../components/site/AuditForm'
+import AfterPilot from '../components/site/AfterPilot'
 import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '../components/site/sample-audit'
 import { OG_IMAGE } from '@/app/components/site/og'
 import { RUNGS } from '@/app/components/site/shared'
@@ -112,12 +113,6 @@ const FIXES = [
   ['Booking admin', 'Confirmations, reschedules and reminders are handled without anyone touching the calendar.'],
   ['Handovers', 'Job details that live in one person’s head or inbox go on one screen the whole team can see.'],
   ['The Monday report', 'The numbers someone compiles by hand every week are compiled for you.'],
-]
-
-const AFTER = [
-  ['Your AI operating system', 'Each AI employee after the first is added to the same dashboard, and the dashboard grown to run the whole office is the AI operating system. It puts your files, comms, follow-ups and reporting on one system your team works out of every day, and your business owns it. Scoped after the audit, from $25,000, with the pilot’s $3,500 taken off.'],
-  ['Keep it running', 'A retainer from $1,000 a month covers hosting, fixes, a set number of small changes, and a monthly report on what the system handled and one improvement shipped. Month to month, and nothing switches off without being handed over to you first.'],
-  ['The first three', 'The first three pilot clients who agree to a case study and a testimonial get 90 days of included care instead of 30, at the same price.'],
 ]
 
 function Label({ children, dark = false }) {
@@ -358,14 +353,8 @@ export default function Pilot() {
       <Section>
         <Label>After the pilot</Label>
         <H2>One job first. Then the system.</H2>
-        <div className="mt-12 grid md:grid-cols-3 gap-x-12 gap-y-8">
-          {AFTER.map(([t, b]) => (
-            <div key={t} className="border-t border-[#111]/15 pt-4">
-              <h3 className="text-[20px] font-semibold tracking-[-0.015em]">{t}</h3>
-              <p className="mt-1.5 text-[16px] leading-[1.5] text-[#555]">{b}</p>
-            </div>
-          ))}
-        </div>
+        {/* The stages beside the dashboard they grow (Will, 30 Oct 2026, "B, dashboard"). */}
+        <AfterPilot />
       </Section>
 
       {/* 6. The questions. */}
