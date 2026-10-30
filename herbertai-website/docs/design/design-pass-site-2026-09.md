@@ -3011,3 +3011,4 @@ ladder import dropped as unused. The timeline is four times and four titles.
 Verified at 1440, 1280, 1024, 375 and 320, motion on and off: no overflow, no
 page or console errors; eslint clean. Sheet refreshed:
 `design-pass-site-2026-10-30-pilot-how-built.png`.
+Will (30 Oct 2026): "Merge". main fast-forwarded to a279400; production carried the new section 60 seconds later, read back from /pilot.
