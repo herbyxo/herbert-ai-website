@@ -314,7 +314,7 @@ export default function Pilot() {
 
       {/* 3. How it works. */}
       <Section>
-        <Label>How it works</Label>
+        <Label>The timeline</Label>
         <H2>Your first AI employee in four steps.</H2>
         <Timeline />
       </Section>

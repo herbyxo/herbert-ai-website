@@ -3025,3 +3025,4 @@ the live section with the six labels listed under it:
 to finish" (the span, in the owner’s words) 3 "When it happens" (what the
 four stops add, the dates). Also shown this turn: section 4 as it is live, for
 Will to say what is not done about it. Awaiting his picks.
+Will (31 Oct 2026): "1". Built: the label reads "The timeline"; the page’s nav name and breadcrumb stay "How it works", since they name the page, not the section.

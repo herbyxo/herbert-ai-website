@@ -231,7 +231,8 @@ moves. As built, 30 Oct 2026, numbered on the page in
 2. What you get back: "What your admin costs, written down." and the written
    report at size, an example practice’s three jobs with hours and cost,
    "Read the whole sample". Done 22 and 27 Oct.
-3. How it works: "Your first AI employee in four steps." and the timeline, 45
+3. The timeline (was How it works until 31 Oct): "Your first AI employee in
+   four steps." and the timeline, 45
    minutes, two business days, 14 days from your go, day 14, each stop its
    time and its title and nothing else (Will, 30 Oct: no rows, no prices).
    Layout 23 Oct, words 30 Oct.
