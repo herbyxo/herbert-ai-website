@@ -3012,3 +3012,16 @@ Verified at 1440, 1280, 1024, 375 and 320, motion on and off: no overflow, no
 page or console errors; eslint clean. Sheet refreshed:
 `design-pass-site-2026-10-30-pilot-how-built.png`.
 Will (30 Oct 2026): "Merge". main fast-forwarded to a279400; production carried the new section 60 seconds later, read back from /pilot.
+
+## [~] /pilot section 3: the label above the heading (options 31 Oct 2026)
+
+Will (31 Oct 2026): "i think we change the name of section 3 from How it works
+to something that is more fitting as well?" With the heading now "Your first AI
+employee in four steps.", the label "How it works" doubles its how and adds
+nothing. The labels are judged as a set (22 Oct), so each option is drawn on
+the live section with the six labels listed under it:
+`design-pass-site-2026-10-31-pilot-how-label.png`. 1 "The timeline"
+(recommended: names the thing on the page, the way "Questions" does) 2 "Start
+to finish" (the span, in the owner’s words) 3 "When it happens" (what the
+four stops add, the dates). Also shown this turn: section 4 as it is live, for
+Will to say what is not done about it. Awaiting his picks.
