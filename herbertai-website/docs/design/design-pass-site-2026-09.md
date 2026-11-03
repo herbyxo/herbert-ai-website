@@ -2357,7 +2357,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
-| 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026: each job under the example AI employee that takes it (Will: "C"), details "1, 3, 2": name and job kept, no note, phones two across without the sentences |
+| 4. What it fixes | [x] | [x] | [x] | [x] | [~] | Reopened 4 Nov 2026 (Will: "why have u determined section 4 as done"): two employee pairings are wrong and two loose, and the heading and six sentences, settled 27 Oct before the employees were added, were never read again beside them |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -3087,3 +3087,26 @@ page or console errors, no employee line past its card, no single-word last
 line; the six sentences show from 640px up and not below; eslint clean. Sheet
 refreshed: `design-pass-site-2026-11-03-pilot-fixes-built.png`. Section 4 is
 done.
+
+## [~] /pilot section 4 reopened: the employees do not all match their jobs (4 Nov 2026)
+
+Will (4 Nov 2026): "why have u determined section 4 as done - theres still the
+actual text, and do all the employees actually match to the text underneath
+them? ie intake and retyping idk if that really matches, same as the
+maintenance one". He is right. The employees were taken from the roster for
+their glyphs, not their jobs, and no pairing was checked against what that
+employee does elsewhere on the site. Checked against the site’s own data:
+Nora · Intake reads clients’ replies against last year (finance screen), not
+re-typing between systems (wrong); Emma · Maintenance books plumbers for
+tenants (property screen), not handovers (wrong); Rita · Rebookings brings
+back functions when their date comes round, one slice of booking admin
+(loose); Vic · Margins tells the owner which jobs are priced wrong, not the
+Monday report (loose); Penny · Requests chasing documents and Max · Sales
+Coordinator replying to quote questions fit. Existing employees that fit
+better: Hazel · Waitlist books cancelled slots from a wait list (health
+screen), Kit places jobs with the tech (trades screen). And the heading and
+sentences were closed on the 27 Oct pick, made before the employees existed:
+the section was called done without reading its words beside what the build
+added. The tidy pass checks drawing faults, not meaning, so it could not catch
+this. Rule written into design-taste loop/roadmap.md. Section 4’s words and
+employees to be redone together as one unit.
