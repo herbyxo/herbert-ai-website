@@ -2357,7 +2357,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
-| 4. What it fixes | [x] | [x] | [x] | [x] | [~] | C built 3 Nov 2026 (Will: "C"), each job under the example AI employee that takes it; tidied; details 1 to 3 drawn, awaiting Will’s picks |
+| 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026: each job under the example AI employee that takes it (Will: "C"), details "1, 3, 2": name and job kept, no note, phones two across without the sentences |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -3080,3 +3080,10 @@ the six sentences were settled on 27 Oct.
    sentence, one screen (recommended) 3 one column, no sentence.
 
 Awaiting Will’s picks.
+Will (4 Nov 2026): "1, 3, 2". The employee line as built (avatar, name and job), no note under the grid, phones two across without the sentences.
+Built: the page passes no note and the two-across phone layout to FixesGrid.
+Verified at 1440, 1280, 1024, 375 and 320, motion on and off: no overflow, no
+page or console errors, no employee line past its card, no single-word last
+line; the six sentences show from 640px up and not below; eslint clean. Sheet
+refreshed: `design-pass-site-2026-11-03-pilot-fixes-built.png`. Section 4 is
+done.

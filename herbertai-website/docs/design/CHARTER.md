@@ -237,9 +237,9 @@ moves. As built, 30 Oct 2026, numbered on the page in
    time and its title and nothing else (Will, 30 Oct: no rows, no prices).
    Layout 23 Oct, words 30 Oct.
 4. What it fixes: "The jobs everyone hates doing." and six jobs with a sentence
-   each, each under the example AI employee that takes it, a note under the
-   grid saying they are examples. Options drawn 3 Nov, built (Will: "C");
-   three details open.
+   each, each under the example AI employee that takes it (name and job), no
+   note under the grid; phones show two across, names and jobs only. Done 4
+   Nov (Will: "C", then "1, 3, 2").
 5. What comes next (was After the pilot): "One job first. Then the system."
    and the three stages after the first AI employee (Day 14, Day 30, within
    60 days) with their prices, beside the dashboard that employee ships in,

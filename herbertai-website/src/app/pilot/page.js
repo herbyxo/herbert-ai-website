@@ -312,8 +312,10 @@ export default function Pilot() {
       <Section>
         <Label>What it fixes</Label>
         <H2>The jobs everyone hates doing.</H2>
-        {/* Each job under the AI employee that takes it (Will, 3 Nov 2026, "C"). */}
-        <FixesGrid />
+        {/* Each job under the AI employee that takes it (Will, 3 Nov 2026, "C");
+            details 4 Nov 2026 ("1, 3, 2"): the name and job kept, no note under
+            the grid, phones two across without the sentences. */}
+        <FixesGrid note={null} phone="two" />
       </Section>
 
       {/* 5. What comes next. */}
