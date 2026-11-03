@@ -2357,7 +2357,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
-| 4. What it fixes | [x] | [~] | [ ] | [x] | [x] | Not signed off 30 Oct 2026; its missing options step drawn 3 Nov 2026 (today, remove it, by industry, with the AI employee), awaiting Will’s pick |
+| 4. What it fixes | [x] | [x] | [x] | [x] | [~] | C built 3 Nov 2026 (Will: "C"), each job under the example AI employee that takes it; tidied; details 1 to 3 drawn, awaiting Will’s picks |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -3046,3 +3046,37 @@ pages’ "See a property manager’s dashboard" link to the demo subdomain lands
 on its dashboard with a 200, so the broken sign-in routes found by the 3 Nov
 pen test touch nothing the site links to. No overflow, no page errors.
 Awaiting Will’s pick.
+Will (3 Nov 2026): "C". Each job under the example AI employee that takes it.
+
+## [~] /pilot section 4, What it fixes: C built, tidied, details 1 to 3 (3 Nov 2026)
+
+Built from Will’s pick: `components/site/FixesGrid.js`, a client component (the
+avatar glyphs live in client modules and /pilot is a server page), in place of
+the FIXES grid. Each of today’s six jobs sits under an example roster
+employee (Penny · Requests, Nora · Intake, Max · Sales Coordinator, Rita ·
+Rebookings, Emma · Maintenance, Vic · Margins), with "Example AI employees, one
+for each job. Yours are named at kickoff." under the grid at the page’s note
+size. Verified at 1440, 1280, 1024, 375 and 320, motion on and off: no
+overflow, no page or console errors; eslint clean. As-built sheet:
+`design-pass-site-2026-11-03-pilot-fixes-built.png`. Tidy pass (loop/tidy.md),
+on the build: single-word last lines ("them.", "times." at 1440, "calendar.",
+"see." at 375) fixed with text-wrap pretty, measured afterwards at five widths
+with none left; everything else passed (one alignment, the page’s type scale,
+the same name and job idiom as section 5). On the options: phone option 2 ran
+"Max · Sales Coordinator" past its column, fixed by showing the name alone on
+phones in that layout; measured clean at 375 and 320.
+
+Details, drawn from `/lab/pilot-fixes-details`, option 1 of each as built.
+Board: `design-pass-site-2026-11-03-pilot-fixes-details.png`. The heading and
+the six sentences were settled on 27 Oct.
+
+1. The employee line: 1 as built, avatar, name and job (recommended: the
+   idiom of section 5’s dashboard and the homepage roster) 2 avatar and name
+   3 the avatar beside the job title, no line.
+2. The note: 1 as built 2 shorter, "Example AI employees. Yours are named at
+   kickoff." (recommended: "one for each job" repeats the grid) 3 none, which
+   breaks the charter’s rule that examples say so.
+3. Phones: 1 as built, six cards stacked, about two screens 2 two across, no
+   sentence, one screen (recommended) 3 one column, no sentence.
+
+Awaiting Will’s picks.

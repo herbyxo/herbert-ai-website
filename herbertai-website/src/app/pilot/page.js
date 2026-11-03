@@ -1,5 +1,6 @@
 import AuditForm from '../components/site/AuditForm'
 import AfterPilot from '../components/site/AfterPilot'
+import FixesGrid from '../components/site/FixesGrid'
 import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '../components/site/sample-audit'
 import { OG_IMAGE } from '@/app/components/site/og'
 import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
@@ -99,18 +100,6 @@ const STEPS = [
   { when: 'Two business days', title: 'Your written report' },
   { when: '14 days from your go', title: 'Your first AI employee, built', build: true },
   { when: 'Day 14', title: 'Live' },
-]
-
-// What it fixes: plain sentences, no slogan beats (Will, 24 Oct 2026,
-// descriptions "1"); the heading names the six ("The jobs"), and every
-// heading on the page balances its lines (wraps "1").
-const FIXES = [
-  ['Chasing', 'Follow-ups for documents, invoices and approvals go out on time without anyone writing them.'],
-  ['Re-typing', 'Details entered once reach every system that needs them, instead of being keyed in three times.'],
-  ['The same emails', 'Quotes, confirmations and updates are drafted for you to check and send.'],
-  ['Booking admin', 'Confirmations, reschedules and reminders are handled without anyone touching the calendar.'],
-  ['Handovers', 'Job details that live in one person’s head or inbox go on one screen the whole team can see.'],
-  ['The Monday report', 'The numbers someone compiles by hand every week are compiled for you.'],
 ]
 
 function Label({ children, dark = false }) {
@@ -323,14 +312,8 @@ export default function Pilot() {
       <Section>
         <Label>What it fixes</Label>
         <H2>The jobs everyone hates doing.</H2>
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
-          {FIXES.map(([t, b]) => (
-            <div key={t} className="border-t border-[#111]/15 pt-4">
-              <h3 className="text-[20px] font-semibold tracking-[-0.015em]">{t}</h3>
-              <p className="mt-1.5 text-[16px] leading-[1.5] text-[#555]">{b}</p>
-            </div>
-          ))}
-        </div>
+        {/* Each job under the AI employee that takes it (Will, 3 Nov 2026, "C"). */}
+        <FixesGrid />
       </Section>
 
       {/* 5. What comes next. */}
