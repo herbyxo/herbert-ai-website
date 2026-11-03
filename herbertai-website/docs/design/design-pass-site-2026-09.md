@@ -2357,7 +2357,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
-| 4. What it fixes | [x] | [ ] | [ ] | [x] | [x] | Details pass 27 Oct 2026 ("1,1,1") on Will’s word with no options step; not signed off (Will, 30 Oct 2026: "section 4 isnt done"); what is missing is his to say |
+| 4. What it fixes | [x] | [~] | [ ] | [x] | [x] | Not signed off 30 Oct 2026; its missing options step drawn 3 Nov 2026 (today, remove it, by industry, with the AI employee), awaiting Will’s pick |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -3026,3 +3026,23 @@ to finish" (the span, in the owner’s words) 3 "When it happens" (what the
 four stops add, the dates). Also shown this turn: section 4 as it is live, for
 Will to say what is not done about it. Awaiting his picks.
 Will (31 Oct 2026): "1". Built: the label reads "The timeline"; the page’s nav name and breadcrumb stay "How it works", since they name the page, not the section.
+
+## [~] /pilot section 4, What it fixes: the options it never had (3 Nov 2026)
+
+Will (3 Nov 2026): "ok lets resume the redesign", after "section 4 isnt done"
+(30 Oct). Its 27 Oct details pass ran on his word with no options step, so
+these are the section’s options, drawn from `/lab/pilot-fixes` and, for the
+removal, on the real page. Board: `design-pass-site-2026-11-03-pilot-fixes.png`.
+Today: six office jobs, a name and a sentence each, generic. A remove the
+section: the timeline runs straight into What comes next; the written report
+(section 2) already shows jobs with hours and costs and the form asks for the
+reader’s own job. B by industry (recommended): the job each kind of office
+loses most to, in the industry pages’ own words (shared.js INDUSTRIES), each
+linking to its page, so a reader finds their office in one line, the thing
+the cold read found missing; four rows, hospitality has no page yet. C with
+the AI employee that takes it: today’s six, each under an example roster
+employee (Penny, Nora, Max, Rita, Emma, Vic). Also checked: the real-estate
+pages’ "See a property manager’s dashboard" link to the demo subdomain lands
+on its dashboard with a 200, so the broken sign-in routes found by the 3 Nov
+pen test touch nothing the site links to. No overflow, no page errors.
+Awaiting Will’s pick.

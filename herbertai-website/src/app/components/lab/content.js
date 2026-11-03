@@ -19,6 +19,7 @@ export const REFS = [
   { slug: 'products', name: 'Products: Herbert Reach three ways', url: '1, 2 and 3, scroll down' },
   { slug: 'pilot-after', name: '/pilot, After the pilot: today and three ways', url: 'Today, A, B and C, scroll down' },
   { slug: 'pilot-after-details', name: '/pilot, After the pilot: the details', url: 'Details 1 to 4, three ways each' },
+  { slug: 'pilot-fixes', name: '/pilot, What it fixes: today and three ways', url: 'Today, B and C; A is drawn on the page' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'
