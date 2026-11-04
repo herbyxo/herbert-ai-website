@@ -3110,3 +3110,31 @@ the section was called done without reading its words beside what the build
 added. The tidy pass checks drawing faults, not meaning, so it could not catch
 this. Rule written into design-taste loop/roadmap.md. Section 4’s words and
 employees to be redone together as one unit.
+
+## [~] /pilot section 4 redone as one unit: fit check, line test, three ways (4 Nov 2026)
+
+Will (4 Nov 2026): "Yes, redo it". The employees, titles and sentences written
+together, under the rule written that morning: every employee shown does, on
+the site’s own screens, exactly the job on its card. Board:
+`design-pass-site-2026-11-04-pilot-fixes-redo.png`, three parts. The fit check
+lists each employee against its own lines (Penny’s document reminders, Max’s
+reply to Priya, Hazel filling the 2:15pm slot from the wait list, Emma booking
+the plumber inside the landlord’s limit, Clara’s priced proposal and site
+visit, Rose’s late-rent reminder; Kit places jobs with the tech but has no
+title anywhere). The line test scores four titles a card out of 5 (Picture,
+True to that employee’s work, Plain, the set’s grammar, Will’s shape): the
+top line each time is used, and three drafts lose for repeating the employee
+line above them ("Maintenance requests", "Function enquiries", "Arrears").
+Options, drawn from `/lab/pilot-fixes-redo` with the section’s own component
+and Will’s 4 Nov details: A six jobs, six offices (recommended): Missing
+documents (Penny), Quote questions (Max), Cancellations (Hazel), Repairs
+(Emma), Event enquiries (Clara), Late rent (Rose), each sentence written from
+that employee’s work, every pairing true. B today’s six jobs matched: Penny
+and Max kept, Kit as Dispatch, three new example employees (Ivy · Data Entry,
+Bea · Bookings, Ned · Reports). C what they did today: A’s six with a line of
+work each in its screen’s words. Tidy, on every option: no employee line past
+its card, no single-word line in a sentence; titles measured too, and two
+phone titles that broke a word per line at 375 fixed by 16px titles in the
+two-across layout (holds at 390, 375 and 360; below 360 a two-word title
+takes two lines, as the columns are 126px). The 16px applies to the page
+today as well. Heading kept, Will’s own line. Awaiting Will’s pick.

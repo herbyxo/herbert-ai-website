@@ -11,7 +11,7 @@ import { GLYPH } from '../runs/os/shared'
 
 const glyphOf = (name) => EMPLOYEES.find((e) => e.name === name).glyph
 
-const JOBS = [
+export const JOBS = [
   [GLYPH.penny, 'Penny', 'Requests', 'Chasing', 'Follow-ups for documents, invoices and approvals go out on time without anyone writing them.'],
   [GLYPH.nora, 'Nora', 'Intake', 'Re-typing', 'Details entered once reach every system that needs them, instead of being keyed in three times.'],
   [GLYPH.max, 'Max', 'Sales Coordinator', 'The same emails', 'Quotes, confirmations and updates are drafted for you to check and send.'],
@@ -27,13 +27,13 @@ export const NOTE = 'Example AI employees, one for each job. Yours are named at 
 // above the title), 'name' (avatar and name), 'inline' (the avatar beside the
 // title, no line). phone: 'stack' (six cards one under another), 'two' (two
 // across, no sentence), 'short' (one column, no sentence).
-export default function FixesGrid({ line = 'full', note = NOTE, phone = 'stack' }) {
+export default function FixesGrid({ jobs = JOBS, line = 'full', note = NOTE, phone = 'stack' }) {
   const grid = phone === 'two' ? 'grid-cols-2 gap-x-5 sm:gap-x-12' : 'gap-x-12'
   const body = phone === 'stack' ? '' : 'hidden sm:block'
   return (
     <>
       <div className={`mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 ${grid}`}>
-        {JOBS.map(([g, name, job, title, text]) => (
+        {jobs.map(([g, name, job, title, text]) => (
           <div key={title} className="min-w-0 border-t border-[#111]/15 pt-4">
             {line !== 'inline' && (
               <div className="flex items-center gap-3">
@@ -41,7 +41,7 @@ export default function FixesGrid({ line = 'full', note = NOTE, phone = 'stack' 
                 <p className="text-[14px] text-[#555] whitespace-nowrap"><b className="text-[#111]">{name}</b>{line === 'full' && <span className={phone === 'two' ? 'hidden sm:inline' : ''}> · {job}</span>}</p>
               </div>
             )}
-            <h3 className={`${line === 'inline' ? 'flex items-center gap-3' : 'mt-3'} ${phone === 'two' ? 'text-[17px] sm:text-[20px]' : 'text-[20px]'} font-semibold tracking-[-0.015em]`}>
+            <h3 className={`${line === 'inline' ? 'flex items-center gap-3' : 'mt-3'} ${phone === 'two' ? 'text-[16px] sm:text-[20px]' : 'text-[20px]'} font-semibold tracking-[-0.015em]`}>
               {line === 'inline' && <Avatar glyph={g} size={28} mode="still" />}
               {title}
             </h3>
