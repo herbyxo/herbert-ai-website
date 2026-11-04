@@ -2357,7 +2357,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 1. Hero with the form | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: heading, label, intro, terms, the form side, spacing (fills the first screen, card level with the heading), the phone layout (a jump button under the intro) |
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
-| 4. What it fixes | [x] | [x] | [x] | [x] | [~] | Reopened 4 Nov 2026 (Will: "why have u determined section 4 as done"): two employee pairings are wrong and two loose, and the heading and six sentences, settled 27 Oct before the employees were added, were never read again beside them |
+| 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
 | 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
@@ -3138,3 +3138,26 @@ phone titles that broke a word per line at 375 fixed by 16px titles in the
 two-across layout (holds at 390, 375 and 360; below 360 a two-word title
 takes two lines, as the columns are 126px). The 16px applies to the page
 today as well. Heading kept, Will’s own line. Awaiting Will’s pick.
+Will (4 Nov 2026): "B". Today’s six jobs and sentences, each under an employee that does that job.
+Built: FixesGrid’s six are Penny · Requests (Chasing), Ivy · Data Entry
+(Re-typing), Max · Sales Coordinator (The same emails), Bea · Bookings (Booking
+admin), Kit · Dispatch (Handovers), Ned · Reports (The Monday report); Will’s
+4 Nov details kept (name and job, no note, phones two across).
+
+Fit check (the 4 Nov rule), each card read against its employee: Penny sends
+document and fee reminders on the finance screen, and the card says follow-ups
+for documents, invoices and approvals go out on time; Max replies to quote
+questions and books the measure and quote on the trades screen, and the card
+says quotes, confirmations and updates are drafted to check and send; Kit
+places jobs with the tech on the trades screen, and the card says job details
+go on one screen the team can see; Ivy, Bea and Ned are new, appear nowhere
+else on the site, and their titles are the card’s job by name. The heading,
+"The jobs everyone hates doing.", and the label read again beside the six:
+both still fit. Tidy: Bea’s first calendar glyph lit 38 of 49 dots against 16
+to 23 for the other five and read as a dark block; redrawn as rings, a frame
+and one marked day (23). Verified at 1440, 1280, 1024, 375, 360 and 320, motion
+on and off: no overflow, no page or console errors, no employee line past its
+card, no stranded word in a sentence, every title on one line from 360 up
+("The Monday report" takes two lines at 320, where the columns are 126px);
+eslint clean. Sheet refreshed: `design-pass-site-2026-11-03-pilot-fixes-built.png`.
+Section 4 is done.

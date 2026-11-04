@@ -1,5 +1,5 @@
 'use client'
-import { Avatar, EMPLOYEES } from '../runs/employees'
+import { Avatar } from '../runs/employees'
 import { GLYPH } from '../runs/os/shared'
 
 // /pilot section 4, What it fixes (Will, 3 Nov 2026: "C"): the six office jobs
@@ -9,15 +9,26 @@ import { GLYPH } from '../runs/os/shared'
 // their own AI employee at kickoff. The six sentences are the 27 Oct details
 // pass's plain sentences. Static: /pilot does not move.
 
-const glyphOf = (name) => EMPLOYEES.find((e) => e.name === name).glyph
+// Will (4 Nov 2026: "B"): today's six jobs and sentences, each under an
+// employee that does that job (the pairings checked against the site's own
+// screens, design-taste loop/roadmap.md, 4 Nov). Penny sends document
+// reminders (finance screen), Max replies to quote questions (trades screen),
+// Kit places jobs with the tech (trades screen, given the title Dispatch here
+// as he has none elsewhere). Ivy, Bea and Ned are new example employees for
+// the three jobs nobody on the site does; their glyphs are drawn from the job
+// (a keyboard, a calendar, a bar chart).
+const G = (rows) => rows.map((r) => [...r].map((c) => c === 'X'))
+const IVY = G(['XXXXXXX', '.......', 'X.X.X.X', '.......', 'X.X.X.X', '.......', '.XXXXX.'])
+const BEA = G(['.X...X.', 'XXXXXXX', 'X.....X', 'X..X..X', 'X.....X', 'XXXXXXX', '.......'])
+const NED = G(['......X', '....X.X', '....X.X', '..X.X.X', '..X.X.X', 'X.X.X.X', 'XXXXXXX'])
 
 export const JOBS = [
   [GLYPH.penny, 'Penny', 'Requests', 'Chasing', 'Follow-ups for documents, invoices and approvals go out on time without anyone writing them.'],
-  [GLYPH.nora, 'Nora', 'Intake', 'Re-typing', 'Details entered once reach every system that needs them, instead of being keyed in three times.'],
+  [IVY, 'Ivy', 'Data Entry', 'Re-typing', 'Details entered once reach every system that needs them, instead of being keyed in three times.'],
   [GLYPH.max, 'Max', 'Sales Coordinator', 'The same emails', 'Quotes, confirmations and updates are drafted for you to check and send.'],
-  [glyphOf('Rita'), 'Rita', 'Rebookings', 'Booking admin', 'Confirmations, reschedules and reminders are handled without anyone touching the calendar.'],
-  [GLYPH.emma, 'Emma', 'Maintenance', 'Handovers', 'Job details that live in one person’s head or inbox go on one screen the whole team can see.'],
-  [glyphOf('Vic'), 'Vic', 'Margins', 'The Monday report', 'The numbers someone compiles by hand every week are compiled for you.'],
+  [BEA, 'Bea', 'Bookings', 'Booking admin', 'Confirmations, reschedules and reminders are handled without anyone touching the calendar.'],
+  [GLYPH.kit, 'Kit', 'Dispatch', 'Handovers', 'Job details that live in one person’s head or inbox go on one screen the whole team can see.'],
+  [NED, 'Ned', 'Reports', 'The Monday report', 'The numbers someone compiles by hand every week are compiled for you.'],
 ]
 
 export const NOTE = 'Example AI employees, one for each job. Yours are named at kickoff.'
