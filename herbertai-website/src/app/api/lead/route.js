@@ -56,6 +56,15 @@ export async function POST(request) {
     city: 'Adelaide',
     channel: str(body.gclid) ? 'google' : str(body.utm_source) || 'website',
     ...attribution,
+    // What they typed beyond their contact details, kept in the engine's raw
+    // payload as answers so the Leads page shows it (6 Nov 2026, Will: "id like
+    // the leads page to give info as to the business name and job type they put
+    // in"). Jimmy Marwaha's business and his "generating and chasing leads" never
+    // reached the board on 7 Nov because this payload left them out.
+    ...((str(body.business) || str(body.message)) ? { answers: {
+      ...(str(body.business) ? { company_name: str(body.business) } : {}),
+      ...(str(body.message) ? { message: str(body.message) } : {}),
+    } } : {}),
   }
 
   try {
