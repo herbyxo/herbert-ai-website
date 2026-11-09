@@ -2,7 +2,7 @@ import SourceFields from '../SourceFields'
 
 // The free AI audit booking form, shared by /pilot#book and the homepage's
 // Book the Audit section so the two never drift (Will, 20 Oct 2026, picked the
-// form on the homepage: "3"). Same endpoint, hidden fields, auto-reply,
+// form on the homepage: "3"). Same endpoint, hidden fields,
 // attribution (SourceFields) and honeypot everywhere; `source` names the page
 // in the email subject so a booking says where it came from.
 //
@@ -11,7 +11,9 @@ import SourceFields from '../SourceFields'
 // hates doing" box (/pilot asks it; the homepage keeps to four fields). The
 // button uses the hero's words and carries no small print (Will, 20 Oct 2026).
 
-const AUTO_REPLY = `Hi, Will here from Herbert AI.\n\nThanks for the details. I'll give you a call today to set a time for your audit. Forty five minutes, no preparation needed, and the written report follows within two business days.\n\nIf another annoying job comes to mind before then, just reply to this email.\n\nWill Herbert\nHerbert AI · Adelaide`
+// No auto-reply from the form (Will, 9 Nov 2026): the dashboard's own first
+// email, which says a call to book the audit is coming, is the one reply, so
+// a lead no longer gets two near-identical emails minutes apart.
 
 const L = {
   grid: 'grid sm:grid-cols-2 gap-4',
@@ -35,8 +37,6 @@ export default function AuditForm({ source = '/pilot', message = true }) {
       <input type="hidden" name="from_name" value="Herbert AI · AI audit" />
       <input type="hidden" name="subject" value={`New AI audit request · ${source}`} />
       <input type="hidden" name="redirect" value="https://herbert-aisolutions.com/pilot/thanks" />
-      <input type="hidden" name="autoresponse_subject" value="Got it, let's book your AI audit" />
-      <input type="hidden" name="autoresponse_message" value={AUTO_REPLY} />
       <SourceFields service="AI audit" />
       {/* Honeypot for spam */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
