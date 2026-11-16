@@ -243,9 +243,10 @@ moves. As built, 30 Oct 2026, numbered on the page in
    only. Done 4 Nov after a redo (Will: "B").
 5. What comes next (was After the pilot): "One job first. Then the system."
    and the three stages after the first AI employee (Day 14, Day 30, within
-   60 days) with their prices, beside the dashboard that employee ships in,
-   the next ones queued in it. Built 30 Oct (Will: "B, dashboard"); its four
-   details are drawn and wait on his picks.
+   60 days) with their prices, support in the third, beside the dashboard
+   that employee ships in, the next ones queued in it with their jobs; on
+   phones the dashboard follows Day 14. Built 30 Oct (Will: "B, dashboard"),
+   details 16 Nov ("1,2,2,3"); the first-three line under it is open.
 6. Questions: "Before you book." and eight questions. Built from the skeleton;
    words settled by the tone pass and the cold read; its own options and
    details pass not yet run.

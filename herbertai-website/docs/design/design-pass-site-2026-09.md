@@ -2358,7 +2358,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
-| 5. After the pilot | [x] | [x] | [x] | [x] | [~] | B built 30 Oct 2026 (Will: "B, dashboard"): the stages beside the dashboard; details 1 to 4 drawn, detail 5 (the heading) kept unless a line test is asked for; awaiting Will’s picks |
+| 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [~] | Details built 16 Nov 2026 (Will: "1,2,2,3"); one claim to settle before it closes: the first-three line conflicts with the Proof lane (live 2 Nov), Will’s call |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 
@@ -3161,3 +3161,34 @@ card, no stranded word in a sentence, every title on one line from 360 up
 ("The Monday report" takes two lines at 320, where the columns are 126px);
 eslint clean. Sheet refreshed: `design-pass-site-2026-11-03-pilot-fixes-built.png`.
 Section 4 is done.
+Will (16 Nov 2026): "Recommended: 1,2,2,3". Section 5’s details: the three stages kept, each queued employee says its job, support moves into the third stage’s price with the first three alone under, and on phones the dashboard comes straight after Day 14.
+
+## [~] /pilot section 5, What comes next: the details built, one claim open (16 Nov 2026)
+
+Built as the component’s defaults (the page is a server component and cannot
+take data from the client module): the three stages kept; each queued
+employee in the dashboard says its job (Nora reads each client’s documents
+against last year as they arrive, Fern flags requests outside the engagement
+letter, Ray keeps every promise made to a customer, all three lines the
+site’s own); the third stage’s price reads "From $25,000, with the $3,500
+taken off. Support after it from $1,000 a month." with the first three alone
+under; on phones the dashboard comes straight after Day 14. main merged in
+first (b637b83: eight commits from other sessions, the audit form, the lead
+forwarder, a security release). Tidy: stranded words below 375 ("drafted.",
+"read", "first", "guide.", "month.") fixed with balanced wrapping in six places
+and "14 replies read" kept together; measured at 1440, 1280, 1024, 375, 360
+and 320 with none left. Verified at five widths, motion on and off: no
+overflow, no page or console errors; on phones the order is Day 14, the
+dashboard, Day 30; the list and dashboard sit level at 1440 (515 and 541px);
+eslint clean. Sheet refreshed: `design-pass-site-2026-10-30-pilot-after-built.png`.
+
+The claim open: the line under the stages, "The first three clients who agree
+to a case study and a testimonial get 90 days of included support instead of
+30." (also on /pricing as "Founding clients: ..."), comes from the 16 Sep
+founding-client offer. The Proof lane (`marketing/proof/markdown/plan.md`,
+live from 2 Nov 2026) gives three Adelaide accounting and bookkeeping firms
+the audit and the first AI employee free for a named testimonial, with 30 days
+then $200 a month or a handover, and closes when the third testimonial is in.
+Both describe "the first three", on different terms. Which stands is Will’s
+call; the section closes once it is settled, with /pricing changed the same
+way.

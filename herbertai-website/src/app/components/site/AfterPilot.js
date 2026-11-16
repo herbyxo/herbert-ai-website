@@ -20,6 +20,8 @@ export const STAGE = {
   day30: ['Day 30', 'Keep it running, or take it with you', 'Hosted by Herbert AI, or moved onto your own systems with a written guide.', '$200 a month to keep it running'],
   os: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, on your own systems, priced after the audit.', 'From $25,000, with the $3,500 taken off'],
   care: ['After the build', 'Kept running', 'Hosting, fixes, a set number of small changes and a monthly report.', 'From $1,000 a month'],
+  // Will, 16 Nov 2026, detail 3 "2": support sits with the third stage's price.
+  osCare: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, on your own systems, priced after the audit.', 'From $25,000, with the $3,500 taken off. Support after it from $1,000 a month.'],
 }
 
 const glyphOf = (name) => EMPLOYEES.find((e) => e.name === name).glyph
@@ -31,14 +33,15 @@ export const QUEUED = [
 ]
 
 export const FOOT = 'Support after the full build is from $1,000 a month. The first three clients who agree to a case study and a testimonial get 90 days of included support instead of 30.'
+export const FIRST_THREE = 'The first three clients who agree to a case study and a testimonial get 90 days of included support instead of 30.'
 
 function Stages({ items }) {
   return items.map(([w, t, b, p]) => (
     <li key={t} className="border-t border-[#111]/12 py-4">
       <p className="text-[15px] font-medium text-[#777]">{w}</p>
       <h3 className="mt-1 text-[20px] font-semibold tracking-[-0.015em]">{t}</h3>
-      <p className="mt-1 text-[16px] leading-[1.5] text-[#555]">{b}</p>
-      <p className="mt-2 text-[15px] font-medium">{p}</p>
+      <p className="mt-1 text-[16px] leading-[1.5] text-[#555] text-pretty">{b}</p>
+      <p className="mt-2 text-[15px] font-medium text-pretty">{p}</p>
     </li>
   ))
 }
@@ -66,13 +69,13 @@ export function Dashboard({ queued = QUEUED, jobs = false, twoLive = false }) {
       </div>
       <div className="p-4 sm:p-5 space-y-3">
         <Live glyph={GLYPH.penny} name="Penny" job="Requests">
-          <p className="mt-3 text-[13.5px] leading-[1.45] text-[#333]">{`Mrs Nguyen${Q}s reply, read against last year: rental statement short April to June, dividends missing. Request drafted.`}</p>
+          <p className="mt-3 text-[13.5px] leading-[1.45] text-[#333] text-pretty">{`Mrs Nguyen${Q}s reply, read against last year: rental statement short April to June, dividends missing. Request drafted.`}</p>
           <div className="mt-3 flex flex-wrap gap-2 text-[13px]">
             <span className="rounded-[7px] bg-[#111] text-white px-2.5 sm:px-3 py-1.5">Approve and send</span>
             <span className="rounded-[7px] bg-[#111]/5 text-[#555] px-2.5 sm:px-3 py-1.5">Edit</span>
             <span className="rounded-[7px] bg-[#111]/5 text-[#555] px-2.5 sm:px-3 py-1.5">Skip</span>
           </div>
-          <p className="mt-3 text-[12.5px] text-[#777]">9 reminders sent this week · 14 replies read</p>
+          <p className="mt-3 text-[12.5px] text-[#777] text-pretty">9 reminders sent this week · <span className="whitespace-nowrap">14 replies read</span></p>
         </Live>
         {twoLive && (
           <Live glyph={GLYPH.nora} name="Nora" job="Intake">
@@ -89,7 +92,7 @@ export function Dashboard({ queued = QUEUED, jobs = false, twoLive = false }) {
               </div>
               <span className="ml-auto hidden sm:inline"><Status s="queued">On the roadmap</Status></span>
             </div>
-            {jobs && <p className="mt-2 text-[13px] leading-[1.45] text-[#777]">{line}</p>}
+            {jobs && <p className="mt-2 text-[13px] leading-[1.45] text-[#777] text-pretty">{line}</p>}
           </div>
         ))}
       </div>
@@ -100,7 +103,11 @@ export function Dashboard({ queued = QUEUED, jobs = false, twoLive = false }) {
 // order: 'list' (the stages, then the dashboard, on phones), 'dash' (the
 // dashboard first on phones), 'split' (on phones, the dashboard after the
 // first stage). Laptops always put the stages beside the dashboard.
-export default function AfterPilot({ stages = [STAGE.day14, STAGE.day30, STAGE.os], foot = FOOT, order = 'list', dash = {} }) {
+// The page renders the defaults. Will, 16 Nov 2026, the details ("1, 2, 2, 3"):
+// three stages kept, each queued employee says its job, support moves into the
+// third stage's price with the first three alone under, and on phones the
+// dashboard comes straight after Day 14.
+export default function AfterPilot({ stages = [STAGE.day14, STAGE.day30, STAGE.osCare], foot = FIRST_THREE, order = 'split', dash = { jobs: true } }) {
   return (
     <>
       <div className="mt-12 grid lg:grid-cols-[0.8fr_1.2fr] gap-x-14 gap-y-10 items-start">
@@ -119,7 +126,7 @@ export default function AfterPilot({ stages = [STAGE.day14, STAGE.day30, STAGE.o
           <Dashboard {...dash} />
         </div>
       </div>
-      {foot && <p className="mt-10 pt-5 border-t border-[#111]/10 text-[15px] leading-[1.5] text-[#555] max-w-[78ch]">{foot}</p>}
+      {foot && <p className="mt-10 pt-5 border-t border-[#111]/10 text-[15px] leading-[1.5] text-[#555] max-w-[78ch] text-pretty">{foot}</p>}
     </>
   )
 }
