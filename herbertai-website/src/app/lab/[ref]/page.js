@@ -18,6 +18,7 @@ import PilotAfterDetails from '../../components/lab/PilotAfterDetails'
 import PilotFixesOptions from '../../components/lab/PilotFixesOptions'
 import PilotFixesDetails from '../../components/lab/PilotFixesDetails'
 import PilotFixesRedo from '../../components/lab/PilotFixesRedo'
+import PilotQuestionsOptions from '../../components/lab/PilotQuestionsOptions'
 
 const MAP = {
   'concept-now-hiring': NowHiring,
@@ -37,6 +38,7 @@ const MAP = {
   'pilot-fixes': PilotFixesOptions,
   'pilot-fixes-details': PilotFixesDetails,
   'pilot-fixes-redo': PilotFixesRedo,
+  'pilot-questions': PilotQuestionsOptions,
 }
 
 export function generateStaticParams() {

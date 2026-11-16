@@ -29,7 +29,7 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; the cold read of every page built 30 Oct 2026 (Will: "All 69"), the charter’s wording test now a cold read (rules 1, 8, 9) |
-| 7. Other pages | [~] | Under way on /pilot: sections 1 to 4 done, section 5 facts set and options drawn 30 Oct 2026, then sections 6 and 7 and /pilot’s phases 4 to 6. Still to come: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pricing, /about (incl. "Why one builder") |
+| 7. Other pages | [~] | Under way on /pilot: sections 1 to 5 done (5 on 16 Nov 2026), section 6 facts set and options drawn 16 Nov 2026, then section 7 and /pilot’s phases 4 to 6. Still to come: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pricing, /about (incl. "Why one builder") |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -2359,7 +2359,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
 | 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [x] | Details built 16 Nov 2026 (Will: "1,2,2,3"); the first-three line dropped from /pilot and /pricing while the Proof lane runs (Will: "Drop it from both"). Done 16 Nov |
-| 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 6. Questions | [x] | [~] | [ ] | [x] | [ ] | Facts set and options drawn 16 Nov 2026 (today, A twelve folded, B twelve open in three groups, C five a line each); waiting on Will’s pick. Built from the skeleton only until then |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 
 Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
@@ -3205,3 +3205,59 @@ it running, or take it with" at 360; the stage titles now balance, and section
 For /pricing's own pass, not touched here: its rung titles "Your first AI
 employee" and "AI operating system" leave one word on the second line at 1440,
 1280, 1024 and 320.
+
+## [~] /pilot section 6, Questions: facts and options (16 Nov 2026)
+
+Will (16 Nov 2026): "Yes, section 6".
+
+The brief (design-taste step 0, written from the records): the reader is an
+owner or office manager of a 3 to 20 person office who has read the offer, the
+sample report, the timeline, the jobs and the stages and has not booked, with
+one doubt that stops the booking. The doubts on record: a person before a
+commitment ("Can we catch up first?"), proof ("can you send me somewhere to
+have a look at what you do"), price (the $25,000 floor put a clinic owner off,
+$3,500 did not), AI writing to their clients, their clients' data, "why can't
+I build it myself" (29 Oct call), and a pitch built on a problem only typical
+of the industry ("you are on the wrong track for our business"). Today's eight
+questions are all about the terms, about 700 words open in two columns; three
+repeat /pricing and none answers data, AI writing to clients, Herbert AI
+stopping or ChatGPT.
+
+Facts: one set of twelve questions in three groups, the audit (free, nothing
+to buy after, what counts as a job), the cost ($3,500, 14 days or free, the
+$3,500 taken off, after day 30) and clients and data (information safe, talks
+to clients on its own, change my software, Herbert AI stops, ChatGPT), each
+with its source on the sheet. Every answer is checked against the services
+agreement (`business/sales/services-agreement-template.md`): data with
+providers hosting in Australia and never used to train an AI model (9.2),
+every record the client's (7.1), a licence to the code that never ends (7.2),
+the operator's manual (8.1), nothing switched off or held back (8.2). Not
+drafted: "Have you done this in my field?", since the true answer in most
+fields is not yet; whether the site says so is Will's call.
+
+Options, drawn at /lab/pilot-questions (label and heading unchanged; words
+are the details pass):
+- Today: eight questions about the terms, all open, 1150px tall at 1440.
+- A. Twelve, folded (recommended): each question one line, its answer a tap
+  away, the first drawn open; 751px at 1440 and 1226px at 375, nothing cut.
+- B. Twelve, open, in three groups: the audit, the cost, your clients and your
+  data; 1121px at 1440, taller than today on a phone.
+- C. Five, a line each: the five that stop a booking, question left and answer
+  right, then "Every other question" to /faq; 767px at 1440. /faq does not
+  carry the data, Herbert AI stopping or ChatGPT answers yet.
+
+Tidy, on every option: question words left alone at 320 in A ("software?",
+"ChatGPT?") balanced in A, B and C; a doubled rule where A's two lists stack on
+a phone removed; curly quotes round "the $3,500 taken off"; B's type moved to
+the page's 18 and 16px. Measured at 1440, 1280, 375 and 320: no overflow, no
+errors, no single-word line in A, B or C. Sheet:
+`design-pass-site-2026-11-16-pilot-questions.png`.
+
+Found while checking, for Will: the services agreement says Herbert AI keeps
+ownership of the underlying code (7.3, the client gets the licence in 7.2) and
+hosts a build on its own accounts while support runs (7.4). Three live lines
+say otherwise: /faq "Who owns the code and data? You do. Builds run on your
+own systems", /pricing "You own what gets built ... An AI operating system
+runs on your own systems from day one", and /pilot section 5's third stage,
+"on your own systems". The options are worded to the agreement.
+
