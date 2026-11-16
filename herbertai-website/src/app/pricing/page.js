@@ -39,7 +39,6 @@ const rungs = [
       'One AI employee built for one job, working on your actual clients in 14 days, or it is free.',
       'The full $3,500 comes off a bigger build signed within 60 days.',
       'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or have it moved onto your own systems with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
-      'Founding clients: the first three clients who agree to a case study and a testimonial get 90 days of included support instead of 30.',
     ],
   },
   {

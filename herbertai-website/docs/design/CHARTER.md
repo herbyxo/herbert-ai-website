@@ -246,7 +246,9 @@ moves. As built, 30 Oct 2026, numbered on the page in
    60 days) with their prices, support in the third, beside the dashboard
    that employee ships in, the next ones queued in it with their jobs; on
    phones the dashboard follows Day 14. Built 30 Oct (Will: "B, dashboard"),
-   details 16 Nov ("1,2,2,3"); the first-three line under it is open.
+   details 16 Nov ("1,2,2,3"), no line under: the first-three offer came
+   off /pilot and /pricing while the Proof lane runs ("Drop it from both").
+   Done 16 Nov.
 6. Questions: "Before you book." and eight questions. Built from the skeleton;
    words settled by the tone pass and the cold read; its own options and
    details pass not yet run.

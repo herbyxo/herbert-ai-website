@@ -33,13 +33,12 @@ export const QUEUED = [
 ]
 
 export const FOOT = 'Support after the full build is from $1,000 a month. The first three clients who agree to a case study and a testimonial get 90 days of included support instead of 30.'
-export const FIRST_THREE = 'The first three clients who agree to a case study and a testimonial get 90 days of included support instead of 30.'
 
 function Stages({ items }) {
   return items.map(([w, t, b, p]) => (
     <li key={t} className="border-t border-[#111]/12 py-4">
       <p className="text-[15px] font-medium text-[#777]">{w}</p>
-      <h3 className="mt-1 text-[20px] font-semibold tracking-[-0.015em]">{t}</h3>
+      <h3 className="mt-1 text-[20px] font-semibold tracking-[-0.015em] text-balance">{t}</h3>
       <p className="mt-1 text-[16px] leading-[1.5] text-[#555] text-pretty">{b}</p>
       <p className="mt-2 text-[15px] font-medium text-pretty">{p}</p>
     </li>
@@ -105,9 +104,11 @@ export function Dashboard({ queued = QUEUED, jobs = false, twoLive = false }) {
 // first stage). Laptops always put the stages beside the dashboard.
 // The page renders the defaults. Will, 16 Nov 2026, the details ("1, 2, 2, 3"):
 // three stages kept, each queued employee says its job, support moves into the
-// third stage's price with the first three alone under, and on phones the
-// dashboard comes straight after Day 14.
-export default function AfterPilot({ stages = [STAGE.day14, STAGE.day30, STAGE.osCare], foot = FIRST_THREE, order = 'split', dash = { jobs: true } }) {
+// third stage's price, and on phones the dashboard comes straight after Day 14.
+// No line under (Will, 16 Nov 2026, "Drop it from both"): the first-three
+// offer came off /pilot and /pricing while the Proof lane (2 Nov 2026) fills
+// the three testimonial places privately on its own terms.
+export default function AfterPilot({ stages = [STAGE.day14, STAGE.day30, STAGE.osCare], foot = null, order = 'split', dash = { jobs: true } }) {
   return (
     <>
       <div className="mt-12 grid lg:grid-cols-[0.8fr_1.2fr] gap-x-14 gap-y-10 items-start">

@@ -2358,7 +2358,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 2. The written page | [x] | [x] | [x] | [x] | [x] | Done 22 Oct 2026: the live sheet, text centred against it, no line under the heading, label kept, the link under the sheet on phones |
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
-| 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [~] | Details built 16 Nov 2026 (Will: "1,2,2,3"); one claim to settle before it closes: the first-three line conflicts with the Proof lane (live 2 Nov), Will’s call |
+| 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [x] | Details built 16 Nov 2026 (Will: "1,2,2,3"); the first-three line dropped from /pilot and /pricing while the Proof lane runs (Will: "Drop it from both"). Done 16 Nov |
 | 6. Questions | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 
@@ -3163,7 +3163,7 @@ eslint clean. Sheet refreshed: `design-pass-site-2026-11-03-pilot-fixes-built.pn
 Section 4 is done.
 Will (16 Nov 2026): "Recommended: 1,2,2,3". Section 5’s details: the three stages kept, each queued employee says its job, support moves into the third stage’s price with the first three alone under, and on phones the dashboard comes straight after Day 14.
 
-## [~] /pilot section 5, What comes next: the details built, one claim open (16 Nov 2026)
+## [x] /pilot section 5, What comes next: the details built, done (16 Nov 2026)
 
 Built as the component’s defaults (the page is a server component and cannot
 take data from the client module): the three stages kept; each queued
@@ -3192,3 +3192,16 @@ then $200 a month or a handover, and closes when the third testimonial is in.
 Both describe "the first three", on different terms. Which stands is Will’s
 call; the section closes once it is settled, with /pricing changed the same
 way.
+
+Will (16 Nov 2026): "Drop it from both". The line came off section 5 (the
+component's line under now defaults to none) and the "Founding clients" line
+off /pricing's second rung, which now ends on the day 30 choice. Nothing else
+on the site states the offer (searched src and public). Verified on /pilot and
+/pricing at 1440, 1280, 1024, 375, 360 and 320: neither page says "first
+three" or "founding client", no overflow, no page errors. The tidy re-measure
+found one stranded word the 16 Nov check had missed, "you" alone under "Keep
+it running, or take it with" at 360; the stage titles now balance, and section
+5 has no single-word last line at any of the six widths. Section 5 is done.
+For /pricing's own pass, not touched here: its rung titles "Your first AI
+employee" and "AI operating system" leave one word on the second line at 1440,
+1280, 1024 and 320.
