@@ -29,7 +29,7 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; the cold read of every page built 30 Oct 2026 (Will: "All 69"), the charter’s wording test now a cold read (rules 1, 8, 9) |
-| 7. Other pages | [~] | Under way on /pilot: sections 1 to 5 done (5 on 16 Nov 2026), section 6 built 21 Nov 2026 (details drawn), then section 7 and /pilot’s phases 4 to 6. Still to come: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pricing, /about (incl. "Why one builder") |
+| 7. Other pages | [~] | /pilot: sections 1 to 6 done (6 on 21 Nov 2026); section 7 (Back up to the form) and /pilot’s phases 4 to 6 still to run. **The page list itself is open** (Will, 21 Nov 2026: "I think we need to reduce the number of pages I have on my site ... I don't think I need an industries or a what gets built page. I think I need to do a real tidy up"): settle which pages stay before any further per-page pass. Until then nothing else here is planned: the industry pages, the AI Employees page, a Herbert Reach page, /pricing and /about were the earlier list |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -2359,7 +2359,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
 | 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [x] | Details built 16 Nov 2026 (Will: "1,2,2,3"); the first-three line dropped from /pilot and /pricing while the Proof lane runs (Will: "Drop it from both"). Done 16 Nov |
-| 6. Questions | [x] | [x] | [x] | [x] | [~] | Will (21 Nov 2026): "A, folded", built the same day; details drawn, five three ways each (heading, open on load, the sign, order and runs, phones), waiting on Will’s numbers |
+| 6. Questions | [x] | [x] | [x] | [x] | [x] | Done 21 Nov 2026: "A, folded", then the five details ("Yep, recommended": heading kept, all closed on load, plus and minus, two runs of six, twelve rows on phones) |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 
 Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
@@ -3261,7 +3261,7 @@ own systems", /pricing "You own what gets built ... An AI operating system
 runs on your own systems from day one", and /pilot section 5's third stage,
 "on your own systems". The options are worded to the agreement.
 
-## [~] /pilot section 6, Questions: built, details drawn (21 Nov 2026)
+## [x] /pilot section 6, Questions: built, details applied, done (21 Nov 2026)
 
 Will (21 Nov 2026): "A, folded".
 
@@ -3299,4 +3299,51 @@ section's own component (props added for the lab, the page uses the defaults):
    nine behind one fold, 3 questions a size down.
 Tidy: measured at 1440, 1280, 375 and 320, clean. Sheet:
 `design-pass-site-2026-11-21-pilot-questions-details.png`.
+
+Will (21 Nov 2026), on the five details: "Yep, recommended". That is 1, 2, 1,
+1, 1: the heading "Before you book." kept; every question closed on load, so
+the two runs end level; plus and minus; two runs of six; twelve rows on
+phones. Only detail 2 changed the build (the component's `open` now defaults
+to none). Verified on /pilot at 1440, 1280, 375 and 320, motion on and off: no
+overflow, no errors, no word alone on a line, none open on load, twelve shown
+and twelve in the FAQPage data, a click opens a question and turns its plus to
+a minus. Sheet refreshed: `design-pass-site-2026-11-21-pilot-questions-built.png`.
+Section 6 is done.
+
+## [ ] Open after 21 Nov 2026: fewer pages, and one claim
+
+Two things Will raised or left open as he closed the session that did section
+6. Neither is acted on.
+
+1. Fewer pages. Will (21 Nov 2026): "I think we need to reduce the number of
+   pages I have on my site. I think I have the home page, how it works, and
+   then FAQ. Like what gets built, industries. I don't think I need an
+   industries or a what gets built page. I think I need to do a real tidy up."
+   He named /industries (and its /industries/[slug] pages) and /services (what
+   gets built) as not needed, and the home page, /pilot (how it works) and /faq
+   as the ones he thinks of. Not settled: /pricing, /work, /about, /contact,
+   /start, the three footer SEO pages and the /lp/* and /demo/* pages were not
+   mentioned. It is a direction, not a decision: the next session settles the
+   list with him first (every route in `src/app/**/page.js`, what each is for,
+   what links to it, what search traffic it has), and only then removes
+   anything. Retiring a route means a redirect in `next.config.mjs`, and the
+   route out of `seo-routes.json`, `public/llms.txt`, the header and footer
+   links and `schema.js`. The homepage's Industries section and the charter's
+   eight-section list both point at the industry pages, so they are part of the
+   same call.
+2. Who owns the code and where it runs (first raised 16 Nov, unanswered). The
+   services agreement says Herbert AI keeps ownership of the underlying code
+   (7.3; the client gets a licence that never ends, 7.2) and hosts a build on
+   its own accounts while support runs (7.4). /faq ("Who owns the code and
+   data? You do. Builds run on your own systems"), /pricing ("You own what gets
+   built ... An AI operating system runs on your own systems from day one") and
+   /pilot section 5's third stage ("on your own systems") say otherwise.
+   Section 6's answers follow the agreement ("your own accounts").
+   Recommended: the three lines change to match the agreement.
+
+/pilot itself: section 7 (Back up to the form) has had no options or details
+pass, and the page's phases 4 to 6 (whole page, phones, words and claims) have
+not run. The preview branch holds everything since 16 Nov (section 4 set B,
+section 5's details, the first-three offer dropped, section 6) and has not
+been merged to main.
 

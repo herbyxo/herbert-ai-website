@@ -1,4 +1,5 @@
-# /pilot section 6, Questions, as built (Will, 21 Nov 2026: "A, folded"). Checks
+# /pilot section 6, Questions, as built (Will, 21 Nov 2026: "A, folded", then
+# the details, "Yep, recommended": every question closed on load). Checks
 # the real page at 1440, 1280, 375 and 320, motion on and off: no overflow, no
 # page or console errors, no word alone on a line in the section, the FAQPage
 # data carrying the same twelve questions the section shows, and a closed
@@ -67,12 +68,12 @@ async def main():
     print("errors:", errs or "none"); print("overflow:", over or "none"); print("tidy:", tidy or "clean")
     for f in facts: print(f)
     shots = [("1440", 920), ("1440-opened", 920), ("1280", 920), ("375", 250), ("320", 220)]
-    imgs = "".join(f'<figure><figcaption>{k.replace("-opened", ", a second question opened")}</figcaption><img src="assets-2026-11-21/pilot-questions-built-{k}.png" style="width:{w}px"></figure>' for k, w in shots)
+    imgs = "".join(f'<figure><figcaption>{k.replace("-opened", ", one question opened")}</figcaption><img src="assets-2026-11-21/pilot-questions-built-{k}.png" style="width:{w}px"></figure>' for k, w in shots)
     html = f"""<!doctype html><meta charset=utf-8><title>/pilot Questions, as built</title><style>
 body{{margin:0;background:#151515;color:#eee;font:14px/1.45 -apple-system,Helvetica,Arial,sans-serif;padding:36px 40px}} h1{{font-size:26px;margin:0 0 8px;font-weight:600}} .intro{{color:#aaa;max-width:1220px;margin:0 0 18px}}
 .wrap{{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}} figure{{margin:0}} figcaption{{color:#aaa;margin-bottom:6px}} img{{display:block;border:1px solid #333}}</style><body>
 <h1>/pilot section 6, Questions, as built (Will, 21 Nov 2026: A, folded)</h1>
-<p class="intro">The real page at 1440, 1280, 375 and 320. The twelve questions owners ask, folded, the first open; the FAQPage data carries the same twelve. {' · '.join(facts)}.</p>
+<p class="intro">The real page at 1440, 1280, 375 and 320. The twelve questions owners ask, folded, all closed on load; the FAQPage data carries the same twelve. {' · '.join(facts)}.</p>
 <div class="wrap">{imgs}</div></body>"""
     f = D / "design-pass-site-2026-11-21-pilot-questions-built.html"; f.write_text(html, encoding="utf-8")
     async with async_playwright() as p:

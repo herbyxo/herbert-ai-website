@@ -251,8 +251,8 @@ moves. As built, 30 Oct 2026, numbered on the page in
    Done 16 Nov.
 6. Questions: "Before you book." and the twelve questions owners ask before
    booking, folded, each answer checked against the services agreement and the
-   same list in the FAQPage data. Built 21 Nov (Will: "A, folded"); details
-   drawn, not yet picked.
+   same list in the FAQPage data, all closed on load, two runs of six. Built
+   21 Nov (Will: "A, folded"), details the same day ("Yep, recommended"). Done.
 7. Back up to the form: "Ready? Book your free AI audit". Built from the
    skeleton; details pass not yet run.
 

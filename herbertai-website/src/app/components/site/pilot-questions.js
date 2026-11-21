@@ -78,8 +78,11 @@ function List({ items, first, open, sign, phone }) {
 // phones). sign: 'plus', 'chevron', 'ring'. layout: 'two' (two runs of six),
 // 'groups' (the three runs under their names), 'one' (one column). phone: 'all'
 // (twelve rows), 'three' (three rows, then the other nine behind one fold),
-// 'small' (questions a size down on phones).
-export default function PilotQuestions({ items = QUESTIONS, open = 'first', sign = 'plus', layout = 'two', phone = 'all' }) {
+// 'small' (questions a size down on phones). Will, 21 Nov 2026, the details
+// ("Yep, recommended": 1, 2, 1, 1, 1): the heading kept, every question closed
+// on load so the two runs end level, plus and minus, two runs of six, twelve
+// rows on phones.
+export default function PilotQuestions({ items = QUESTIONS, open = 'none', sign = 'plus', layout = 'two', phone = 'all' }) {
   const half = Math.ceil(items.length / 2)
   const cols = layout === 'groups'
     ? [[GROUPS[0], GROUPS[1]], [GROUPS[2]]].map((gs) => gs.map(([name, s, e]) => [name, items.slice(s, e)]))
