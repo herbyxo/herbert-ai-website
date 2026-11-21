@@ -249,9 +249,10 @@ moves. As built, 30 Oct 2026, numbered on the page in
    details 16 Nov ("1,2,2,3"), no line under: the first-three offer came
    off /pilot and /pricing while the Proof lane runs ("Drop it from both").
    Done 16 Nov.
-6. Questions: "Before you book." and eight questions. Built from the skeleton;
-   words settled by the tone pass and the cold read; its own options and
-   details pass not yet run.
+6. Questions: "Before you book." and the twelve questions owners ask before
+   booking, folded, each answer checked against the services agreement and the
+   same list in the FAQPage data. Built 21 Nov (Will: "A, folded"); details
+   drawn, not yet picked.
 7. Back up to the form: "Ready? Book your free AI audit". Built from the
    skeleton; details pass not yet run.
 

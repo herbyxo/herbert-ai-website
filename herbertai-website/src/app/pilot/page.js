@@ -1,6 +1,7 @@
 import AuditForm from '../components/site/AuditForm'
 import AfterPilot from '../components/site/AfterPilot'
 import FixesGrid from '../components/site/FixesGrid'
+import PilotQuestions, { QUESTIONS } from '../components/site/pilot-questions'
 import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '../components/site/sample-audit'
 import { OG_IMAGE } from '@/app/components/site/og'
 import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
@@ -19,50 +20,15 @@ export const metadata = {
   },
 }
 
-const faqs = [
-  {
-    q: 'What is the AI audit, and why is it free?',
-    a: "45 minutes auditing how your business runs, then a written report within two business days: the three jobs eating the most hours, what each costs you a year in your own figures, which one to hand over first, and the next jobs worth handing over, in order. It's free because it shows whether there's a job worth building on. If there is, you get a quote for your first AI employee. If there isn't, you're told so, and the report is yours either way.",
-  },
-  {
-    q: 'Do I have to buy an AI employee after the audit?',
-    a: 'No. The audit ends with a written report and a price, with the payback figure on it, and the decision is yours from there. There is no follow-up sequence and no pressure call.',
-  },
-  {
-    q: 'What counts as a job worth handing over?',
-    a: 'Any office job someone does over and over that follows the same steps every time: chasing documents or invoices, re-typing details between systems, writing the same emails, confirming bookings by hand.',
-  },
-  {
-    q: 'What do I actually get for $3,500?',
-    a: 'One AI employee, built for one job in your business and working on your actual clients by day 14. It does one job every day, chasing documents or answering the front desk for example, and your team okays every message before it is sent. Plus a walkthrough with your team and a list of the next jobs worth handing over, in order.',
-  },
-  {
-    q: 'What does "the $3,500 taken off" mean?',
-    a: 'If you go ahead with a bigger build within 60 days, the whole $3,500 comes off that price. The first AI employee ends up costing you nothing. If you stop there, you keep the working system either way.',
-  },
-  {
-    q: 'Are there ongoing costs after the first 30 days?',
-    a: "The first 30 days of hosting, support and AI running costs are included. After that you choose: keep it running for $200 a month, which covers hosting, fixes and normal AI usage, or have it moved onto your own systems with a written guide to how it works, or roll it into a bigger build. You get a reminder a week before. If no choice is made by day 30, it's paused and your data is sent to you, and it can still be moved onto your own systems whenever you're ready.",
-  },
-  {
-    q: 'What if it is not live in 14 days?',
-    a: "Then it's free. The clock starts at the kickoff call, once access to the tools involved has been given. Fourteen days later it's running or you don't pay.",
-  },
-  {
-    q: 'Do I have to change my existing software?',
-    a: 'No. Your first AI employee connects to what you already use. Your calendar, inbox, job system and invoicing stay where they are; the new workflow sits between them and does the repetitive part.',
-  },
-]
-
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
+  mainEntity: QUESTIONS.map(([q, a]) => ({
     '@type': 'Question',
-    name: f.q,
+    name: q,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: f.a,
+      text: a,
     },
   })),
 }
@@ -330,14 +296,8 @@ export default function Pilot() {
       <Section>
         <Label>Questions</Label>
         <H2>Before you book.</H2>
-        <div className="mt-10 grid md:grid-cols-2 gap-x-12">
-          {faqs.map((f) => (
-            <div key={f.q} className="border-t border-[#111]/12 py-5">
-              <h3 className="text-[18px] font-semibold tracking-[-0.01em]">{f.q}</h3>
-              <p className="mt-2 text-[16px] leading-[1.55] text-[#555]">{f.a}</p>
-            </div>
-          ))}
-        </div>
+        {/* The twelve questions owners ask, folded (Will, 21 Nov 2026, "A, folded"). */}
+        <PilotQuestions />
       </Section>
 
       {/* 7. Back up to the form. */}

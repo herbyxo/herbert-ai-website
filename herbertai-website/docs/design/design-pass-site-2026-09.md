@@ -29,7 +29,7 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; the cold read of every page built 30 Oct 2026 (Will: "All 69"), the charter’s wording test now a cold read (rules 1, 8, 9) |
-| 7. Other pages | [~] | Under way on /pilot: sections 1 to 5 done (5 on 16 Nov 2026), section 6 facts set and options drawn 16 Nov 2026, then section 7 and /pilot’s phases 4 to 6. Still to come: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pricing, /about (incl. "Why one builder") |
+| 7. Other pages | [~] | Under way on /pilot: sections 1 to 5 done (5 on 16 Nov 2026), section 6 built 21 Nov 2026 (details drawn), then section 7 and /pilot’s phases 4 to 6. Still to come: industry pages on the new slugs, the AI Employees page, a Herbert Reach page, /pricing, /about (incl. "Why one builder") |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -2359,7 +2359,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 3. How it works | [x] | [x] | [x] | [x] | [x] | Done 30 Oct 2026: "Your first AI employee in four steps." over four stops, each its time and its title only (no rows, no prices), the second stop "Two business days" |
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
 | 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [x] | Details built 16 Nov 2026 (Will: "1,2,2,3"); the first-three line dropped from /pilot and /pricing while the Proof lane runs (Will: "Drop it from both"). Done 16 Nov |
-| 6. Questions | [x] | [~] | [ ] | [x] | [ ] | Facts set and options drawn 16 Nov 2026 (today, A twelve folded, B twelve open in three groups, C five a line each); waiting on Will’s pick. Built from the skeleton only until then |
+| 6. Questions | [x] | [x] | [x] | [x] | [~] | Will (21 Nov 2026): "A, folded", built the same day; details drawn, five three ways each (heading, open on load, the sign, order and runs, phones), waiting on Will’s numbers |
 | 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
 
 Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
@@ -3206,7 +3206,7 @@ For /pricing's own pass, not touched here: its rung titles "Your first AI
 employee" and "AI operating system" leave one word on the second line at 1440,
 1280, 1024 and 320.
 
-## [~] /pilot section 6, Questions: facts and options (16 Nov 2026)
+## [x] /pilot section 6, Questions: facts and options (16 Nov 2026)
 
 Will (16 Nov 2026): "Yes, section 6".
 
@@ -3260,4 +3260,43 @@ say otherwise: /faq "Who owns the code and data? You do. Builds run on your
 own systems", /pricing "You own what gets built ... An AI operating system
 runs on your own systems from day one", and /pilot section 5's third stage,
 "on your own systems". The options are worded to the agreement.
+
+## [~] /pilot section 6, Questions: built, details drawn (21 Nov 2026)
+
+Will (21 Nov 2026): "A, folded".
+
+Built: the twelve questions moved into `components/site/pilot-questions.js`,
+which renders them as native details elements (no script, nothing moves) and
+feeds the page's FAQPage data from the same list, so the two cannot drift. Two
+runs of six from laptop width, one list on phones, the first question open as
+drawn in the pick. Verified on /pilot at 1440, 1280, 375 and 320, motion on and
+off: no overflow, no page or console errors, no word alone on a line; twelve
+questions shown and the same twelve in the FAQPage data; one open on load; a
+click on "Is my clients’ information safe?" opens it and turns its plus to a
+minus. Sheet: `design-pass-site-2026-11-21-pilot-questions-built.png`.
+
+Checked against the words around it (the 4 Nov rule): the jobs in "What counts
+as a job worth handing over?" are section 4's four, the 14 days, the $3,500
+taken off within 60 days and the $200 at day 30 match the timeline and section
+5, and the written report in two business days matches the hero. One word
+differs: the day 30 answer says "your own accounts" (the agreement's word) and
+section 5 says "your own systems"; it waits on the ownership and hosting call
+in the 16 Nov entry.
+
+Details, five, three ways each at /lab/pilot-questions-details, drawn from the
+section's own component (props added for the lab, the page uses the defaults):
+1. The heading, with the page's labels and headings read as a set and a line
+   test of 32 (Lines register): 1 Before you book. (as built, recommended: it
+   hands to section 7's "Ready?"), 2 What’s the catch? (2.5 of 5), 3 Before you
+   give it 45 minutes. (3 of 5, two lines).
+2. Open on load: 1 the first open (as built), 2 all closed (recommended: the
+   runs end level), 3 every answer open on laptops, folded on phones.
+3. The sign: 1 plus and minus (as built, recommended), 2 a chevron, 3 plus and
+   minus in a ring.
+4. Order and runs: 1 two runs of six (as built, recommended), 2 the three runs
+   under their names, 3 one column.
+5. Phones: 1 twelve rows (as built, recommended), 2 three rows and the other
+   nine behind one fold, 3 questions a size down.
+Tidy: measured at 1440, 1280, 375 and 320, clean. Sheet:
+`design-pass-site-2026-11-21-pilot-questions-details.png`.
 
