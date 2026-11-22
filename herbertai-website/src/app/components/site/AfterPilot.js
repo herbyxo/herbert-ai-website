@@ -17,11 +17,11 @@ const Q = '’'
 
 export const STAGE = {
   day14: ['Day 14', 'Your first AI employee', 'One card in your dashboard, working on your actual clients.', '$3,500 fixed'],
-  day30: ['Day 30', 'Keep it running, or take it with you', 'Hosted by Herbert AI, or moved onto your own systems with a written guide.', '$200 a month to keep it running'],
-  os: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, on your own systems, priced after the audit.', 'From $25,000, with the $3,500 taken off'],
+  day30: ['Day 30', 'Keep it running, or take it with you', 'Hosted by Herbert AI, or moved onto your own accounts with a written guide.', '$200 a month to keep it running'],
+  os: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, priced after the audit.', 'From $25,000, with the $3,500 taken off'],
   care: ['After the build', 'Kept running', 'Hosting, fixes, a set number of small changes and a monthly report.', 'From $1,000 a month'],
   // Will, 16 Nov 2026, detail 3 "2": support sits with the third stage's price.
-  osCare: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, on your own systems, priced after the audit.', 'From $25,000, with the $3,500 taken off. Support after it from $1,000 a month.'],
+  osCare: ['Within 60 days', 'Your AI operating system', 'The next AI employees join the same dashboard, priced after the audit.', 'From $25,000, with the $3,500 taken off. Support after it from $1,000 a month.'],
 }
 
 const glyphOf = (name) => EMPLOYEES.find((e) => e.name === name).glyph

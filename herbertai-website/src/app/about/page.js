@@ -6,7 +6,7 @@ import { JsonLd, breadcrumbs, IDS, SITE_URL } from '@/app/components/site/schema
 export const metadata = {
   title: 'About | Will Herbert, custom software and AI for small business',
   description:
-    'Will Herbert builds custom software and AI systems for small businesses in Adelaide. No account managers, and you own what gets built. Every engagement starts with a free AI audit.',
+    'Will Herbert builds custom software and AI systems for small businesses in Adelaide. No account managers. Every engagement starts with a free AI audit.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Will Herbert · Herbert AI',
@@ -52,7 +52,7 @@ export default function About() {
                 Will Herbert. He builds the systems an office runs on: the AI employee that
                 chases documents or follows up quotes, and the one system a whole team works out
                 of once a few of those are running. You deal with him from the first audit to
-                the day it goes live, and you own what gets built.
+                the day it goes live.
               </p>
               <p>
                 It started with AI receptionists for tradies, which is where the phone demo on
@@ -133,7 +133,7 @@ export default function About() {
                 takes over the part that was being done by hand.
               </p>
               <p>
-                No lock-in. You own the system, your data and every login. Retainers are month
+                No lock-in. Your data is yours, and you get a licence to the code that never ends. Retainers are month
                 to month, and nothing ever switches off without being handed over to you first.
               </p>
             </div>

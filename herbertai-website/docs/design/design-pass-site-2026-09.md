@@ -3405,3 +3405,55 @@ the header is How it works, Pricing, About; `site-check.py` reports 6 of 6
 pages clean at 1440 and 375. IndexNow pinged, 200 for 6 URLs. The lab is still
 live on production until phase 8.
 
+## [~] Ownership and hosting wording matched to the services agreement (22 Nov 2026)
+
+Will (22 Nov 2026): "Yes, match it". First raised 16 Nov. The agreement
+(`business/sales/services-agreement-template.md`): every record belongs to the
+client (7.1); once the build fee is paid the client gets a licence to use, copy
+and change the code that never ends (7.2); Herbert AI keeps ownership of the
+code (7.3); the build runs on Herbert AI's accounts while it looks after it and
+is moved onto accounts in the client's name with the manual when that ends
+(7.4); nothing is switched off or held back (8.2).
+
+Six places said otherwise, one more than the five named to Will: the home
+page's How it works row also listed "Your business owns it".
+
+- Home, step 3's facts: "Your business owns it" is now "Your data stays yours";
+  the step's body lost "and your business owns it".
+- /pilot section 5: day 30 reads "moved onto your own accounts with a written
+  guide" (was "systems"), and the third stage reads "The next AI employees join
+  the same dashboard, priced after the audit." (was "..., on your own systems,
+  priced after the audit.").
+- /pricing: the first AI employee's line says "your own accounts"; the AI
+  operating system's line lost "and your business owns"; "Any lock-in?" now
+  reads "None. Your data is yours, and once a build is paid for you get a
+  licence to its code that never ends. While Herbert AI looks after a system it
+  runs on Herbert AI's accounts. When that ends it is moved onto accounts in
+  your name, with a written guide to how it works. Nothing is switched off or
+  held back."
+- /faq: "Who owns the code and data?" now reads "Your data is yours: every
+  record the system reads or stores belongs to you. Herbert AI keeps ownership
+  of the code, and once a build is paid for you get a licence to use, copy and
+  change it that never ends. While Herbert AI looks after the system it runs on
+  Herbert AI's accounts, hosted in Australia. When that ends it is moved onto
+  accounts in your name with a written guide, and nothing is held back."; the
+  lock-in answer ends "Retainers are month to month, and when one ends the
+  system is moved onto accounts in your name with a written guide."; the first
+  answer lost "and you own what gets built".
+- /about: the description and the intro lost "and you own what gets built";
+  "No lock-in." now continues "Your data is yours, and you get a licence to the
+  code that never ends."
+- `llms.txt`: the AI operating system line and "Who owns what gets built?" say
+  the same.
+
+Checked at 1440, 1280, 1024, 375, 360 and 320 on the home page, /pilot,
+/pricing, /about and /faq: none of the old lines is left in the pages or in
+/faq's and /pricing's structured data, the new lines are present, and /pilot
+section 5 has no word alone on a line. On `preview/runs-itself`; live once
+merged.
+
+Seen while checking and left for those pages' own passes, all already on
+production: /about and /faq run off the side at 320 (37px and 10px), and the
+home page's How it works facts leave a word alone on a line at several widths
+("figures", "sent" at 1440).
+

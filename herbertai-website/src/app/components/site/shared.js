@@ -71,8 +71,8 @@ export const RUNGS = [
   {
     n: '03',
     title: 'Your AI operating system',
-    body: 'Each AI employee after the first is added to the same dashboard, and the dashboard grown to run the whole office is the AI operating system. It puts your files, messages and follow-ups on one system your team works out of every day, and your business owns it. Your first AI employee’s $3,500 comes off the price.',
-    facts: ['Files, messages and follow-ups on one system', 'Your business owns it', 'The first employee’s $3,500 comes off'],
+    body: 'Each AI employee after the first is added to the same dashboard, and the dashboard grown to run the whole office is the AI operating system. It puts your files, messages and follow-ups on one system your team works out of every day. Your first AI employee’s $3,500 comes off the price.',
+    facts: ['Files, messages and follow-ups on one system', 'Your data stays yours', 'The first employee’s $3,500 comes off'],
     price: 'From $25,000, priced after the audit.',
   },
 ]

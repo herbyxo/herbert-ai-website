@@ -20,7 +20,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'What does Herbert AI do?',
-    a: 'Herbert AI builds custom software and AI for small businesses, from Adelaide. Most work starts as an AI employee, software that does one office job every day, like chasing documents, answering enquiries or confirming bookings, with someone on your team okaying every message before it is sent. Bigger builds put the whole operation in one system, with the AI employees working inside it. Will Herbert builds all of it, and you own what gets built.',
+    a: 'Herbert AI builds custom software and AI for small businesses, from Adelaide. Most work starts as an AI employee, software that does one office job every day, like chasing documents, answering enquiries or confirming bookings, with someone on your team okaying every message before it is sent. Bigger builds put the whole operation in one system, with the AI employees working inside it. Will Herbert builds all of it.',
   },
   {
     q: 'Who is it for?',
@@ -52,11 +52,11 @@ const faqs = [
   },
   {
     q: 'Are there contracts or lock-in?',
-    a: 'No. Your first AI employee includes its first 30 days of hosting and support, then you choose $200 a month support, a move onto your own systems, or an AI operating system. Those run on your own systems, and retainers are month to month.',
+    a: 'No. Your first AI employee includes its first 30 days of hosting and support, then you choose $200 a month support, a move onto your own accounts, or an AI operating system. Retainers are month to month, and when one ends the system is moved onto accounts in your name with a written guide.',
   },
   {
     q: 'Who owns the code and data?',
-    a: 'You do. Builds run on your own systems, with a licence to the software that never expires, and your data and customer list stay yours, so nothing is held back if you leave. Will keeps his internal tools and component library, which is part of how each build ships faster.',
+    a: 'Your data is yours: every record the system reads or stores belongs to you. Herbert AI keeps ownership of the code, and once a build is paid for you get a licence to use, copy and change it that never ends. While Herbert AI looks after the system it runs on Herbert AI’s accounts, hosted in Australia. When that ends it is moved onto accounts in your name with a written guide, and nothing is held back.',
   },
   {
     q: 'Do I need any technical knowledge?',

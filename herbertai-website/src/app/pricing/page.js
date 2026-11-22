@@ -37,7 +37,7 @@ const rungs = [
     lines: [
       'One AI employee built for one job, working on your actual clients in 14 days, or it is free.',
       'The full $3,500 comes off a bigger build signed within 60 days.',
-      'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or have it moved onto your own systems with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
+      'The first 30 days of hosting, support and AI running costs are included. After that: go ahead with the build, keep it running for $200 a month, or have it moved onto your own accounts with a written guide. If no choice is made by day 30 it is paused and your data is sent to you.',
     ],
   },
   {
@@ -45,7 +45,7 @@ const rungs = [
     title: 'AI operating system',
     price: 'From $25,000',
     lines: [
-      'The system your AI employees work in: files, messages, follow-ups and reports in one place your team works out of every day, and your business owns.',
+      'The system your AI employees work in: files, messages, follow-ups and reports in one place your team works out of every day.',
       'Priced after the audit, as one fixed number with a written list of what is included and a delivery date.',
       'If the audit shows the saving would not comfortably cover the price, you will be told so, and an AI employee is not the right next step.',
     ],
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: 'Any lock-in?',
-    a: 'None. You own what gets built, your data and every login. An AI operating system runs on your own systems from day one. Your first AI employee is hosted by Herbert AI for speed and moves onto your own systems whenever you want, with a written guide to how it works.',
+    a: 'None. Your data is yours, and once a build is paid for you get a licence to its code that never ends. While Herbert AI looks after a system it runs on Herbert AI’s accounts. When that ends it is moved onto accounts in your name, with a written guide to how it works. Nothing is switched off or held back.',
   },
 ]
 
