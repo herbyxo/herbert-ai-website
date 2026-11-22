@@ -3392,3 +3392,16 @@ The phase 7 plan changes with it: the industry pages on new slugs, an AI
 Employees page and a Herbert Reach page are no longer planned. What remains is
 /pilot's section 7 and whole-page passes, then /pricing, /about and /faq.
 
+## [x] Merged to main and live (22 Nov 2026)
+
+Will (22 Nov 2026): "Yes, merge". main fast-forwarded from 43a0731 to 55893f3
+(18 commits: /pilot section 4 set B, section 5's details, the first-three
+offer dropped, section 6, the page cut). Production picked it up in about half
+a minute. Checked on herbert-aisolutions.com: the crawl of every internal link
+on the kept pages found none that redirects or fails; all eighteen retired
+addresses return 308 to the right place; the sitemap and `llms.txt` list the
+six pages; /pilot serves the twelve folded questions and no first-three line;
+the header is How it works, Pricing, About; `site-check.py` reports 6 of 6
+pages clean at 1440 and 375. IndexNow pinged, 200 for 6 URLs. The lab is still
+live on production until phase 8.
+
