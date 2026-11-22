@@ -69,10 +69,13 @@ export function Dashboard({ queued = QUEUED, jobs = false, twoLive = false }) {
       <div className="p-4 sm:p-5 space-y-3">
         <Live glyph={GLYPH.penny} name="Penny" job="Requests">
           <p className="mt-3 text-[13.5px] leading-[1.45] text-[#333] text-pretty">{`Mrs Nguyen${Q}s reply, read against last year: rental statement short April to June, dividends missing. Request drafted.`}</p>
+          {/* Edit and Skip wrap as a pair, so neither sits alone under Approve at 320. */}
           <div className="mt-3 flex flex-wrap gap-2 text-[13px]">
             <span className="rounded-[7px] bg-[#111] text-white px-2.5 sm:px-3 py-1.5">Approve and send</span>
-            <span className="rounded-[7px] bg-[#111]/5 text-[#555] px-2.5 sm:px-3 py-1.5">Edit</span>
-            <span className="rounded-[7px] bg-[#111]/5 text-[#555] px-2.5 sm:px-3 py-1.5">Skip</span>
+            <span className="flex gap-2">
+              <span className="rounded-[7px] bg-[#111]/5 text-[#555] px-2.5 sm:px-3 py-1.5">Edit</span>
+              <span className="rounded-[7px] bg-[#111]/5 text-[#555] px-2.5 sm:px-3 py-1.5">Skip</span>
+            </span>
           </div>
           <p className="mt-3 text-[12.5px] text-[#777] text-pretty">9 reminders sent this week · <span className="whitespace-nowrap">14 replies read</span></p>
         </Live>

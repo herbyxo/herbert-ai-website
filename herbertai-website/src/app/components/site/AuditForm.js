@@ -64,7 +64,8 @@ export default function AuditForm({ source = '/pilot', message = true, idPrefix 
             name="message"
             required={message !== 'optional'}
             rows={3}
-            className={L.input}
+            // Tall enough on phones to show the whole example, which wraps to five lines at 320.
+            className={`${L.input} max-sm:min-h-[150px]`}
             placeholder="e.g. Chasing clients for documents, then copying the details into our system, then emailing everyone an update."
           />
         </div>

@@ -114,7 +114,7 @@ function Timeline() {
             <span aria-hidden className="absolute left-[5px] top-2 bottom-0 w-[2px] bg-[#111] group-last:hidden" />
             <span aria-hidden className="absolute left-0 top-[3px] w-3 h-3 rounded-full bg-[#111]" />
             <p className="text-[16px] font-medium text-[#777] leading-[1.2] mb-2">{st.when}</p>
-            <h3 className="text-[22px] font-semibold tracking-[-0.02em] mb-2.5">{st.title}</h3>
+            <h3 className="text-[22px] font-semibold tracking-[-0.02em] mb-2.5 text-balance">{st.title}</h3>
           </li>
         ))}
       </ol>
@@ -134,7 +134,7 @@ function Timeline() {
               )}
             </div>
             <div className="min-w-0 flex flex-col pt-4 pr-7">
-              <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-2.5">{st.title}</h3>
+              <h3 className="text-[20px] xl:text-[24px] font-semibold tracking-[-0.02em] mb-2.5 text-balance">{st.title}</h3>
               </div>
           </li>
         ))}
@@ -154,14 +154,14 @@ function ReadSample() {
 function WrittenSheet() {
   return (
     <div className="min-w-0 rounded-xl border border-[#111]/12 bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,.35)] px-5 py-6 sm:px-9 sm:py-8 text-[#111]">
-      <p className="font-bold tracking-[-0.03em] leading-[1.02] max-w-[22ch]" style={{ fontSize: 'clamp(24px, 2.1vw, 30px)' }}>
+      <p className="font-bold tracking-[-0.03em] leading-[1.02] max-w-[22ch] text-balance" style={{ fontSize: 'clamp(24px, 2.1vw, 30px)' }}>
         {SAMPLE_TITLE}
       </p>
       <p className={`${SHEET_LABEL} mt-6 mb-2`}>Where the time goes</p>
       <ul className="md:hidden border-b border-[#111]/10">
         {SAMPLE_JOBS.map((j) => (
           <li key={j.job} className="py-3.5 border-t border-[#111]/10">
-            <p className="text-[14px] leading-[1.45] text-[#333]">{j.job}</p>
+            <p className="text-[14px] leading-[1.45] text-[#333] text-pretty">{j.job}</p>
             <p className="mt-2 font-mono text-[10.5px] uppercase tracking-[0.12em] text-[#666]">
               {j.who} · <span className="whitespace-nowrap">{j.hours} hours a week</span> · <span className="whitespace-nowrap text-[#111]">{j.cost} a year</span>
             </p>
@@ -187,7 +187,7 @@ function WrittenSheet() {
           ))}
         </tbody>
       </table>
-      <p className="mt-5 text-[16px] md:text-[17px] leading-[1.45]">{SAMPLE_TOTAL}</p>
+      <p className="mt-5 text-[16px] md:text-[17px] leading-[1.45] text-pretty">{SAMPLE_TOTAL}</p>
       <p className="mt-4 text-[12.5px] text-[#777]">Figures are illustrative.</p>
     </div>
   )
@@ -227,11 +227,11 @@ export default function Pilot() {
             >
               Book a free AI audit <span aria-hidden>&darr;</span>
             </a>
-            <div className="mt-10 grid grid-cols-3 gap-5 max-w-[620px]">
+            <div className="mt-10 grid sm:grid-cols-3 sm:gap-5 max-w-[620px]">
               {TERMS.map(([n, l]) => (
-                <div key={n} className="border-t border-[#111]/12 pt-3">
-                  <div className="text-[21px] min-[360px]:text-[26px] font-semibold tracking-[-0.02em] whitespace-nowrap">{n}</div>
-                  <div className="mt-1 text-[14px] leading-[1.35] text-[#777]">{l}</div>
+                <div key={n} className="border-t border-[#111]/12 py-3 sm:pb-0 flex items-baseline gap-4 sm:block">
+                  <div className="w-[88px] shrink-0 sm:w-auto text-[22px] sm:text-[26px] font-semibold tracking-[-0.02em] whitespace-nowrap">{n}</div>
+                  <div className="sm:mt-1 text-[14px] leading-[1.35] text-[#777] text-pretty">{l}</div>
                 </div>
               ))}
             </div>
@@ -248,7 +248,7 @@ export default function Pilot() {
       <Section>
         <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-x-12 gap-y-10 items-center">
           <div className="min-w-0">
-            <Label>What you get back</Label>
+            <Label>What You Get Back</Label>
             <H2>What your admin costs, written down.</H2>
             {/* No line under the heading: the sheet shows what it used to list,
                 and the made-up note sits in the sheet's label (Will, 22 Oct 2026,
@@ -270,14 +270,14 @@ export default function Pilot() {
 
       {/* 3. How it works. */}
       <Section>
-        <Label>The timeline</Label>
+        <Label>The Timeline</Label>
         <H2>Your first AI employee in four steps.</H2>
         <Timeline />
       </Section>
 
       {/* 4. What it fixes. */}
       <Section>
-        <Label>What it fixes</Label>
+        <Label>What It Fixes</Label>
         <H2>The jobs everyone hates doing.</H2>
         {/* Each job under the AI employee that takes it (Will, 3 Nov 2026, "C");
             details 4 Nov 2026 ("1, 3, 2"): the name and job kept, no note under
@@ -287,7 +287,7 @@ export default function Pilot() {
 
       {/* 5. What comes next. */}
       <Section>
-        <Label>What comes next</Label>
+        <Label>What Comes Next</Label>
         <H2>One job first. Then the system.</H2>
         {/* The stages beside the dashboard they grow (Will, 30 Oct 2026, "B, dashboard"). */}
         <AfterPilot />

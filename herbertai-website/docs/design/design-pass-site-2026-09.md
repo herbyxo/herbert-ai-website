@@ -3571,3 +3571,50 @@ in a browser at 1440 and 375: two forms on /pilot, their subjects "/pilot" and
 line at 1440, no overflow; `site-check.py` 6 of 6 pages clean; IndexNow pinged,
 200 for 6 URLs. Every section of /pilot is live.
 
+## Hands-off pass (from 22 Nov 2026)
+
+Will (22 Nov 2026): "Can you just do your own design pass and pick the
+recommendations for each page? And now that I've said a bit about like business
+doc language and I've made my interface writing style now, yeah, you just
+automate the design pass and choose the recommendations, and then I'll see."
+The mode is written into design-taste `loop/roadmap.md` ("Hands-off mode",
+claude-skills 7c35490). Every pick below this heading is Claude's, made under
+that word, and none is in Will's words. Nothing in it is merged to main without
+him. Scope found by the audit: /pilot's phases 4 to 6, then the six pages still
+in the May register (/faq, /pricing, /about, /pilot/sample-audit, /pilot/thanks,
+/privacy).
+
+### [x] /pilot phases 4 to 6: whole page, phones, words (hands-off, 22 Nov 2026)
+
+Whole page at 1440x900: the seven sections read in order on one paper ground
+with the dark close; each shows part of the next except section 5 (926px), which
+shows the product at size and so may fill a screen (register, 20 Oct). The
+closing heading repeats the first section's on purpose (Will, 22 Nov). Nothing
+changed.
+
+Phones, measured at 1440, 1280, 1024, 375, 360 and 320 (a word alone on a line,
+overflow, errors). Found and fixed at the cause:
+- Hero terms: three 95px columns left "report" and "runs" alone. Picked: below
+  640px the terms are a row each, the figure left and its line right; three
+  columns from 640px. Weighed: balanced wrapping (still leaves one word a line
+  in a 95px column) and smaller type (below the page's 14px). Close call: the
+  three-column terms were part of the hero Will picked on 22 Oct.
+- Timeline titles: "The free AI audit" and "Your written report" split at 1024.
+  Picked: 20px between 1024 and 1280, 24px above, and balanced wrapping.
+- Sample sheet: the title, the job rows and the total wrap balanced ("letter",
+  "practice." and "job." were alone at 375 and 320).
+- What it fixes: "The Monday report" did not fit a half column at 320. Picked:
+  one column below 360px.
+- What comes next: "Skip" wrapped alone under Approve at 320. Picked: Edit and
+  Skip wrap as a pair.
+- The form's job box cut off its example text on phones. Picked: 150px tall
+  below 640px.
+After: none at any of the six widths.
+
+Words: the five sentence-case labels are title case, the charter's rule (Will,
+13 Oct): "What You Get Back", "The Timeline", "What It Fixes", "What Comes
+Next" ("Questions" and "AI Audit" already were). The names are the ones Will
+kept on 22 Oct; only the case changed. Claims and links re-read: every figure
+is a published price or the example practice's, the data and hosting lines match
+the agreement (22 Nov), #book and #form resolve.
+

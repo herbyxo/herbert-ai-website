@@ -37,9 +37,10 @@ export const NOTE = 'Example AI employees, one for each job. Yours are named at 
 // same code; the page uses the defaults. line: 'full' (avatar, name and job
 // above the title), 'name' (avatar and name), 'inline' (the avatar beside the
 // title, no line). phone: 'stack' (six cards one under another), 'two' (two
-// across, no sentence), 'short' (one column, no sentence).
+// across, no sentence; one column below 360px, where "The Monday report" does
+// not fit a half column), 'short' (one column, no sentence).
 export default function FixesGrid({ jobs = JOBS, line = 'full', note = NOTE, phone = 'stack' }) {
-  const grid = phone === 'two' ? 'grid-cols-2 gap-x-5 sm:gap-x-12' : 'gap-x-12'
+  const grid = phone === 'two' ? 'min-[360px]:grid-cols-2 gap-x-5 sm:gap-x-12' : 'gap-x-12'
   const body = phone === 'stack' ? '' : 'hidden sm:block'
   return (
     <>
