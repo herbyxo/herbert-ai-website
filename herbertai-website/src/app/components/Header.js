@@ -7,7 +7,8 @@ import { usePathname } from 'next/navigation'
 // hero button, /pilot's form), so the header shows no second one. Every page is
 // on the paper ground since the hands-off pass of 22 Nov 2026 moved the last
 // May-register pages onto the charter.
-export const PAPER = ['/', '/pilot']
+// The thanks page is here too: the person has just booked.
+export const PAPER = ['/', '/pilot', '/pilot/thanks']
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Header() {

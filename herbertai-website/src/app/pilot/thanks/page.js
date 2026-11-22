@@ -1,65 +1,44 @@
-import Link from 'next/link'
 import Script from 'next/script'
+import { Label, H1, Section, TextLink } from '../../components/site/kit'
 
 export const metadata = {
   title: 'Audit request received',
-  description: 'Your audit request is in. Will calls the same day to set a time.',
+  description: 'Your audit request is in. A call comes the same day to set a time.',
   alternates: { canonical: '/pilot/thanks' },
   robots: { index: false, follow: true },
 }
 
-// The /pilot form lands here instead of /start/thanks, because that page
-// promises a fixed quote within a business day and an audit requester is
-// promised a same-day call. The conversion event is the same: one load of a
-// thanks page is one form submit.
+// Where every audit form lands. One load of this page is one form submit, so
+// the Google Ads conversion fires here.
+//
+// On the charter since the hands-off pass of 22 Nov 2026, and in the Interface
+// register (writing-style): the page opens on what happened, then says what the
+// person does next and what they will get, with the stock phrase for the email
+// ("Check your email"). It was first person ("I'll call you", "I've sent");
+// site copy is the business in the third person, and steps say what happens,
+// not who (CHARTER.md, rule 5).
 export default function PilotThanks() {
   return (
-    <section className="bg-cream">
+    <Section first>
       <Script id="gtag-conversion" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('event', 'conversion', { send_to: 'AW-18228080032/RaGxCLSS6bwcEKDb6fND' });`}
       </Script>
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 min-h-[80vh] flex flex-col justify-center py-20 md:py-28">
-        <div className="flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-          <span className="w-1.5 h-1.5 rounded-full bg-ink" />
-          <span>Audit request received</span>
-        </div>
-
-        <h1
-          className="font-display text-ink"
-          style={{
-            fontSize: 'var(--text-display-lg)',
-            lineHeight: 0.92,
-            letterSpacing: '-0.04em',
-            fontWeight: 800,
-          }}
-        >
-          Got it.
-          <br />
-          Talk today.
-        </h1>
-
-        <p className="mt-9 md:mt-12 max-w-[60ch] text-[17px] md:text-[19px] text-muted leading-[1.55]">
-          Your details landed. I&rsquo;ll call you the same day to set a time for the
-          audit: forty five minutes, no preparation. The written report follows within
-          two business days.
+      <div className="min-h-[52vh] flex flex-col justify-center">
+        <Label>AI Audit</Label>
+        <H1>Your request is in.</H1>
+        <p className="mt-7 max-w-[56ch] text-[18px] leading-[1.55] text-[#555] text-pretty">
+          Expect a call the same day to set a time for the audit: 45 minutes, with nothing to prepare. The written
+          report follows within two business days.
         </p>
-
-        <p className="mt-6 max-w-[60ch] text-[15px] md:text-[16px] text-ink-soft leading-[1.6]">
-          I&rsquo;ve sent a confirmation to your email. If another annoying job comes to
-          mind before we talk, just reply to it.
+        <p className="mt-4 max-w-[56ch] text-[18px] leading-[1.55] text-[#555] text-pretty">
+          Check your email for a confirmation. If another job comes to mind before the call, reply to it.
         </p>
-
-        <div className="mt-12 flex flex-wrap items-center gap-4">
-          <Link
-            href="/"
-            className="bg-ink text-cream px-6 py-3.5 rounded-full text-[15px] font-semibold inline-flex items-center gap-2 hover:bg-ink-soft transition-colors"
-          >
-            <span aria-hidden>&larr;</span> Back to home
-          </Link>
-        </div>
+        <p className="mt-9">
+          <TextLink href="/" arrow={null}>Back to home</TextLink>
+        </p>
       </div>
-    </section>
+    </Section>
   )
 }
