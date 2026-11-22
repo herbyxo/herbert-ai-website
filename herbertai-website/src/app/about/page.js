@@ -1,7 +1,7 @@
-import RevealOnScroll from '../components/motion/RevealOnScroll'
-import { RUNGS, Eyebrow, AuditButton } from '../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
 import { JsonLd, breadcrumbs, IDS, SITE_URL } from '@/app/components/site/schema'
+import { Label, H1, H2, Section, TextLink } from '../components/site/kit'
+import AuditClose from '../components/site/audit-close'
 
 export const metadata = {
   title: 'About | Will Herbert, custom software and AI for small business',
@@ -16,189 +16,106 @@ export const metadata = {
   },
 }
 
-// Founder photo: drop the file at public/will.jpg and set this to '/will.jpg'.
+// /about on the charter (hands-off pass, 22 Nov 2026). The reader arrives from
+// an email, a LinkedIn message or a referral to check the person is real, so
+// the page is who builds it, why it is one person, and what he has built, then
+// the audit. The steps and prices are left to the home page, /pilot and
+// /pricing, which already carry them.
+//
+// Founder photo: the charter allows one, here only. Drop the file at
+// public/will.jpg and set this to '/will.jpg'. Until then nothing stands in for
+// it (the "W" tile went: a letter in a box is not a photo).
 const FOUNDER_PHOTO = null
 
+// The class of work, never a client's name (CHARTER.md, "Nothing is claimed").
 const work = [
   {
-    tag: 'Hospitality · AI operating system',
-    name: 'A booking platform for a barbershop',
-    body: 'Custom site, online bookings with deposits and tipping, an owner dashboard, SMS reminders and automated review collection. Built and run live for months by one person.',
-  },
-  {
-    tag: 'Finance · Currently building',
+    tag: 'Finance',
     name: 'An operations hub for a finance brokerage',
     body: 'Every client file on one board, documents chased automatically, every email drafted for a person to approve. The system a whole office works out of.',
   },
+  {
+    tag: 'Hospitality',
+    name: 'A booking platform for a barbershop',
+    body: 'Custom site, online bookings with deposits and tipping, an owner dashboard, SMS reminders and automated review collection. Built and run live for months by one person.',
+  },
 ]
+
+const BODY = 'text-[17px] leading-[1.6] text-[#555] text-pretty'
 
 export default function About() {
   return (
     <>
       <JsonLd data={[{ '@context': 'https://schema.org', '@type': 'ProfilePage', url: `${SITE_URL}/about`, mainEntity: { '@id': IDS.will } }, breadcrumbs([['About', '/about']])]} />
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32 grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-start">
-          <div>
-            <Eyebrow>About</Eyebrow>
-            <h1
-              className="font-display text-ink max-w-[18ch]"
-              style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
-            >
-              Will Herbert builds the software small businesses run on.
-            </h1>
-            <div className="mt-9 max-w-[60ch] space-y-5 text-[17px] md:text-[19px] text-muted leading-[1.55]">
-              <p>
-                Herbert AI is custom software and AI for small businesses, built in Adelaide by
-                Will Herbert. He builds the systems an office runs on: the AI employee that
-                chases documents or follows up quotes, and the one system a whole team works out
-                of once a few of those are running. You deal with him from the first audit to
-                the day it goes live.
-              </p>
-              <p>
-                It started with AI receptionists for tradies, which is where the phone demo on
-                the services page comes from. The same patterns turned out to fit a barbershop,
-                a finance brokerage and anywhere else a repetitive job is eating someone&apos;s
-                week, so that is what he builds now.
-              </p>
-            </div>
-          </div>
-          <div className="w-44 h-44 md:w-64 md:h-64 rounded-3xl overflow-hidden bg-cream-alt border border-line shrink-0">
-            {FOUNDER_PHOTO ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={FOUNDER_PHOTO} alt="Will Herbert" className="w-full h-full object-cover" />
-            ) : (
-              <div className="w-full h-full grid place-items-center font-display text-ink text-[72px] font-bold tracking-[-0.04em]">W</div>
-            )}
-          </div>
-        </div>
-      </section>
 
-      <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
-          <div>
-            <RevealOnScroll>
-              <Eyebrow>How working with Herbert AI goes</Eyebrow>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.08}>
-              <h2
-                className="font-display text-ink max-w-[14ch]"
-                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-              >
-                One job first. Then the system.
-              </h2>
-            </RevealOnScroll>
-          </div>
-          <RevealOnScroll delay={0.12} className="grid gap-8 pt-1">
-            <div className="grid gap-8">
-              {RUNGS.map((s) => (
-                <div key={s.n} className="flex gap-5">
-                  <span className="font-mono text-[12px] text-muted pt-1 shrink-0">{s.n}</span>
-                  <div>
-                    <h3 className="text-[18px] font-medium tracking-[-0.01em] mb-1.5 text-ink">{s.title}</h3>
-                    <p className="text-[15px] text-muted leading-[1.6] max-w-[52ch]">{s.body}</p>
-                    <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink">{s.price}</div>
-                  </div>
-                </div>
-              ))}
+      <Section first>
+        <div className={FOUNDER_PHOTO ? 'grid lg:grid-cols-[1fr_auto] gap-x-16 gap-y-10 items-start' : ''}>
+          <div className="min-w-0">
+            <Label>About</Label>
+            <H1 wide>Will Herbert builds the software small businesses run on.</H1>
+            <div className="mt-8 max-w-[60ch] space-y-5">
+              <p className={BODY}>
+                Herbert AI is custom software and AI for small businesses, built in Adelaide by Will Herbert. He builds
+                the systems an office runs on: the AI employee that chases documents or follows up quotes, and the one
+                system a whole team works out of once a few of those are running. You deal with him from the first
+                audit to the day it goes live.
+              </p>
+              <p className={BODY}>
+                It started with AI receptionists for tradies. The same patterns turned out to fit a barbershop, a
+                finance brokerage and anywhere else a repetitive job is eating someone&rsquo;s week, so that is what he
+                builds now.
+              </p>
             </div>
-          </RevealOnScroll>
+            <p className="mt-8">
+              <TextLink href="mailto:hello@herbert-aisolutions.com" arrow={null}>hello@herbert-aisolutions.com</TextLink>
+            </p>
+          </div>
+          {FOUNDER_PHOTO && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={FOUNDER_PHOTO} alt="Will Herbert" className="w-44 h-44 md:w-64 md:h-64 rounded-2xl object-cover border border-[#111]/10" />
+          )}
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
-          <div>
-            <RevealOnScroll>
-              <Eyebrow>Why one builder</Eyebrow>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.08}>
-              <h2
-                className="font-display text-ink max-w-[12ch]"
-                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-              >
-                No agency. No template.
-              </h2>
-            </RevealOnScroll>
+      <Section>
+        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-x-14 gap-y-10 items-start">
+          <div className="min-w-0">
+            <Label>Why One Builder</Label>
+            <H2>You deal with the person building it.</H2>
           </div>
-          <RevealOnScroll delay={0.12} className="max-w-[60ch] space-y-5 text-[16px] text-muted leading-[1.7] pt-1">
-            <div className="space-y-5">
-              <p>
-                You talk to the person building it. There is no sales rep, no account manager
-                and no junior who escalates to a senior. Will runs the audit, does the build
-                and gives the walkthrough with your team.
-              </p>
-              <p>
-                No template either. Your business does not run like the last one, so the
-                system does not pretend it does. It connects the software you already use and
-                takes over the part that was being done by hand.
-              </p>
-              <p>
-                No lock-in. Your data is yours, and you get a licence to the code that never ends. Retainers are month
-                to month, and nothing ever switches off without being handed over to you first.
-              </p>
-            </div>
-          </RevealOnScroll>
+          <div className="min-w-0 max-w-[60ch] space-y-5">
+            <p className={BODY}>
+              There is no sales rep, no account manager and no junior who escalates to a senior. Will runs the audit,
+              does the build and gives the walkthrough with your team.
+            </p>
+            <p className={BODY}>
+              Nothing is built from a template. Each system works with the software you already use and takes over the
+              part that was being done by hand.
+            </p>
+            <p className={BODY}>
+              There is no lock-in. Your data is yours, and you get a licence to the code that never ends. Every build
+              comes with a written guide another developer could run it from. Retainers are month to month, and
+              nothing switches off without being handed over to you first.
+            </p>
+          </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-36">
-          <RevealOnScroll className="max-w-[40ch] mb-14">
-            <div>
-              <Eyebrow>Recent work</Eyebrow>
-              <h2
-                className="font-display text-ink"
-                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.98, letterSpacing: '-0.035em', fontWeight: 800 }}
-              >
-                The kind of thing that gets built.
-              </h2>
+      <Section>
+        <Label>Recent Work</Label>
+        <H2>The kind of thing that gets built.</H2>
+        <div className="mt-12 grid md:grid-cols-2 gap-x-12 gap-y-8">
+          {work.map((w) => (
+            <div key={w.name} className="min-w-0 border-t border-[#111]/15 pt-4">
+              <p className="text-[14px] text-[#777]">{w.tag}</p>
+              <h3 className="mt-2 text-[20px] font-semibold tracking-[-0.015em] text-balance">{w.name}</h3>
+              <p className="mt-1.5 text-[16px] leading-[1.5] text-[#555] text-pretty">{w.body}</p>
             </div>
-          </RevealOnScroll>
-          <div className="grid md:grid-cols-2 gap-5">
-            {work.map((r, i) => (
-              <RevealOnScroll key={r.name} delay={i * 0.08} className="h-full">
-                {/* Plain cards since the 22 Nov 2026 cut: /work, where they linked, is gone. */}
-                <div className="bg-white border border-line rounded-3xl p-7 h-full">
-                  <div className="flex items-center gap-2 mb-7">
-                    <span className="w-1.5 h-1.5 rounded-full bg-ink" />
-                    <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{r.tag}</span>
-                  </div>
-                  <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-3 text-ink">{r.name}</h3>
-                  <p className="text-[14px] text-muted leading-[1.6]">{r.body}</p>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
+          ))}
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-ink text-cream relative overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-            <div className="lg:col-span-8">
-              <Eyebrow color="white">Start here</Eyebrow>
-              <h2
-                className="font-display text-cream max-w-[16ch]"
-                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
-              >
-                Forty five minutes. No pitch.
-              </h2>
-              <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                The audit goes through how your week runs, and what the repetitive parts are
-                costing you comes back in writing within two business days, whether or not you
-                build anything.
-              </p>
-            </div>
-            <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
-              <AuditButton dark />
-              {/* The address the contact page carried (22 Nov 2026 cut). */}
-              <a href="mailto:hello@herbert-aisolutions.com" className="text-[15px] text-cream/65 underline underline-offset-4 decoration-cream/30 hover:text-cream transition-colors">
-                hello@herbert-aisolutions.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AuditClose source="/about (end)" />
     </>
   )
 }
