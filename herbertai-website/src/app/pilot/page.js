@@ -2,6 +2,7 @@ import AuditForm from '../components/site/AuditForm'
 import AfterPilot from '../components/site/AfterPilot'
 import FixesGrid from '../components/site/FixesGrid'
 import PilotQuestions, { QUESTIONS } from '../components/site/pilot-questions'
+import PilotClose from '../components/site/pilot-close'
 import { SAMPLE_TITLE, SAMPLE_JOBS, SAMPLE_TOTAL } from '../components/site/sample-audit'
 import { OG_IMAGE } from '@/app/components/site/og'
 import { JsonLd, breadcrumbs, service, LADDER } from '@/app/components/site/schema'
@@ -300,14 +301,8 @@ export default function Pilot() {
         <PilotQuestions />
       </Section>
 
-      {/* 7. Back up to the form. */}
-      <section className="bg-[#FAFAF8] text-[#111] border-t border-[#111]/10">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-14 pb-20">
-          <p className="text-[20px] font-semibold tracking-[-0.01em]">
-            Ready? <a href="#book" className="underline underline-offset-[5px] decoration-[#111]/30 hover:decoration-[#111]">Book your free AI audit <span aria-hidden>&uarr;</span></a>
-          </p>
-        </div>
-      </section>
+      {/* 7. The form again at the end (Will, 22 Nov 2026: "do B, the form again"). */}
+      <PilotClose />
     </>
   )
 }

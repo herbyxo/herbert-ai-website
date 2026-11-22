@@ -8,7 +8,8 @@ import SourceFields from '../SourceFields'
 //
 // The "Runs itself" charter card on the paper ground, the same on the
 // homepage and /pilot (20 Oct 2026). `message` adds the required "job everyone
-// hates doing" box (/pilot asks it; the homepage keeps to four fields). The
+// hates doing" box (/pilot asks it; the homepage keeps to four fields);
+// message="optional" shows the box without requiring it (a lab option, 22 Nov 2026). The
 // button uses the hero's words and carries no small print (Will, 20 Oct 2026).
 
 // No auto-reply from the form (Will, 9 Nov 2026): the dashboard's own first
@@ -30,7 +31,10 @@ const FIELDS = [
   { id: 'phone', label: 'Phone', type: 'tel', placeholder: '0400 000 000' },
 ]
 
-export default function AuditForm({ source = '/pilot', message = true }) {
+// idPrefix keeps the field ids unique when one page carries two copies of the
+// form (/pilot's first section and its end, 22 Nov 2026); the field names, and
+// so what arrives, are the same.
+export default function AuditForm({ source = '/pilot', message = true, idPrefix = '' }) {
   return (
     <form action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="f3618e04-e007-4ee9-a80d-f96e3cc8d481" />
@@ -44,21 +48,21 @@ export default function AuditForm({ source = '/pilot', message = true }) {
       <div className={L.grid}>
         {FIELDS.map((f) => (
           <div key={f.id}>
-            <label htmlFor={f.id} className={L.label}>{f.label}</label>
-            <input id={f.id} name={f.id} type={f.type} required placeholder={f.placeholder} className={L.input} />
+            <label htmlFor={idPrefix + f.id} className={L.label}>{f.label}</label>
+            <input id={idPrefix + f.id} name={f.id} type={f.type} required placeholder={f.placeholder} className={L.input} />
           </div>
         ))}
       </div>
 
       {message && (
         <div className="mt-4">
-          <label htmlFor="message" className={L.label}>
-            What&apos;s the job in your office everyone hates doing?
+          <label htmlFor={idPrefix + 'message'} className={`${L.label} text-pretty`}>
+            What&apos;s the job in your office everyone hates doing?{message === 'optional' && <span className="text-[#999]"> (optional)</span>}
           </label>
           <textarea
-            id="message"
+            id={idPrefix + 'message'}
             name="message"
-            required
+            required={message !== 'optional'}
             rows={3}
             className={L.input}
             placeholder="e.g. Chasing clients for documents, then copying the details into our system, then emailing everyone an update."

@@ -17,7 +17,8 @@
       "src/app/components/site/sample-audit.js",
       "src/app/components/site/FixesGrid.js",
       "src/app/components/site/AfterPilot.js",
-      "src/app/components/site/pilot-questions.js"
+      "src/app/components/site/pilot-questions.js",
+      "src/app/components/site/pilot-close.js"
     ]
   },
   {

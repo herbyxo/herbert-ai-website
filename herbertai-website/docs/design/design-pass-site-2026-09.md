@@ -2360,7 +2360,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
 | 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [x] | Details built 16 Nov 2026 (Will: "1,2,2,3"); the first-three line dropped from /pilot and /pricing while the Proof lane runs (Will: "Drop it from both"). Done 16 Nov |
 | 6. Questions | [x] | [x] | [x] | [x] | [x] | Done 21 Nov 2026: "A, folded", then the five details ("Yep, recommended": heading kept, all closed on load, plus and minus, two runs of six, twelve rows on phones) |
-| 7. Back to the form | [x] | [~] | [ ] | [x] | [ ] | Brief and options drawn 22 Nov 2026 (today the text link, A the black button, B the form again, C no close); waiting on Will's pick. Built from the skeleton only until then |
+| 7. Back to the form | [x] | [x] | [x] | [x] | [~] | Will (22 Nov 2026): "do B, the form again", built the same day; details drawn, four three ways each (heading, label, fields, ground), waiting on Will's numbers |
 
 Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
 layout; then section 2’s options.
@@ -3465,7 +3465,7 @@ ownership lines is left on the home page, /pilot, /pricing, /about, /faq or
 `llms.txt`; each new line is present; `site-check.py` reports 6 of 6 pages
 clean at 1440 and 375; IndexNow pinged, 200 for 6 URLs.
 
-## [~] /pilot section 7, the close: brief and options (22 Nov 2026)
+## [x] /pilot section 7, the close: brief and options (22 Nov 2026)
 
 Will (22 Nov 2026): "Yes, section 7".
 
@@ -3494,4 +3494,51 @@ real footer below; the footer got two lab-only props, `always` and `paper`):
 
 Tidy at 1440, 1280, 375 and 320: no overflow, no errors, no word alone on a
 line. Sheet: `design-pass-site-2026-11-22-pilot-close.png`.
+
+## [~] /pilot section 7, the close: built, details drawn (22 Nov 2026)
+
+Will (22 Nov 2026), asking what happens after the form is sent: "if they fill
+in their name, business name, email, phone number, and then they click book a
+free AI audit, does it take them to a larger form ... Or I guess they just fill
+in their details, so then I can call them and then they tell me what about
+them. Yeah, do B." Answered from the code: no second form. The submit goes to
+Web3Forms (Will's email) and to the engine's leads page by `/api/lead` (the
+business name and any job typed reach it as answers), and the visitor lands on
+/pilot/thanks, which says Will calls the same day to set a time.
+
+Built: the close is `components/site/pilot-close.js`, the home page's dark band
+with the form, heading "Ready?" and label "Book the Audit" as drawn. The audit
+form takes an `idPrefix` (the end copy uses `end-`) so the two forms on /pilot
+keep unique ids; its subject line reads "/pilot (end)" so Will can see which
+form a lead used. Verified on /pilot at 1440, 1280, 375 and 320, motion on and
+off: no overflow, no errors, no word alone on a line; two forms, no id used
+twice, every label points into its own form, a click on either form's Email
+label focuses that form's field; the two forms send the same hidden fields but
+the subject; the home page's form ids unchanged. The end form asks four fields;
+the first form also requires the job box. Nothing was submitted. Sheet:
+`design-pass-site-2026-11-22-pilot-close-built.png`.
+
+Details, four, three ways each at /lab/pilot-close-details, drawn from the
+section's own component with the real footer:
+1. The heading, with the page's labels and headings as a set and a line test
+   of 33: 1 Ready? (as built, 1 of 5), 2 Got a job eating your time and money?
+   (recommended, 3.5, Will's own home page close, and it answers the first
+   section's line), 3 What's eating your week? (3).
+2. The label: 1 Book the Audit (as built, recommended, title case per the
+   charter), 2 none, 3 Book the audit (the case /pilot's other labels use).
+3. The fields: 1 four (as built, recommended, from Will's own words), 2 five
+   with the job box as in the first form, 3 the job box optional (the form
+   gained a `message="optional"` mode for this).
+4. The ground: 1 the dark band (as built, recommended), 2 paper, 3 paper laid
+   out like the first section with its terms.
+Tidy: the job box's label left "doing?" alone at 375, in the first form too;
+it now wraps balanced. Measured at 1440, 1280, 375 and 320, clean but for 4.3's
+terms. Sheet: `design-pass-site-2026-11-22-pilot-close-details.png`.
+
+Found while checking, for /pilot's later passes (not fixed here):
+- Phones (phase 5): the first section's three terms leave a word alone on a
+  line, "report" at 375 and "obligation", "runs" and "report" at 320.
+- Words (phase 6): five of /pilot's labels are sentence case ("What you get
+  back", "The timeline", "What it fixes", "What comes next", "Questions")
+  against the charter's title-case rule (Will, 13 Oct 2026).
 

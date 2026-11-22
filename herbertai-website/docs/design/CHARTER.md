@@ -269,8 +269,10 @@ moves. As built, 30 Oct 2026, numbered on the page in
    booking, folded, each answer checked against the services agreement and the
    same list in the FAQPage data, all closed on load, two runs of six. Built
    21 Nov (Will: "A, folded"), details the same day ("Yep, recommended"). Done.
-7. Back up to the form: "Ready? Book your free AI audit". Built from the
-   skeleton; details pass not yet run.
+7. The close: the form again in the home page's dark band, "Book the
+   Audit" and "Ready?", so a reader at the bottom books without going back
+   up. Built 22 Nov (Will: "do B, the form again"); details drawn, not yet
+   picked.
 
 ## Settled: the homepage (14 Oct 2026, seven sections from 15 Oct 2026)
 
