@@ -5,7 +5,8 @@
     "also": [
       "src/app/components/runs",
       "src/app/components/Hero.js",
-      "src/app/components/site/AuditForm.js"
+      "src/app/components/site/AuditForm.js",
+      "src/app/components/site/audit-close.js"
     ]
   },
   {
@@ -18,23 +19,50 @@
       "src/app/components/site/FixesGrid.js",
       "src/app/components/site/AfterPilot.js",
       "src/app/components/site/pilot-questions.js",
-      "src/app/components/site/pilot-close.js"
+      "src/app/components/site/pilot-close.js",
+      "src/app/components/site/audit-close.js"
+    ]
+  },
+  {
+    "path": "/pilot/sample-audit",
+    "priority": 0.6,
+    "also": [
+      "src/app/components/site/sample-audit.js",
+      "src/app/components/site/kit.js",
+      "src/app/components/site/audit-close.js"
     ]
   },
   {
     "path": "/pricing",
-    "priority": 0.9
+    "priority": 0.9,
+    "also": [
+      "src/app/components/site/kit.js",
+      "src/app/components/site/audit-close.js",
+      "src/app/components/site/pilot-questions.js"
+    ]
   },
   {
     "path": "/about",
-    "priority": 0.8
+    "priority": 0.8,
+    "also": [
+      "src/app/components/site/kit.js",
+      "src/app/components/site/audit-close.js"
+    ]
   },
   {
     "path": "/faq",
-    "priority": 0.7
+    "priority": 0.7,
+    "also": [
+      "src/app/components/site/kit.js",
+      "src/app/components/site/audit-close.js",
+      "src/app/components/site/pilot-questions.js"
+    ]
   },
   {
     "path": "/privacy",
-    "priority": 0.3
+    "priority": 0.3,
+    "also": [
+      "src/app/components/site/kit.js"
+    ]
   }
 ]

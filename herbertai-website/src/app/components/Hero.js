@@ -43,7 +43,7 @@ export default function Hero() {
             <br />
             Built to run itself.
           </h1>
-          <p className="mt-7 mb-8 text-[19px] leading-[1.45] max-w-[38ch] text-[#333]">
+          <p className="mt-7 mb-8 text-[19px] leading-[1.45] max-w-[38ch] text-[#333] text-balance">
             Custom software and AI for small businesses, built in Adelaide.
           </p>
           <a

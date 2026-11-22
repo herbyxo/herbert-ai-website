@@ -29,18 +29,24 @@ const geistMono = Geist_Mono({
 // Italic only: the serif appears exclusively through `.serif-em`, which sets
 // font-style italic. The upright face was downloaded on every page and used on
 // none of them.
+// Neither of the next two is used by a live page since the hands-off pass of
+// 22 Nov 2026 moved the last May-register pages onto Geist: the serif is used
+// nowhere and Bricolage only by one lab drawing. They stay declared until the
+// lab is removed, but are no longer preloaded, so no visitor downloads them.
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
   weight: '400',
   style: ['italic'],
   variable: '--font-instrument-serif',
   display: 'swap',
+  preload: false,
 })
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   weight: ['700', '800'],
   variable: '--font-bricolage',
   display: 'swap',
+  preload: false,
 })
 
 const SITE_URL = 'https://herbert-aisolutions.com'

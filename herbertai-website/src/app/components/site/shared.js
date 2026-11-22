@@ -88,23 +88,6 @@ export const AUDIT_HREF = '/pilot#book'
 export const HUB_EXAMPLE_CLEARED = false
 export const hubExampleShown = () => HUB_EXAMPLE_CLEARED || process.env.VERCEL_ENV !== 'production'
 
-export function Eyebrow({ children, color = 'ink' }) {
-  const isWhite = color === 'white'
-  return (
-    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
-      <span className={`w-8 h-px ${isWhite ? 'bg-cream/40' : 'bg-ink'}`} />
-      {children}
-    </div>
-  )
-}
-
-export function AuditButton({ dark = false, label = 'Book a free AI audit' }) {
-  const cls = dark
-    ? 'bg-cream text-ink hover:bg-white transition-colors'
-    : 'bg-ink text-cream hover:bg-ink-soft transition-colors'
-  return (
-    <a href={AUDIT_HREF} className={`${cls} px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2`}>
-      {label} <span aria-hidden>&rarr;</span>
-    </a>
-  )
-}
+// Eyebrow and AuditButton, the May register's label and button, went on 22 Nov
+// 2026 with the last pages that used them; components/site/kit.js holds the
+// charter's parts.

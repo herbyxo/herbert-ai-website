@@ -4,7 +4,7 @@ import EmployeesSection from './components/runs/EmployeesSection'
 import OperatingSystemsSection from './components/runs/OperatingSystemsSection'
 import ProductsSection from './components/runs/ProductsSection'
 import { RUNGS } from './components/site/shared'
-import AuditForm from './components/site/AuditForm'
+import AuditClose from './components/site/audit-close'
 
 // Home, restructured 16 Sep 2026 around the ladder (free audit, first AI
 // employee, your AI operating system). The three bucket chapters are retired from
@@ -46,7 +46,7 @@ function HowItWorks() {
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24">
         <div className="mb-12">
           <p className="text-[16px] font-medium text-[#555] mb-4">How It Works</p>
-          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch] text-balance" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
             Start with the job that costs you most.
           </h2>
         </div>
@@ -54,13 +54,13 @@ function HowItWorks() {
           {RUNGS.map((r, i) => (
             <div key={r.n} className="border-t border-[#111]/15 pt-6">
               <p className="text-[16px] font-medium text-[#777] mb-5">Step {i + 1}</p>
-              <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-3">{r.title}</h3>
+              <h3 className="text-[24px] font-semibold tracking-[-0.02em] mb-3 text-balance">{r.title}</h3>
               <ul>
                 {r.facts.map((f) => (
-                  <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8">{f}</li>
+                  <li key={f} className="text-[17px] leading-[1.45] text-[#444] py-2 border-t border-[#111]/8 text-balance">{f}</li>
                 ))}
               </ul>
-              <p className="mt-5 text-[15px] font-medium">{r.price}</p>
+              <p className="mt-5 text-[15px] font-medium text-balance">{r.price}</p>
             </div>
           ))}
         </div>
@@ -122,22 +122,9 @@ function FounderNote() {
 // whole page books without loading /pilot. The form is the shared AuditForm, the same one
 // /pilot#book uses. Options 1 and 2 are drawn in
 // docs/design/design-pass-site-2026-10-19-audit.png.
+// Since 22 Nov 2026 the band is the shared AuditClose, the same one every page
+// ends on, with the heading centred against the form as Will asked for it on
+// /pilot ("Can we have that centered?").
 function FinalCTA() {
-  return (
-    <section className="bg-[#111] text-white border-t border-white/10">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-28 grid lg:grid-cols-2 gap-x-16 gap-y-12 items-end">
-        <div className="min-w-0">
-          <p className="text-[16px] font-medium text-white/60 mb-4">Book the Audit</p>
-          <h2 className="font-bold tracking-[-0.04em] leading-[0.98] max-w-[14ch]" style={{ fontSize: 'clamp(40px, 4.6vw, 68px)' }}>
-            Got a job eating your time and money?
-          </h2>
-        </div>
-        <div className="min-w-0">
-          <div className="rounded-2xl bg-[#FAFAF8] text-[#111] p-6 sm:p-7">
-            <AuditForm source="home" message={false} />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+  return <AuditClose source="home" />
 }

@@ -34,7 +34,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
       <div className="w-full max-w-[1280px] mx-auto px-6 lg:px-12 pt-14 pb-16">
         <div className="mb-8">
           <p className="text-[16px] font-medium text-[#555] mb-4">Operating Systems</p>
-          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+          <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch] text-balance" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
             The whole office, on one screen.
           </h2>
         </div>
@@ -64,7 +64,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
               <div className="min-w-0">
                 <p className="text-[16px] font-medium text-[#777]">{s.name}</p>
                 <p className="mt-1 text-[22px] font-semibold tracking-[-0.02em]">{s.system}</p>
-                <p className="mt-2 text-[16px] leading-[1.5] text-[#555] max-w-[66ch]">{s.short}</p>
+                <p className="mt-2 text-[16px] leading-[1.5] text-[#555] max-w-[66ch] text-pretty">{s.short}</p>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function OperatingSystemsSection({ initial = SCREENS[0].id, autop
           </div>
           <p className="lg:mt-6 text-[16px]">
             <Link href="/pricing" className="font-medium underline underline-offset-4 decoration-[#111]/30 hover:decoration-[#111]">
-              What would your Herbert OS cost? <span aria-hidden>&rarr;</span>
+              What would your Herbert OS cost?&nbsp;<span aria-hidden>&rarr;</span>
             </Link>
           </p>
           </div>

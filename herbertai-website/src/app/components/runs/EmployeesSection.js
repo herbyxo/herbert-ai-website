@@ -35,7 +35,7 @@ function Heading() {
   return (
     <>
       <p className="text-[16px] font-medium text-[#555] mb-4">AI Employees</p>
-      <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch]" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
+      <h2 className="font-bold tracking-[-0.04em] leading-[1] max-w-[18ch] text-balance" style={{ fontSize: 'clamp(36px, 3.6vw, 52px)' }}>
         They do the job. Your team says yes.
       </h2>
     </>

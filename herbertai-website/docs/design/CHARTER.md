@@ -233,6 +233,26 @@ to the home page, the two extra forms to the audit form. The five industry
 pages this charter planned are dropped; the homepage's Operating Systems
 section carries the industries. The lab goes when the rebuild ships.
 
+## Settled: the inner pages (hands-off pass, 22 Nov 2026)
+
+Picked by Claude on Will's word ("you just automate the design pass and choose
+the recommendations, and then I'll see"), not by him; his review may change
+any of it. Ledger: the "Hands-off pass" entries.
+
+- Every page is built from `components/site/kit.js` (label, headings, section,
+  text link) and ends on `components/site/audit-close.js`, the dark band with
+  the form under "Got a job eating your time and money?". The policy page has
+  no close.
+- Questions are folded everywhere, the way /pilot's are.
+- /faq: "What owners ask." and thirteen folded questions, an email link under.
+- /pricing: "The audit is free. The rest is fixed.", the four prices as steps
+  on the first screen, seven money questions under "What you pay, and when.".
+- /about: who builds it, "You deal with the person building it.", recent work.
+- /pilot/sample-audit: the report as a document, in the audit report
+  template's sections and the Business document register.
+- /pilot/thanks: "Your request is in.", in the Interface register.
+- /privacy: "Privacy Policy", in the Business document register.
+
 ## Settled: /pilot (20 Oct 2026)
 
 Will: "B". The audit page every audit button lands on. Paper ground

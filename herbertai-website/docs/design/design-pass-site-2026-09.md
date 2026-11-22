@@ -29,7 +29,7 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; the cold read of every page built 30 Oct 2026 (Will: "All 69"), the charter’s wording test now a cold read (rules 1, 8, 9) |
-| 7. Other pages | [~] | The page list is settled (Will, 22 Nov 2026: "Yes, cut as listed"): home, /pilot, /pricing, /about, /faq, /privacy, with /demo for the cold emails; everything else redirects (`site-tidy-2026-11-22.md`). /pilot: all seven sections done (22 Nov 2026); the page's phases 4 to 6 (whole page, phones, words and claims) still to run. Then /pricing, /about and /faq, which are still in the May register, each through phases 2 to 6. No industry, AI Employees or Herbert Reach pages |
+| 7. Other pages | [~] | Every page is on the charter on `preview/runs-itself` (hands-off pass, 22 Nov 2026): /pilot's whole-page, phone and words passes, then /faq, /pricing, /about, /pilot/sample-audit, /pilot/thanks and /privacy rebuilt from shared parts. Picked by Claude under Will's word, not by him; it waits on his review of the eight sheets (`design-pass-site-2026-11-22-review-*.png`) and his word to merge |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -3617,4 +3617,106 @@ Next" ("Questions" and "AI Audit" already were). The names are the ones Will
 kept on 22 Oct; only the case changed. Claims and links re-read: every figure
 is a published price or the example practice's, the data and hosting lines match
 the agreement (22 Nov), #book and #form resolve.
+
+### [x] Shared parts, header and footer (hands-off, 22 Nov 2026)
+
+`components/site/kit.js` holds the label, the two heading sizes, the section
+and the text link every page is now built from, the same ones /pilot settled
+with Will. `components/site/audit-close.js` is the close: the dark band with
+the form. Picked: every page ends on it (Will picked the form at the end for
+the home page on 20 Oct and for /pilot on 22 Nov), under the home page's line,
+"Got a job eating your time and money?", with /pilot keeping its own. Weighed:
+a plain black button at the end of the inner pages (the register's older rule)
+and no close. The header and footer are on the paper ground on every page; the
+phone menu is in Geist on paper; the header's audit button is off the home
+page, /pilot and the thanks page only. The policy page has no close.
+
+### [x] /faq (hands-off, 22 Nov 2026)
+
+Brief: reached from the footer and from AI search by someone after one answer;
+thirteen general questions, open in cream cards; no search impressions in three
+months. Picked: the thirteen folded the way /pilot's are, one idiom for
+questions across the site (weighed: today's open cards; folding the page into
+/pilot, which Will ruled out by naming /faq as a page to keep). Heading "What
+owners ask." for "Common questions. Straight answers." (a mirrored pair). No
+intro; "Email a question" under the list. Answers rewritten as plain facts: the
+five industries, the software line as /pilot's, ownership as the agreement,
+"Is there any lock-in?" for "Are there contracts or lock-in?" (a build has an
+agreement), "Where is Herbert AI based?". The FAQPage data reads the same list.
+Close calls: the new heading, the reworded contracts question.
+
+### [x] /pricing (hands-off, 22 Nov 2026)
+
+Brief: reached from the menu, the home page's "See how it's priced" and /pilot
+by someone checking the price before giving time; the $25,000 has put an owner
+off, $3,500 has not. Picked: the four prices as steps in the home page's How It
+Works form, starting on the first screen (weighed: today's numbered rows on a
+second screen; a row of four price tiles above the detail, which says each
+price twice). Heading kept, the line under it cut to two facts, no button in
+the first section (the header's is on the same screen). The seven money
+questions folded under "What you pay, and when."; "What does $3,500 get me?",
+"When do I pay?", "Is there any lock-in?". Step 3's last line ends at "you are
+told so". 3,005px at 1440, from 4,314. Close calls: the new H2, and the kept
+heading's two beats.
+
+### [x] /about (hands-off, 22 Nov 2026)
+
+Brief: opened by someone who arrived from an email, LinkedIn or a referral to
+check the person is real. Picked: who builds it, why one builder, recent work,
+the close (weighed: keeping the three steps with prices, which the home page,
+/pilot and /pricing already carry; a photo tile, with no photo to put in it).
+The "W" tile is gone and the page takes a real photo when `FOUNDER_PHOTO` is
+set. "You deal with the person building it." for "No agency. No template." (a
+mirrored pair), its paragraphs as plain facts, with the agreement's written
+guide added as the answer to "you are one person". The sentence pointing at
+the services page's phone demo went with that page. Recent work as two plain
+rows, the brokerage first. The email address under the introduction. Close
+calls: the steps cut, the new heading, the brokerage row no longer saying
+"Currently building".
+
+### [x] /pilot/sample-audit, /pilot/thanks, /privacy (hands-off, 22 Nov 2026)
+
+The sample report: drawn as the document itself on a white sheet, in the
+sections and voice of the report Herbert AI sends
+(`business/sales/audit-report-template.md`, the Business document register):
+Purpose, Findings, Recommendation, Further Options, Assumptions, Next Step,
+Contact. "The next twelve months" is Further Options, "the pilot" is "the
+first build", "Scoped" is "Priced after the first build", and every figure is
+unchanged. Close call: /pilot's own sheet still heads its table "Where the
+time goes" with "Job" and "Who does it" (Will's 22 Oct pick), where the report
+now says Findings, "Task" and "Performed by".
+
+The thanks page: "Your request is in." for "Got it. Talk today.", third person,
+"Check your email for a confirmation.", no header button. Close call: the
+heading.
+
+The privacy policy: the Business document register, "Privacy Policy" for "Your
+data, plainly.", no close. Two statements brought up to date: one form now (the
+audit request), and no page-view count of its own (removed 3 Nov). Close call:
+the forms paragraph's account of the engine (an AI model sorting the request,
+a reply by email or text) was carried over and not re-checked against the
+engine.
+
+### [x] Home, and what was left (hands-off, 22 Nov 2026)
+
+Home: wrapping only (How It Works' heading, facts, titles and prices, the AI
+Employees and Operating Systems headings, the line under the hero), and the
+close is the shared band, so its heading is now centred against the form as
+Will asked for on /pilot (close call: it sat at the form's foot). Not changed:
+the hero's headline puts "itself." on a fourth line at 1440; the hero is
+locked, so it is listed for Will.
+
+Removed with the last pages that used them: `RevealOnScroll`, and `Eyebrow` and
+`AuditButton` from shared.js. Bricolage and the serif are no longer preloaded
+(one lab drawing still uses Bricolage). /pilot/sample-audit is in the sitemap.
+
+Checked: the production build lists the same ten routes; a crawl of every
+internal link found none that redirects or fails and all eighteen retired
+addresses still redirect; every page at 1440, 1280, 1024, 375, 360 and 320 has
+no overflow and no page or console errors; no word alone on a line in the new
+pages but the report's contact address, which is on its own line on purpose.
+Review sheets, one per page: `design-pass-site-2026-11-22-review-*.png`.
+
+Still open after this pass: Will's review; phase 8 (the walkthrough, removing
+the lab, the merge on his word).
 
