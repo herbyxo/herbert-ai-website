@@ -29,7 +29,7 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; the cold read of every page built 30 Oct 2026 (Will: "All 69"), the charter’s wording test now a cold read (rules 1, 8, 9) |
-| 7. Other pages | [~] | Every page is on the charter on `preview/runs-itself` (hands-off pass, 22 Nov 2026): /pilot's whole-page, phone and words passes, then /faq, /pricing, /about, /pilot/sample-audit, /pilot/thanks and /privacy rebuilt from shared parts. Picked by Claude under Will's word, not by him; it waits on his review of the eight sheets (`design-pass-site-2026-11-22-review-*.png`) and his word to merge |
+| 7. Other pages | [~] | Every page is on the charter and live (hands-off pass, merged 22 Nov 2026 on Will's "merge"). Now Will's own page pass: he looks at each page in turn and his findings are built (table under "Will's page pass"). Home is first |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -3719,4 +3719,33 @@ Review sheets, one per page: `design-pass-site-2026-11-22-review-*.png`.
 
 Still open after this pass: Will's review; phase 8 (the walkthrough, removing
 the lab, the merge on his word).
+
+Will (22 Nov 2026): "merge, and then lets do a pass where i actually look at
+each page". main fast-forwarded from dc195ee to 283d2d0; production served it
+in about half a minute. Checked on herbert-aisolutions.com: all eight pages
+serve the new design and none carries the old one's classes; the link crawl
+found nothing broken or redirecting and the eighteen retired addresses still
+redirect; the sitemap lists seven pages (the sample report is in it now);
+`site-check.py` reports 7 of 7 pages clean at 1440 and 375; IndexNow pinged,
+200 for 7 URLs.
+
+## [~] Will's page pass (from 22 Nov 2026)
+
+Will looks at each live page himself, one at a time, and says what he sees.
+His findings are his words and are recorded here as he gives them; each page's
+findings are built on `preview/runs-itself`, shown, and merged on his word. The
+hands-off picks stand until he changes them, and the close calls listed on each
+review sheet are put to him when he reaches that page. A page he says nothing
+about stays as it is.
+
+| Page | Looked | Findings | Built |
+|---|---|---|---|
+| Home `/` | [ ] | | |
+| How it works `/pilot` | [ ] | | |
+| Pricing `/pricing` | [ ] | | |
+| About `/about` | [ ] | | |
+| FAQ `/faq` | [ ] | | |
+| Sample report `/pilot/sample-audit` | [ ] | | |
+| Thanks `/pilot/thanks` | [ ] | | |
+| Privacy `/privacy` | [ ] | | |
 

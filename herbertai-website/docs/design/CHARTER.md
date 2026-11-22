@@ -237,7 +237,8 @@ section carries the industries. The lab goes when the rebuild ships.
 
 Picked by Claude on Will's word ("you just automate the design pass and choose
 the recommendations, and then I'll see"), not by him; his review may change
-any of it. Ledger: the "Hands-off pass" entries.
+any of it. Merged and live on 22 Nov 2026 on his "merge"; his own page pass
+follows. Ledger: the "Hands-off pass" entries.
 
 - Every page is built from `components/site/kit.js` (label, headings, section,
   text link) and ends on `components/site/audit-close.js`, the dark band with
