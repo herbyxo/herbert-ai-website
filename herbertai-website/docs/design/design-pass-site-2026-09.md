@@ -3347,3 +3347,13 @@ not run. The preview branch holds everything since 16 Nov (section 4 set B,
 section 5's details, the first-three offer dropped, section 6) and has not
 been merged to main.
 
+Will (22 Nov 2026): "Do this task here: 'Website tidy-up: settle which pages
+stay'". The inventory (all 25 page files, what links to each, Search Console's
+last three months, where the cold emails and ads point) and the recommended cut
+are in `site-tidy-2026-11-22.md`. Recommended: keep the home page, /pilot (with
+the sample audit and its thanks page), /pricing, /about, /faq, /privacy and the
+/demo pages the cold emails use; remove /services, /industries and its four
+pages, /work and its two examples, /start, /contact, the three old search pages
+and the three paid landing pages, each with a redirect; the lab goes when the
+rebuild ships. Nothing removed; waiting on Will's word on the list.
+
