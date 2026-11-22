@@ -3405,7 +3405,7 @@ the header is How it works, Pricing, About; `site-check.py` reports 6 of 6
 pages clean at 1440 and 375. IndexNow pinged, 200 for 6 URLs. The lab is still
 live on production until phase 8.
 
-## [~] Ownership and hosting wording matched to the services agreement (22 Nov 2026)
+## [x] Ownership and hosting wording matched to the services agreement (22 Nov 2026)
 
 Will (22 Nov 2026): "Yes, match it". First raised 16 Nov. The agreement
 (`business/sales/services-agreement-template.md`): every record belongs to the
@@ -3456,4 +3456,12 @@ Seen while checking and left for those pages' own passes, all already on
 production: /about and /faq run off the side at 320 (37px and 10px), and the
 home page's How it works facts leave a word alone on a line at several widths
 ("figures", "sent" at 1440).
+
+Will (22 Nov 2026), shown the new lines: "Yes, merge". main fast-forwarded
+from 55893f3 to d3bb3fb, which also took another session's one-line change
+live (968e07b, Will's LinkedIn address in the structured data). Production
+served it within a minute. Checked on herbert-aisolutions.com: none of the old
+ownership lines is left on the home page, /pilot, /pricing, /about, /faq or
+`llms.txt`; each new line is present; `site-check.py` reports 6 of 6 pages
+clean at 1440 and 375; IndexNow pinged, 200 for 6 URLs.
 
