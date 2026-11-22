@@ -14,7 +14,7 @@ Herbert AI gets named when an Australian owner of a small business asks a search
 - Bing had none of the site's pages indexed. A `site:` search returned an unrelated site, and the only result for the domain was Will's LinkedIn profile. Bing's index feeds Copilot and much of ChatGPT search, so this is the largest single gap.
 - Google Maps showed no listing for "Herbert AI Adelaide" (it returned Heubert Technologies and others). The Business Profile exists (Herbert AI, Adelaide SA) but its status is "Verification required", so it shows nowhere.
 - Brave, which Claude's web search uses, had only the homepage indexed.
-- The LinkedIn company page exists (linkedin.com/company/herbert-ai, created 9 Oct 2026, rebranded 15 Oct) but was not linked from the site. Will's own profile is linkedin.com/in/will-herbert-founder.
+- The LinkedIn company page exists (linkedin.com/company/herbert-ai, created 9 Oct 2026, rebranded 15 Oct) but was not linked from the site. Will's own profile is linkedin.com/in/william-joel-herbert.
 - The name collides with Herbert Digital, Herbert Retail and other Herbert businesses, so every profile has to pair "Herbert AI" with Adelaide and the domain.
 
 ## What people search (Google Ads keyword planner, 20 Oct 2026)

@@ -23,7 +23,7 @@ const BUSINESS_SAME_AS = [
   'https://www.crunchbase.com/organization/herbert-ai',
   'https://github.com/herbyxo',
 ]
-const WILL_SAME_AS = ['https://www.linkedin.com/in/will-herbert-founder', 'https://github.com/herbyxo']
+const WILL_SAME_AS = ['https://www.linkedin.com/in/william-joel-herbert', 'https://github.com/herbyxo']
 
 const AUD = (price, extra = {}) => ({ '@type': 'PriceSpecification', priceCurrency: 'AUD', price, ...extra })
 
