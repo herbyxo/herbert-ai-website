@@ -105,8 +105,8 @@ the original idea from each industry, judged in
 (Hospitality), Joy · Milestones (Health), and Ray · Promises, which works in
 every industry. The first roster (Steve · Front Desk, Penny · Document Chaser,
 Max · Quote Follow-up, Emma · Maintenance, Archie · Invoice Chaser, Tess ·
-Bookings) moves to the industry pages and inside the full systems; Tess
-retires. Every employee's visual has one shape: one line from a real record
+Bookings) moves inside the full systems (the industry pages it was also to
+move to were cut on 22 Nov 2026); Tess retires. Every employee's visual has one shape: one line from a real record
 lighting up, one card with one thing to approve, one counter moving.
 
 ## Nothing is claimed, things happen
@@ -216,6 +216,22 @@ product". So:
 - **The board's form:** the software itself, a clean product window. Never a
   metaphor for the product (a departures board, an andon board) where the
   product can be shown.
+
+## Settled: the pages (22 Nov 2026)
+
+Will (21 Nov 2026): "I think we need to reduce the number of pages I have on
+my site ... I don't think I need an industries or a what gets built page. I
+think I need to do a real tidy up." Then, on the inventory and the recommended
+cut (`site-tidy-2026-11-22.md`), 22 Nov 2026: "Yes, cut as listed".
+
+The site is the home page, /pilot (how it works, with the sample audit and the
+page its form lands on), /pricing, /about, /faq and /privacy. The header is
+How it works, Pricing, About. /demo/[industry] stays for the cold emails and
+is not a site page. Everything else redirects: what gets built, the industry
+pages, the work pages, the three old search pages and the paid landing pages
+to the home page, the two extra forms to the audit form. The five industry
+pages this charter planned are dropped; the homepage's Operating Systems
+section carries the industries. The lab goes when the rebuild ships.
 
 ## Settled: /pilot (20 Oct 2026)
 

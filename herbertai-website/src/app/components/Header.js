@@ -53,9 +53,9 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink">
+          {/* Three links since the 22 Nov 2026 cut (Will: "Yes, cut as listed"):
+              what gets built and industries went with their pages. */}
           <NavLink href="/pilot">How it works</NavLink>
-          <NavLink href="/services">What gets built</NavLink>
-          <NavLink href="/industries">Industries</NavLink>
           <NavLink href="/pricing">Pricing</NavLink>
           <NavLink href="/about">About</NavLink>
         </nav>
@@ -108,11 +108,8 @@ function NavLink({ href, children }) {
 function MobileOverlay({ onClose }) {
   const links = [
     ['/pilot', 'How it works'],
-    ['/services', 'What gets built'],
-    ['/industries', 'Industries'],
     ['/pricing', 'Pricing'],
     ['/about', 'About'],
-    ['/contact', 'Contact'],
   ]
 
   // body scroll lock + ESC to close

@@ -58,12 +58,6 @@ export default function PilotThanks() {
           >
             <span aria-hidden>&larr;</span> Back to home
           </Link>
-          <Link
-            href="/work"
-            className="text-[14px] font-medium text-ink hover:text-muted transition"
-          >
-            See what gets built &rarr;
-          </Link>
         </div>
       </div>
     </section>

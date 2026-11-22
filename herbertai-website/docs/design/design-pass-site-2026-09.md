@@ -29,7 +29,7 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; the cold read of every page built 30 Oct 2026 (Will: "All 69"), the charter’s wording test now a cold read (rules 1, 8, 9) |
-| 7. Other pages | [~] | /pilot: sections 1 to 6 done (6 on 21 Nov 2026); section 7 (Back up to the form) and /pilot’s phases 4 to 6 still to run. **The page list itself is open** (Will, 21 Nov 2026: "I think we need to reduce the number of pages I have on my site ... I don't think I need an industries or a what gets built page. I think I need to do a real tidy up"): settle which pages stay before any further per-page pass. Until then nothing else here is planned: the industry pages, the AI Employees page, a Herbert Reach page, /pricing and /about were the earlier list |
+| 7. Other pages | [~] | The page list is settled (Will, 22 Nov 2026: "Yes, cut as listed"): home, /pilot, /pricing, /about, /faq, /privacy, with /demo for the cold emails; everything else redirects (`site-tidy-2026-11-22.md`). /pilot: sections 1 to 6 done, section 7 (Back up to the form) and the page's phases 4 to 6 still to run. Then /pricing, /about and /faq, which are still in the May register, each through phases 2 to 6. No industry, AI Employees or Herbert Reach pages |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -3356,4 +3356,39 @@ the sample audit and its thanks page), /pricing, /about, /faq, /privacy and the
 pages, /work and its two examples, /start, /contact, the three old search pages
 and the three paid landing pages, each with a redirect; the lab goes when the
 rebuild ships. Nothing removed; waiting on Will's word on the list.
+
+## [x] The page list settled and the cut made (22 Nov 2026)
+
+Will (22 Nov 2026), on the inventory and recommended cut: "Yes, cut as listed".
+
+The site went from 25 page files to 10 on `preview/runs-itself`: the home page,
+/pilot with its sample audit and thanks page, /pricing, /about, /faq, /privacy,
+the /demo page the cold emails use, and the lab's two files until the rebuild
+ships. Retired with a 308 each: /services, /industries and its four pages,
+/work and its two example pages, /ai-receptionist, /web-design-adelaide,
+/google-ads-adelaide, the three /lp pages and /start/thanks to the home page;
+/start and /contact to the audit form. The redirects name exact paths, because
+`public/work` holds images served under /work/. The header is How it works,
+Pricing, About, on laptops and in the phone menu; the footer's two columns
+shortened and its row of old search links went. `seo-routes.json` and
+`llms.txt` list the six organic pages. Links that pointed at a retired page
+were changed where they sat: the FAQ's "get in touch" is the email address,
+/pricing lost "Start a project", /about's two work cards are plain cards and
+its last section carries the email address, the audit form's thanks page lost
+"See what gets built". Four components only the retired pages used were
+deleted.
+
+Checked: the production build lists exactly the kept pages; a crawl of every
+internal link on the kept pages found none that redirects or fails; all
+eighteen retired addresses return 308 to the right place; images under /work/
+load; the sitemap lists six pages; every kept page at 1440 and 375 has no
+overflow and no page or console errors. What was left alone is listed at the
+foot of `site-tidy-2026-11-22.md` (four components unused before the cut, the
+retired pages' files in `public/`, /demo/brokers returning 404 since before
+the cut, the ownership wording still unruled on, the sample audit not in the
+sitemap).
+
+The phase 7 plan changes with it: the industry pages on new slugs, an AI
+Employees page and a Herbert Reach page are no longer planned. What remains is
+/pilot's section 7 and whole-page passes, then /pricing, /about and /faq.
 

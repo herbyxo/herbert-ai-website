@@ -51,6 +51,26 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      // The site was cut to the pages it needs on 22 Nov 2026 (Will: "Yes, cut
+      // as listed"; docs/design/site-tidy-2026-11-22.md): what gets built, the
+      // industry pages, the work pages, the three old search pages and the
+      // paid landing pages go to the home page, which now shows what they
+      // showed; the two extra forms go to the audit form. Exact paths, never
+      // /work/:path*, because public/work holds images served under /work/.
+      ...[
+        '/services',
+        '/industries',
+        '/industries/:slug',
+        '/work',
+        '/work/marketing-engine',
+        '/work/operations-hub',
+        '/ai-receptionist',
+        '/web-design-adelaide',
+        '/google-ads-adelaide',
+        '/lp/:slug',
+        '/start/thanks',
+      ].map((source) => ({ source, destination: '/', permanent: true })),
+      ...['/start', '/contact'].map((source) => ({ source, destination: '/pilot#book', permanent: true })),
     ]
   },
 };

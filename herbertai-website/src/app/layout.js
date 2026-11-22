@@ -127,7 +127,7 @@ export default function RootLayout({ children }) {
             competed for bandwidth in the window before the headline painted:
             the tag measuring ad conversions was hurting the ad quality score
             that decides whether the ads serve at all. Conversions are unaffected
-            because the event fires on /start/thanks, which queues into
+            because the event fires on /pilot/thanks, which queues into
             window.dataLayer before this library arrives, and gtag replays that
             queue on load. */}
         <Script

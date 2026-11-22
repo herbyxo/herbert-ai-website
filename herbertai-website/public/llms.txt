@@ -39,13 +39,8 @@ Herbert Reach is a product by Herbert AI, in development: a marketing department
 - [Home](https://herbert-aisolutions.com/): how it works, the AI employees, Herbert OS by industry, Herbert Reach, and the audit booking form.
 - [Free AI audit](https://herbert-aisolutions.com/pilot): what the audit covers, a sample of the written report, how the first AI employee is built, questions and answers, and the booking form.
 - [Pricing](https://herbert-aisolutions.com/pricing): the four steps and what each costs.
-- [What gets built](https://herbert-aisolutions.com/services): AI employees, the system they run in, and what comes after.
-- [Industries](https://herbert-aisolutions.com/industries), with pages for [accountants and bookkeepers](https://herbert-aisolutions.com/industries/accountants), [allied health](https://herbert-aisolutions.com/industries/allied-health), [trades](https://herbert-aisolutions.com/industries/trades) and [real estate and property management](https://herbert-aisolutions.com/industries/real-estate).
-- [The work](https://herbert-aisolutions.com/work): working examples, including a property manager's dashboard to click into and an example marketing engine.
 - [About](https://herbert-aisolutions.com/about): Will Herbert and how an engagement runs.
 - [FAQ](https://herbert-aisolutions.com/faq): common questions on pricing, timelines and process.
-- [Contact](https://herbert-aisolutions.com/contact): email and phone.
-- Also: [AI receptionist](https://herbert-aisolutions.com/ai-receptionist), [web design in Adelaide](https://herbert-aisolutions.com/web-design-adelaide), [Google Ads management in Adelaide](https://herbert-aisolutions.com/google-ads-adelaide).
 
 ## Common questions
 

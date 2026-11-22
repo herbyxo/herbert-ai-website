@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { Eyebrow, AuditButton } from '../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
@@ -114,11 +113,8 @@ export default function Pricing() {
             no ranges that turn into invoices, and nothing you pay for before you have seen
             what it would save you.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-6">
+          <div className="mt-10">
             <AuditButton />
-            <Link href="/start" className="text-[15px] font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
-              Already know what you want? Start a project
-            </Link>
           </div>
         </div>
       </section>

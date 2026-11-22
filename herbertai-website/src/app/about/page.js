@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { RUNGS, Eyebrow, AuditButton } from '../components/site/shared'
 import { OG_IMAGE } from '@/app/components/site/og'
@@ -25,13 +24,11 @@ const work = [
     tag: 'Hospitality · AI operating system',
     name: 'A booking platform for a barbershop',
     body: 'Custom site, online bookings with deposits and tipping, an owner dashboard, SMS reminders and automated review collection. Built and run live for months by one person.',
-    href: '/work',
   },
   {
     tag: 'Finance · Currently building',
     name: 'An operations hub for a finance brokerage',
     body: 'Every client file on one board, documents chased automatically, every email drafted for a person to approve. The system a whole office works out of.',
-    href: '/work',
   },
 ]
 
@@ -160,17 +157,15 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-5">
             {work.map((r, i) => (
               <RevealOnScroll key={r.name} delay={i * 0.08} className="h-full">
-                <Link href={r.href} className="bg-white border border-line rounded-3xl p-7 hover:border-ink/40 transition-colors block lift h-full">
+                {/* Plain cards since the 22 Nov 2026 cut: /work, where they linked, is gone. */}
+                <div className="bg-white border border-line rounded-3xl p-7 h-full">
                   <div className="flex items-center gap-2 mb-7">
                     <span className="w-1.5 h-1.5 rounded-full bg-ink" />
                     <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{r.tag}</span>
                   </div>
                   <h3 className="text-[22px] font-medium tracking-[-0.02em] mb-3 text-ink">{r.name}</h3>
-                  <p className="text-[14px] text-muted leading-[1.6] mb-7">{r.body}</p>
-                  <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
-                    See the systems <span aria-hidden>&rarr;</span>
-                  </span>
-                </Link>
+                  <p className="text-[14px] text-muted leading-[1.6]">{r.body}</p>
+                </div>
               </RevealOnScroll>
             ))}
           </div>
@@ -196,6 +191,10 @@ export default function About() {
             </div>
             <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
               <AuditButton dark />
+              {/* The address the contact page carried (22 Nov 2026 cut). */}
+              <a href="mailto:hello@herbert-aisolutions.com" className="text-[15px] text-cream/65 underline underline-offset-4 decoration-cream/30 hover:text-cream transition-colors">
+                hello@herbert-aisolutions.com
+              </a>
             </div>
           </div>
         </div>

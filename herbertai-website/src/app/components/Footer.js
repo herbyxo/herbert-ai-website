@@ -17,14 +17,15 @@ const ownerUrl = process.env.NEXT_PUBLIC_OWNER_CONSOLE_URL
 // header's mark and Geist name in place of the display-font wordmark and its
 // glowing dot, and the ground follows the header (paper on the homepage, cream
 // on pages still in the May register until phase 7 redoes them).
+// The 22 Nov 2026 cut (Will: "Yes, cut as listed") took the site to the home
+// page, how it works, pricing, about, the FAQ and privacy, so both columns
+// shortened and the three old search pages left the bottom row with their
+// pages (docs/design/site-tidy-2026-11-22.md).
 const NAV_COLS = [
   {
     label: 'Work',
     links: [
       ['/pilot', 'How it works'],
-      ['/services', 'What gets built'],
-      ['/work', 'The work'],
-      ['/industries', 'Industries'],
       ['/pricing', 'Pricing'],
       ['/about', 'About'],
     ],
@@ -33,8 +34,6 @@ const NAV_COLS = [
     label: 'Talk',
     links: [
       ['/pilot#book', 'Book a free AI audit'],
-      ['/start', 'Start a project'],
-      ['/contact', 'Contact'],
       ['/faq', 'FAQ'],
       ['mailto:hello@herbert-aisolutions.com', 'hello@herbert-aisolutions.com'],
     ],
@@ -97,15 +96,7 @@ export default function Footer() {
         </div>
 
         <div className={`mt-16 pt-6 border-t ${PAPER.includes(pathname) ? 'border-[#111]/10' : 'border-line'} flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
-          <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <span className="whitespace-nowrap">© {new Date().getFullYear()} Herbert AI</span>
-            {/* The search pages, kept as real links in the quiet row (Will, 20 Oct
-                2026: the Also column "ruins the aesthetic", but keep them if
-                removing them hurts their ranking). */}
-            <Link href="/ai-receptionist" className="whitespace-nowrap hover:text-ink transition-colors">AI receptionist</Link>
-            <Link href="/web-design-adelaide" className="whitespace-nowrap hover:text-ink transition-colors">Web design</Link>
-            <Link href="/google-ads-adelaide" className="whitespace-nowrap hover:text-ink transition-colors">Google Ads</Link>
-          </span>
+          <span className="whitespace-nowrap">© {new Date().getFullYear()} Herbert AI</span>
           <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link href="/privacy" className="whitespace-nowrap hover:text-ink transition-colors">Privacy</Link>
             <span className="whitespace-nowrap">Adelaide &middot; South Australia</span>

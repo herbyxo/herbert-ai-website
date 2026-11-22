@@ -108,9 +108,9 @@ export default function FAQ() {
             Everything you might want to know before working with Herbert AI,
             custom software and AI for small businesses, built in Adelaide. If you don&apos;t see
             your question answered below, just{' '}
-            <Link href="/contact" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
+            <a href="mailto:hello@herbert-aisolutions.com" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
               get in touch
-            </Link>.
+            </a>.
           </p>
         </div>
       </section>
