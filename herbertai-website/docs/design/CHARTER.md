@@ -270,9 +270,10 @@ moves. As built, 30 Oct 2026, numbered on the page in
    same list in the FAQPage data, all closed on load, two runs of six. Built
    21 Nov (Will: "A, folded"), details the same day ("Yep, recommended"). Done.
 7. The close: the form again in the home page's dark band, "Book the
-   Audit" and "Ready?", so a reader at the bottom books without going back
-   up. Built 22 Nov (Will: "do B, the form again"); details drawn, not yet
-   picked.
+   Audit" over the first section's own line, "Find the job eating your time
+   and money.", centred against the form, so the page opens and closes on it
+   and a reader at the bottom books without going back up. Built 22 Nov
+   (Will: "do B, the form again"), details the same day. Done.
 
 ## Settled: the homepage (14 Oct 2026, seven sections from 15 Oct 2026)
 

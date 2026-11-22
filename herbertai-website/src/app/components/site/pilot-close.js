@@ -10,6 +10,11 @@ import AuditForm from './AuditForm'
 // same code; the page uses the defaults. ground: 'dark' (the home page's band),
 // 'paper' (the page's own ground), 'hero' (paper, laid out like /pilot's first
 // section with its three terms). label: null for none.
+//
+// Will, 22 Nov 2026, the details: the heading is the first section's own line,
+// so the page opens and closes on it ("I think we make it find the job, eating
+// your time and money"); label, fields and dark band as built; the heading
+// centred against the form ("Can we have that centered?").
 
 const HERO_TERMS = [
   ['Free', 'No obligation'],
@@ -17,11 +22,11 @@ const HERO_TERMS = [
   ['2 days', 'Your written report'],
 ]
 
-export default function PilotClose({ heading = 'Ready?', label = 'Book the Audit', message = false, ground = 'dark' }) {
+export default function PilotClose({ heading = 'Find the job eating your time and money.', label = 'Book the Audit', message = false, ground = 'dark' }) {
   const dark = ground === 'dark'
   return (
     <section className={dark ? 'bg-[#111] text-white border-t border-white/10' : 'bg-[#FAFAF8] text-[#111] border-t border-[#111]/10'}>
-      <div className={`max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-28 grid lg:grid-cols-2 gap-x-16 gap-y-12 ${ground === 'hero' ? 'items-start' : 'items-end'}`}>
+      <div className={`max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-28 grid lg:grid-cols-2 gap-x-16 gap-y-12 ${ground === 'hero' ? 'items-start' : 'items-center'}`}>
         <div className="min-w-0">
           {label && <p className={`text-[16px] font-medium mb-4 ${dark ? 'text-white/60' : 'text-[#555]'}`}>{label}</p>}
           <h2 className="font-bold tracking-[-0.04em] leading-[0.98] max-w-[14ch] text-balance" style={{ fontSize: 'clamp(40px, 4.6vw, 68px)' }}>

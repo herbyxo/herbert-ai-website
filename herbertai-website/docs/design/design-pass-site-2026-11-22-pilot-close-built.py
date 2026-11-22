@@ -22,13 +22,14 @@ CHECK_JS = r"""() => {
   const diff = forms.length === 2 ? Object.keys({ ...hidden[0], ...hidden[1] }).filter(k => hidden[0][k] !== hidden[1][k]) : ['forms: ' + forms.length];
   const req = forms.map(f => [...f.querySelectorAll('[required]')].map(e => e.name));
   return { forms: forms.length, dup, labels, diff, subjects: hidden.map(h => h.subject), required: req } }"""
-TIDY_JS = r"""() => { const s = [...document.querySelectorAll('section')].find(x => x.querySelector('h2')?.textContent.trim() === 'Ready?'); const out = [];
+TIDY_JS = r"""() => { const s = [...document.querySelectorAll('section')].find(x => x.querySelector('h2')?.textContent.trim() === 'Find the job eating your time and money.'); const out = [];
   for (const el of s.querySelectorAll('h2, p, label, button')) { if (!el.offsetParent) continue;
     const tn = []; const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); while (w.nextNode()) tn.push(w.currentNode);
     const words = []; for (const n of tn) { const re = /\S+/g; let m; while ((m = re.exec(n.data))) { const r = document.createRange(); r.setStart(n, m.index); r.setEnd(n, m.index + m[0].length); const b = r.getBoundingClientRect(); if (b.width) words.push({ t: m[0], top: Math.round(b.top) }); } }
     if (words.length < 3) continue; const tops = [...new Set(words.map(x => x.top))]; if (tops.length < 2) continue;
     const last = Math.max(...tops); const on = words.filter(x => Math.abs(x.top - last) < 4); if (on.length === 1) out.push(on[0].t); }
-  return [out, Math.round(s.getBoundingClientRect().height)] }"""
+  const cols = s.querySelectorAll(':scope > div > div'); const c = [...cols].map(e => { const r = e.getBoundingClientRect(); return r.top + r.height / 2 });
+  return [out, Math.round(s.getBoundingClientRect().height), Math.round(Math.abs(c[0] - c[1]))] }"""
 
 
 async def main():
@@ -45,7 +46,7 @@ async def main():
                 await pg.evaluate("() => document.querySelectorAll('body *').forEach(el => { if (getComputedStyle(el).position === 'fixed') el.style.display = 'none' })")
                 sw, iw = await pg.evaluate("() => [document.documentElement.scrollWidth, window.innerWidth]")
                 if sw > iw: over.append(f"{vw} {motion}: {sw} > {iw}")
-                w, h = await pg.evaluate(TIDY_JS); heights[vw] = h
+                w, h, off = await pg.evaluate(TIDY_JS); heights[vw] = (h, off)
                 if w: tidy.append(f"{vw} {motion}: {w}")
                 if vw == 1440 and motion == "no-preference":
                     c = await pg.evaluate(CHECK_JS)
@@ -59,7 +60,7 @@ async def main():
                     foc2 = await pg.evaluate("() => document.activeElement.id")
                     facts.append(f"clicking the first form's Email label focuses #{foc2}")
                 if motion == "no-preference":
-                    sec = pg.locator("section:has(h2:text-is('Ready?'))")
+                    sec = pg.locator("section:has(h2:text-is('Find the job eating your time and money.'))")
                     await sec.scroll_into_view_if_needed(); await pg.wait_for_timeout(250)
                     box = await sec.bounding_box(); foot = await pg.locator("footer").bounding_box()
                     await pg.screenshot(path=str(A / f"pilot-close-built-{vw}.png"), full_page=True,
@@ -72,13 +73,13 @@ async def main():
         await b.close()
     print("errors:", errs or "none"); print("overflow:", over or "none"); print("tidy:", tidy or "clean")
     for f in facts: print(f)
-    print("close heights:", heights)
+    print("close height and heading-to-form centre offset (px):", heights)
     imgs = "".join(f'<figure><figcaption>{vw}</figcaption><img src="assets-2026-11-22/pilot-close-built-{vw}.png" style="width:{w}px"></figure>' for vw, w in [(1440, 900), (1280, 900), (375, 260), (320, 230)])
     html = f"""<!doctype html><meta charset=utf-8><title>/pilot the close, as built</title><style>
 body{{margin:0;background:#151515;color:#eee;font:14px/1.45 -apple-system,Helvetica,Arial,sans-serif;padding:36px 40px}} h1{{font-size:26px;margin:0 0 8px;font-weight:600}} .intro{{color:#aaa;max-width:1200px;margin:0 0 18px}}
 .wrap{{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}} figure{{margin:0}} figcaption{{color:#aaa;margin-bottom:6px}} img{{display:block;border:1px solid #333}}</style><body>
-<h1>/pilot section 7, the close, as built (Will, 22 Nov 2026: B, the form again)</h1>
-<p class="intro">The real page's end at 1440, 1280, 375 and 320: the bottom of the questions, the dark close band with the form, the footer. {' · '.join(facts)}.</p>
+<h1>/pilot section 7, the close, as built (Will, 22 Nov 2026: B, the form again; details: the first section's heading, centred against the form)</h1>
+<p class="intro">The real page's end at 1440, 1280, 375 and 320: the bottom of the questions, the dark close band with the form, its heading the first section's own line, centred against the form, then the footer. {' · '.join(facts)}.</p>
 <div class="wrap">{imgs}</div></body>"""
     f = D / "design-pass-site-2026-11-22-pilot-close-built.html"; f.write_text(html, encoding="utf-8")
     async with async_playwright() as p:

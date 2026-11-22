@@ -29,7 +29,7 @@ done. Updated in the same commit as the work.
 | 4. Whole page | [x] | Signed off 20 Oct 2026: Founder at the bottom, the footer on the charter, the hero board holds its height, OS and Products fill the screen |
 | 5. Phones | [x] | Signed off 20 Oct 2026: every homepage section works as a phone design |
 | 6. Words and claims | [x] | Homepage claims list cleared 20 Oct 2026; the cold read of every page built 30 Oct 2026 (Will: "All 69"), the charter’s wording test now a cold read (rules 1, 8, 9) |
-| 7. Other pages | [~] | The page list is settled (Will, 22 Nov 2026: "Yes, cut as listed"): home, /pilot, /pricing, /about, /faq, /privacy, with /demo for the cold emails; everything else redirects (`site-tidy-2026-11-22.md`). /pilot: sections 1 to 6 done, section 7 (Back up to the form) and the page's phases 4 to 6 still to run. Then /pricing, /about and /faq, which are still in the May register, each through phases 2 to 6. No industry, AI Employees or Herbert Reach pages |
+| 7. Other pages | [~] | The page list is settled (Will, 22 Nov 2026: "Yes, cut as listed"): home, /pilot, /pricing, /about, /faq, /privacy, with /demo for the cold emails; everything else redirects (`site-tidy-2026-11-22.md`). /pilot: all seven sections done (22 Nov 2026); the page's phases 4 to 6 (whole page, phones, words and claims) still to run. Then /pricing, /about and /faq, which are still in the May register, each through phases 2 to 6. No industry, AI Employees or Herbert Reach pages |
 | 8. Walkthrough and ship | [ ] | preview/runs-itself merged to main on 30 Oct 2026 at Will’s word ("Merge"), mid phase 7, to ship the tone pass; the lab is live on production, noindex and unlinked, and is removed at this phase |
 
 Phase 3, section by section (facts, options, pick, build, details):
@@ -2360,7 +2360,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
 | 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [x] | Details built 16 Nov 2026 (Will: "1,2,2,3"); the first-three line dropped from /pilot and /pricing while the Proof lane runs (Will: "Drop it from both"). Done 16 Nov |
 | 6. Questions | [x] | [x] | [x] | [x] | [x] | Done 21 Nov 2026: "A, folded", then the five details ("Yep, recommended": heading kept, all closed on load, plus and minus, two runs of six, twelve rows on phones) |
-| 7. Back to the form | [x] | [x] | [x] | [x] | [~] | Will (22 Nov 2026): "do B, the form again", built the same day; details drawn, four three ways each (heading, label, fields, ground), waiting on Will's numbers |
+| 7. Back to the form | [x] | [x] | [x] | [x] | [x] | Done 22 Nov 2026: "do B, the form again", then the details: the first section's heading, "Find the job eating your time and money.", centred against the form; label, four fields and dark band as built |
 
 Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
 layout; then section 2’s options.
@@ -3495,7 +3495,7 @@ real footer below; the footer got two lab-only props, `always` and `paper`):
 Tidy at 1440, 1280, 375 and 320: no overflow, no errors, no word alone on a
 line. Sheet: `design-pass-site-2026-11-22-pilot-close.png`.
 
-## [~] /pilot section 7, the close: built, details drawn (22 Nov 2026)
+## [x] /pilot section 7, the close: built, details applied, done (22 Nov 2026)
 
 Will (22 Nov 2026), asking what happens after the form is sent: "if they fill
 in their name, business name, email, phone number, and then they click book a
@@ -3541,4 +3541,26 @@ Found while checking, for /pilot's later passes (not fixed here):
 - Words (phase 6): five of /pilot's labels are sentence case ("What you get
   back", "The timeline", "What it fixes", "What comes next", "Questions")
   against the charter's title-case rule (Will, 13 Oct 2026).
+
+Will (22 Nov 2026), on the four details: "Got a job, eating your time and
+money. I think we make it find the job, eating your time and money ... the
+label. Yep, book the [audit] as one, yep. Detail 3 as built, yep. Detail 4 as
+built, yep. Can we have the ready thing centered with the form? Or it's not
+gonna be ready now. It's gonna be find the job, eating your time and money. But
+can we have that centered?" So: the heading is the first section's own line,
+"Find the job eating your time and money." (line 3 of the test, not the
+recommended line 2), so /pilot opens and closes on it; label "Book the Audit",
+four fields and the dark band as built; and the heading block centred against
+the form on laptops (was aligned to its foot). Verified on /pilot at 1440,
+1280, 375 and 320, motion on and off: no overflow, no errors, no word alone on
+a line; the heading block and the form share a centre line at 1440 and 1280
+(0px apart), and stack on phones; the two forms check out as before. Sheet
+refreshed: `design-pass-site-2026-11-22-pilot-close-built.png`. Section 7 is
+done, and with it every section of /pilot.
+
+Also from Will on the same message: "Doing these design passes, it's hard to
+map the recommended 2, 1, 1, 1." Written into design-taste `loop/roadmap.md`
+(step 5): a details recommendation names each pick in words beside its detail,
+in the question and on the buttons, never a bare string of numbers
+(claude-skills 9f9e984).
 
