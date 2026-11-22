@@ -3564,3 +3564,10 @@ map the recommended 2, 1, 1, 1." Written into design-taste `loop/roadmap.md`
 in the question and on the buttons, never a bare string of numbers
 (claude-skills 9f9e984).
 
+Will (22 Nov 2026): "Yes, merge". main fast-forwarded from d3bb3fb to dc195ee;
+production served it in about half a minute. Checked on herbert-aisolutions.com
+in a browser at 1440 and 375: two forms on /pilot, their subjects "/pilot" and
+"/pilot (end)", no id used twice, the close's heading and form on one centre
+line at 1440, no overflow; `site-check.py` 6 of 6 pages clean; IndexNow pinged,
+200 for 6 URLs. Every section of /pilot is live.
+
