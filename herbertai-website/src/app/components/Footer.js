@@ -40,12 +40,15 @@ const NAV_COLS = [
   },
 ]
 
-export default function Footer() {
+// always and paper exist so the design lab can draw a page's end with its
+// footer; the layout passes neither.
+export default function Footer({ always = false, paper } = {}) {
   const pathname = usePathname()
-  if (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/') || pathname?.startsWith('/demo/') || pathname?.startsWith('/lab')) return null
+  if (!always && (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/') || pathname?.startsWith('/demo/') || pathname?.startsWith('/lab'))) return null
+  const isPaper = paper ?? PAPER.includes(pathname)
 
   return (
-    <footer className={PAPER.includes(pathname) ? 'bg-[#FAFAF8] border-t border-[#111]/10' : 'bg-cream border-t border-line'}>
+    <footer className={isPaper ? 'bg-[#FAFAF8] border-t border-[#111]/10' : 'bg-cream border-t border-line'}>
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-10">
 
         <div className="grid lg:grid-cols-[2fr_1fr_1fr] gap-10 lg:gap-12">
@@ -95,7 +98,7 @@ export default function Footer() {
           )}
         </div>
 
-        <div className={`mt-16 pt-6 border-t ${PAPER.includes(pathname) ? 'border-[#111]/10' : 'border-line'} flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
+        <div className={`mt-16 pt-6 border-t ${isPaper ? 'border-[#111]/10' : 'border-line'} flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
           <span className="whitespace-nowrap">© {new Date().getFullYear()} Herbert AI</span>
           <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link href="/privacy" className="whitespace-nowrap hover:text-ink transition-colors">Privacy</Link>

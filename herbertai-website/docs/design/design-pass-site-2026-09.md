@@ -2360,7 +2360,7 @@ memory records the third slip. From here /pilot runs section by section:
 | 4. What it fixes | [x] | [x] | [x] | [x] | [x] | Done 4 Nov 2026 after the redo (Will: "B"): today’s six jobs and sentences, each under an employee that does that job; fit check, words re-read and tidy all recorded below |
 | 5. What comes next (was After the pilot) | [x] | [x] | [x] | [x] | [x] | Details built 16 Nov 2026 (Will: "1,2,2,3"); the first-three line dropped from /pilot and /pricing while the Proof lane runs (Will: "Drop it from both"). Done 16 Nov |
 | 6. Questions | [x] | [x] | [x] | [x] | [x] | Done 21 Nov 2026: "A, folded", then the five details ("Yep, recommended": heading kept, all closed on load, plus and minus, two runs of six, twelve rows on phones) |
-| 7. Back to the form | [ ] | [ ] | [ ] | [x] | [ ] | Built from the skeleton only |
+| 7. Back to the form | [x] | [~] | [ ] | [x] | [ ] | Brief and options drawn 22 Nov 2026 (today the text link, A the black button, B the form again, C no close); waiting on Will's pick. Built from the skeleton only until then |
 
 Next: the hero’s remaining details, 1 the form side, 2 spacing, 3 the phone
 layout; then section 2’s options.
@@ -3464,4 +3464,34 @@ served it within a minute. Checked on herbert-aisolutions.com: none of the old
 ownership lines is left on the home page, /pilot, /pricing, /about, /faq or
 `llms.txt`; each new line is present; `site-check.py` reports 6 of 6 pages
 clean at 1440 and 375; IndexNow pinged, 200 for 6 URLs.
+
+## [~] /pilot section 7, the close: brief and options (22 Nov 2026)
+
+Will (22 Nov 2026): "Yes, section 7".
+
+Brief: the reader has read all of /pilot (7,320px on a phone, from the form at
+the top through the twelve questions) and not booked. The anchor link jumps to
+the form instantly, so the question is what the page ends on. Today it ends on
+a one-line text link, "Ready? Book your free AI audit", and the footer's Talk
+column links to the form again. Bounds: the marketing-site register's rule
+(Will, 10 and 12 Oct 2026, on the home page): the black audit button at the
+hero and at the end, a text link between. /pilot's hero carries the form, not a
+button, and its end today is a text link, so the page breaks the rule at both
+ends. The home page ends on the form in a dark band. The audit form's field ids
+are fixed, so a second copy on one page needs a prefix. The words are the
+details pass, with a line test.
+
+Options, drawn at /lab/pilot-close as the page's end (the questions above, the
+real footer below; the footer got two lab-only props, `always` and `paper`):
+- Today: the text link, 167px.
+- A. The button (recommended): "Ready?" beside the black button in the hero's
+  words, "Book a free AI audit", jumping to the form; 213px at 1440. The
+  register's rule.
+- B. The form again: the home page's dark close band with the form; 503px at
+  1440, 803px at 375. Two forms on one page, the home page's own ending, ids to
+  prefix.
+- C. No close: the questions end the page, the footer's link is the way back.
+
+Tidy at 1440, 1280, 375 and 320: no overflow, no errors, no word alone on a
+line. Sheet: `design-pass-site-2026-11-22-pilot-close.png`.
 

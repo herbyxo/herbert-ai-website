@@ -24,6 +24,7 @@ export const REFS = [
   { slug: 'pilot-fixes-redo', name: '/pilot, What it fixes, redone: today and three ways', url: 'Today, A, B and C' },
   { slug: 'pilot-questions', name: '/pilot, Questions: today and three ways', url: 'Today, A, B and C' },
   { slug: 'pilot-questions-details', name: '/pilot, Questions: the details', url: 'Details 1 to 5, three ways each' },
+  { slug: 'pilot-close', name: '/pilot, the close: today and three ways', url: 'Today, A, B and C' },
 ]
 
 export const SANS = 'var(--font-geist), -apple-system, sans-serif'
