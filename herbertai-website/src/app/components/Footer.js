@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { PAPER } from './Header'
 
 const managerUrl = process.env.NEXT_PUBLIC_MANAGER_DASHBOARD_URL
 const ownerUrl = process.env.NEXT_PUBLIC_OWNER_CONSOLE_URL
@@ -40,15 +39,14 @@ const NAV_COLS = [
   },
 ]
 
-// always and paper exist so the design lab can draw a page's end with its
-// footer; the layout passes neither.
-export default function Footer({ always = false, paper } = {}) {
+// always exists so the design lab can draw a page's end with its footer; the
+// layout does not pass it. Paper on every page since 22 Nov 2026.
+export default function Footer({ always = false } = {}) {
   const pathname = usePathname()
   if (!always && (pathname?.startsWith('/preview') || pathname?.startsWith('/lp/') || pathname?.startsWith('/demo/') || pathname?.startsWith('/lab'))) return null
-  const isPaper = paper ?? PAPER.includes(pathname)
 
   return (
-    <footer className={isPaper ? 'bg-[#FAFAF8] border-t border-[#111]/10' : 'bg-cream border-t border-line'}>
+    <footer className="bg-[#FAFAF8] border-t border-[#111]/10">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-24 pb-10">
 
         <div className="grid lg:grid-cols-[2fr_1fr_1fr] gap-10 lg:gap-12">
@@ -98,7 +96,7 @@ export default function Footer({ always = false, paper } = {}) {
           )}
         </div>
 
-        <div className={`mt-16 pt-6 border-t ${isPaper ? 'border-[#111]/10' : 'border-line'} flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
+        <div className={`mt-16 pt-6 border-t border-[#111]/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted`}>
           <span className="whitespace-nowrap">© {new Date().getFullYear()} Herbert AI</span>
           <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link href="/privacy" className="whitespace-nowrap hover:text-ink transition-colors">Privacy</Link>

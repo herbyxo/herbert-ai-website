@@ -1,12 +1,13 @@
-import Link from 'next/link'
-import RevealOnScroll from '../components/motion/RevealOnScroll'
 import { OG_IMAGE } from '@/app/components/site/og'
 import { JsonLd, breadcrumbs } from '@/app/components/site/schema'
+import { Label, H1, Section, TextLink } from '../components/site/kit'
+import Questions from '../components/site/pilot-questions'
+import AuditClose from '../components/site/audit-close'
 
 export const metadata = {
   title: 'FAQ | pricing, timelines & process',
   description:
-    'Common questions about Herbert AI, custom software and AI for small businesses in Adelaide: what gets built, the free audit, your first AI employee, timelines, pricing, contracts, ownership, and getting started.',
+    'Common questions about Herbert AI, custom software and AI for small businesses in Adelaide: what gets built, the free audit, your first AI employee, timelines, pricing, lock-in, ownership, and getting started.',
   alternates: { canonical: '/faq' },
   openGraph: {
     title: 'FAQ | Custom software and AI for small business · Herbert AI',
@@ -17,71 +18,37 @@ export const metadata = {
   },
 }
 
+// /faq on the charter (hands-off pass, 22 Nov 2026). The thirteen general
+// questions, folded the way /pilot's are, so questions look and work one way
+// across the site and a reader scans thirteen lines for theirs. The answers are
+// plain facts (CHARTER.md, "The wording"): the business in the third person,
+// coined terms said plainly the first time, the data, code and hosting lines as
+// the services agreement has them (22 Nov 2026), and the software line as
+// /pilot's ("works with", checked in the audit, never "any software"). The same
+// list feeds the FAQPage data.
 const faqs = [
-  {
-    q: 'What does Herbert AI do?',
-    a: 'Herbert AI builds custom software and AI for small businesses, from Adelaide. Most work starts as an AI employee, software that does one office job every day, like chasing documents, answering enquiries or confirming bookings, with someone on your team okaying every message before it is sent. Bigger builds put the whole operation in one system, with the AI employees working inside it. Will Herbert builds all of it.',
-  },
-  {
-    q: 'Who is it for?',
-    a: 'Owner-operated businesses with roughly 3 to 20 staff. Accountants and bookkeepers, allied health, trades with an office, and real estate and property management come first, but the audit works for any office with admin that repeats every week.',
-  },
-  {
-    q: 'How do I get started?',
-    a: 'With the free AI audit. It is 45 minutes auditing how your business runs, then a written report within two business days that puts a yearly cost on the three jobs taking the most hours and says which one to hand over first. Book it from the how it works page.',
-  },
-  {
-    q: 'What does it cost?',
-    a: 'The audit is free. Your first AI employee, built for one job, is $3,500 fixed and live in 14 days or free. An AI operating system starts from $25,000 and is priced after the audit, and retainers start from $1,000 a month. If the audit shows the saving would not comfortably cover the price, you are told that instead.',
-  },
-  {
-    q: 'How long does it take?',
-    a: 'Your first AI employee is working 14 days after the kickoff call, or you do not pay. An AI operating system gets one fixed price and a delivery date in writing, agreed after the audit.',
-  },
-  {
-    q: 'What is an AI employee?',
-    a: 'Software with one job in your business, chasing documents or answering the front desk for example. It works on your actual clients every day and takes over the repetitive part of a job, not the person doing it. Anything it sends to a customer is approved by someone on your team first.',
-  },
-  {
-    q: 'Will the AI talk to my customers on its own?',
-    a: 'Only as far as you decide. By default anything going out to a customer is approved by a person first. Where it does answer directly, an AI receptionist taking calls after hours for example, it takes a message or passes the call to you when it cannot help, and you set what it is allowed to handle.',
-  },
-  {
-    q: 'Do I have to change my existing software?',
-    a: 'No. The work connects what you already use. Your calendar, inbox, job system and invoicing stay where they are, and the new workflow sits between them and does the repetitive part.',
-  },
-  {
-    q: 'Are there contracts or lock-in?',
-    a: 'No. Your first AI employee includes its first 30 days of hosting and support, then you choose $200 a month support, a move onto your own accounts, or an AI operating system. Retainers are month to month, and when one ends the system is moved onto accounts in your name with a written guide.',
-  },
-  {
-    q: 'Who owns the code and data?',
-    a: 'Your data is yours: every record the system reads or stores belongs to you. Herbert AI keeps ownership of the code, and once a build is paid for you get a licence to use, copy and change it that never ends. While Herbert AI looks after the system it runs on Herbert AI’s accounts, hosted in Australia. When that ends it is moved onto accounts in your name with a written guide, and nothing is held back.',
-  },
-  {
-    q: 'Do I need any technical knowledge?',
-    a: 'None. Will handles the build, the hosting and the AI setup, and walks your team through it when it goes live. You explain how the business runs and what is slowing it down.',
-  },
-  {
-    q: 'What if what I need is not on the site?',
-    a: 'Bring it to the audit. Most of the work is specific to one business anyway: a custom intake form, an internal admin tool, or two systems that do not talk to each other. If it is worth building it gets a price, and if it is not you are told so.',
-  },
-  {
-    q: 'Where are you based?',
-    a: 'Adelaide, South Australia, working with businesses Australia-wide. You deal with Will directly from the audit to the day it goes live, with no account manager in between.',
-  },
+  ['What does Herbert AI do?', 'Herbert AI builds custom software and AI for small businesses, from Adelaide. Most work starts as an AI employee, software that does one office job every day, like chasing documents, answering enquiries or confirming bookings, with someone on your team okaying every message before it is sent. Bigger builds put the whole office on one system, with the AI employees working inside it. Will Herbert builds all of it.'],
+  ['Who is it for?', 'Owner-run businesses with roughly 3 to 20 staff. Health clinics, property managers, trades with an office, venues, and accountants and bookkeepers come first, but the audit works for any office with admin that repeats every week.'],
+  ['How do I get started?', 'With the free AI audit: 45 minutes on how your business runs, then a written report within two business days that puts a yearly cost on the three jobs taking the most hours and says which one to hand over first. Book it on the How it works page.'],
+  ['What does it cost?', 'The audit is free. Your first AI employee, built for one job, is $3,500 fixed and working in 14 days or it is free. An AI operating system, the one system a whole office works out of, starts from $25,000 and is priced after the audit. Retainers start from $1,000 a month. If the audit shows the saving would not comfortably cover the price, you are told that instead.'],
+  ['How long does it take?', 'Your first AI employee is working 14 days after the kickoff call, or you do not pay. An AI operating system gets one fixed price and a delivery date in writing, agreed after the audit.'],
+  ['What is an AI employee?', 'Software with one job in your business, chasing documents or answering the front desk for example. It works on your actual clients every day and takes over the repetitive part of a job, not the person doing it. Anything it sends to a customer is approved by someone on your team first.'],
+  ['Will it talk to my customers on its own?', 'Only as far as you decide. By default anything going out to a customer is approved by a person first. Where it does answer directly, an AI receptionist taking calls after hours for example, it takes a message or passes the call to you when it cannot help, and you set what it is allowed to handle.'],
+  ['Do I have to change my software?', 'No. It works with the software you already use, and the audit checks each system before anything is promised. Your calendar, inbox, job system and invoicing stay where they are.'],
+  ['Is there any lock-in?', 'No. Your first AI employee includes its first 30 days of hosting and support, then you choose $200 a month support, a move onto your own accounts, or an AI operating system. Retainers are month to month, and when one ends the system is moved onto accounts in your name with a written guide.'],
+  ['Who owns the code and data?', 'Your data is yours: every record the system reads or stores belongs to you. Herbert AI keeps ownership of the code, and once a build is paid for you get a licence to use, copy and change it that never ends. While Herbert AI looks after the system it runs on Herbert AI’s accounts, hosted in Australia. When that ends it is moved onto accounts in your name with a written guide, and nothing is held back.'],
+  ['Do I need any technical knowledge?', 'None. Will handles the build, the hosting and the AI setup, and walks your team through it when it goes live. You explain how the business runs and what is slowing it down.'],
+  ['What if what I need is not on the site?', 'Bring it to the audit. Most of the work is specific to one business: a custom intake form, an internal admin tool, or two systems that do not talk to each other. If it is worth building it gets a price, and if it is not you are told so.'],
+  ['Where is Herbert AI based?', 'Adelaide, South Australia, working with businesses across Australia. You deal with Will directly from the audit to the day it goes live, with no account manager in between.'],
 ]
 
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
+  mainEntity: faqs.map(([q, a]) => ({
     '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: f.a,
-    },
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
   })),
 }
 
@@ -89,93 +56,18 @@ export default function FAQ() {
   return (
     <>
       <JsonLd data={breadcrumbs([['FAQ', '/faq']])} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* ─── Hero — static (above the fold, must paint on first load) ─ */}
-      <section className="bg-cream">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 pt-28 pb-24 md:pt-40 md:pb-32">
-          <Eyebrow>FAQ</Eyebrow>
-          <h1
-            className="font-display text-ink max-w-[16ch]"
-            style={{ fontSize: 'var(--text-display-lg)', lineHeight: 0.92, letterSpacing: '-0.04em', fontWeight: 800 }}
-          >
-            Common questions. Straight answers.
-          </h1>
-          <p className="mt-9 text-[17px] md:text-[19px] text-muted leading-[1.55] max-w-[60ch]">
-            Everything you might want to know before working with Herbert AI,
-            custom software and AI for small businesses, built in Adelaide. If you don&apos;t see
-            your question answered below, just{' '}
-            <a href="mailto:hello@herbert-aisolutions.com" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink transition-colors">
-              get in touch
-            </a>.
-          </p>
-        </div>
-      </section>
+      <Section first>
+        <Label>FAQ</Label>
+        <H1>What owners ask.</H1>
+        <Questions items={faqs} />
+        <p className="mt-8">
+          <TextLink href="mailto:hello@herbert-aisolutions.com">Email a question</TextLink>
+        </p>
+      </Section>
 
-      {/* ─── FAQs ─────────────────────────────────────────────────── */}
-      <section className="bg-cream-alt">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-          <div className="grid md:grid-cols-2 gap-5">
-            {faqs.map((f, i) => (
-              <RevealOnScroll key={f.q} delay={(i % 2) * 0.08}>
-                <div className="bg-cream border border-line rounded-3xl p-7 lift h-full">
-                  <h3 className="text-[17px] font-medium text-ink mb-3 tracking-[-0.01em] leading-[1.35]">{f.q}</h3>
-                  <p className="text-[15px] text-muted leading-[1.6]">{f.a}</p>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Closing CTA — full-bleed ink ─────────────────────────── */}
-      <section className="bg-ink text-cream relative overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-32 md:py-44">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-            <div className="lg:col-span-8">
-              <Eyebrow color="white">Still have questions?</Eyebrow>
-              <h2
-                className="font-display text-cream"
-                style={{ fontSize: 'var(--text-display-md)', lineHeight: 0.95, letterSpacing: '-0.04em', fontWeight: 800 }}
-              >
-                Start with the
-                <br />
-                free AI audit.
-              </h2>
-              <p className="mt-9 text-[17px] md:text-[19px] text-cream/65 leading-[1.55] max-w-[52ch]">
-                Forty five minutes on how your business runs, then a written report on what your
-                admin costs. If there&apos;s a job worth building on, you get a price. If there
-                isn&apos;t, you&apos;re told.
-              </p>
-            </div>
-            <div className="lg:col-span-4 flex flex-col gap-5 lg:items-end">
-              <Link
-                href="/pilot"
-                className="bg-cream text-ink px-7 py-4 rounded-full font-semibold text-[16px] inline-flex items-center gap-2 hover:bg-white transition-colors"
-              >
-                Book a free AI audit <span aria-hidden>&rarr;</span>
-              </Link>
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40 lg:text-right">
-                Adelaide · solo · no account manager
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AuditClose source="/faq (end)" />
     </>
-  )
-}
-
-/* ─── Eyebrow ──────────────────────────────────────────────────── */
-function Eyebrow({ children, color = 'ink' }) {
-  const isWhite = color === 'white'
-  return (
-    <div className={`flex items-center gap-3 mb-7 font-mono text-[11px] uppercase tracking-[0.18em] ${isWhite ? 'text-cream/55' : 'text-muted'}`}>
-      <span className={`w-8 h-px ${isWhite ? 'bg-cream/40' : 'bg-ink'}`} />
-      {children}
-    </div>
   )
 }

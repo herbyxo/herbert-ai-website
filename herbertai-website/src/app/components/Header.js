@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 
-// Pages rebuilt for the "Runs itself" charter: the paper ground, and no header
-// audit button, since each carries its own (the homepage's hero button, /pilot's
-// form in its first section). Pages still in the May register keep cream.
+// Pages that carry their own audit action on the first screen (the homepage's
+// hero button, /pilot's form), so the header shows no second one. Every page is
+// on the paper ground since the hands-off pass of 22 Nov 2026 moved the last
+// May-register pages onto the charter.
 export const PAPER = ['/', '/pilot']
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -25,7 +26,7 @@ export default function Header() {
     // 10 Oct 2026): the hero fills the first screen with its own audit button and
     // this header does not follow on scroll, so a second one only ever sat beside
     // it. The fixed height keeps the header the same with or without the button.
-    <header className={PAPER.includes(pathname) ? 'bg-[#FAFAF8]' : 'bg-cream'}>
+    <header className="bg-[#FAFAF8]">
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5 md:py-0 md:h-[76px]">
         <Link href="/" className="flex items-center gap-2.5 group">
           <svg
@@ -64,7 +65,7 @@ export default function Header() {
           <div className="hidden md:block">
             <Link
               href="/pilot#book"
-              className="bg-ink text-cream px-4 py-2 rounded-[8px] text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-ink-soft transition-colors"
+              className="bg-[#111] text-white px-4 py-2 rounded-[8px] text-[13px] font-medium inline-flex items-center gap-1.5 hover:bg-[#2a2a2a] transition-colors"
             >
               Free AI audit <span aria-hidden>→</span>
             </Link>
@@ -132,7 +133,7 @@ function MobileOverlay({ onClose }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-50 bg-cream md:hidden"
+      className="fixed inset-0 z-50 bg-[#FAFAF8] md:hidden"
     >
       <div className="flex items-center justify-between px-6 py-5">
         <Link href="/" onClick={onClose} className="flex items-center gap-2.5">
@@ -177,8 +178,7 @@ function MobileOverlay({ onClose }) {
             <Link
               href={href}
               onClick={onClose}
-              className="block font-display text-[44px] sm:text-[56px] leading-[0.95] tracking-[-0.03em] text-ink"
-              style={{ fontWeight: 800 }}
+              className="block font-bold text-[44px] sm:text-[56px] leading-[1] tracking-[-0.045em] text-[#111]"
             >
               {label}
             </Link>
@@ -195,7 +195,7 @@ function MobileOverlay({ onClose }) {
         <Link
           href="/pilot#book"
           onClick={onClose}
-          className="bg-ink text-cream px-6 py-3.5 rounded-[10px] font-semibold text-[15px] inline-flex items-center gap-2"
+          className="bg-[#111] text-white px-6 py-3.5 rounded-[10px] font-medium text-[16px] inline-flex items-center gap-2"
         >
           Free AI audit <span aria-hidden>→</span>
         </Link>
